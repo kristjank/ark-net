@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ark_net.io.ark.core
+namespace io.ark.core
 {
     class Account
     {
@@ -15,6 +15,15 @@ namespace ark_net.io.ark.core
         int rate;
         List<String> votes;
 
+                        
         public string Address { get => address; set => address = value; }
+        public string PublicKey { get => publicKey; set => publicKey = value; }
+        public long Balance { get => balance; set => balance = value; }
+        public string Username { get => username; set => username = value; }
+        public int Rate { get => rate; set => rate = value; }
+        public List<string> Votes { get => votes; set => votes = value; }
+
+
+
     }
 }
