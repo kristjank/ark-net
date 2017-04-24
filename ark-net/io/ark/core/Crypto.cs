@@ -17,21 +17,23 @@ namespace io.ark.core
     public class Crypto
     {
 
-        public static ECKey getKeys(String passphrase)
+        public static Key getKeys(String passphrase)
         {
-           /* byte[] sha256 = 
-                Sha256Hash.hash(passphrase.bytes)
-            ECKey keys = ECKey.fromPrivate(sha256, true)
-            return keys
-            */
+            /* byte[] sha256 = 
+                 Sha256Hash.hash(passphrase.bytes)
+             ECKey keys = ECKey.fromPrivate(sha256, true)
+             return keys
+             */                      
 
             byte[] bytes = Encoding.Unicode.GetBytes(passphrase);
             byte[] sha256Hash = Hashes.SHA256(bytes);
 
-            BitcoinSecret
 
+            Key kk = new Key();
+            kk.GetEncryptedBitcoinSecret(passphrase, null);
+            return kk;
 
-            
+       
 
         }
 

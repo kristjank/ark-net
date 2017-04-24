@@ -12,6 +12,12 @@ namespace io.ark.core.Tests
     public class CryptoTests
     {
         [TestMethod()]
+        public void getKeysTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
         public void getAddressTest()
         {
             Assert.Fail();
