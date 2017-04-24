@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ark-net", "ark-net.csproj", "{7FE83F44-4289-440D-B864-EFDF8CC81E37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ark-net-test", "..\ark-net-test\ark-net-test.csproj", "{3AC63FA2-9065-4C1A-A064-8294A7F30DA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7FE83F44-4289-440D-B864-EFDF8CC81E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FE83F44-4289-440D-B864-EFDF8CC81E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FE83F44-4289-440D-B864-EFDF8CC81E37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AC63FA2-9065-4C1A-A064-8294A7F30DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC63FA2-9065-4C1A-A064-8294A7F30DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC63FA2-9065-4C1A-A064-8294A7F30DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC63FA2-9065-4C1A-A064-8294A7F30DA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
