@@ -7,17 +7,18 @@ using System.Threading.Tasks;
 using NBitcoin.DataEncoders;
 using NBitcoin.Crypto;
 using NBitcoin.JsonConverters;
-
 using Org.BouncyCastle.Crypto.Digests;
 using System.Security.Cryptography;
 using NBitcoin;
+using Validation;
+using io.ark.utils;
 
 namespace io.ark.core
 {
     public class Crypto
     {
 
-        public static Key getKeys(String passphrase)
+        public static byte[] getKeys(String passphrase)
         {
             /* byte[] sha256 = 
                  Sha256Hash.hash(passphrase.bytes)
@@ -29,11 +30,14 @@ namespace io.ark.core
             byte[] sha256Hash = Hashes.SHA256(bytes);
 
 
-            Key kk = new Key();
-            kk.GetEncryptedBitcoinSecret(passphrase, null);
-            return kk;
+            Key key = new Key(); //Create a new key
+            BitcoinSecret secret = key.GetBitcoinSecret(Network.Main);
+            Console.WriteLine(secret); //Will print the key in base58 check format
+            BitcoinEncryptedSecret encrypted = secret.Encrypt(passphrase);
+            Console.WriteLine(encrypted); //Will print the encrypted key in base58 check format
+            key = encrypted.GetKey(passphrase); //Get the same key as before
 
-       
+            return key.PubKey.ToBytes();
 
         }
 
@@ -45,15 +49,12 @@ namespace io.ark.core
 
             byte[] keyHash = new byte[20];
             digest.DoFinal(keyHash, 0);
-
-            //digest.ch
-            //def address = new VersionedChecksummedBytes(version, out)
-
-            string address = Encoders.Base58Check.EncodeData(keyHash);
-
-
-            return address.ToString();
+            
+            return new VersionedChecksummedBytes(version, keyHash).ToString();
+            
         }
+
+        
 
     }
 }

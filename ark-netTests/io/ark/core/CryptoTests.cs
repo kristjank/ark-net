@@ -1,10 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using io.ark.core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace io.ark.core.Tests
 {
@@ -14,13 +8,17 @@ namespace io.ark.core.Tests
         [TestMethod()]
         public void getKeysTest()
         {
-            Assert.Fail();
+           // Assert.AreSame(Crypto.getKeys("this is a top secret passphrase").PubKey,);
+           
+
+                
+                
         }
 
         [TestMethod()]
         public void getAddressTest()
         {
-            Assert.Fail();
+            Assert.AreSame(Crypto.getAddress(Crypto.getKeys("this is a top secret passphrase")), "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC");
         }
     }
 }
