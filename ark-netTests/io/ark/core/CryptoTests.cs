@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace io.ark.core.Tests
 {
@@ -6,19 +7,18 @@ namespace io.ark.core.Tests
     public class CryptoTests
     {
         [TestMethod()]
-        public void getKeysTest()
+        public void GetKeysTest()
         {
-           // Assert.AreSame(Crypto.getKeys("this is a top secret passphrase").PubKey,);
-           
-
-                
-                
+           // Assert.AreSame(Crypto.getKeys("this is a top secret passphrase").PubKey,);                   
         }
 
         [TestMethod()]
-        public void getAddressTest()
+        public void GetAddressTest()
         {
-            Assert.AreSame(Crypto.getAddress(Crypto.getKeys("this is a top secret passphrase")), "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC");
+            String a1 = Crypto.GetAddress(Crypto.GetKeys("this is a top secret passphrase"));
+            String a2 = "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC";
+
+            Assert.AreEqual(a2,a1);
         }
     }
 }

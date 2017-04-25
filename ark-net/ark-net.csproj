@@ -30,14 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="bitcoinj-core-0.14.4-bundled">
+      <HintPath>..\ark-console\bitcoinj-core-0.14.4-bundled.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="IKVM.OpenJDK.Core">
+      <HintPath>..\..\ikvm-7.2.4630.5\bin\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Multiformats.Base, Version=1.0.34.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Multiformats.Base.1.0.34\lib\net45\Multiformats.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="NBitcoin, Version=3.0.2.15, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\NBitcoin.3.0.2.15\lib\net45\NBitcoin.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -63,9 +66,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="io\ark\core\Account.cs" />
+    <Compile Include="io\ark\core\Slot.cs" />
     <Compile Include="io\ark\utils\Base58.cs" />
     <Compile Include="io\ark\utils\BCUtils.cs" />
-    <Compile Include="io\ark\utils\VersionedChecksummedBytes.cs" />
+    <Compile Include="io\ark\utils\BCAVersionedChecksummedBytes.cs" />
     <Compile Include="io\ark\core\Crypto.cs" />
     <Compile Include="io\ark\core\Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

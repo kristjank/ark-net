@@ -8,12 +8,12 @@ using Validation;
 namespace io.ark.utils
 {
 
-    public class VersionedChecksummedBytes
+    public class BCAVersionedChecksummedBytes
     {
         private readonly int version;
         private readonly IReadOnlyList<byte> bytes;
 
-        protected VersionedChecksummedBytes(string encoded)
+        protected BCAVersionedChecksummedBytes(string encoded)
         {
             byte[] tmp = Base58.DecodeChecked(encoded);
             this.version = tmp[0] & 0xFF;
@@ -22,7 +22,7 @@ namespace io.ark.utils
             this.bytes = bytes;
         }
 
-        public VersionedChecksummedBytes(int version, byte[] bytes)
+        public BCAVersionedChecksummedBytes(int version, byte[] bytes)
         {
             Requires.Range(version < 256 && version >= 0, "version");
             this.version = version;
@@ -51,7 +51,7 @@ namespace io.ark.utils
 
         public override bool Equals(object o)
         {
-            var other = o as VersionedChecksummedBytes;
+            var other = o as BCAVersionedChecksummedBytes;
             if (other == null)
             {
                 return false;
