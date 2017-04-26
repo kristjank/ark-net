@@ -39,10 +39,6 @@ namespace io.ark.core
             this.port = port;
             this.protocol = protocol;
         }
-        private string GetUri()
-        {
-            return String.Format(this.protocol + "//" + this.ip + ":" + this.port);
-        }
 
         public Peer(String peerData)
         {
