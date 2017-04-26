@@ -14,7 +14,7 @@ namespace io.ark.core
         {
             //DateTime date = DateTime.Now;
 
-            return Convert.ToInt32((DateTime.Now - beginEpoch).TotalMilliseconds / 1000);
+            return Convert.ToInt32((DateTime.UtcNow - beginEpoch).TotalMilliseconds / 1000);
         }
     }
 }
