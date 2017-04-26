@@ -21,12 +21,16 @@ namespace io.ark.core
         private static HttpClient httpClient;
         private Dictionary<string, dynamic> networkHeaders = Network.Mainnet.GetHeaders();
 
-        private static void OpenServicePoint()
+        private void OpenServicePoint(Uri uri)
         {
-            ServicePointManager.UseNagleAlgorithm = true;
-            ServicePointManager.Expect100Continue = true;
             ServicePointManager.CheckCertificateRevocationList = true;
             ServicePointManager.DefaultConnectionLimit = 10000;
+
+            ServicePoint sp = ServicePointManager.FindServicePoint(uri);
+            sp.UseNagleAlgorithm = true;
+            sp.Expect100Continue = true;
+            sp.ConnectionLimit = 10000;
+
         }
 
         private void Init(string ip, int port, string protocol)
@@ -47,7 +51,7 @@ namespace io.ark.core
             string ip = data[0];
             string protocol = "http://";
             if (port % 1000 == 443) protocol = "https://";
-            OpenServicePoint();
+            
             Init(ip, port, protocol);
 
             httpClient = new HttpClient();
@@ -57,6 +61,7 @@ namespace io.ark.core
             httpClient.DefaultRequestHeaders.Add("nethash", Network.Mainnet.Nethash);
             httpClient.DefaultRequestHeaders.Add("version", Network.Mainnet.Version);
             httpClient.DefaultRequestHeaders.Add("port", Network.Mainnet.Port.ToString());
+            OpenServicePoint(httpClient.BaseAddress);
 
         }
 

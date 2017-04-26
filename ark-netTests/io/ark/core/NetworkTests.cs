@@ -56,7 +56,7 @@ namespace io.ark.core.Tests
         {
             Transaction tx = Transaction.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
                                                            1000,
-                                                           "This is first transaction from ARK-NET",
+                                                           "This is first transaction from ARK-NET 22",
                                                            "ski rose knock live elder parade dose device fetch betray loan holiday");
 
             //Network.Mainnet.WarmUp();
@@ -75,7 +75,7 @@ namespace io.ark.core.Tests
         {
             Transaction tx = Transaction.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
                                                            1000,
-                                                           "This is first transaction from ARK-NET",
+                                                           "This is first Multi transaction from ARK-NET",
                                                            "ski rose knock live elder parade dose device fetch betray loan holiday");
 
             //Network.Mainnet.WarmUp();

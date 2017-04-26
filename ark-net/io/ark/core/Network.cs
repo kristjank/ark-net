@@ -161,9 +161,6 @@ namespace io.ark.core
 
             peers = new List<Peer>();
         }
-        
-        /*public static Network Mainnet = new Network();
-        public static Network Testnet = new Network(0x18, 4000, "testnet");*/
 
         public string Nethash { get => nethash; set => nethash = value; }
         public string Name { get => name; set => name = value; }
