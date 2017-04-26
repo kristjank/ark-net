@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Threading;
 
 namespace io.ark.core.Tests
 {
@@ -44,5 +45,32 @@ namespace io.ark.core.Tests
 
             Assert.AreEqual(jObject["error"], "Account does not have enough ARK: AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC balance: 0");
         }
+
+        [TestMethod()]
+        public void MultipleOverOneNetwork()
+        {
+            string response = Network.Mainnet.GetRandomPeer().GetPeers();
+
+            Transaction tx = Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
+                                                           133380000000,
+                                                           "This is first transaction from ARK-NET",
+                                                           "this is a top secret passphrase");
+
+            Thread.Sleep(1000);
+            //Network.Mainnet.WarmUp();
+            Peer peer = Network.Mainnet.GetRandomPeer();
+
+
+            string result = peer.PostTransaction(tx);
+
+            Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(result);
+
+            Assert.AreEqual(jObject["error"], "Account does not have enough ARK: AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC balance: 0");
+
+
+
+        }
+
+
     }
 }

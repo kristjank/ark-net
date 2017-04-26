@@ -101,7 +101,7 @@ namespace io.ark.core
             // get the rest/content of the response in a synchronous way
             var content = response.Content.ReadAsStringAsync().Result;
 
-            return content;
+            return content; 
         }
 
         public string PostTransaction(Transaction transaction)
