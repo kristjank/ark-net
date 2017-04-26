@@ -11,7 +11,7 @@ namespace io.ark.core
 {
     public class Peer
     {
-        string ip;
+        public string ip;
         int port;
         string protocol = "http://";
         string status = "NEW";
@@ -41,7 +41,7 @@ namespace io.ark.core
         }
 
         // return Future that will deliver the JSON as a Map
-        private dynamic MakeRequest(String method, String path, string body="")
+        private string MakeRequest(String method, String path, string body="")
         {
             if (httpClient == null)
             {
@@ -71,16 +71,8 @@ namespace io.ark.core
                     break;
                 case "POST":
                     {
-                        // Construct an HttpContent from a StringContent
-                        HttpContent _Body = new StringContent(body);
-                        // and add the header to this object instance
-                        // optional: add a formatter option to it as well
-                        _Body.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-                        // synchronous request without the need for .ContinueWith() or await
-                        //response = httpClient.PostAsAsync(path, _Body).Result;
                         Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(body);
-                        response = httpClient.PostAsJsonAsync(path, jObject).Result;
-                        
+                        response = httpClient.PostAsJsonAsync(path, jObject).Result;                        
                     }
                     break;
                 case "PUT":
@@ -115,8 +107,6 @@ namespace io.ark.core
         public string PostTransaction(Transaction transaction)
         {
             string body = "{transactions: [" + transaction.ToObject(true) + "]} ";
-
-            
 
             string response = MakeRequest("POST", "/peer/transactions", body);
             return response;

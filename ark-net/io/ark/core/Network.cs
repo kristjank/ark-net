@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace io.ark.core
 {
-    public class Network
+    public sealed class Network
     {
         string nethash = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988";
         string name = "mainnet";
@@ -99,8 +99,56 @@ namespace io.ark.core
             "167.114.43.34:4001"
             };
 
+        private static volatile Network instance;
+        private static object syncRoot = new Object();
+
+        public static Network Mainnet
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    lock (syncRoot)
+                    {
+                        if (instance == null)
+                        { 
+                            instance = new Network();
+                            instance.WarmUp();
+                        }
+                    }
+                }
+                if (instance.name == "testnet")
+                    throw new Exception("Network " + instance.name + " already initialized.Only one network can be initialized at runtime");
+                
+                return instance;
+            }
+        }
+
+        public static Network Testnet
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    lock (syncRoot)
+                    {
+                        if (instance == null)
+                        {
+                            instance = new Network(0x18, 4000, "testnet");
+                            instance.WarmUp();
+                        }
+                    }
+                }
+                if (instance.name == "testnet")
+                    throw new Exception("Network " + instance.name + " already initialized.Only one network can be initialized at runtime");
+
+                return instance;
+            }
+        }
+
         private Network()
         {
+           peers = new List<Peer>();          
         }
      
         private Network(byte prefix, int port, string name)
@@ -108,10 +156,12 @@ namespace io.ark.core
             this.prefix = prefix;
             this.port = port;
             this.name = name;
+
+            peers = new List<Peer>();
         }
         
-        public static Network Mainnet = new Network();
-        public static Network Testnet = new Network(0x18, 4000, "testnet");
+        /*public static Network Mainnet = new Network();
+        public static Network Testnet = new Network(0x18, 4000, "testnet");*/
 
         public string Nethash { get => nethash; set => nethash = value; }
         public string Name { get => name; set => name = value; }
@@ -130,7 +180,7 @@ namespace io.ark.core
                 return data;
         }
 
-        public bool WarmUp()
+        private bool WarmUp()
         {
             if (peers.Count > 0) return false;
             foreach (string item in peerseed)

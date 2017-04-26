@@ -12,16 +12,18 @@ namespace io.ark.core.Tests
     [TestClass()]
     public class NetworkTests
     {
+        
+
         [TestMethod()]
         public void WarmUpTest()
         {
-            Network.Mainnet.WarmUp();
+            //Network.Mainnet.WarmUp();
 
-            string peers = Network.Mainnet.GetRandomPeer().GetPeers();
+            string response = Network.Mainnet.GetRandomPeer().GetPeers();
 
-            //Dictionary<string,dynamic> peerD = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(peers);
+            Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(response);
 
-            Assert.IsTrue(peers.Length > 0);
+            Assert.IsTrue(Convert.ToBoolean(jObject["success"]));
         }
 
         [TestMethod()]
@@ -32,8 +34,9 @@ namespace io.ark.core.Tests
                                                            "This is first transaction from ARK-NET",
                                                            "this is a top secret passphrase");
 
-            Network.Mainnet.WarmUp();
+            //Network.Mainnet.WarmUp();
             Peer peer = Network.Mainnet.GetRandomPeer();
+
 
             string result = peer.PostTransaction(tx);
 
