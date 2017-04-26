@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -15,7 +16,7 @@ namespace io.ark.core
         string protocol = "http://";
         string status = "NEW";
 
-        private static HttpClient httpClient = new HttpClient();
+        private static HttpClient httpClient;
         private Dictionary<string, dynamic> networkHeaders = Network.Mainnet.GetHeaders();
 
         private Peer(string ip, int port, string protocol)
@@ -40,7 +41,7 @@ namespace io.ark.core
         }
 
         // return Future that will deliver the JSON as a Map
-        public dynamic MakeRequest(String method, String path, string body="")
+        private dynamic MakeRequest(String method, String path, string body="")
         {
             if (httpClient == null)
             {
@@ -76,17 +77,23 @@ namespace io.ark.core
                         // optional: add a formatter option to it as well
                         _Body.Headers.ContentType = new MediaTypeHeaderValue("application/json");
                         // synchronous request without the need for .ContinueWith() or await
-                        response = httpClient.PostAsync(path, _Body).Result;
+                        //response = httpClient.PostAsAsync(path, _Body).Result;
+                        Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(body);
+                        response = httpClient.PostAsJsonAsync(path, jObject).Result;
+                        
                     }
                     break;
                 case "PUT":
                     {
                         // Construct an HttpContent from a StringContent
                         HttpContent _Body = new StringContent(body);
+
                         // and add the header to this object instance
                         // optional: add a formatter option to it as well
-                        _Body.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                       
                         // synchronous request without the need for .ContinueWith() or await
+                        
+
                         response = httpClient.PutAsync(path, _Body).Result;
                     }
                     break;
@@ -105,22 +112,28 @@ namespace io.ark.core
             return content;
         }
 
-        public void PostTransaction(Transaction transaction)
+        public string PostTransaction(Transaction transaction)
         {
-            //String response = MakeRequest("POST", "/peer/transactions", transaction.ToObject());
+            string body = "{transactions: [" + transaction.ToObject(true) + "]} ";
+
+            
+
+            string response = MakeRequest("POST", "/peer/transactions", body);
+            return response;
         }
 
-        public Dictionary<string, dynamic> GetPeerStatus()
+        public string GetPeerStatus()
         {
-            Dictionary<string,dynamic> peerStat = MakeRequest("GET", "/peer/status");
-            bool forging = peerStat["forgingAllowed"];
-            return peerStat;
+            string response = MakeRequest("GET", "/peer/status");
+            return response;
+
         }
 
-        public Dictionary<string, dynamic> GetPeers()
+        public string GetPeers()
         {
-            Dictionary<string, dynamic> peerList = MakeRequest("GET", "/peer/list");
-            return peerList;
+            string response = MakeRequest("GET", "/peer/list");
+            //Dictionary<string, dynamic> peerList = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(response);
+            return response;
         }
     }
 }

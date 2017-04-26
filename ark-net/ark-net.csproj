@@ -74,6 +74,7 @@
     <Compile Include="io\ark\core\Peer.cs" />
     <Compile Include="io\ark\core\Slot.cs" />
     <Compile Include="io\ark\core\Verification.cs" />
+    <Compile Include="io\ark\model\PeerVO.cs" />
     <Compile Include="io\ark\utils\Base58.cs" />
     <Compile Include="io\ark\utils\BCUtils.cs" />
     <Compile Include="io\ark\utils\BCAVersionedChecksummedBytes.cs" />

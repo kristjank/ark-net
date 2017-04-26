@@ -46,6 +46,7 @@
     <Reference Include="IKVM.OpenJDK.Core">
       <HintPath>..\..\ikvm-7.2.4630.5\bin\IKVM.OpenJDK.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\ark-net\packages\MSTest.TestFramework.1.1.11\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
@@ -67,6 +68,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="io\ark\core\CryptoTests.cs" />
+    <Compile Include="io\ark\core\NetworkTests.cs" />
     <Compile Include="io\ark\core\TransactionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

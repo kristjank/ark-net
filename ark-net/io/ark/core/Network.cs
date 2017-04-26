@@ -120,7 +120,7 @@ namespace io.ark.core
         public string Version { get => version; set => version = value; }
         public int BroadcastMax { get => broadcastMax; set => broadcastMax = value; }
 
-        public dynamic GetHeaders(bool retJson=true)
+        public dynamic GetHeaders(bool retJson=false)
         {
             Dictionary<string,dynamic> data = new Dictionary<string, dynamic> { ["nethash"] = this.nethash, ["version"] = this.version, ["port"] = this.port };
 

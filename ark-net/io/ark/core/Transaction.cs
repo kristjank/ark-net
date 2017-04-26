@@ -117,7 +117,7 @@ namespace io.ark.core
             return outBuffer;
         }
 
-        public dynamic ToObject(bool retJson=true)
+        public dynamic ToObject(bool retJson=false)
         {
             Dictionary<string, dynamic> data = new Dictionary<string, dynamic> {
                 ["id"] = this.id,

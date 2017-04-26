@@ -12,9 +12,9 @@ namespace io.ark.core
 
         public static int GetTime()
         {
-            DateTime date = DateTime.Now;
+            //DateTime date = DateTime.Now;
 
-            return (date.Millisecond - beginEpoch.Millisecond) / 1000;
+            return Convert.ToInt32((DateTime.Now - beginEpoch).TotalMilliseconds / 1000);
         }
     }
 }
