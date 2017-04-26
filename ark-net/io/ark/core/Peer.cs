@@ -18,7 +18,7 @@ namespace io.ark.core
         string protocol = "http://";
         string status = "NEW";
 
-        private HttpClient httpClient;
+        private static HttpClient httpClient;
         private Dictionary<string, dynamic> networkHeaders = Network.Mainnet.GetHeaders();
 
         private static void OpenServicePoint()
@@ -49,25 +49,20 @@ namespace io.ark.core
             if (port % 1000 == 443) protocol = "https://";
             OpenServicePoint();
             Init(ip, port, protocol);
+
+            httpClient = new HttpClient();
+            httpClient.BaseAddress = new UriBuilder(this.protocol, this.ip, this.port).Uri;
+            httpClient.DefaultRequestHeaders.Accept.Clear();
+            httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            httpClient.DefaultRequestHeaders.Add("nethash", Network.Mainnet.Nethash);
+            httpClient.DefaultRequestHeaders.Add("version", Network.Mainnet.Version);
+            httpClient.DefaultRequestHeaders.Add("port", Network.Mainnet.Port.ToString());
+
         }
 
         // return Future that will deliver the JSON as a Map
         private string MakeRequest(String method, String path, string body="")
         {
-            if (httpClient == null)
-            {
-                httpClient = new HttpClient()
-                {
-                    BaseAddress = new UriBuilder(this.protocol, this.ip, this.port).Uri
-                };
-                httpClient.DefaultRequestHeaders.Accept.Clear();
-                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            }
-
-            httpClient.DefaultRequestHeaders.Add("nethash", Network.Mainnet.Nethash);
-            httpClient.DefaultRequestHeaders.Add("version", Network.Mainnet.Version);
-            httpClient.DefaultRequestHeaders.Add("port", Network.Mainnet.Port.ToString());
-
             HttpResponseMessage response;
             var _Method = new HttpMethod(method);
 

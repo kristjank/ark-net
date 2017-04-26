@@ -15,7 +15,7 @@ namespace io.ark.core
         int port = 4001;
         byte prefix = 0x17;
         string version = "1.0";
-        int broadcastMax = 10;
+        int broadcastMax = 5;
 
         List<Peer> peers = new List<Peer>();
 
