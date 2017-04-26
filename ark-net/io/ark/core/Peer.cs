@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -16,10 +18,18 @@ namespace io.ark.core
         string protocol = "http://";
         string status = "NEW";
 
-        private static HttpClient httpClient;
+        private HttpClient httpClient;
         private Dictionary<string, dynamic> networkHeaders = Network.Mainnet.GetHeaders();
 
-        private Peer(string ip, int port, string protocol)
+        private static void OpenServicePoint()
+        {
+            ServicePointManager.UseNagleAlgorithm = true;
+            ServicePointManager.Expect100Continue = true;
+            ServicePointManager.CheckCertificateRevocationList = true;
+            ServicePointManager.DefaultConnectionLimit = 10000;
+        }
+
+        private void Init(string ip, int port, string protocol)
         {
             this.ip = ip;
             this.port = port;
@@ -30,14 +40,15 @@ namespace io.ark.core
             return String.Format(this.protocol + "//" + this.ip + ":" + this.port);
         }
 
-        public static Peer Create(String peerData)
+        public Peer(String peerData)
         {
             string[] data = peerData.Split(':');
             int port = Convert.ToInt32(data[1]);
             string ip = data[0];
             string protocol = "http://";
             if (port % 1000 == 443) protocol = "https://";
-            return new Peer(ip, port, protocol);
+            OpenServicePoint();
+            Init(ip, port, protocol);
         }
 
         // return Future that will deliver the JSON as a Map
@@ -71,7 +82,7 @@ namespace io.ark.core
                     break;
                 case "POST":
                     {
-                        Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(body);
+                        JObject jObject = JObject.Parse(body);
                         response = httpClient.PostAsJsonAsync(path, jObject).Result;                        
                     }
                     break;

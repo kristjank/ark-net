@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -148,7 +149,8 @@ namespace io.ark.core
 
         private Network()
         {
-           peers = new List<Peer>();          
+           peers = new List<Peer>();
+           System.Net.ServicePointManager.DefaultConnectionLimit = 1000;
         }
      
         private Network(byte prefix, int port, string name)
@@ -185,7 +187,7 @@ namespace io.ark.core
             if (peers.Count > 0) return false;
             foreach (string item in peerseed)
             {
-                peers.Add(Peer.Create(item));
+                peers.Add(new Peer(item));
             }
             return true;
         }
@@ -195,21 +197,19 @@ namespace io.ark.core
             return peers[random.Next(peers.Count())];
         }
 
-       // public 
-
-
-        /*    // broadcast to many nodes
-            public int leftShift(Transaction transaction)
+        public int MultipleBroadCast(Transaction transaction)
+        {
+            int res = 0;
+            for (int i =0; i < 10; i++)
             {
-            [1..broadcastMax].each {
-              getRandomPeer() << transaction
+                string response = GetRandomPeer().PostTransaction(transaction);
+
+                JObject jObject = JObject.Parse(response);
+                if (Convert.ToBoolean(jObject["success"]))
+                    res++;
+            }
+            return res;
         }
-            return broadcastMax
-          }
-
-
-            }*/
-
 
 
 

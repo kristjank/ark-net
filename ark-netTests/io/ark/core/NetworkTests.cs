@@ -54,7 +54,7 @@ namespace io.ark.core.Tests
         [TestMethod()]
         public void PostTransactionTransferSuccessTest()
         {
-            Transaction tx = Transaction.CreateTransaction("ARMy9u1XvrZ124JzQq3oeJpjmBEnYkyU7D",
+            Transaction tx = Transaction.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
                                                            1000,
                                                            "This is first transaction from ARK-NET",
                                                            "ski rose knock live elder parade dose device fetch betray loan holiday");
@@ -68,6 +68,20 @@ namespace io.ark.core.Tests
             Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(result);
 
             Assert.IsTrue(Convert.ToBoolean(jObject["success"]));
+        }
+
+        [TestMethod()]
+        public void MultiplePostTransactionSuccessTest()
+        {
+            Transaction tx = Transaction.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
+                                                           1000,
+                                                           "This is first transaction from ARK-NET",
+                                                           "ski rose knock live elder parade dose device fetch betray loan holiday");
+
+            //Network.Mainnet.WarmUp();
+            int res = Network.Mainnet.MultipleBroadCast(tx);
+            Assert.IsTrue(res > 0);
+
         }
 
         [TestMethod()]
