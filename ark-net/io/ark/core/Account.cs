@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace io.ark.core
 {
-    class Account
+    public class Account
     {
         String address;
         String publicKey;
@@ -23,6 +23,29 @@ namespace io.ark.core
         public int Rate { get => rate; set => rate = value; }
         public List<string> Votes { get => votes; set => votes = value; }
 
+        public bool ApplyTransaction(Transaction transaction)
+        {
+            balance -= transaction.Amount + transaction.Fee;
+            return (balance > -1);            
+        }
+
+        public bool UndoTransaction(Transaction transaction)
+        {
+            balance += transaction.Amount + transaction.Fee;
+            return (balance > -1);
+        }
+
+        public Verification VerifyTransaction(Transaction transaction)
+        {
+            Verification v = new Verification();
+            if (balance >= transaction.Amount + transaction.Fee)
+            {
+                v.AddError(String.Format("Account %1 does not have enough balance: %2", address, balance));
+            }
+            // TODO: many things
+
+            return v;
+        }
 
 
     }

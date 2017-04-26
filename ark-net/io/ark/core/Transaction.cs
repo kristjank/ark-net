@@ -25,7 +25,7 @@ namespace io.ark.core
         String signSignature;
         String senderPublicKey;
         String requesterPublicKey;
-        //Dictionary<String, Object> asset;
+        Dictionary<String, dynamic> asset = new Dictionary<string, dynamic>();
         String username;
         ArrayList votes;
         String id;
@@ -39,8 +39,7 @@ namespace io.ark.core
         public string Signature { get => signature; set => signature = value; }
         public string SignSignature { get => signSignature; set => signSignature = value; }
         public string SenderPublicKey { get => senderPublicKey; set => senderPublicKey = value; }
-        public string RequesterPublicKey { get => requesterPublicKey; set => requesterPublicKey = value; }
-        //public Dictionary<string, object> Asset { get => asset; set => asset = value; }
+        public string RequesterPublicKey { get => requesterPublicKey; set => requesterPublicKey = value; }        
         public string Id { get => id; set => id = value; }
         public string Username { get => username; set => username = value; }
         public ArrayList Votes { get => votes; set => votes = value; }
@@ -91,11 +90,11 @@ namespace io.ark.core
             }
             else if (type == 2)
             {
-                //buffer.put(Encoding.ASCII.GetBytes(this.username));
+                buffer.put(Encoding.ASCII.GetBytes(this.asset["username"]));
             }
             else if (type == 3)
             {
-                //buffer.put(asset.votes.join("").bytes);
+                buffer.put(this.asset["votes"].join("").bytes);
             }
             // TODO: multisignature
             // else if(type==4){
@@ -117,6 +116,34 @@ namespace io.ark.core
             buffer.get(outBuffer);
             return outBuffer;
         }
+
+        public dynamic ToObject(bool retJson=true)
+        {
+            Dictionary<string, dynamic> data = new Dictionary<string, dynamic> {
+                ["id"] = this.id,
+                ["timestamp"] = this.timestamp,
+                ["recipientId"] = this.recipientId,
+                ["amount"] = this.amount,            
+                ["fee"] = this.fee,
+                ["type"] = this.type,
+                ["vendorField"] = this.vendorField,
+                ["signature"] = this.signature,
+                ["signSignature"] = this.signSignature,
+                ["senderPublicKey"] = this.senderPublicKey,
+                ["requesterPublicKey"] = this.requesterPublicKey,
+                ["asset"] = this.asset
+
+            };
+
+            if (retJson)
+                return JsonConvert.SerializeObject(data);
+            else
+                return data;
+
+            //this.properties.subMap(['id', 'timestamp', 'recipientId', 'amount', 'fee', 'type', 'vendorField', 'signature', 'signSignature', 
+            //'senderPublicKey', 'requesterPublicKey', 'asset'])
+        }
+
 
         public String Sign(String passphrase)
         {
@@ -181,7 +208,7 @@ namespace io.ark.core
         public static Transaction CreateVote(ArrayList votes, String passphrase, String secondPassphrase = null)
         {
             Transaction tx = new Transaction(3, 0, 100000000);
-            //tx.asset.votes = votes
+            tx.asset.Add("votes", votes);
             tx.timestamp = Slot.GetTime();
             tx.Sign(passphrase);
             if (secondPassphrase != null)
@@ -195,7 +222,7 @@ namespace io.ark.core
         public static Transaction CreateDelegate(String username, String passphrase, String secondPassphrase = null)
         {
             Transaction tx = new Transaction(2, 0, 2500000000);
-            tx.username = username;
+            tx.asset.Add("username", username);
             tx.timestamp = Slot.GetTime();
             tx.Sign(passphrase);
             if (secondPassphrase != null)

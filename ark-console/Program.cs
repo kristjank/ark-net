@@ -1,8 +1,10 @@
 ﻿using io.ark.core;
+using Newtonsoft.Json;
 using org.bitcoinj.core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 //using NBitcoin;
@@ -11,6 +13,22 @@ namespace ark_console
 {
     class Program
     {
+
+        public static dynamic ToObject(bool retJson = true)
+        {
+            Dictionary<string, dynamic> data = new Dictionary<string, dynamic>
+            {
+                ["id"] = 1,
+                ["timestamp"] = DateTime.Now,
+                ["amount"] = 300
+            };
+
+            if (retJson)
+                return JsonConvert.SerializeObject(data);
+            else
+                return data;
+        }
+
         static void Main(string[] args)
         {
 
@@ -49,16 +67,36 @@ namespace ark_console
             Console.Write(Crypto.GetKeys("this is a top secret passphrase").getPrivKey());
             Console.ReadLine();*/
 
-            io.ark.core.Transaction tx = io.ark.core.Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
+            /*io.ark.core.Transaction tx = io.ark.core.Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
                                                            133380000000,
                                                            "This is first transaction from JAVA",
                                                            "this is a top secret passphrase");
             String json = tx.ToJson();
             Console.WriteLine(json);
 
-            io.ark.core.Transaction tx2 = io.ark.core.Transaction.FromJson(json);
+            io.ark.core.Transaction tx2 = io.ark.core.Transaction.FromJson(json);*/
 
-            Console.WriteLine(json);
+            string ip = "10.1.1.1";
+            int port = 4001;
+            string protocol = "http";
+            string status = "NEW";
+
+            HttpClient httpClient = new HttpClient();
+            Uri jj = new UriBuilder(protocol, ip, port).Uri;
+
+            httpClient.BaseAddress = jj;
+
+            Dictionary<string, dynamic> aa = new Dictionary<string, dynamic> { ["nethash"] = "asdasd", ["version"] = 10, ["port"] = 300 };
+            Console.WriteLine(aa["version"] + aa["port"]);
+            Console.WriteLine(JsonConvert.SerializeObject(aa));
+
+            Console.WriteLine(ToObject());
+
+            /*var list = await "http://api.foo.com".GetJsonList();
+
+            dynamic d = await url.PostUrlEncodedAsync(data).ReceiveJson();
+            */
+            //Console.WriteLine(json);
             Console.ReadLine();
 
         }
