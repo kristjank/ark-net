@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using ark.io.ark.model;
+using io.ark.model;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -120,18 +122,123 @@ namespace io.ark.core
             return response;
         }
 
-        public string GetPeerStatus()
-        {
-            string response = MakeRequest("GET", "/peer/status");
-            return response;
-
-        }
-
-        public string GetPeers()
+        public List<PeerVO> GetPeers()
         {
             string response = MakeRequest("GET", "/peer/list");
-            //Dictionary<string, dynamic> peerList = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(response);
-            return response;
+            JObject parsed = JObject.Parse(response);
+            JArray array = (JArray)parsed["peers"];
+
+            List<PeerVO> peerList = JsonConvert.DeserializeObject<List<PeerVO>>(array.ToString());
+            return peerList;
+        }
+
+        public PeerStatusVO GetPeerStatus()
+        {
+            string response = MakeRequest("GET", "/peer/status");
+            JObject parsed = JObject.Parse(response);
+
+            PeerStatusVO peerStat = JsonConvert.DeserializeObject<PeerStatusVO>(response);
+            return peerStat;
+        }
+
+        public List<TransactionVO> GetTransactions(bool unconfirmed=false)
+        {
+            string path = "/api/transactions";
+            if (unconfirmed)
+                path += "/unconfirmed";
+
+            string response = MakeRequest("GET", path);
+            JObject parsed = JObject.Parse(response);
+            JArray array = (JArray)parsed["transactions"];
+
+            List<TransactionVO> tranList = JsonConvert.DeserializeObject<List<TransactionVO>>(array.ToString());
+            return tranList;
+        }
+
+        public TransactionVO GetTransaction(string id, bool unconfirmed=false)
+        {
+            string path = "/api/transactions";
+            if (unconfirmed)
+                path += "/unconfirmed";
+
+            string response = MakeRequest("GET", path + "/get?id="+id);
+            JObject parsed = JObject.Parse(response);
+
+            TransactionVO trans = new TransactionVO();
+            if (!Convert.ToBoolean(parsed["success"]))
+            {
+                trans.id = parsed["error"].ToString();
+            }
+            else
+            {
+                trans = JsonConvert.DeserializeObject<TransactionVO>(parsed["transaction"].ToString());
+            }
+           
+            return trans;
+        }        
+
+        public List<DelegateVO> GetDelegates()
+        {
+            string response = MakeRequest("GET", "/api/delegates");
+            JObject parsed = JObject.Parse(response);
+            JArray array = (JArray)parsed["delegates"];
+
+            List<DelegateVO> delegList = JsonConvert.DeserializeObject<List<DelegateVO>>(array.ToString());
+            return delegList;
+        }
+
+        public DelegateVO GetDelegatebyUsername(string username)
+        {
+            string response = MakeRequest("GET", "/api/delegates/get?username=" + username);
+            JObject parsed = JObject.Parse(response);
+
+            DelegateVO dele = new DelegateVO();
+            if (!Convert.ToBoolean(parsed["success"]))
+            {
+                dele.username = parsed["error"].ToString();
+            }
+            else
+            {
+                dele = JsonConvert.DeserializeObject<DelegateVO>(parsed["delegate"].ToString());
+            }
+            return dele;
+        }
+
+        public DelegateVO GetDelegatebyPubKey(string pubKey)
+        {
+            string response = MakeRequest("GET", "/api/delegates/get?publicKey=" + pubKey);
+            JObject parsed = JObject.Parse(response);
+
+            DelegateVO dele = new DelegateVO();
+            if (!Convert.ToBoolean(parsed["success"]))
+            {
+                dele.username = parsed["error"].ToString();
+            }
+            else
+            {
+                dele = JsonConvert.DeserializeObject<DelegateVO>(parsed["delegate"].ToString());
+            }
+            return dele;
+        }
+
+
+        public List<DelegateVotersVO> GetDelegateVoters(string pubKey)
+        {
+            string response = MakeRequest("GET", "/api/delegates/voters?publicKey=" + pubKey);
+            JObject parsed = JObject.Parse(response);
+            JArray array = (JArray)parsed["accounts"];
+
+            List<DelegateVotersVO> delegVotersList = new List<DelegateVotersVO>();
+            if (!Convert.ToBoolean(parsed["success"]))
+            {
+                DelegateVotersVO dele = new DelegateVotersVO();
+                dele.username = parsed["error"].ToString();
+            }
+            else
+            { 
+                delegVotersList = JsonConvert.DeserializeObject<List<DelegateVotersVO>>(array.ToString());
+            }
+            return delegVotersList;
         }
     }
 }

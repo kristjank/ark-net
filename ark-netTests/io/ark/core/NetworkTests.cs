@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Threading;
+using ark.io.ark.model;
+using io.ark.model;
 
 namespace io.ark.core.Tests
 {
@@ -19,18 +21,6 @@ namespace io.ark.core.Tests
              */
 
 
-
-        [TestMethod()]
-        public void WarmUpTest()
-        {
-            //Network.Mainnet.WarmUp();
-
-            string response = Network.Mainnet.GetRandomPeer().GetPeers();
-
-            Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(response);
-
-            Assert.IsTrue(Convert.ToBoolean(jObject["success"]));
-        }
 
         [TestMethod()]
         public void PostTransactionNoBalanceTest()
@@ -87,7 +77,7 @@ namespace io.ark.core.Tests
         [TestMethod()]
         public void MultipleOverOneNetwork()
         {
-            string response = Network.Mainnet.GetRandomPeer().GetPeers();
+            string response = Network.Mainnet.GetRandomPeer().ip;
 
             Transaction tx = Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
                                                            133380000000,
@@ -97,18 +87,10 @@ namespace io.ark.core.Tests
             Thread.Sleep(1000);
             //Network.Mainnet.WarmUp();
             Peer peer = Network.Mainnet.GetRandomPeer();
-
-
             string result = peer.PostTransaction(tx);
 
             Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(result);
-
             Assert.AreEqual(jObject["error"], "Account does not have enough ARK: AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC balance: 0");
-
-
-
         }
-
-
     }
 }
