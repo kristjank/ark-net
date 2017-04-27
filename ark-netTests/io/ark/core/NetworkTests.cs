@@ -20,8 +20,6 @@ namespace io.ark.core.Tests
          pass: ski rose knock live elder parade dose device fetch betray loan holiday
          */
 
-
-
         [TestMethod()]
         public void PostTransactionNoBalanceTest()
         {
