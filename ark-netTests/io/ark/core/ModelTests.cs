@@ -20,6 +20,11 @@ namespace io.ark.core.Tests
         public void GetPeersTest()
         {
             List<PeerVO> peers = Network.Mainnet.GetRandomPeer().GetPeers();
+
+
+            IEnumerable<PeerVO> peersOk = peers.Where(x => x.status.Equals("OK"));
+            int a = peersOk.Count();
+            
             Assert.IsTrue(peers.Count > 0);
         }
 
