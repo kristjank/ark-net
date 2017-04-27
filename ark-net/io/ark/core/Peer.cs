@@ -18,7 +18,7 @@ namespace io.ark.core
         public string ip;
         int port;
         string protocol = "http://";
-        string status = "NEW";
+        //string status = "NEW";
 
         private HttpClient httpClient;
         private Dictionary<string, dynamic> networkHeaders = Network.Mainnet.GetHeaders();

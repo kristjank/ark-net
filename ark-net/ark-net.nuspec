@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/kristjank/ark-net/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/kristjank/ark-net</projectUrl>
+    <iconUrl>https://github.com/kristjank/ark-net/blob/develop/ark-net/res/arknet-icon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <copyright>Copyright 2017 - ARK</copyright>
+  </metadata>
+  <files>
+    <file src="lib\*.dll" target="lib" />
+  </files>
+</package>
