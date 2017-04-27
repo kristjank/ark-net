@@ -7,8 +7,8 @@
     <ProjectGuid>{7FE83F44-4289-440D-B864-EFDF8CC81E37}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ark</RootNamespace>
-    <AssemblyName>ark-net</AssemblyName>
+    <RootNamespace>io</RootNamespace>
+    <AssemblyName>ark.net</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -29,6 +29,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>res\arknet-icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="bitcoinj-core-0.14.4-bundled">
       <HintPath>..\ark-console\bitcoinj-core-0.14.4-bundled.dll</HintPath>
@@ -42,8 +45,8 @@
     <Reference Include="Multiformats.Base, Version=1.0.34.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Multiformats.Base.1.0.34\lib\net45\Multiformats.Base.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="SimpleBase, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\SimpleBase.1.2.0\lib\net45\SimpleBase.dll</HintPath>
@@ -91,6 +94,12 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="res\arknet-icon.ico" />
+    <Content Include="res\arknet-icon.png" />
+    <Content Include="res\arknet-transparent.png" />
+    <Content Include="res\dotnety.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
