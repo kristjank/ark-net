@@ -221,6 +221,23 @@ namespace io.ark.core
             return dele;
         }
 
+        public DelegateVO GetDelegatebyAddress(string address)
+        {
+            string response = MakeRequest("GET", "/api/delegates/get?address=" + address);
+            JObject parsed = JObject.Parse(response);
+
+            DelegateVO dele = new DelegateVO();
+            if (!Convert.ToBoolean(parsed["success"]))
+            {
+                dele.username = parsed["error"].ToString();
+            }
+            else
+            {
+                dele = JsonConvert.DeserializeObject<DelegateVO>(parsed["delegate"].ToString());
+            }
+            return dele;
+        }
+
 
         public List<DelegateVotersVO> GetDelegateVoters(string pubKey)
         {
@@ -239,6 +256,23 @@ namespace io.ark.core
                 delegVotersList = JsonConvert.DeserializeObject<List<DelegateVotersVO>>(array.ToString());
             }
             return delegVotersList;
+        }
+
+        public AccountVO GetAccountbyAddress(string address)
+        {
+            string response = MakeRequest("GET", "/api/accounts/?address=" + address);
+            JObject parsed = JObject.Parse(response);
+
+            AccountVO account = new AccountVO();
+            if (!Convert.ToBoolean(parsed["success"]))
+            {
+                account.address = parsed["error"].ToString();
+            }
+            else
+            {
+                account = JsonConvert.DeserializeObject<AccountVO>(parsed["account"].ToString());
+            }
+            return account;
         }
     }
 }

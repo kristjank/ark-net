@@ -5,18 +5,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using org.bitcoinj.core;
+
 using com.google.common.io;
 
 namespace io.ark.core.Tests
 {
     [TestClass()]
-    public class TransactionTests
+    public class TransactionCryptoTests
     {
+
+        [TestMethod()]
+        public void GetAddressTest()
+        {
+            String a1 = Crypto.GetAddress(Crypto.GetKeys("this is a top secret passphrase"));
+            String a2 = "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC";
+
+            Assert.AreEqual(a2, a1);
+        }
+
         [TestMethod()]
         public void CreateTransactionPassPhraseVerifyTest()
         {
-            Transaction tx = Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
+            core.Transaction tx = core.Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
                                                             133380000000,
                                                             "This is first transaction from ARK-NET",
                                                             "this is a top secret passphrase");

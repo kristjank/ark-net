@@ -67,10 +67,9 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="io\ark\core\CryptoTests.cs" />
     <Compile Include="io\ark\core\NetworkTests.cs" />
-    <Compile Include="io\ark\core\TransactionTests.cs" />
-    <Compile Include="io\ark\model\ModelTests.cs" />
+    <Compile Include="io\ark\core\TransactionCryptoTests.cs" />
+    <Compile Include="io\ark\core\ModelTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -10,10 +10,10 @@ using System.Threading;
 using ark.io.ark.model;
 using io.ark.model;
 
-namespace io.ark.model.Tests
+namespace io.ark.core.Tests
 {
     [TestClass()]
-    public class NetworkTests
+    public class ModelApiVOTests
     {
        
         [TestMethod()]
@@ -72,10 +72,24 @@ namespace io.ark.model.Tests
             Assert.IsNotNull(dele1);
 
             DelegateVO dele22 = Network.Mainnet.GetRandomPeer().GetDelegatebyPubKey(dele[0].publicKey);
-            Assert.IsNotNull(dele1);
+            Assert.IsNotNull(dele22);
 
+            DelegateVO dele33 = Network.Mainnet.GetRandomPeer().GetDelegatebyAddress(dele[0].address);
+            Assert.IsNotNull(dele33);
+            
             List<DelegateVotersVO> voters = Network.Mainnet.GetRandomPeer().GetDelegateVoters(dele[0].publicKey);
             Assert.IsTrue(voters.Count > 0);
+        }
+
+        [TestMethod()]
+        public void AllAccountsTest()
+        {
+            List<DelegateVO> dele = Network.Mainnet.GetRandomPeer().GetDelegates();
+            Assert.IsTrue(dele.Count > 0);
+
+            AccountVO accountTest = Network.Mainnet.GetRandomPeer().GetAccountbyAddress(dele[0].address);
+            Assert.IsNotNull(accountTest);
+
         }
     }
 }

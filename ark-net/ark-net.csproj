@@ -74,6 +74,7 @@
     <Compile Include="io\ark\core\Peer.cs" />
     <Compile Include="io\ark\core\Slot.cs" />
     <Compile Include="io\ark\core\Verification.cs" />
+    <Compile Include="io\ark\model\AccountVO.cs" />
     <Compile Include="io\ark\model\BlockVO.cs" />
     <Compile Include="io\ark\model\DelegateVO.cs" />
     <Compile Include="io\ark\model\DelegateVotersVO.cs" />
