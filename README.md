@@ -9,9 +9,9 @@ It works on Windows, Mac and Linux with Xamarin, Unity, .NET Core or CLR.
 
 # How to use ?
 With nuget :
->**Install-Package NBitcoin** 
+>**Install-Package Ark.NET** 
 
-Go on the [nuget website](https://www.nuget.org/packages/NBitcoin/) for more information.
+Go on the [nuget website](https://www.nuget.org/packages/ark.net/) for more information.
 
 The packages supports:
 
