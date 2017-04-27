@@ -15,10 +15,10 @@ namespace io.ark.core.Tests
     [TestClass()]
     public class NetworkTests
     {
-        /*
+        /* TEST MAIN WALLET
          Adress: "AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK"
-         G ski rose knock live elder parade dose device fetch betray loan holiday
-             */
+         pass: ski rose knock live elder parade dose device fetch betray loan holiday
+         */
 
 
 
@@ -72,25 +72,6 @@ namespace io.ark.core.Tests
             int res = Network.Mainnet.MultipleBroadCast(tx);
             Assert.IsTrue(res > 0);
 
-        }
-
-        [TestMethod()]
-        public void MultipleOverOneNetwork()
-        {
-            string response = Network.Mainnet.GetRandomPeer().ip;
-
-            Transaction tx = Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
-                                                           133380000000,
-                                                           "This is first transaction from ARK-NET",
-                                                           "this is a top secret passphrase");
-
-            Thread.Sleep(1000);
-            //Network.Mainnet.WarmUp();
-            Peer peer = Network.Mainnet.GetRandomPeer();
-            string result = peer.PostTransaction(tx);
-
-            Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(result);
-            Assert.AreEqual(jObject["error"], "Account does not have enough ARK: AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC balance: 0");
-        }
+        }        
     }
 }
