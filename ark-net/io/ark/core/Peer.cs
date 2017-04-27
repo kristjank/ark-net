@@ -18,7 +18,7 @@ namespace io.ark.core
         string protocol = "http://";
         string status = "NEW";
 
-        private static HttpClient httpClient;
+        private HttpClient httpClient;
         private Dictionary<string, dynamic> networkHeaders = Network.Mainnet.GetHeaders();
 
         private void OpenServicePoint(Uri uri)
@@ -30,6 +30,7 @@ namespace io.ark.core
             sp.UseNagleAlgorithm = true;
             sp.Expect100Continue = true;
             sp.ConnectionLimit = 10000;
+            sp.ConnectionLeaseTimeout = 30000;
 
         }
 
