@@ -7,7 +7,7 @@ It works on Windows, Mac and Linux with Xamarin, Unity, .NET Core or CLR.
 
 # How to use ?
 With nuget :
->**Install-Package Ark.NET** 
+>**Install-Package ark-net** 
 
 Go on the [nuget website](https://www.nuget.org/packages/ark.net/) for more information.
 
