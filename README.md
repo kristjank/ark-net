@@ -1,7 +1,5 @@
 # AKR API for .NET
 
-[![Slack Status](https://arkecosystem.slack.com/badge.svg)](https://ark.io)
-
 Ark.NET is the ARK Ecosystem library for the .NET platform. It implements all most relevant ARK functionalities for you to provide and develop efficient .NET applications built upon ARK platform. It provides also low level access to ARK so you can easily build your application on top of it. 
 
 It works on Windows, Mac and Linux with Xamarin, Unity, .NET Core or CLR.
