@@ -1,4 +1,4 @@
-# ark-net
-Ark Client for .NET 
+# ARK.NET - Ark Client for .NET
 
-![alt text](https://github.com/kristjank/wiki/blob/master/images/ArkWiki.png)
+![alt text](https://github.com/kristjank/ark-net/blob/develop/ark-net/res/dotnety.jpg)
+
