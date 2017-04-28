@@ -2,12 +2,12 @@
 
 Ark.NET is the ARK Ecosystem library for the .NET platform. It implements all most relevant ARK functionalities for you to provide and develop efficient .NET applications built upon ARK platform. It provides also low level access to ARK so you can easily build your application on top of it. 
 
-It works on Windows, Mac and Linux with Xamarin, Unity, .NET Core or CLR.
+It works on Windows, Mac and Linux with Xamarin and CLR.
 
 
 # How to use ?
 With nuget :
->**Install-Package Ark.NET** 
+>**Install-Package ark-net** 
 
 Go on the [nuget website](https://www.nuget.org/packages/ark.net/) for more information.
 
