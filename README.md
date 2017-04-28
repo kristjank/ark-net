@@ -21,7 +21,7 @@ All service available reponses have their object representations in the form of 
 
 It's best to let the code do the speaking. For more examples looke at the [ARKNET Tests](hhttps://github.com/kristjank/ark-net/blob/master/ark-netTests/io/ark/core/ModelTests.cs#L22), where all tests are written and you can see the api usage. Some code snippets are below.
 
-## Create and post transaction
+### Create and post transaction
 
 ```c#
 Transaction tx = Transaction.CreateTransaction(recepient, amount, description, passphrase);
@@ -31,13 +31,32 @@ string result = peer.PostTransaction(tx);
 
 ```
 
-## Get ARK peers
+### Some api calls
+For a full list of avaiable api calls please look at the  [ARKNET Test project](hhttps://github.com/kristjank/ark-net/blob/master/ark-netTests/io/ark/core/)
 
 ```c#
-   List<PeerVO> peers = Network.Mainnet.GetRandomPeer().GetPeers();
+List<PeerVO> peers = Network.Mainnet.GetRandomPeer().GetPeers();
 
-   IEnumerable<PeerVO> peersOk = peers.Where(x => x.status.Equals("OK")); //Linq query over the object
+List<TransactionVO> trans = Network.Mainnet.GetRandomPeer().GetTransactions();
+
+PeerStatusVO peerStat = Network.Mainnet.GetRandomPeer().GetPeerStatus();
+
+TransactionVO trans = Network.Mainnet.GetRandomPeer().GetTransaction("3a9643dcf9631384df6cb8c7aec50d782e8da5dfd4b44c22cd1f10c6434ee00c");
+
+List<DelegateVO> dele = Network.Mainnet.GetRandomPeer().GetDelegates();
+
+DelegateVO dele1 = Network.Mainnet.GetRandomPeer().GetDelegatebyUsername(dele[0].username);
+
+DelegateVO dele22 = Network.Mainnet.GetRandomPeer().GetDelegatebyPubKey(dele[0].publicKey);
+DelegateVO dele33 = Network.Mainnet.GetRandomPeer().GetDelegatebyAddress(dele[0].address);
+
+List<DelegateVotersVO> voters = Network.Mainnet.GetRandomPeer().GetDelegateVoters(dele[0].publicKey);
+
+AccountVO accountTest = Network.Mainnet.GetRandomPeer().GetAccountbyAddress(dele[0].address);
+
 ```
+
+
 
 
 
