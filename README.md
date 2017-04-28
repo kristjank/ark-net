@@ -1,31 +1,32 @@
-# ARKNET - .NET CLIENT API FOR ARK ECOSYSTEM
+
+![alt text](https://github.com/kristjank/ark-net/blob/master/ark-net/res/arknet-new.png)
 
 Ark.NET is the ARK Ecosystem library for the .NET platform. It implements all most relevant ARK functionalities to help you  develop efficient .NET applications built upon ARK platform. It provides also low level access to ARK so you can easily build your application on top of it. 
 
 ### Authors
 Chris (kristjan.kosic@gmail.com), with a lot of help from FX Thoorens fx@ark.io. Project is a .NET port of [ARK-JAVA](https://github.com/ArkEcosystem/ark-java)
 
-# How to use ?
-With nuget :
->**Install-Package ark.net** 
-
-Go on the [nuget website](https://www.nuget.org/packages/ark.net/) for more information.
-
 The package supports:
-
 * With full features, Windows Desktop applications, Mono Desktop applications, and platform supported at [.NET Standard Library](https://docs.microsoft.com/en-us/dotnet/articles/standard/library). Should work will all .NET solutions with framework > 4.5.2.
 * It's a work in progress so mobile platform testing are still to follow. 
 
+# How to install?
+### From source:
 To compile it by yourself, you can git clone, open the project and hit the compile button on visual studio.
 In command prompt:
 ```
 git clone https://github.com/kristjank/ark-net
 cd ark-net
 ```
+### With nuget:
+>**Install-Package ark.net** 
+
+Go on the [nuget website](https://www.nuget.org/packages/ark.net/) for more information.
+
 
 # How to get started? 
 
-All service available reponses have their object representations in the form of ValueObjects. Classes are under model folder and have VO appended to their name (e.g. TransactionVO, PeerVO, DelegateVO, AccountVO...).
+All ark-node services have available reponses have their object representations in the form of ValueObjects. Classes are under [model folder](https://github.com/kristjank/ark-net/tree/master/ark-net/io/ark/model) and have VO appended to their name (e.g. TransactionVO, PeerVO, DelegateVO, AccountVO...).
 
 It's best to let the code do the speaking. For more examples look at the [ARK.NET Tests](https://github.com/kristjank/ark-net/blob/master/ark-netTests/io/ark/core/ModelTests.cs#L22), where all tests are written and you can see the api usage. Some code snippets are below.
 
