@@ -32,7 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>res\arknet-icon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="bitcoinj-core-0.14.4-bundled, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -135,12 +136,15 @@
     <None Include="_CreateNewNuGetPackage\RunMeToUploadNuGetPackage.cmd" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="res\arknet-icon.ico" />
-    <Content Include="res\arknet-icon.png" />
-    <Content Include="res\arknet-transparent.png" />
-    <Content Include="res\dotnety.jpg" />
+    <Content Include="Icon.ico" />
+    <Content Include="res\arknet-new.png" />
+    <Content Include="Icon.png" />
+    <Content Include="Icon_details.png" />
+    <Content Include="Icon_dialog.png" />
+    <Content Include="Icon_list.png" />
     <None Include="_CreateNewNuGetPackage\DoNotModify\NuGet.exe" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>REM Create a NuGet package for this project and place the .nupkg file in the project's output directory.
