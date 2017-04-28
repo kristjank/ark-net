@@ -1,6 +1,6 @@
 # ARKNET - .NET CLIENT API FOR ARK ECOSYSTEM
 
-Ark.NET is the ARK Ecosystem library for the .NET platform. It implements all most relevant ARK functionalities for you to provide and develop efficient .NET applications built upon ARK platform. It provides also low level access to ARK so you can easily build your application on top of it. 
+Ark.NET is the ARK Ecosystem library for the .NET platform. It implements all most relevant ARK functionalities to help you  develop efficient .NET applications built upon ARK platform. It provides also low level access to ARK so you can easily build your application on top of it. 
 
 # How to use ?
 With nuget :
