@@ -25,7 +25,7 @@ cd ark-net
 
 # How to get started? 
 
-All service available reponses have their object representations in the form of ValueObjects. Classes are under model folder and have VO appended to their name (e.g. TransactionVO, PeerVO, DelegateVO, AccountVO...).
+All ark-node services have available reponses have their object representations in the form of ValueObjects. Classes are under [model folder](https://github.com/kristjank/ark-net/tree/master/ark-net/io/ark/model) and have VO appended to their name (e.g. TransactionVO, PeerVO, DelegateVO, AccountVO...).
 
 It's best to let the code do the speaking. For more examples look at the [ARK.NET Tests](https://github.com/kristjank/ark-net/blob/master/ark-netTests/io/ark/core/ModelTests.cs#L22), where all tests are written and you can see the api usage. Some code snippets are below.
 
