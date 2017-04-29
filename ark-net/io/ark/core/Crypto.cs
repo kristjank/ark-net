@@ -4,58 +4,67 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Org.BouncyCastle.Crypto.Digests;
 using System.Security.Cryptography;
 using Validation;
 using io.ark.utils;
-using org.bitcoinj.core;
-using com.google.common.io;
+using NBitcoin;
+using NBitcoin.Crypto;
+using NBitcoin.DataEncoders;
 
 namespace io.ark.core
 {
     public class Crypto
     {
+	    private static readonly SHA256 Sha256 = SHA256.Create();
+	    private static readonly RIPEMD160 Ripemd160 = RIPEMD160.Create();
 
-        public static ECKey.ECDSASignature Sign(Transaction t, String passphrase)
+		public static ECDSASignature Sign(Transaction t, string passphrase)
         {
             byte[] txbytes = GetBytes(t);
             return SignBytes(txbytes, passphrase);
         }
 
-        public static ECKey.ECDSASignature SecondSign(Transaction t, String passphrase)
+        public static ECDSASignature SecondSign(Transaction t, string passphrase)
         {
             byte[] txbytes = GetBytes(t, false);
             return SignBytes(txbytes, passphrase);
         }
 
-        public static ECKey.ECDSASignature SignBytes(byte[] bytes, String passphrase)
+        public static ECDSASignature SignBytes(byte[] bytes, string passphrase)
         {
-            ECKey keys = GetKeys(passphrase);
-            return keys.sign(Sha256Hash.of(bytes));
+            Key keys = GetKeys(passphrase);          
+	        return keys.Sign(Hashes.Hash256(Sha256.ComputeHash((bytes))));	        
         }
 
         public static bool Verify(Transaction t)
         {
-            ECKey keys = ECKey.fromPublicOnly(BaseEncoding.base16().lowerCase().decode(t.SenderPublicKey));
-            byte[] signature = BaseEncoding.base16().lowerCase().decode(t.Signature);
+            PubKey key = new PubKey(Encoders.Hex.DecodeData(t.SenderPublicKey));
+            byte[] signature = Encoders.Hex.DecodeData(t.Signature);
             byte[] bytes = GetBytes(t);
 
-            return VerifyBytes(bytes, signature, keys.getPubKey());
-  }
+            return key.Verify(Hashes.Hash256(Sha256.ComputeHash((bytes))), signature);
+        }
 
         public static bool SecondVerify(Transaction t, String secondPublicKeyHex)
         {
-            ECKey keys = ECKey.fromPublicOnly(BaseEncoding.base16().lowerCase().decode(secondPublicKeyHex));
-            byte[] signature = BaseEncoding.base16().lowerCase().decode(t.SignSignature);
+            /*ECKey keys = ECKey.fromPublicOnly(Encoders.Hex.DecodeData(secondPublicKeyHex));
+            byte[] signature = Encoders.Hex.DecodeData(t.SignSignature);
             byte[] bytes = GetBytes(t, false);
 
-            return VerifyBytes(bytes, signature, keys.getPubKey());
+            return VerifyBytes(bytes, signature, keys.getPubKey());*/
+            return true;
         }
 
-        public static bool VerifyBytes(byte[] bytes, byte[] signature, byte[] publicKey)
+        /*public static bool VerifyBytes(byte[] bytes, byte[] signature, byte[] publicKey)
         {
-            return ECKey.verify(Sha256Hash.hash(bytes), signature, publicKey);
-        }
+            var signer = new ECDSASignature();
+            signer.
+	        signer.verifySignature(Sha256.ComputeHash(bytes), new BigInteger(1, signature), new BigInteger(1,publicKey));
+
+
+			return ECKey.verify(Sha256Hash.hash(bytes), signature, publicKey);
+            
+        }*/
 
         public static byte[] GetBytes(Transaction t, bool skipSignature = true, bool skipSecondSignature = true)
         {
@@ -64,33 +73,28 @@ namespace io.ark.core
         
         public static String GetId(Transaction t)
         {
-            return BaseEncoding.base16().lowerCase().encode(Sha256Hash.hash(GetBytes(t, false, false)));
+            //return BaseEncoding.base16().lowerCase().encode(Sha256Hash.hash(GetBytes(t, false, false)));            
+            return Encoders.Hex.EncodeData(Sha256.ComputeHash(GetBytes(t, false, false)));
         }
         
-        public static ECKey GetKeys(String passphrase)
+        public static Key GetKeys(String passphrase)
         {
-            byte[] sha256 = Sha256Hash.hash(Encoding.ASCII.GetBytes(passphrase));
-            ECKey keys = ECKey.fromPrivate(sha256, true);
-            
-            return keys;      
+			var sha256h = Sha256.ComputeHash(Encoding.ASCII.GetBytes(passphrase));
+			return new Key(sha256h);      
         }
 
-        public static String GetAddress(ECKey keys, byte version = 0x17)
+        public static String GetAddress(Key keys, byte version = 0x17)
         {
-            return GetAddress(keys.getPubKey(), version);
+			//keys.S
+            return GetAddress(keys.PubKey.ToBytes(), version);
         }
 
         public static String GetAddress(byte[] publicKey, byte version = 0x17)
         {
-            RipeMD160Digest digest = new RipeMD160Digest();
-            digest.BlockUpdate(publicKey, 0, publicKey.Length);
+	        var keyHash = new byte[20];
+	        keyHash = Ripemd160.ComputeHash(publicKey, 0, publicKey.Length);
+	        var address = new BCAVersionedChecksummedBytes(0x17, keyHash);
 
-            byte[] keyHash = new byte[20];
-            digest.DoFinal(keyHash, 0);
-
-            //VersionedChecksummedBytes b = new VersionedChecksummedBytes(version, keyHash);
-
-            BCAVersionedChecksummedBytes address = new BCAVersionedChecksummedBytes(version, keyHash);            
             return address.ToString();
             
         }

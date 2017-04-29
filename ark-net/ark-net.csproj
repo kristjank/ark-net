@@ -35,19 +35,12 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="bitcoinj-core-0.14.4-bundled, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\bitcoinj-core-0.14.4-bundled.dll</HintPath>
+    <Reference Include="BitCoinSharp, Version=0.2.166.49, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\BitCoinSharp.0.2.166.49\lib\BitCoinSharp.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="IKVM.OpenJDK.Core, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
-      <HintPath>packages\IKVM.OpenJDK.Core.7.2.4630.5\lib\IKVM.OpenJDK.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="IKVM.Runtime, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
-      <HintPath>packages\IKVM.Runtime.7.2.4630.5\lib\IKVM.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <HintPath>packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
@@ -55,6 +48,9 @@
     <Reference Include="Multiformats.Base, Version=1.0.34.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Multiformats.Base.1.0.34\lib\net45\Multiformats.Base.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NBitcoin, Version=3.0.2.15, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\NBitcoin.3.0.2.15\lib\net45\NBitcoin.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -123,6 +119,13 @@
     <Compile Include="io\ark\utils\BCAVersionedChecksummedBytes.cs" />
     <Compile Include="io\ark\core\Crypto.cs" />
     <Compile Include="io\ark\core\Transaction.cs" />
+    <Compile Include="io\ark\utils\Buffer.cs" />
+    <Compile Include="io\ark\utils\BufferExceptions.cs" />
+    <Compile Include="io\ark\utils\ByteBuffer.cs" />
+    <Compile Include="io\ark\utils\ByteOrder.cs" />
+    <Compile Include="io\ark\utils\LongBuffer.cs" />
+    <Compile Include="io\ark\utils\Number.cs" />
+    <Compile Include="io\ark\utils\NumberFormat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

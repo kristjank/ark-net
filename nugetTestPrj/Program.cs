@@ -11,8 +11,10 @@ namespace nugetTestPrj
     {
         static void Main(string[] args)
         {
-            Transaction tx = Transaction.CreateDelegate("polpolo", "this is a top secret passphrase");
+            /*Transaction tx = Transaction.CreateDelegate("polpolo", "this is a top secret passphrase");
             string json = tx.ToJson();
+            */
+
 
             
         }

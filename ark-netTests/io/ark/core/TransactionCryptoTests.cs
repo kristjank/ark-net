@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using com.google.common.io;
+using NBitcoin;
+using NBitcoin.DataEncoders;
 
 namespace io.ark.core.Tests
 {
@@ -14,7 +14,21 @@ namespace io.ark.core.Tests
     public class TransactionCryptoTests
     {
 
-        [TestMethod()]
+
+	    [TestMethod()]
+	    public void GetKeysTest()
+	    {
+		    Key key = Crypto.GetKeys("this is a top secret passphrase");
+
+
+			String a2 = "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC";
+
+		    Assert.AreEqual(a2, key);
+	    }
+
+
+
+		[TestMethod()]
         public void GetAddressTest()
         {
             String a1 = Crypto.GetAddress(Crypto.GetKeys("this is a top secret passphrase"));
@@ -26,7 +40,7 @@ namespace io.ark.core.Tests
         [TestMethod()]
         public void CreateTransactionPassPhraseVerifyTest()
         {
-            core.Transaction tx = core.Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
+            Transaction tx = core.Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
                                                             133380000000,
                                                             "This is first transaction from ARK-NET",
                                                             "this is a top secret passphrase");
@@ -78,9 +92,9 @@ namespace io.ark.core.Tests
                                                             "this is a top secret passphrase",
                                                             "this is a top secret second passphrase");
 
-            byte[] secondPublicKeyHex = Crypto.GetKeys("this is a top secret second passphrase").getPubKey();
+            byte[] secondPublicKeyHex = Crypto.GetKeys("this is a top secret second passphrase").PubKey.ToBytes();
 
-            String secondPublicKeyHexStr = BaseEncoding.base16().lowerCase().encode(secondPublicKeyHex);
+            String secondPublicKeyHexStr = Encoders.Hex.EncodeData(secondPublicKeyHex);
 
             Assert.IsTrue(Crypto.Verify(tx));
             Assert.IsTrue(Crypto.SecondVerify(tx, secondPublicKeyHexStr));

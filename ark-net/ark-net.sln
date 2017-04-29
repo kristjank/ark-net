@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ark-netTests", "..\ark-netT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nugetTestPrj", "..\nugetTestPrj\nugetTestPrj.csproj", "{A1A32CE4-D9D7-4105-8630-B2F6D6E45EBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoLearning", "..\CryptoLearning\CryptoLearning.csproj", "{6A45F6F4-3EB7-4461-9F9E-C73E3577E478}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A1A32CE4-D9D7-4105-8630-B2F6D6E45EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1A32CE4-D9D7-4105-8630-B2F6D6E45EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1A32CE4-D9D7-4105-8630-B2F6D6E45EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A45F6F4-3EB7-4461-9F9E-C73E3577E478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A45F6F4-3EB7-4461-9F9E-C73E3577E478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A45F6F4-3EB7-4461-9F9E-C73E3577E478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A45F6F4-3EB7-4461-9F9E-C73E3577E478}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,8 +1,4 @@
-﻿using com.google.common.io;
-using java.math;
-using java.nio;
-using org.bitcoinj.core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
