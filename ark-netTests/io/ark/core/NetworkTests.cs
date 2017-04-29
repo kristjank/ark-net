@@ -32,11 +32,10 @@ namespace io.ark.core.Tests
             Peer peer = Network.Mainnet.GetRandomPeer();
 
 
-            string result = peer.PostTransaction(tx);
+            var result = peer.PostTransaction(tx);
 
-            Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(result);
 
-            Assert.AreEqual(jObject["error"], "Account does not have enough ARK: AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC balance: 0");
+            Assert.AreEqual(result.Item3, "Account does not have enough ARK: AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC balance: 0");
         }
 
         [TestMethod()]
@@ -51,11 +50,11 @@ namespace io.ark.core.Tests
             Peer peer = Network.Mainnet.GetRandomPeer();
 
 
-            string result = peer.PostTransaction(tx);
+            var result = peer.PostTransaction(tx);
 
-            Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(result);
+            //Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(result);
 
-            Assert.IsTrue(Convert.ToBoolean(jObject["success"]));
+            Assert.IsTrue(result.Item1);
         }
 
         [TestMethod()]

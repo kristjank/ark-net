@@ -199,10 +199,9 @@ namespace io.ark.core
             int res = 0;
             for (int i =0; i < 10; i++)
             {
-                string response = GetRandomPeer().PostTransaction(transaction);
+                var response = GetRandomPeer().PostTransaction(transaction);
 
-                JObject jObject = JObject.Parse(response);
-                if (Convert.ToBoolean(jObject["success"]))
+                if (response.Item1)
                     res++;
             }
             return res;

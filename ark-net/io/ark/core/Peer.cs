@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -114,12 +115,16 @@ namespace io.ark.core
             return content; 
         }
 
-        public string PostTransaction(Transaction transaction)
+        public Tuple<bool, string, string> PostTransaction(Transaction transaction)
         {
             string body = "{transactions: [" + transaction.ToObject(true) + "]} ";
 
             string response = MakeRequest("POST", "/peer/transactions", body);
-            return response;
+
+            JObject parsed = JObject.Parse(response);
+            bool status = Convert.ToBoolean(parsed["success"]);
+
+            return new Tuple<bool, string, string>(status, parsed["message"].ToString(), parsed["error"].ToString());
         }
 
         public List<PeerVO> GetPeers()
