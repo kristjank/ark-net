@@ -10,6 +10,9 @@ The package supports:
 * With full features, Windows Desktop applications, Mono Desktop applications, and platform supported at [.NET Standard Library](https://docs.microsoft.com/en-us/dotnet/articles/standard/library). Should work will all .NET solutions with framework > 4.5.2.
 * It's a work in progress so mobile platform testing are still to follow. 
 
+### Note
+**This is a work in progress**. As some JAVA libs were "ported" there will internal refactorings and optimizations - aligning the code with .NET. Nevertheless - it is already functional and you can include it in your solutions for ARK Ecosystem.
+
 # How to install?
 ### From source:
 To compile it by yourself, you can git clone, open the project and hit the compile button on visual studio.
