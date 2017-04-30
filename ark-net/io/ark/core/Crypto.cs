@@ -32,8 +32,14 @@ namespace io.ark.core
 
         public static ECDSASignature SignBytes(byte[] bytes, string passphrase)
         {
-            Key keys = GetKeys(passphrase);          
-	        return keys.Sign(Hashes.Hash256(Sha256.ComputeHash((bytes))));	        
+            Key keys = GetKeys(passphrase);
+	        var data = Sha256.ComputeHash(Sha256.ComputeHash(bytes));
+            
+            var signature = keys.Sign(Hashes.Hash256(data));
+			//var signature = keys.Sign();
+
+	        return signature;
+
         }
 
         public static bool Verify(Transaction t)
@@ -42,7 +48,7 @@ namespace io.ark.core
             byte[] signature = Encoders.Hex.DecodeData(t.Signature);
             byte[] bytes = GetBytes(t);
 
-            return key.Verify(Hashes.Hash256(Sha256.ComputeHash((bytes))), signature);
+            return key.Verify(Hashes.Hash256(Sha256.ComputeHash(Sha256.ComputeHash(bytes))), signature);
         }
 
         public static bool SecondVerify(Transaction t, String secondPublicKeyHex)

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Lucene.Net.Support;
 using NBitcoin.DataEncoders;
 using io.ark.utils;
+using NBitcoin.Crypto;
 
 namespace io.ark.core
 {
@@ -149,8 +150,10 @@ namespace io.ark.core
         {
             senderPublicKey = Encoders.Hex.EncodeData(Crypto.GetKeys(passphrase).PubKey.ToBytes());
             signature = Encoders.Hex.EncodeData(Crypto.Sign(this, passphrase).ToDER());
+	        
 
-            return signature;
+
+			return signature;
         }
 
         public String SecondSign(String passphrase)
