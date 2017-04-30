@@ -202,7 +202,7 @@ namespace io.ark.core
         {
             Transaction tx = new Transaction(0, recipientId, satoshiAmount, 10000000, vendorField);
             tx.Timestamp = Slot.GetTime();
-            tx.Timestamp = 3545878;
+            tx.Timestamp = 345578;
             tx.Sign(passphrase);
             tx.StrBytes = Encoders.Hex.EncodeData(tx.ToBytes());
             if (secondPassphrase != null)

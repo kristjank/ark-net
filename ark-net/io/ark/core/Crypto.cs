@@ -10,6 +10,7 @@ using io.ark.utils;
 using NBitcoin;
 using NBitcoin.Crypto;
 using NBitcoin.DataEncoders;
+using org.bitcoinj.core;
 
 namespace io.ark.core
 {
@@ -33,12 +34,22 @@ namespace io.ark.core
         public static ECDSASignature SignBytes(byte[] bytes, string passphrase)
         {
             Key keys = GetKeys(passphrase);
-	        var data = Sha256.ComputeHash(Sha256.ComputeHash(bytes));
-            
-            var signature = keys.Sign(Hashes.Hash256(data));
-			//var signature = keys.Sign();
+	        
 
-	        return signature;
+            //BitCoinSharp.Sha256Hash daHash =   new Sha256Hash(bytes);
+
+            
+            var data1 = Sha256Hash.of(bytes); // pravilno
+            var s1 = Encoders.Hex.EncodeData(Sha256.ComputeHash(bytes));
+            
+            
+            var signature = keys.Sign(uint256.Parse(s1));
+
+            /*var hashes = Hashes.Hash256(data1.to);
+            var signature = keys.Sign(data1.toBigInteger());
+			var signature = keys.Sign();
+            */
+            return signature;
 
         }
 
