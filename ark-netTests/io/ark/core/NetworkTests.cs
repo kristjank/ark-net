@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Threading;
-using ark.io.ark.model;
 using io.ark.model;
 using System.IO;
+using io.io.ark.utils;
 
 namespace io.ark.core.Tests
 {
@@ -40,6 +40,24 @@ namespace io.ark.core.Tests
             Assert.AreEqual(jObject["error"], "Account does not have enough ARK: AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC balance: 0");
         }
 
+
+        [TestMethod()]
+        public void TransactionSerializeTest()
+        {
+            Transaction tx = Transaction.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
+                1000,
+                "This is first transaction from ARK-NET 22",
+                "ski rose knock live elder parade dose device fetch betray loan holiday");
+
+
+            File.WriteAllText(@"C:\temp\txOK.json", ArkUtils.SerializeObject2JSon(tx));
+            File.WriteAllText(@"C:\temp\txOK.xml", ArkUtils.SerializeObject2Xml(tx));
+            
+            
+            Assert.IsTrue(1==1);
+        }
+
+
         [TestMethod()]
         public void PostTransactionTransferSuccessTest()
         {
@@ -48,12 +66,6 @@ namespace io.ark.core.Tests
                                                            "This is first transaction from ARK-NET 22",
                                                            "ski rose knock live elder parade dose device fetch betray loan holiday");
 
-            // serialize JSON directly to a file
-            using (StreamWriter file = File.CreateText(@"c:\temp\transactionObjWorking.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, tx);
-            }
 
             //Network.Mainnet.WarmUp();
             Peer peer = Network.Mainnet.GetRandomPeer();
