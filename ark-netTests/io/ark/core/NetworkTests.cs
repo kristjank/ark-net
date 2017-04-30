@@ -8,8 +8,11 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Threading;
 using io.ark.model;
+<<<<<<< HEAD
 using System.IO;
 using io.io.ark.utils;
+=======
+>>>>>>> parent of 7d4c545... transaction.log.obj
 
 namespace io.ark.core.Tests
 {
@@ -66,7 +69,10 @@ namespace io.ark.core.Tests
                                                            "This is first transaction from ARK-NET 22",
                                                            "ski rose knock live elder parade dose device fetch betray loan holiday");
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 7d4c545... transaction.log.obj
             //Network.Mainnet.WarmUp();
             Peer peer = Network.Mainnet.GetRandomPeer();
 
