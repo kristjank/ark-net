@@ -24,6 +24,5 @@
             public string generatorPublicKey { get; set; }
             public string blockSignature { get; set; }
         }
-
     }
 }

@@ -98,7 +98,6 @@ namespace ArkNet.Core
 		private Network()
 		{
 			peers = new List<Peer>();
-			ServicePointManager.DefaultConnectionLimit = 1000;
 		}
 
 		private Network(byte prefix, int port, string name)
@@ -140,7 +139,9 @@ namespace ArkNet.Core
 					{
 						if (instance == null)
 						{
-							instance = new Network(0x18, 4000, "testnet");
+							instance = new Network(Properties.Settings.Default.TestNetBytePrefix,
+						                            Properties.Settings.Default.TestNetPort, 
+                                                    Properties.Settings.Default.TestNetName);
 							instance.WarmUp();
 						}
 					}
@@ -152,12 +153,12 @@ namespace ArkNet.Core
 			}
 		}
 
-		public string Nethash { get; set; } = "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988";
-		public string Name { get; set; } = "mainnet";
-		public int Port { get; set; } = 4001;
-		public byte Prefix { get; set; } = 0x17;
-		public string Version { get; set; } = "1.0";
-		public int BroadcastMax { get; set; } = 5;
+		public string Nethash { get; set; } = Properties.Settings.Default.NetHash;//"6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988";
+		public string Name { get; set; } = Properties.Settings.Default.MainNetName;
+		public int Port { get; set; } = Properties.Settings.Default.MainNetPort;
+		public byte Prefix { get; set; } = Properties.Settings.Default.MainNetBytePrefix;
+		public string Version { get; set; } = Properties.Settings.Default.NetworkVersion;
+		public int BroadcastMax { get; set; } = Properties.Settings.Default.MaxNumOfBroadcasts;
 
 		public dynamic GetHeaders(bool retJson = false)
 		{
@@ -184,7 +185,7 @@ namespace ArkNet.Core
 		public int MultipleBroadCast(Transaction transaction)
 		{
 			var res = 0;
-			for (var i = 0; i < 10; i++)
+			for (var i = 0; i < BroadcastMax; i++)
 			{
 				var response = GetRandomPeer().PostTransaction(transaction);
 

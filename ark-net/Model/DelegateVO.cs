@@ -11,6 +11,5 @@
         public int rate { get; set; }
         public float approval { get; set; }
         public float productivity { get; set; }
-
     }
 }

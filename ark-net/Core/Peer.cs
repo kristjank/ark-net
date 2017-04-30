@@ -42,13 +42,13 @@ namespace ArkNet.Core
 		private static void OpenServicePoint(Uri uri)
 		{
 			ServicePointManager.CheckCertificateRevocationList = true;
-			ServicePointManager.DefaultConnectionLimit = 10000;
+			ServicePointManager.DefaultConnectionLimit = Properties.Settings.Default.DefaultConnectionLimit;
 
 			var sp = ServicePointManager.FindServicePoint(uri);
 			sp.UseNagleAlgorithm = true;
 			sp.Expect100Continue = true;
-			sp.ConnectionLimit = 10000;
-			sp.ConnectionLeaseTimeout = 30000;
+			sp.ConnectionLimit = Properties.Settings.Default.ConnectionLimit;
+			sp.ConnectionLeaseTimeout = Properties.Settings.Default.ConnectionLeaseTimeOut;
 		}
 
 		private void Init(string ip, int port, string protocol)
@@ -249,7 +249,7 @@ namespace ArkNet.Core
 
 			var account = new AccountVO();
 			if (!Convert.ToBoolean(parsed["success"]))
-				account.address = parsed["error"].ToString();
+				account.Address = parsed["error"].ToString();
 			else
 				account = JsonConvert.DeserializeObject<AccountVO>(parsed["account"].ToString());
 			return account;

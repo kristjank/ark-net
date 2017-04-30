@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ArkNet.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MainNetName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">mainnet</Value>
+    </Setting>
+    <Setting Name="MainNetPort" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">4001</Value>
+    </Setting>
+    <Setting Name="MainNetBytePrefix" Type="System.Byte" Scope="Application">
+      <Value Profile="(Default)">23</Value>
+    </Setting>
+    <Setting Name="TestNetName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">testnet</Value>
+    </Setting>
+    <Setting Name="TestNetPort" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">4000</Value>
+    </Setting>
+    <Setting Name="TestNetBytePrefix" Type="System.Byte" Scope="Application">
+      <Value Profile="(Default)">24</Value>
+    </Setting>
+    <Setting Name="ConnectionLimit" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10000</Value>
+    </Setting>
+    <Setting Name="ConnectionLeaseTimeOut" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">30000</Value>
+    </Setting>
+    <Setting Name="DefaultConnectionLimit" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10000</Value>
+    </Setting>
+    <Setting Name="NetHash" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988</Value>
+    </Setting>
+    <Setting Name="MaxNumOfBroadcasts" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="NetworkVersion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1.0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

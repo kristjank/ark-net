@@ -12,7 +12,9 @@ namespace ArkNet.Model
         public string senderId { get; set; }
         public string recipientId { get; set; }
         public string senderPublicKey { get; set; }
+
         public string signature { get; set; }
+
         //public Asset asset { get; set; }
         public int confirmations { get; set; }
     }

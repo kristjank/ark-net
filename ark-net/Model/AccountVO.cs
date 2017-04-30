@@ -2,17 +2,14 @@
 {
     public class AccountVO
     {
-
-
-        public string address { get; set; }
-        public string unconfirmedBalance { get; set; }
-        public string balance { get; set; }
-        public string publicKey { get; set; }
-        public int unconfirmedSignature { get; set; }
-        public int secondSignature { get; set; }
-        public object secondPublicKey { get; set; }
-        public object[] multisignatures { get; set; }
-        public object[] u_multisignatures { get; set; }
-
+        public string Address { get; set; }
+        public string AnconfirmedBalance { get; set; }
+        public string Balance { get; set; }
+        public string PublicKey { get; set; }
+        public int UnconfirmedSignature { get; set; }
+        public int SecondSignature { get; set; }
+        public object SecondPublicKey { get; set; }
+        public object[] Multisignatures { get; set; }
+        public object[] U_Multisignatures { get; set; }
     }
 }

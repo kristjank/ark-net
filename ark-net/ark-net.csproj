@@ -101,6 +101,11 @@
     <Compile Include="Model\PeerStatusVO.cs" />
     <Compile Include="Model\PeerVO.cs" />
     <Compile Include="Model\TransactionVO.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Utils\ArkUtils.cs" />
     <Compile Include="Utils\Base58.cs" />
     <Compile Include="Utils\BCUtils.cs" />
@@ -119,6 +124,10 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="_CreateNewNuGetPackage\Config.ps1" />
     <None Include="_CreateNewNuGetPackage\DoNotModify\CreateNuGetPackage.ps1" />
     <None Include="_CreateNewNuGetPackage\DoNotModify\New-NuGetPackage.ps1" />
@@ -127,13 +136,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
-    <Content Include="res\6464.png" />
-    <Content Include="res\arknet-new.png" />
+    <Content Include="Res\6464.png" />
+    <Content Include="Res\arknet-new.png" />
     <Content Include="Icon.png" />
-    <Content Include="res\Icon_details.png" />
-    <Content Include="res\Icon_dialog.png" />
-    <Content Include="res\Icon_list.png" />
-    <Content Include="res\sharky.jpg" />
+    <Content Include="Res\Icon_details.png" />
+    <Content Include="Res\Icon_dialog.png" />
+    <Content Include="Res\Icon_list.png" />
+    <Content Include="Res\sharky.jpg" />
     <None Include="_CreateNewNuGetPackage\DoNotModify\NuGet.exe" />
   </ItemGroup>
   <ItemGroup />
