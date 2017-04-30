@@ -1,97 +1,75 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-using com.google.common.io;
+﻿using com.google.common.io;
 using java.nio;
 using Newtonsoft.Json;
 using org.bitcoinj.core;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace io.ark.core
 {
+
     public class Transaction
     {
-        private readonly Dictionary<string, dynamic> asset = new Dictionary<string, dynamic>();
+        int timestamp;
+        String recipientId;
+        long amount;
+        long fee;
+        byte type;
+        String vendorField;
+        String signature;
+        String signSignature;
+        String senderPublicKey;
+        String requesterPublicKey;
+        Dictionary<String, dynamic> asset = new Dictionary<string, dynamic>();
+        String username;
+        ArrayList votes;
+        String id;
 
-        
-        private byte type;
-        private ArrayList votes;
-
-        private Transaction()
-        {
-        }
-
-        private Transaction(byte type, string recipientId, long amount, long fee, string vendorField)
-        {
-            this.type = type;
-            RecipientId = recipientId;
-            Amount = amount;
-            Fee = fee;
-            VendorField = vendorField;
-        }
-
-        private Transaction(byte type, long amount, long fee)
-        {
-            this.type = type;
-            Amount = amount;
-            Fee = fee;
-        }
-
-        public int Timestamp { get; set; }
-
-        public string RecipientId { get; set; }
-
-        public long Amount { get; set; }
-
-        public long Fee { get; set; }
-
-        public byte Type
-        {
-            get => type;
-            set => type = value;
-        }
-
-        public string VendorField { get; set; }
-
-        public string Signature { get; set; }
-
-        public string SignSignature { get; set; }
-
-        public string SenderPublicKey { get; set; }
-
-        public string RequesterPublicKey { get; set; }
-
-        public string Id { get; set; }
-
-        public string Username { get; set; }
-
-        public string StrBytes { get; set; }
-
-    public ArrayList Votes
-        {
-            get => votes;
-            set => votes = value;
-        }
+        public int Timestamp { get => timestamp; set => timestamp = value; }
+        public string RecipientId { get => recipientId; set => recipientId = value; }
+        public long Amount { get => amount; set => amount = value; }
+        public long Fee { get => fee; set => fee = value; }
+        public byte Type { get => type; set => type = value; }
+        public string VendorField { get => vendorField; set => vendorField = value; }
+        public string Signature { get => signature; set => signature = value; }
+        public string SignSignature { get => signSignature; set => signSignature = value; }
+        public string SenderPublicKey { get => senderPublicKey; set => senderPublicKey = value; }
+        public string RequesterPublicKey { get => requesterPublicKey; set => requesterPublicKey = value; }        
+        public string Id { get => id; set => id = value; }
+        public string Username { get => username; set => username = value; }
+        public ArrayList Votes { get => votes; set => votes = value; }
 
         public byte[] ToBytes(bool skipSignature = true, bool skipSecondSignature = true)
         {
-            var buffer = ByteBuffer.allocate(1000);
+            ByteBuffer buffer = ByteBuffer.allocate(1000);
             buffer.order(ByteOrder.LITTLE_ENDIAN);
 
             buffer.put(type);
-            buffer.putInt(Timestamp);
-            buffer.put(BaseEncoding.base16().lowerCase().decode(SenderPublicKey));
+            buffer.putInt(timestamp);
+            buffer.put(BaseEncoding.base16().lowerCase().decode(senderPublicKey));
 
             if (RequesterPublicKey != null)
-                buffer.put(Base58.decodeChecked(RequesterPublicKey));
-
-            if (RecipientId != null)
-                buffer.put(Base58.decodeChecked(RecipientId));
-            else
-                buffer.put(new byte[21]);
-
-            if (VendorField != null)
             {
-                var vbytes = Encoding.ASCII.GetBytes(VendorField);
+                buffer.put(Base58.decodeChecked(requesterPublicKey));
+            }
+
+            if (recipientId != null)
+            {
+                buffer.put(Base58.decodeChecked(recipientId));
+            }
+            else
+            {
+                buffer.put(new byte[21]);
+            }
+
+            if (vendorField != null)
+            {
+                byte[] vbytes = Encoding.ASCII.GetBytes(vendorField);
                 if (vbytes.Length < 65)
                 {
                     buffer.put(vbytes);
@@ -103,136 +81,167 @@ namespace io.ark.core
                 buffer.put(new byte[64]);
             }
 
-            buffer.putLong(Amount);
-            buffer.putLong(Fee);
+            buffer.putLong(amount);
+            buffer.putLong(fee);
 
             if (type == 1)
-                buffer.put(BaseEncoding.base16().lowerCase().decode(Signature));
+            {
+                buffer.put(BaseEncoding.base16().lowerCase().decode(this.signature));
+            }
             else if (type == 2)
-                buffer.put(Encoding.ASCII.GetBytes(asset["username"]));
+            {
+                buffer.put(Encoding.ASCII.GetBytes(this.asset["username"]));
+            }
             else if (type == 3)
-                buffer.put(asset["votes"].join("").bytes);
+            {
+                buffer.put(this.asset["votes"].join("").bytes);
+            }
             // TODO: multisignature
             // else if(type==4){
             //   buffer.put BaseEncoding.base16().lowerCase().decode(asset.signature)
             // }
 
-            if (!skipSignature && Signature.Length > 0)
-                buffer.put(BaseEncoding.base16().lowerCase().decode(Signature));
-            if (!skipSecondSignature && SignSignature != null)
-                buffer.put(BaseEncoding.base16().lowerCase().decode(SignSignature));
+            if (!skipSignature && signature.Length > 0)
+            {
+                buffer.put(BaseEncoding.base16().lowerCase().decode(signature));
+            }
+            if (!skipSecondSignature && signSignature != null)
+            {
+                buffer.put(BaseEncoding.base16().lowerCase().decode(signSignature));
+            }
 
-            var outBuffer = new byte[buffer.position()];
+            byte[] outBuffer = new byte[buffer.position()];
 
             buffer.rewind();
             buffer.get(outBuffer);
             return outBuffer;
         }
 
-        public dynamic ToObject(bool retJson = false)
+        public dynamic ToObject(bool retJson=false)
         {
-            var data = new Dictionary<string, dynamic>
-            {
-                ["id"] = Id,
-                ["timestamp"] = Timestamp,
-                ["recipientId"] = RecipientId,
-                ["amount"] = Amount,
-                ["fee"] = Fee,
-                ["type"] = type,
-                ["vendorField"] = VendorField,
-                ["signature"] = Signature,
-                ["signSignature"] = SignSignature,
-                ["senderPublicKey"] = SenderPublicKey,
-                ["requesterPublicKey"] = RequesterPublicKey,
-                ["asset"] = asset
+            Dictionary<string, dynamic> data = new Dictionary<string, dynamic> {
+                ["id"] = this.id,
+                ["timestamp"] = this.timestamp,
+                ["recipientId"] = this.recipientId,
+                ["amount"] = this.amount,            
+                ["fee"] = this.fee,
+                ["type"] = this.type,
+                ["vendorField"] = this.vendorField,
+                ["signature"] = this.signature,
+                ["signSignature"] = this.signSignature,
+                ["senderPublicKey"] = this.senderPublicKey,
+                ["requesterPublicKey"] = this.requesterPublicKey,
+                ["asset"] = this.asset
+
             };
 
             if (retJson)
                 return JsonConvert.SerializeObject(data);
-            return data;
+            else
+                return data;
 
             //this.properties.subMap(['id', 'timestamp', 'recipientId', 'amount', 'fee', 'type', 'vendorField', 'signature', 'signSignature', 
             //'senderPublicKey', 'requesterPublicKey', 'asset'])
         }
 
 
-        public string Sign(string passphrase)
+        public String Sign(String passphrase)
         {
-            SenderPublicKey = BaseEncoding.base16().lowerCase().encode(Crypto.GetKeys(passphrase).getPubKey());
-            Signature = BaseEncoding.base16().lowerCase().encode(Crypto.Sign(this, passphrase).encodeToDER());
+            senderPublicKey = BaseEncoding.base16().lowerCase().encode(Crypto.GetKeys(passphrase).getPubKey());
+            signature = BaseEncoding.base16().lowerCase().encode(Crypto.Sign(this, passphrase).encodeToDER());
 
-            return Signature;
+            return signature;
         }
 
-        public string SecondSign(string passphrase)
+        public String SecondSign(String passphrase)
         {
-            SignSignature = BaseEncoding.base16().lowerCase().encode(Crypto.SecondSign(this, passphrase).encodeToDER());
+            signSignature = BaseEncoding.base16().lowerCase().encode(Crypto.SecondSign(this, passphrase).encodeToDER());
 
-            return SignSignature;
+            return signSignature;
         }
 
-        public string ToJson()
+        public String ToJson()
         {
             return JsonConvert.SerializeObject(this);
         }
 
-
-        public static Transaction FromJson(string json)
+        
+        public static Transaction FromJson(String json)
         {
-            var tx = new Transaction();
+            Transaction tx = new Transaction();
             tx = JsonConvert.DeserializeObject<Transaction>(json);
             return tx;
         }
 
-        public static Transaction CreateTransaction(string recipientId, long satoshiAmount, string vendorField,
-            string passphrase, string secondPassphrase = null)
+        private Transaction()
         {
-            var tx = new Transaction(0, recipientId, satoshiAmount, 10000000, vendorField);
-            tx.Timestamp = Slot.GetTime();
+        }
+
+        private Transaction(byte type, String recipientId, long amount, long fee, String vendorField)
+        {
+            this.type = type;
+            this.recipientId = recipientId;
+            this.amount = amount;
+            this.fee = fee;
+            this.vendorField = vendorField;
+        }
+
+        private Transaction(byte type, long amount, long fee)
+        {
+            this.type = type;
+            this.amount = amount;
+            this.fee = fee;
+        }
+
+        public static Transaction CreateTransaction(String recipientId, long satoshiAmount, String vendorField, String passphrase, String secondPassphrase = null)
+        {
+            Transaction tx = new Transaction(0, recipientId, satoshiAmount, 10000000, vendorField);
+            tx.timestamp = Slot.GetTime();
             tx.Sign(passphrase);
-            tx.StrBytes = BaseEncoding.base16().lowerCase().encode(tx.ToBytes());
             if (secondPassphrase != null)
                 tx.SecondSign(secondPassphrase);
 
-            tx.Id = Crypto.GetId(tx);
+            tx.id = Crypto.GetId(tx);
             return tx;
         }
 
-        public static Transaction CreateVote(ArrayList votes, string passphrase, string secondPassphrase = null)
+        public static Transaction CreateVote(ArrayList votes, String passphrase, String secondPassphrase = null)
         {
-            var tx = new Transaction(3, 0, 100000000);
+            Transaction tx = new Transaction(3, 0, 100000000);
             tx.asset.Add("votes", votes);
-            tx.Timestamp = Slot.GetTime();
+            tx.timestamp = Slot.GetTime();
             tx.Sign(passphrase);
             if (secondPassphrase != null)
                 tx.SecondSign(secondPassphrase);
 
-            tx.Id = Crypto.GetId(tx);
+            tx.id = Crypto.GetId(tx);
 
             return tx;
         }
 
-        public static Transaction CreateDelegate(string username, string passphrase, string secondPassphrase = null)
+        public static Transaction CreateDelegate(String username, String passphrase, String secondPassphrase = null)
         {
-            var tx = new Transaction(2, 0, 2500000000);
+            Transaction tx = new Transaction(2, 0, 2500000000);
             tx.asset.Add("username", username);
-            tx.Timestamp = Slot.GetTime();
+            tx.timestamp = Slot.GetTime();
             tx.Sign(passphrase);
             if (secondPassphrase != null)
                 tx.SecondSign(secondPassphrase);
 
-            tx.Id = Crypto.GetId(tx);
+            tx.id = Crypto.GetId(tx);
             return tx;
         }
 
-        public static Transaction createSecondSignature(string secondPassphrase, string passphrase)
+        public static Transaction createSecondSignature(String secondPassphrase, String passphrase)
         {
-            var tx = new Transaction(1, 0, 500000000);
-            tx.Signature = BaseEncoding.base16().lowerCase().encode(Crypto.GetKeys(secondPassphrase).getPubKey());
-            tx.Timestamp = Slot.GetTime();
+            Transaction tx = new Transaction(1, 0, 500000000);
+            tx.signature = BaseEncoding.base16().lowerCase().encode(Crypto.GetKeys(secondPassphrase).getPubKey());
+            tx.timestamp = Slot.GetTime();
             tx.Sign(passphrase);
-            tx.Id = Crypto.GetId(tx);
+            tx.id = Crypto.GetId(tx);
             return tx;
-        }
+  }
+
     }
+
 }
