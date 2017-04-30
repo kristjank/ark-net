@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using System.Threading;
 using ark.io.ark.model;
 using io.ark.model;
+using System.IO;
 
 namespace io.ark.core.Tests
 {
@@ -46,6 +47,13 @@ namespace io.ark.core.Tests
                                                            1000,
                                                            "This is first transaction from ARK-NET 22",
                                                            "ski rose knock live elder parade dose device fetch betray loan holiday");
+
+            // serialize JSON directly to a file
+            using (StreamWriter file = File.CreateText(@"c:\temp\transactionObjWorking.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, tx);
+            }
 
             //Network.Mainnet.WarmUp();
             Peer peer = Network.Mainnet.GetRandomPeer();
