@@ -114,6 +114,7 @@
     <Compile Include="io\ark\model\PeerStatusVO.cs" />
     <Compile Include="io\ark\model\PeerVO.cs" />
     <Compile Include="io\ark\model\TransactionVO.cs" />
+    <Compile Include="io\ark\utils\ArkUtils.cs" />
     <Compile Include="io\ark\utils\Base58.cs" />
     <Compile Include="io\ark\utils\BCUtils.cs" />
     <Compile Include="io\ark\utils\BCAVersionedChecksummedBytes.cs" />

@@ -45,6 +45,8 @@ namespace io.ark.core
         public string Username { get => username; set => username = value; }
         public ArrayList Votes { get => votes; set => votes = value; }
 
+        public string StrBytes { get; set; }
+
         public byte[] ToBytes(bool skipSignature = true, bool skipSecondSignature = true)
         {
             ByteBuffer buffer = ByteBuffer.Allocate(1000);
@@ -200,7 +202,9 @@ namespace io.ark.core
         {
             Transaction tx = new Transaction(0, recipientId, satoshiAmount, 10000000, vendorField);
             tx.Timestamp = Slot.GetTime();
+            tx.Timestamp = 3545878;
             tx.Sign(passphrase);
+            tx.StrBytes = Encoders.Hex.EncodeData(tx.ToBytes());
             if (secondPassphrase != null)
                 tx.SecondSign(secondPassphrase);
 
