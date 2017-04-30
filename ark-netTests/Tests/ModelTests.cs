@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using ArkNet.Core;
+using ArkNet.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ArkNetTest.Tests
@@ -13,10 +14,11 @@ namespace ArkNetTest.Tests
 			var peers = Network.Mainnet.GetRandomPeer().GetPeers();
 
 
-			var peersOk = peers.Where(x => x.status.Equals("OK"));
-			var a = peersOk.Count();
+			var peersOk = peers.Where(x => x.Status.Equals("OK"));
+		    var peer = peersOk.Single();
 
-			Assert.IsTrue(peers.Count > 0);
+            Assert.IsNotNull(peer);
+
 		}
 
 		[TestMethod]

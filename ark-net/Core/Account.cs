@@ -31,8 +31,8 @@ namespace ArkNet.Core
 		public Verification VerifyTransaction(Transaction transaction)
 		{
 			var v = new Verification();
-			if (Balance >= transaction.Amount + transaction.Fee)
-				v.AddError(string.Format("Account %1 does not have enough balance: %2", Address, Balance));
+			/*if (Balance >= transaction.Amount + transaction.Fee)
+				v.AddError(string.Format("Account %1 does not have enough balance: %2", Address, Balance));*/
 			// TODO: many things
 
 			return v;

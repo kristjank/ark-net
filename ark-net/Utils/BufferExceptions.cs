@@ -34,6 +34,7 @@ namespace ArkNet.Utils
 #if FEATURE_SERIALIZABLE
     [Serializable]
 #endif
+    [Serializable]
     internal sealed class BufferUnderflowException : Exception
     {
         public BufferUnderflowException()
@@ -56,6 +57,7 @@ namespace ArkNet.Utils
 #if FEATURE_SERIALIZABLE
     [Serializable]
 #endif
+    [Serializable]
     internal sealed class BufferOverflowException : Exception
     {
         public BufferOverflowException()
@@ -78,6 +80,7 @@ namespace ArkNet.Utils
 #if FEATURE_SERIALIZABLE
     [Serializable]
 #endif
+    [Serializable]
     internal sealed class ReadOnlyBufferException : Exception
     {
         public ReadOnlyBufferException()
@@ -100,6 +103,7 @@ namespace ArkNet.Utils
 #if FEATURE_SERIALIZABLE
     [Serializable]
 #endif
+    [Serializable]
     internal sealed class InvalidMarkException : Exception
     {
         public InvalidMarkException()

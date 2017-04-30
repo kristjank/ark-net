@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -108,7 +109,7 @@ namespace ArkNet.Core
 			return content;
 		}
 
-		public Tuple<bool, string, string> PostTransaction(Transaction transaction)
+		public (bool status, string message, string error) PostTransaction(Transaction transaction)
 		{
 			string body = "{transactions: [" + transaction.ToObject(true) + "]} ";
 
@@ -118,18 +119,18 @@ namespace ArkNet.Core
 			var status = Convert.ToBoolean(parsed["success"]);
 
 
-			return new Tuple<bool, string, string>(status, parsed["message"]?.ToString() ?? "",
+			return new ValueTuple<bool, string, string>(status, parsed["message"]?.ToString() ?? "",
 				parsed["error"]?.ToString() ?? "");
 		}
 
-		public List<PeerVO> GetPeers()
+		public IList<PeerVO> GetPeers()
 		{
 			var response = MakeRequest("GET", "/peer/list");
 			var parsed = JObject.Parse(response);
 			var array = (JArray) parsed["peers"];
 
-			var peerList = JsonConvert.DeserializeObject<List<PeerVO>>(array.ToString());
-			return peerList;
+			var peerList = JsonConvert.DeserializeObject<IList<PeerVO>>(array.ToString());
+		    return peerList;
 		}
 
 		public PeerStatusVO GetPeerStatus()

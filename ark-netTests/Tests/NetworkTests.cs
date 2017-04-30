@@ -26,7 +26,7 @@ namespace ArkNetTest.Tests
 
 			var result = peer.PostTransaction(tx);
 
-			Assert.AreEqual(result.Item3, "Account does not have enough ARK: AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC balance: 0");
+			Assert.AreEqual(result.error, "Account does not have enough ARK: AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC balance: 0");
 		}
 
 
@@ -58,7 +58,7 @@ namespace ArkNetTest.Tests
 			var peer = Network.Mainnet.GetRandomPeer();
 
 			var result = peer.PostTransaction(tx);
-			Assert.IsTrue(result.Item1);
+			Assert.IsTrue(result.status);
 		}
 
 		[TestMethod]
