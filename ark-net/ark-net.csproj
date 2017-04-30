@@ -137,13 +137,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
-    <Content Include="res\6464.png" />
     <Content Include="res\arknet-new.png" />
     <Content Include="Icon.png" />
-    <Content Include="res\Icon_details.png" />
-    <Content Include="res\Icon_dialog.png" />
-    <Content Include="res\Icon_list.png" />
-    <Content Include="res\sharky.jpg" />
+    <Content Include="Icon_details.png" />
+    <Content Include="Icon_dialog.png" />
+    <Content Include="Icon_list.png" />
     <None Include="_CreateNewNuGetPackage\DoNotModify\NuGet.exe" />
   </ItemGroup>
   <ItemGroup />
