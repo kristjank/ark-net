@@ -14,8 +14,8 @@ namespace ArkNetTest.Tests
 			var peers = Network.Mainnet.GetRandomPeer().GetPeers();
 
 
-			var peersOk = peers.Where(x => x.Status.Equals("OK"));
-		    var peer = peersOk.Single();
+		    var peer = peers.Where(x => x.Status.Equals("OK")).FirstOrDefault();
+//		    var peer = peersOk.;
 
             Assert.IsNotNull(peer);
 
