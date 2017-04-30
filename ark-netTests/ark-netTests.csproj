@@ -64,9 +64,9 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="io\ark\core\NetworkTests.cs" />
-    <Compile Include="io\ark\core\ModelTests.cs" />
-    <Compile Include="io\ark\core\TransactionCryptoTests.cs" />
+    <Compile Include="Tests\NetworkTests.cs" />
+    <Compile Include="Tests\ModelTests.cs" />
+    <Compile Include="TransactionCryptoTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +79,7 @@
       <Name>ark-net</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

@@ -1,5 +1,4 @@
-﻿using io.ark.core;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using org.bitcoinj.core;
 using System;
 using System.Collections.Generic;

@@ -4,8 +4,8 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using ArkNet.Utils;
 using BitCoinSharp;
-using io.ark.utils;
 using NBitcoin;
 using Org.BouncyCastle.Math;
 
