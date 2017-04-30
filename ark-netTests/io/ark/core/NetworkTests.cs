@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using System.Threading;
 using ark.io.ark.model;
 using io.ark.model;
+using System.IO;
 
 namespace io.ark.core.Tests
 {
@@ -51,6 +52,13 @@ namespace io.ark.core.Tests
 
 
             var result = peer.PostTransaction(tx);
+
+            // serialize JSON directly to a file
+            using(StreamWriter file = File.CreateText(@"c:\temp\transactionNew.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, tx);
+            }
 
             //Newtonsoft.Json.Linq.JObject jObject = Newtonsoft.Json.Linq.JObject.Parse(result);
 
