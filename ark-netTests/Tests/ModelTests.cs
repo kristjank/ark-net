@@ -2,7 +2,7 @@
 using ArkNet.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ark_netTests.Tests
+namespace ArkNetTest.Tests
 {
 	[TestClass]
 	public class ModelApiVOTests

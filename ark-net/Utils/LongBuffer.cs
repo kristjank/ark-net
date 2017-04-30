@@ -42,6 +42,7 @@ namespace ArkNet.Utils
         //
         internal readonly long[] hb;                  // Non-null only for heap buffers
         internal readonly int offset;
+#pragma warning disable CS0649
         internal bool isReadOnly;                 // Valid only for heap buffers
 
         /// <summary>

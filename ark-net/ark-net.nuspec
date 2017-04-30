@@ -13,7 +13,4 @@
     <description>$description$</description>
     <copyright>Copyright 2017 - ARK</copyright>
   </metadata>
-  <files>
-    <file src="lib\*.dll" target="lib\net452" />
-  </files>
 </package>

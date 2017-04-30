@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Ark.NET")]
-[assembly: AssemblyDescription("Ark.NET client api for Ark.Ecosystem")]
+[assembly: AssemblyDescription("Ark.NET Client Api for Ark Ecosystem")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("ARK.io")]
-[assembly: AssemblyProduct("ark-net")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyProduct("Ark.NET")]
+[assembly: AssemblyCopyright("Copyright © 2017, ARK, Kristjan Košič")]
 [assembly: AssemblyTrademark("ARK")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.6.3.0")]
-[assembly: AssemblyFileVersion("0.6.3.0")]
+[assembly: AssemblyVersion("0.7.0.0")]
+[assembly: AssemblyFileVersion("0.7.0.0")]

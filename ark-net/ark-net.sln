@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ark-net", "ark-net.csproj", "{7FE83F44-4289-440D-B864-EFDF8CC81E37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ark-console", "..\ark-console\ark-console.csproj", "{53A3C4F2-A558-48DC-8F0C-29E266A7DC91}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ark-netTests", "..\ark-netTests\ark-netTests.csproj", "{E253B347-8B36-463C-8FE7-0E2BBCB3B0B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nugetTestPrj", "..\nugetTestPrj\nugetTestPrj.csproj", "{A1A32CE4-D9D7-4105-8630-B2F6D6E45EBB}"
@@ -21,10 +19,6 @@ Global
 		{7FE83F44-4289-440D-B864-EFDF8CC81E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FE83F44-4289-440D-B864-EFDF8CC81E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FE83F44-4289-440D-B864-EFDF8CC81E37}.Release|Any CPU.Build.0 = Release|Any CPU
-		{53A3C4F2-A558-48DC-8F0C-29E266A7DC91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53A3C4F2-A558-48DC-8F0C-29E266A7DC91}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53A3C4F2-A558-48DC-8F0C-29E266A7DC91}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53A3C4F2-A558-48DC-8F0C-29E266A7DC91}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E253B347-8B36-463C-8FE7-0E2BBCB3B0B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E253B347-8B36-463C-8FE7-0E2BBCB3B0B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E253B347-8B36-463C-8FE7-0E2BBCB3B0B3}.Release|Any CPU.ActiveCfg = Release|Any CPU

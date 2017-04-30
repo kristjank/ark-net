@@ -8,7 +8,7 @@
     <ProjectGuid>{E253B347-8B36-463C-8FE7-0E2BBCB3B0B3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ark_netTests</RootNamespace>
+    <RootNamespace>ArkNetTest</RootNamespace>
     <AssemblyName>ark-netTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -66,7 +66,7 @@
   <ItemGroup>
     <Compile Include="Tests\NetworkTests.cs" />
     <Compile Include="Tests\ModelTests.cs" />
-    <Compile Include="TransactionCryptoTests.cs" />
+    <Compile Include="Tests\TransactionCryptoTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

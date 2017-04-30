@@ -24,6 +24,7 @@
  */
 
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ArkNet.Utils
 {
@@ -42,6 +43,7 @@ namespace ArkNet.Utils
 
         // Used only by direct buffers
         // NOTE: hoisted here for speed in JNI GetDirectBufferAddress
+#pragma warning disable CS0649
         internal long address;
 
         /// <summary>
