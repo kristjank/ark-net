@@ -7,15 +7,15 @@ using Newtonsoft.Json;
 
 namespace ArkNet.Core
 {
-	public class Transaction
+	public class ArkTransaction
 	{
 		private readonly Dictionary<string, dynamic> asset = new Dictionary<string, dynamic>();
 
-		private Transaction()
+		private ArkTransaction()
 		{
 		}
 
-		private Transaction(byte type, string recipientId, long amount, long fee, string vendorField)
+		private ArkTransaction(byte type, string recipientId, long amount, long fee, string vendorField)
 		{
 			Type = type;
 			RecipientId = recipientId;
@@ -24,7 +24,7 @@ namespace ArkNet.Core
 			VendorField = vendorField;
 		}
 
-		private Transaction(byte type, long amount, long fee)
+		private ArkTransaction(byte type, long amount, long fee)
 		{
 			Type = type;
 			Amount = amount;
@@ -164,17 +164,17 @@ namespace ArkNet.Core
 		}
 
 
-		public static Transaction FromJson(string json)
+		public static ArkTransaction FromJson(string json)
 		{
-			var tx = new Transaction();
-			tx = JsonConvert.DeserializeObject<Transaction>(json);
+			var tx = new ArkTransaction();
+			tx = JsonConvert.DeserializeObject<ArkTransaction>(json);
 			return tx;
 		}
 
-		public static Transaction CreateTransaction(string recipientId, long satoshiAmount, string vendorField,
+		public static ArkTransaction CreateTransaction(string recipientId, long satoshiAmount, string vendorField,
 			string passphrase, string secondPassphrase = null)
 		{
-			var tx = new Transaction(0, recipientId, satoshiAmount, 10000000, vendorField);
+			var tx = new ArkTransaction(0, recipientId, satoshiAmount, 10000000, vendorField);
 			tx.Timestamp = Slot.GetTime();
 
 			tx.Sign(passphrase);
@@ -186,9 +186,9 @@ namespace ArkNet.Core
 			return tx;
 		}
 
-		public static Transaction CreateVote(ArrayList votes, string passphrase, string secondPassphrase = null)
+		public static ArkTransaction CreateVote(ArrayList votes, string passphrase, string secondPassphrase = null)
 		{
-			var tx = new Transaction(3, 0, 100000000);
+			var tx = new ArkTransaction(3, 0, 100000000);
 			tx.asset.Add("votes", votes);
 			tx.Timestamp = Slot.GetTime();
 			tx.Sign(passphrase);
@@ -200,9 +200,9 @@ namespace ArkNet.Core
 			return tx;
 		}
 
-		public static Transaction CreateDelegate(string username, string passphrase, string secondPassphrase = null)
+		public static ArkTransaction CreateDelegate(string username, string passphrase, string secondPassphrase = null)
 		{
-			var tx = new Transaction(2, 0, 2500000000);
+			var tx = new ArkTransaction(2, 0, 2500000000);
 			tx.asset.Add("username", username);
 			tx.Timestamp = Slot.GetTime();
 			tx.Sign(passphrase);
@@ -213,9 +213,9 @@ namespace ArkNet.Core
 			return tx;
 		}
 
-		public static Transaction createSecondSignature(string secondPassphrase, string passphrase)
+		public static ArkTransaction createSecondSignature(string secondPassphrase, string passphrase)
 		{
-			var tx = new Transaction(1, 0, 500000000);
+			var tx = new ArkTransaction(1, 0, 500000000);
 			tx.Signature = Encoders.Hex.EncodeData(Crypto.GetKeys(secondPassphrase).PubKey.ToBytes());
 			tx.Timestamp = Slot.GetTime();
 			tx.Sign(passphrase);

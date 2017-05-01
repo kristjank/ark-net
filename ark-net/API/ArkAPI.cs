@@ -19,7 +19,7 @@ namespace ArkNet.API
         }
 
         public IEnumerable<Peer> Peers => ArkNetwork.Mainnet.ActivePeer.GetPeers();
+        public IEnumerable<Transaction> Transactions => ArkNetwork.Mainnet.ActivePeer.GetTransactions();
 
-        
     }
 }

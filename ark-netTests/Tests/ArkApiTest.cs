@@ -16,5 +16,13 @@ namespace ArkNetTest.Tests
             //var p1 = peer.Status
             Assert.IsNotNull(peer);
         }
+
+        [TestMethod]
+        public void ArkAPIGetTransactions()
+        {
+            var transaction = ArkAPI.Instance.Transactions.FirstOrDefault();
+            //var p1 = peer.Status
+            Assert.IsNotNull(transaction);
+        }
     }
 }

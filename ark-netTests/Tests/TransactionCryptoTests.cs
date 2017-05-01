@@ -29,7 +29,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateTransactionPassPhraseVerifyTest()
 		{
-			var tx = Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
+			var tx = ArkTransaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
 				133380000000,
 				"This is first transaction from ARK-NET",
 				"this is a top secret passphrase");
@@ -41,7 +41,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void JSONSerDeSerTest()
 		{
-			var tx = Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
+			var tx = ArkTransaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
 				133380000000,
 				"This is first transaction from ARK-NET",
 				"this is a top secret passphrase",
@@ -49,7 +49,7 @@ namespace ArkNetTest.Tests
 			var json = tx.ToJson();
 			Console.WriteLine(json);
 
-			var tx2 = Transaction.FromJson(json);
+			var tx2 = ArkTransaction.FromJson(json);
 
 			Assert.AreEqual(json, tx2.ToJson());
 		}
@@ -57,7 +57,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void JSONSerDeSerNegTest()
 		{
-			var tx = Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
+			var tx = ArkTransaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
 				133380000000,
 				"This is first transaction from ARK-NET",
 				"this is a top secret passphrase",
@@ -65,7 +65,7 @@ namespace ArkNetTest.Tests
 			var json = tx.ToJson();
 			Console.WriteLine(json);
 
-			var tx2 = Transaction.FromJson(json);
+			var tx2 = ArkTransaction.FromJson(json);
 			tx2.SignSignature = "Change";
 
 			Assert.AreNotEqual(json, tx2.ToJson());
@@ -74,7 +74,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateTransaction2ndPassPhraseandVerifyTest()
 		{
-			var tx = Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
+			var tx = ArkTransaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
 				133380000000,
 				"This is first transaction from ARK-NET",
 				"this is a top secret passphrase",
@@ -91,7 +91,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateTransactionAmountChangeTest()
 		{
-			var tx = Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
+			var tx = ArkTransaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
 				133380000000,
 				"This is first transaction from ARK-NET",
 				"this is a top secret passphrase");
@@ -107,7 +107,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateTransactionFeeChangeTest()
 		{
-			var tx = Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
+			var tx = ArkTransaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
 				133380000000,
 				"This is first transaction from ARK-NET",
 				"this is a top secret passphrase");
@@ -123,7 +123,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateTransactionRecepientChangeTest()
 		{
-			var tx = Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
+			var tx = ArkTransaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
 				133380000000,
 				"This is first transaction from ARK-NET",
 				"this is a top secret passphrase");
@@ -138,7 +138,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateDelegateTest()
 		{
-			var tx = Transaction.CreateDelegate("polpolo", "this is a top secret passphrase");
+			var tx = ArkTransaction.CreateDelegate("polpolo", "this is a top secret passphrase");
 			var json = tx.ToJson();
 
 			Assert.IsTrue(Crypto.Verify(tx));

@@ -97,7 +97,6 @@ namespace ArkNet.Core
 		private ArkNetwork()
 		{
 			peers = new List<ArkPeer>();
-		    ActivePeer = GetRandomPeer();
         }
 
 		private ArkNetwork(byte prefix, int port, string name)
@@ -107,7 +106,6 @@ namespace ArkNet.Core
 			Name = name;
 
 			peers = new List<ArkPeer>();
-		    ActivePeer = GetRandomPeer();
 		}
 
 
@@ -186,11 +184,10 @@ namespace ArkNet.Core
 
 		public ArkPeer GetRandomPeer()
 		{
-		    if (peers.Count == 0) WarmUp();
 			return peers[random.Next(peers.Count())];
 		}
 
-		public int MultipleBroadCast(Transaction transaction)
+		public int MultipleBroadCast(ArkTransaction transaction)
 		{
 			var res = 0;
 			for (var i = 0; i < BroadcastMax; i++)

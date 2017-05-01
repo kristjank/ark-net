@@ -109,7 +109,7 @@ namespace ArkNet.Core
 			return content;
 		}
 
-		public (bool status, string message, string error) PostTransaction(Transaction transaction)
+		public (bool status, string message, string error) PostTransaction(ArkTransaction transaction)
 		{
 			string body = "{transactions: [" + transaction.ToObject(true) + "]} ";
 
@@ -142,7 +142,7 @@ namespace ArkNet.Core
 			return peerStat;
 		}
 
-		public List<TransactionVO> GetTransactions(bool unconfirmed = false)
+		public List<Transaction> GetTransactions(bool unconfirmed = false)
 		{
 			var path = "/api/transactions";
 			if (unconfirmed)
@@ -152,11 +152,11 @@ namespace ArkNet.Core
 			var parsed = JObject.Parse(response);
 			var array = (JArray) parsed["transactions"];
 
-			var tranList = JsonConvert.DeserializeObject<List<TransactionVO>>(array.ToString());
+			var tranList = JsonConvert.DeserializeObject<List<Transaction>>(array.ToString());
 			return tranList;
 		}
 
-		public TransactionVO GetTransaction(string id, bool unconfirmed = false)
+		public Transaction GetTransaction(string id, bool unconfirmed = false)
 		{
 			var path = "/api/transactions";
 			if (unconfirmed)
@@ -165,11 +165,11 @@ namespace ArkNet.Core
 			var response = MakeRequest("GET", path + "/get?id=" + id);
 			var parsed = JObject.Parse(response);
 
-			var trans = new TransactionVO();
+			var trans = new Transaction();
 			if (!Convert.ToBoolean(parsed["success"]))
-				trans.id = parsed["error"].ToString();
+				trans.Id = parsed["error"].ToString();
 			else
-				trans = JsonConvert.DeserializeObject<TransactionVO>(parsed["transaction"].ToString());
+				trans = JsonConvert.DeserializeObject<Transaction>(parsed["transaction"].ToString());
 
 			return trans;
 		}

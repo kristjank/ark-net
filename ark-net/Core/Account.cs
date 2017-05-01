@@ -16,19 +16,19 @@ namespace ArkNet.Core
 
 		public List<string> Votes { get; set; }
 
-		public bool ApplyTransaction(Transaction transaction)
+		public bool ApplyTransaction(ArkTransaction transaction)
 		{
 			Balance -= transaction.Amount + transaction.Fee;
 			return Balance > -1;
 		}
 
-		public bool UndoTransaction(Transaction transaction)
+		public bool UndoTransaction(ArkTransaction transaction)
 		{
 			Balance += transaction.Amount + transaction.Fee;
 			return Balance > -1;
 		}
 
-		public Verification VerifyTransaction(Transaction transaction)
+		public Verification VerifyTransaction(ArkTransaction transaction)
 		{
 			var v = new Verification();
 			/*if (Balance >= transaction.Amount + transaction.Fee)

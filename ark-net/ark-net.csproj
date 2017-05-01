@@ -101,7 +101,7 @@
     <Compile Include="Model\DelegateVotersVO.cs" />
     <Compile Include="Model\PeerStatus.cs" />
     <Compile Include="Model\Peer.cs" />
-    <Compile Include="Model\TransactionVO.cs" />
+    <Compile Include="Model\Transaction.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -112,7 +112,7 @@
     <Compile Include="Utils\BCUtils.cs" />
     <Compile Include="Utils\BCAVersionedChecksummedBytes.cs" />
     <Compile Include="Core\Crypto.cs" />
-    <Compile Include="Core\Transaction.cs" />
+    <Compile Include="Core\ArkTransaction.cs" />
     <Compile Include="Utils\Buffer.cs" />
     <Compile Include="Utils\BufferExceptions.cs" />
     <Compile Include="Utils\ByteBuffer.cs" />

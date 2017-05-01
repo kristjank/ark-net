@@ -57,7 +57,7 @@ namespace ArkNetTest.Tests
 		{
 			var trans = ArkNetwork.Mainnet.GetRandomPeer().GetTransaction("WrongID", true);
 
-			Assert.AreEqual(trans.id, "Transaction not found");
+			Assert.AreEqual(trans.Id, "Transaction not found");
 		}
 
 		[TestMethod]

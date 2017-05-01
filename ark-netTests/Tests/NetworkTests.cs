@@ -16,7 +16,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void PostTransactionNoBalanceTest()
 		{
-			var tx = Transaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
+			var tx = ArkTransaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
 				133380000000,
 				"This is first transaction from ARK-NET",
 				"this is a top secret passphrase");
@@ -33,7 +33,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void TransactionSerializeTest()
 		{
-			var tx = Transaction.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
+			var tx = ArkTransaction.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
 				1000,
 				"This is first transaction from ARK-NET 22",
 				"ski rose knock live elder parade dose device fetch betray loan holiday");
@@ -50,7 +50,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void PostTransactionTransferTest()
 		{
-			var tx = Transaction.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
+			var tx = ArkTransaction.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
 				1000,
 				"This is first transaction from ARK-NET 22",
 				"ski rose knock live elder parade dose device fetch betray loan holiday");
@@ -64,7 +64,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void MultiplePostTransactionSuccessTest()
 		{
-			var tx = Transaction.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
+			var tx = ArkTransaction.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
 				1000,
 				"This is first Multi transaction from ARK-NET",
 				"ski rose knock live elder parade dose device fetch betray loan holiday");
