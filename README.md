@@ -41,7 +41,7 @@ Peer peer = Network.Mainnet.GetRandomPeer();
 var result = peer.PostTransaction(tx);          
 ```
 ### More API calls
-For a full list of avaiable api calls please look at the  [ARK.NET Test project](https://github.com/kristjank/ark-net/blob/master/ark-netTests/io/ark/core/)
+For a full list of available api calls please look at the  [ARK.NET Test project](https://github.com/kristjank/ark-net/blob/master/ark-netTests/)
 
 ```c#
 //PeerService
