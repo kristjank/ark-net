@@ -14,7 +14,9 @@ namespace ArkNet.Service.Tests
         [TestMethod()]
         public void GetAllTest()
         {
-            Assert.Fail();
+            var peers = PeerService.GetAll();
+
+            Assert.IsNotNull(peers);
         }
     }
 }

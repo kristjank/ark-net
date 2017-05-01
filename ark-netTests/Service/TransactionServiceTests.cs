@@ -12,9 +12,37 @@ namespace ArkNet.Service.Tests
     public class TransactionServiceTests
     {
         [TestMethod()]
+        public void GetAllTest()
+        {
+            var trans = TransactionService.GetAll();
+            Assert.IsNotNull(trans);
+        }
+
+        [TestMethod()]
         public void GetByIdTest()
         {
-            Assert.Fail();
+            var trans = TransactionService.GetAll().FirstOrDefault();
+            Assert.IsNotNull(trans);
+
+            var trans1 = TransactionService.GetById(trans.Id);
+            Assert.IsNotNull(trans1);
+        }
+
+        [TestMethod()]
+        public void GetUnConfirmedByIdTest()
+        {
+            var trans = TransactionService.GetUnconfirmedAll().FirstOrDefault();
+            Assert.IsNotNull(trans);
+
+            var trans1 = TransactionService.GetUnConfirmedById(trans.Id);
+            Assert.IsNotNull(trans1);
+        }
+
+        [TestMethod()]
+        public void GetUnconfirmedAllTest()
+        {
+            var trans = TransactionService.GetUnconfirmedAll();
+            Assert.IsNotNull(trans);
         }
     }
 }

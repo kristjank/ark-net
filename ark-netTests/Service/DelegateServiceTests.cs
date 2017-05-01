@@ -22,7 +22,6 @@ namespace ArkNet.Service.Tests
         [TestMethod()]
         public void GetByUsernameTest()
         {
-
             var dele = DelegateService.GetByUsername("arkpool");
             Assert.AreEqual(dele.Address, "ARAq9nhjCxwpWnGKDgxveAJSijNG8Y6dFQ");
         }
@@ -30,7 +29,7 @@ namespace ArkNet.Service.Tests
         [TestMethod()]
         public void GetByPubKeyTest()
         {
-            var dele = DelegateService.GetByAddress("ARAq9nhjCxwpWnGKDgxveAJSijNG8Y6dFQ ");
+            var dele = DelegateService.GetByAddress("ARAq9nhjCxwpWnGKDgxveAJSijNG8Y6dFQ");
             Assert.AreEqual("arkpool",dele.Username);
 
             var dele2 = DelegateService.GetByPubKey(dele.PublicKey);
@@ -41,8 +40,8 @@ namespace ArkNet.Service.Tests
         [TestMethod()]
         public void GetByAddressTest()
         {
-            var dele = DelegateService.GetByAddress("ARAq9nhjCxwpWnGKDgxveAJSijNG8Y6dFQ  ");
-            Assert.AreEqual("arkpool", dele.Username);
+            var dele = DelegateService.GetByAddress("ARAq9nhjCxwpWnGKDgxveAJSijNG8Y6dFQ");
+            Assert.IsNotNull(dele);
         }
 
         [TestMethod()]

@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using ArkNet.Core;
 
-namespace ArkNet.Core
+namespace ArkNet.Controller
 {
-	public class AccountApi
+	public class AccountController
 	{
 		public string Address { get; set; }
 
