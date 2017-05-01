@@ -6,14 +6,13 @@ using Newtonsoft.Json;
 
 namespace ArkNet.Core
 {
-	public sealed class Network
+	public sealed class ArkNetwork
 	{
 		private static readonly Random random = new Random();
 
-		private static volatile Network instance;
+		private static volatile ArkNetwork instance;
 		private static readonly object syncRoot = new object();
-
-		private readonly List<Peer> peers = new List<Peer>();
+		private readonly List<ArkPeer> peers = new List<ArkPeer>();
 
 		private readonly List<string> peerseed = new List<string>
 		{
@@ -95,21 +94,26 @@ namespace ArkNet.Core
 			"167.114.43.34:4001"
 		};
 
-		private Network()
+		private ArkNetwork()
 		{
-			peers = new List<Peer>();
-		}
+			peers = new List<ArkPeer>();
+		    ActivePeer = GetRandomPeer();
+        }
 
-		private Network(byte prefix, int port, string name)
+		private ArkNetwork(byte prefix, int port, string name)
 		{
 			Prefix = prefix;
 			Port = port;
 			Name = name;
 
-			peers = new List<Peer>();
+			peers = new List<ArkPeer>();
+		    ActivePeer = GetRandomPeer();
 		}
 
-		public static Network Mainnet
+
+
+
+		public static ArkNetwork Mainnet
 		{
 			get
 			{
@@ -118,7 +122,7 @@ namespace ArkNet.Core
 					{
 						if (instance == null)
 						{
-							instance = new Network();
+							instance = new ArkNetwork();
 							instance.WarmUp();
 						}
 					}
@@ -130,7 +134,7 @@ namespace ArkNet.Core
 			}
 		}
 
-		public static Network Testnet
+		public static ArkNetwork Testnet
 		{
 			get
 			{
@@ -139,7 +143,7 @@ namespace ArkNet.Core
 					{
 						if (instance == null)
 						{
-							instance = new Network(Properties.Settings.Default.TestNetBytePrefix,
+							instance = new ArkNetwork(Properties.Settings.Default.TestNetBytePrefix,
 						                            Properties.Settings.Default.TestNetPort, 
                                                     Properties.Settings.Default.TestNetName);
 							instance.WarmUp();
@@ -159,8 +163,9 @@ namespace ArkNet.Core
 		public byte Prefix { get; set; } = Properties.Settings.Default.MainNetBytePrefix;
 		public string Version { get; set; } = Properties.Settings.Default.NetworkVersion;
 		public int BroadcastMax { get; set; } = Properties.Settings.Default.MaxNumOfBroadcasts;
+	    public ArkPeer ActivePeer { get; set; } 
 
-		public dynamic GetHeaders(bool retJson = false)
+        public dynamic GetHeaders(bool retJson = false)
 		{
 			var data = new Dictionary<string, dynamic> {["nethash"] = Nethash, ["version"] = Version, ["port"] = Port};
 
@@ -173,12 +178,15 @@ namespace ArkNet.Core
 		{
 			if (peers.Count > 0) return false;
 			foreach (var item in peerseed)
-				peers.Add(new Peer(item));
+				peers.Add(new ArkPeer(item));
+
+		    ActivePeer = GetRandomPeer();
 			return true;
 		}
 
-		public Peer GetRandomPeer()
+		public ArkPeer GetRandomPeer()
 		{
+		    if (peers.Count == 0) WarmUp();
 			return peers[random.Next(peers.Count())];
 		}
 

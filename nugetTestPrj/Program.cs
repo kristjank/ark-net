@@ -1,4 +1,5 @@
-﻿using io.ark.core;
+﻿using ArkNet;
+using ArkNet.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,9 @@ namespace nugetTestPrj
     {
         static void Main(string[] args)
         {
-            /*Transaction tx = Transaction.CreateDelegate("polpolo", "this is a top secret passphrase");
+            Transaction tx = Transaction.CreateDelegate("polpolo", "this is a top secret passphrase");
             string json = tx.ToJson();
-            */
+            
 
 
             

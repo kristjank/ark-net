@@ -32,26 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ark.NET, Version=0.6.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\ark-net\packages\Ark.NET.0.6.3\lib\net452\Ark.NET.dll</HintPath>
-    </Reference>
-    <Reference Include="bitcoinj-core-0.14.4-bundled, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\ark-net\packages\Ark.NET.0.6.3\lib\net452\bitcoinj-core-0.14.4-bundled.dll</HintPath>
+    <Reference Include="Ark.NET, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\ark-net\packages\Ark.NET.0.7.0\lib\net452\Ark.NET.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\ark-net\packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
-    <Reference Include="IKVM.OpenJDK.Core, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
-      <HintPath>..\ark-net\packages\IKVM.OpenJDK.Core.7.2.4630.5\lib\IKVM.OpenJDK.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="IKVM.Runtime, Version=7.2.4630.5, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
-      <HintPath>..\ark-net\packages\IKVM.Runtime.7.2.4630.5\lib\IKVM.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <HintPath>..\ark-net\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="Multiformats.Base, Version=1.0.34.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\ark-net\packages\Multiformats.Base.1.0.34\lib\net45\Multiformats.Base.dll</HintPath>
     </Reference>
     <Reference Include="NBitcoin, Version=3.0.2.15, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\ark-net\packages\NBitcoin.3.0.2.15\lib\net45\NBitcoin.dll</HintPath>
@@ -68,6 +56,9 @@
       <HintPath>..\ark-net\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics" />
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\ark-net\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -76,9 +67,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="Validation, Version=2.4.0.0, Culture=neutral, PublicKeyToken=2fc06f0d701809a7, processorArchitecture=MSIL">
       <HintPath>..\ark-net\packages\Validation.2.4.15\lib\net45\Validation.dll</HintPath>
-    </Reference>
-    <Reference Include="WallF.BaseNEncodings, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\ark-net\packages\WallF.BaseNEncodings.1.0.0.0\lib\net20\WallF.BaseNEncodings.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -90,7 +78,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="res\arknet-new.png" />
+    <Content Include="Icon.ico" />
+    <Content Include="Icon.png" />
+    <Content Include="Res\6464.png" />
+    <Content Include="Res\arknet-new.png" />
+    <Content Include="Res\Icon_details.png" />
+    <Content Include="Res\Icon_dialog.png" />
+    <Content Include="Res\Icon_list.png" />
+    <Content Include="Res\sharky.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

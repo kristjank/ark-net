@@ -10,17 +10,17 @@ using Newtonsoft.Json.Linq;
 
 namespace ArkNet.Core
 {
-	public class Peer
+	public class ArkPeer
 	{
 		//string status = "NEW";
 
 		private readonly HttpClient httpClient;
 		public string ip;
-		private Dictionary<string, dynamic> networkHeaders = Network.Mainnet.GetHeaders();
+		private Dictionary<string, dynamic> networkHeaders = ArkNetwork.Mainnet.GetHeaders();
 		private int port;
 		private string protocol = "http://";
 
-		public Peer(string peerData)
+		public ArkPeer(string peerData)
 		{
 			var data = peerData.Split(':');
 			var port = Convert.ToInt32(data[1]);
@@ -34,9 +34,9 @@ namespace ArkNet.Core
 			httpClient.BaseAddress = new UriBuilder(this.protocol, this.ip, this.port).Uri;
 			httpClient.DefaultRequestHeaders.Accept.Clear();
 			httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-			httpClient.DefaultRequestHeaders.Add("nethash", Network.Mainnet.Nethash);
-			httpClient.DefaultRequestHeaders.Add("version", Network.Mainnet.Version);
-			httpClient.DefaultRequestHeaders.Add("port", Network.Mainnet.Port.ToString());
+			httpClient.DefaultRequestHeaders.Add("nethash", ArkNetwork.Mainnet.Nethash);
+			httpClient.DefaultRequestHeaders.Add("version", ArkNetwork.Mainnet.Version);
+			httpClient.DefaultRequestHeaders.Add("port", ArkNetwork.Mainnet.Port.ToString());
 			OpenServicePoint(httpClient.BaseAddress);
 		}
 
@@ -123,22 +123,22 @@ namespace ArkNet.Core
 				parsed["error"]?.ToString() ?? "");
 		}
 
-		public IList<PeerVO> GetPeers()
+		public IReadOnlyCollection<Peer> GetPeers()
 		{
 			var response = MakeRequest("GET", "/peer/list");
 			var parsed = JObject.Parse(response);
 			var array = (JArray) parsed["peers"];
 
-			var peerList = JsonConvert.DeserializeObject<IList<PeerVO>>(array.ToString());
+			var peerList = JsonConvert.DeserializeObject<IReadOnlyCollection<Peer>>(array.ToString());
 		    return peerList;
 		}
 
-		public PeerStatusVO GetPeerStatus()
+		public PeerStatus GetPeerStatus()
 		{
 			var response = MakeRequest("GET", "/peer/status");
 			var parsed = JObject.Parse(response);
 
-			var peerStat = JsonConvert.DeserializeObject<PeerStatusVO>(response);
+			var peerStat = JsonConvert.DeserializeObject<PeerStatus>(response);
 			return peerStat;
 		}
 

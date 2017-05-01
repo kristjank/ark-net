@@ -71,6 +71,7 @@
     <Compile Include="Tests\ModelTests.cs" />
     <Compile Include="Tests\TransactionCryptoTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\ArkApiTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

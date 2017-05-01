@@ -21,7 +21,7 @@ namespace ArkNetTest.Tests
 				"This is first transaction from ARK-NET",
 				"this is a top secret passphrase");
 
-			var peer = Network.Mainnet.GetRandomPeer();
+			var peer = ArkNetwork.Mainnet.GetRandomPeer();
 
 
 			var result = peer.PostTransaction(tx);
@@ -55,7 +55,7 @@ namespace ArkNetTest.Tests
 				"This is first transaction from ARK-NET 22",
 				"ski rose knock live elder parade dose device fetch betray loan holiday");
 
-			var peer = Network.Mainnet.GetRandomPeer();
+			var peer = ArkNetwork.Mainnet.GetRandomPeer();
 
 			var result = peer.PostTransaction(tx);
 			Assert.IsTrue(result.status);
@@ -69,7 +69,7 @@ namespace ArkNetTest.Tests
 				"This is first Multi transaction from ARK-NET",
 				"ski rose knock live elder parade dose device fetch betray loan holiday");
 
-			var res = Network.Mainnet.MultipleBroadCast(tx);
+			var res = ArkNetwork.Mainnet.MultipleBroadCast(tx);
 			Assert.IsTrue(res > 0);
 		}
 	}
