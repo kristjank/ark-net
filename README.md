@@ -3,6 +3,7 @@
 
 Copyright 2017 **chris**, Copyright 2017 **ARK**
 
+### Ark.NET
 Ark.NET is the ARK Ecosystem library for the .NET platform. It implements all most relevant ARK functionalities to help you  develop efficient .NET applications built upon ARK platform. It provides also low level access to ARK so you can easily build your application on top of it. 
 
 The package supports:
@@ -65,10 +66,7 @@ Visual Studio Community Edition : [https://www.visualstudio.com/products/visual-
 Chris (kristjan.kosic@gmail.com), with a lot of help from FX Thoorens fx@ark.io and ARK Community
 
 ## Support this project
-====================
-
 ![alt text](https://github.com/Moustikitos/arky/raw/master/ark-logo.png)
-
 Ark address:``AUgTuukcKeE4XFdzaK6rEHMD5FLmVBSmHk``
 
 
