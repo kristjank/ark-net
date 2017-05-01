@@ -37,30 +37,20 @@ It's best to let the code do the speaking. For more examples look at the [ARK.NE
 
 ```c#
 Transaction tx = Transaction.CreateTransaction(recepient, amount, description, passphrase);
-
 Peer peer = Network.Mainnet.GetRandomPeer();
-string result = peer.PostTransaction(tx);          
-
+var result = peer.PostTransaction(tx);          
 ```
-
 ### More API calls
 For a full list of avaiable api calls please look at the  [ARK.NET Test project](https://github.com/kristjank/ark-net/blob/master/ark-netTests/io/ark/core/)
 
 ```c#
-List<PeerVO> peers = Network.Mainnet.GetRandomPeer().GetPeers();
-List<TransactionVO> trans = Network.Mainnet.GetRandomPeer().GetTransactions();
-PeerStatusVO peerStat = Network.Mainnet.GetRandomPeer().GetPeerStatus();
+//PeerService
+var peers = PeerService.GetAll();
+var peersOK = peers.Where(x => x.Status.Equals("OK"));
 
-TransactionVO trans = Network.Mainnet.GetRandomPeer().GetTransaction("3a9643dcf9631384df6cb8c7aec50d782e8da5dfd4b44c22cd1f10c6434ee00c");
-
-List<DelegateVO> dele = Network.Mainnet.GetRandomPeer().GetDelegates();
-DelegateVO dele1 = Network.Mainnet.GetRandomPeer().GetDelegatebyUsername(dele[0].username);
-DelegateVO dele22 = Network.Mainnet.GetRandomPeer().GetDelegatebyPubKey(dele[0].publicKey);
-DelegateVO dele33 = Network.Mainnet.GetRandomPeer().GetDelegatebyAddress(dele[0].address);
-
-List<DelegateVotersVO> voters = Network.Mainnet.GetRandomPeer().GetDelegateVoters(dele[0].publicKey);
-AccountVO accountTest = Network.Mainnet.GetRandomPeer().GetAccountbyAddress(dele[0].address);
-
+//TransactionService
+var trans = TransactionService.GetAll();
+...
 ```
 
 ## More information about ARK Ecosystem and etc
@@ -73,12 +63,10 @@ Please, use github issues for questions or feedback. For confidential requests o
 ## Useful link for a free IDE :
 Visual Studio Community Edition : [https://www.visualstudio.com/products/visual-studio-community-vs](https://www.visualstudio.com/products/visual-studio-community-vs "https://www.visualstudio.com/products/visual-studio-community-vs")
 
-
 # License
-
 The MIT License (MIT)
 
-Copyright (c) 2017 Ark
+Copyright (c) 2017 ARK
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
