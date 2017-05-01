@@ -2,7 +2,7 @@
 
 namespace ArkNet.Core
 {
-	public class Account
+	public class AccountApi
 	{
 		public string Address { get; set; }
 
@@ -16,19 +16,19 @@ namespace ArkNet.Core
 
 		public List<string> Votes { get; set; }
 
-		public bool ApplyTransaction(ArkTransaction transaction)
+		public bool ApplyTransaction(TransactionApi transaction)
 		{
 			Balance -= transaction.Amount + transaction.Fee;
 			return Balance > -1;
 		}
 
-		public bool UndoTransaction(ArkTransaction transaction)
+		public bool UndoTransaction(TransactionApi transaction)
 		{
 			Balance += transaction.Amount + transaction.Fee;
 			return Balance > -1;
 		}
 
-		public Verification VerifyTransaction(ArkTransaction transaction)
+		public Verification VerifyTransaction(TransactionApi transaction)
 		{
 			var v = new Verification();
 			/*if (Balance >= transaction.Amount + transaction.Fee)

@@ -11,7 +11,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void GetPeersTest()
 		{
-			var peers = ArkNetwork.Mainnet.GetRandomPeer().GetPeers();
+			var peers = NetworkApi.Mainnet.GetRandomPeer().GetPeers();
 
 
 		    var peer = peers.Where(x => x.Status.Equals("OK")).FirstOrDefault();
@@ -24,14 +24,14 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void GetTransactionsTest()
 		{
-			var trans = ArkNetwork.Mainnet.GetRandomPeer().GetTransactions();
+			var trans = NetworkApi.Mainnet.GetRandomPeer().GetTransactions();
 			Assert.IsTrue(trans.Count > 0);
 		}
 
 		[TestMethod]
 		public void GetPeerStatusTest()
 		{
-			var peerStat = ArkNetwork.Mainnet.GetRandomPeer().GetPeerStatus();
+			var peerStat = NetworkApi.Mainnet.GetRandomPeer().GetPeerStatus();
 
 			Assert.IsNotNull(peerStat);
 		}
@@ -39,7 +39,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void GetTransactionTest()
 		{
-			var trans = ArkNetwork.Mainnet.GetRandomPeer()
+			var trans = NetworkApi.Mainnet.GetRandomPeer()
 				.GetTransaction("3a9643dcf9631384df6cb8c7aec50d782e8da5dfd4b44c22cd1f10c6434ee00c");
 
 			Assert.IsNotNull(trans);
@@ -48,14 +48,14 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void GetUnconfirmedTransactionsTest()
 		{
-			var trans = ArkNetwork.Mainnet.GetRandomPeer().GetTransactions(true);
+			var trans = NetworkApi.Mainnet.GetRandomPeer().GetTransactions(true);
 			Assert.IsTrue(trans.Count >= 0);
 		}
 
 		[TestMethod]
 		public void GetUnconfirmedTransactionFalseIDTest()
 		{
-			var trans = ArkNetwork.Mainnet.GetRandomPeer().GetTransaction("WrongID", true);
+			var trans = NetworkApi.Mainnet.GetRandomPeer().GetTransaction("WrongID", true);
 
 			Assert.AreEqual(trans.Id, "Transaction not found");
 		}
@@ -63,29 +63,29 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void AllDelegatesTest()
 		{
-			var dele = ArkNetwork.Mainnet.GetRandomPeer().GetDelegates();
-			Assert.IsTrue(dele.Count > 0);
+			var dele = NetworkApi.Mainnet.GetRandomPeer().GetDelegates().FirstOrDefault();
+			Assert.IsNotNull(dele);
 
-			var dele1 = ArkNetwork.Mainnet.GetRandomPeer().GetDelegatebyUsername(dele[0].username);
+			var dele1 = NetworkApi.Mainnet.GetRandomPeer().GetDelegatebyUsername(dele.Username);
 			Assert.IsNotNull(dele1);
 
-			var dele22 = ArkNetwork.Mainnet.GetRandomPeer().GetDelegatebyPubKey(dele[0].publicKey);
+			var dele22 = NetworkApi.Mainnet.GetRandomPeer().GetDelegatebyPubKey(dele.PublicKey);
 			Assert.IsNotNull(dele22);
 
-			var dele33 = ArkNetwork.Mainnet.GetRandomPeer().GetDelegatebyAddress(dele[0].address);
+			var dele33 = NetworkApi.Mainnet.GetRandomPeer().GetDelegatebyAddress(dele.Address);
 			Assert.IsNotNull(dele33);
 
-			var voters = ArkNetwork.Mainnet.GetRandomPeer().GetDelegateVoters(dele[0].publicKey);
+			var voters = NetworkApi.Mainnet.GetRandomPeer().GetDelegateVoters(dele.PublicKey);
 			Assert.IsTrue(voters.Count > 0);
 		}
 
 		[TestMethod]
 		public void AllAccountsTest()
 		{
-			var dele = ArkNetwork.Mainnet.GetRandomPeer().GetDelegates();
-			Assert.IsTrue(dele.Count > 0);
+			var dele = NetworkApi.Mainnet.GetRandomPeer().GetDelegates().FirstOrDefault();
+			Assert.IsNotNull(dele);
 
-			var accountTest = ArkNetwork.Mainnet.GetRandomPeer().GetAccountbyAddress(dele[0].address);
+			var accountTest = NetworkApi.Mainnet.GetRandomPeer().GetAccountbyAddress(dele.Address);
 			Assert.IsNotNull(accountTest);
 		}
 	}

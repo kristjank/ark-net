@@ -7,20 +7,21 @@ using System.Net.Http.Headers;
 using ArkNet.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Delegate = ArkNet.Model.Delegate;
 
 namespace ArkNet.Core
 {
-	public class ArkPeer
+	public class PeerApi
 	{
 		//string status = "NEW";
 
 		private readonly HttpClient httpClient;
 		public string ip;
-		private Dictionary<string, dynamic> networkHeaders = ArkNetwork.Mainnet.GetHeaders();
+		private Dictionary<string, dynamic> networkHeaders = NetworkApi.Mainnet.GetHeaders();
 		private int port;
 		private string protocol = "http://";
 
-		public ArkPeer(string peerData)
+		public PeerApi(string peerData)
 		{
 			var data = peerData.Split(':');
 			var port = Convert.ToInt32(data[1]);
@@ -34,9 +35,9 @@ namespace ArkNet.Core
 			httpClient.BaseAddress = new UriBuilder(this.protocol, this.ip, this.port).Uri;
 			httpClient.DefaultRequestHeaders.Accept.Clear();
 			httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-			httpClient.DefaultRequestHeaders.Add("nethash", ArkNetwork.Mainnet.Nethash);
-			httpClient.DefaultRequestHeaders.Add("version", ArkNetwork.Mainnet.Version);
-			httpClient.DefaultRequestHeaders.Add("port", ArkNetwork.Mainnet.Port.ToString());
+			httpClient.DefaultRequestHeaders.Add("nethash", NetworkApi.Mainnet.Nethash);
+			httpClient.DefaultRequestHeaders.Add("version", NetworkApi.Mainnet.Version);
+			httpClient.DefaultRequestHeaders.Add("port", NetworkApi.Mainnet.Port.ToString());
 			OpenServicePoint(httpClient.BaseAddress);
 		}
 
@@ -108,8 +109,8 @@ namespace ArkNet.Core
 
 			return content;
 		}
-
-		public (bool status, string message, string error) PostTransaction(ArkTransaction transaction)
+        //SERVICE CALLS -----------------------------------------------------------------------------------
+		public (bool status, string message, string error) PostTransaction(TransactionApi transaction)
 		{
 			string body = "{transactions: [" + transaction.ToObject(true) + "]} ";
 
@@ -142,7 +143,7 @@ namespace ArkNet.Core
 			return peerStat;
 		}
 
-		public List<Transaction> GetTransactions(bool unconfirmed = false)
+		public IReadOnlyCollection<Transaction> GetTransactions(bool unconfirmed = false)
 		{
 			var path = "/api/transactions";
 			if (unconfirmed)
@@ -152,7 +153,7 @@ namespace ArkNet.Core
 			var parsed = JObject.Parse(response);
 			var array = (JArray) parsed["transactions"];
 
-			var tranList = JsonConvert.DeserializeObject<List<Transaction>>(array.ToString());
+			var tranList = JsonConvert.DeserializeObject<IReadOnlyCollection<Transaction>>(array.ToString());
 			return tranList;
 		}
 
@@ -174,85 +175,85 @@ namespace ArkNet.Core
 			return trans;
 		}
 
-		public List<DelegateVO> GetDelegates()
+		public IReadOnlyCollection<Delegate> GetDelegates()
 		{
 			var response = MakeRequest("GET", "/api/delegates");
 			var parsed = JObject.Parse(response);
 			var array = (JArray) parsed["delegates"];
 
-			var delegList = JsonConvert.DeserializeObject<List<DelegateVO>>(array.ToString());
+			var delegList = JsonConvert.DeserializeObject<IReadOnlyCollection<Delegate>>(array.ToString());
 			return delegList;
 		}
 
-		public DelegateVO GetDelegatebyUsername(string username)
+		public Delegate GetDelegatebyUsername(string username)
 		{
 			var response = MakeRequest("GET", "/api/delegates/get?username=" + username);
 			var parsed = JObject.Parse(response);
 
-			var dele = new DelegateVO();
+			var dele = new Delegate();
 			if (!Convert.ToBoolean(parsed["success"]))
-				dele.username = parsed["error"].ToString();
+				dele.Username = parsed["error"].ToString();
 			else
-				dele = JsonConvert.DeserializeObject<DelegateVO>(parsed["delegate"].ToString());
+				dele = JsonConvert.DeserializeObject<Delegate>(parsed["delegate"].ToString());
 			return dele;
 		}
 
-		public DelegateVO GetDelegatebyPubKey(string pubKey)
+		public Delegate GetDelegatebyPubKey(string pubKey)
 		{
 			var response = MakeRequest("GET", "/api/delegates/get?publicKey=" + pubKey);
 			var parsed = JObject.Parse(response);
 
-			var dele = new DelegateVO();
+			var dele = new Model.Delegate();
 			if (!Convert.ToBoolean(parsed["success"]))
-				dele.username = parsed["error"].ToString();
+				dele.Username = parsed["error"].ToString();
 			else
-				dele = JsonConvert.DeserializeObject<DelegateVO>(parsed["delegate"].ToString());
+				dele = JsonConvert.DeserializeObject<Delegate>(parsed["delegate"].ToString());
 			return dele;
 		}
 
-		public DelegateVO GetDelegatebyAddress(string address)
+		public Delegate GetDelegatebyAddress(string address)
 		{
 			var response = MakeRequest("GET", "/api/delegates/get?address=" + address);
 			var parsed = JObject.Parse(response);
 
-			var dele = new DelegateVO();
+			var dele = new Model.Delegate();
 			if (!Convert.ToBoolean(parsed["success"]))
-				dele.username = parsed["error"].ToString();
+				dele.Username = parsed["error"].ToString();
 			else
-				dele = JsonConvert.DeserializeObject<DelegateVO>(parsed["delegate"].ToString());
+				dele = JsonConvert.DeserializeObject<Delegate>(parsed["delegate"].ToString());
 			return dele;
 		}
 
 
-		public List<DelegateVotersVO> GetDelegateVoters(string pubKey)
+		public List<DelegateVoters> GetDelegateVoters(string pubKey)
 		{
 			var response = MakeRequest("GET", "/api/delegates/voters?publicKey=" + pubKey);
 			var parsed = JObject.Parse(response);
 			var array = (JArray) parsed["accounts"];
 
-			var delegVotersList = new List<DelegateVotersVO>();
+			var delegVotersList = new List<DelegateVoters>();
 			if (!Convert.ToBoolean(parsed["success"]))
 			{
-				var dele = new DelegateVotersVO();
-				dele.username = parsed["error"].ToString();
+				var dele = new DelegateVoters();
+				dele.Username = parsed["error"].ToString();
 			}
 			else
 			{
-				delegVotersList = JsonConvert.DeserializeObject<List<DelegateVotersVO>>(array.ToString());
+				delegVotersList = JsonConvert.DeserializeObject<List<DelegateVoters>>(array.ToString());
 			}
 			return delegVotersList;
 		}
 
-		public AccountVO GetAccountbyAddress(string address)
+		public Account GetAccountbyAddress(string address)
 		{
 			var response = MakeRequest("GET", "/api/accounts/?address=" + address);
 			var parsed = JObject.Parse(response);
 
-			var account = new AccountVO();
+			var account = new Model.Account();
 			if (!Convert.ToBoolean(parsed["success"]))
 				account.Address = parsed["error"].ToString();
 			else
-				account = JsonConvert.DeserializeObject<AccountVO>(parsed["account"].ToString());
+				account = JsonConvert.DeserializeObject<Model.Account>(parsed["account"].ToString());
 			return account;
 		}
 	}

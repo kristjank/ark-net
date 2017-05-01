@@ -88,17 +88,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\ArkAPI.cs" />
-    <Compile Include="Core\Account.cs" />
+    <Compile Include="Controller\WalletController.cs" />
+    <Compile Include="Service\AccountService.cs" />
+    <Compile Include="Service\DelegateService.cs" />
+    <Compile Include="Service\PeerService.cs" />
+    <Compile Include="Service\TransactionService.cs" />
+    <Compile Include="Controller\AccountController.cs" />
     <Compile Include="Core\Block.cs" />
-    <Compile Include="Core\ArkNetwork.cs" />
-    <Compile Include="Core\ArkPeer.cs" />
+    <Compile Include="Core\NetworkApi.cs" />
+    <Compile Include="Core\PeerApi.cs" />
     <Compile Include="Core\Slot.cs" />
     <Compile Include="Core\Verification.cs" />
-    <Compile Include="Model\AccountVO.cs" />
-    <Compile Include="Model\BlockVO.cs" />
-    <Compile Include="Model\DelegateVO.cs" />
-    <Compile Include="Model\DelegateVotersVO.cs" />
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\Delegate.cs" />
+    <Compile Include="Model\DelegateVoters.cs" />
     <Compile Include="Model\PeerStatus.cs" />
     <Compile Include="Model\Peer.cs" />
     <Compile Include="Model\Transaction.cs" />
@@ -112,7 +115,7 @@
     <Compile Include="Utils\BCUtils.cs" />
     <Compile Include="Utils\BCAVersionedChecksummedBytes.cs" />
     <Compile Include="Core\Crypto.cs" />
-    <Compile Include="Core\ArkTransaction.cs" />
+    <Compile Include="Core\TransactionApi.cs" />
     <Compile Include="Utils\Buffer.cs" />
     <Compile Include="Utils\BufferExceptions.cs" />
     <Compile Include="Utils\ByteBuffer.cs" />

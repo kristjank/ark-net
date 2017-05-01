@@ -67,11 +67,14 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Service\AccountServiceTests.cs" />
+    <Compile Include="Service\DelegateServiceTests.cs" />
+    <Compile Include="Service\PeerServiceTests.cs" />
+    <Compile Include="Service\TransactionServiceTests.cs" />
     <Compile Include="Tests\NetworkTests.cs" />
     <Compile Include="Tests\ModelTests.cs" />
     <Compile Include="Tests\TransactionCryptoTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\ArkApiTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

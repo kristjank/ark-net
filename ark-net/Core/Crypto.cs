@@ -12,13 +12,13 @@ namespace ArkNet.Core
 		private static readonly SHA256 Sha256 = SHA256.Create();
 		private static readonly RIPEMD160 Ripemd160 = RIPEMD160.Create();
 
-		public static ECDSASignature Sign(ArkTransaction t, string passphrase)
+		public static ECDSASignature Sign(TransactionApi t, string passphrase)
 		{
 			var txbytes = GetBytes(t);
 			return SignBytes(txbytes, passphrase);
 		}
 
-		public static ECDSASignature SecondSign(ArkTransaction t, string passphrase)
+		public static ECDSASignature SecondSign(TransactionApi t, string passphrase)
 		{
 			var txbytes = GetBytes(t, false);
 			return SignBytes(txbytes, passphrase);
@@ -32,7 +32,7 @@ namespace ArkNet.Core
 			return signature;
 		}
 
-		public static bool Verify(ArkTransaction t)
+		public static bool Verify(TransactionApi t)
 		{
 			var key = new PubKey(Encoders.Hex.DecodeData(t.SenderPublicKey));
 			var signature = Encoders.Hex.DecodeData(t.Signature);
@@ -41,7 +41,7 @@ namespace ArkNet.Core
 			return key.Verify(new uint256(Sha256.ComputeHash(bytes)), signature);
 		}
 
-		public static bool SecondVerify(ArkTransaction t, string secondPublicKeyHex)
+		public static bool SecondVerify(TransactionApi t, string secondPublicKeyHex)
 		{
 			var key = new PubKey(Encoders.Hex.DecodeData(secondPublicKeyHex));
 
@@ -52,12 +52,12 @@ namespace ArkNet.Core
 		}
 
 
-		public static byte[] GetBytes(ArkTransaction t, bool skipSignature = true, bool skipSecondSignature = true)
+		public static byte[] GetBytes(TransactionApi t, bool skipSignature = true, bool skipSecondSignature = true)
 		{
 			return t.ToBytes(skipSignature, skipSecondSignature);
 		}
 
-		public static string GetId(ArkTransaction t)
+		public static string GetId(TransactionApi t)
 		{
 			return Encoders.Hex.EncodeData(Sha256.ComputeHash(GetBytes(t, false, false)));
 		}

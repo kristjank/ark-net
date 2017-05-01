@@ -6,13 +6,13 @@ using Newtonsoft.Json;
 
 namespace ArkNet.Core
 {
-	public sealed class ArkNetwork
+	public sealed class NetworkApi
 	{
 		private static readonly Random random = new Random();
 
-		private static volatile ArkNetwork instance;
+		private static volatile NetworkApi instance;
 		private static readonly object syncRoot = new object();
-		private readonly List<ArkPeer> peers = new List<ArkPeer>();
+		private readonly List<PeerApi> peers = new List<PeerApi>();
 
 		private readonly List<string> peerseed = new List<string>
 		{
@@ -94,24 +94,24 @@ namespace ArkNet.Core
 			"167.114.43.34:4001"
 		};
 
-		private ArkNetwork()
+		private NetworkApi()
 		{
-			peers = new List<ArkPeer>();
+			peers = new List<PeerApi>();
         }
 
-		private ArkNetwork(byte prefix, int port, string name)
+		private NetworkApi(byte prefix, int port, string name)
 		{
 			Prefix = prefix;
 			Port = port;
 			Name = name;
 
-			peers = new List<ArkPeer>();
+			peers = new List<PeerApi>();
 		}
 
 
 
 
-		public static ArkNetwork Mainnet
+		public static NetworkApi Mainnet
 		{
 			get
 			{
@@ -120,7 +120,7 @@ namespace ArkNet.Core
 					{
 						if (instance == null)
 						{
-							instance = new ArkNetwork();
+							instance = new NetworkApi();
 							instance.WarmUp();
 						}
 					}
@@ -132,7 +132,7 @@ namespace ArkNet.Core
 			}
 		}
 
-		public static ArkNetwork Testnet
+		public static NetworkApi Testnet
 		{
 			get
 			{
@@ -141,7 +141,7 @@ namespace ArkNet.Core
 					{
 						if (instance == null)
 						{
-							instance = new ArkNetwork(Properties.Settings.Default.TestNetBytePrefix,
+							instance = new NetworkApi(Properties.Settings.Default.TestNetBytePrefix,
 						                            Properties.Settings.Default.TestNetPort, 
                                                     Properties.Settings.Default.TestNetName);
 							instance.WarmUp();
@@ -161,7 +161,7 @@ namespace ArkNet.Core
 		public byte Prefix { get; set; } = Properties.Settings.Default.MainNetBytePrefix;
 		public string Version { get; set; } = Properties.Settings.Default.NetworkVersion;
 		public int BroadcastMax { get; set; } = Properties.Settings.Default.MaxNumOfBroadcasts;
-	    public ArkPeer ActivePeer { get; set; } 
+	    public PeerApi ActivePeer { get; set; } 
 
         public dynamic GetHeaders(bool retJson = false)
 		{
@@ -176,18 +176,18 @@ namespace ArkNet.Core
 		{
 			if (peers.Count > 0) return false;
 			foreach (var item in peerseed)
-				peers.Add(new ArkPeer(item));
+				peers.Add(new PeerApi(item));
 
 		    ActivePeer = GetRandomPeer();
 			return true;
 		}
 
-		public ArkPeer GetRandomPeer()
+		public PeerApi GetRandomPeer()
 		{
 			return peers[random.Next(peers.Count())];
 		}
 
-		public int MultipleBroadCast(ArkTransaction transaction)
+		public int MultipleBroadCast(TransactionApi transaction)
 		{
 			var res = 0;
 			for (var i = 0; i < BroadcastMax; i++)

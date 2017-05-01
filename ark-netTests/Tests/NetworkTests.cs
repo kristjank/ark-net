@@ -16,12 +16,12 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void PostTransactionNoBalanceTest()
 		{
-			var tx = ArkTransaction.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
+			var tx = TransactionApi.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
 				133380000000,
 				"This is first transaction from ARK-NET",
 				"this is a top secret passphrase");
 
-			var peer = ArkNetwork.Mainnet.GetRandomPeer();
+			var peer = NetworkApi.Mainnet.GetRandomPeer();
 
 
 			var result = peer.PostTransaction(tx);
@@ -33,7 +33,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void TransactionSerializeTest()
 		{
-			var tx = ArkTransaction.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
+			var tx = TransactionApi.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
 				1000,
 				"This is first transaction from ARK-NET 22",
 				"ski rose knock live elder parade dose device fetch betray loan holiday");
@@ -50,12 +50,12 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void PostTransactionTransferTest()
 		{
-			var tx = ArkTransaction.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
+			var tx = TransactionApi.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
 				1000,
 				"This is first transaction from ARK-NET 22",
 				"ski rose knock live elder parade dose device fetch betray loan holiday");
 
-			var peer = ArkNetwork.Mainnet.GetRandomPeer();
+			var peer = NetworkApi.Mainnet.GetRandomPeer();
 
 			var result = peer.PostTransaction(tx);
 			Assert.IsTrue(result.status);
@@ -64,12 +64,12 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void MultiplePostTransactionSuccessTest()
 		{
-			var tx = ArkTransaction.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
+			var tx = TransactionApi.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
 				1000,
 				"This is first Multi transaction from ARK-NET",
 				"ski rose knock live elder parade dose device fetch betray loan holiday");
 
-			var res = ArkNetwork.Mainnet.MultipleBroadCast(tx);
+			var res = NetworkApi.Mainnet.MultipleBroadCast(tx);
 			Assert.IsTrue(res > 0);
 		}
 	}
