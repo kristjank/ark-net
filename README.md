@@ -4,7 +4,7 @@
 Copyright 2017 **chris**, Copyright 2017 **ARK**
 
 ### Ark.NET
-Ark.NET is the ARK Ecosystem library for the .NET platform. It implements all most relevant ARK functionalities to help you  develop efficient .NET applications built upon ARK platform. It provides also low level access to ARK so you can easily build your application on top of it. 
+Ark.NET is the ARK Ecosystem library for the .NET platform. It implements all most relevant ARK functionalities to help you  **develop efficient .NET applications built upon ARK platform**. It provides also low level access to ARK so you can easily build your application on top of it. 
 
 The package supports:
 * With full features, Windows Desktop applications, Mono Desktop applications, and platform supported at [.NET Standard Library](https://docs.microsoft.com/en-us/dotnet/articles/standard/library). Should work will all .NET solutions with framework > 4.5.2.
