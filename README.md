@@ -10,7 +10,7 @@ The package supports:
 * With full features, Windows Desktop applications, Mono Desktop applications, and platform supported at [.NET Standard Library](https://docs.microsoft.com/en-us/dotnet/articles/standard/library). Should work will all .NET solutions with framework > 4.5.2.
 * It's a work in progress so mobile platform testing are still to follow. 
 
-[![Source Browser](https://img.shields.io/badge/Browse-Source-green.svg)](http://sourcebrowser.io/Browse/kristjank
+![Source Browser](https://img.shields.io/badge/Browse-Source-green.svg)(http://sourcebrowser.io/Browse/kristjank
 
 # How to install?
 
