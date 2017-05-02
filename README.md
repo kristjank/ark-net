@@ -16,7 +16,7 @@ The package supports:
 
 ### With nuget:
 >**Install-Package ark.net** 
-
+[![nuget](https://img.shields.io/badge/nuget-prerelease-yellow.svg)](https://www.nuget.org/packages/ark.net/)
 Go on the [nuget website](https://www.nuget.org/packages/ark.net/) for more information.
 
 ### From source:
@@ -32,13 +32,7 @@ All ark-node services have available reponses have their object representations 
 
 It's best to let the code do the speaking. For more examples look at the [ARK.NET Tests](https://github.com/kristjank/ark-net/blob/master/ark-netTests/io/ark/core/ModelTests.cs#L22), where all tests are written and you can see the api usage. Some code snippets are below.
 
-### Core Layer 
-Layer is used for core Ark blockchain communication (transaction, crypto...). It is wrapped by api libraries that are called from the service layer.
-```c#
-TransactionApi tx = TransactionApi.CreateTransaction(recepient, amount, description, passphrase);
-Peer peer = Network.Mainnet.GetRandomPeer();
-var result = peer.PostTransaction(tx);          
-```
+
 ### Service layer 
 For a full list of available api calls please look at the  [ARK.NET Test project](https://github.com/kristjank/ark-net/blob/master/ark-netTests/)
 ```c#
@@ -49,6 +43,14 @@ var peersOK = peers.Where(x => x.Status.Equals("OK"));
 //TransactionService
 var trans = TransactionService.GetAll();
 ...
+```
+
+### Core Layer 
+Layer is used for core Ark blockchain communication (transaction, crypto...). It is wrapped by api libraries that are called from the service layer.
+```c#
+TransactionApi tx = TransactionApi.CreateTransaction(recepient, amount, description, passphrase);
+Peer peer = Network.Mainnet.GetRandomPeer();
+var result = peer.PostTransaction(tx);          
 ```
 
 ## More information about ARK Ecosystem and etc
