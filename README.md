@@ -12,10 +12,13 @@ The package supports:
 
 [![Source Browser](https://img.shields.io/badge/Browse-Source-green.svg)](http://sourcebrowser.io/Browse/kristjank/ark-net)
 
-### Note
-**This is a work in progress**. Nevertheless - it is already functional and you can include it in your solutions for ARK Ecosystem.
-
 # How to install?
+
+### With nuget:
+>**Install-Package ark.net** 
+
+Go on the [nuget website](https://www.nuget.org/packages/ark.net/) for more information.
+
 ### From source:
 To compile it by yourself, you can git clone, open the project and hit the compile button on visual studio.
 In command prompt:
@@ -23,12 +26,6 @@ In command prompt:
 git clone https://github.com/kristjank/ark-net
 cd ark-net
 ```
-### With nuget:
->**Install-Package ark.net** 
-
-Go on the [nuget website](https://www.nuget.org/packages/ark.net/) for more information.
-
-
 # How to get started? 
 
 All ark-node services have available reponses have their object representations in the form of ValueObjects. You can user service classes under [service folder](https://github.com/kristjank/ark-net/tree/master/ark-net/service). Responses are IEnumerable or IQueryable (depends if the class and functionality).
