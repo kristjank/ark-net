@@ -53,7 +53,7 @@ var result = peer.PostTransaction(tx);
 ```
 
 ## More information about ARK Ecosystem and etc
-* [ARK Ecosystem Wiki](https://github.com/kristjank/wiki)
+* [ARK Ecosystem Wiki](https://github.com/ArkEcosystem/wiki)
 * **Ebook** [Programming The Blockchain in C#](https://www.gitbook.com/book/programmingblockchain/programmingblockchain/details)
 
 Please, use github issues for questions or feedback. For confidential requests or specific demands, contact us on our public channels.
