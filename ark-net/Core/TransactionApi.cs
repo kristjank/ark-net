@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using ArkNet.Utils;
 using NBitcoin.DataEncoders;
@@ -96,15 +98,19 @@ namespace ArkNet.Core
 			if (Type == 1)
 				buffer.Put(Encoders.Hex.DecodeData(Signature));
 			else if (Type == 2)
-				buffer.Put(Encoding.ASCII.GetBytes(asset["username"]));
+				buffer.Put(Encoding.ASCII.GetBytes(asset["username"]));                
 			else if (Type == 3)
-				buffer.Put(asset["votes"].join("").bytes);
-			// TODO: multisignature
-			// else if(type==4){
-			//   buffer.put BaseEncoding.base16().lowerCase().decode(asset.signature)
-			// }
+		    {
+	            var test = JsonConvert.SerializeObject(asset["votes"]);
+		        buffer.Put(Encoding.ASCII.GetBytes(test));
+		    }
 
-			if (!skipSignature && Signature.Length > 0)
+		    // TODO: multisignature
+            // else if(type==4){
+            //   buffer.put BaseEncoding.base16().lowerCase().decode(asset.signature)
+            // }
+
+            if (!skipSignature && Signature.Length > 0)
 				buffer.Put(Encoders.Hex.DecodeData(Signature));
 			if (!skipSecondSignature && SignSignature != null)
 				buffer.Put(Encoders.Hex.DecodeData(SignSignature));
@@ -176,7 +182,6 @@ namespace ArkNet.Core
 		{
 			var tx = new TransactionApi(0, recipientId, satoshiAmount, 10000000, vendorField);
 			tx.Timestamp = Slot.GetTime();
-
 			tx.Sign(passphrase);
 			tx.StrBytes = Encoders.Hex.EncodeData(tx.ToBytes());
 			if (secondPassphrase != null)
@@ -186,9 +191,9 @@ namespace ArkNet.Core
 			return tx;
 		}
 
-		public static TransactionApi CreateVote(ArrayList votes, string passphrase, string secondPassphrase = null)
+		public static TransactionApi CreateVote(List<string> votes, string passphrase, string secondPassphrase = null)
 		{
-			var tx = new TransactionApi(3, 0, 100000000);
+            var tx = new TransactionApi(3, 0, 100000000);
 			tx.asset.Add("votes", votes);
 			tx.Timestamp = Slot.GetTime();
 			tx.Sign(passphrase);

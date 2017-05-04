@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using ArkNet.Core;
 using ArkNet.Model;
 using ArkNet.Service;
@@ -45,9 +47,13 @@ namespace ArkNet.Controller
             return NetworkApi.Mainnet.ActivePeer.PostTransaction(tx);           
         }
 
-        public bool VoteForDelegate()
+        public (bool status, string data, string error) VoteForDelegate(List<string> votes, string passPhrase, string secondPassPhrase)
         {
-            throw new NotImplementedException();
+            var tx = TransactionApi.CreateVote(votes, passPhrase, secondPassPhrase);
+            Console.WriteLine(tx.ToObject(true));
+
+            return NetworkApi.Mainnet.ActivePeer.PostTransaction(tx);
+            
         }
 
         public (bool status, string data, string error)  RegisterAsDelegate(string username, string passPhrase, string secondPassPhrase = null)

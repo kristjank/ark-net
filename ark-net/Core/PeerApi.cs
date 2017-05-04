@@ -216,7 +216,7 @@ namespace ArkNet.Core
 			var response = MakeRequest("GET", "/api/delegates/get?address=" + address);
 			var parsed = JObject.Parse(response);
 
-			var dele = new Model.ArkDelegate();
+			var dele = new ArkDelegate();
 			if (!Convert.ToBoolean(parsed["success"]))
 				dele.Username = parsed["error"].ToString();
 			else

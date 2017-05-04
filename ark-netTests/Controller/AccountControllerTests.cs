@@ -1,11 +1,14 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ArkNet.Controller;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ArkNet.Model;
+using ArkNet.Service;
+using Newtonsoft.Json;
 
 namespace ArkNet.Controller.Tests
 {
@@ -53,6 +56,18 @@ namespace ArkNet.Controller.Tests
         [TestMethod()]
         public void VoteForDelegateTest()
         {
+            var dele = DelegateService.GetByUsername("arkpool");
+
+            List<string> votes = new List<string>();
+            votes.Add("+" + dele.PublicKey);
+            //string a1 = string.Join(",",votes);
+            var a2 = JsonConvert.SerializeObject(votes);
+            //var a3 = JsonConvert.SerializeObject(a2);
+
+            var accCtnrl = new AccountController();
+            var result = accCtnrl.VoteForDelegate( votes, "ski rose knock live elder parade dose device fetch betray loan holiday", null);
+
+
             Assert.Fail();
         }
 
