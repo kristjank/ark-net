@@ -1,6 +1,6 @@
 ﻿namespace ArkNet.Model
 {
-    public class Account
+    public class ArkAccount
     {
         public string Address { get; set; }
         public string AnconfirmedBalance { get; set; }

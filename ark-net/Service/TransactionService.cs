@@ -6,9 +6,9 @@ namespace ArkNet.Service
 {
     public static class TransactionService
     {
-        public static IEnumerable<Transaction> GetAll() => NetworkApi.Mainnet.ActivePeer.GetTransactions();
-        public static IEnumerable<Transaction> GetUnconfirmedAll() => NetworkApi.Mainnet.ActivePeer.GetTransactions(true);
-        public static Transaction GetById(string id) => NetworkApi.Mainnet.ActivePeer.GetTransaction(id, false);
-        public static Transaction GetUnConfirmedById(string id) => NetworkApi.Mainnet.ActivePeer.GetTransaction(id, true);
+        public static IEnumerable<ArkTransaction> GetAll() => NetworkApi.Mainnet.ActivePeer.GetTransactions();
+        public static IEnumerable<ArkTransaction> GetUnconfirmedAll() => NetworkApi.Mainnet.ActivePeer.GetTransactions(true);
+        public static ArkTransaction GetById(string id) => NetworkApi.Mainnet.ActivePeer.GetTransaction(id, false);
+        public static ArkTransaction GetUnConfirmedById(string id) => NetworkApi.Mainnet.ActivePeer.GetTransaction(id, true);
     }
 }

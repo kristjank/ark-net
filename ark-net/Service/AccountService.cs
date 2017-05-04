@@ -5,6 +5,6 @@ namespace ArkNet.Service
 {
     public class AccountService
     {
-        public static Account GetByAddress(string address) => NetworkApi.Mainnet.ActivePeer.GetAccountbyAddress(address);
+        public static ArkAccount GetByAddress(string address) => NetworkApi.Mainnet.ActivePeer.GetAccountbyAddress(address);
     }
 }

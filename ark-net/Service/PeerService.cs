@@ -6,6 +6,6 @@ namespace ArkNet.Service
 {
     public static class PeerService
     {
-        public static IEnumerable<Peer> GetAll() => NetworkApi.Mainnet.ActivePeer.GetPeers();
+        public static IEnumerable<ArkPeer> GetAll() => NetworkApi.Mainnet.ActivePeer.GetPeers();
     }
 }

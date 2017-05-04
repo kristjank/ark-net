@@ -2,7 +2,7 @@
 
 namespace ArkNet.Model
 {
-    public class Transaction
+    public class ArkTransaction
     {
         public string Id { get; set; }
         public int Type { get; set; }

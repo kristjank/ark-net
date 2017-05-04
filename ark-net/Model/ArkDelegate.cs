@@ -1,6 +1,6 @@
 ﻿namespace ArkNet.Model
 {
-    public class Delegate
+    public class ArkDelegate
     {
         public string Username { get; set; }
         public string Address { get; set; }

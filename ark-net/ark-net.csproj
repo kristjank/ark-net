@@ -99,12 +99,12 @@
     <Compile Include="Core\PeerApi.cs" />
     <Compile Include="Core\Slot.cs" />
     <Compile Include="Core\Verification.cs" />
-    <Compile Include="Model\Account.cs" />
-    <Compile Include="Model\Delegate.cs" />
+    <Compile Include="Model\ArkAccount.cs" />
+    <Compile Include="Model\ArkDelegate.cs" />
     <Compile Include="Model\DelegateVoters.cs" />
     <Compile Include="Model\PeerStatus.cs" />
-    <Compile Include="Model\Peer.cs" />
-    <Compile Include="Model\Transaction.cs" />
+    <Compile Include="Model\ArkPeer.cs" />
+    <Compile Include="Model\ArkTransaction.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>

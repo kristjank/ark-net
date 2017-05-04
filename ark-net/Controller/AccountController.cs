@@ -1,15 +1,17 @@
 ﻿using System;
+using ArkNet.Core;
 using ArkNet.Model;
+using ArkNet.Service;
 
 namespace ArkNet.Controller
 {
     public class AccountController
     {
-        private Account _account;
+        private ArkAccount _account;
 
-        public AccountController(Account arkaccount)
+        public AccountController()
         {
-            this._account = arkaccount;
+            _account = new ArkAccount();
         }
 
         public bool AskRemoteSignature()
@@ -22,16 +24,25 @@ namespace ArkNet.Controller
             throw new NotImplementedException();
         }
 
-        public bool OpenAccount(string passphrase)
+        public ArkAccount OpenAccount(string passphrase)
         {
+            if (_account?.Address != null) return _account;
 
+            _account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(passphrase)));
+            _account.PublicKey = Crypto.GetKeys(passphrase).PubKey.ToString();
 
-            throw new NotImplementedException();
+            return _account;
         }
 
-        public bool SendArk()
+        public (bool status, string data, string error) SendArk(long satosshiAmount, string recepientAddres, string vendorFiend, string passPhrase, string secondPassPhrase=null)
         {
-            throw new NotImplementedException();
+            var tx = TransactionApi.CreateTransaction(recepientAddres,
+                satosshiAmount,
+                vendorFiend,
+                passPhrase,
+                secondPassPhrase);
+          
+            return NetworkApi.Mainnet.ActivePeer.PostTransaction(tx);           
         }
 
         public bool VoteForDelegate()
@@ -39,9 +50,12 @@ namespace ArkNet.Controller
             throw new NotImplementedException();
         }
 
-        public bool RegisterAsDelegate()
+        public (bool status, string data, string error)  RegisterAsDelegate(string username, string passPhrase, string secondPassPhrase = null)
         {
-            throw new NotImplementedException();
+            var accCtnrl = new AccountController();
+            var tx = TransactionApi.CreateDelegate(username, passPhrase, secondPassPhrase);
+
+            return NetworkApi.Mainnet.ActivePeer.PostTransaction(tx);
         }
 
         public bool RemoteSign()

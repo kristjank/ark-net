@@ -2,7 +2,7 @@
 
 namespace ArkNet.Model
 {
-    public class Peer
+    public class ArkPeer
     {
         public string Ip { get; set; }
         public int Port { get; set; }
