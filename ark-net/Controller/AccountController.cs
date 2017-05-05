@@ -47,10 +47,10 @@ namespace ArkNet.Controller
             return NetworkApi.Mainnet.ActivePeer.PostTransaction(tx);           
         }
 
-        public (bool status, string data, string error) VoteForDelegate(List<string> votes, string passPhrase, string secondPassPhrase)
+        public (bool status, string data, string error) VoteForDelegate(List<string> votes, string passPhrase, string secondPassPhrase=null)
         {
             var tx = TransactionApi.CreateVote(votes, passPhrase, secondPassPhrase);
-            Console.WriteLine(tx.ToObject(true));
+            //Console.WriteLine(tx.ToObject(true));
 
             return NetworkApi.Mainnet.ActivePeer.PostTransaction(tx);
             

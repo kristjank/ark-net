@@ -57,9 +57,8 @@ namespace ArkNet.Core
 
 		public string Username { get; set; }
 
-		public ArrayList Votes { get; set; }
-
-		public string StrBytes { get; set; }
+        [JsonIgnore]
+        public string StrBytes { get; set; }
 
 		public byte[] ToBytes(bool skipSignature = true, bool skipSecondSignature = true)
 		{
@@ -196,8 +195,10 @@ namespace ArkNet.Core
             var tx = new TransactionApi(3, 0, 100000000);
 			tx.asset.Add("votes", votes);
 			tx.Timestamp = Slot.GetTime();
+		    tx.RecipientId = Crypto.GetAddress(Crypto.GetKeys(passphrase));
 			tx.Sign(passphrase);
-			if (secondPassphrase != null)
+		    tx.StrBytes = Encoders.Hex.EncodeData(tx.ToBytes());
+            if (secondPassphrase != null)
 				tx.SecondSign(secondPassphrase);
 
 			tx.Id = Crypto.GetId(tx);

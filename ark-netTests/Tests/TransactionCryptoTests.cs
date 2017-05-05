@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using ArkNet.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NBitcoin;
 using NBitcoin.DataEncoders;
 
 namespace ArkNetTest.Tests
@@ -144,5 +146,16 @@ namespace ArkNetTest.Tests
 			Assert.IsTrue(Crypto.Verify(tx));
 			Assert.AreEqual(json, tx.ToJson());
 		}
-	}
+
+	    [TestMethod]
+	    public void CreateVoteSignTest()
+	    {
+	        List<string> votes = new List<string> { "+034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192" };
+	        var tx = TransactionApi.CreateVote(votes, "ski rose knock live elder parade dose device fetch betray loan holiday");
+
+	        var json = tx.ToObject(true);
+            Assert.IsTrue(Crypto.Verify(tx));
+	        Assert.AreEqual(json, tx.ToObject(true));
+	    }
+    }
 }

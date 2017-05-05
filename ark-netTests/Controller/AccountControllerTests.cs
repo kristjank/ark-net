@@ -60,12 +60,11 @@ namespace ArkNet.Controller.Tests
 
             List<string> votes = new List<string>();
             votes.Add("+" + dele.PublicKey);
-            //string a1 = string.Join(",",votes);
+
             var a2 = JsonConvert.SerializeObject(votes);
-            //var a3 = JsonConvert.SerializeObject(a2);
 
             var accCtnrl = new AccountController();
-            var result = accCtnrl.VoteForDelegate( votes, "ski rose knock live elder parade dose device fetch betray loan holiday", null);
+            var result = accCtnrl.VoteForDelegate( votes, "ski rose knock live elder parade dose device fetch betray loan holiday");
 
 
             Assert.Fail();
