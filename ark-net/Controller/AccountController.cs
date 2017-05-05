@@ -10,9 +10,15 @@ namespace ArkNet.Controller
     {
         private ArkAccount _account;
 
-        public AccountController()
+        public AccountController(string passphrase)
         {
-            _account = new ArkAccount();
+            _account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(passphrase)));
+            _account.PublicKey = Crypto.GetKeys(passphrase).PubKey.ToString();
+        }
+
+        public ArkAccount GetArkAccount()
+        {
+            return _account;
         }
 
         public bool AskRemoteSignature()
@@ -23,16 +29,6 @@ namespace ArkNet.Controller
         public void SendMultisignArk()
         {
             throw new NotImplementedException();
-        }
-
-        public ArkAccount OpenAccount(string passphrase)
-        {
-            if (_account?.Address != null) return _account;
-
-            _account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(passphrase)));
-            _account.PublicKey = Crypto.GetKeys(passphrase).PubKey.ToString();
-
-            return _account;
         }
 
         public (bool status, string data, string error) SendArk(long satosshiAmount, string recepientAddres,

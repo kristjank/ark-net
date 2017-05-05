@@ -34,19 +34,19 @@ namespace ArkNet.Controller.Tests
         }
 
         [TestMethod()]
-        public void OpenAccountTest()
+        public void CreateAccountTest()
         {
-            var accCtnrl = new AccountController();
-            accCtnrl.OpenAccount("this is a top secret passphrase");
+            var accCtnrl = new AccountController("this is a top secret passphrase");
+            
 
-            Assert.AreEqual(accCtnrl.OpenAccount("this is a top secret passphrase").Address, "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC");
-            Assert.AreEqual(accCtnrl.OpenAccount("this is a top secret passphrase").PublicKey, "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192");
+            Assert.AreEqual(accCtnrl.GetArkAccount().Address, "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC");
+            Assert.AreEqual(accCtnrl.GetArkAccount().PublicKey, "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192");
         }
 
         [TestMethod()]
         public void SendArkTest()
         {
-            var accCtnrl = new AccountController();
+            var accCtnrl = new AccountController("ski rose knock live elder parade dose device fetch betray loan holiday");
             var result = accCtnrl.SendArk(1234, "ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K", "Akr.Net test trans from Account",
                 "ski rose knock live elder parade dose device fetch betray loan holiday");
            
@@ -59,11 +59,11 @@ namespace ArkNet.Controller.Tests
             var dele = DelegateService.GetByUsername("arkpool");
 
             List<string> votes = new List<string>();
-            votes.Add("+" + dele.PublicKey);
+            votes.Add("-" + dele.PublicKey);
 
             var a2 = JsonConvert.SerializeObject(votes);
 
-            var accCtnrl = new AccountController();
+            var accCtnrl = new AccountController("ski rose knock live elder parade dose device fetch betray loan holiday");
             var result = accCtnrl.VoteForDelegate( votes, "ski rose knock live elder parade dose device fetch betray loan holiday");
 
 
