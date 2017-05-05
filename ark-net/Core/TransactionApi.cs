@@ -100,8 +100,7 @@ namespace ArkNet.Core
 				buffer.Put(Encoding.ASCII.GetBytes(asset["username"]));                
 			else if (Type == 3)
 		    {
-	            var test = JsonConvert.SerializeObject(asset["votes"]);
-		        buffer.Put(Encoding.ASCII.GetBytes(test));
+		        buffer.Put(Encoding.ASCII.GetBytes(string.Join(string.Empty,asset["votes"])));
 		    }
 
 		    // TODO: multisignature

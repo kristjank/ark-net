@@ -29,11 +29,8 @@ namespace ArkNet.Service.Tests
         [TestMethod()]
         public void GetByPubKeyTest()
         {
-            var dele = DelegateService.GetByAddress("ARAq9nhjCxwpWnGKDgxveAJSijNG8Y6dFQ");
-            Assert.AreEqual("arkpool",dele.Username);
-
-            var dele2 = DelegateService.GetByPubKey(dele.PublicKey);
-            Assert.AreEqual(dele2.Username,dele.Username);
+            var dele2 = DelegateService.GetByPubKey("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
+            Assert.AreEqual(dele2.Username,"cryptolanka123");
 
         }
 

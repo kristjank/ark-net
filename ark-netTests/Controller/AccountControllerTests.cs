@@ -67,7 +67,7 @@ namespace ArkNet.Controller.Tests
             var result = accCtnrl.VoteForDelegate( votes, "ski rose knock live elder parade dose device fetch betray loan holiday");
 
 
-            Assert.Fail();
+            Assert.IsTrue(result.status);
         }
 
         [TestMethod()]

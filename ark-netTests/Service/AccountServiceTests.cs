@@ -18,5 +18,13 @@ namespace ArkNet.Service.Tests
 
             Assert.IsNotNull(account);
         }
+
+        [TestMethod()]
+        public void GetBalanceTest()
+        {
+            var res = AccountService.GetBalance("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK");
+
+            Assert.IsTrue(res.status);
+        }
     }
 }

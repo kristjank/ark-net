@@ -73,7 +73,6 @@
     <Compile Include="Service\PeerServiceTests.cs" />
     <Compile Include="Service\TransactionServiceTests.cs" />
     <Compile Include="Tests\NetworkTests.cs" />
-    <Compile Include="Tests\ModelTests.cs" />
     <Compile Include="Tests\TransactionCryptoTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

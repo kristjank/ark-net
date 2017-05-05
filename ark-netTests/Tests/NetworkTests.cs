@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using ArkNet.Core;
+using ArkNet.Service;
 using ArkNet.Utils;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -21,10 +22,10 @@ namespace ArkNetTest.Tests
 				"This is first transaction from ARK-NET",
 				"this is a top secret passphrase");
 
-			var peer = NetworkApi.Mainnet.GetRandomPeer();
+			//var peer = NetworkApi.Mainnet.GetRandomPeer();
 
 
-			var result = peer.PostTransaction(tx);
+			var result = TransactionService.PostTransaction(tx);
 
 			Assert.AreEqual(result.error, "Account does not have enough ARK: AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC balance: 0");
 		}
@@ -55,9 +56,7 @@ namespace ArkNetTest.Tests
 				"This is first transaction from ARK-NET 22",
 				"ski rose knock live elder parade dose device fetch betray loan holiday");
 
-			var peer = NetworkApi.Mainnet.GetRandomPeer();
-
-			var result = peer.PostTransaction(tx);
+			var result = TransactionService.PostTransaction(tx);
 			Assert.IsTrue(result.status);
 		}
 
@@ -69,7 +68,7 @@ namespace ArkNetTest.Tests
 				"This is first Multi transaction from ARK-NET",
 				"ski rose knock live elder parade dose device fetch betray loan holiday");
 
-			var res = NetworkApi.Mainnet.MultipleBroadCast(tx);
+			var res = TransactionService.MultipleBroadCast(tx);
 			Assert.IsTrue(res > 0);
 		}
 	}

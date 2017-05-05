@@ -187,17 +187,6 @@ namespace ArkNet.Core
 			return peers[random.Next(peers.Count())];
 		}
 
-		public int MultipleBroadCast(TransactionApi transaction)
-		{
-			var res = 0;
-			for (var i = 0; i < BroadcastMax; i++)
-			{
-				var response = GetRandomPeer().PostTransaction(transaction);
-
-				if (response.Item1)
-					res++;
-			}
-			return res;
-		}
+	
 	}
 }

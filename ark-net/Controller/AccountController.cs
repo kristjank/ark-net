@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using ArkNet.Core;
 using ArkNet.Model;
@@ -36,32 +35,41 @@ namespace ArkNet.Controller
             return _account;
         }
 
-        public (bool status, string data, string error) SendArk(long satosshiAmount, string recepientAddres, string vendorFiend, string passPhrase, string secondPassPhrase=null)
+        public (bool status, string data, string error) SendArk(long satosshiAmount, string recepientAddres,
+            string vendorFiend, string passPhrase, string secondPassPhrase = null)
         {
             var tx = TransactionApi.CreateTransaction(recepientAddres,
                 satosshiAmount,
                 vendorFiend,
                 passPhrase,
                 secondPassPhrase);
-          
-            return NetworkApi.Mainnet.ActivePeer.PostTransaction(tx);           
+
+            return TransactionService.PostTransaction(tx);
         }
 
-        public (bool status, string data, string error) VoteForDelegate(List<string> votes, string passPhrase, string secondPassPhrase=null)
+        public (bool status, string data, string error) VoteForDelegate(List<string> votes, string passPhrase,
+            string secondPassPhrase = null)
         {
             var tx = TransactionApi.CreateVote(votes, passPhrase, secondPassPhrase);
-            //Console.WriteLine(tx.ToObject(true));
-
-            return NetworkApi.Mainnet.ActivePeer.PostTransaction(tx);
-            
+            return TransactionService.PostTransaction(tx);
         }
 
-        public (bool status, string data, string error)  RegisterAsDelegate(string username, string passPhrase, string secondPassPhrase = null)
+        public (bool status, string data, string error) RegisterAsDelegate(string username, string passPhrase,
+            string secondPassPhrase = null)
         {
-            var accCtnrl = new AccountController();
             var tx = TransactionApi.CreateDelegate(username, passPhrase, secondPassPhrase);
 
-            return NetworkApi.Mainnet.ActivePeer.PostTransaction(tx);
+            return TransactionService.PostTransaction(tx);
+        }
+
+        public bool UpdateBalance()
+        {
+            var res = AccountService.GetBalance(_account.Address);
+
+            _account.Balance = res.balance;
+            _account.UnconfirmedBalance = res.unconfirmedBalance;
+
+            return res.status;
         }
 
         public bool RemoteSign()

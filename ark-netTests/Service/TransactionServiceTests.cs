@@ -31,11 +31,14 @@ namespace ArkNet.Service.Tests
         [TestMethod()]
         public void GetUnConfirmedByIdTest()
         {
-            var trans = TransactionService.GetUnconfirmedAll().FirstOrDefault();
+            var trans = TransactionService.GetUnconfirmedAll();
             Assert.IsNotNull(trans);
 
-            var trans1 = TransactionService.GetUnConfirmedById(trans.Id);
-            Assert.IsNotNull(trans1);
+            if (trans.Any())
+            {
+                var trans1 = TransactionService.GetUnConfirmedById(trans.FirstOrDefault().Id);
+                Assert.IsNotNull(trans1);
+            }
         }
 
         [TestMethod()]
