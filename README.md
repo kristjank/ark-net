@@ -32,6 +32,24 @@ All ark-node services have available reponses have their object representations 
 It's best to let the code do the speaking. For more examples look at the [ARK.NET Tests](https://github.com/kristjank/ark-net/blob/master/ark-netTests/io/ark/core/ModelTests.cs#L22), where all tests are written and you can see the api usage. Some code snippets are below.
 
 
+### Ark.Net Client init
+First call should be network selection, so all settings can initialize before goint into action.
+
+```c#
+  ArkNetApi.Instance.Start(NetworkType.MainNet); //Other types are TestNet and DevNet
+```
+For **additional settings** please see [settings file](https://github.com/kristjank/ark-net/blob/master/ark-net/default.conf#L9). To **modify** settings, just add settings.conf file to root folder. File can only include changed settings (not all).
+
+### Account/Wallet layer
+```c#
+var accCtnrl = new AccountController("top secret pass");
+//Send ARK
+var result = accCtnrl.SendArk(100, "AUgTuukcKeE4XFdzaK6rEHMD5FLmVBSmHk", "Akr.Net test trans from Account",
+                "pass phrase");
+//Vote 4 Delegate                
+var result = accCtnrl.VoteForDelegate( votes, "top secret pass");
+```
+
 ### Service layer 
 For a full list of available api calls please look at the  [ARK.NET Test project](https://github.com/kristjank/ark-net/blob/master/ark-netTests/)
 ```c#
@@ -43,9 +61,8 @@ var peersOK = peers.Where(x => x.Status.Equals("OK"));
 var trans = TransactionService.GetAll();
 ...
 ```
-
 ### Core Layer 
-Layer is used for core Ark blockchain communication (transaction, crypto...). It is wrapped by api libraries that are called from the service layer.
+Layer is used for core Ark blockchain communication (transaction, crypto...). It is wrapped by api libraries that are called from the service and Account layer.
 ```c#
 TransactionApi tx = TransactionApi.CreateTransaction(recepient, amount, description, passphrase);
 Peer peer = Network.Mainnet.GetRandomPeer();
