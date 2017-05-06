@@ -33,7 +33,7 @@ It's best to let the code do the speaking. For more examples look at the [ARK.NE
 
 
 ### Ark.Net Client init
-First call should be network selection, so all settings can initialize before goint into action.
+**First call should be network selection, so all settings can initialize before going into action.**
 
 ```c#
   ArkNetApi.Instance.Start(NetworkType.MainNet); //Other types are TestNet and DevNet
