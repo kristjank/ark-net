@@ -10,7 +10,7 @@ namespace ArkNet.Service
     {
         public static ArkAccount GetByAddress(string address)
         {
-            var response = NetworkApi.Mainnet.ActivePeer.MakeRequest("GET", "/api/accounts/?address=" + address);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/accounts/?address=" + address);
             var parsed = JObject.Parse(response);
 
             var account = new ArkAccount();
@@ -24,7 +24,7 @@ namespace ArkNet.Service
         public static (bool status, string balance, string unconfirmedBalance, string error) GetBalance(string address)
         {
             var response =
-                NetworkApi.Mainnet.ActivePeer.MakeRequest("GET", "/api/accounts/getBalance/?address=" + address);
+                NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/accounts/getBalance/?address=" + address);
             var parsed = JObject.Parse(response);
 
             return (Convert.ToBoolean(parsed["success"]),

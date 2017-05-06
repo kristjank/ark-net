@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ArkNet.Model;
 using ArkNet.Service;
+using ArkNet.Utils.Enum;
 using Newtonsoft.Json;
 
 namespace ArkNet.Controller.Tests
@@ -15,6 +16,12 @@ namespace ArkNet.Controller.Tests
     [TestClass()]
     public class AccountControllerTests
     {
+        [TestInitialize]
+        public void Init()
+        {
+            ArkNetApi.Instance.Start(NetworkType.MainNet);
+        }
+
         [TestMethod()]
         public void AccountControllerTest()
         {
@@ -59,7 +66,7 @@ namespace ArkNet.Controller.Tests
             var dele = DelegateService.GetByUsername("arkpool");
 
             List<string> votes = new List<string>();
-            votes.Add("-" + dele.PublicKey);
+            votes.Add("+" + dele.PublicKey);
 
             var a2 = JsonConvert.SerializeObject(votes);
 

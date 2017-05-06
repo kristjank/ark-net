@@ -178,7 +178,7 @@ namespace ArkNet.Core
 		public static TransactionApi CreateTransaction(string recipientId, long satoshiAmount, string vendorField,
 			string passphrase, string secondPassphrase = null)
 		{
-			var tx = new TransactionApi(0, recipientId, satoshiAmount, 10000000, vendorField);
+			var tx = new TransactionApi(0, recipientId, satoshiAmount, ArkNetApi.Instance.NetworkSettings.Fee.Send, vendorField);
 			tx.Timestamp = Slot.GetTime();
 			tx.Sign(passphrase);
 			tx.StrBytes = Encoders.Hex.EncodeData(tx.ToBytes());
@@ -191,10 +191,10 @@ namespace ArkNet.Core
 
 		public static TransactionApi CreateVote(List<string> votes, string passphrase, string secondPassphrase = null)
 		{
-            var tx = new TransactionApi(3, 0, 100000000);
+            var tx = new TransactionApi(3, 0, ArkNetApi.Instance.NetworkSettings.Fee.Vote);
 			tx.asset.Add("votes", votes);
 			tx.Timestamp = Slot.GetTime();
-		    tx.RecipientId = Crypto.GetAddress(Crypto.GetKeys(passphrase));
+		    tx.RecipientId = Crypto.GetAddress(Crypto.GetKeys(passphrase), ArkNetApi.Instance.NetworkSettings.BytePrefix);
 			tx.Sign(passphrase);
 		    tx.StrBytes = Encoders.Hex.EncodeData(tx.ToBytes());
             if (secondPassphrase != null)
@@ -207,7 +207,7 @@ namespace ArkNet.Core
 
 		public static TransactionApi CreateDelegate(string username, string passphrase, string secondPassphrase = null)
 		{
-			var tx = new TransactionApi(2, 0, 2500000000);
+			var tx = new TransactionApi(2, 0, ArkNetApi.Instance.NetworkSettings.Fee.Delegate);
 			tx.asset.Add("username", username);
 			tx.Timestamp = Slot.GetTime();
 			tx.Sign(passphrase);
@@ -220,10 +220,13 @@ namespace ArkNet.Core
 
 		public static TransactionApi createSecondSignature(string secondPassphrase, string passphrase)
 		{
-			var tx = new TransactionApi(1, 0, 500000000);
-			tx.Signature = Encoders.Hex.EncodeData(Crypto.GetKeys(secondPassphrase).PubKey.ToBytes());
-			tx.Timestamp = Slot.GetTime();
-			tx.Sign(passphrase);
+		    var tx = new TransactionApi(1, 0, ArkNetApi.Instance.NetworkSettings.Fee.SecondSignature)
+		    {
+		        Signature = Encoders.Hex.EncodeData(Crypto.GetKeys(secondPassphrase).PubKey.ToBytes()),
+		        Timestamp = Slot.GetTime()
+		    };
+
+		    tx.Sign(passphrase);
 			tx.Id = Crypto.GetId(tx);
 			return tx;
 		}

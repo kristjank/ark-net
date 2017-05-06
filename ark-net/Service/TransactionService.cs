@@ -13,7 +13,7 @@ namespace ArkNet.Service
         {
             var path = "/api/transactions";
 
-            var response = NetworkApi.Mainnet.ActivePeer.MakeRequest("GET", path);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path);
             var parsed = JObject.Parse(response);
             var array = (JArray) parsed["transactions"];
 
@@ -25,7 +25,7 @@ namespace ArkNet.Service
         {
             var path = "/api/transactions/unconfirmed";
 
-            var response = NetworkApi.Mainnet.ActivePeer.MakeRequest("GET", path);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path);
             var parsed = JObject.Parse(response);
             var array = (JArray) parsed["transactions"];
 
@@ -37,7 +37,7 @@ namespace ArkNet.Service
         {
             var path = "/api/transactions";
 
-            var response = NetworkApi.Mainnet.ActivePeer.MakeRequest("GET", path + "/get?id=" + id);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path + "/get?id=" + id);
             var parsed = JObject.Parse(response);
 
             var trans = new ArkTransaction();
@@ -53,7 +53,7 @@ namespace ArkNet.Service
         {
             var path = "/api/transactions/unconfirmed";
 
-            var response = NetworkApi.Mainnet.ActivePeer.MakeRequest("GET", path + "/get?id=" + id);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path + "/get?id=" + id);
             var parsed = JObject.Parse(response);
 
             var trans = new ArkTransaction();
@@ -69,7 +69,7 @@ namespace ArkNet.Service
         {
             string body = "{transactions: [" + transaction.ToObject(true) + "]} ";
 
-            var response = NetworkApi.Mainnet.ActivePeer.MakeRequest("POST", "/peer/transactions", body);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("POST", "/peer/transactions", body);
 
             var parsed = JObject.Parse(response);
             var status = Convert.ToBoolean(parsed["success"]);
@@ -83,7 +83,7 @@ namespace ArkNet.Service
         public static int MultipleBroadCast(TransactionApi transaction)
         {
             var res = 0;
-            for (var i = 0; i < NetworkApi.Mainnet.BroadcastMax; i++)
+            for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
                 var response = PostTransaction(transaction);
 

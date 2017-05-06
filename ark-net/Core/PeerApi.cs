@@ -14,7 +14,6 @@ namespace ArkNet.Core
 
         private readonly HttpClient httpClient;
         public string ip;
-        private Dictionary<string, dynamic> networkHeaders = NetworkApi.Mainnet.GetHeaders();
         private int port;
         private string protocol = "http://";
 
@@ -35,9 +34,9 @@ namespace ArkNet.Core
             };
             httpClient.DefaultRequestHeaders.Accept.Clear();
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            httpClient.DefaultRequestHeaders.Add("nethash", NetworkApi.Mainnet.Nethash);
-            httpClient.DefaultRequestHeaders.Add("version", NetworkApi.Mainnet.Version);
-            httpClient.DefaultRequestHeaders.Add("port", NetworkApi.Mainnet.Port.ToString());
+            httpClient.DefaultRequestHeaders.Add("nethash", ArkNetApi.Instance.NetworkSettings.NetHash);
+            httpClient.DefaultRequestHeaders.Add("version", ArkNetApi.Instance.NetworkSettings.Version);
+            httpClient.DefaultRequestHeaders.Add("port", ArkNetApi.Instance.NetworkSettings.Port.ToString());
             OpenServicePoint(httpClient.BaseAddress);
         }
 
@@ -60,7 +59,6 @@ namespace ArkNet.Core
             this.protocol = protocol;
         }
 
-        // return Future that will deliver the JSON as a Map
         public string MakeRequest(string method, string path, string body = "")
         {
             HttpResponseMessage response;

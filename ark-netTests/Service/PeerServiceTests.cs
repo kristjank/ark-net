@@ -5,12 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ArkNet.Utils.Enum;
 
 namespace ArkNet.Service.Tests
 {
     [TestClass()]
     public class PeerServiceTests
     {
+        [TestInitialize]
+        public void Init()
+        {
+            ArkNetApi.Instance.Start(NetworkType.MainNet);
+        }
         [TestMethod()]
         public void GetAllTest()
         {

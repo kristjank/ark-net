@@ -11,7 +11,7 @@ namespace ArkNet.Service
     {
         public static IEnumerable<ArkDelegate> GetAll()
         {
-            var response = NetworkApi.Mainnet.ActivePeer.MakeRequest("GET", "/api/delegates");
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates");
             var parsed = JObject.Parse(response);
             var array = (JArray) parsed["delegates"];
 
@@ -21,7 +21,7 @@ namespace ArkNet.Service
 
         public static ArkDelegate GetByUsername(string username)
         {
-            var response = NetworkApi.Mainnet.ActivePeer.MakeRequest("GET", "/api/delegates/get?username=" + username);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates/get?username=" + username);
             var parsed = JObject.Parse(response);
 
             var dele = new ArkDelegate();
@@ -34,7 +34,7 @@ namespace ArkNet.Service
 
         public static ArkDelegate GetByPubKey(string pubKey)
         {
-            var response = NetworkApi.Mainnet.ActivePeer.MakeRequest("GET", "/api/delegates/get?publicKey=" + pubKey);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates/get?publicKey=" + pubKey);
             var parsed = JObject.Parse(response);
 
             var dele = new ArkDelegate();
@@ -47,7 +47,7 @@ namespace ArkNet.Service
 
         public static ArkDelegate GetByAddress(string address)
         {
-            var response = NetworkApi.Mainnet.ActivePeer.MakeRequest("GET", "/api/delegates/get?address=" + address);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates/get?address=" + address);
             var parsed = JObject.Parse(response);
 
             var dele = new ArkDelegate();
@@ -61,7 +61,7 @@ namespace ArkNet.Service
         public static IEnumerable<DelegateVoters> GetVoters(string pubKey)
         {
             var response =
-                NetworkApi.Mainnet.ActivePeer.MakeRequest("GET", "/api/delegates/voters?publicKey=" + pubKey);
+                NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates/voters?publicKey=" + pubKey);
             var parsed = JObject.Parse(response);
             var array = (JArray) parsed["accounts"];
 

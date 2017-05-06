@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using ArkNet.Utils;
+using ArkNet.Utils.Enum;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ArkNet.Tests
 {
@@ -8,9 +10,9 @@ namespace ArkNet.Tests
         [TestMethod()]
         public void StartTest()
         {
-             ArkNetApi.Start("33");
+            ArkNetApi.Instance.Start(NetworkType.MainNet);
 
-            Assert.Fail();
+            Assert.IsNotNull(ArkNetApi.Instance.NetworkSettings);
         }
     }
 }

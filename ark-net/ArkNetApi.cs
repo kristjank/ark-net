@@ -3,26 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ArkNet.Utils;
+using ArkNet.Utils.Enum;
 using JsonConfig;
 using NBitcoin.DataEncoders;
 
 namespace ArkNet
 {
-    public static class ArkNetApi
+    public sealed class ArkNetApi
     {
-        public static void Start(string stinsad)
-        {
-            //Let's do some init here...
-            var  storeOwner = Config.Default.ArkPeer.ConnectionLimit;
-            var fee = Config.Default.TestNet.Fees.MultiSignature;
-            byte a = Convert.ToByte(Config.Default.TestNet.BytePrefix);
-            /*foreach (var fruit in Config.Default.Fruits)
-                Console.WriteLine(fruit);
+        private static readonly Lazy<ArkNetApi> lazy =
+            new Lazy<ArkNetApi>(() => new ArkNetApi());
 
-            var hahss = Config.Default.Mainnet.NetHash;
-            //byte ver = Encoders.Hex.EncodeData()ecodeData()ncodeData(Config.Default.Mainnet.Byte);
-            byte a = Convert.ToByte(23);
-            */
+        public static ArkNetApi Instance => lazy.Value;
+
+        public ArkNetworkSettings NetworkSettings;
+
+        private ArkNetApi()
+        {
+            
+        }
+
+        public void Start(NetworkType type)
+        {
+            switch (type)
+            {
+                case NetworkType.MainNet:
+                    NetworkSettings = new ArkNetworkSettings(Config.Default.MainNet);
+                    break;
+                case NetworkType.TestNet:
+                    NetworkSettings = new ArkNetworkSettings(Config.Default.TestNet);
+                    break;
+                case NetworkType.DevNet:
+                    NetworkSettings = new ArkNetworkSettings(Config.Default.DevNet);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(type), type, null);
+            }
         }
     }
 }

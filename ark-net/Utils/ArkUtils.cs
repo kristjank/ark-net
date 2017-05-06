@@ -6,6 +6,7 @@ namespace ArkNet.Utils
 {
     public static class ArkUtils
     {
+
         public static string SerializeObject2Xml<T>(this T toSerialize)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(toSerialize.GetType());

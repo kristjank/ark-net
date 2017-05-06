@@ -22,7 +22,7 @@ namespace ArkNetTest.Tests
 				"This is first transaction from ARK-NET",
 				"this is a top secret passphrase");
 
-			//var peer = NetworkApi.Mainnet.GetRandomPeer();
+			//var peer = NetworkApi.Instance.GetRandomPeer();
 
 
 			var result = TransactionService.PostTransaction(tx);

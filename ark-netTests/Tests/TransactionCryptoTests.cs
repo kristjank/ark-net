@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using ArkNet;
 using ArkNet.Core;
+using ArkNet.Utils.Enum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NBitcoin;
 using NBitcoin.DataEncoders;
@@ -10,7 +12,13 @@ namespace ArkNetTest.Tests
 	[TestClass]
 	public class TransactionCryptoTests
 	{
-		[TestMethod]
+	    [TestInitialize]
+	    public void Init()
+	    {
+	        ArkNetApi.Instance.Start(NetworkType.MainNet);
+	    }
+
+        [TestMethod]
 		public void GetKeysTest()
 		{
 			var key = Crypto.GetKeys("this is a top secret passphrase");

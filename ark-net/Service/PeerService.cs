@@ -10,7 +10,7 @@ namespace ArkNet.Service
     {
         public static IEnumerable<ArkPeer> GetAll()
         {
-            var response = NetworkApi.Mainnet.ActivePeer.MakeRequest("GET", "/peer/list");
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/peer/list");
             var parsed = JObject.Parse(response);
             var array = (JArray) parsed["peers"];
 
@@ -20,7 +20,7 @@ namespace ArkNet.Service
 
         public static PeerStatus GetPeerStatus()
         {
-            var response = NetworkApi.Mainnet.ActivePeer.MakeRequest("GET", "/peer/status");
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/peer/status");
             var parsed = JObject.Parse(response);
 
             var peerStat = JsonConvert.DeserializeObject<PeerStatus>(response);
