@@ -39,11 +39,17 @@
       <HintPath>packages\BouncyCastle.1.8.1\lib\BouncyCastle.Crypto.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
-      <HintPath>packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    <Reference Include="JsonConfig, Version=1.0.5359.16918, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\JsonConfig.1.0.0\lib\JsonConfig.dll</HintPath>
     </Reference>
-    <Reference Include="NBitcoin, Version=3.0.2.15, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\NBitcoin.3.0.2.15\lib\net45\NBitcoin.dll</HintPath>
+    <Reference Include="JsonFx, Version=2.0.1209.2802, Culture=neutral, PublicKeyToken=315052dd637f8a52, processorArchitecture=MSIL">
+      <HintPath>packages\JsonFx.2.0.1209.2802\lib\net40\JsonFx.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NBitcoin, Version=3.0.2.18, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\NBitcoin.3.0.2.18\lib\net45\NBitcoin.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -88,6 +94,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArkNetApi.cs" />
     <Compile Include="Controller\WalletController.cs" />
     <Compile Include="Service\AccountService.cs" />
     <Compile Include="Service\DelegateService.cs" />
@@ -110,6 +117,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Utils\ArkSettings.cs" />
     <Compile Include="Utils\ArkUtils.cs" />
     <Compile Include="Utils\Base58.cs" />
     <Compile Include="Utils\BCUtils.cs" />
@@ -127,6 +135,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <EmbeddedResource Include="default.conf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

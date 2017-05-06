@@ -159,7 +159,7 @@ namespace ArkNet.Core
 		public string Name { get; set; } = Properties.Settings.Default.MainNetName;
 		public int Port { get; set; } = Properties.Settings.Default.MainNetPort;
 		public byte Prefix { get; set; } = Properties.Settings.Default.MainNetBytePrefix;
-		public string Version { get; set; } = Properties.Settings.Default.NetworkVersion;
+		public string Version { get; set; } = Properties.Settings.Default.MainNetVer;
 		public int BroadcastMax { get; set; } = Properties.Settings.Default.MaxNumOfBroadcasts;
 	    public PeerApi ActivePeer { get; set; } 
 

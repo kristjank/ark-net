@@ -35,7 +35,16 @@
     <Setting Name="MaxNumOfBroadcasts" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">5</Value>
     </Setting>
-    <Setting Name="NetworkVersion" Type="System.String" Scope="User">
+    <Setting Name="MainNetVer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1.0</Value>
+    </Setting>
+    <Setting Name="MainNetHash" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988</Value>
+    </Setting>
+    <Setting Name="TestNetHash" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988</Value>
+    </Setting>
+    <Setting Name="TestNetVer" Type="System.String" Scope="Application">
       <Value Profile="(Default)">1.0</Value>
     </Setting>
   </Settings>

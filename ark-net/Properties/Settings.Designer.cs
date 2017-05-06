@@ -122,15 +122,39 @@ namespace ArkNet.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1.0")]
-        public string NetworkVersion {
+        public string MainNetVer {
             get {
-                return ((string)(this["NetworkVersion"]));
+                return ((string)(this["MainNetVer"]));
             }
-            set {
-                this["NetworkVersion"] = value;
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988")]
+        public string MainNetHash {
+            get {
+                return ((string)(this["MainNetHash"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988")]
+        public string TestNetHash {
+            get {
+                return ((string)(this["TestNetHash"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1.0")]
+        public string TestNetVer {
+            get {
+                return ((string)(this["TestNetVer"]));
             }
         }
     }
