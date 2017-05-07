@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("ARK.io")]
 [assembly: AssemblyProduct("Ark.NET")]
-[assembly: AssemblyCopyright("Copyright © 2017, ARK, Kristjan Košič")]
+[assembly: AssemblyCopyright("Copyright © 2017, ARK, Kristjan Košič - chris")]
 [assembly: AssemblyTrademark("ARK")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.7.6.0")]
-[assembly: AssemblyFileVersion("0.7.6.0")]
+[assembly: AssemblyVersion("0.7.7.0")]
+[assembly: AssemblyFileVersion("0.7.7.0")]

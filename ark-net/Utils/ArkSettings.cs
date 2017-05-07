@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ArkNet.Utils
 {
@@ -11,6 +12,7 @@ namespace ArkNet.Utils
         public string NetHash { get; set; }
         public int MaxNumOfBroadcasts { get; set; }
         public Fees Fee { get; set; }
+        public IList<string> PeerSeedList { get; set; }
 
         public ArkNetworkSettings(dynamic activeNet)
         {
@@ -26,6 +28,7 @@ namespace ArkNet.Utils
             this.Fee.Delegate = activeNet.Fees.Delegate;
             this.Fee.SecondSignature = activeNet.Fees.SecondSignature;
             this.Fee.MultiSignature = activeNet.Fees.MultiSignature;
+            this.PeerSeedList = activeNet.Peers;
         }
     }
 

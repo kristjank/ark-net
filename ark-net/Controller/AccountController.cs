@@ -12,8 +12,11 @@ namespace ArkNet.Controller
 
         public AccountController(string passphrase)
         {
-            _account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(passphrase)));
-            _account.PublicKey = Crypto.GetKeys(passphrase).PubKey.ToString();
+            _account = new ArkAccount()
+            {
+                Address = Crypto.GetAddress(Crypto.GetKeys(passphrase), ArkNetApi.Instance.NetworkSettings.BytePrefix),
+                PublicKey = Crypto.GetKeys(passphrase).PubKey.ToString()
+            };
         }
 
         public ArkAccount GetArkAccount()

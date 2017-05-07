@@ -44,7 +44,8 @@ namespace ArkNet.Controller.Tests
         public void CreateAccountTest()
         {
             var accCtnrl = new AccountController("this is a top secret passphrase");
-            
+
+
 
             Assert.AreEqual(accCtnrl.GetArkAccount().Address, "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC");
             Assert.AreEqual(accCtnrl.GetArkAccount().PublicKey, "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192");

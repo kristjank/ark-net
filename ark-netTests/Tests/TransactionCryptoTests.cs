@@ -30,7 +30,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void GetAddressTest()
 		{
-			var a1 = Crypto.GetAddress(Crypto.GetKeys("this is a top secret passphrase"));
+			var a1 = Crypto.GetAddress(Crypto.GetKeys("this is a top secret passphrase"),ArkNetApi.Instance.NetworkSettings.BytePrefix);
 			var a2 = "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC";
 
 			Assert.AreEqual(a2, a1);

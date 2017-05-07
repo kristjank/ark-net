@@ -68,13 +68,13 @@ namespace ArkNet.Core
 			return new Key(sha256h);
 		}
 
-		public static string GetAddress(Key keys, byte version = 0x17)
+		public static string GetAddress(Key keys, byte version)
 		{
 			//keys.S
 			return GetAddress(keys.PubKey.ToBytes(), version);
 		}
 
-		public static string GetAddress(byte[] publicKey, byte version = 0x17)
+		public static string GetAddress(byte[] publicKey, byte version)
 		{
 			var keyHash = Ripemd160.ComputeHash(publicKey, 0, publicKey.Length);
 			var address = new BCAVersionedChecksummedBytes(version, keyHash);

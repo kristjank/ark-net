@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using ArkNet.Properties;
+using JsonConfig;
 using Newtonsoft.Json.Linq;
 
 namespace ArkNet.Core
@@ -43,13 +43,13 @@ namespace ArkNet.Core
         private static void OpenServicePoint(Uri uri)
         {
             ServicePointManager.CheckCertificateRevocationList = true;
-            ServicePointManager.DefaultConnectionLimit = Settings.Default.DefaultConnectionLimit;
+            ServicePointManager.DefaultConnectionLimit = Config.Default.ArkPeer.DefaultConnectionLimit;
 
             var sp = ServicePointManager.FindServicePoint(uri);
             sp.UseNagleAlgorithm = true;
             sp.Expect100Continue = true;
-            sp.ConnectionLimit = Settings.Default.ConnectionLimit;
-            sp.ConnectionLeaseTimeout = Settings.Default.ConnectionLeaseTimeOut;
+            sp.ConnectionLimit = Config.Default.ArkPeer.ConnectionLimit;
+            sp.ConnectionLeaseTimeout = Config.Default.ArkPeer.ConnectionLeaseTimeOut;
         }
 
         private void Init(string ip, int port, string protocol)

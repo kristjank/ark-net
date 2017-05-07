@@ -1,20 +1,27 @@
 ﻿using System.IO;
+using ArkNet;
 using ArkNet.Core;
 using ArkNet.Service;
 using ArkNet.Utils;
+using ArkNet.Utils.Enum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ArkNetTest.Tests
 {
-	[TestClass]
+    [TestClass]
 	public class NetworkTests
 	{
-		/* TEST MAIN WALLET
+        /* TEST MAIN WALLET
 	     Adress: "AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK"
 	     pass: ski rose knock live elder parade dose device fetch betray loan holiday
 	     */
+	    [TestInitialize]
+	    public void Init()
+	    {
+	        ArkNetApi.Instance.Start(NetworkType.MainNet);
+	    }
 
-		[TestMethod]
+        [TestMethod]
 		public void PostTransactionNoBalanceTest()
 		{
 			var tx = TransactionApi.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
