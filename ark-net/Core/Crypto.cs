@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using System;
+using System.Security.Cryptography;
 using System.Text;
 using ArkNet.Utils;
 using NBitcoin;
@@ -68,7 +69,14 @@ namespace ArkNet.Core
 			return new Key(sha256h);
 		}
 
-		public static string GetAddress(Key keys, byte version)
+	    public static string GetWIF(string passpharase)
+	    {
+	        var key = GetKeys(passpharase);
+
+	        throw new NotImplementedException();
+        }
+
+	    public static string GetAddress(Key keys, byte version)
 		{
 			//keys.S
 			return GetAddress(keys.PubKey.ToBytes(), version);

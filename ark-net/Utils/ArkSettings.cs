@@ -6,7 +6,8 @@ namespace ArkNet.Utils
     public class ArkNetworkSettings
     {
         public int Port { get; set; }
-        public byte BytePrefix { get; set; }
+        public byte PubKeyHash { get; set; }
+        public byte WifPrefix { get; set; }
         public string Name { get; set; }
         public string Version { get; set; }
         public string NetHash { get; set; }
@@ -18,7 +19,8 @@ namespace ArkNet.Utils
         {
             Fee = new Fees();
             this.Port = activeNet.Port;
-            this.BytePrefix = Convert.ToByte(activeNet.BytePrefix);
+            this.PubKeyHash = Convert.ToByte(activeNet.PubKeyHash, 16);
+            this.WifPrefix = Convert.ToByte(activeNet.WifPrefix, 16);
             this.NetHash = activeNet.NetHash;
             this.Version = activeNet.Version;
             this.Name = activeNet.Name;

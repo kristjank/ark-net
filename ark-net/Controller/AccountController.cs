@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using ArkNet.Core;
 using ArkNet.Model;
 using ArkNet.Service;
+using NBitcoin;
 
 namespace ArkNet.Controller
 {
@@ -14,7 +15,7 @@ namespace ArkNet.Controller
         {
             _account = new ArkAccount()
             {
-                Address = Crypto.GetAddress(Crypto.GetKeys(passphrase), ArkNetApi.Instance.NetworkSettings.BytePrefix),
+                Address = Crypto.GetAddress(Crypto.GetKeys(passphrase), ArkNetApi.Instance.NetworkSettings.PubKeyHash),
                 PublicKey = Crypto.GetKeys(passphrase).PubKey.ToString()
             };
         }
@@ -69,6 +70,11 @@ namespace ArkNet.Controller
             _account.UnconfirmedBalance = res.unconfirmedBalance;
 
             return res.status;
+        }
+
+        public string GetWIF(string passPhrase)
+        {
+            throw new NotImplementedException();
         }
 
         public bool RemoteSign()

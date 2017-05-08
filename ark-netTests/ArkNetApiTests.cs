@@ -10,7 +10,7 @@ namespace ArkNet.Tests
         [TestMethod()]
         public void StartTest()
         {
-            ArkNetApi.Instance.Start(NetworkType.DevNet);
+            ArkNetApi.Instance.Start(NetworkType.MainNet);
 
             Assert.IsNotNull(ArkNetApi.Instance.NetworkSettings);
         }

@@ -194,7 +194,7 @@ namespace ArkNet.Core
             var tx = new TransactionApi(3, 0, ArkNetApi.Instance.NetworkSettings.Fee.Vote);
 			tx.asset.Add("votes", votes);
 			tx.Timestamp = Slot.GetTime();
-		    tx.RecipientId = Crypto.GetAddress(Crypto.GetKeys(passphrase), ArkNetApi.Instance.NetworkSettings.BytePrefix);
+		    tx.RecipientId = Crypto.GetAddress(Crypto.GetKeys(passphrase), ArkNetApi.Instance.NetworkSettings.PubKeyHash);
 			tx.Sign(passphrase);
 		    tx.StrBytes = Encoders.Hex.EncodeData(tx.ToBytes());
             if (secondPassphrase != null)

@@ -24,7 +24,7 @@ namespace ArkNet.Core
         public string Nethash { get; set; } = ArkNetApi.Instance.NetworkSettings.NetHash; 
         public string Name { get; set; } = ArkNetApi.Instance.NetworkSettings.Name;
         public int Port { get; set; } = ArkNetApi.Instance.NetworkSettings.Port;
-        public byte Prefix { get; set; } = ArkNetApi.Instance.NetworkSettings.BytePrefix;
+        public byte Prefix { get; set; } = ArkNetApi.Instance.NetworkSettings.PubKeyHash;
         public string Version { get; set; } = ArkNetApi.Instance.NetworkSettings.Version;
         public int BroadcastMax { get; set; } = ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts;
         public PeerApi ActivePeer { get; set; }
