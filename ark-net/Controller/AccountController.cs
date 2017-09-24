@@ -9,14 +9,14 @@ namespace ArkNet.Controller
     public class AccountController
     {
         private ArkAccount _account;
+        private string _passPhrase;
+        private string _secondPassPhrase;
 
-        public AccountController(string passphrase)
+        public AccountController(string passphrase, string secondPassPhrase = null)
         {
-            _account = new ArkAccount()
-            {
-                Address = Crypto.GetAddress(Crypto.GetKeys(passphrase), ArkNetApi.Instance.NetworkSettings.BytePrefix),
-                PublicKey = Crypto.GetKeys(passphrase).PubKey.ToString()
-            };
+            _passPhrase = passphrase;
+            _secondPassPhrase = secondPassPhrase;
+            _account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(passphrase), ArkNetApi.Instance.NetworkSettings.BytePrefix));
         }
 
         public ArkAccount GetArkAccount()
@@ -35,28 +35,26 @@ namespace ArkNet.Controller
         }
 
         public (bool status, string data, string error) SendArk(long satosshiAmount, string recepientAddres,
-            string vendorFiend, string passPhrase, string secondPassPhrase = null)
+            string vendorFiend)
         {
             var tx = TransactionApi.CreateTransaction(recepientAddres,
                 satosshiAmount,
                 vendorFiend,
-                passPhrase,
-                secondPassPhrase);
+                _passPhrase,
+                _secondPassPhrase);
 
             return TransactionService.PostTransaction(tx);
         }
 
-        public (bool status, string data, string error) VoteForDelegate(List<string> votes, string passPhrase,
-            string secondPassPhrase = null)
+        public (bool status, string data, string error) VoteForDelegate(List<string> votes)
         {
-            var tx = TransactionApi.CreateVote(votes, passPhrase, secondPassPhrase);
+            var tx = TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
             return TransactionService.PostTransaction(tx);
         }
 
-        public (bool status, string data, string error) RegisterAsDelegate(string username, string passPhrase,
-            string secondPassPhrase = null)
+        public (bool status, string data, string error) RegisterAsDelegate(string username)
         {
-            var tx = TransactionApi.CreateDelegate(username, passPhrase, secondPassPhrase);
+            var tx = TransactionApi.CreateDelegate(username, _passPhrase, _secondPassPhrase);
 
             return TransactionService.PostTransaction(tx);
         }
