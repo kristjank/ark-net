@@ -29,13 +29,13 @@ namespace ArkNet
             switch (type)
             {
                 case NetworkType.MainNet:
-                    NetworkSettings = new ArkNetworkSettings(Config.Default.MainNet);
+                    NetworkSettings = new ArkNetworkSettings(Config.Global.MainNet);
                     break;
                 case NetworkType.TestNet:
-                    NetworkSettings = new ArkNetworkSettings(Config.Default.TestNet);
+                    NetworkSettings = new ArkNetworkSettings(Config.Global.TestNet);
                     break;
                 case NetworkType.DevNet:
-                    NetworkSettings = new ArkNetworkSettings(Config.Default.DevNet);
+                    NetworkSettings = new ArkNetworkSettings(Config.Global.DevNet);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);
