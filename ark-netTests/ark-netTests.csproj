@@ -70,6 +70,7 @@
     <Compile Include="ArkNetApiTests.cs" />
     <Compile Include="Controller\AccountControllerTests.cs" />
     <Compile Include="Service\AccountServiceTests.cs" />
+    <Compile Include="Service\BlockServiceTests.cs" />
     <Compile Include="Service\DelegateServiceTests.cs" />
     <Compile Include="Service\PeerServiceTests.cs" />
     <Compile Include="Service\TransactionServiceTests.cs" />
