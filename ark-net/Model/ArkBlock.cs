@@ -15,12 +15,15 @@ namespace ArkNet.Model
         public int Height { get; set; }
         public string PreviousBlock { get; set; }
         public int NumberOfTransactions { get; set; }
-        public BigInteger TotalAmount { get; set; }
-        public BigInteger TotalFee { get; set; }
+        public long TotalAmount { get; set; }
+        public long TotalFee { get; set; }
+        public long Reward { get; set; }
         public int PayloadLength { get; set; }
         public string PayloadHash { get; set; }
         public string GeneratorPublicKey { get; set; }
         public string GeneratorId { get; set; }
         public string BlockSignature { get; set; }
+        public long Confirmations { get; set; }
+        public long TotalForged { get; set; }
     }
 }

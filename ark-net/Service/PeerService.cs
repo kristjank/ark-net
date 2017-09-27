@@ -21,7 +21,6 @@ namespace ArkNet.Service
         public static PeerStatus GetPeerStatus()
         {
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/peer/status");
-            var parsed = JObject.Parse(response);
 
             var peerStat = JsonConvert.DeserializeObject<PeerStatus>(response);
             return peerStat;

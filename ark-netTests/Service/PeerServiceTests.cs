@@ -17,6 +17,7 @@ namespace ArkNet.Service.Tests
         {
             ArkNetApi.Instance.Start(NetworkType.MainNet);
         }
+
         [TestMethod()]
         public void GetAllTest()
         {
@@ -25,6 +26,14 @@ namespace ArkNet.Service.Tests
 
             Assert.IsNotNull(peer);
             Assert.IsNotNull(peers);
+        }
+
+        [TestMethod()]
+        public void GetPeerStatusTest()
+        {
+            var peer = PeerService.GetPeerStatus();
+
+            Assert.IsNotNull(peer);
         }
     }
 }
