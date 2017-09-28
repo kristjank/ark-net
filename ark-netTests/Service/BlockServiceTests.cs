@@ -35,5 +35,54 @@ namespace ArkNetTest.Service
             var block1 = BlockService.GetById(block.Id);
             Assert.IsNotNull(block1);
         }
+
+        [TestMethod()]
+        public void GetEpoch()
+        {
+            var epoch = BlockService.GetEpoch();
+            Assert.IsNotNull(epoch);
+        }
+
+        [TestMethod()]
+        public void GetHeight()
+        {
+            var height = BlockService.GetHeight();
+            Assert.IsNotNull(height);
+        }
+
+        [TestMethod()]
+        public void GetNetHash()
+        {
+            var netHash = BlockService.GetNetHash();
+            Assert.IsNotNull(netHash);
+        }
+
+        [TestMethod()]
+        public void GetFees()
+        {
+            var fees = BlockService.GetFees();
+            Assert.IsNotNull(fees);
+        }
+
+        [TestMethod()]
+        public void GetMilestone()
+        {
+            var milestone = BlockService.GetMilestone();
+            Assert.IsNotNull(milestone);
+        }
+
+        [TestMethod()]
+        public void GetReward()
+        {
+            var reward = BlockService.GetReward();
+            Assert.IsNotNull(reward);
+        }
+
+        [TestMethod()]
+        public void GetStatus()
+        {
+            var reward = BlockService.GetStatus();
+            Assert.IsNotNull(reward);
+        }
     }
 }

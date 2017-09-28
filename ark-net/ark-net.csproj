@@ -97,6 +97,7 @@
     <Compile Include="ArkNetApi.cs" />
     <Compile Include="Controller\WalletController.cs" />
     <Compile Include="Model\ArkAccountBalance.cs" />
+    <Compile Include="Model\ArkBlockChainStatus.cs" />
     <Compile Include="Model\ArkBlock.cs" />
     <Compile Include="Service\AccountService.cs" />
     <Compile Include="Service\BlockService.cs" />
