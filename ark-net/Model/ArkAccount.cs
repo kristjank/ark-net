@@ -1,12 +1,13 @@
 ﻿using ArkNet.Service;
+using System.Numerics;
 
 namespace ArkNet.Model
 {
     public class ArkAccount
     {
         public string Address { get; set; }
-        public string UnconfirmedBalance { get; set; }
-        public string Balance { get; set; }
+        public long UnconfirmedBalance { get; set; }
+        public long Balance { get; set; }
         public string PublicKey { get; set; }
         public int UnconfirmedSignature { get; set; }
         public int SecondSignature { get; set; }

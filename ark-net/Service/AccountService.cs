@@ -21,16 +21,11 @@ namespace ArkNet.Service
             return account;
         }
 
-        public static (bool status, string balance, string unconfirmedBalance, string error) GetBalance(string address)
+        public static ArkAccountBalance GetBalance(string address)
         {
-            var response =
-                NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/accounts/getBalance/?address=" + address);
-            var parsed = JObject.Parse(response);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/accounts/getBalance/?address=" + address);
 
-            return (Convert.ToBoolean(parsed["success"]),
-                parsed["balance"]?.ToString() ?? "",
-                parsed["unconfirmedBalance"]?.ToString() ?? "",
-                parsed["error"]?.ToString() ?? "");
+            return JsonConvert.DeserializeObject<ArkAccountBalance>(response);
         }
     }
 }

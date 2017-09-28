@@ -31,7 +31,7 @@ namespace ArkNet.Service.Tests
         {
             var res = AccountService.GetBalance("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK");
 
-            Assert.IsTrue(res.status);
+            Assert.IsTrue(res.Success);
         }
     }
 }

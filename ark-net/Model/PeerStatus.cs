@@ -14,9 +14,9 @@
             public string Id { get; set; }
             public int Height { get; set; }
             public int Version { get; set; }
-            public int TotalAmount { get; set; }
-            public int TotalFee { get; set; }
-            public int Reward { get; set; }
+            public long TotalAmount { get; set; }
+            public long TotalFee { get; set; }
+            public long Reward { get; set; }
             public string PayloadHash { get; set; }
             public int PayloadLength { get; set; }
             public int Timestamp { get; set; }

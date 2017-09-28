@@ -63,10 +63,10 @@ namespace ArkNet.Controller
         {
             var res = AccountService.GetBalance(_account.Address);
 
-            _account.Balance = res.balance;
-            _account.UnconfirmedBalance = res.unconfirmedBalance;
+            _account.Balance = res.Balance;
+            _account.UnconfirmedBalance = res.UnconfirmedBalance;
 
-            return res.status;
+            return res.Success;
         }
 
         public bool RemoteSign()
