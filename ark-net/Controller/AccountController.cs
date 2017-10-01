@@ -35,11 +35,11 @@ namespace ArkNet.Controller
         }
 
         public (bool status, string data, string error) SendArk(long satosshiAmount, string recepientAddres,
-            string vendorFiend)
+            string vendorField)
         {
             var tx = TransactionApi.CreateTransaction(recepientAddres,
                 satosshiAmount,
-                vendorFiend,
+                vendorField,
                 _passPhrase,
                 _secondPassPhrase);
 
