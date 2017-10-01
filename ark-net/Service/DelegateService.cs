@@ -58,24 +58,24 @@ namespace ArkNet.Service
             return dele;
         }
 
-        public static IEnumerable<DelegateVoters> GetVoters(string pubKey)
+        public static IEnumerable<ArkDelegateVoter> GetVoters(string pubKey)
         {
             var response =
                 NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates/voters?publicKey=" + pubKey);
             var parsed = JObject.Parse(response);
             var array = (JArray) parsed["accounts"];
 
-            var delegVotersList = new List<DelegateVoters>();
+            var delegVotersList = new List<ArkDelegateVoter>();
             if (!Convert.ToBoolean(parsed["success"]))
             {
-                var dele = new DelegateVoters
+                var dele = new ArkDelegateVoter
                 {
                     Username = parsed["error"].ToString()
                 };
             }
             else
             {
-                delegVotersList = JsonConvert.DeserializeObject<List<DelegateVoters>>(array.ToString());
+                delegVotersList = JsonConvert.DeserializeObject<List<ArkDelegateVoter>>(array.ToString());
             }
             return delegVotersList;
         }
