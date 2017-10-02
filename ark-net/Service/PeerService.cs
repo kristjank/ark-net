@@ -18,11 +18,11 @@ namespace ArkNet.Service
             return peerList;
         }
 
-        public static PeerStatus GetPeerStatus()
+        public static ArkPeerStatus GetPeerStatus()
         {
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/peer/status");
 
-            var peerStat = JsonConvert.DeserializeObject<PeerStatus>(response);
+            var peerStat = JsonConvert.DeserializeObject<ArkPeerStatus>(response);
             return peerStat;
         }
     }

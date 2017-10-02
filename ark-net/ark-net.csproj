@@ -115,8 +115,8 @@
     <Compile Include="Core\Verification.cs" />
     <Compile Include="Model\ArkAccount.cs" />
     <Compile Include="Model\ArkDelegate.cs" />
-    <Compile Include="Model\DelegateVoters.cs" />
-    <Compile Include="Model\PeerStatus.cs" />
+    <Compile Include="Model\ArkDelegateVoter.cs" />
+    <Compile Include="Model\ArkPeerStatus.cs" />
     <Compile Include="Model\ArkPeer.cs" />
     <Compile Include="Model\ArkTransaction.cs" />
     <Compile Include="Utils\ArkSettings.cs" />

@@ -1,6 +1,6 @@
 ﻿namespace ArkNet.Model
 {
-    public class PeerStatus
+    public class ArkPeerStatus
     {
         public bool Success { get; set; }
         public int Height { get; set; }
