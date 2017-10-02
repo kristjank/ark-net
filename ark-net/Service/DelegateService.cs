@@ -4,6 +4,7 @@ using ArkNet.Core;
 using ArkNet.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Linq;
 
 namespace ArkNet.Service
 {
@@ -78,6 +79,33 @@ namespace ArkNet.Service
                 delegVotersList = JsonConvert.DeserializeObject<List<DelegateVoters>>(array.ToString());
             }
             return delegVotersList;
+        }
+
+        public static long GetFee()
+        {
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates/fee");
+            var parsed = JObject.Parse(response);
+
+            return Int64.Parse(parsed["fee"].ToString());
+        }
+
+        public static ArkDelegateForgedBalance GetForgedByAccount(string pubKey)
+        {
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates/forging/getForgedByAccount?generatorPublicKey=" + pubKey);
+
+            return JsonConvert.DeserializeObject<ArkDelegateForgedBalance>(response);
+        }
+
+        public static ArkDelegateNextForgers GetNextForgers()
+        {
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates/getNextForgers");
+
+            return JsonConvert.DeserializeObject<ArkDelegateNextForgers>(response);
+        }
+
+        public static long GetTotalVoteArk(string pubKey)
+        {
+            return GetVoters(pubKey).Sum(x => x.Balance);
         }
     }
 }
