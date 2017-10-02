@@ -96,6 +96,9 @@
   <ItemGroup>
     <Compile Include="ArkNetApi.cs" />
     <Compile Include="Controller\WalletController.cs" />
+    <Compile Include="Model\ArkLoaderNetworkResponse.cs" />
+    <Compile Include="Model\ArkLoaderStatusSync.cs" />
+    <Compile Include="Model\ArkLoaderStatus.cs" />
     <Compile Include="Model\ArkAccountTop.cs" />
     <Compile Include="Model\ArkAccountBalance.cs" />
     <Compile Include="Model\ArkBlockChainStatus.cs" />
@@ -105,6 +108,7 @@
     <Compile Include="Service\AccountService.cs" />
     <Compile Include="Service\BlockService.cs" />
     <Compile Include="Service\DelegateService.cs" />
+    <Compile Include="Service\LoaderService.cs" />
     <Compile Include="Service\PeerService.cs" />
     <Compile Include="Service\TransactionService.cs" />
     <Compile Include="Controller\AccountController.cs" />
