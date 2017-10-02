@@ -30,7 +30,7 @@ namespace ArkNet.Core
             httpClient = new HttpClient()
             {
                 BaseAddress = new UriBuilder(this.protocol, this.ip, this.port).Uri,
-   
+
             };
             httpClient.DefaultRequestHeaders.Accept.Clear();
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -106,6 +106,19 @@ namespace ArkNet.Core
             var content = response.Content.ReadAsStringAsync().Result;
 
             return content;
+        }
+
+        public bool IsOnline()
+        {
+            try
+            {
+                MakeRequest("HEAD", "/api/loader/status");
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

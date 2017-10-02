@@ -33,9 +33,15 @@ namespace ArkNet.Core
         {
             if (peers.Count > 0) return false;
             foreach (var item in ArkNetApi.Instance.NetworkSettings.PeerSeedList)
-                peers.Add(new PeerApi(item));
+            {
+                var peer = new PeerApi(item);
+                peers.Add(peer);
+                if (ActivePeer == null && peer.IsOnline())
+                {
+                    ActivePeer = peer;
+                }
+            }
 
-            ActivePeer = GetRandomPeer();
             return true;
         }
 
