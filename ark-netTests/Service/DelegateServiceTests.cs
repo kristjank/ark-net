@@ -55,5 +55,37 @@ namespace ArkNet.Service.Tests
 
             Assert.IsNotNull(dele);
         }
+
+        [TestMethod()]
+        public void GetFeeTest()
+        {
+            var fee = DelegateService.GetFee();
+
+            Assert.IsNotNull(fee);
+        }
+
+        [TestMethod()]
+        public void GetForgedByAccountTest()
+        {
+            var forgedByAccount = DelegateService.GetForgedByAccount("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
+
+            Assert.IsNotNull(forgedByAccount);
+        }
+
+        [TestMethod()]
+        public void GetNextForgersTest()
+        {
+            var nextForgers = DelegateService.GetNextForgers();
+
+            Assert.IsNotNull(nextForgers);
+        }
+
+        [TestMethod()]
+        public void GetTotalVoteArkTest()
+        {
+            var totalVoteArk = DelegateService.GetTotalVoteArk("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
+
+            Assert.IsNotNull(totalVoteArk);
+        }
     }
 }

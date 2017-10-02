@@ -99,9 +99,12 @@
     <Compile Include="Model\ArkLoaderNetworkResponse.cs" />
     <Compile Include="Model\ArkLoaderStatusSync.cs" />
     <Compile Include="Model\ArkLoaderStatus.cs" />
+    <Compile Include="Model\ArkAccountTop.cs" />
     <Compile Include="Model\ArkAccountBalance.cs" />
     <Compile Include="Model\ArkBlockChainStatus.cs" />
     <Compile Include="Model\ArkBlock.cs" />
+    <Compile Include="Model\ArkDelegateNextForgers.cs" />
+    <Compile Include="Model\ArkDelegateForgedBalance.cs" />
     <Compile Include="Service\AccountService.cs" />
     <Compile Include="Service\BlockService.cs" />
     <Compile Include="Service\DelegateService.cs" />
@@ -116,8 +119,8 @@
     <Compile Include="Core\Verification.cs" />
     <Compile Include="Model\ArkAccount.cs" />
     <Compile Include="Model\ArkDelegate.cs" />
-    <Compile Include="Model\DelegateVoters.cs" />
-    <Compile Include="Model\PeerStatus.cs" />
+    <Compile Include="Model\ArkDelegateVoter.cs" />
+    <Compile Include="Model\ArkPeerStatus.cs" />
     <Compile Include="Model\ArkPeer.cs" />
     <Compile Include="Model\ArkTransaction.cs" />
     <Compile Include="Utils\ArkSettings.cs" />

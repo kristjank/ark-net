@@ -33,5 +33,45 @@ namespace ArkNet.Service.Tests
 
             Assert.IsTrue(res.Success);
         }
+
+        [TestMethod()]
+        public void GetDelegatesTest()
+        {
+            var delegates = AccountService.GetDelegates("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK");
+
+            Assert.IsNotNull(delegates);
+        }
+
+        [TestMethod()]
+        public void GetTopTest()
+        {
+            var top = AccountService.GetTop(null, null);
+
+            Assert.IsNotNull(top);
+        }
+
+        [TestMethod()]
+        public void GetTopLimitTest()
+        {
+            var top = AccountService.GetTop(10, null);
+
+            Assert.IsNotNull(top);
+        }
+
+        [TestMethod()]
+        public void GetTopRecordsToSkipTest()
+        {
+            var top = AccountService.GetTop(null, 50);
+
+            Assert.IsNotNull(top);
+        }
+
+        [TestMethod()]
+        public void GetTopLimitAndRecordsToSkipTest()
+        {
+            var top = AccountService.GetTop(10, 50);
+
+            Assert.IsNotNull(top);
+        }
     }
 }
