@@ -29,8 +29,7 @@ namespace ArkNet.Core
 
             httpClient = new HttpClient()
             {
-                BaseAddress = new UriBuilder(this.protocol, this.ip, this.port).Uri,
-
+                BaseAddress = new UriBuilder(this.protocol, this.ip, this.port).Uri
             };
             httpClient.DefaultRequestHeaders.Accept.Clear();
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
