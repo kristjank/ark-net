@@ -15,7 +15,7 @@ namespace ArkNet.Service
 
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path);
             var parsed = JObject.Parse(response);
-            var array = (JArray) parsed["transactions"];
+            var array = (JArray)parsed["transactions"];
 
             var tranList = JsonConvert.DeserializeObject<IReadOnlyCollection<ArkTransaction>>(array.ToString());
             return tranList;
@@ -27,7 +27,7 @@ namespace ArkNet.Service
 
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path);
             var parsed = JObject.Parse(response);
-            var array = (JArray) parsed["transactions"];
+            var array = (JArray)parsed["transactions"];
 
             var tranList = JsonConvert.DeserializeObject<IReadOnlyCollection<ArkTransaction>>(array.ToString());
             return tranList;

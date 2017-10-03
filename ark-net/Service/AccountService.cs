@@ -39,7 +39,7 @@ namespace ArkNet.Service
 
         public static List<ArkAccountTop> GetTop(int? limit, int? recordsToSkip)
         {
-            var response = 
+            var response =
                 NetworkApi.Instance.ActivePeer.MakeRequest("GET", string.Format("/api/accounts/top?limit={0}&offset={1}", limit.HasValue ? limit : 100, recordsToSkip.HasValue ? recordsToSkip : 0));
             var parsed = JObject.Parse(response);
 
