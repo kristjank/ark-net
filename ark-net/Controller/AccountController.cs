@@ -34,7 +34,7 @@ namespace ArkNet.Controller
             throw new NotImplementedException();
         }
 
-        public (bool status, string data, string error) SendArk(long satosshiAmount, string recepientAddres,
+        public ArkTransactionResponse SendArk(long satosshiAmount, string recepientAddres,
             string vendorField)
         {
             var tx = TransactionApi.CreateTransaction(recepientAddres,
@@ -46,13 +46,14 @@ namespace ArkNet.Controller
             return TransactionService.PostTransaction(tx);
         }
 
-        public (bool status, string data, string error) VoteForDelegate(List<string> votes)
+        public ArkTransactionResponse VoteForDelegate(List<string> votes)
         {
             var tx = TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
+
             return TransactionService.PostTransaction(tx);
         }
 
-        public (bool status, string data, string error) RegisterAsDelegate(string username)
+        public ArkTransactionResponse RegisterAsDelegate(string username)
         {
             var tx = TransactionApi.CreateDelegate(username, _passPhrase, _secondPassPhrase);
 
