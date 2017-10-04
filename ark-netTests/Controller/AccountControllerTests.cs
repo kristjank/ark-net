@@ -56,8 +56,7 @@ namespace ArkNet.Controller.Tests
         {
             var accCtnrl = new AccountController("ski rose knock live elder parade dose device fetch betray loan holiday");
             var result = accCtnrl.SendArk(1234, "ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K", "Akr.Net test trans from Account");
-
-            Assert.IsTrue(result.status);
+            Assert.IsTrue(result.Status);
         }
 
         [TestMethod()]
@@ -74,7 +73,7 @@ namespace ArkNet.Controller.Tests
             var result = accCtnrl.VoteForDelegate(votes);
 
 
-            Assert.IsTrue(result.status);
+            Assert.IsTrue(result.Status);
         }
 
         [TestMethod()]

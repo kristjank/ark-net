@@ -34,7 +34,7 @@ namespace ArkNetTest.Tests
 
 			var result = TransactionService.PostTransaction(tx);
 
-			Assert.AreEqual(result.error, "Account does not have enough ARK: AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC balance: 0");
+			Assert.AreEqual(result.Error, "Account does not have enough ARK: AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC balance: 0");
 		}
 
 
@@ -64,7 +64,7 @@ namespace ArkNetTest.Tests
 				"ski rose knock live elder parade dose device fetch betray loan holiday");
 
 			var result = TransactionService.PostTransaction(tx);
-			Assert.IsTrue(result.status);
+			Assert.IsTrue(result.Status);
 		}
 
 		[TestMethod]
