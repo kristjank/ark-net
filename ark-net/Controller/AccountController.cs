@@ -37,8 +37,8 @@ namespace ArkNet.Controller
         public ArkTransactionResponse SendArk(long satosshiAmount, string recepientAddres,
             string vendorField)
         {
-            var tx = TransactionApi.CreateTransaction(recepientAddres,
-                satosshiAmount,
+            var tx = TransactionApi.CreateTransaction(recipientAddress,
+                satoshiAmount,
                 vendorField,
                 _passPhrase,
                 _secondPassPhrase);
@@ -86,27 +86,27 @@ namespace ArkNet.Controller
         }
     }
 
-/*public static bool ApplyTransaction(Account account, long amount)
-{
+    /*public static bool ApplyTransaction(Account account, long amount)
+    {
 
 
-    /*Balance -= transaction.Amount + transaction.Fee;
-    return Balance > -1;
-}
+        /*Balance -= transaction.Amount + transaction.Fee;
+        return Balance > -1;
+    }
 
-public static bool UndoTransaction(TransactionApi transaction)
-{
-    /*Balance += transaction.Amount + transaction.Fee;
-    return Balance > -1;
-}
+    public static bool UndoTransaction(TransactionApi transaction)
+    {
+        /*Balance += transaction.Amount + transaction.Fee;
+        return Balance > -1;
+    }
 
-public static Verification VerifyTransaction(TransactionApi transaction)
-{
-    var v = new Verification();
-    if (Balance >= transaction.Amount + transaction.Fee)
-        v.AddError(string.Format("Account %1 does not have enough balance: %2", Address, Balance));
-    // TODO: many things
+    public static Verification VerifyTransaction(TransactionApi transaction)
+    {
+        var v = new Verification();
+        if (Balance >= transaction.Amount + transaction.Fee)
+            v.AddError(string.Format("Account %1 does not have enough balance: %2", Address, Balance));
+        // TODO: many things
 
-    return v;
-}*/
+        return v;
+    }*/
 }
