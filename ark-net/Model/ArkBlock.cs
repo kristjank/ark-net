@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ArkNet.Model
 {
-    public class ArkBlock
+    public class ArkBlock : ArkError
     {
         public string Id { get; set; }
         public int Version { get; set; }

@@ -1,5 +1,11 @@
-﻿namespace ArkNet.Model
+﻿using System.Collections.Generic;
+
+namespace ArkNet.Model
 {
+    public class ArkDelegateVoterCollection : ArkError
+    {
+        public List<ArkDelegateVoter> Accounts { get; set; }
+    }
     public class ArkDelegateVoter
     {
         public object Username { get; set; }

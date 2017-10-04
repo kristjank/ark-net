@@ -17,9 +17,14 @@ namespace ArkNet.Service
 
             var block = new ArkBlock();
             if (!Convert.ToBoolean(parsed["success"]))
-                block.Id = parsed["error"].ToString();
+            {
+                block.Success = false;
+                block.Error = parsed["error"].ToString();
+            }
             else
+            {
                 block = JsonConvert.DeserializeObject<ArkBlock>(parsed["block"].ToString());
+            }
             return block;
         }
 
