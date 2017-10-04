@@ -14,7 +14,7 @@ namespace ArkNet.Service
         {
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates");
             var parsed = JObject.Parse(response);
-            var array = (JArray) parsed["delegates"];
+            var array = (JArray)parsed["delegates"];
 
             var delegList = JsonConvert.DeserializeObject<IReadOnlyCollection<ArkDelegate>>(array.ToString());
             return delegList;
@@ -69,7 +69,7 @@ namespace ArkNet.Service
             var response =
                 NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates/voters?publicKey=" + pubKey);
             var parsed = JObject.Parse(response);
-            var array = (JArray) parsed["accounts"];
+            var array = (JArray)parsed["accounts"];
 
             var delegVotersList = new List<ArkDelegateVoter>();
             if (!Convert.ToBoolean(parsed["success"]))

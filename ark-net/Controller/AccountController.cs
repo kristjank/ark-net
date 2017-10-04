@@ -34,7 +34,7 @@ namespace ArkNet.Controller
             throw new NotImplementedException();
         }
 
-        public (bool status, string data, string error) SendArk(long satosshiAmount, string recepientAddres,
+        public ArkTransactionResponse SendArk(long satosshiAmount, string recepientAddres,
             string vendorField)
         {
             var tx = TransactionApi.CreateTransaction(recepientAddres,
@@ -46,13 +46,14 @@ namespace ArkNet.Controller
             return TransactionService.PostTransaction(tx);
         }
 
-        public (bool status, string data, string error) VoteForDelegate(List<string> votes)
+        public ArkTransactionResponse VoteForDelegate(List<string> votes)
         {
             var tx = TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
+
             return TransactionService.PostTransaction(tx);
         }
 
-        public (bool status, string data, string error) RegisterAsDelegate(string username)
+        public ArkTransactionResponse RegisterAsDelegate(string username)
         {
             var tx = TransactionApi.CreateDelegate(username, _passPhrase, _secondPassPhrase);
 
@@ -85,27 +86,27 @@ namespace ArkNet.Controller
         }
     }
 
-/*public static bool ApplyTransaction(Account account, long amount)
-{
+    /*public static bool ApplyTransaction(Account account, long amount)
+    {
 
 
-    /*Balance -= transaction.Amount + transaction.Fee;
-    return Balance > -1;
-}
+        /*Balance -= transaction.Amount + transaction.Fee;
+        return Balance > -1;
+    }
 
-public static bool UndoTransaction(TransactionApi transaction)
-{
-    /*Balance += transaction.Amount + transaction.Fee;
-    return Balance > -1;
-}
+    public static bool UndoTransaction(TransactionApi transaction)
+    {
+        /*Balance += transaction.Amount + transaction.Fee;
+        return Balance > -1;
+    }
 
-public static Verification VerifyTransaction(TransactionApi transaction)
-{
-    var v = new Verification();
-    if (Balance >= transaction.Amount + transaction.Fee)
-        v.AddError(string.Format("Account %1 does not have enough balance: %2", Address, Balance));
-    // TODO: many things
+    public static Verification VerifyTransaction(TransactionApi transaction)
+    {
+        var v = new Verification();
+        if (Balance >= transaction.Amount + transaction.Fee)
+            v.AddError(string.Format("Account %1 does not have enough balance: %2", Address, Balance));
+        // TODO: many things
 
-    return v;
-}*/
+        return v;
+    }*/
 }

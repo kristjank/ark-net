@@ -15,7 +15,7 @@ namespace ArkNet.Service
 
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path);
             var parsed = JObject.Parse(response);
-            var array = (JArray) parsed["transactions"];
+            var array = (JArray)parsed["transactions"];
 
             var tranList = JsonConvert.DeserializeObject<IReadOnlyCollection<ArkTransaction>>(array.ToString());
             return tranList;
@@ -27,7 +27,7 @@ namespace ArkNet.Service
 
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path);
             var parsed = JObject.Parse(response);
-            var array = (JArray) parsed["transactions"];
+            var array = (JArray)parsed["transactions"];
 
             var tranList = JsonConvert.DeserializeObject<IReadOnlyCollection<ArkTransaction>>(array.ToString());
             return tranList;
@@ -65,7 +65,7 @@ namespace ArkNet.Service
             return trans;
         }
 
-        public static (bool status, string data, string error) PostTransaction(TransactionApi transaction)
+        public static ArkTransactionResponse PostTransaction(TransactionApi transaction)
         {
             string body = "{transactions: [" + transaction.ToObject(true) + "]} ";
 
@@ -74,10 +74,12 @@ namespace ArkNet.Service
             var parsed = JObject.Parse(response);
             var status = Convert.ToBoolean(parsed["success"]);
 
-
-            return new ValueTuple<bool, string, string>(status,
-                parsed["message"]?.ToString() ?? parsed["transactionIds"]?.ToString() ?? "",
-                parsed["error"]?.ToString() ?? "");
+            return new ArkTransactionResponse
+            {
+                Status = status,
+                Data = parsed["message"]?.ToString() ?? parsed["transactionIds"]?.ToString() ?? string.Empty,
+                Error = parsed["error"]?.ToString() ?? string.Empty
+            };
         }
 
         public static int MultipleBroadCast(TransactionApi transaction)
@@ -87,7 +89,7 @@ namespace ArkNet.Service
             {
                 var response = PostTransaction(transaction);
 
-                if (response.status)
+                if (response.Status)
                     res++;
             }
             return res;

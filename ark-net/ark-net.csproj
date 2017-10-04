@@ -106,6 +106,7 @@
     <Compile Include="Model\ArkBlock.cs" />
     <Compile Include="Model\ArkDelegateNextForgers.cs" />
     <Compile Include="Model\ArkDelegateForgedBalance.cs" />
+    <Compile Include="Model\ArkTransactionResponse.cs" />
     <Compile Include="Service\AccountService.cs" />
     <Compile Include="Service\BlockService.cs" />
     <Compile Include="Service\DelegateService.cs" />

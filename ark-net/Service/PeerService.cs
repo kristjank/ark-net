@@ -12,7 +12,7 @@ namespace ArkNet.Service
         {
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/peer/list");
             var parsed = JObject.Parse(response);
-            var array = (JArray) parsed["peers"];
+            var array = (JArray)parsed["peers"];
 
             var peerList = JsonConvert.DeserializeObject<IReadOnlyCollection<ArkPeer>>(array.ToString());
             return peerList;
