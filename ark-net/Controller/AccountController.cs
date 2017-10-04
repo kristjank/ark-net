@@ -37,8 +37,8 @@ namespace ArkNet.Controller
         public ArkTransactionResponse SendArk(long satosshiAmount, string recepientAddres,
             string vendorField)
         {
-            var tx = TransactionApi.CreateTransaction(recipientAddress,
-                satoshiAmount,
+            var tx = TransactionApi.CreateTransaction(recepientAddres,
+                satosshiAmount,
                 vendorField,
                 _passPhrase,
                 _secondPassPhrase);
