@@ -27,9 +27,14 @@ namespace ArkNet.Service
 
             var dele = new ArkDelegate();
             if (!Convert.ToBoolean(parsed["success"]))
-                dele.Username = parsed["error"].ToString();
+            {
+                dele.Success = false;
+                dele.Error = parsed["error"].ToString();
+            }
             else
+            {
                 dele = JsonConvert.DeserializeObject<ArkDelegate>(parsed["delegate"].ToString());
+            }
             return dele;
         }
 

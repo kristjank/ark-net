@@ -34,6 +34,15 @@ namespace ArkNet.Service.Tests
         }
 
         [TestMethod()]
+        public void GetByUsernameErrorTest()
+        {
+            var dele = DelegateService.GetByUsername("NonExistingPool");
+
+            Assert.IsFalse(dele.Success);
+            Assert.IsNotNull(dele.Error);
+        }
+
+        [TestMethod()]
         public void GetByPubKeyTest()
         {
             var dele2 = DelegateService.GetByPubKey("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");

@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace ArkNet.Model
 {
-    public class ArkAccount
+    public class ArkAccount : ArkError
     {
         public string Address { get; set; }
         public long UnconfirmedBalance { get; set; }
