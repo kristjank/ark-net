@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using ArkNet.Model.BaseModels;
+using System.Collections.Generic;
 
-namespace ArkNet.Model
+namespace ArkNet.Model.Delegate
 {
-    public class ArkDelegateVoterCollection : ArkError
-    {
-        public List<ArkDelegateVoter> Accounts { get; set; }
-    }
     public class ArkDelegateVoter
     {
         public object Username { get; set; }

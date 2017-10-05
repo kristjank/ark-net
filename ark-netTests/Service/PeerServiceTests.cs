@@ -21,7 +21,7 @@ namespace ArkNet.Service.Tests
         [TestMethod()]
         public void GetAllTest()
         {
-            var peers = PeerService.GetAll().Where(x => x.Status.Equals("OK"));
+            var peers = PeerService.GetAll().Peers.Where(x => x.Status.Equals("OK"));
             var peer = peers.FirstOrDefault();
 
             Assert.IsNotNull(peer);

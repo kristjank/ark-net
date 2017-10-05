@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArkNet.Model
+namespace ArkNet.Model.BaseModels
 {
-    public class ArkTransactionResponse
+    public class ArkResponseBase
     {
-        public bool Status { get; set; }
+        public bool Success { get; set; }
 
-        public string Data { get; set; }
+        public string Message { get; set; }
 
         public string Error { get; set; }
     }

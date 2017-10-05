@@ -3,27 +3,24 @@ using ArkNet.Core;
 using ArkNet.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using ArkNet.Model.Peer;
 
 namespace ArkNet.Service
 {
     public static class PeerService
     {
-        public static IEnumerable<ArkPeer> GetAll()
+        public static ArkPeerList GetAll()
         {
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/peer/list");
-            var parsed = JObject.Parse(response);
-            var array = (JArray)parsed["peers"];
 
-            var peerList = JsonConvert.DeserializeObject<IReadOnlyCollection<ArkPeer>>(array.ToString());
-            return peerList;
+            return JsonConvert.DeserializeObject<ArkPeerList>(response);
         }
 
         public static ArkPeerStatus GetPeerStatus()
         {
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/peer/status");
 
-            var peerStat = JsonConvert.DeserializeObject<ArkPeerStatus>(response);
-            return peerStat;
+            return JsonConvert.DeserializeObject<ArkPeerStatus>(response);
         }
     }
 }

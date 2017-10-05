@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using ArkNet.Core;
-using ArkNet.Model;
 using ArkNet.Service;
+using ArkNet.Model.Transactions;
+using ArkNet.Model.Account;
 
 namespace ArkNet.Controller
 {
@@ -16,7 +17,7 @@ namespace ArkNet.Controller
         {
             _passPhrase = passphrase;
             _secondPassPhrase = secondPassPhrase;
-            _account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(passphrase), ArkNetApi.Instance.NetworkSettings.BytePrefix));
+            _account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(passphrase), ArkNetApi.Instance.NetworkSettings.BytePrefix)).Account;
         }
 
         public ArkAccount GetArkAccount()
@@ -34,11 +35,11 @@ namespace ArkNet.Controller
             throw new NotImplementedException();
         }
 
-        public ArkTransactionResponse SendArk(long satosshiAmount, string recepientAddres,
+        public ArkTransactionResponse SendArk(long satoshiAmount, string recipientAddress,
             string vendorField)
         {
-            var tx = TransactionApi.CreateTransaction(recepientAddres,
-                satosshiAmount,
+            var tx = TransactionApi.CreateTransaction(recipientAddress,
+                satoshiAmount,
                 vendorField,
                 _passPhrase,
                 _secondPassPhrase);

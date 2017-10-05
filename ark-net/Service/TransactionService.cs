@@ -4,75 +4,46 @@ using ArkNet.Core;
 using ArkNet.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using ArkNet.Model.Transactions;
 
 namespace ArkNet.Service
 {
     public static class TransactionService
     {
-        public static IEnumerable<ArkTransaction> GetAll()
+        public static ArkTransactionList GetAll()
         {
             var path = "/api/transactions";
 
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path);
-            var parsed = JObject.Parse(response);
-            var array = (JArray)parsed["transactions"];
 
-            var tranList = JsonConvert.DeserializeObject<IReadOnlyCollection<ArkTransaction>>(array.ToString());
-            return tranList;
+            return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }
 
-        public static IEnumerable<ArkTransaction> GetUnconfirmedAll()
+        public static ArkTransactionList GetUnconfirmedAll()
         {
             var path = "/api/transactions/unconfirmed";
 
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path);
-            var parsed = JObject.Parse(response);
-            var array = (JArray)parsed["transactions"];
 
-            var tranList = JsonConvert.DeserializeObject<IReadOnlyCollection<ArkTransaction>>(array.ToString());
-            return tranList;
+            return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }
 
-        public static ArkTransaction GetById(string id)
+        public static ArkTransactionResponse GetById(string id)
         {
             var path = "/api/transactions";
 
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path + "/get?id=" + id);
-            var parsed = JObject.Parse(response);
 
-            var trans = new ArkTransaction();
-            if (!Convert.ToBoolean(parsed["success"]))
-            {
-                trans.Success = false;
-                trans.Error = parsed["error"].ToString();
-            }
-            else
-            {
-                trans = JsonConvert.DeserializeObject<ArkTransaction>(parsed["transaction"].ToString());
-            }
-
-            return trans;
+            return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }
 
-        public static ArkTransaction GetUnConfirmedById(string id)
+        public static ArkTransactionResponse GetUnConfirmedById(string id)
         {
             var path = "/api/transactions/unconfirmed";
 
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path + "/get?id=" + id);
-            var parsed = JObject.Parse(response);
 
-            var trans = new ArkTransaction();
-            if (!Convert.ToBoolean(parsed["success"]))
-            {
-                trans.Success = false;
-                trans.Error = parsed["error"].ToString();
-            }
-            else
-            {
-                trans = JsonConvert.DeserializeObject<ArkTransaction>(parsed["transaction"].ToString());
-            }
-
-            return trans;
+            return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }
 
         public static ArkTransactionResponse PostTransaction(TransactionApi transaction)
@@ -81,27 +52,23 @@ namespace ArkNet.Service
 
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("POST", "/peer/transactions", body);
 
-            var parsed = JObject.Parse(response);
-            var status = Convert.ToBoolean(parsed["success"]);
-
-            return new ArkTransactionResponse
-            {
-                Status = status,
-                Data = parsed["message"]?.ToString() ?? parsed["transactionIds"]?.ToString() ?? string.Empty,
-                Error = parsed["error"]?.ToString() ?? string.Empty
-            };
+            return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }
 
         public static int MultipleBroadCast(TransactionApi transaction)
         {
             var res = 0;
+
             for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
                 var response = PostTransaction(transaction);
 
-                if (response.Status)
+                if (response.Success)
+                {
                     res++;
+                }
             }
+
             return res;
         }
     }

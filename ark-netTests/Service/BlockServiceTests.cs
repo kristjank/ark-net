@@ -23,17 +23,17 @@ namespace ArkNetTest.Service
         public void GetAllTest()
         {
             var blocks = BlockService.GetAll();
-            Assert.IsNotNull(blocks);
+            Assert.IsTrue(blocks.Blocks.Count > 0);
         }
 
         [TestMethod()]
         public void GetByIdTest()
         {
-            var block = BlockService.GetAll().FirstOrDefault();
+            var block = BlockService.GetAll().Blocks.FirstOrDefault();
             Assert.IsNotNull(block);
 
             var block1 = BlockService.GetById(block.Id);
-            Assert.IsNotNull(block1);
+            Assert.IsNotNull(block1.Block);
         }
 
         [TestMethod()]
@@ -90,8 +90,8 @@ namespace ArkNetTest.Service
         [TestMethod()]
         public void GetStatus()
         {
-            var reward = BlockService.GetStatus();
-            Assert.IsNotNull(reward);
+            var status = BlockService.GetStatus();
+            Assert.IsNotNull(status);
         }
     }
 }

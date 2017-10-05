@@ -3,6 +3,7 @@ using ArkNet.Core;
 using ArkNet.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using ArkNet.Model.Loader;
 
 namespace ArkNet.Service
 {
@@ -25,9 +26,8 @@ namespace ArkNet.Service
         public static ArkLoaderNetworkResponse GetAutoConfigureParameters()
         {
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/loader/autoconfigure");
-            var parsed = JObject.Parse(response);
 
-            return JsonConvert.DeserializeObject<ArkLoaderNetworkResponse>(parsed["network"].ToString());
+            return JsonConvert.DeserializeObject<ArkLoaderNetworkResponse>(response);
         }
     }
 }

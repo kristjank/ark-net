@@ -1,6 +1,8 @@
-﻿namespace ArkNet.Model
+﻿using ArkNet.Model.BaseModels;
+
+namespace ArkNet.Model.Loader
 {
-    public class ArkLoaderStatusSync
+    public class ArkLoaderStatusSync : ArkResponseBase
     {
         public string Id { get; set; }
         public bool Syncing { get; set; }

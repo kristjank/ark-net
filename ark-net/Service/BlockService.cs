@@ -1,5 +1,6 @@
 ﻿using ArkNet.Core;
 using ArkNet.Model;
+using ArkNet.Model.Block;
 using ArkNet.Utils;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -10,33 +11,18 @@ namespace ArkNet.Service
 {
     public class BlockService
     {
-        public static ArkBlock GetById(string id)
+        public static ArkBlockResponse GetById(string id)
         {
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/blocks/get?id=" + id);
-            var parsed = JObject.Parse(response);
 
-            var block = new ArkBlock();
-            if (!Convert.ToBoolean(parsed["success"]))
-            {
-                block.Success = false;
-                block.Error = parsed["error"].ToString();
-            }
-            else
-            {
-                block = JsonConvert.DeserializeObject<ArkBlock>(parsed["block"].ToString());
-            }
-            return block;
+            return JsonConvert.DeserializeObject<ArkBlockResponse>(response);
         }
 
-        public static IEnumerable<ArkBlock> GetAll()
+        public static ArkBlockList GetAll()
         {
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/blocks");
 
-            var parsed = JObject.Parse(response);
-            var array = (JArray)parsed["blocks"];
-
-            var blockList = JsonConvert.DeserializeObject<IReadOnlyCollection<ArkBlock>>(array.ToString());
-            return blockList;
+            return JsonConvert.DeserializeObject<ArkBlockList>(response);
         }
 
         public static DateTime GetEpoch()
@@ -98,6 +84,7 @@ namespace ArkNet.Service
         public static ArkBlockChainStatus GetStatus()
         {
             var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/blocks/getStatus");
+
             return JsonConvert.DeserializeObject<ArkBlockChainStatus>(response);
         }
     }
