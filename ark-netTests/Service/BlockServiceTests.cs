@@ -37,6 +37,15 @@ namespace ArkNetTest.Service
         }
 
         [TestMethod()]
+        public void GetByIdErrorTest()
+        {
+            var block = BlockService.GetById("ErrorId");
+
+            Assert.IsFalse(block.Success);
+            Assert.IsNotNull(block.Error);
+        }
+
+        [TestMethod()]
         public void GetEpoch()
         {
             var epoch = BlockService.GetEpoch();

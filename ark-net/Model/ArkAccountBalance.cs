@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ArkNet.Model
 {
-    public class ArkAccountBalance
+    public class ArkAccountBalance : ArkError
     {
-        public bool Success { get; set; }
         public long Balance { get; set; }
         public long UnconfirmedBalance { get; set; }
     }

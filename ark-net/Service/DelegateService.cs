@@ -27,9 +27,14 @@ namespace ArkNet.Service
 
             var dele = new ArkDelegate();
             if (!Convert.ToBoolean(parsed["success"]))
-                dele.Username = parsed["error"].ToString();
+            {
+                dele.Success = false;
+                dele.Error = parsed["error"].ToString();
+            }
             else
+            {
                 dele = JsonConvert.DeserializeObject<ArkDelegate>(parsed["delegate"].ToString());
+            }
             return dele;
         }
 
@@ -40,9 +45,14 @@ namespace ArkNet.Service
 
             var dele = new ArkDelegate();
             if (!Convert.ToBoolean(parsed["success"]))
-                dele.Username = parsed["error"].ToString();
+            {
+                dele.Success = false;
+                dele.Error = parsed["error"].ToString();
+            }
             else
+            {
                 dele = JsonConvert.DeserializeObject<ArkDelegate>(parsed["delegate"].ToString());
+            }
             return dele;
         }
 
@@ -53,32 +63,23 @@ namespace ArkNet.Service
 
             var dele = new ArkDelegate();
             if (!Convert.ToBoolean(parsed["success"]))
-                dele.Username = parsed["error"].ToString();
+            {
+                dele.Success = false;
+                dele.Error = parsed["error"].ToString();
+            }
             else
+            {
                 dele = JsonConvert.DeserializeObject<ArkDelegate>(parsed["delegate"].ToString());
+            }
             return dele;
         }
 
-        public static IEnumerable<ArkDelegateVoter> GetVoters(string pubKey)
+        public static ArkDelegateVoterCollection GetVoters(string pubKey)
         {
             var response =
                 NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates/voters?publicKey=" + pubKey);
-            var parsed = JObject.Parse(response);
-            var array = (JArray)parsed["accounts"];
 
-            var delegVotersList = new List<ArkDelegateVoter>();
-            if (!Convert.ToBoolean(parsed["success"]))
-            {
-                var dele = new ArkDelegateVoter
-                {
-                    Username = parsed["error"].ToString()
-                };
-            }
-            else
-            {
-                delegVotersList = JsonConvert.DeserializeObject<List<ArkDelegateVoter>>(array.ToString());
-            }
-            return delegVotersList;
+            return JsonConvert.DeserializeObject<ArkDelegateVoterCollection>(response);
         }
 
         public static long GetFee()
@@ -105,7 +106,12 @@ namespace ArkNet.Service
 
         public static long GetTotalVoteArk(string pubKey)
         {
-            return GetVoters(pubKey).Sum(x => x.Balance);
+            var voters = GetVoters(pubKey);
+
+            if (voters.Success)
+                return GetVoters(pubKey).Accounts.Sum(x => x.Balance);
+
+            return 0;
         }
     }
 }

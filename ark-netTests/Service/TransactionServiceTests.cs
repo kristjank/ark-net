@@ -36,6 +36,15 @@ namespace ArkNet.Service.Tests
         }
 
         [TestMethod()]
+        public void GetByIdErrorTest()
+        {
+            var trans = TransactionService.GetById("ErrorId");
+
+            Assert.IsFalse(trans.Success);
+            Assert.IsNotNull(trans.Error);
+        }
+
+        [TestMethod()]
         public void GetUnConfirmedByIdTest()
         {
             var trans = TransactionService.GetUnconfirmedAll();
@@ -46,6 +55,15 @@ namespace ArkNet.Service.Tests
                 var trans1 = TransactionService.GetUnConfirmedById(trans.FirstOrDefault().Id);
                 Assert.IsNotNull(trans1);
             }
+        }
+
+        [TestMethod()]
+        public void GetUnConfirmedByIdErrorTest()
+        {
+            var trans = TransactionService.GetUnConfirmedById("ErrorId");
+
+            Assert.IsFalse(trans.Success);
+            Assert.IsNotNull(trans.Error);
         }
 
         [TestMethod()]

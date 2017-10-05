@@ -96,6 +96,7 @@
   <ItemGroup>
     <Compile Include="ArkNetApi.cs" />
     <Compile Include="Controller\WalletController.cs" />
+    <Compile Include="Model\ArkError.cs" />
     <Compile Include="Model\ArkLoaderNetworkResponse.cs" />
     <Compile Include="Model\ArkLoaderStatusSync.cs" />
     <Compile Include="Model\ArkLoaderStatus.cs" />
@@ -147,7 +148,9 @@
     <EmbeddedResource Include="default.conf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="_CreateNewNuGetPackage\Config.ps1" />
     <None Include="_CreateNewNuGetPackage\DoNotModify\CreateNuGetPackage.ps1" />
     <None Include="_CreateNewNuGetPackage\DoNotModify\New-NuGetPackage.ps1" />

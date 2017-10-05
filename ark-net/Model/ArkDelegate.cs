@@ -1,6 +1,13 @@
-﻿namespace ArkNet.Model
+﻿using System.Collections.Generic;
+
+namespace ArkNet.Model
 {
-    public class ArkDelegate
+    public class ArkDelegateCollection : ArkError
+    {
+        public List<ArkDelegate> Delegates { get; set; }
+    }
+
+    public class ArkDelegate : ArkError
     {
         public string Username { get; set; }
         public string Address { get; set; }

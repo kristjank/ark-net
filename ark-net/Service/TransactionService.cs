@@ -42,9 +42,14 @@ namespace ArkNet.Service
 
             var trans = new ArkTransaction();
             if (!Convert.ToBoolean(parsed["success"]))
-                trans.Id = parsed["error"].ToString();
+            {
+                trans.Success = false;
+                trans.Error = parsed["error"].ToString();
+            }
             else
+            {
                 trans = JsonConvert.DeserializeObject<ArkTransaction>(parsed["transaction"].ToString());
+            }
 
             return trans;
         }
@@ -58,9 +63,14 @@ namespace ArkNet.Service
 
             var trans = new ArkTransaction();
             if (!Convert.ToBoolean(parsed["success"]))
-                trans.Id = parsed["error"].ToString();
+            {
+                trans.Success = false;
+                trans.Error = parsed["error"].ToString();
+            }
             else
+            {
                 trans = JsonConvert.DeserializeObject<ArkTransaction>(parsed["transaction"].ToString());
+            }
 
             return trans;
         }
