@@ -56,7 +56,8 @@ namespace ArkNet.Controller.Tests
         {
             var accCtnrl = new AccountController("ski rose knock live elder parade dose device fetch betray loan holiday");
             var result = accCtnrl.SendArk(1234, "ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K", "Akr.Net test trans from Account");
-            Assert.IsTrue(result.Status);
+
+            Assert.IsTrue(result.Success);
         }
 
         [TestMethod()]
@@ -65,15 +66,14 @@ namespace ArkNet.Controller.Tests
             var dele = DelegateService.GetByUsername("arkpool");
 
             List<string> votes = new List<string>();
-            votes.Add("+" + dele.PublicKey);
+            votes.Add("+" + dele.Delegate.PublicKey);
 
             var a2 = JsonConvert.SerializeObject(votes);
 
             var accCtnrl = new AccountController("ski rose knock live elder parade dose device fetch betray loan holiday");
             var result = accCtnrl.VoteForDelegate(votes);
 
-
-            Assert.IsTrue(result.Status);
+            Assert.IsTrue(result.Success);
         }
 
         [TestMethod()]

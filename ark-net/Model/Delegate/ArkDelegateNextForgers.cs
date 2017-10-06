@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ArkNet.Model
+namespace ArkNet.Model.Delegate
 {
     public class ArkDelegateNextForgers
     {

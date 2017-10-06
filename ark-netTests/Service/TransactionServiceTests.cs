@@ -22,13 +22,13 @@ namespace ArkNet.Service.Tests
         public void GetAllTest()
         {
             var trans = TransactionService.GetAll();
-            Assert.IsNotNull(trans);
+            Assert.IsTrue(trans.Transactions.Count > 0);
         }
 
         [TestMethod()]
         public void GetByIdTest()
         {
-            var trans = TransactionService.GetAll().FirstOrDefault();
+            var trans = TransactionService.GetAll().Transactions.FirstOrDefault();
             Assert.IsNotNull(trans);
 
             var trans1 = TransactionService.GetById(trans.Id);
@@ -50,9 +50,9 @@ namespace ArkNet.Service.Tests
             var trans = TransactionService.GetUnconfirmedAll();
             Assert.IsNotNull(trans);
 
-            if (trans.Any())
+            if (trans.Transactions.Any())
             {
-                var trans1 = TransactionService.GetUnConfirmedById(trans.FirstOrDefault().Id);
+                var trans1 = TransactionService.GetUnConfirmedById(trans.Transactions.FirstOrDefault().Id);
                 Assert.IsNotNull(trans1);
             }
         }

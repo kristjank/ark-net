@@ -23,14 +23,14 @@ namespace ArkNet.Service.Tests
         {
             var delegates = DelegateService.GetAll();
 
-            Assert.IsNotNull(delegates);
+            Assert.IsTrue(delegates.Delegates.Count > 0);
         }
 
         [TestMethod()]
         public void GetByUsernameTest()
         {
             var dele = DelegateService.GetByUsername("arkpool");
-            Assert.AreEqual(dele.Address, "ARAq9nhjCxwpWnGKDgxveAJSijNG8Y6dFQ");
+            Assert.AreEqual(dele.Delegate.Address, "ARAq9nhjCxwpWnGKDgxveAJSijNG8Y6dFQ");
         }
 
         [TestMethod()]
@@ -46,7 +46,7 @@ namespace ArkNet.Service.Tests
         public void GetByPubKeyTest()
         {
             var dele2 = DelegateService.GetByPubKey("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
-            Assert.AreEqual(dele2.Username,"cryptolanka123");
+            Assert.AreEqual(dele2.Delegate.Username,"cryptolanka123");
         }
 
         [TestMethod()]
@@ -62,7 +62,7 @@ namespace ArkNet.Service.Tests
         public void GetByAddressTest()
         {
             var dele = DelegateService.GetByAddress("ARAq9nhjCxwpWnGKDgxveAJSijNG8Y6dFQ");
-            Assert.IsNotNull(dele);
+            Assert.IsNotNull(dele.Delegate);
         }
 
         [TestMethod()]
@@ -79,7 +79,7 @@ namespace ArkNet.Service.Tests
         {
             var dele = DelegateService.GetVoters("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
 
-            Assert.IsNotNull(dele);
+            Assert.IsTrue(dele.Accounts.Count > 0);
         }
 
         [TestMethod()]

@@ -39,7 +39,7 @@ namespace ArkNet.Service.Tests
         {
             var parameters = LoaderService.GetAutoConfigureParameters();
 
-            Assert.IsNotNull(parameters);
+            Assert.IsNotNull(parameters.Network);
         }
     }
 }

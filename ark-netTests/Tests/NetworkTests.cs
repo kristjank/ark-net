@@ -50,7 +50,6 @@ namespace ArkNetTest.Tests
 			File.WriteAllText(@"C:\temp\txNew.json", tx.SerializeObject2JSon());
 			File.WriteAllText(@"C:\temp\txNew.xml", tx.SerializeObject2Xml());
 
-
 			Assert.IsTrue(1 == 1);
 		}
 
@@ -64,7 +63,8 @@ namespace ArkNetTest.Tests
 				"ski rose knock live elder parade dose device fetch betray loan holiday");
 
 			var result = TransactionService.PostTransaction(tx);
-			Assert.IsTrue(result.Status);
+
+			Assert.IsTrue(result.Success);
 		}
 
 		[TestMethod]
@@ -76,6 +76,7 @@ namespace ArkNetTest.Tests
 				"ski rose knock live elder parade dose device fetch betray loan holiday");
 
 			var res = TransactionService.MultipleBroadCast(tx);
+
 			Assert.IsTrue(res > 0);
 		}
 	}

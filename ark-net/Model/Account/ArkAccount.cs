@@ -1,9 +1,10 @@
-﻿using ArkNet.Service;
+﻿using ArkNet.Model.BaseModels;
+using ArkNet.Service;
 using System.Numerics;
 
-namespace ArkNet.Model
+namespace ArkNet.Model.Account
 {
-    public class ArkAccount : ArkError
+    public class ArkAccount
     {
         public string Address { get; set; }
         public long UnconfirmedBalance { get; set; }

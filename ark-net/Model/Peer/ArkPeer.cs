@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace ArkNet.Model
+namespace ArkNet.Model.Peer
 {
     public class ArkPeer
     {
