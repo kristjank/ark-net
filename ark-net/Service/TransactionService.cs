@@ -5,6 +5,7 @@ using ArkNet.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ArkNet.Model.Transactions;
+using ArkNet.Utils;
 
 namespace ArkNet.Service
 {
@@ -12,36 +13,28 @@ namespace ArkNet.Service
     {
         public static ArkTransactionList GetAll()
         {
-            var path = "/api/transactions";
-
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }
 
         public static ArkTransactionList GetUnconfirmedAll()
         {
-            var path = "/api/transactions/unconfirmed";
-
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }
 
         public static ArkTransactionResponse GetById(string id)
         {
-            var path = "/api/transactions";
-
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path + "/get?id=" + id);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID, id));
 
             return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }
 
         public static ArkTransactionResponse GetUnConfirmedById(string id)
         {
-            var path = "/api/transactions/unconfirmed";
-
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", path + "/get?id=" + id);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID_UNCONFIRMED, id));
 
             return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }
@@ -50,7 +43,7 @@ namespace ArkNet.Service
         {
             string body = "{transactions: [" + transaction.ToObject(true) + "]} ";
 
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("POST", "/peer/transactions", body);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.POST, ArkStaticStrings.ArkApiPaths.Transaction.POST, body);
 
             return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }

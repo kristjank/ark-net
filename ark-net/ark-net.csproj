@@ -137,6 +137,7 @@
     <Compile Include="Model\Peer\ArkPeerStatus.cs" />
     <Compile Include="Model\Peer\ArkPeer.cs" />
     <Compile Include="Model\Transactions\ArkTransaction.cs" />
+    <Compile Include="Utils\ArkStaticStrings.cs" />
     <Compile Include="Utils\ArkSettings.cs" />
     <Compile Include="Utils\ArkUtils.cs" />
     <Compile Include="Utils\Base58.cs" />

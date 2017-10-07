@@ -59,22 +59,6 @@ namespace ArkNet.Service.Tests
         }
 
         [TestMethod()]
-        public void GetByAddressTest()
-        {
-            var dele = DelegateService.GetByAddress("ARAq9nhjCxwpWnGKDgxveAJSijNG8Y6dFQ");
-            Assert.IsNotNull(dele.Delegate);
-        }
-
-        [TestMethod()]
-        public void GetByAddressErrorTest()
-        {
-            var dele = DelegateService.GetByAddress("ErrorAddress");
-
-            Assert.IsFalse(dele.Success);
-            Assert.IsNotNull(dele.Error);
-        }
-
-        [TestMethod()]
         public void GetVotersTest()
         {
             var dele = DelegateService.GetVoters("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
