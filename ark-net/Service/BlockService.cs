@@ -13,21 +13,21 @@ namespace ArkNet.Service
     {
         public static ArkBlockResponse GetById(string id)
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/blocks/get?id=" + id);
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Block.GET_BLOCK, id));
 
             return JsonConvert.DeserializeObject<ArkBlockResponse>(response);
         }
 
         public static ArkBlockList GetAll()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/blocks");
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_ALL);
 
             return JsonConvert.DeserializeObject<ArkBlockList>(response);
         }
 
         public static DateTime GetEpoch()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/blocks/getEpoch");
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_EPOCH);
             var parsed = JObject.Parse(response);
 
             return DateTime.Parse(parsed["epoch"].ToString());
@@ -35,7 +35,7 @@ namespace ArkNet.Service
 
         public static long GetHeight()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/blocks/getHeight");
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_HEIGHT);
             var parsed = JObject.Parse(response);
 
             return Int64.Parse(parsed["height"].ToString());
@@ -43,7 +43,7 @@ namespace ArkNet.Service
 
         public static string GetNetHash()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/blocks/getNethash");
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_NETHASH);
             var parsed = JObject.Parse(response);
 
             return parsed["nethash"].ToString();
@@ -51,7 +51,7 @@ namespace ArkNet.Service
 
         public static Fees GetFees()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/blocks/getFees");
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_FEES);
             var parsed = JObject.Parse(response);
 
             return JsonConvert.DeserializeObject<Fees>(parsed["fees"].ToString());
@@ -59,7 +59,7 @@ namespace ArkNet.Service
 
         public static int GetMilestone()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/blocks/getMilestone");
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_MILESTONE);
             var parsed = JObject.Parse(response);
 
             return Int32.Parse(parsed["milestone"].ToString());
@@ -67,7 +67,7 @@ namespace ArkNet.Service
 
         public static int GetReward()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/blocks/getReward");
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_REWARD);
             var parsed = JObject.Parse(response);
 
             return Int32.Parse(parsed["reward"].ToString());
@@ -75,7 +75,7 @@ namespace ArkNet.Service
 
         public static long GetSupply()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/blocks/getSupply");
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_SUPPLY);
             var parsed = JObject.Parse(response);
 
             return Int64.Parse(parsed["supply"].ToString());
@@ -83,7 +83,7 @@ namespace ArkNet.Service
 
         public static ArkBlockChainStatus GetStatus()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/blocks/getStatus");
+            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_STATUS);
 
             return JsonConvert.DeserializeObject<ArkBlockChainStatus>(response);
         }
