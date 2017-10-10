@@ -7,6 +7,7 @@ using ArkNet.Utils;
 using ArkNet.Utils.Enum;
 using JsonConfig;
 using NBitcoin.DataEncoders;
+using ArkNet.Core;
 
 namespace ArkNet
 {
@@ -24,7 +25,7 @@ namespace ArkNet
             
         }
 
-        public void Start(NetworkType type)
+        public async Task Start(NetworkType type)
         {
             switch (type)
             {
@@ -40,6 +41,10 @@ namespace ArkNet
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);
             }
+
+            await NetworkApi.Instance.WarmUp();
+
+            return;
         }
     }
 }

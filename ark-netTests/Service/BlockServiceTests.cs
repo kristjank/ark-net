@@ -16,7 +16,7 @@ namespace ArkNetTest.Service
         [TestInitialize]
         public void Init()
         {
-            ArkNetApi.Instance.Start(NetworkType.MainNet);
+            ArkNetApi.Instance.Start(NetworkType.MainNet).Wait();
         }
 
         [TestMethod()]

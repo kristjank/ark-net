@@ -4,6 +4,7 @@ using ArkNet.Core;
 using ArkNet.Service;
 using ArkNet.Model.Transactions;
 using ArkNet.Model.Account;
+using System.Threading.Tasks;
 
 namespace ArkNet.Controller
 {
@@ -17,11 +18,22 @@ namespace ArkNet.Controller
         {
             _passPhrase = passphrase;
             _secondPassPhrase = secondPassPhrase;
-            _account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(passphrase), ArkNetApi.Instance.NetworkSettings.BytePrefix)).Account;
         }
 
         public ArkAccount GetArkAccount()
         {
+            if (_account == null)
+                _account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), ArkNetApi.Instance.NetworkSettings.BytePrefix)).Account;
+            return _account;
+        }
+
+        public async Task<ArkAccount> GetArkAccountAsync()
+        {
+            if (_account == null)
+            {
+                var accountResponse = await AccountService.GetByAddressAsync(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), ArkNetApi.Instance.NetworkSettings.BytePrefix));
+                _account = accountResponse.Account;
+            }
             return _account;
         }
 
@@ -47,11 +59,30 @@ namespace ArkNet.Controller
             return TransactionService.PostTransaction(tx);
         }
 
+        public async Task<ArkTransactionResponse> SendArkAsync(long satoshiAmount, string recipientAddress,
+            string vendorField)
+        {
+            var tx = TransactionApi.CreateTransaction(recipientAddress,
+                satoshiAmount,
+                vendorField,
+                _passPhrase,
+                _secondPassPhrase);
+
+            return await TransactionService.PostTransactionAsync(tx);
+        }
+
         public ArkTransactionResponse VoteForDelegate(List<string> votes)
         {
             var tx = TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
 
             return TransactionService.PostTransaction(tx);
+        }
+
+        public async Task<ArkTransactionResponse> VoteForDelegateAsync(List<string> votes)
+        {
+            var tx = TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
+
+            return await TransactionService.PostTransactionAsync(tx);
         }
 
         public ArkTransactionResponse RegisterAsDelegate(string username)
@@ -61,9 +92,26 @@ namespace ArkNet.Controller
             return TransactionService.PostTransaction(tx);
         }
 
+        public async Task<ArkTransactionResponse> RegisterAsDelegateAsync(string username)
+        {
+            var tx = TransactionApi.CreateDelegate(username, _passPhrase, _secondPassPhrase);
+
+            return await TransactionService.PostTransactionAsync(tx);
+        }
+
         public bool UpdateBalance()
         {
             var res = AccountService.GetBalance(_account.Address);
+
+            _account.Balance = res.Balance;
+            _account.UnconfirmedBalance = res.UnconfirmedBalance;
+
+            return res.Success;
+        }
+
+        public async Task<bool> UpdateBalanceAsync()
+        {
+            var res = await AccountService.GetBalanceAsync(_account.Address);
 
             _account.Balance = res.Balance;
             _account.UnconfirmedBalance = res.UnconfirmedBalance;
