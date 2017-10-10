@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using JsonConfig;
 using Newtonsoft.Json.Linq;
+using System.Threading.Tasks;
 
 namespace ArkNet.Core
 {
@@ -58,7 +59,7 @@ namespace ArkNet.Core
             this.protocol = protocol;
         }
 
-        public string MakeRequest(string method, string path, string body = "")
+        public async Task<string> MakeRequest(string method, string path, string body = "")
         {
             HttpResponseMessage response;
             var _Method = new HttpMethod(method);
@@ -66,16 +67,16 @@ namespace ArkNet.Core
             switch (_Method.ToString().ToUpper())
             {
                 case "GET":
-                    response = httpClient.GetAsync(path).Result;
+                    response = await httpClient.GetAsync(path);
                     break;
                 case "HEAD":
                     // synchronous request without the need for .ContinueWith() or await
-                    response = httpClient.GetAsync(path).Result;
+                    response = await httpClient.GetAsync(path);
                     break;
                 case "POST":
                 {
                     var jObject = JObject.Parse(body);
-                    response = httpClient.PostAsJsonAsync(path, jObject).Result;
+                    response = await httpClient.PostAsJsonAsync(path, jObject);
                 }
                     break;
                 /*case "PUT":
@@ -97,21 +98,20 @@ namespace ArkNet.Core
                     break;*/
                 default:
                     throw new NotImplementedException();
-                    break;
             }
             // either this - or check the status to retrieve more information
             response.EnsureSuccessStatusCode();
             // get the rest/content of the response in a synchronous way
-            var content = response.Content.ReadAsStringAsync().Result;
+            var content = await response.Content.ReadAsStringAsync();
 
             return content;
         }
 
-        public bool IsOnline()
+        public async Task<bool> IsOnline()
         {
             try
             {
-                MakeRequest("HEAD", "/api/loader/status");
+                await MakeRequest("HEAD", "/api/loader/status");
                 return true;
             }
             catch

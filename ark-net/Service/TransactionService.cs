@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ArkNet.Model.Transactions;
 using ArkNet.Utils;
+using System.Threading.Tasks;
 
 namespace ArkNet.Service
 {
@@ -13,37 +14,62 @@ namespace ArkNet.Service
     {
         public static ArkTransactionList GetAll()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL);
+            return GetAllAsync().Result;
+        }
+
+        public async static Task<ArkTransactionList> GetAllAsync()
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }
 
         public static ArkTransactionList GetUnconfirmedAll()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED);
+            return GetUnconfirmedAllAsync().Result;
+        }
+
+        public async static Task<ArkTransactionList> GetUnconfirmedAllAsync()
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }
 
         public static ArkTransactionResponse GetById(string id)
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID, id));
+            return GetByIdAsync(id).Result;
+        }
+
+        public async static Task<ArkTransactionResponse> GetByIdAsync(string id)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID, id));
 
             return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }
 
         public static ArkTransactionResponse GetUnConfirmedById(string id)
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID_UNCONFIRMED, id));
+            return GetUnConfirmedByIdAsync(id).Result;
+        }
+
+        public async static Task<ArkTransactionResponse> GetUnConfirmedByIdAsync(string id)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID_UNCONFIRMED, id));
 
             return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }
 
         public static ArkTransactionResponse PostTransaction(TransactionApi transaction)
         {
+            return PostTransactionAsync(transaction).Result;
+        }
+
+        public async static Task<ArkTransactionResponse> PostTransactionAsync(TransactionApi transaction)
+        {
             string body = "{transactions: [" + transaction.ToObject(true) + "]} ";
 
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.POST, ArkStaticStrings.ArkApiPaths.Transaction.POST, body);
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.POST, ArkStaticStrings.ArkApiPaths.Transaction.POST, body);
 
             return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }
@@ -55,6 +81,23 @@ namespace ArkNet.Service
             for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
                 var response = PostTransaction(transaction);
+
+                if (response.Success)
+                {
+                    res++;
+                }
+            }
+
+            return res;
+        }
+
+        public async static Task<int> MultipleBroadCastAsync(TransactionApi transaction)
+        {
+            var res = 0;
+
+            for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
+            {
+                var response = await PostTransactionAsync(transaction);
 
                 if (response.Success)
                 {

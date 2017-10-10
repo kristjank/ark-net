@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 namespace ArkNet.Core
 {
@@ -16,7 +17,6 @@ namespace ArkNet.Core
         private NetworkApi()
         {
             peers = new List<PeerApi>();
-            WarmUp();
         }
 
         public static NetworkApi Instance => lazy.Value;
@@ -29,20 +29,17 @@ namespace ArkNet.Core
         public int BroadcastMax { get; set; } = ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts;
         public PeerApi ActivePeer { get; set; }
 
-        private bool WarmUp()
+        public async Task WarmUp()
         {
-            if (peers.Count > 0) return false;
             foreach (var item in ArkNetApi.Instance.NetworkSettings.PeerSeedList)
             {
                 var peer = new PeerApi(item);
                 peers.Add(peer);
-                if (ActivePeer == null && peer.IsOnline())
+                if (ActivePeer == null && await peer.IsOnline())
                 {
                     ActivePeer = peer;
                 }
             }
-
-            return true;
         }
 
         public PeerApi GetRandomPeer()

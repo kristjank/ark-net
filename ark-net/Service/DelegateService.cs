@@ -6,6 +6,7 @@ using Newtonsoft.Json.Linq;
 using System.Linq;
 using ArkNet.Model.Delegate;
 using ArkNet.Utils;
+using System.Threading.Tasks;
 
 namespace ArkNet.Service
 {
@@ -13,35 +14,60 @@ namespace ArkNet.Service
     {
         public static ArkDelegateList GetAll()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Delegate.GET_ALL);
+            return GetAllAsync().Result;
+        }
+
+        public async static Task<ArkDelegateList> GetAllAsync()
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Delegate.GET_ALL);
 
             return JsonConvert.DeserializeObject<ArkDelegateList>(response);
         }
 
         public static ArkDelegateResponse GetByUsername(string username)
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_BY_USERNAME, username));
+            return GetByUsernameAsync(username).Result;
+        }
+
+        public async static Task<ArkDelegateResponse> GetByUsernameAsync(string username)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_BY_USERNAME, username));
 
             return JsonConvert.DeserializeObject<ArkDelegateResponse>(response);
         }
 
         public static ArkDelegateResponse GetByPubKey(string pubKey)
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_BY_PUBLIC_KEY, pubKey));
+            return GetByPubKeyAsync(pubKey).Result;
+        }
+
+        public async static Task<ArkDelegateResponse> GetByPubKeyAsync(string pubKey)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_BY_PUBLIC_KEY, pubKey));
 
             return JsonConvert.DeserializeObject<ArkDelegateResponse>(response);
         }
 
         public static ArkDelegateVoterList GetVoters(string pubKey)
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_VOTERS, pubKey));
+            return GetVotersAsync(pubKey).Result;
+        }
+
+        public async static Task<ArkDelegateVoterList> GetVotersAsync(string pubKey)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_VOTERS, pubKey));
 
             return JsonConvert.DeserializeObject<ArkDelegateVoterList>(response);
         }
 
         public static long GetFee()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Delegate.GET_FEE);
+            return GetFeeAsync().Result;
+        }
+
+        public async static Task<long> GetFeeAsync()
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Delegate.GET_FEE);
             var parsed = JObject.Parse(response);
 
             return Int64.Parse(parsed["fee"].ToString());
@@ -49,14 +75,24 @@ namespace ArkNet.Service
 
         public static ArkDelegateForgedBalance GetForgedByAccount(string pubKey)
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_FORGED, pubKey));
+            return GetForgedByAccountAsync(pubKey).Result;
+        }
+
+        public async static Task<ArkDelegateForgedBalance> GetForgedByAccountAsync(string pubKey)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_FORGED, pubKey));
 
             return JsonConvert.DeserializeObject<ArkDelegateForgedBalance>(response);
         }
 
         public static ArkDelegateNextForgers GetNextForgers()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Delegate.GET_NEXT_FORGERS);
+            return GetNextForgersAsync().Result;
+        }
+
+        public async static Task<ArkDelegateNextForgers> GetNextForgersAsync()
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Delegate.GET_NEXT_FORGERS);
 
             return JsonConvert.DeserializeObject<ArkDelegateNextForgers>(response);
         }
@@ -67,7 +103,19 @@ namespace ArkNet.Service
 
             if (voters.Success)
             {
-                return GetVoters(pubKey).Accounts.Sum(x => x.Balance);
+                return voters.Accounts.Sum(x => x.Balance);
+            }
+
+            return 0;
+        }
+
+        public async static Task<long> GetTotalVoteArkAsync(string pubKey)
+        {
+            var voters = await GetVotersAsync(pubKey);
+
+            if (voters.Success)
+            {
+                return voters.Accounts.Sum(x => x.Balance);
             }
 
             return 0;
