@@ -101,20 +101,22 @@ namespace ArkNet.Controller
 
         public bool UpdateBalance()
         {
-            var res = AccountService.GetBalance(_account.Address);
+            var account = GetArkAccount();
+            var res = AccountService.GetBalance(account.Address);
 
-            _account.Balance = res.Balance;
-            _account.UnconfirmedBalance = res.UnconfirmedBalance;
+            account.Balance = res.Balance;
+            account.UnconfirmedBalance = res.UnconfirmedBalance;
 
             return res.Success;
         }
 
         public async Task<bool> UpdateBalanceAsync()
         {
-            var res = await AccountService.GetBalanceAsync(_account.Address);
+            var account = await GetArkAccountAsync();
+            var res = await AccountService.GetBalanceAsync(account.Address);
 
-            _account.Balance = res.Balance;
-            _account.UnconfirmedBalance = res.UnconfirmedBalance;
+            account.Balance = res.Balance;
+            account.UnconfirmedBalance = res.UnconfirmedBalance;
 
             return res.Success;
         }
