@@ -69,11 +69,17 @@
   <ItemGroup>
     <Compile Include="ArkNetApiTests.cs" />
     <Compile Include="Controller\AccountControllerTests.cs" />
+    <Compile Include="Service\AccountServiceAsyncTests.cs" />
     <Compile Include="Service\AccountServiceTests.cs" />
+    <Compile Include="Service\BlockServiceAsyncTests.cs" />
     <Compile Include="Service\BlockServiceTests.cs" />
+    <Compile Include="Service\DelegateServiceAsyncTests.cs" />
     <Compile Include="Service\DelegateServiceTests.cs" />
+    <Compile Include="Service\LoaderServiceAsyncTests.cs" />
     <Compile Include="Service\LoaderServiceTests.cs" />
+    <Compile Include="Service\PeerServiceAsyncTests.cs" />
     <Compile Include="Service\PeerServiceTests.cs" />
+    <Compile Include="Service\TransactionServiceAsyncTests.cs" />
     <Compile Include="Service\TransactionServiceTests.cs" />
     <Compile Include="Tests\NetworkTests.cs" />
     <Compile Include="Tests\TransactionCryptoTests.cs" />
