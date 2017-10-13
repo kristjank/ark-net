@@ -7,10 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using ArkNet.Utils.Enum;
 
-namespace ArkNet.Service.Tests
+namespace ArkNet.Service.Delegate.Tests
 {
     [TestClass()]
-    public class DelegateServiceTests
+    public class DelegateServiceTests : DelegateServiceTestsBase
     {
         [TestInitialize]
         public void Init()
@@ -23,14 +23,15 @@ namespace ArkNet.Service.Tests
         {
             var delegates = DelegateService.GetAll();
 
-            Assert.IsTrue(delegates.Delegates.Count > 0);
+            GetAllResultTest(delegates);
         }
 
         [TestMethod()]
         public void GetByUsernameTest()
         {
             var dele = DelegateService.GetByUsername("arkpool");
-            Assert.AreEqual(dele.Delegate.Address, "ARAq9nhjCxwpWnGKDgxveAJSijNG8Y6dFQ");
+
+            GetByUsernameResultTest(dele);
         }
 
         [TestMethod()]
@@ -38,15 +39,15 @@ namespace ArkNet.Service.Tests
         {
             var dele = DelegateService.GetByUsername("NonExistingPool");
 
-            Assert.IsFalse(dele.Success);
-            Assert.IsNotNull(dele.Error);
+            GetByUsernameErrorResultTest(dele);
         }
 
         [TestMethod()]
         public void GetByPubKeyTest()
         {
             var dele2 = DelegateService.GetByPubKey("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
-            Assert.AreEqual(dele2.Delegate.Username,"cryptolanka123");
+
+            GetByPubKeyResultTest(dele2);
         }
 
         [TestMethod()]
@@ -54,8 +55,7 @@ namespace ArkNet.Service.Tests
         {
             var dele = DelegateService.GetByPubKey("ErrorKey");
 
-            Assert.IsFalse(dele.Success);
-            Assert.IsNotNull(dele.Error);
+            GetByPubKeyErrorResultTest(dele);
         }
 
         [TestMethod()]
@@ -63,7 +63,7 @@ namespace ArkNet.Service.Tests
         {
             var dele = DelegateService.GetVoters("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
 
-            Assert.IsTrue(dele.Accounts.Count > 0);
+            GetVotersResultTest(dele);
         }
 
         [TestMethod()]
@@ -71,8 +71,7 @@ namespace ArkNet.Service.Tests
         {
             var dele = DelegateService.GetVoters("ErrorKey");
 
-            Assert.IsFalse(dele.Success);
-            Assert.IsNotNull(dele.Error);
+            GetVotersErrorResultTest(dele);
         }
 
         [TestMethod()]
@@ -80,7 +79,7 @@ namespace ArkNet.Service.Tests
         {
             var fee = DelegateService.GetFee();
 
-            Assert.IsNotNull(fee);
+            GetFeeResultTest(fee);
         }
 
         [TestMethod()]
@@ -88,7 +87,7 @@ namespace ArkNet.Service.Tests
         {
             var forgedByAccount = DelegateService.GetForgedByAccount("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
 
-            Assert.IsNotNull(forgedByAccount);
+            GetForgedByAccountResultTest(forgedByAccount);
         }
 
         [TestMethod()]
@@ -96,8 +95,7 @@ namespace ArkNet.Service.Tests
         {
             var forgedByAccount = DelegateService.GetForgedByAccount("ErrorKey");
 
-            Assert.IsFalse(forgedByAccount.Success);
-            Assert.IsNotNull(forgedByAccount.Error);
+            GetForgedByAccountErrorResultTest(forgedByAccount);
         }
 
         [TestMethod()]
@@ -105,7 +103,7 @@ namespace ArkNet.Service.Tests
         {
             var nextForgers = DelegateService.GetNextForgers();
 
-            Assert.IsNotNull(nextForgers);
+            GetNextForgersResultTest(nextForgers);
         }
 
         [TestMethod()]
@@ -113,7 +111,7 @@ namespace ArkNet.Service.Tests
         {
             var totalVoteArk = DelegateService.GetTotalVoteArk("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
 
-            Assert.IsNotNull(totalVoteArk);
+            GetTotalVoteArkResultTest(totalVoteArk);
         }
 
         [TestMethod()]
@@ -121,7 +119,7 @@ namespace ArkNet.Service.Tests
         {
             var totalVoteArk = DelegateService.GetTotalVoteArk("ErrorKey");
 
-            Assert.AreEqual(0, totalVoteArk);
+            GetTotalVoteArkErrorResultTest(totalVoteArk);
         }
     }
 }

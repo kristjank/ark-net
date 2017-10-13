@@ -7,10 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using ArkNet.Utils.Enum;
 
-namespace ArkNet.Service.Tests
+namespace ArkNet.Service.Peer.Tests
 {
     [TestClass()]
-    public class PeerServiceTests
+    public class PeerServiceTests : PeerServiceTestsBase
     {
         [TestInitialize]
         public void Init()
@@ -24,8 +24,7 @@ namespace ArkNet.Service.Tests
             var peers = PeerService.GetAll().Peers.Where(x => x.Status.Equals("OK"));
             var peer = peers.FirstOrDefault();
 
-            Assert.IsNotNull(peer);
-            Assert.IsNotNull(peers);
+            GetAllResultTest(peer);
         }
 
         [TestMethod()]
@@ -33,7 +32,7 @@ namespace ArkNet.Service.Tests
         {
             var peer = PeerService.GetPeerStatus();
 
-            Assert.IsNotNull(peer);
+            GetPeerStatusResultTest(peer);
         }
     }
 }

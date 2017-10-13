@@ -8,10 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArkNetTest.Service
+namespace ArkNet.Service.Block.Tests
 {
     [TestClass()]
-    public class BlockServiceTests
+    public class BlockServiceTests : BlockServiceTestsBase
     {
         [TestInitialize]
         public void Init()
@@ -23,7 +23,8 @@ namespace ArkNetTest.Service
         public void GetAllTest()
         {
             var blocks = BlockService.GetAll();
-            Assert.IsTrue(blocks.Blocks.Count > 0);
+
+            GetAllResultTest(blocks);
         }
 
         [TestMethod()]
@@ -33,7 +34,8 @@ namespace ArkNetTest.Service
             Assert.IsNotNull(block);
 
             var block1 = BlockService.GetById(block.Id);
-            Assert.IsNotNull(block1.Block);
+
+            GetByIdResultTest(block1);
         }
 
         [TestMethod()]
@@ -41,57 +43,63 @@ namespace ArkNetTest.Service
         {
             var block = BlockService.GetById("ErrorId");
 
-            Assert.IsFalse(block.Success);
-            Assert.IsNotNull(block.Error);
+            GetByIdErrorResultTest(block);
         }
 
         [TestMethod()]
-        public void GetEpoch()
+        public void GetEpochTest()
         {
             var epoch = BlockService.GetEpoch();
-            Assert.IsNotNull(epoch);
+
+            GetEpochResultTest(epoch);
         }
 
         [TestMethod()]
-        public void GetHeight()
+        public void GetHeightTest()
         {
             var height = BlockService.GetHeight();
-            Assert.IsNotNull(height);
+
+            GetHeightResultTest(height);
         }
 
         [TestMethod()]
-        public void GetNetHash()
+        public void GetNetHashTest()
         {
             var netHash = BlockService.GetNetHash();
-            Assert.IsNotNull(netHash);
+
+            GetNetHashResultTest(netHash);
         }
 
         [TestMethod()]
-        public void GetFees()
+        public void GetFeesTest()
         {
             var fees = BlockService.GetFees();
-            Assert.IsNotNull(fees);
+
+            GetFeesResultTest(fees);
         }
 
         [TestMethod()]
-        public void GetMilestone()
+        public void GetMilestoneTest()
         {
             var milestone = BlockService.GetMilestone();
-            Assert.IsNotNull(milestone);
+
+            GetMilestoneResultTest(milestone);
         }
 
         [TestMethod()]
-        public void GetReward()
+        public void GetRewardTest()
         {
             var reward = BlockService.GetReward();
-            Assert.IsNotNull(reward);
+
+            GetRewardResultTest(reward);
         }
 
         [TestMethod()]
-        public void GetStatus()
+        public void GetStatusTest()
         {
             var status = BlockService.GetStatus();
-            Assert.IsNotNull(status);
+
+            GetStatusResultTest(status);
         }
     }
 }
