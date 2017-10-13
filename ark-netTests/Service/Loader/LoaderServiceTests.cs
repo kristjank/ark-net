@@ -7,10 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using ArkNet.Utils.Enum;
 
-namespace ArkNet.Service.Tests
+namespace ArkNet.Service.Loader.Tests
 {
     [TestClass()]
-    public class LoaderServiceTests
+    public class LoaderServiceTests : LoaderServiceTestsBase
     {
         [TestInitialize]
         public void Init()
@@ -23,7 +23,7 @@ namespace ArkNet.Service.Tests
         {
             var status = LoaderService.GetStatus();
 
-            Assert.IsNotNull(status);
+            GetStatusResultTest(status);
         }
 
         [TestMethod()]
@@ -31,7 +31,7 @@ namespace ArkNet.Service.Tests
         {
             var syncStatus = LoaderService.GetSyncStatus();
 
-            Assert.IsNotNull(syncStatus);
+            GetSyncStatusResultTest(syncStatus);
         }
 
         [TestMethod()]
@@ -39,7 +39,7 @@ namespace ArkNet.Service.Tests
         {
             var parameters = LoaderService.GetAutoConfigureParameters();
 
-            Assert.IsNotNull(parameters.Network);
+            GetAutoConfigureParametersResultTest(parameters);
         }
     }
 }

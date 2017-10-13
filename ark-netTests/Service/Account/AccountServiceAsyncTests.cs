@@ -7,10 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using ArkNet.Utils.Enum;
 
-namespace ArkNet.Service.Tests
+namespace ArkNet.Service.Account.Tests
 {
     [TestClass()]
-    public class AccountServiceAsyncTests
+    public class AccountServiceAsyncTests : AccountServiceTestsBase
     {
         [TestInitialize]
         public async Task Init()
@@ -23,11 +23,7 @@ namespace ArkNet.Service.Tests
         {
             var account = await AccountService.GetByAddressAsync("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK");
 
-            Assert.IsNotNull(account);
-            Assert.IsNotNull(account.Account);
-            Assert.IsTrue(account.Success);
-            Assert.IsNull(account.Error);
-            Assert.AreEqual("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK", account.Account.Address);
+            GetByAddressResultTest(account);
         }
 
         [TestMethod()]
@@ -35,10 +31,7 @@ namespace ArkNet.Service.Tests
         {
             var account = await AccountService.GetByAddressAsync("BadAddress");
 
-            Assert.IsNotNull(account);
-            Assert.IsNull(account.Account);
-            Assert.IsFalse(account.Success);
-            Assert.IsNotNull(account.Error);
+            GetByAddressErrorResultTest(account);
         }
 
         [TestMethod()]
@@ -46,9 +39,7 @@ namespace ArkNet.Service.Tests
         {
             var res = await AccountService.GetBalanceAsync("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK");
 
-            Assert.IsNotNull(res);
-            Assert.IsTrue(res.Success);
-            Assert.IsNull(res.Error);
+            GetBalanceResultTest(res);
         }
 
         [TestMethod()]
@@ -56,9 +47,7 @@ namespace ArkNet.Service.Tests
         {
             var res = await AccountService.GetBalanceAsync("BadAddress");
 
-            Assert.IsNotNull(res);
-            Assert.IsFalse(res.Success);
-            Assert.IsNotNull(res.Error);
+            GetBalanceErrorResultTest(res);
         }
 
         [TestMethod()]
@@ -66,10 +55,7 @@ namespace ArkNet.Service.Tests
         {
             var delegates = await AccountService.GetDelegatesAsync("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK");
 
-            Assert.IsNotNull(delegates);
-            Assert.IsNotNull(delegates.Delegates);
-            Assert.IsTrue(delegates.Success);
-            Assert.IsNull(delegates.Error);
+            GetDelegatesResultTest(delegates);
         }
 
         [TestMethod()]
@@ -77,10 +63,7 @@ namespace ArkNet.Service.Tests
         {
             var delegates = await AccountService.GetDelegatesAsync("BadAddress");
 
-            Assert.IsNotNull(delegates);
-            Assert.IsNull(delegates.Delegates);
-            Assert.IsFalse(delegates.Success);
-            Assert.IsNotNull(delegates.Error);
+            GetDelegatesErrorResultTest(delegates);
         }
 
         [TestMethod()]
@@ -88,11 +71,7 @@ namespace ArkNet.Service.Tests
         {
             var top = await AccountService.GetTopAsync(null, null);
 
-            Assert.IsNotNull(top);
-            Assert.IsNotNull(top.Accounts);
-            Assert.IsTrue(top.Success);
-            Assert.IsNull(top.Error);
-            Assert.AreEqual(100, top.Accounts.Count);
+            GetTopResultTest(top);
         }
 
         [TestMethod()]
@@ -100,11 +79,7 @@ namespace ArkNet.Service.Tests
         {
             var top = await AccountService.GetTopAsync(10, null);
 
-            Assert.IsNotNull(top);
-            Assert.IsNotNull(top.Accounts);
-            Assert.IsTrue(top.Success);
-            Assert.IsNull(top.Error);
-            Assert.AreEqual(10, top.Accounts.Count);
+            GetTopLimitResultTest(top);
         }
 
         [TestMethod()]
@@ -112,11 +87,7 @@ namespace ArkNet.Service.Tests
         {
             var top = await AccountService.GetTopAsync(null, 50);
 
-            Assert.IsNotNull(top);
-            Assert.IsNotNull(top.Accounts);
-            Assert.IsTrue(top.Success);
-            Assert.IsNull(top.Error);
-            Assert.AreEqual(100, top.Accounts.Count);
+            GetTopRecordsToSkipResultTest(top);
         }
 
         [TestMethod()]
@@ -124,11 +95,7 @@ namespace ArkNet.Service.Tests
         {
             var top = await AccountService.GetTopAsync(10, 50);
 
-            Assert.IsNotNull(top);
-            Assert.IsNotNull(top.Accounts);
-            Assert.IsTrue(top.Success);
-            Assert.IsNull(top.Error);
-            Assert.AreEqual(10, top.Accounts.Count);
+            GetTopLimitAndRecordsToSkipResultTest(top);
         }
 
         [TestMethod()]
@@ -136,9 +103,7 @@ namespace ArkNet.Service.Tests
         {
             var top = await AccountService.GetTopAsync(1000, null);
 
-            Assert.IsNotNull(top);
-            Assert.IsFalse(top.Success);
-            Assert.IsNotNull(top.Error);
+            GetTopLimitErrorResultTest(top);
         }
     }
 }

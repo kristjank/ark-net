@@ -8,10 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArkNetTest.Service
+namespace ArkNet.Service.Block.Tests
 {
     [TestClass()]
-    public class BlockServiceAsyncTests
+    public class BlockServiceAsyncTests : BlockServiceTestsBase
     {
         [TestInitialize]
         public async Task Init()
@@ -24,11 +24,7 @@ namespace ArkNetTest.Service
         {
             var blocks = await BlockService.GetAllAsync();
 
-            Assert.IsNotNull(blocks);
-            Assert.IsNotNull(blocks.Blocks);
-            Assert.IsTrue(blocks.Success);
-            Assert.IsNull(blocks.Error);
-            Assert.IsTrue(blocks.Blocks.Count > 0);
+            GetAllResultTest(blocks);
         }
 
         [TestMethod()]
@@ -44,10 +40,7 @@ namespace ArkNetTest.Service
             Assert.IsNotNull(block);
 
             var block1 = BlockService.GetById(block.Id);
-            Assert.IsNotNull(block1);
-            Assert.IsTrue(block1.Success);
-            Assert.IsNull(block1.Error);
-            Assert.IsNotNull(block1.Block);
+            GetByIdResultTest(block1);
         }
 
         [TestMethod()]
@@ -55,52 +48,55 @@ namespace ArkNetTest.Service
         {
             var block = await BlockService.GetByIdAsync("ErrorId");
 
-            Assert.IsNotNull(block);
-            Assert.IsFalse(block.Success);
-            Assert.IsNotNull(block.Error);
+            GetByIdErrorResultTest(block);
         }
 
         [TestMethod()]
         public async Task GetEpochAsyncTest()
         {
             var epoch = await BlockService.GetEpochAsync();
-            Assert.AreNotEqual(DateTime.MinValue, epoch);
-            Assert.AreEqual(636256980000000000, epoch.Ticks);
+
+            GetEpochResultTest(epoch);
         }
 
         [TestMethod()]
         public async Task GetHeightAsyncTest()
         {
             var height = await BlockService.GetHeightAsync();
-            Assert.AreNotEqual(0, height);
+
+            GetHeightResultTest(height);
         }
 
         [TestMethod()]
         public async Task GetNetHashAsyncTest()
         {
             var netHash = await BlockService.GetNetHashAsync();
-            Assert.IsNotNull(netHash);
+
+            GetNetHashResultTest(netHash);
         }
 
         [TestMethod()]
         public async Task GetFeesAsyncTest()
         {
             var fees = await BlockService.GetFeesAsync();
-            Assert.IsNotNull(fees);
+
+            GetFeesResultTest(fees);
         }
 
         [TestMethod()]
         public async Task GetMilestone()
         {
             var milestone = await BlockService.GetMilestoneAsync();
-            Assert.IsNotNull(milestone);
+
+            GetMilestoneResultTest(milestone);
         }
 
         [TestMethod()]
         public async Task GetReward()
         {
             var reward = await BlockService.GetRewardAsync();
-            Assert.AreNotEqual(0, reward);
+
+            GetRewardResultTest(reward);
         }
 
         [TestMethod()]
@@ -108,9 +104,7 @@ namespace ArkNetTest.Service
         {
             var status = await BlockService.GetStatusAsync();
 
-            Assert.IsNotNull(status);
-            Assert.IsTrue(status.Success);
-            Assert.IsNull(status.Error);
+            GetStatusResultTest(status);
         }
     }
 }

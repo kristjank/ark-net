@@ -7,10 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using ArkNet.Utils.Enum;
 
-namespace ArkNet.Service.Tests
+namespace ArkNet.Service.Account.Tests
 {
     [TestClass()]
-    public class AccountServiceTests
+    public class AccountServiceTests : AccountServiceTestsBase
     {
         [TestInitialize]
         public void Init()
@@ -23,8 +23,7 @@ namespace ArkNet.Service.Tests
         {
             var account = AccountService.GetByAddress("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK");
 
-            Assert.IsNotNull(account);
-            Assert.IsTrue(account.Success);
+            GetByAddressResultTest(account);
         }
 
         [TestMethod()]
@@ -32,8 +31,7 @@ namespace ArkNet.Service.Tests
         {
             var account = AccountService.GetByAddress("BadAddress");
 
-            Assert.IsFalse(account.Success);
-            Assert.IsNotNull(account.Error);
+            GetByAddressErrorResultTest(account);
         }
 
         [TestMethod()]
@@ -41,7 +39,7 @@ namespace ArkNet.Service.Tests
         {
             var res = AccountService.GetBalance("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK");
 
-            Assert.IsTrue(res.Success);
+            GetBalanceResultTest(res);
         }
 
         [TestMethod()]
@@ -49,8 +47,7 @@ namespace ArkNet.Service.Tests
         {
             var res = AccountService.GetBalance("BadAddress");
 
-            Assert.IsFalse(res.Success);
-            Assert.IsNotNull(res.Error);
+            GetBalanceErrorResultTest(res);
         }
 
         [TestMethod()]
@@ -58,7 +55,7 @@ namespace ArkNet.Service.Tests
         {
             var delegates = AccountService.GetDelegates("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK");
 
-            Assert.IsNotNull(delegates);
+            GetDelegatesResultTest(delegates);
         }
 
         [TestMethod()]
@@ -66,8 +63,7 @@ namespace ArkNet.Service.Tests
         {
             var delegates = AccountService.GetDelegates("BadAddress");
 
-            Assert.IsFalse(delegates.Success);
-            Assert.IsNotNull(delegates.Error);
+            GetDelegatesErrorResultTest(delegates);
         }
 
         [TestMethod()]
@@ -75,7 +71,7 @@ namespace ArkNet.Service.Tests
         {
             var top = AccountService.GetTop(null, null);
 
-            Assert.IsNotNull(top);
+            GetTopResultTest(top);
         }
 
         [TestMethod()]
@@ -83,7 +79,7 @@ namespace ArkNet.Service.Tests
         {
             var top = AccountService.GetTop(10, null);
 
-            Assert.IsNotNull(top);
+            GetTopLimitResultTest(top);
         }
 
         [TestMethod()]
@@ -91,7 +87,7 @@ namespace ArkNet.Service.Tests
         {
             var top = AccountService.GetTop(null, 50);
 
-            Assert.IsNotNull(top);
+            GetTopRecordsToSkipResultTest(top);
         }
 
         [TestMethod()]
@@ -99,7 +95,7 @@ namespace ArkNet.Service.Tests
         {
             var top = AccountService.GetTop(10, 50);
 
-            Assert.IsNotNull(top);
+            GetTopLimitAndRecordsToSkipResultTest(top);
         }
 
         [TestMethod()]
@@ -107,8 +103,7 @@ namespace ArkNet.Service.Tests
         {
             var top = AccountService.GetTop(1000, null);
 
-            Assert.IsFalse(top.Success);
-            Assert.IsNotNull(top.Error);
+            GetTopLimitErrorResultTest(top);
         }
     }
 }

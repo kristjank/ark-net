@@ -7,10 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using ArkNet.Utils.Enum;
 
-namespace ArkNet.Service.Tests
+namespace ArkNet.Service.Delegate.Tests
 {
     [TestClass()]
-    public class DelegateServiceAsyncTests
+    public class DelegateServiceAsyncTests : DelegateServiceTestsBase
     {
         [TestInitialize]
         public async Task Init()
@@ -23,11 +23,7 @@ namespace ArkNet.Service.Tests
         {
             var delegates = await DelegateService.GetAllAsync();
 
-            Assert.IsNotNull(delegates);
-            Assert.IsNotNull(delegates.Delegates);
-            Assert.IsTrue(delegates.Success);
-            Assert.IsNull(delegates.Error);
-            Assert.IsTrue(delegates.Delegates.Count > 0);
+            GetAllResultTest(delegates);
         }
 
         [TestMethod()]
@@ -35,11 +31,7 @@ namespace ArkNet.Service.Tests
         {
             var dele = await DelegateService.GetByUsernameAsync("arkpool");
 
-            Assert.IsNotNull(dele);
-            Assert.IsNotNull(dele.Delegate);
-            Assert.IsTrue(dele.Success);
-            Assert.IsNull(dele.Error);
-            Assert.AreEqual(dele.Delegate.Address, "ARAq9nhjCxwpWnGKDgxveAJSijNG8Y6dFQ");
+            GetByUsernameResultTest(dele);
         }
 
         [TestMethod()]
@@ -47,10 +39,7 @@ namespace ArkNet.Service.Tests
         {
             var dele = await DelegateService.GetByUsernameAsync("NonExistingPool");
 
-            Assert.IsNotNull(dele);
-            Assert.IsNull(dele.Delegate);
-            Assert.IsFalse(dele.Success);
-            Assert.IsNotNull(dele.Error);
+            GetByUsernameErrorResultTest(dele);
         }
 
         [TestMethod()]
@@ -58,11 +47,7 @@ namespace ArkNet.Service.Tests
         {
             var dele2 = await DelegateService.GetByPubKeyAsync("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
 
-            Assert.IsNotNull(dele2);
-            Assert.IsNotNull(dele2.Delegate);
-            Assert.IsTrue(dele2.Success);
-            Assert.IsNull(dele2.Error);
-            Assert.AreEqual(dele2.Delegate.Username,"cryptolanka123");
+            GetByPubKeyResultTest(dele2);
         }
 
         [TestMethod()]
@@ -70,10 +55,7 @@ namespace ArkNet.Service.Tests
         {
             var dele = await DelegateService.GetByPubKeyAsync("ErrorKey");
 
-            Assert.IsNotNull(dele);
-            Assert.IsNull(dele.Delegate);
-            Assert.IsFalse(dele.Success);
-            Assert.IsNotNull(dele.Error);
+            GetByPubKeyErrorResultTest(dele);
         }
 
         [TestMethod()]
@@ -81,11 +63,7 @@ namespace ArkNet.Service.Tests
         {
             var dele = await DelegateService.GetVotersAsync("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
 
-            Assert.IsNotNull(dele);
-            Assert.IsNotNull(dele.Accounts);
-            Assert.IsTrue(dele.Success);
-            Assert.IsNull(dele.Error);
-            Assert.IsTrue(dele.Accounts.Count > 0);
+            GetVotersResultTest(dele);
         }
 
         [TestMethod()]
@@ -93,10 +71,7 @@ namespace ArkNet.Service.Tests
         {
             var dele = await DelegateService.GetVotersAsync("ErrorKey");
 
-            Assert.IsNotNull(dele);
-            Assert.IsNull(dele.Accounts);
-            Assert.IsFalse(dele.Success);
-            Assert.IsNotNull(dele.Error);
+            GetVotersErrorResultTest(dele);
         }
 
         [TestMethod()]
@@ -104,7 +79,7 @@ namespace ArkNet.Service.Tests
         {
             var fee = await DelegateService.GetFeeAsync();
 
-            Assert.IsTrue(fee > 0);
+            GetFeeResultTest(fee);
         }
 
         [TestMethod()]
@@ -112,9 +87,7 @@ namespace ArkNet.Service.Tests
         {
             var forgedByAccount = await DelegateService.GetForgedByAccountAsync("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
 
-            Assert.IsNotNull(forgedByAccount);
-            Assert.IsTrue(forgedByAccount.Success);
-            Assert.IsNull(forgedByAccount.Error);
+            GetForgedByAccountResultTest(forgedByAccount);
         }
 
         [TestMethod()]
@@ -122,9 +95,7 @@ namespace ArkNet.Service.Tests
         {
             var forgedByAccount = await DelegateService.GetForgedByAccountAsync("ErrorKey");
 
-            Assert.IsNotNull(forgedByAccount);
-            Assert.IsFalse(forgedByAccount.Success);
-            Assert.IsNotNull(forgedByAccount.Error);
+            GetForgedByAccountErrorResultTest(forgedByAccount);
         }
 
         [TestMethod()]
@@ -132,8 +103,7 @@ namespace ArkNet.Service.Tests
         {
             var nextForgers = await DelegateService.GetNextForgersAsync();
 
-            Assert.IsNotNull(nextForgers);
-            Assert.IsNotNull(nextForgers.Delegates);
+            GetNextForgersResultTest(nextForgers);
         }
 
         [TestMethod()]
@@ -141,7 +111,7 @@ namespace ArkNet.Service.Tests
         {
             var totalVoteArk = await DelegateService.GetTotalVoteArkAsync("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
 
-            Assert.IsNotNull(totalVoteArk);
+            GetTotalVoteArkResultTest(totalVoteArk);
         }
 
         [TestMethod()]
@@ -149,7 +119,7 @@ namespace ArkNet.Service.Tests
         {
             var totalVoteArk = await DelegateService.GetTotalVoteArkAsync("ErrorKey");
 
-            Assert.AreEqual(0, totalVoteArk);
+            GetTotalVoteArkErrorResultTest(totalVoteArk);
         }
     }
 }

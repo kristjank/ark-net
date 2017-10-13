@@ -7,10 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using ArkNet.Utils.Enum;
 
-namespace ArkNet.Service.Tests
+namespace ArkNet.Service.Transaction.Tests
 {
     [TestClass()]
-    public class TransactionServiceAsyncTests
+    public class TransactionServiceAsyncTests : TransactionServiceTestsBase
     {
         [TestInitialize]
         public async Task Init()
@@ -23,11 +23,7 @@ namespace ArkNet.Service.Tests
         {
             var trans = await TransactionService.GetAllAsync();
 
-            Assert.IsNotNull(trans);
-            Assert.IsNotNull(trans.Transactions);
-            Assert.IsTrue(trans.Success);
-            Assert.IsNull(trans.Error);
-            Assert.IsTrue(trans.Transactions.Count > 0);
+            GetAllResultTest(trans);
         }
 
         [TestMethod()]
@@ -38,7 +34,8 @@ namespace ArkNet.Service.Tests
             Assert.IsNotNull(transaction);
 
             var trans1 = TransactionService.GetById(transaction.Id);
-            Assert.IsNotNull(trans1);
+
+            GetByIdResultTest(trans1);
         }
 
         [TestMethod()]
@@ -46,10 +43,7 @@ namespace ArkNet.Service.Tests
         {
             var trans = await TransactionService.GetByIdAsync("ErrorId");
 
-            Assert.IsNotNull(trans);
-            Assert.IsNull(trans.Transaction);
-            Assert.IsFalse(trans.Success);
-            Assert.IsNotNull(trans.Error);
+            GetByIdErrorResultTest(trans);
         }
 
         [TestMethod()]
@@ -61,7 +55,7 @@ namespace ArkNet.Service.Tests
             if (trans.Transactions.Any())
             {
                 var trans1 = await TransactionService.GetUnConfirmedByIdAsync(trans.Transactions.FirstOrDefault().Id);
-                Assert.IsNotNull(trans1);
+                GetUnConfirmedByIdResultTest(trans1);
             }
         }
 
@@ -70,17 +64,15 @@ namespace ArkNet.Service.Tests
         {
             var trans = await TransactionService.GetUnConfirmedByIdAsync("ErrorId");
 
-            Assert.IsNotNull(trans);
-            Assert.IsNull(trans.Transaction);
-            Assert.IsFalse(trans.Success);
-            Assert.IsNotNull(trans.Error);
+            GetUnConfirmedByIdErrorResultTest(trans);
         }
 
         [TestMethod()]
         public async Task GetUnconfirmedAllAsyncTest()
         {
             var trans = await TransactionService.GetUnconfirmedAllAsync();
-            Assert.IsNotNull(trans);
+
+            GetUnconfirmedAllResultTest(trans);
         }
     }
 }

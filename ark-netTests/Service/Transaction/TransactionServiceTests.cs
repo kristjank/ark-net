@@ -7,10 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using ArkNet.Utils.Enum;
 
-namespace ArkNet.Service.Tests
+namespace ArkNet.Service.Transaction.Tests
 {
     [TestClass()]
-    public class TransactionServiceTests
+    public class TransactionServiceTests : TransactionServiceTestsBase
     {
         [TestInitialize]
         public void Init()
@@ -22,7 +22,8 @@ namespace ArkNet.Service.Tests
         public void GetAllTest()
         {
             var trans = TransactionService.GetAll();
-            Assert.IsTrue(trans.Transactions.Count > 0);
+
+            GetAllResultTest(trans);
         }
 
         [TestMethod()]
@@ -32,7 +33,8 @@ namespace ArkNet.Service.Tests
             Assert.IsNotNull(trans);
 
             var trans1 = TransactionService.GetById(trans.Id);
-            Assert.IsNotNull(trans1);
+
+            GetByIdResultTest(trans1);
         }
 
         [TestMethod()]
@@ -40,8 +42,7 @@ namespace ArkNet.Service.Tests
         {
             var trans = TransactionService.GetById("ErrorId");
 
-            Assert.IsFalse(trans.Success);
-            Assert.IsNotNull(trans.Error);
+            GetByIdErrorResultTest(trans);
         }
 
         [TestMethod()]
@@ -53,7 +54,7 @@ namespace ArkNet.Service.Tests
             if (trans.Transactions.Any())
             {
                 var trans1 = TransactionService.GetUnConfirmedById(trans.Transactions.FirstOrDefault().Id);
-                Assert.IsNotNull(trans1);
+                GetUnConfirmedByIdResultTest(trans1);
             }
         }
 
@@ -62,15 +63,15 @@ namespace ArkNet.Service.Tests
         {
             var trans = TransactionService.GetUnConfirmedById("ErrorId");
 
-            Assert.IsFalse(trans.Success);
-            Assert.IsNotNull(trans.Error);
+            GetUnConfirmedByIdErrorResultTest(trans);
         }
 
         [TestMethod()]
         public void GetUnconfirmedAllTest()
         {
             var trans = TransactionService.GetUnconfirmedAll();
-            Assert.IsNotNull(trans);
+
+            GetUnconfirmedAllResultTest(trans);
         }
     }
 }
