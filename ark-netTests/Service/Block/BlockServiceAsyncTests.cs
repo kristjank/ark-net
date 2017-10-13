@@ -16,7 +16,7 @@ namespace ArkNet.Service.Block.Tests
         [TestInitialize]
         public async Task Init()
         {
-            await ArkNetApi.Instance.Start(NetworkType.MainNet);
+            await base.InitializeAsync();
         }
 
         [TestMethod()]

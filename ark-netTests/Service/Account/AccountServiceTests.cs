@@ -15,13 +15,13 @@ namespace ArkNet.Service.Account.Tests
         [TestInitialize]
         public void Init()
         {
-            ArkNetApi.Instance.Start(NetworkType.MainNet).Wait();
+            base.InitializeAccountServiceTest();
         }
 
         [TestMethod()]
         public void GetByAddressTest()
         {
-            var account = AccountService.GetByAddress("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK");
+            var account = AccountService.GetByAddress(_address);
 
             GetByAddressResultTest(account);
         }
@@ -37,7 +37,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public void GetBalanceTest()
         {
-            var res = AccountService.GetBalance("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK");
+            var res = AccountService.GetBalance(_address);
 
             GetBalanceResultTest(res);
         }
@@ -53,7 +53,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public void GetDelegatesTest()
         {
-            var delegates = AccountService.GetDelegates("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK");
+            var delegates = AccountService.GetDelegates(_address);
 
             GetDelegatesResultTest(delegates);
         }

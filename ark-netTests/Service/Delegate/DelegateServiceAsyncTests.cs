@@ -15,7 +15,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestInitialize]
         public async Task Init()
         {
-            await ArkNetApi.Instance.Start(NetworkType.MainNet);
+            await base.InitializeDelegateServiceAsyncTest();
         }
 
         [TestMethod()]
@@ -29,7 +29,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetByUsernameAsyncTest()
         {
-            var dele = await DelegateService.GetByUsernameAsync("arkpool");
+            var dele = await DelegateService.GetByUsernameAsync(_userName);
 
             GetByUsernameResultTest(dele);
         }
@@ -45,7 +45,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetByPubKeyAsyncTest()
         {
-            var dele2 = await DelegateService.GetByPubKeyAsync("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
+            var dele2 = await DelegateService.GetByPubKeyAsync(_pubKey);
 
             GetByPubKeyResultTest(dele2);
         }
@@ -61,7 +61,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetVotersAsyncTest()
         {
-            var dele = await DelegateService.GetVotersAsync("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
+            var dele = await DelegateService.GetVotersAsync(_pubKey);
 
             GetVotersResultTest(dele);
         }
@@ -85,7 +85,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetForgedByAccountAsyncTest()
         {
-            var forgedByAccount = await DelegateService.GetForgedByAccountAsync("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
+            var forgedByAccount = await DelegateService.GetForgedByAccountAsync(_pubKey);
 
             GetForgedByAccountResultTest(forgedByAccount);
         }
@@ -109,7 +109,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetTotalVoteArkAsyncTest()
         {
-            var totalVoteArk = await DelegateService.GetTotalVoteArkAsync("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
+            var totalVoteArk = await DelegateService.GetTotalVoteArkAsync(_pubKey);
 
             GetTotalVoteArkResultTest(totalVoteArk);
         }

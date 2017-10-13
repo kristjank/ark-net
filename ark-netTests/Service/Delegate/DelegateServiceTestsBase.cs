@@ -10,11 +10,42 @@ using ArkNet.Model.Account;
 using ArkNet.Model.Delegate;
 using ArkNet.Model.Block;
 using ArkNet.Utils;
+using ArkNet.Tests;
 
 namespace ArkNet.Service.Delegate.Tests
 {
-    public class DelegateServiceTestsBase
+    public class DelegateServiceTestsBase : TestsBase
     {
+        protected string _userName = "arkpool";
+        protected string _resultUserNameFromPubKey = "cryptolanka123";
+        protected string _pubKey = "022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a";
+        protected string _address = "ARAq9nhjCxwpWnGKDgxveAJSijNG8Y6dFQ";
+
+        public void InitializeDelegateServiceTest()
+        {
+            base.Initialize();
+
+            Setup();
+        }
+
+        public async Task InitializeDelegateServiceAsyncTest()
+        {
+            await base.InitializeAsync();
+
+            Setup();
+        }
+
+        private void Setup()
+        {
+            if (USE_DEV_NET)
+            {
+                _userName = "darkjarunik";
+                _resultUserNameFromPubKey = "d_chris";
+                _pubKey = "02bcfa0951a92e7876db1fb71996a853b57f996972ed059a950d910f7d541706c9";
+                _address = "DBi2HdDY8TqMCD2aFLVomEF92gzeDmEHmR";
+            }
+        }
+
         public void GetAllResultTest(ArkDelegateList delegates)
         {
             Assert.IsNotNull(delegates);
@@ -30,7 +61,7 @@ namespace ArkNet.Service.Delegate.Tests
             Assert.IsNotNull(dele.Delegate);
             Assert.IsTrue(dele.Success);
             Assert.IsNull(dele.Error);
-            Assert.AreEqual(dele.Delegate.Address, "ARAq9nhjCxwpWnGKDgxveAJSijNG8Y6dFQ");
+            Assert.AreEqual(dele.Delegate.Address, _address);
         }
 
         public void GetByUsernameErrorResultTest(ArkDelegateResponse dele)
@@ -47,7 +78,7 @@ namespace ArkNet.Service.Delegate.Tests
             Assert.IsNotNull(dele2.Delegate);
             Assert.IsTrue(dele2.Success);
             Assert.IsNull(dele2.Error);
-            Assert.AreEqual(dele2.Delegate.Username, "cryptolanka123");
+            Assert.AreEqual(dele2.Delegate.Username, _resultUserNameFromPubKey);
         }
 
         public void GetByPubKeyErrorResultTest(ArkDelegateResponse dele)

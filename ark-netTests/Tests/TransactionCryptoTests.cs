@@ -6,32 +6,46 @@ using ArkNet.Utils.Enum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NBitcoin;
 using NBitcoin.DataEncoders;
+using ArkNet.Tests;
 
 namespace ArkNetTest.Tests
 {
 	[TestClass]
-	public class TransactionCryptoTests
+	public class TransactionCryptoTests : TestsBase
 	{
-	    [TestInitialize]
+        private string _passPhrase = "this is a top secret passphrase";
+        private string _address = "AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25";
+        private string _addressFromCrypto = "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC";
+        private string _pubKey = "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192";
+
+        [TestInitialize]
 	    public void Init()
 	    {
-	        ArkNetApi.Instance.Start(NetworkType.MainNet).Wait();
-	    }
+            base.Initialize();
+
+            if (USE_DEV_NET)
+            {
+                _passPhrase = "this is a top secret passphrase";
+                _address = "DRAJSs7GFq8iH1UGPAm8jVW9CgU1qwhkit";
+                _addressFromCrypto = "D61mfSggzbvQgTUe6JhYKH2doHaqJ3Dyib";
+                _pubKey = "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192";
+            }
+        }
 
         [TestMethod]
 		public void GetKeysTest()
 		{
-			var key = Crypto.GetKeys("this is a top secret passphrase");
+			var key = Crypto.GetKeys(_passPhrase);
 
-			Assert.AreEqual(key.PubKey.ToString(), "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192");
+			Assert.AreEqual(key.PubKey.ToString(), _pubKey);
 		}
 
 
 		[TestMethod]
 		public void GetAddressTest()
 		{
-			var a1 = Crypto.GetAddress(Crypto.GetKeys("this is a top secret passphrase"),ArkNetApi.Instance.NetworkSettings.BytePrefix);
-			var a2 = "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC";
+			var a1 = Crypto.GetAddress(Crypto.GetKeys(_passPhrase),ArkNetApi.Instance.NetworkSettings.BytePrefix);
+			var a2 = _addressFromCrypto;
 
 			Assert.AreEqual(a2, a1);
 		}
@@ -39,10 +53,10 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateTransactionPassPhraseVerifyTest()
 		{
-			var tx = TransactionApi.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
-				133380000000,
+			var tx = TransactionApi.CreateTransaction(_address,
+				1,
 				"This is first transaction from ARK-NET",
-				"this is a top secret passphrase");
+                _passPhrase);
 
 
 			Assert.IsTrue(Crypto.Verify(tx));
@@ -51,11 +65,10 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void JSONSerDeSerTest()
 		{
-			var tx = TransactionApi.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
-				133380000000,
+			var tx = TransactionApi.CreateTransaction(_address,
+				1,
 				"This is first transaction from ARK-NET",
-				"this is a top secret passphrase",
-				"this is a top secret second passphrase");
+                _passPhrase);
 			var json = tx.ToJson();
 			Console.WriteLine(json);
 
@@ -67,11 +80,10 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void JSONSerDeSerNegTest()
 		{
-			var tx = TransactionApi.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
-				133380000000,
+			var tx = TransactionApi.CreateTransaction(_address,
+				1,
 				"This is first transaction from ARK-NET",
-				"this is a top secret passphrase",
-				"this is a top secret second passphrase");
+                _passPhrase);
 			var json = tx.ToJson();
 			Console.WriteLine(json);
 
@@ -84,11 +96,11 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateTransaction2ndPassPhraseandVerifyTest()
 		{
-			var tx = TransactionApi.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
-				133380000000,
+			var tx = TransactionApi.CreateTransaction(_address,
+				1,
 				"This is first transaction from ARK-NET",
-				"this is a top secret passphrase",
-				"this is a top secret second passphrase");
+                _passPhrase,
+                "this is a top secret second passphrase");
 
 			var secondPublicKeyHex = Crypto.GetKeys("this is a top secret second passphrase").PubKey.ToBytes();
 
@@ -101,10 +113,10 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateTransactionAmountChangeTest()
 		{
-			var tx = TransactionApi.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
-				133380000000,
+			var tx = TransactionApi.CreateTransaction(_address,
+				1,
 				"This is first transaction from ARK-NET",
-				"this is a top secret passphrase");
+                _passPhrase);
 			var json = tx.ToJson();
 
 			tx.Amount = 10100000000000000;
@@ -117,10 +129,10 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateTransactionFeeChangeTest()
 		{
-			var tx = TransactionApi.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
-				133380000000,
+			var tx = TransactionApi.CreateTransaction(_address,
+				1,
 				"This is first transaction from ARK-NET",
-				"this is a top secret passphrase");
+                _passPhrase);
 			var json = tx.ToJson();
 
 			tx.Fee = 11;
@@ -133,10 +145,10 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateTransactionRecepientChangeTest()
 		{
-			var tx = TransactionApi.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
-				133380000000,
+			var tx = TransactionApi.CreateTransaction(_address,
+				1,
 				"This is first transaction from ARK-NET",
-				"this is a top secret passphrase");
+                _passPhrase);
 			var json = tx.ToJson();
 
 			tx.RecipientId = "AavdJLxqBnWqaFXWm2xNirNArJNUmyUpup";
@@ -148,7 +160,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateDelegateTest()
 		{
-			var tx = TransactionApi.CreateDelegate("polpolo", "this is a top secret passphrase");
+			var tx = TransactionApi.CreateDelegate("polpolo", _passPhrase);
 			var json = tx.ToJson();
 
 			Assert.IsTrue(Crypto.Verify(tx));
@@ -161,7 +173,7 @@ namespace ArkNetTest.Tests
 	        List<string> votes = new List<string> { "+034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192" };
 
 
-	        var tx = TransactionApi.CreateVote(votes, "ski rose knock live elder parade dose device fetch betray loan holiday");
+	        var tx = TransactionApi.CreateVote(votes, _passPhrase);
 
 	        var json = tx.ToObject(true);
             Assert.IsTrue(Crypto.Verify(tx));

@@ -47,7 +47,7 @@ namespace ArkNet.Controller
             throw new NotImplementedException();
         }
 
-        public ArkTransactionResponse SendArk(long satoshiAmount, string recipientAddress,
+        public ArkTransactionPostResponse SendArk(long satoshiAmount, string recipientAddress,
             string vendorField)
         {
             var tx = TransactionApi.CreateTransaction(recipientAddress,
@@ -59,7 +59,7 @@ namespace ArkNet.Controller
             return TransactionService.PostTransaction(tx);
         }
 
-        public async Task<ArkTransactionResponse> SendArkAsync(long satoshiAmount, string recipientAddress,
+        public async Task<ArkTransactionPostResponse> SendArkAsync(long satoshiAmount, string recipientAddress,
             string vendorField)
         {
             var tx = TransactionApi.CreateTransaction(recipientAddress,
@@ -71,28 +71,28 @@ namespace ArkNet.Controller
             return await TransactionService.PostTransactionAsync(tx);
         }
 
-        public ArkTransactionResponse VoteForDelegate(List<string> votes)
+        public ArkTransactionPostResponse VoteForDelegate(List<string> votes)
         {
             var tx = TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
 
             return TransactionService.PostTransaction(tx);
         }
 
-        public async Task<ArkTransactionResponse> VoteForDelegateAsync(List<string> votes)
+        public async Task<ArkTransactionPostResponse> VoteForDelegateAsync(List<string> votes)
         {
             var tx = TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
 
             return await TransactionService.PostTransactionAsync(tx);
         }
 
-        public ArkTransactionResponse RegisterAsDelegate(string username)
+        public ArkTransactionPostResponse RegisterAsDelegate(string username)
         {
             var tx = TransactionApi.CreateDelegate(username, _passPhrase, _secondPassPhrase);
 
             return TransactionService.PostTransaction(tx);
         }
 
-        public async Task<ArkTransactionResponse> RegisterAsDelegateAsync(string username)
+        public async Task<ArkTransactionPostResponse> RegisterAsDelegateAsync(string username)
         {
             var tx = TransactionApi.CreateDelegate(username, _passPhrase, _secondPassPhrase);
 

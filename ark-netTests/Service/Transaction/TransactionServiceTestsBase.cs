@@ -13,10 +13,11 @@ using ArkNet.Utils;
 using ArkNet.Model.Loader;
 using ArkNet.Model.Peer;
 using ArkNet.Model.Transactions;
+using ArkNet.Tests;
 
 namespace ArkNet.Service.Transaction.Tests
 {
-    public class TransactionServiceTestsBase
+    public class TransactionServiceTestsBase : TestsBase
     {
         public void GetAllResultTest(ArkTransactionList trans)
         {

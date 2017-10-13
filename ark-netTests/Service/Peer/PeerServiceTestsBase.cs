@@ -12,10 +12,11 @@ using ArkNet.Model.Block;
 using ArkNet.Utils;
 using ArkNet.Model.Loader;
 using ArkNet.Model.Peer;
+using ArkNet.Tests;
 
 namespace ArkNet.Service.Peer.Tests
 {
-    public class PeerServiceTestsBase
+    public class PeerServiceTestsBase : TestsBase
     {
         public void GetAllResultTest(ArkPeer peer)
         {

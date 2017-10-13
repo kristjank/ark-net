@@ -15,7 +15,7 @@ namespace ArkNet.Service.Peer.Tests
         [TestInitialize]
         public void Init()
         {
-            ArkNetApi.Instance.Start(NetworkType.MainNet).Wait();
+            base.Initialize();
         }
 
         [TestMethod()]

@@ -15,7 +15,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestInitialize]
         public void Init()
         {
-            ArkNetApi.Instance.Start(NetworkType.MainNet).Wait();
+            base.InitializeDelegateServiceTest();
         }
 
         [TestMethod()]
@@ -29,7 +29,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetByUsernameTest()
         {
-            var dele = DelegateService.GetByUsername("arkpool");
+            var dele = DelegateService.GetByUsername(_userName);
 
             GetByUsernameResultTest(dele);
         }
@@ -45,7 +45,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetByPubKeyTest()
         {
-            var dele2 = DelegateService.GetByPubKey("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
+            var dele2 = DelegateService.GetByPubKey(_pubKey);
 
             GetByPubKeyResultTest(dele2);
         }
@@ -61,7 +61,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetVotersTest()
         {
-            var dele = DelegateService.GetVoters("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
+            var dele = DelegateService.GetVoters(_pubKey);
 
             GetVotersResultTest(dele);
         }
@@ -85,7 +85,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetForgedByAccountTest()
         {
-            var forgedByAccount = DelegateService.GetForgedByAccount("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
+            var forgedByAccount = DelegateService.GetForgedByAccount(_pubKey);
 
             GetForgedByAccountResultTest(forgedByAccount);
         }
@@ -109,7 +109,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetTotalVoteArkTest()
         {
-            var totalVoteArk = DelegateService.GetTotalVoteArk("022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a");
+            var totalVoteArk = DelegateService.GetTotalVoteArk(_pubKey);
 
             GetTotalVoteArkResultTest(totalVoteArk);
         }

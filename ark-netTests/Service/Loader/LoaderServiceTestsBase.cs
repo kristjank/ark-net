@@ -11,10 +11,11 @@ using ArkNet.Model.Delegate;
 using ArkNet.Model.Block;
 using ArkNet.Utils;
 using ArkNet.Model.Loader;
+using ArkNet.Tests;
 
 namespace ArkNet.Service.Loader.Tests
 {
-    public class LoaderServiceTestsBase
+    public class LoaderServiceTestsBase : TestsBase
     {
         public void GetStatusResultTest(ArkLoaderStatus status)
         { 
