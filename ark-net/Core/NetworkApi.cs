@@ -10,8 +10,7 @@ namespace ArkNet.Core
     {
         private static readonly Lazy<NetworkApi> lazy =
             new Lazy<NetworkApi>(() => new NetworkApi());
-
-        private static readonly Random random = new Random();    
+  
         private readonly List<PeerApi> peers = new List<PeerApi>();
     
         private NetworkApi()
@@ -19,6 +18,7 @@ namespace ArkNet.Core
             peers = new List<PeerApi>();
         }
 
+        public static readonly Random random = new Random();
         public static NetworkApi Instance => lazy.Value;
    
         public string Nethash { get; set; } = ArkNetApi.Instance.NetworkSettings.NetHash; 
