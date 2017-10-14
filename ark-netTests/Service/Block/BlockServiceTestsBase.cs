@@ -10,10 +10,11 @@ using ArkNet.Model.Account;
 using ArkNet.Model.Delegate;
 using ArkNet.Model.Block;
 using ArkNet.Utils;
+using ArkNet.Tests;
 
 namespace ArkNet.Service.Block.Tests
 {
-    public class BlockServiceTestsBase
+    public class BlockServiceTestsBase : TestsBase
     {
         public void GetAllResultTest(ArkBlockList blocks)
         {

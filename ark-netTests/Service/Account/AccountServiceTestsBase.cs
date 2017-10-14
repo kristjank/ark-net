@@ -8,18 +8,41 @@ using System.Threading.Tasks;
 using ArkNet.Utils.Enum;
 using ArkNet.Model.Account;
 using ArkNet.Model.Delegate;
+using ArkNet.Tests;
 
 namespace ArkNet.Service.Account.Tests
 {
-    public class AccountServiceTestsBase
+    public class AccountServiceTestsBase : TestsBase
     {
+        protected string _address = "AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK";
+
+        public void InitializeAccountServiceTest()
+        {
+            base.Initialize();
+
+            Setup();
+        }
+
+        public async Task InitializeAccountServiceAsyncTest()
+        {
+            await base.InitializeAsync();
+
+            Setup();
+        }
+
+        private void Setup()
+        {
+            if (base.USE_DEV_NET)
+                _address = "DFZG912okkrs9vvZUDV1rqCgzh26zgED3Q";
+        }
+
         public void GetByAddressResultTest(ArkAccountResponse account)
         {
             Assert.IsNotNull(account);
             Assert.IsNotNull(account.Account);
             Assert.IsTrue(account.Success);
             Assert.IsNull(account.Error);
-            Assert.AreEqual("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK", account.Account.Address);
+            Assert.AreEqual(_address, account.Account.Address);
         }
 
         public void GetByAddressErrorResultTest(ArkAccountResponse account)

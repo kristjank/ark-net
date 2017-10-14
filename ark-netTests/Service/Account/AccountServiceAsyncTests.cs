@@ -15,13 +15,13 @@ namespace ArkNet.Service.Account.Tests
         [TestInitialize]
         public async Task Init()
         {
-            await ArkNetApi.Instance.Start(NetworkType.MainNet);
+            await base.InitializeAccountServiceAsyncTest();
         }
 
         [TestMethod()]
         public async Task GetByAddressAsyncTest()
         {
-            var account = await AccountService.GetByAddressAsync("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK");
+            var account = await AccountService.GetByAddressAsync(_address);
 
             GetByAddressResultTest(account);
         }
@@ -37,7 +37,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public async Task GetBalanceAsyncTest()
         {
-            var res = await AccountService.GetBalanceAsync("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK");
+            var res = await AccountService.GetBalanceAsync(_address);
 
             GetBalanceResultTest(res);
         }
@@ -53,7 +53,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public async Task GetDelegatesAsyncTest()
         {
-            var delegates = await AccountService.GetDelegatesAsync("AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK");
+            var delegates = await AccountService.GetDelegatesAsync(_address);
 
             GetDelegatesResultTest(delegates);
         }

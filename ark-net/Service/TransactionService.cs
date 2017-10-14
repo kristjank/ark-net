@@ -60,18 +60,18 @@ namespace ArkNet.Service
             return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }
 
-        public static ArkTransactionResponse PostTransaction(TransactionApi transaction)
+        public static ArkTransactionPostResponse PostTransaction(TransactionApi transaction)
         {
             return PostTransactionAsync(transaction).Result;
         }
 
-        public async static Task<ArkTransactionResponse> PostTransactionAsync(TransactionApi transaction)
+        public async static Task<ArkTransactionPostResponse> PostTransactionAsync(TransactionApi transaction)
         {
             string body = "{transactions: [" + transaction.ToObject(true) + "]} ";
 
             var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.POST, ArkStaticStrings.ArkApiPaths.Transaction.POST, body);
 
-            return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
+            return JsonConvert.DeserializeObject<ArkTransactionPostResponse>(response);
         }
 
         public static int MultipleBroadCast(TransactionApi transaction)

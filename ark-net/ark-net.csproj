@@ -117,6 +117,7 @@
     <Compile Include="Model\Delegate\ArkDelegateNextForgers.cs" />
     <Compile Include="Model\Delegate\ArkDelegateForgedBalance.cs" />
     <Compile Include="Model\Transactions\ArkTransactionList.cs" />
+    <Compile Include="Model\Transactions\ArkTransactionPostResponse.cs" />
     <Compile Include="Model\Transactions\ArkTransactionResponse.cs" />
     <Compile Include="Model\BaseModels\ArkResponseBase.cs" />
     <Compile Include="Service\AccountService.cs" />

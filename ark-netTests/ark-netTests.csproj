@@ -88,6 +88,7 @@
     <Compile Include="Service\Transaction\TransactionServiceAsyncTests.cs" />
     <Compile Include="Service\Transaction\TransactionServiceTests.cs" />
     <Compile Include="Tests\NetworkTests.cs" />
+    <Compile Include="Tests\TestsBase.cs" />
     <Compile Include="Tests\TransactionCryptoTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
