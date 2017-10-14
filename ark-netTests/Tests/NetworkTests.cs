@@ -6,6 +6,7 @@ using ArkNet.Utils;
 using ArkNet.Utils.Enum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ArkNet.Tests;
+using System.Threading.Tasks;
 
 namespace ArkNetTest.Tests
 {
@@ -93,5 +94,18 @@ namespace ArkNetTest.Tests
 
 			Assert.IsTrue(res > 0);
 		}
-	}
+
+        [TestMethod]
+        public async Task MultiplePostTransactionAsyncSuccessTest()
+        {
+            var tx = TransactionApi.CreateTransaction(_address,
+                1,
+                "This is first Multi transaction from ARK-NET",
+                _passPhrase);
+
+            var res = await TransactionService.MultipleBroadCastAsync(tx);
+
+            Assert.IsTrue(res > 0);
+        }
+    }
 }

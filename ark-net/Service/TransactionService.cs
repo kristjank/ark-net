@@ -7,6 +7,7 @@ using Newtonsoft.Json.Linq;
 using ArkNet.Model.Transactions;
 using ArkNet.Utils;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace ArkNet.Service
 {
@@ -78,8 +79,13 @@ namespace ArkNet.Service
         {
             var res = 0;
 
+            var currentActiveNode = NetworkApi.Instance.ActivePeer;
+            var peerURLs = PeerService.GetAll().Peers.Where(x => x.Status.Equals("OK")).Select(x => string.Format("{0}:{1}", x.Ip, x.Port)).ToList();
+
             for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
+                NetworkApi.Instance.ActivePeer = new PeerApi(peerURLs[NetworkApi.random.Next(peerURLs.Count)]);
+
                 var response = PostTransaction(transaction);
 
                 if (response.Success)
@@ -88,6 +94,8 @@ namespace ArkNet.Service
                 }
             }
 
+            NetworkApi.Instance.ActivePeer = currentActiveNode;
+
             return res;
         }
 
@@ -95,8 +103,14 @@ namespace ArkNet.Service
         {
             var res = 0;
 
+            var currentActiveNode = NetworkApi.Instance.ActivePeer;
+            var peers = await PeerService.GetAllAsync();
+            var peerURLs = peers.Peers.Where(x => x.Status.Equals("OK")).Select(x => string.Format("{0}:{1}", x.Ip, x.Port)).ToList();
+
             for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
+                NetworkApi.Instance.ActivePeer = new PeerApi(peerURLs[NetworkApi.random.Next(peerURLs.Count)]);
+
                 var response = await PostTransactionAsync(transaction);
 
                 if (response.Success)
@@ -104,6 +118,8 @@ namespace ArkNet.Service
                     res++;
                 }
             }
+
+            NetworkApi.Instance.ActivePeer = currentActiveNode;
 
             return res;
         }
