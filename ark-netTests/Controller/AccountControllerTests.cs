@@ -75,6 +75,24 @@ namespace ArkNet.Controller.Tests
         }
 
         [TestMethod()]
+        public void SendArkUsingMultiBroadCastTest()
+        {
+            var accCtnrl = new AccountController(_passPhrase);
+            var result = accCtnrl.SendArkUsingMultiBroadCast(1, _address, "Akr.Net test multi-trans from Account");
+
+            Assert.IsTrue(result > 0);
+        }
+
+        [TestMethod()]
+        public async Task SendArkUsingMultiBroadCastAsyncTest()
+        {
+            var accCtnrl = new AccountController(_passPhrase);
+            var result = await accCtnrl.SendArkUsingMultiBroadCastAsync(1, _address, "Akr.Net test multi-trans from Account");
+
+            Assert.IsTrue(result > 0);
+        }
+
+        [TestMethod()]
         public void VoteForDelegateTest()
         {
             var dele = DelegateService.GetByUsername(_delegateName);
