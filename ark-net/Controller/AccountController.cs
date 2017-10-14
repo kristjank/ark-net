@@ -37,15 +37,15 @@ namespace ArkNet.Controller
             return _account;
         }
 
-        public bool AskRemoteSignature()
-        {
-            throw new NotImplementedException();
-        }
+        //public bool AskRemoteSignature()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public void SendMultisignArk()
-        {
-            throw new NotImplementedException();
-        }
+        //public void SendMultisignArk()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public ArkTransactionPostResponse SendArk(long satoshiAmount, string recipientAddress,
             string vendorField)
@@ -69,6 +69,30 @@ namespace ArkNet.Controller
                 _secondPassPhrase);
 
             return await TransactionService.PostTransactionAsync(tx);
+        }
+
+        public int SendArkUsingMultiBroadCast(long satoshiAmount, string recipientAddress,
+            string vendorField)
+        {
+            var tx = TransactionApi.CreateTransaction(recipientAddress,
+                satoshiAmount,
+                vendorField,
+                _passPhrase,
+                _secondPassPhrase);
+
+            return TransactionService.MultipleBroadCast(tx);
+        }
+
+        public async Task<int> SendArkUsingMultiBroadCastAsync(long satoshiAmount, string recipientAddress,
+            string vendorField)
+        {
+            var tx = TransactionApi.CreateTransaction(recipientAddress,
+                satoshiAmount,
+                vendorField,
+                _passPhrase,
+                _secondPassPhrase);
+
+            return await TransactionService.MultipleBroadCastAsync(tx);
         }
 
         public ArkTransactionPostResponse VoteForDelegate(List<string> votes)
@@ -121,20 +145,20 @@ namespace ArkNet.Controller
             return res.Success;
         }
 
-        public bool RemoteSign()
-        {
-            throw new NotImplementedException();
-        }
+        //public bool RemoteSign()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public bool RegisterSecondSignature()
-        {
-            throw new NotImplementedException();
-        }
+        //public bool RegisterSecondSignature()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public bool GetVoterContribution()
-        {
-            throw new NotImplementedException();
-        }
+        //public bool GetVoterContribution()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 
     /*public static bool ApplyTransaction(Account account, long amount)
