@@ -65,45 +65,5 @@ namespace ArkNet.Service.Account.Tests
 
             GetDelegatesErrorResultTest(delegates);
         }
-
-        [TestMethod()]
-        public void GetTopTest()
-        {
-            var top = AccountService.GetTop(null, null);
-
-            GetTopResultTest(top);
-        }
-
-        [TestMethod()]
-        public void GetTopLimitTest()
-        {
-            var top = AccountService.GetTop(10, null);
-
-            GetTopLimitResultTest(top);
-        }
-
-        [TestMethod()]
-        public void GetTopRecordsToSkipTest()
-        {
-            var top = AccountService.GetTop(null, 50);
-
-            GetTopRecordsToSkipResultTest(top);
-        }
-
-        [TestMethod()]
-        public void GetTopLimitAndRecordsToSkipTest()
-        {
-            var top = AccountService.GetTop(10, 50);
-
-            GetTopLimitAndRecordsToSkipResultTest(top);
-        }
-
-        [TestMethod()]
-        public void GetTopLimitErrorTest()
-        {
-            var top = AccountService.GetTop(1000, null);
-
-            GetTopLimitErrorResultTest(top);
-        }
     }
 }

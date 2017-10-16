@@ -47,18 +47,5 @@ namespace ArkNet.Service
 
             return JsonConvert.DeserializeObject<ArkDelegateList>(response);
         }
-
-        public static ArkAccountTopList GetTop(int? limit, int? recordsToSkip)
-        {
-            return GetTopAsync(limit, recordsToSkip).Result;
-        }
-
-        public async static Task<ArkAccountTopList> GetTopAsync(int? limit, int? recordsToSkip)
-        {
-            var response =
-                await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_TOP_ACCOUNTS, limit.HasValue ? limit : 100, recordsToSkip.HasValue ? recordsToSkip : 0));
-
-            return JsonConvert.DeserializeObject<ArkAccountTopList>(response);
-        }
     }
 }
