@@ -65,45 +65,5 @@ namespace ArkNet.Service.Account.Tests
 
             GetDelegatesErrorResultTest(delegates);
         }
-
-        [TestMethod()]
-        public async Task GetTopAsyncTest()
-        {
-            var top = await AccountService.GetTopAsync(null, null);
-
-            GetTopResultTest(top);
-        }
-
-        [TestMethod()]
-        public async Task GetTopLimitAsyncTest()
-        {
-            var top = await AccountService.GetTopAsync(10, null);
-
-            GetTopLimitResultTest(top);
-        }
-
-        [TestMethod()]
-        public async Task GetTopRecordsToSkipAsyncTest()
-        {
-            var top = await AccountService.GetTopAsync(null, 50);
-
-            GetTopRecordsToSkipResultTest(top);
-        }
-
-        [TestMethod()]
-        public async Task GetTopLimitAndRecordsToSkipAsyncTest()
-        {
-            var top = await AccountService.GetTopAsync(10, 50);
-
-            GetTopLimitAndRecordsToSkipResultTest(top);
-        }
-
-        [TestMethod()]
-        public async Task GetTopLimitErrorAsyncTest()
-        {
-            var top = await AccountService.GetTopAsync(1000, null);
-
-            GetTopLimitErrorResultTest(top);
-        }
     }
 }

@@ -12,7 +12,6 @@ namespace ArkNet.Utils
                 public static readonly string GET_ACCOUNT = "/api/accounts?address={0}";
                 public static readonly string GET_BALANCE = "/api/accounts/getBalance?address={0}";
                 public static readonly string GET_DELEGATES = "/api/accounts/delegates?address={0}";
-                public static readonly string GET_TOP_ACCOUNTS = "/api/accounts/top?limit={0}&offset={1}";
             }
 
             public static class Block
