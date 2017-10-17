@@ -47,9 +47,9 @@ namespace ArkNet
                         },
                         PeerSeedList = new List<string>
                         {
-                            "node1.arknet.cloud:4001",
-                            "node2.arknet.cloud:4001",
-                            "api.arknode.net:4001"
+                            "5.39.9.240:4001",
+                            "5.39.9.241:4001",
+                            "5.39.9.242:4001"
                         }
                     };
                     break;

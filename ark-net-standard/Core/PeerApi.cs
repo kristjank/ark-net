@@ -6,6 +6,7 @@ using System.Net.Http.Headers;
 //using JsonConfig;
 using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
+using System.Text;
 
 namespace ArkNet.Core
 {
@@ -70,30 +71,12 @@ namespace ArkNet.Core
                     response = await httpClient.GetAsync(path);
                     break;
                 case "HEAD":
-                    // synchronous request without the need for .ContinueWith() or await
                     response = await httpClient.GetAsync(path);
                     break;
                 case "POST":
                     var jObject = JObject.Parse(body);
-                    response = null;//await httpClient.PostAsync(path, jObject);
+                    response = await httpClient.PostAsync(path, new StringContent(jObject.ToString(), Encoding.UTF8, "application/json"));
                     break;
-                /*case "PUT":
-                {
-                    // Construct an HttpContent from a StringContent
-                    HttpContent _Body = new StringContent(body);
-
-                    // and add the header to this object instance
-                    // optional: add a formatter option to it as well
-
-                    // synchronous request without the need for .ContinueWith() or await
-
-
-                    response = httpClient.PutAsync(path, _Body).Result;
-                }
-                    break;
-                case "DELETE":
-                    response = httpClient.DeleteAsync(path).Result;
-                    break;*/
                 default:
                     throw new NotImplementedException();
             }
