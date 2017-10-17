@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nugetTestPrj", "..\nugetTes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ark-net-standard", "..\ark-net-standard\ark-net-standard.csproj", "{B8D8F99D-E570-4FE1-BE26-E3A6AE105680}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ark-net-standardTests", "..\ark-net-standardTests\ark-net-standardTests.csproj", "{28E2F5B4-17A6-46AB-A6EB-77E145B0E2FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B8D8F99D-E570-4FE1-BE26-E3A6AE105680}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8D8F99D-E570-4FE1-BE26-E3A6AE105680}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8D8F99D-E570-4FE1-BE26-E3A6AE105680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28E2F5B4-17A6-46AB-A6EB-77E145B0E2FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28E2F5B4-17A6-46AB-A6EB-77E145B0E2FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28E2F5B4-17A6-46AB-A6EB-77E145B0E2FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28E2F5B4-17A6-46AB-A6EB-77E145B0E2FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
