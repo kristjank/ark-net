@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using JsonConfig;
 using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
+using System.Text;
 
 namespace ArkNet.Core
 {
@@ -37,20 +37,20 @@ namespace ArkNet.Core
             httpClient.DefaultRequestHeaders.Add("nethash", ArkNetApi.Instance.NetworkSettings.NetHash);
             httpClient.DefaultRequestHeaders.Add("version", ArkNetApi.Instance.NetworkSettings.Version);
             httpClient.DefaultRequestHeaders.Add("port", ArkNetApi.Instance.NetworkSettings.Port.ToString());
-            OpenServicePoint(httpClient.BaseAddress);
+            //OpenServicePoint(httpClient.BaseAddress);
         }
 
-        private static void OpenServicePoint(Uri uri)
-        {
-            ServicePointManager.CheckCertificateRevocationList = true;
-            ServicePointManager.DefaultConnectionLimit = Config.Default.ArkPeer.DefaultConnectionLimit;
+        //private static void OpenServicePoint(Uri uri)
+        //{
+        //    ServicePointManager.CheckCertificateRevocationList = true;
+        //    ServicePointManager.DefaultConnectionLimit = Config.Default.ArkPeer.DefaultConnectionLimit;
 
-            var sp = ServicePointManager.FindServicePoint(uri);
-            sp.UseNagleAlgorithm = true;
-            sp.Expect100Continue = true;
-            sp.ConnectionLimit = Config.Default.ArkPeer.ConnectionLimit;
-            sp.ConnectionLeaseTimeout = Config.Default.ArkPeer.ConnectionLeaseTimeOut;
-        }
+        //    var sp = ServicePointManager.FindServicePoint(uri);
+        //    sp.UseNagleAlgorithm = true;
+        //    sp.Expect100Continue = true;
+        //    sp.ConnectionLimit = Config.Default.ArkPeer.ConnectionLimit;
+        //    sp.ConnectionLeaseTimeout = Config.Default.ArkPeer.ConnectionLeaseTimeOut;
+        //}
 
         private void Init(string ip, int port, string protocol)
         {
@@ -74,10 +74,8 @@ namespace ArkNet.Core
                     response = await httpClient.GetAsync(path);
                     break;
                 case "POST":
-                {
                     var jObject = JObject.Parse(body);
-                    response = await httpClient.PostAsJsonAsync(path, jObject);
-                }
+                    response = await httpClient.PostAsync(path, new StringContent(jObject.ToString(), Encoding.UTF8, "application/json"));
                     break;
                 /*case "PUT":
                 {
