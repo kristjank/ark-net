@@ -9,6 +9,7 @@
     <FileVersion>0.8.0</FileVersion>
 	<Description>Ark.NET Client Api for Ark Ecosystem</Description>
 	<Copyright>Copyright © 2017, ARK, Kristjan Košič - chris</Copyright>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
