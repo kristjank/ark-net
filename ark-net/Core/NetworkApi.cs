@@ -22,7 +22,6 @@ namespace ArkNet.Core
         public static NetworkApi Instance => lazy.Value;
    
         public string Nethash { get; set; } = ArkNetApi.Instance.NetworkSettings.NetHash; 
-        public string Name { get; set; } = ArkNetApi.Instance.NetworkSettings.Name;
         public int Port { get; set; } = ArkNetApi.Instance.NetworkSettings.Port;
         public byte Prefix { get; set; } = ArkNetApi.Instance.NetworkSettings.BytePrefix;
         public string Version { get; set; } = ArkNetApi.Instance.NetworkSettings.Version;
