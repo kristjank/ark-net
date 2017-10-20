@@ -30,6 +30,11 @@ namespace ArkNet.Utils
             this.Fee.MultiSignature = activeNet.Fees.MultiSignature;
             this.PeerSeedList = activeNet.Peers;
         }
+
+        public ArkNetworkSettings()
+        {
+            Fee = new Fees();
+        }
     }
 
     public class Fees

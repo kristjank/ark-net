@@ -3,7 +3,6 @@
     public enum NetworkType
     {
         MainNet,
-        TestNet,
         DevNet
     }
 }
