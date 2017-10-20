@@ -15,7 +15,7 @@ namespace ArkNet.Service.Peer.Tests
         [TestInitialize]
         public async Task Init()
         {
-            await base.InitializeAsync();
+            await base.InitializePeerServiceAsyncTest();
         }
 
         [TestMethod()]
@@ -25,6 +25,14 @@ namespace ArkNet.Service.Peer.Tests
             var peer = peers.Peers.Where(x => x.Status.Equals("OK")).FirstOrDefault();
 
             GetAllResultTest(peer);
+        }
+
+        [TestMethod()]
+        public async Task GetPeerAsyncTest()
+        {
+            var peer = await PeerService.GetPeerAsync(base._ip, base._port);
+
+            GetPeerResultTest(peer);
         }
 
         [TestMethod()]

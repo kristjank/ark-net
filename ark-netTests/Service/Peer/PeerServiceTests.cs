@@ -15,7 +15,7 @@ namespace ArkNet.Service.Peer.Tests
         [TestInitialize]
         public void Init()
         {
-            base.Initialize();
+            base.InitializePeerServiceTest();
         }
 
         [TestMethod()]
@@ -25,6 +25,14 @@ namespace ArkNet.Service.Peer.Tests
             var peer = peers.FirstOrDefault();
 
             GetAllResultTest(peer);
+        }
+
+        [TestMethod()]
+        public void GetPeerTest()
+        {
+            var peer = PeerService.GetPeer(base._ip, base._port);
+
+            GetPeerResultTest(peer);
         }
 
         [TestMethod()]

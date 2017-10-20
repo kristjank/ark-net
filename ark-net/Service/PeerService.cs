@@ -23,6 +23,18 @@ namespace ArkNet.Service
             return JsonConvert.DeserializeObject<ArkPeerList>(response);
         }
 
+        public static ArkPeerResponse GetPeer(string ip, int port)
+        {
+            return GetPeerAsync(ip, port).Result;
+        }
+
+        public async static Task<ArkPeerResponse> GetPeerAsync(string ip, int port)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Peer.GET, ip, port));
+
+            return JsonConvert.DeserializeObject<ArkPeerResponse>(response);
+        }
+
         public static ArkPeerStatus GetPeerStatus()
         {
             return GetPeerStatusAsync().Result;

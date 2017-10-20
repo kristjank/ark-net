@@ -15,7 +15,7 @@ namespace ArkNet.Core
 
         private readonly HttpClient httpClient;
         public string ip;
-        private int port;
+        public int port;
         private string protocol = "http://";
 
         public PeerApi(string peerData)
@@ -34,9 +34,12 @@ namespace ArkNet.Core
             };
             httpClient.DefaultRequestHeaders.Accept.Clear();
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            httpClient.DefaultRequestHeaders.Add("nethash", ArkNetApi.Instance.NetworkSettings.NetHash);
-            httpClient.DefaultRequestHeaders.Add("version", ArkNetApi.Instance.NetworkSettings.Version);
-            httpClient.DefaultRequestHeaders.Add("port", ArkNetApi.Instance.NetworkSettings.Port.ToString());
+            if (ArkNetApi.Instance.NetworkSettings != null)
+            {
+                httpClient.DefaultRequestHeaders.Add("nethash", ArkNetApi.Instance.NetworkSettings.NetHash);
+                httpClient.DefaultRequestHeaders.Add("version", ArkNetApi.Instance.NetworkSettings.Version);
+                httpClient.DefaultRequestHeaders.Add("port", ArkNetApi.Instance.NetworkSettings.Port.ToString());
+            }
             //OpenServicePoint(httpClient.BaseAddress);
         }
 

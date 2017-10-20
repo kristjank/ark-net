@@ -49,6 +49,7 @@ namespace ArkNet.Utils
 
             public static class Peer
             {
+                public static readonly string GET = "/api/peers/get?ip={0}&port={1}";
                 public static readonly string GET_ALL = "/peer/list";
                 public static readonly string GET_STATUS = "/peer/status";
             }
