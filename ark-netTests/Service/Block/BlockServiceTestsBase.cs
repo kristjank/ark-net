@@ -16,6 +16,32 @@ namespace ArkNet.Service.Block.Tests
 {
     public class BlockServiceTestsBase : TestsBase
     {
+        protected int _height = 2339637;
+        protected string _generatorPublicKey = "027a9b5dc98c75902f871e889fb3076dd27b11e158a49e3915e0307ecd9781f51e";
+
+        public void InitializeBlockServiceTest()
+        {
+            base.Initialize();
+
+            Setup();
+        }
+
+        public async Task InitializeBlockServiceAsyncTest()
+        {
+            await base.InitializeAsync();
+
+            Setup();
+        }
+
+        private void Setup()
+        {
+            if (base.USE_DEV_NET)
+            {
+                _height = 1608634;
+                _generatorPublicKey = "02b7b740973db16cd9c6f0f6f2bc160d27cd2a855e172d887833141bec234eb80c";
+            }
+        }
+
         public void GetAllResultTest(ArkBlockList blocks)
         {
             Assert.IsNotNull(blocks);
@@ -23,6 +49,17 @@ namespace ArkNet.Service.Block.Tests
             Assert.IsTrue(blocks.Success);
             Assert.IsNull(blocks.Error);
             Assert.IsTrue(blocks.Blocks.Count > 0);
+        }
+
+        public void GetBlocksResultTest(ArkBlockList blocks)
+        {
+            Assert.IsNotNull(blocks);
+            Assert.IsNotNull(blocks.Blocks);
+            Assert.IsTrue(blocks.Success);
+            Assert.IsNull(blocks.Error);
+            Assert.IsTrue(blocks.Blocks.Count == 1);
+            Assert.IsTrue(blocks.Blocks.First().Height == _height);
+            Assert.IsTrue(blocks.Blocks.First().GeneratorPublicKey == _generatorPublicKey);
         }
 
         public void GetByIdResultTest(ArkBlockResponse block)
