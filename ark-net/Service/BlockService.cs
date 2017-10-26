@@ -1,4 +1,5 @@
 ﻿using ArkNet.Core;
+using ArkNet.Messages.Block;
 using ArkNet.Model;
 using ArkNet.Model.Block;
 using ArkNet.Utils;
@@ -31,6 +32,18 @@ namespace ArkNet.Service
         public async static Task<ArkBlockList> GetAllAsync()
         {
             var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_ALL);
+
+            return JsonConvert.DeserializeObject<ArkBlockList>(response);
+        }
+
+        public static ArkBlockList GetBlocks(ArkBlockRequest req)
+        {
+            return GetBlocksAsync(req).Result;
+        }
+
+        public async static Task<ArkBlockList> GetBlocksAsync(ArkBlockRequest req)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Block.GET_ALL + "{0}", req.ToQuery()));
 
             return JsonConvert.DeserializeObject<ArkBlockList>(response);
         }

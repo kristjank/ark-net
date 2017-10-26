@@ -1,4 +1,5 @@
 ﻿using ArkNet;
+using ArkNet.Messages.Block;
 using ArkNet.Service;
 using ArkNet.Utils.Enum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -16,7 +17,7 @@ namespace ArkNet.Service.Block.Tests
         [TestInitialize]
         public void Init()
         {
-            base.Initialize();
+            base.InitializeBlockServiceTest();
         }
 
         [TestMethod()]
@@ -25,6 +26,14 @@ namespace ArkNet.Service.Block.Tests
             var blocks = BlockService.GetAll();
 
             GetAllResultTest(blocks);
+        }
+
+        [TestMethod()]
+        public void GetAllBlocksTest()
+        {
+            var blocks = BlockService.GetBlocks(new ArkBlockRequest { Height = base._height, GeneratorPublickey = base._generatorPublicKey });
+
+            GetBlocksResultTest(blocks);
         }
 
         [TestMethod()]
