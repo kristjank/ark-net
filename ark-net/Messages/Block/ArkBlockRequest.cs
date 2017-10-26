@@ -1,5 +1,5 @@
 ﻿using ArkNet.Attributes;
-using ArkNet.Messages.Common;
+using ArkNet.Messages.BaseMessages;
 using System;
 using System.Collections.Generic;
 using System.Text;

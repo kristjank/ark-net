@@ -7,6 +7,7 @@ using System.Linq;
 using ArkNet.Model.Delegate;
 using ArkNet.Utils;
 using System.Threading.Tasks;
+using ArkNet.Messages.BaseMessages;
 
 namespace ArkNet.Service
 {
@@ -20,6 +21,18 @@ namespace ArkNet.Service
         public async static Task<ArkDelegateList> GetAllAsync()
         {
             var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Delegate.GET_ALL);
+
+            return JsonConvert.DeserializeObject<ArkDelegateList>(response);
+        }
+
+        public static ArkDelegateList GetDelegates(ArkBaseRequest req)
+        {
+            return GetDelegatesAsync(req).Result;
+        }
+
+        public async static Task<ArkDelegateList> GetDelegatesAsync(ArkBaseRequest req)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_ALL + "{0}", req.ToQuery()));
 
             return JsonConvert.DeserializeObject<ArkDelegateList>(response);
         }
@@ -99,11 +112,11 @@ namespace ArkNet.Service
 
         public static long GetTotalVoteArk(string pubKey)
         {
-            var voters = GetVoters(pubKey);
+            var arkDelegate = GetByPubKey(pubKey);
 
-            if (voters.Success)
+            if (arkDelegate.Success && arkDelegate.Delegate != null)
             {
-                return voters.Accounts.Sum(x => x.Balance);
+                return arkDelegate.Delegate.Vote;
             }
 
             return 0;
@@ -111,11 +124,11 @@ namespace ArkNet.Service
 
         public async static Task<long> GetTotalVoteArkAsync(string pubKey)
         {
-            var voters = await GetVotersAsync(pubKey);
+            var arkDelegate = await GetByPubKeyAsync(pubKey);
 
-            if (voters.Success)
+            if (arkDelegate.Success && arkDelegate.Delegate != null)
             {
-                return voters.Accounts.Sum(x => x.Balance);
+                return arkDelegate.Delegate.Vote;
             }
 
             return 0;

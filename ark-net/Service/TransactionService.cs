@@ -8,6 +8,7 @@ using ArkNet.Model.Transactions;
 using ArkNet.Utils;
 using System.Threading.Tasks;
 using System.Linq;
+using ArkNet.Messages.Transaction;
 
 namespace ArkNet.Service
 {
@@ -25,6 +26,18 @@ namespace ArkNet.Service
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }
 
+        public static ArkTransactionList GetTransactions(ArkTransactionRequest req)
+        {
+            return GetTransactionsAsync(req).Result;
+        }
+
+        public async static Task<ArkTransactionList> GetTransactionsAsync(ArkTransactionRequest req)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL + "{0}", req.ToQuery()));
+
+            return JsonConvert.DeserializeObject<ArkTransactionList>(response);
+        }
+
         public static ArkTransactionList GetUnconfirmedAll()
         {
             return GetUnconfirmedAllAsync().Result;
@@ -33,6 +46,18 @@ namespace ArkNet.Service
         public async static Task<ArkTransactionList> GetUnconfirmedAllAsync()
         {
             var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED);
+
+            return JsonConvert.DeserializeObject<ArkTransactionList>(response);
+        }
+
+        public static ArkTransactionList GetUnconfirmedTransactions(ArkUnconfirmedTransactionRequest req)
+        {
+            return GetUnconfirmedTransactionsAsync(req).Result;
+        }
+
+        public async static Task<ArkTransactionList> GetUnconfirmedTransactionsAsync(ArkUnconfirmedTransactionRequest req)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED + "{0}", req.ToQuery()));
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ArkNet.Utils.Enum;
+using ArkNet.Messages.Transaction;
 
 namespace ArkNet.Service.Transaction.Tests
 {
@@ -15,7 +16,7 @@ namespace ArkNet.Service.Transaction.Tests
         [TestInitialize]
         public async Task Init()
         {
-            await base.InitializeAsync();
+            await base.InitializeTransactionServiceAsyncTest();
         }
 
         [TestMethod()]
@@ -24,6 +25,14 @@ namespace ArkNet.Service.Transaction.Tests
             var trans = await TransactionService.GetAllAsync();
 
             GetAllResultTest(trans);
+        }
+
+        [TestMethod()]
+        public async Task GetGetTransactionsAsyncTest()
+        {
+            var trans = await TransactionService.GetTransactionsAsync(new ArkTransactionRequest { BlockId = base._blockId });
+
+            GetTransactionsResultTest(trans);
         }
 
         [TestMethod()]
@@ -71,6 +80,14 @@ namespace ArkNet.Service.Transaction.Tests
         public async Task GetUnconfirmedAllAsyncTest()
         {
             var trans = await TransactionService.GetUnconfirmedAllAsync();
+
+            GetUnconfirmedAllResultTest(trans);
+        }
+
+        [TestMethod()]
+        public async Task GetUnconfirmedTransactionsAsyncTest()
+        {
+            var trans = await TransactionService.GetUnconfirmedTransactionsAsync(new ArkUnconfirmedTransactionRequest());
 
             GetUnconfirmedAllResultTest(trans);
         }

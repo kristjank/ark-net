@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ArkNet.Utils.Enum;
+using ArkNet.Messages.Transaction;
 
 namespace ArkNet.Service.Transaction.Tests
 {
@@ -15,7 +16,7 @@ namespace ArkNet.Service.Transaction.Tests
         [TestInitialize]
         public void Init()
         {
-            base.Initialize();
+            base.InitializeTransactionServiceTest();
         }
 
         [TestMethod()]
@@ -24,6 +25,14 @@ namespace ArkNet.Service.Transaction.Tests
             var trans = TransactionService.GetAll();
 
             GetAllResultTest(trans);
+        }
+
+        [TestMethod()]
+        public void GetGetTransactionsTest()
+        {
+            var trans = TransactionService.GetTransactions(new ArkTransactionRequest { BlockId = base._blockId });
+
+            GetTransactionsResultTest(trans);
         }
 
         [TestMethod()]
@@ -70,6 +79,14 @@ namespace ArkNet.Service.Transaction.Tests
         public void GetUnconfirmedAllTest()
         {
             var trans = TransactionService.GetUnconfirmedAll();
+
+            GetUnconfirmedAllResultTest(trans);
+        }
+
+        [TestMethod()]
+        public void GetUnconfirmedTransactionsTest()
+        {
+            var trans = TransactionService.GetUnconfirmedTransactions(new ArkUnconfirmedTransactionRequest());
 
             GetUnconfirmedAllResultTest(trans);
         }

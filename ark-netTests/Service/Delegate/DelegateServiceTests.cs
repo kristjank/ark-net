@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ArkNet.Utils.Enum;
+using ArkNet.Messages.BaseMessages;
 
 namespace ArkNet.Service.Delegate.Tests
 {
@@ -22,6 +23,14 @@ namespace ArkNet.Service.Delegate.Tests
         public void GetAllTest()
         {
             var delegates = DelegateService.GetAll();
+
+            GetAllResultTest(delegates);
+        }
+
+        [TestMethod()]
+        public void GetDelegatesTest()
+        {
+            var delegates = DelegateService.GetDelegates(new ArkBaseRequest { OrderBy = "vote" });
 
             GetAllResultTest(delegates);
         }
