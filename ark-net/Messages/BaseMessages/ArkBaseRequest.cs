@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace ArkNet.Messages.Common
+namespace ArkNet.Messages.BaseMessages
 {
     public class ArkBaseRequest
     {
