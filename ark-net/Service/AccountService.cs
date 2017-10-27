@@ -1,36 +1,64 @@
 ﻿using System;
 using ArkNet.Core;
-using ArkNet.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using ArkNet.Model.Account;
+using ArkNet.Model.Delegate;
+using ArkNet.Utils;
+using System.Threading.Tasks;
 
 namespace ArkNet.Service
 {
     public class AccountService
     {
-        public static ArkAccount GetByAddress(string address)
+        public static ArkAccountResponse GetByAddress(string address)
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/accounts/?address=" + address);
-            var parsed = JObject.Parse(response);
-
-            var account = new ArkAccount();
-            if (!Convert.ToBoolean(parsed["success"]))
-                account.Address = parsed["error"].ToString();
-            else
-                account = JsonConvert.DeserializeObject<ArkAccount>(parsed["account"].ToString());
-            return account;
+            return GetByAddressAsync(address).Result;
         }
 
-        public static (bool status, string balance, string unconfirmedBalance, string error) GetBalance(string address)
+        public async static Task<ArkAccountResponse> GetByAddressAsync(string address)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_ACCOUNT, address));
+
+            return JsonConvert.DeserializeObject<ArkAccountResponse>(response);
+        }
+
+        public static ArkAccountBalance GetBalance(string address)
+        {
+            return GetBalanceAsync(address).Result;
+        }
+
+        public async static Task<ArkAccountBalance> GetBalanceAsync(string address)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_BALANCE, address));
+
+            return JsonConvert.DeserializeObject<ArkAccountBalance>(response);
+        }
+
+        public static ArkDelegateList GetDelegates(string address)
+        {
+            return GetDelegatesAsync(address).Result;
+        }
+
+        public async static Task<ArkDelegateList> GetDelegatesAsync(string address)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_DELEGATES, address));
+
+            return JsonConvert.DeserializeObject<ArkDelegateList>(response);
+        }
+
+        public static ArkAccountTopList GetTop(int? limit, int? recordsToSkip)
+        {
+            return GetTopAsync(limit, recordsToSkip).Result;
+        }
+
+        public async static Task<ArkAccountTopList> GetTopAsync(int? limit, int? recordsToSkip)
         {
             var response =
-                NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/accounts/getBalance/?address=" + address);
-            var parsed = JObject.Parse(response);
+                await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_TOP_ACCOUNTS, limit.HasValue ? limit : 100, recordsToSkip.HasValue ? recordsToSkip : 0));
 
-            return (Convert.ToBoolean(parsed["success"]),
-                parsed["balance"]?.ToString() ?? "",
-                parsed["unconfirmedBalance"]?.ToString() ?? "",
-                parsed["error"]?.ToString() ?? "");
+            return JsonConvert.DeserializeObject<ArkAccountTopList>(response);
         }
     }
 }

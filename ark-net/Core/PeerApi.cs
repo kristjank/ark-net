@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using JsonConfig;
 using Newtonsoft.Json.Linq;
+using System.Threading.Tasks;
+using System.Text;
 
 namespace ArkNet.Core
 {
@@ -14,7 +15,7 @@ namespace ArkNet.Core
 
         private readonly HttpClient httpClient;
         public string ip;
-        private int port;
+        public int port;
         private string protocol = "http://";
 
         public PeerApi(string peerData)
@@ -29,28 +30,30 @@ namespace ArkNet.Core
 
             httpClient = new HttpClient()
             {
-                BaseAddress = new UriBuilder(this.protocol, this.ip, this.port).Uri,
-   
+                BaseAddress = new UriBuilder(this.protocol, this.ip, this.port).Uri
             };
             httpClient.DefaultRequestHeaders.Accept.Clear();
             httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            httpClient.DefaultRequestHeaders.Add("nethash", ArkNetApi.Instance.NetworkSettings.NetHash);
-            httpClient.DefaultRequestHeaders.Add("version", ArkNetApi.Instance.NetworkSettings.Version);
-            httpClient.DefaultRequestHeaders.Add("port", ArkNetApi.Instance.NetworkSettings.Port.ToString());
-            OpenServicePoint(httpClient.BaseAddress);
+            if (ArkNetApi.Instance.NetworkSettings != null)
+            {
+                httpClient.DefaultRequestHeaders.Add("nethash", ArkNetApi.Instance.NetworkSettings.NetHash);
+                httpClient.DefaultRequestHeaders.Add("version", ArkNetApi.Instance.NetworkSettings.Version);
+                httpClient.DefaultRequestHeaders.Add("port", ArkNetApi.Instance.NetworkSettings.Port.ToString());
+            }
+            //OpenServicePoint(httpClient.BaseAddress);
         }
 
-        private static void OpenServicePoint(Uri uri)
-        {
-            ServicePointManager.CheckCertificateRevocationList = true;
-            ServicePointManager.DefaultConnectionLimit = Config.Default.ArkPeer.DefaultConnectionLimit;
+        //private static void OpenServicePoint(Uri uri)
+        //{
+        //    ServicePointManager.CheckCertificateRevocationList = true;
+        //    ServicePointManager.DefaultConnectionLimit = Config.Default.ArkPeer.DefaultConnectionLimit;
 
-            var sp = ServicePointManager.FindServicePoint(uri);
-            sp.UseNagleAlgorithm = true;
-            sp.Expect100Continue = true;
-            sp.ConnectionLimit = Config.Default.ArkPeer.ConnectionLimit;
-            sp.ConnectionLeaseTimeout = Config.Default.ArkPeer.ConnectionLeaseTimeOut;
-        }
+        //    var sp = ServicePointManager.FindServicePoint(uri);
+        //    sp.UseNagleAlgorithm = true;
+        //    sp.Expect100Continue = true;
+        //    sp.ConnectionLimit = Config.Default.ArkPeer.ConnectionLimit;
+        //    sp.ConnectionLeaseTimeout = Config.Default.ArkPeer.ConnectionLeaseTimeOut;
+        //}
 
         private void Init(string ip, int port, string protocol)
         {
@@ -59,7 +62,7 @@ namespace ArkNet.Core
             this.protocol = protocol;
         }
 
-        public string MakeRequest(string method, string path, string body = "")
+        public async Task<string> MakeRequest(string method, string path, string body = "")
         {
             HttpResponseMessage response;
             var _Method = new HttpMethod(method);
@@ -67,17 +70,15 @@ namespace ArkNet.Core
             switch (_Method.ToString().ToUpper())
             {
                 case "GET":
-                    response = httpClient.GetAsync(path).Result;
+                    response = await httpClient.GetAsync(path);
                     break;
                 case "HEAD":
                     // synchronous request without the need for .ContinueWith() or await
-                    response = httpClient.GetAsync(path).Result;
+                    response = await httpClient.GetAsync(path);
                     break;
                 case "POST":
-                {
                     var jObject = JObject.Parse(body);
-                    response = httpClient.PostAsJsonAsync(path, jObject).Result;
-                }
+                    response = await httpClient.PostAsync(path, new StringContent(jObject.ToString(), Encoding.UTF8, "application/json"));
                     break;
                 /*case "PUT":
                 {
@@ -98,14 +99,26 @@ namespace ArkNet.Core
                     break;*/
                 default:
                     throw new NotImplementedException();
-                    break;
             }
             // either this - or check the status to retrieve more information
             response.EnsureSuccessStatusCode();
             // get the rest/content of the response in a synchronous way
-            var content = response.Content.ReadAsStringAsync().Result;
+            var content = await response.Content.ReadAsStringAsync();
 
             return content;
+        }
+
+        public async Task<bool> IsOnline()
+        {
+            try
+            {
+                await MakeRequest("HEAD", "/api/loader/status");
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

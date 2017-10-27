@@ -5,8 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using ArkNet.Utils;
 using ArkNet.Utils.Enum;
-using JsonConfig;
 using NBitcoin.DataEncoders;
+using ArkNet.Core;
+using Newtonsoft.Json;
+using ArkNet.Model.Loader;
+using Newtonsoft.Json.Linq;
+using ArkNet.Model.Peer;
 
 namespace ArkNet
 {
@@ -24,22 +28,56 @@ namespace ArkNet
             
         }
 
-        public void Start(NetworkType type)
+        public async Task Start(NetworkType type)
         {
-            switch (type)
+            var initialPeer = new PeerApi("5.39.9.240:4001");
+            if (type == NetworkType.DevNet)
+                initialPeer = new PeerApi("167.114.29.55:4002");
+
+            await SetNetworkSettings(initialPeer);
+            await NetworkApi.Instance.WarmUp();
+        }
+
+        public async Task Start(ArkNetworkSettings settings)
+        {
+            NetworkSettings = settings;
+            await NetworkApi.Instance.WarmUp();
+        }
+
+        public async Task Start(string initialPeerIp, int initialPeerPort)
+        {
+            await SetNetworkSettings(GetInitialPeer(initialPeerIp, initialPeerPort));
+            await NetworkApi.Instance.WarmUp();
+        }
+
+        private async Task SetNetworkSettings(PeerApi initialPeer)
+        {
+            var responseAutoConfigure = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_AUTO_CONFIGURE);
+            var responseFees = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_FEES);
+            var responsePeer = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Peer.GET, initialPeer.ip, initialPeer.port));
+
+            var autoConfig = JsonConvert.DeserializeObject<ArkLoaderNetworkResponse>(responseAutoConfigure);
+            var fees = JsonConvert.DeserializeObject<Fees>(JObject.Parse(responseFees)["fees"].ToString());
+            var peer = JsonConvert.DeserializeObject<ArkPeerResponse>(responsePeer);
+
+            NetworkSettings = new ArkNetworkSettings()
             {
-                case NetworkType.MainNet:
-                    NetworkSettings = new ArkNetworkSettings(Config.Default.MainNet);
-                    break;
-                case NetworkType.TestNet:
-                    NetworkSettings = new ArkNetworkSettings(Config.Default.TestNet);
-                    break;
-                case NetworkType.DevNet:
-                    NetworkSettings = new ArkNetworkSettings(Config.Default.DevNet);
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(type), type, null);
-            }
+                Port = initialPeer.port,
+                BytePrefix = (byte)autoConfig.Network.Version,
+                Version = peer.Peer.Version,
+                NetHash = autoConfig.Network.NetHash,
+                MaxNumOfBroadcasts = 5,
+                Fee = fees,
+                PeerSeedList = new List<string>
+                    {
+                        string.Format("{0}:{1}", initialPeer.ip, initialPeer.port)
+                    }
+            };
+        }
+
+        private PeerApi GetInitialPeer(string initialPeerIp, int initialPeerPort)
+        {
+            return new PeerApi(string.Format("{0}:{1}", initialPeerIp, initialPeerPort));
         }
     }
 }

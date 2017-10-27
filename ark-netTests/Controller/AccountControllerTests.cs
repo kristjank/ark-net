@@ -10,96 +10,126 @@ using ArkNet.Model;
 using ArkNet.Service;
 using ArkNet.Utils.Enum;
 using Newtonsoft.Json;
+using ArkNet.Tests;
 
 namespace ArkNet.Controller.Tests
 {
     [TestClass()]
-    public class AccountControllerTests
+    public class AccountControllerTests : TestsBase
     {
+        private string _address = "AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK";
+        private string _pubKey = "02a3438fa0da25ebfb2c3df4875e30ff6d687b94adb9f2326ed988c101bdeeb973";
+        private string _passPhrase = "ski rose knock live elder parade dose device fetch betray loan holiday";
+        private string _delegateName = "arkpool";
+
         [TestInitialize]
         public void Init()
         {
-            ArkNetApi.Instance.Start(NetworkType.MainNet);
+            base.Initialize();
+
+            if (USE_DEV_NET)
+            {
+                _address = "DRAJSs7GFq8iH1UGPAm8jVW9CgU1qwhkit";
+                _pubKey = "024b3c846cee903a60476e6912cdde21722b9d8e74a94ac88ac870e0e92a5b12a3";
+                _passPhrase = "sorry mandate shadow civil girl vote fragile senior also clip abandon milk";
+                _delegateName = "d_chris";
+            }
         }
 
-        [TestMethod()]
-        public void AccountControllerTest()
-        {
-            Assert.Fail();
-        }
+        //[TestMethod()]
+        //public void AccountControllerTest()
+        //{
+        //    Assert.Fail();
+        //}
 
-        [TestMethod()]
-        public void AskRemoteSignatureTest()
-        {
-            Assert.Fail();
-        }
+        //[TestMethod()]
+        //public void AskRemoteSignatureTest()
+        //{
+        //    Assert.Fail();
+        //}
 
-        [TestMethod()]
-        public void SendMultisignArkTest()
-        {
-            Assert.Fail();
-        }
+        //[TestMethod()]
+        //public void SendMultisignArkTest()
+        //{
+        //    Assert.Fail();
+        //}
 
         [TestMethod()]
         public void CreateAccountTest()
         {
-            var accCtnrl = new AccountController("this is a top secret passphrase");
+            var accCtnrl = new AccountController(_passPhrase);
 
-
-
-            Assert.AreEqual(accCtnrl.GetArkAccount().Address, "AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC");
-            Assert.AreEqual(accCtnrl.GetArkAccount().PublicKey, "034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192");
+            Assert.AreEqual(accCtnrl.GetArkAccount().Address, _address);
+            Assert.AreEqual(accCtnrl.GetArkAccount().PublicKey, _pubKey);
         }
 
         [TestMethod()]
         public void SendArkTest()
         {
-            var accCtnrl = new AccountController("ski rose knock live elder parade dose device fetch betray loan holiday");
-            var result = accCtnrl.SendArk(1234, "ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K", "Akr.Net test trans from Account",
-                "ski rose knock live elder parade dose device fetch betray loan holiday");
-           
-            Assert.IsTrue(result.status);
+            var accCtnrl = new AccountController(_passPhrase);
+            var result = accCtnrl.SendArk(1, _address, "Akr.Net test trans from Account");
+
+            Assert.IsTrue(result.Success);
+            Assert.IsNotNull(result.TransactionIds);
+            Assert.IsTrue(result.TransactionIds.Count > 0);
+        }
+
+        [TestMethod()]
+        public void SendArkUsingMultiBroadCastTest()
+        {
+            var accCtnrl = new AccountController(_passPhrase);
+            var result = accCtnrl.SendArkUsingMultiBroadCast(1, _address, "Akr.Net test multi-trans from Account");
+
+            Assert.IsTrue(result > 0);
+        }
+
+        [TestMethod()]
+        public async Task SendArkUsingMultiBroadCastAsyncTest()
+        {
+            var accCtnrl = new AccountController(_passPhrase);
+            var result = await accCtnrl.SendArkUsingMultiBroadCastAsync(1, _address, "Akr.Net test multi-trans from Account");
+
+            Assert.IsTrue(result > 0);
         }
 
         [TestMethod()]
         public void VoteForDelegateTest()
         {
-            var dele = DelegateService.GetByUsername("arkpool");
+            var dele = DelegateService.GetByUsername(_delegateName);
 
             List<string> votes = new List<string>();
-            votes.Add("+" + dele.PublicKey);
+            votes.Add("+" + dele.Delegate.PublicKey);
 
             var a2 = JsonConvert.SerializeObject(votes);
 
-            var accCtnrl = new AccountController("ski rose knock live elder parade dose device fetch betray loan holiday");
-            var result = accCtnrl.VoteForDelegate( votes, "ski rose knock live elder parade dose device fetch betray loan holiday");
+            var accCtnrl = new AccountController(_passPhrase);
+            var result = accCtnrl.VoteForDelegate(votes);
 
-
-            Assert.IsTrue(result.status);
+            Assert.IsTrue(result.Success || (result.Success == false && result.TransactionIds == null && result.Error == "Failed to add vote, account has already voted for this delegate"));
         }
 
-        [TestMethod()]
-        public void RegisterAsDelegateTest()
-        {
-            Assert.Fail();
-        }
+        //[TestMethod()]
+        //public void RegisterAsDelegateTest()
+        //{
+        //    Assert.Fail();
+        //}
 
-        [TestMethod()]
-        public void RemoteSignTest()
-        {
-            Assert.Fail();
-        }
+        //[TestMethod()]
+        //public void RemoteSignTest()
+        //{
+        //    Assert.Fail();
+        //}
 
-        [TestMethod()]
-        public void RegisterSecondSignatureTest()
-        {
-            Assert.Fail();
-        }
+        //[TestMethod()]
+        //public void RegisterSecondSignatureTest()
+        //{
+        //    Assert.Fail();
+        //}
 
-        [TestMethod()]
-        public void GetVoterContributionTest()
-        {
-            Assert.Fail();
-        }
+        //[TestMethod()]
+        //public void GetVoterContributionTest()
+        //{
+        //    Assert.Fail();
+        //}
     }
 }

@@ -5,51 +5,63 @@ using ArkNet.Service;
 using ArkNet.Utils;
 using ArkNet.Utils.Enum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ArkNet.Tests;
+using System.Threading.Tasks;
 
 namespace ArkNetTest.Tests
 {
     [TestClass]
-	public class NetworkTests
+	public class NetworkTests : TestsBase
 	{
         /* TEST MAIN WALLET
 	     Adress: "AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK"
 	     pass: ski rose knock live elder parade dose device fetch betray loan holiday
 	     */
-	    [TestInitialize]
+
+        private string _address = "AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK";
+        private string _passPhrase = "ski rose knock live elder parade dose device fetch betray loan holiday";
+        private string _noBalanceAddress = "AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25";
+        private string _noBalanceAddressPassPhrase = "ski rose knock live elder parade dose device fetch betray loan holiday";
+
+        [TestInitialize]
 	    public void Init()
 	    {
-	        ArkNetApi.Instance.Start(NetworkType.MainNet);
+            base.Initialize();
+
+            if (USE_DEV_NET)
+            {
+                _address = "DRAJSs7GFq8iH1UGPAm8jVW9CgU1qwhkit";
+                _noBalanceAddress = "D5MYnTQCSy7ycYWuZv1ogWfBxTtQ1RNx6y";
+                _passPhrase = "sorry mandate shadow civil girl vote fragile senior also clip abandon milk";
+                _noBalanceAddressPassPhrase = "donkey click monster month diamond car actor news forward course ask blue";
+            }
 	    }
 
         [TestMethod]
 		public void PostTransactionNoBalanceTest()
 		{
-			var tx = TransactionApi.CreateTransaction("AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25",
+			var tx = TransactionApi.CreateTransaction(_noBalanceAddress,
 				133380000000,
 				"This is first transaction from ARK-NET",
-				"this is a top secret passphrase");
-
-			//var peer = NetworkApi.Instance.GetRandomPeer();
-
+                _noBalanceAddressPassPhrase);
 
 			var result = TransactionService.PostTransaction(tx);
 
-			Assert.AreEqual(result.error, "Account does not have enough ARK: AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC balance: 0");
+			Assert.AreEqual(result.Error, string.Format("Account does not have enough ARK: {0} balance: 0", _noBalanceAddress));
 		}
 
 
 		[TestMethod]
 		public void TransactionSerializeTest()
 		{
-			var tx = TransactionApi.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
-				1000,
+			var tx = TransactionApi.CreateTransaction(_address,
+				1,
 				"This is first transaction from ARK-NET 22",
-				"ski rose knock live elder parade dose device fetch betray loan holiday");
+                _passPhrase);
 
 			tx.Timestamp = 100;
 			File.WriteAllText(@"C:\temp\txNew.json", tx.SerializeObject2JSon());
 			File.WriteAllText(@"C:\temp\txNew.xml", tx.SerializeObject2Xml());
-
 
 			Assert.IsTrue(1 == 1);
 		}
@@ -58,25 +70,42 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void PostTransactionTransferTest()
 		{
-			var tx = TransactionApi.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
-				1000,
+			var tx = TransactionApi.CreateTransaction(_address,
+				1,
 				"This is first transaction from ARK-NET 22",
-				"ski rose knock live elder parade dose device fetch betray loan holiday");
+				_passPhrase);
 
 			var result = TransactionService.PostTransaction(tx);
-			Assert.IsTrue(result.status);
-		}
+
+			Assert.IsTrue(result.Success);
+            Assert.IsNotNull(result.TransactionIds);
+            Assert.IsTrue(result.TransactionIds.Count > 0);
+        }
 
 		[TestMethod]
 		public void MultiplePostTransactionSuccessTest()
 		{
-			var tx = TransactionApi.CreateTransaction("ASJBHz4JfWVUGDyN61hMMnW1Y4ZCTBHL1K",
-				1000,
+			var tx = TransactionApi.CreateTransaction(_address,
+				1,
 				"This is first Multi transaction from ARK-NET",
-				"ski rose knock live elder parade dose device fetch betray loan holiday");
+                _passPhrase);
 
 			var res = TransactionService.MultipleBroadCast(tx);
+
 			Assert.IsTrue(res > 0);
 		}
-	}
+
+        [TestMethod]
+        public async Task MultiplePostTransactionAsyncSuccessTest()
+        {
+            var tx = TransactionApi.CreateTransaction(_address,
+                1,
+                "This is first Multi transaction from ARK-NET",
+                _passPhrase);
+
+            var res = await TransactionService.MultipleBroadCastAsync(tx);
+
+            Assert.IsTrue(res > 0);
+        }
+    }
 }

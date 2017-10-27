@@ -1,83 +1,137 @@
 ﻿using System;
 using System.Collections.Generic;
 using ArkNet.Core;
-using ArkNet.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Linq;
+using ArkNet.Model.Delegate;
+using ArkNet.Utils;
+using System.Threading.Tasks;
+using ArkNet.Messages.BaseMessages;
 
 namespace ArkNet.Service
 {
     public static class DelegateService
     {
-        public static IEnumerable<ArkDelegate> GetAll()
+        public static ArkDelegateList GetAll()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates");
-            var parsed = JObject.Parse(response);
-            var array = (JArray) parsed["delegates"];
-
-            var delegList = JsonConvert.DeserializeObject<IReadOnlyCollection<ArkDelegate>>(array.ToString());
-            return delegList;
+            return GetAllAsync().Result;
         }
 
-        public static ArkDelegate GetByUsername(string username)
+        public async static Task<ArkDelegateList> GetAllAsync()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates/get?username=" + username);
-            var parsed = JObject.Parse(response);
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Delegate.GET_ALL);
 
-            var dele = new ArkDelegate();
-            if (!Convert.ToBoolean(parsed["success"]))
-                dele.Username = parsed["error"].ToString();
-            else
-                dele = JsonConvert.DeserializeObject<ArkDelegate>(parsed["delegate"].ToString());
-            return dele;
+            return JsonConvert.DeserializeObject<ArkDelegateList>(response);
         }
 
-        public static ArkDelegate GetByPubKey(string pubKey)
+        public static ArkDelegateList GetDelegates(ArkBaseRequest req)
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates/get?publicKey=" + pubKey);
-            var parsed = JObject.Parse(response);
-
-            var dele = new ArkDelegate();
-            if (!Convert.ToBoolean(parsed["success"]))
-                dele.Username = parsed["error"].ToString();
-            else
-                dele = JsonConvert.DeserializeObject<ArkDelegate>(parsed["delegate"].ToString());
-            return dele;
+            return GetDelegatesAsync(req).Result;
         }
 
-        public static ArkDelegate GetByAddress(string address)
+        public async static Task<ArkDelegateList> GetDelegatesAsync(ArkBaseRequest req)
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates/get?address=" + address);
-            var parsed = JObject.Parse(response);
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_ALL + "{0}", req.ToQuery()));
 
-            var dele = new ArkDelegate();
-            if (!Convert.ToBoolean(parsed["success"]))
-                dele.Username = parsed["error"].ToString();
-            else
-                dele = JsonConvert.DeserializeObject<ArkDelegate>(parsed["delegate"].ToString());
-            return dele;
+            return JsonConvert.DeserializeObject<ArkDelegateList>(response);
         }
 
-        public static IEnumerable<DelegateVoters> GetVoters(string pubKey)
+        public static ArkDelegateResponse GetByUsername(string username)
         {
-            var response =
-                NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/api/delegates/voters?publicKey=" + pubKey);
-            var parsed = JObject.Parse(response);
-            var array = (JArray) parsed["accounts"];
+            return GetByUsernameAsync(username).Result;
+        }
 
-            var delegVotersList = new List<DelegateVoters>();
-            if (!Convert.ToBoolean(parsed["success"]))
+        public async static Task<ArkDelegateResponse> GetByUsernameAsync(string username)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_BY_USERNAME, username));
+
+            return JsonConvert.DeserializeObject<ArkDelegateResponse>(response);
+        }
+
+        public static ArkDelegateResponse GetByPubKey(string pubKey)
+        {
+            return GetByPubKeyAsync(pubKey).Result;
+        }
+
+        public async static Task<ArkDelegateResponse> GetByPubKeyAsync(string pubKey)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_BY_PUBLIC_KEY, pubKey));
+
+            return JsonConvert.DeserializeObject<ArkDelegateResponse>(response);
+        }
+
+        public static ArkDelegateVoterList GetVoters(string pubKey)
+        {
+            return GetVotersAsync(pubKey).Result;
+        }
+
+        public async static Task<ArkDelegateVoterList> GetVotersAsync(string pubKey)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_VOTERS, pubKey));
+
+            return JsonConvert.DeserializeObject<ArkDelegateVoterList>(response);
+        }
+
+        public static long GetFee()
+        {
+            return GetFeeAsync().Result;
+        }
+
+        public async static Task<long> GetFeeAsync()
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Delegate.GET_FEE);
+            var parsed = JObject.Parse(response);
+
+            return Int64.Parse(parsed["fee"].ToString());
+        }
+
+        public static ArkDelegateForgedBalance GetForgedByAccount(string pubKey)
+        {
+            return GetForgedByAccountAsync(pubKey).Result;
+        }
+
+        public async static Task<ArkDelegateForgedBalance> GetForgedByAccountAsync(string pubKey)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_FORGED, pubKey));
+
+            return JsonConvert.DeserializeObject<ArkDelegateForgedBalance>(response);
+        }
+
+        public static ArkDelegateNextForgers GetNextForgers()
+        {
+            return GetNextForgersAsync().Result;
+        }
+
+        public async static Task<ArkDelegateNextForgers> GetNextForgersAsync()
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Delegate.GET_NEXT_FORGERS);
+
+            return JsonConvert.DeserializeObject<ArkDelegateNextForgers>(response);
+        }
+
+        public static long GetTotalVoteArk(string pubKey)
+        {
+            var arkDelegate = GetByPubKey(pubKey);
+
+            if (arkDelegate.Success && arkDelegate.Delegate != null)
             {
-                var dele = new DelegateVoters
-                {
-                    Username = parsed["error"].ToString()
-                };
+                return arkDelegate.Delegate.Vote;
             }
-            else
+
+            return 0;
+        }
+
+        public async static Task<long> GetTotalVoteArkAsync(string pubKey)
+        {
+            var arkDelegate = await GetByPubKeyAsync(pubKey);
+
+            if (arkDelegate.Success && arkDelegate.Delegate != null)
             {
-                delegVotersList = JsonConvert.DeserializeObject<List<DelegateVoters>>(array.ToString());
+                return arkDelegate.Delegate.Vote;
             }
-            return delegVotersList;
+
+            return 0;
         }
     }
 }

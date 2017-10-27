@@ -28,7 +28,7 @@ namespace ArkNet.Utils
             Requires.Range(offset < input.Length, "offset");
             Requires.Range(offset + count <= input.Length, "count");
 
-            using (var hashAlgorithm = HashAlgorithm.Create("SHA-256"))
+            using (var hashAlgorithm = SHA256.Create())
             {
                 byte[] hash = hashAlgorithm.ComputeHash(input, offset, count);
                 return hashAlgorithm.ComputeHash(hash);

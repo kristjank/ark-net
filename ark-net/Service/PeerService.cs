@@ -3,28 +3,48 @@ using ArkNet.Core;
 using ArkNet.Model;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using ArkNet.Model.Peer;
+using ArkNet.Utils;
+using System.Threading.Tasks;
 
 namespace ArkNet.Service
 {
     public static class PeerService
     {
-        public static IEnumerable<ArkPeer> GetAll()
+        public static ArkPeerList GetAll()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/peer/list");
-            var parsed = JObject.Parse(response);
-            var array = (JArray) parsed["peers"];
-
-            var peerList = JsonConvert.DeserializeObject<IReadOnlyCollection<ArkPeer>>(array.ToString());
-            return peerList;
+            return GetAllAsync().Result;
         }
 
-        public static PeerStatus GetPeerStatus()
+        public async static Task<ArkPeerList> GetAllAsync()
         {
-            var response = NetworkApi.Instance.ActivePeer.MakeRequest("GET", "/peer/status");
-            var parsed = JObject.Parse(response);
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_ALL);
 
-            var peerStat = JsonConvert.DeserializeObject<PeerStatus>(response);
-            return peerStat;
+            return JsonConvert.DeserializeObject<ArkPeerList>(response);
+        }
+
+        public static ArkPeerResponse GetPeer(string ip, int port)
+        {
+            return GetPeerAsync(ip, port).Result;
+        }
+
+        public async static Task<ArkPeerResponse> GetPeerAsync(string ip, int port)
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Peer.GET, ip, port));
+
+            return JsonConvert.DeserializeObject<ArkPeerResponse>(response);
+        }
+
+        public static ArkPeerStatus GetPeerStatus()
+        {
+            return GetPeerStatusAsync().Result;
+        }
+
+        public async static Task<ArkPeerStatus> GetPeerStatusAsync()
+        {
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_STATUS);
+
+            return JsonConvert.DeserializeObject<ArkPeerStatus>(response);
         }
     }
 }

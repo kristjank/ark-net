@@ -10,9 +10,9 @@ namespace ArkNet.Core
 	public class Crypto
 	{
 		private static readonly SHA256 Sha256 = SHA256.Create();
-		private static readonly RIPEMD160 Ripemd160 = RIPEMD160.Create();
+        private static readonly SshNet.Security.Cryptography.RIPEMD160 Ripemd160 = new SshNet.Security.Cryptography.RIPEMD160();
 
-		public static ECDSASignature Sign(TransactionApi t, string passphrase)
+        public static ECDSASignature Sign(TransactionApi t, string passphrase)
 		{
 			var txbytes = GetBytes(t);
 			return SignBytes(txbytes, passphrase);
