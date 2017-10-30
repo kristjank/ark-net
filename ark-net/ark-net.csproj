@@ -8,8 +8,18 @@
     <Version>0.8.0</Version>
     <FileVersion>0.8.0</FileVersion>
 	<Description>Ark.NET Client Api for Ark Ecosystem</Description>
-	<Copyright>Copyright © 2017, ARK, Kristjan Košič - chris</Copyright>
+	<Copyright>Copyright © 2017, ARK, delegate chris, @sharkdev-j and @dnovacik</Copyright>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<PackageId>ark.net</PackageId>
+	<Authors>delegate chris, @sharkdev-j and @dnovacik</Authors>
+	<Company>ARK.io</Company>
+	<Product>ARK.NET</Product>
+	<PackageProjectUrl>https://github.com/ArkEcosystem/ark-net</PackageProjectUrl>
+	<PackageLicenseUrl>https://github.com/ArkEcosystem/ark-net/blob/master/LICENSE</PackageLicenseUrl>
+	<RepositoryUrl>https://github.com/ArkEcosystem/ark-net</RepositoryUrl>
+	<RepositoryType>GitHub</RepositoryType>
+	<PackageIconUrl>https://github.com/kristjank/ark-net/blob/master/ark-net/res/6464.png?raw=true</PackageIconUrl>
+	<NeutralLanguage></NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
