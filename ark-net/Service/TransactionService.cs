@@ -108,11 +108,10 @@ namespace ArkNet.Service
         public static int MultipleBroadCast(TransactionApi transaction)
         {
             var res = 0;
-            var peerURLs = PeerService.GetAll().Peers.Where(x => x.Status.Equals("OK")).OrderByDescending(x => x.Height).Take(20).Select(x => string.Format("{0}:{1}", x.Ip, x.Port)).ToList();
 
             for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
-                var response = PostTransaction(transaction, new PeerApi(peerURLs[NetworkApi.random.Next(peerURLs.Count)]));
+                var response = PostTransaction(transaction, NetworkApi.Instance.GetRandomPeer());
 
                 if (response.Success)
                 {
@@ -127,12 +126,9 @@ namespace ArkNet.Service
         {
             var res = 0;
 
-            var peers = await PeerService.GetAllAsync();
-            var peerURLs = peers.Peers.Where(x => x.Status.Equals("OK")).OrderByDescending(x => x.Height).Take(20).Select(x => string.Format("{0}:{1}", x.Ip, x.Port)).ToList();
-
             for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
-                var response = await PostTransactionAsync(transaction, new PeerApi(peerURLs[NetworkApi.random.Next(peerURLs.Count)]));
+                var response = await PostTransactionAsync(transaction, NetworkApi.Instance.GetRandomPeer());
 
                 if (response.Success)
                 {
