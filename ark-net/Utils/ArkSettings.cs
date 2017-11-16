@@ -11,7 +11,6 @@ namespace ArkNet.Utils
         public string NetHash { get; set; }
         public int MaxNumOfBroadcasts { get; set; }
         public Fees Fee { get; set; }
-        public IList<string> PeerSeedList { get; set; }
 
         public ArkNetworkSettings()
         {

@@ -28,17 +28,10 @@ namespace ArkNet.Core
         public int BroadcastMax { get; set; } = ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts;
         public PeerApi ActivePeer { get; set; }
 
-        public async Task WarmUp()
+        public void WarmUp(PeerApi initialPeer)
         {
-            foreach (var item in ArkNetApi.Instance.NetworkSettings.PeerSeedList)
-            {
-                var peer = new PeerApi(item);
-                peers.Add(peer);
-                if (ActivePeer == null && await peer.IsOnline())
-                {
-                    ActivePeer = peer;
-                }
-            }
+            peers.Add(initialPeer);
+            ActivePeer = initialPeer;
         }
 
         public PeerApi GetRandomPeer()
