@@ -108,7 +108,7 @@ namespace ArkNet.Service
         public static int MultipleBroadCast(TransactionApi transaction)
         {
             var res = 0;
-            var peerURLs = PeerService.GetAll().Peers.Where(x => x.Status.Equals("OK")).Select(x => string.Format("{0}:{1}", x.Ip, x.Port)).ToList();
+            var peerURLs = PeerService.GetAll().Peers.Where(x => x.Status.Equals("OK")).OrderByDescending(x => x.Height).Take(20).Select(x => string.Format("{0}:{1}", x.Ip, x.Port)).ToList();
 
             for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
@@ -128,7 +128,7 @@ namespace ArkNet.Service
             var res = 0;
 
             var peers = await PeerService.GetAllAsync();
-            var peerURLs = peers.Peers.Where(x => x.Status.Equals("OK")).Select(x => string.Format("{0}:{1}", x.Ip, x.Port)).ToList();
+            var peerURLs = peers.Peers.Where(x => x.Status.Equals("OK")).OrderByDescending(x => x.Height).Take(20).Select(x => string.Format("{0}:{1}", x.Ip, x.Port)).ToList();
 
             for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
