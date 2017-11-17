@@ -6,16 +6,17 @@ using System.Net.Http.Headers;
 using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
 using System.Text;
+using ArkNet.Utils;
 
 namespace ArkNet.Core
 {
     public class PeerApi
     {
-        private readonly HttpClient _httpClient;
-
+        private HttpClient _httpClient;
         private string _ip;
         private int _port;
 
+        public HttpClient HttpClient { get { return _httpClient; } }
         public string Ip { get { return _ip; } }
         public int Port { get { return _port; } }
 
@@ -45,35 +46,51 @@ namespace ArkNet.Core
             this._port = port;
         }
 
-        public async Task<string> MakeRequest(string method, string path, string body = "")
+        public async Task<string> MakeRequest(string method, string path, string body = "", int retryCount = 0)
         {
             HttpResponseMessage response;
             var methodString = new HttpMethod(method).ToString().ToUpper();
 
-            switch (methodString)
+            try
             {
-                case "GET":
-                case "HEAD":
-                    response = await _httpClient.GetAsync(path);
-                    break;
-                case "POST":
-                    response = await _httpClient.PostAsync(path, new StringContent(JObject.Parse(body).ToString(), Encoding.UTF8, "application/json"));
-                    break;
-                case "PUT":
-                    response = await _httpClient.PutAsync(path, new StringContent(JObject.Parse(body).ToString(), Encoding.UTF8, "application/json"));
-                    break;
-                default:
-                    throw new NotImplementedException();
+                switch (methodString)
+                {
+                    case "GET":
+                    case "HEAD":
+                        response = await _httpClient.GetAsync(path);
+                        break;
+                    case "POST":
+                        response = await _httpClient.PostAsync(path, new StringContent(JObject.Parse(body).ToString(), Encoding.UTF8, "application/json"));
+                        break;
+                    case "PUT":
+                        response = await _httpClient.PutAsync(path, new StringContent(JObject.Parse(body).ToString(), Encoding.UTF8, "application/json"));
+                        break;
+                    default:
+                        throw new NotImplementedException();
+                }
+                response.EnsureSuccessStatusCode();
+                return await response.Content.ReadAsStringAsync();
             }
-            response.EnsureSuccessStatusCode();
-            return await response.Content.ReadAsStringAsync();
+            catch(Exception)
+            {
+                if (ArkNetApi.Instance.NetworkSettings != null && NetworkApi.Instance.ActivePeer != null)
+                {
+                    if (retryCount < ArkNetApi.Instance.NetworkSettings.MaxRequestRetryCount)
+                    {
+                        NetworkApi.Instance.SwitchPeer();
+                        _httpClient = NetworkApi.Instance.ActivePeer.HttpClient;
+                        return await MakeRequest(method, path, body, retryCount + 1);
+                    }
+                }
+                throw;
+            }
         }
 
         public async Task<bool> IsOnline()
         {
             try
             {
-                await MakeRequest("HEAD", "/api/loader/status");
+                await MakeRequest(ArkStaticStrings.ArkHttpMethods.HEAD, ArkStaticStrings.ArkApiPaths.Loader.GET_STATUS);
                 return true;
             }
             catch

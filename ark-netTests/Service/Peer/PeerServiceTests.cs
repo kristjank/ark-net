@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ArkNet.Utils.Enum;
+using ArkNet.Core;
 
 namespace ArkNet.Service.Peer.Tests
 {
@@ -41,6 +42,16 @@ namespace ArkNet.Service.Peer.Tests
             var peer = PeerService.GetPeerStatus();
 
             GetPeerStatusResultTest(peer);
+        }
+
+        [TestMethod]
+        public void SwitchPeerTest()
+        {
+            NetworkApi.Instance.ActivePeer = new PeerApi("1.1.1.1", 5000);
+
+            var peer = PeerService.GetPeer(base._ip, base._port);
+
+            GetPeerResultTest(peer);
         }
     }
 }
