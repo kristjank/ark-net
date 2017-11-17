@@ -10,12 +10,15 @@ namespace ArkNet.Utils
         public string Version { get; set; }
         public string NetHash { get; set; }
         public int MaxNumOfBroadcasts { get; set; }
+        public int PeerCleaningIntervalInMinutes { get; set; }
+        public int PeerCleaningHeightThreshold { get; set; }
         public Fees Fee { get; set; }
-        public IList<string> PeerSeedList { get; set; }
 
         public ArkNetworkSettings()
         {
             Fee = new Fees();
+            PeerCleaningIntervalInMinutes = 1;
+            PeerCleaningHeightThreshold = 5;
         }
     }
 
@@ -27,6 +30,4 @@ namespace ArkNet.Utils
         public int SecondSignature { get; set; }
         public int MultiSignature { get; set; }
     }
-
-
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Newtonsoft.Json;
 using System.Threading.Tasks;
+using ArkNet.Service;
 
 namespace ArkNet.Core
 {
@@ -10,15 +10,15 @@ namespace ArkNet.Core
     {
         private static readonly Lazy<NetworkApi> lazy =
             new Lazy<NetworkApi>(() => new NetworkApi());
-  
-        private readonly List<PeerApi> peers = new List<PeerApi>();
-    
+
+        private readonly Random _random = new Random();
+        private List<PeerApi> _peers = new List<PeerApi>();
+
         private NetworkApi()
         {
-            peers = new List<PeerApi>();
+            _peers = new List<PeerApi>();
         }
 
-        public static readonly Random random = new Random();
         public static NetworkApi Instance => lazy.Value;
    
         public string Nethash { get; set; } = ArkNetApi.Instance.NetworkSettings.NetHash; 
@@ -28,22 +28,63 @@ namespace ArkNet.Core
         public int BroadcastMax { get; set; } = ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts;
         public PeerApi ActivePeer { get; set; }
 
-        public async Task WarmUp()
+        public async Task WarmUp(PeerApi initialPeer)
         {
-            foreach (var item in ArkNetApi.Instance.NetworkSettings.PeerSeedList)
-            {
-                var peer = new PeerApi(item);
-                peers.Add(peer);
-                if (ActivePeer == null && await peer.IsOnline())
-                {
-                    ActivePeer = peer;
-                }
-            }
+            ActivePeer = initialPeer;
+            await SetPeerList();
+            StartPeerCleaningTask();
         }
 
         public PeerApi GetRandomPeer()
         {
-            return peers[random.Next(peers.Count())];
+            return _peers[_random.Next(_peers.Count())];
+        }
+
+        public void SwitchPeer()
+        {
+            ActivePeer = GetRandomPeer();
+        }
+
+        private async Task SetPeerList()
+        {
+            var peers = await PeerService.GetAllAsync();
+            var peersOrderByHeight = peers.Peers
+                .Where(x => x.Status.Equals("OK") && x.Version == ArkNetApi.Instance.NetworkSettings.Version)
+                .OrderByDescending(x => x.Height)
+                .ToList();
+
+            var heightToCompare = peersOrderByHeight.FirstOrDefault().Height - ArkNetApi.Instance.NetworkSettings.PeerCleaningHeightThreshold;
+
+            var peerURLs = peersOrderByHeight.Where(x => x.Height >= heightToCompare)
+                .Select(x => new { Ip = x.Ip, Port = x.Port })
+                .ToList();
+
+            var tmpPeerList = new List<PeerApi>();
+            foreach (var peerURL in peerURLs)
+            {
+                tmpPeerList.Add(new PeerApi(peerURL.Ip, peerURL.Port));
+            }
+
+            if (!tmpPeerList.Any(x => x.Ip == NetworkApi.Instance.ActivePeer.Ip))
+                tmpPeerList.Add(NetworkApi.Instance.ActivePeer);
+
+            _peers = tmpPeerList;
+        }
+
+        private void StartPeerCleaningTask()
+        {
+            Task.Run(async () =>
+            {
+                while (true)
+                {
+                    await Task.Delay(TimeSpan.FromMinutes(ArkNetApi.Instance.NetworkSettings.PeerCleaningIntervalInMinutes));
+                    try
+                    {
+                        await SetPeerList();
+                    }
+                    catch { }
+                }
+            });
         }
     }
 }
