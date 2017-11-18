@@ -32,6 +32,7 @@ namespace ArkNet.Core
         {
             ActivePeer = initialPeer;
             await SetPeerList();
+            ActivePeer = GetRandomPeer();
             StartPeerCleaningTask();
         }
 
