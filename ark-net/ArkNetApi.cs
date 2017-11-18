@@ -113,7 +113,7 @@ namespace ArkNet
 
             if ((type == NetworkType.DevNet && retryCount == _peerSeedListDevNet.Count) 
              || (type == NetworkType.MainNet && retryCount == _peerSeedListMainNet.Count))
-                return null;
+                throw new Exception("Unable to connect to a seed peer");
 
             return await GetInitialPeer(type, retryCount + 1);
         }
