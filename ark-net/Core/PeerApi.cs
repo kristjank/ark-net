@@ -46,7 +46,12 @@ namespace ArkNet.Core
             this._port = port;
         }
 
-        public async Task<string> MakeRequest(string method, string path, string body = "", int retryCount = 0)
+        public async Task<string> MakeRequest(string method, string path, string body = "")
+        {
+            return await MakeRequestInternal(method, path, body, 0);
+        }
+
+        private async Task<string> MakeRequestInternal(string method, string path, string body = "", int retryCount = 0)
         {
             HttpResponseMessage response;
             var methodString = new HttpMethod(method).ToString().ToUpper();
@@ -79,7 +84,7 @@ namespace ArkNet.Core
                     {
                         NetworkApi.Instance.SwitchPeer();
                         _httpClient = NetworkApi.Instance.ActivePeer.HttpClient;
-                        return await MakeRequest(method, path, body, retryCount + 1);
+                        return await MakeRequestInternal(method, path, body, retryCount + 1);
                     }
                 }
                 throw;
