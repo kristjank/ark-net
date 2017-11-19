@@ -12,6 +12,7 @@ namespace ArkNet.Utils
         public int MaxNumOfBroadcasts { get; set; }
         public int PeerCleaningIntervalInMinutes { get; set; }
         public int PeerCleaningHeightThreshold { get; set; }
+        public int MaxRequestRetryCount { get; set; }
         public Fees Fee { get; set; }
 
         public ArkNetworkSettings()
@@ -19,6 +20,8 @@ namespace ArkNet.Utils
             Fee = new Fees();
             PeerCleaningIntervalInMinutes = 1;
             PeerCleaningHeightThreshold = 5;
+            MaxRequestRetryCount = 3;
+            MaxNumOfBroadcasts = 5;
         }
     }
 

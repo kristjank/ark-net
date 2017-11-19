@@ -88,7 +88,6 @@ namespace ArkNet
                 BytePrefix = (byte)autoConfig.Network.Version,
                 Version = peer.Peer.Version,
                 NetHash = autoConfig.Network.NetHash,
-                MaxNumOfBroadcasts = 5,
                 Fee = fees
             };
 
@@ -100,7 +99,7 @@ namespace ArkNet
             return new PeerApi(initialPeerIp, initialPeerPort);
         }
 
-        private async Task<PeerApi> GetInitialPeer(NetworkType type)
+        private async Task<PeerApi> GetInitialPeer(NetworkType type, int retryCount = 0)
         {
             var peerUrl = _peerSeedListMainNet[new Random().Next(_peerSeedListMainNet.Count)];
             if (type == NetworkType.DevNet)
@@ -112,7 +111,11 @@ namespace ArkNet
                 return peer;
             }
 
-            return await GetInitialPeer(type);
+            if ((type == NetworkType.DevNet && retryCount == _peerSeedListDevNet.Count) 
+             || (type == NetworkType.MainNet && retryCount == _peerSeedListMainNet.Count))
+                throw new Exception("Unable to connect to a seed peer");
+
+            return await GetInitialPeer(type, retryCount + 1);
         }
     }
 }
