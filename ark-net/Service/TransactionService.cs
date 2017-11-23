@@ -105,35 +105,25 @@ namespace ArkNet.Service
             return JsonConvert.DeserializeObject<ArkTransactionPostResponse>(response);
         }
 
-        public static int MultipleBroadCast(TransactionApi transaction)
+        public static List<ArkTransactionPostResponse> MultipleBroadCast(TransactionApi transaction)
         {
-            var res = 0;
+            var res = new List<ArkTransactionPostResponse>();
 
             for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
-                var response = PostTransaction(transaction, NetworkApi.Instance.GetRandomPeer());
-
-                if (response.Success)
-                {
-                    res++;
-                }
+                res.Add(PostTransaction(transaction, NetworkApi.Instance.GetRandomPeer()));
             }
 
             return res;
         }
 
-        public async static Task<int> MultipleBroadCastAsync(TransactionApi transaction)
+        public async static Task<List<ArkTransactionPostResponse>> MultipleBroadCastAsync(TransactionApi transaction)
         {
-            var res = 0;
+            var res = new List<ArkTransactionPostResponse>();
 
             for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
-                var response = await PostTransactionAsync(transaction, NetworkApi.Instance.GetRandomPeer());
-
-                if (response.Success)
-                {
-                    res++;
-                }
+                res.Add(await PostTransactionAsync(transaction, NetworkApi.Instance.GetRandomPeer()));
             }
 
             return res;
