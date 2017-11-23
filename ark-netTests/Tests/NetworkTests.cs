@@ -7,6 +7,7 @@ using ArkNet.Utils.Enum;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ArkNet.Tests;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace ArkNetTest.Tests
 {
@@ -92,7 +93,7 @@ namespace ArkNetTest.Tests
 
 			var res = TransactionService.MultipleBroadCast(tx);
 
-			Assert.IsTrue(res > 0);
+			Assert.IsTrue(res.Where(x => x.Success).Count() > 0);
 		}
 
         [TestMethod]
@@ -105,7 +106,7 @@ namespace ArkNetTest.Tests
 
             var res = await TransactionService.MultipleBroadCastAsync(tx);
 
-            Assert.IsTrue(res > 0);
+            Assert.IsTrue(res.Where(x => x.Success).Count() > 0);
         }
     }
 }
