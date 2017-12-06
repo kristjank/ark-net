@@ -86,6 +86,26 @@ namespace ArkNet.Service
             return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }
 
+        public static ArkTransactionList GetTransactions(string address, int offset = 0, int limit = 50)
+        {
+            return GetTransactions(new ArkTransactionRequest { OrderBy = "timestamp:desc", RecipientId = address, SenderId = address, Offset = offset, Limit = limit });
+        }
+
+        public async static Task<ArkTransactionList> GetTransactionsAsync(string address, int offset = 0, int limit = 50)
+        {
+            return await GetTransactionsAsync(new ArkTransactionRequest { OrderBy = "timestamp:desc", RecipientId = address, SenderId = address, Offset = offset, Limit = limit });
+        }
+
+        public static ArkTransactionList GetUnconfirmedTransactions(string address)
+        {
+            return GetUnconfirmedTransactions(new ArkUnconfirmedTransactionRequest { Address = address });
+        }
+
+        public async static Task<ArkTransactionList> GetUnconfirmedTransactionsAsync(string address)
+        {
+            return await GetUnconfirmedTransactionsAsync(new ArkUnconfirmedTransactionRequest { Address = address });
+        }
+
         public static ArkTransactionPostResponse PostTransaction(TransactionApi transaction, PeerApi peer = null)
         {
             return PostTransactionAsync(transaction, peer).Result;
