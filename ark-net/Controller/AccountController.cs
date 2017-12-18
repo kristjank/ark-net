@@ -148,22 +148,22 @@ namespace ArkNet.Controller
 
         public ArkTransactionList GetTransactions(int offset = 0, int limit = 50)
         {
-            return TransactionService.GetTransactions(new ArkTransactionRequest { OrderBy = "timestamp:desc", RecipientId = GetArkAccount().Address, SenderId = GetArkAccount().Address, Offset = offset, Limit = limit });
+            return TransactionService.GetTransactions(GetArkAccount().Address, offset, limit);
         }
 
         public async Task<ArkTransactionList> GetTransactionsAsync(int offset = 0, int limit = 50)
         {
-            return await TransactionService.GetTransactionsAsync(new ArkTransactionRequest { OrderBy = "timestamp:desc", RecipientId = GetArkAccount().Address, SenderId = GetArkAccount().Address, Offset = offset, Limit = limit });
+            return await TransactionService.GetTransactionsAsync(GetArkAccount().Address, offset, limit);
         }
 
         public ArkTransactionList GetUnconfirmedTransactions()
         {
-            return TransactionService.GetUnconfirmedTransactions(new ArkUnconfirmedTransactionRequest { Address = GetArkAccount().Address });
+            return TransactionService.GetUnconfirmedTransactions(GetArkAccount().Address);
         }
 
         public async Task<ArkTransactionList> GetUnconfirmedTransactionsAsync()
         {
-            return await TransactionService.GetUnconfirmedTransactionsAsync(new ArkUnconfirmedTransactionRequest { Address = GetArkAccount().Address });
+            return await TransactionService.GetUnconfirmedTransactionsAsync(GetArkAccount().Address);
         }
 
         //public bool RemoteSign()
