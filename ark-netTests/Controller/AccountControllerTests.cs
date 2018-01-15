@@ -36,24 +36,6 @@ namespace ArkNet.Controller.Tests
             }
         }
 
-        //[TestMethod()]
-        //public void AccountControllerTest()
-        //{
-        //    Assert.Fail();
-        //}
-
-        //[TestMethod()]
-        //public void AskRemoteSignatureTest()
-        //{
-        //    Assert.Fail();
-        //}
-
-        //[TestMethod()]
-        //public void SendMultisignArkTest()
-        //{
-        //    Assert.Fail();
-        //}
-
         [TestMethod()]
         public void CreateAccountTest()
         {
@@ -80,7 +62,7 @@ namespace ArkNet.Controller.Tests
             var accCtnrl = new AccountController(_passPhrase);
             var result = accCtnrl.SendArkUsingMultiBroadCast(1, _address, "Akr.Net test multi-trans from Account");
 
-            Assert.IsTrue(result > 0);
+            Assert.IsTrue(result.Where(x => x.Success).Count() > 0);
         }
 
         [TestMethod()]
@@ -89,7 +71,7 @@ namespace ArkNet.Controller.Tests
             var accCtnrl = new AccountController(_passPhrase);
             var result = await accCtnrl.SendArkUsingMultiBroadCastAsync(1, _address, "Akr.Net test multi-trans from Account");
 
-            Assert.IsTrue(result > 0);
+            Assert.IsTrue(result.Where(x => x.Success).Count() > 0);
         }
 
         [TestMethod()]
@@ -108,28 +90,22 @@ namespace ArkNet.Controller.Tests
             Assert.IsTrue(result.Success || (result.Success == false && result.TransactionIds == null && result.Error == "Failed to add vote, account has already voted for this delegate"));
         }
 
-        //[TestMethod()]
-        //public void RegisterAsDelegateTest()
-        //{
-        //    Assert.Fail();
-        //}
+        [TestMethod()]
+        public void GetTransactionsTest()
+        {
+            var accCtnrl = new AccountController(_passPhrase);
+            var result = accCtnrl.GetTransactions();
 
-        //[TestMethod()]
-        //public void RemoteSignTest()
-        //{
-        //    Assert.Fail();
-        //}
+            Assert.IsTrue(result.Count > 0);
+        }
 
-        //[TestMethod()]
-        //public void RegisterSecondSignatureTest()
-        //{
-        //    Assert.Fail();
-        //}
+        [TestMethod()]
+        public void GetUnconfirmedTransactionsTest()
+        {
+            var accCtnrl = new AccountController(_passPhrase);
+            var result = accCtnrl.GetUnconfirmedTransactions();
 
-        //[TestMethod()]
-        //public void GetVoterContributionTest()
-        //{
-        //    Assert.Fail();
-        //}
+            Assert.IsTrue(result.Count == 0);
+        }
     }
 }

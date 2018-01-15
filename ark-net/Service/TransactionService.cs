@@ -86,6 +86,26 @@ namespace ArkNet.Service
             return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }
 
+        public static ArkTransactionList GetTransactions(string address, int offset = 0, int limit = 50)
+        {
+            return GetTransactions(new ArkTransactionRequest { OrderBy = "timestamp:desc", RecipientId = address, SenderId = address, Offset = offset, Limit = limit });
+        }
+
+        public async static Task<ArkTransactionList> GetTransactionsAsync(string address, int offset = 0, int limit = 50)
+        {
+            return await GetTransactionsAsync(new ArkTransactionRequest { OrderBy = "timestamp:desc", RecipientId = address, SenderId = address, Offset = offset, Limit = limit });
+        }
+
+        public static ArkTransactionList GetUnconfirmedTransactions(string address)
+        {
+            return GetUnconfirmedTransactions(new ArkUnconfirmedTransactionRequest { Address = address });
+        }
+
+        public async static Task<ArkTransactionList> GetUnconfirmedTransactionsAsync(string address)
+        {
+            return await GetUnconfirmedTransactionsAsync(new ArkUnconfirmedTransactionRequest { Address = address });
+        }
+
         public static ArkTransactionPostResponse PostTransaction(TransactionApi transaction, PeerApi peer = null)
         {
             return PostTransactionAsync(transaction, peer).Result;
@@ -105,39 +125,25 @@ namespace ArkNet.Service
             return JsonConvert.DeserializeObject<ArkTransactionPostResponse>(response);
         }
 
-        public static int MultipleBroadCast(TransactionApi transaction)
+        public static List<ArkTransactionPostResponse> MultipleBroadCast(TransactionApi transaction)
         {
-            var res = 0;
-            var peerURLs = PeerService.GetAll().Peers.Where(x => x.Status.Equals("OK")).Select(x => string.Format("{0}:{1}", x.Ip, x.Port)).ToList();
+            var res = new List<ArkTransactionPostResponse>();
 
             for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
-                var response = PostTransaction(transaction, new PeerApi(peerURLs[NetworkApi.random.Next(peerURLs.Count)]));
-
-                if (response.Success)
-                {
-                    res++;
-                }
+                res.Add(PostTransaction(transaction, NetworkApi.Instance.GetRandomPeer()));
             }
 
             return res;
         }
 
-        public async static Task<int> MultipleBroadCastAsync(TransactionApi transaction)
+        public async static Task<List<ArkTransactionPostResponse>> MultipleBroadCastAsync(TransactionApi transaction)
         {
-            var res = 0;
-
-            var peers = await PeerService.GetAllAsync();
-            var peerURLs = peers.Peers.Where(x => x.Status.Equals("OK")).Select(x => string.Format("{0}:{1}", x.Ip, x.Port)).ToList();
+            var res = new List<ArkTransactionPostResponse>();
 
             for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
-                var response = await PostTransactionAsync(transaction, new PeerApi(peerURLs[NetworkApi.random.Next(peerURLs.Count)]));
-
-                if (response.Success)
-                {
-                    res++;
-                }
+                res.Add(await PostTransactionAsync(transaction, NetworkApi.Instance.GetRandomPeer()));
             }
 
             return res;

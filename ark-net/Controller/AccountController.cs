@@ -5,6 +5,7 @@ using ArkNet.Service;
 using ArkNet.Model.Transactions;
 using ArkNet.Model.Account;
 using System.Threading.Tasks;
+using ArkNet.Messages.Transaction;
 
 namespace ArkNet.Controller
 {
@@ -71,7 +72,7 @@ namespace ArkNet.Controller
             return await TransactionService.PostTransactionAsync(tx);
         }
 
-        public int SendArkUsingMultiBroadCast(long satoshiAmount, string recipientAddress,
+        public List<ArkTransactionPostResponse> SendArkUsingMultiBroadCast(long satoshiAmount, string recipientAddress,
             string vendorField)
         {
             var tx = TransactionApi.CreateTransaction(recipientAddress,
@@ -83,7 +84,7 @@ namespace ArkNet.Controller
             return TransactionService.MultipleBroadCast(tx);
         }
 
-        public async Task<int> SendArkUsingMultiBroadCastAsync(long satoshiAmount, string recipientAddress,
+        public async Task<List<ArkTransactionPostResponse>> SendArkUsingMultiBroadCastAsync(long satoshiAmount, string recipientAddress,
             string vendorField)
         {
             var tx = TransactionApi.CreateTransaction(recipientAddress,
@@ -145,6 +146,26 @@ namespace ArkNet.Controller
             return res.Success;
         }
 
+        public ArkTransactionList GetTransactions(int offset = 0, int limit = 50)
+        {
+            return TransactionService.GetTransactions(GetArkAccount().Address, offset, limit);
+        }
+
+        public async Task<ArkTransactionList> GetTransactionsAsync(int offset = 0, int limit = 50)
+        {
+            return await TransactionService.GetTransactionsAsync(GetArkAccount().Address, offset, limit);
+        }
+
+        public ArkTransactionList GetUnconfirmedTransactions()
+        {
+            return TransactionService.GetUnconfirmedTransactions(GetArkAccount().Address);
+        }
+
+        public async Task<ArkTransactionList> GetUnconfirmedTransactionsAsync()
+        {
+            return await TransactionService.GetUnconfirmedTransactionsAsync(GetArkAccount().Address);
+        }
+
         //public bool RemoteSign()
         //{
         //    throw new NotImplementedException();
@@ -160,28 +181,4 @@ namespace ArkNet.Controller
         //    throw new NotImplementedException();
         //}
     }
-
-    /*public static bool ApplyTransaction(Account account, long amount)
-    {
-
-
-        /*Balance -= transaction.Amount + transaction.Fee;
-        return Balance > -1;
-    }
-
-    public static bool UndoTransaction(TransactionApi transaction)
-    {
-        /*Balance += transaction.Amount + transaction.Fee;
-        return Balance > -1;
-    }
-
-    public static Verification VerifyTransaction(TransactionApi transaction)
-    {
-        var v = new Verification();
-        if (Balance >= transaction.Amount + transaction.Fee)
-            v.AddError(string.Format("Account %1 does not have enough balance: %2", Address, Balance));
-        // TODO: many things
-
-        return v;
-    }*/
 }
