@@ -1,5 +1,4 @@
 ﻿using ArkNet.Model.Shared;
-using System.Numerics;
 
 namespace ArkNet.Model.Transactions
 {

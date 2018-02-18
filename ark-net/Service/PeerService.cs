@@ -1,11 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System.Threading.Tasks;
 using ArkNet.Core;
-using ArkNet.Model;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using ArkNet.Model.Peer;
 using ArkNet.Utils;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace ArkNet.Service
 {

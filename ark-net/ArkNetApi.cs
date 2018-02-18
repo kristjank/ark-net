@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using ArkNet.Core;
+using ArkNet.Model.Loader;
+using ArkNet.Model.Peer;
 using ArkNet.Utils;
 using ArkNet.Utils.Enum;
-using NBitcoin.DataEncoders;
-using ArkNet.Core;
 using Newtonsoft.Json;
-using ArkNet.Model.Loader;
 using Newtonsoft.Json.Linq;
-using ArkNet.Model.Peer;
 
 namespace ArkNet
 {

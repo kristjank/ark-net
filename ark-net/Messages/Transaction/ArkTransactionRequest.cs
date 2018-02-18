@@ -1,8 +1,5 @@
 ﻿using ArkNet.Attributes;
 using ArkNet.Messages.BaseMessages;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ArkNet.Messages.Transaction
 {

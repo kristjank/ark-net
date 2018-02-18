@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using ArkNet.Core;
-using ArkNet.Model;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using ArkNet.Messages.Transaction;
 using ArkNet.Model.Transactions;
 using ArkNet.Utils;
-using System.Threading.Tasks;
-using System.Linq;
-using ArkNet.Messages.Transaction;
+using Newtonsoft.Json;
 
 namespace ArkNet.Service
 {

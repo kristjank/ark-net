@@ -1,9 +1,4 @@
-﻿using ArkNet.Model.BaseModels;
-using ArkNet.Service;
-using System.Collections.Generic;
-using System.Numerics;
-
-namespace ArkNet.Model.Account
+﻿namespace ArkNet.Model.Account
 {
     public class ArkAccountTop
     {
