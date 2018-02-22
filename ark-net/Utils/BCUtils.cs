@@ -6,7 +6,7 @@ using Validation;
 
 namespace ArkNet.Utils
 {
-	public static class Utils
+    public static class Utils
     {
         /// <summary>
         /// Calculates the SHA-256 hash of the given byte range, and then hashes the resulting hash again. This is

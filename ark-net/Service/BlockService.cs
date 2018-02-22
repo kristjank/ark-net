@@ -1,13 +1,11 @@
-﻿using ArkNet.Core;
+﻿using System;
+using System.Threading.Tasks;
+using ArkNet.Core;
 using ArkNet.Messages.Block;
-using ArkNet.Model;
 using ArkNet.Model.Block;
 using ArkNet.Utils;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace ArkNet.Service
 {

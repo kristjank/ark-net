@@ -1,7 +1,4 @@
-﻿using ArkNet.Model.BaseModels;
-using System.Collections.Generic;
-
-namespace ArkNet.Model.Delegate
+﻿namespace ArkNet.Model.Delegate
 {
     public class ArkDelegate
     {

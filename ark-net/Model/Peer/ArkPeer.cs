@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace ArkNet.Model.Peer
+﻿namespace ArkNet.Model.Peer
 {
     public class ArkPeer
     {

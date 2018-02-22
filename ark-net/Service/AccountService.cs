@@ -1,12 +1,9 @@
-﻿using System;
+﻿using System.Threading.Tasks;
 using ArkNet.Core;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Collections.Generic;
 using ArkNet.Model.Account;
 using ArkNet.Model.Delegate;
 using ArkNet.Utils;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace ArkNet.Service
 {

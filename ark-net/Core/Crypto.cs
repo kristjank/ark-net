@@ -7,7 +7,7 @@ using NBitcoin.DataEncoders;
 
 namespace ArkNet.Core
 {
-	public class Crypto
+    public class Crypto
 	{
 		private static readonly SHA256 Sha256 = SHA256.Create();
         private static readonly SshNet.Security.Cryptography.RIPEMD160 Ripemd160 = new SshNet.Security.Cryptography.RIPEMD160();

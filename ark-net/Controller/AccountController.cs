@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using ArkNet.Core;
-using ArkNet.Service;
-using ArkNet.Model.Transactions;
-using ArkNet.Model.Account;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using ArkNet.Messages.Transaction;
+using ArkNet.Core;
+using ArkNet.Model.Account;
+using ArkNet.Model.Transactions;
+using ArkNet.Service;
 
 namespace ArkNet.Controller
 {

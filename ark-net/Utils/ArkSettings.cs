@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ArkNet.Utils
+﻿namespace ArkNet.Utils
 {
     public class ArkNetworkSettings
     {

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
 using ArkNet.Utils;
 using NBitcoin.DataEncoders;
@@ -9,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace ArkNet.Core
 {
-	public  class TransactionApi
+    public  class TransactionApi
 	{
 		private readonly Dictionary<string, dynamic> asset = new Dictionary<string, dynamic>();
 
