@@ -42,8 +42,6 @@ namespace ArkNet
 {
     using System.Diagnostics.CodeAnalysis;
 
-    using JetBrains.Annotations;
-
     /// <summary>
     /// ARK API.
     /// </summary>
@@ -52,12 +50,7 @@ namespace ArkNet
         /// <summary>
         /// Initial Seeds for the MainNet
         /// </summary>
-        // ReSharper disable once StyleCop.SA1309
-        // ReSharper disable once FieldCanBeMadeReadOnly.Local
-        // ReSharper disable once InconsistentNaming
         private List<Tuple<string, int>> _peerSeedListMainNet = 
-            // ReSharper disable once StyleCop.SA1500
-            // TODO: Brackets must be on their own line
             new List<Tuple<string, int>> {
             Tuple.Create("5.39.9.240", 4001),
             Tuple.Create("5.39.9.241", 4001),
@@ -75,12 +68,7 @@ namespace ArkNet
         /// <summary>
         /// Initial Seeds for the DevNet
         /// </summary>
-        // ReSharper disable once StyleCop.SA1309
-        // ReSharper disable once InconsistentNaming
-        // ReSharper disable once FieldCanBeMadeReadOnly.Local
         private List<Tuple<string, int>> _peerSeedListDevNet =
-            // ReSharper disable once StyleCop.SA1500
-            // TODO: Brakets must be on their own line
             new List<Tuple<string, int>> {
             Tuple.Create("167.114.43.48", 4002),
             Tuple.Create("167.114.29.49", 4002),
@@ -99,26 +87,15 @@ namespace ArkNet
             Tuple.Create("167.114.29.44", 4002)
             };
 
-
-
-        // TODO: All Static Private Fields must be placed before all static non-static private fields.
-        // TODO: Style changing, private static should be _Upper, (eg: _Lazy)
-        // TODO: Verify if _Lazy and Instance aren't mixed up with the Private / Public.
-
         /// <summary>
         /// Lazy Load of the API, calls to <inheritdoc cref="Instance"/>
         /// </summary>
-        // ReSharper disable once InconsistentNaming
-        // ReSharper disable once StyleCop.SA1204
-        // ReSharper disable once StyleCop.SA1309
-        // ReSharper disable once StyleCop.SA1311
         private static readonly Lazy<ArkNetApi> _lazy = new Lazy<ArkNetApi>(() => new ArkNetApi());
 
         /// <summary>
         /// Instanciate the API
         /// Called through <inheritdoc cref="_lazy"/> to allow lazy load of the API.
         /// </summary>
-        [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "Reviewed. Suppression is OK here.")]
         public static ArkNetApi Instance => _lazy.Value;
 
         // TODO: Fields should be declared as private, and exposed through properties (Verify Network Settings)
@@ -127,8 +104,6 @@ namespace ArkNet
         /// <summary>
         /// Store the network settings.
         /// </summary>
-        // ReSharper disable once StyleCop.SA1401
-        // ReSharper disable once StyleCop.SA1202
         public ArkNetworkSettings NetworkSettings;
 
         // TODO : All properties must be placed after all constructors.
@@ -136,7 +111,6 @@ namespace ArkNet
         /// <summary>
         /// Prevents a default instance of the <see cref="ArkNetApi"/> class from being created.
         /// </summary>
-        // ReSharper disable once StyleCop.SA1201
         private ArkNetApi()
         {
             
@@ -162,7 +136,6 @@ namespace ArkNet
         /// <param name="initialPeerIp"> The Initial peer's IP</param>
         /// <param name="initialPeerPort"> The Initial Peer's Port</param>
         /// <returns> The <inheritdoc cref="Task"/> starts the node.</returns>
-        [UsedImplicitly]
         public async Task Start(string initialPeerIp, int initialPeerPort)
         {
             await SetNetworkSettings(GetInitialPeer(initialPeerIp, initialPeerPort));
@@ -187,11 +160,10 @@ namespace ArkNet
             var peer = JsonConvert.DeserializeObject<ArkPeerResponse>(responsePeer);
 
             // Fill the NetworkSettings with what has been fetched / auto-configured previously.
-            // ReSharper disable once RedundantEmptyObjectCreationArgumentList
             NetworkSettings = new ArkNetworkSettings()
             {
                 Port = initialPeer.Port,
-                BytePrefix = (byte)autoConfig.Network.Version, // Todo : explain here what prefix goes for what network
+                BytePrefix = (byte)autoConfig.Network.Version,
                 Version = peer.Peer.Version,
                 NetHash = autoConfig.Network.NetHash,
                 Fee = fees
@@ -206,7 +178,6 @@ namespace ArkNet
         /// <param name="initialPeerIp">Ip of the first peer.</param>
         /// <param name="initialPeerPort">Port that the first peer listen on.</param>
         /// <returns>Return the first peer found at the IP/Port given.</returns>
-        // ReSharper disable once MemberCanBeMadeStatic.Local
         private PeerApi GetInitialPeer(string initialPeerIp, int initialPeerPort)
         {
             return new PeerApi(initialPeerIp, initialPeerPort);
@@ -229,23 +200,18 @@ namespace ArkNet
 
             // If the Network is set to DevNet, change the peer picked above by a peer from _peerSeedListDevNet //
             if (type == NetworkType.DevNet)
-                // ReSharper disable once StyleCop.SA1503
                 peerUrl = _peerSeedListDevNet[new Random().Next(_peerSeedListDevNet.Count)];
 
             // create a peer out of peerurl, and returns if the peer is online. //
             var peer = new PeerApi(peerUrl.Item1, peerUrl.Item2);
             if (await peer.IsOnline())
-                // ReSharper disable once RemoveRedundantBraces
             {
                 return peer;
             }
 
             // Throw an exception if all of the initial peers have been tried. //
-            // ReSharper disable once ArrangeRedundantParentheses
             if ((type == NetworkType.DevNet && retryCount == _peerSeedListDevNet.Count) 
-                // ReSharper disable once ArrangeRedundantParentheses
              || (type == NetworkType.MainNet && retryCount == _peerSeedListMainNet.Count))
-                // ReSharper disable once StyleCop.SA1503
                 throw new Exception("Unable to connect to a seed peer");
 
             // redo the check and increment the retry count //
