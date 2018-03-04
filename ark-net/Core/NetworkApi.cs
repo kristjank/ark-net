@@ -1,4 +1,33 @@
-﻿using System;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="NetworkApi.cs" company="Ark Labs">
+// MIT License
+//   // 
+//   // Copyright (c) 2017 Kristjan Košič
+//   // 
+//   // Permission is hereby granted, free of charge, to any person obtaining a copy
+//   // of this software and associated documentation files (the "Software"), to deal
+//   // in the Software without restriction, including without limitation the rights
+//   // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//   // copies of the Software, and to permit persons to whom the Software is
+//   // furnished to do so, subject to the following conditions:
+//   // 
+//   // The above copyright notice and this permission notice shall be included in all
+//   // copies or substantial portions of the Software.
+//   // 
+//   // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//   // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//   // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//   // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//   // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//   // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//   // SOFTWARE.
+// </copyright>
+// <summary>
+//   Defines a Block on the Blockchain
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,19 +35,45 @@ using ArkNet.Service;
 
 namespace ArkNet.Core
 {
+    /// <summary>
+    /// The network api.
+    /// </summary>
     public sealed class NetworkApi
     {
-        private static readonly Lazy<NetworkApi> lazy =
-            new Lazy<NetworkApi>(() => new NetworkApi());
+        /// <summary>
+        /// Load the Network API on-need.
+        /// </summary>
+        // ReSharper disable once StyleCop.SA1311
+        // ReSharper disable once InconsistentNaming
+        private static readonly Lazy<NetworkApi> lazy = new Lazy<NetworkApi>(() => new NetworkApi());
 
+        /// <summary>
+        /// Random function initialization.
+        /// </summary>
+        // ReSharper disable once StyleCop.SA1309
+        // ReSharper disable once InconsistentNaming
         private readonly Random _random = new Random();
+
+        /// <summary>
+        /// <see cref="List{PeerApi}"/> of peers.
+        /// </summary>
+        // ReSharper disable once StyleCop.SA1309
+        // ReSharper disable once InconsistentNaming
+        // ReSharper disable once MemberInitializerValueIgnored
         private List<PeerApi> _peers = new List<PeerApi>();
 
+        /// <summary>
+        /// Prevents a default instance of the <see cref="NetworkApi"/> class from being created. 
+        /// Initialize the <see cref="NetworkApi"/> and fill its peer list.
+        /// </summary>
         private NetworkApi()
         {
             _peers = new List<PeerApi>();
         }
 
+        /// <summary>
+        /// Initialize an instance of the <see cref="NetworkApi" />
+        /// </summary>
         public static NetworkApi Instance => lazy.Value;
    
         public string Nethash { get; set; } = ArkNetApi.Instance.NetworkSettings.NetHash; 

@@ -99,8 +99,6 @@ namespace ArkNet
             Tuple.Create("167.114.29.44", 4002)
             };
 
-
-
         // TODO: All Static Private Fields must be placed before all static non-static private fields.
         // TODO: Style changing, private static should be _Upper, (eg: _Lazy)
         // TODO: Verify if _Lazy and Instance aren't mixed up with the Private / Public.
@@ -139,7 +137,6 @@ namespace ArkNet
         // ReSharper disable once StyleCop.SA1201
         private ArkNetApi()
         {
-            
         }
 
         /// <summary>
