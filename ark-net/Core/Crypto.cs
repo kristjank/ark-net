@@ -39,19 +39,16 @@ namespace ArkNet.Core
     /// <summary>
     /// Cryptography part of the API.
     /// </summary>
-    // ReSharper disable once ClassNeverInstantiated.Global
     public class Crypto
 	{
 	    /// <summary>
 	    /// Initialize the Sha 256.
 	    /// </summary>
-	    // ReSharper disable once InconsistentNaming
 	    private static readonly SHA256 Sha256 = SHA256.Create();
 
 	    /// <summary>
 	    /// Initialize The ripemd 160.
 	    /// </summary>
-	    // ReSharper disable once InconsistentNaming
 	    private static readonly SshNet.Security.Cryptography.RIPEMD160 Ripemd160 = new SshNet.Security.Cryptography.RIPEMD160();
 
 	    /// <summary>
@@ -102,7 +99,6 @@ namespace ArkNet.Core
 	    /// <returns>
 	    /// The <see cref="ECDSASignature"/> signed bytes.
 	    /// </returns>
-	    // ReSharper disable once MemberCanBePrivate.Global
 	    public static ECDSASignature SignBytes(byte[] bytes, string passphrase)
 		{
 			var keys = GetKeys(passphrase);
@@ -167,7 +163,6 @@ namespace ArkNet.Core
 	    /// <returns>
 	    /// The <see cref="byte[]"/>.
 	    /// </returns>
-	    // ReSharper disable once MemberCanBePrivate.Global
 	    public static byte[] GetBytes(TransactionApi t, bool skipSignature = true, bool skipSecondSignature = true)
 		{
 			return t.ToBytes(skipSignature, skipSecondSignature);
@@ -198,7 +193,6 @@ namespace ArkNet.Core
 	    /// </returns>
 	    public static Key GetKeys(string passphrase)
 		{
-		    // ReSharper disable once InconsistentNaming
 			var sha256h = Sha256.ComputeHash(Encoding.ASCII.GetBytes(passphrase));
 			return new Key(sha256h);
 		}
@@ -233,7 +227,6 @@ namespace ArkNet.Core
 	    /// <returns>
 	    /// The Public Address as a <see cref="string"/>.
 	    /// </returns>
-	    // ReSharper disable once MemberCanBePrivate.Global
 	    public static string GetAddress(byte[] publicKey, byte version)
 		{
 			var keyHash = Ripemd160.ComputeHash(publicKey, 0, publicKey.Length);

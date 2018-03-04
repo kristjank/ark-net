@@ -36,8 +36,6 @@ using ArkNet.Service;
 
 namespace ArkNet.Controller
 {
-    using JetBrains.Annotations;
-
     /// <summary>
     /// Account controller, used to interract with the account.
     /// </summary>
@@ -46,26 +44,18 @@ namespace ArkNet.Controller
         /// <summary>
         /// <inheritdoc cref="ArkAccount"/>
         /// </summary>
-        // ReSharper disable once InconsistentNaming
-        // ReSharper disable once StyleCop.SA1309
         private ArkAccount _account;
 
         /// <summary>
         /// User's Pass Phrase as a <inheritdoc cref="string"/>
         /// Mandatory.
         /// </summary>
-        // ReSharper disable once StyleCop.SA1309
-        // ReSharper disable once InconsistentNaming
-        // ReSharper disable once FieldCanBeMadeReadOnly.Local
         private string _passPhrase;
 
         /// <summary>
         /// User's Second Pass Phrase as a <inheritdoc cref="string"/>
         /// Optional.
         /// </summary>
-        // ReSharper disable once StyleCop.SA1309
-        // ReSharper disable once StyleCop.SA1215
-        // ReSharper disable once InconsistentNaming
         private readonly string _secondPassPhrase;
 
         /// <summary>
@@ -93,9 +83,7 @@ namespace ArkNet.Controller
         /// </returns>
         public ArkAccount GetArkAccount()
         {
-            // ReSharper disable once ConvertIfStatementToNullCoalescingExpression
             if (_account == null)
-                // ReSharper disable once StyleCop.SA1503
                 _account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), ArkNetApi.Instance.NetworkSettings.BytePrefix)).Account;
             return _account;
         }
@@ -106,10 +94,8 @@ namespace ArkNet.Controller
         /// <returns>
         /// Return an <inheritdoc cref="ArkAccount"/>
         /// </returns>
-        // ReSharper disable once MemberCanBePrivate.Global
         public async Task<ArkAccount> GetArkAccountAsync()
         {
-            // ReSharper disable once InvertIf
             if (_account == null)
             {
                 var accountResponse = await AccountService.GetByAddressAsync(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), ArkNetApi.Instance.NetworkSettings.BytePrefix));
@@ -146,13 +132,9 @@ namespace ArkNet.Controller
         /// <returns>
         /// The <see cref="ArkTransactionPostResponse"/>.
         /// </returns>
-        // ReSharper disable once StyleCop.SA1116
-        // ReSharper disable once StyleCop.SA1115
-        // ReSharper disable once StyleCop.SA1117
         public ArkTransactionPostResponse SendArk(long satoshiAmount, string recipientAddress,
             string vendorField)
         {
-            // ReSharper disable once StyleCop.SA1116
             var tx = TransactionApi.CreateTransaction(recipientAddress,
                 satoshiAmount,
                 vendorField,
@@ -178,16 +160,9 @@ namespace ArkNet.Controller
         /// <returns>
         /// The <see cref="ArkTransactionPostResponse"/> from the transaction.
         /// </returns>
-        #region Resharper
-        [UsedImplicitly]
-        // ReSharper disable once StyleCop.SA1115
-        // ReSharper disable once StyleCop.SA1117
-        // ReSharper disable once StyleCop.SA1116        
-            #endregion
         public async Task<ArkTransactionPostResponse> SendArkAsync(long satoshiAmount, string recipientAddress,
             string vendorField)
         {
-            // ReSharper disable once StyleCop.SA1116
             var tx = TransactionApi.CreateTransaction(recipientAddress,
                 satoshiAmount,
                 vendorField,
@@ -214,14 +189,9 @@ namespace ArkNet.Controller
         /// <returns>
         /// A list of <see cref="ArkTransactionPostResponse"/>.
         /// </returns>
-        // ReSharper disable once StyleCop.SA1115
-        // ReSharper disable once StyleCop.SA1116
-        // ReSharper disable once StyleCop.SA1117
-        // ReSharper disable once ReturnTypeCanBeEnumerable.Global
         public List<ArkTransactionPostResponse> SendArkUsingMultiBroadCast(long satoshiAmount, string recipientAddress,
             string vendorField)
         {
-            // ReSharper disable once StyleCop.SA1116
             var tx = TransactionApi.CreateTransaction(recipientAddress,
                 satoshiAmount,
                 vendorField,
@@ -248,13 +218,9 @@ namespace ArkNet.Controller
         /// <returns>
         /// The <see cref="Task"/>.
         /// </returns>
-        // ReSharper disable once StyleCop.SA1115
-        // ReSharper disable once StyleCop.SA1116
-        // ReSharper disable once StyleCop.SA1117
         public async Task<List<ArkTransactionPostResponse>> SendArkUsingMultiBroadCastAsync(long satoshiAmount, string recipientAddress,
             string vendorField)
         {
-            // ReSharper disable once StyleCop.SA1116
             var tx = TransactionApi.CreateTransaction(recipientAddress,
                 satoshiAmount,
                 vendorField,
@@ -289,7 +255,6 @@ namespace ArkNet.Controller
         /// <returns>
         /// The <see cref="ArkTransactionPostResponse"/> of the voting transaction.
         /// </returns>
-        [UsedImplicitly]
         public async Task<ArkTransactionPostResponse> VoteForDelegateAsync(List<string> votes)
         {
             var tx = TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
@@ -306,7 +271,6 @@ namespace ArkNet.Controller
         /// <returns>
         /// The <see cref="ArkTransactionPostResponse"/> of the Vote.
         /// </returns>
-        [UsedImplicitly]
         public ArkTransactionPostResponse RegisterAsDelegate(string username)
         {
             var tx = TransactionApi.CreateDelegate(username, _passPhrase, _secondPassPhrase);
@@ -323,7 +287,6 @@ namespace ArkNet.Controller
         /// <returns>
         /// The <see cref="Task"/>.
         /// </returns>
-        [UsedImplicitly]
         public async Task<ArkTransactionPostResponse> RegisterAsDelegateAsync(string username)
         {
             var tx = TransactionApi.CreateDelegate(username, _passPhrase, _secondPassPhrase);
@@ -337,7 +300,6 @@ namespace ArkNet.Controller
         /// <returns>
         /// The <see cref="bool"/> indicating if the balance of the account has been updated successfully or not.
         /// </returns>
-        [UsedImplicitly]
         public bool UpdateBalance()
         {
             var account = GetArkAccount();
@@ -355,7 +317,6 @@ namespace ArkNet.Controller
         /// <returns>
         /// The <see cref="bool"/> indicate if the balance has been successfully updated.
         /// </returns>
-        [UsedImplicitly]
         public async Task<bool> UpdateBalanceAsync()
         {
             var account = await GetArkAccountAsync();
@@ -398,7 +359,6 @@ namespace ArkNet.Controller
         /// <returns>
         /// The <see cref="ArkTransactionList"/> of transactions within the given boundaries.
         /// </returns>
-        [UsedImplicitly]
         public async Task<ArkTransactionList> GetTransactionsAsync(int offset = 0, int limit = 50)
         {
             return await TransactionService.GetTransactionsAsync(GetArkAccount().Address, offset, limit);
@@ -421,7 +381,6 @@ namespace ArkNet.Controller
         /// <returns>
         /// The <see cref="ArkTransactionList"/> of all unconfirmed transactions of the account.
         /// </returns>
-        [UsedImplicitly]
         public async Task<ArkTransactionList> GetUnconfirmedTransactionsAsync()
         {
             return await TransactionService.GetUnconfirmedTransactionsAsync(GetArkAccount().Address);

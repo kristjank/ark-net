@@ -29,13 +29,10 @@
 
 namespace ArkNet.Core
 {
-    using JetBrains.Annotations;
-
     /// <summary>
     /// A block in the blockchain.
     /// (Implementation is for V2)
     /// </summary>
-    [UsedImplicitly]
     public class Block
     {
        /* byte version = 0;

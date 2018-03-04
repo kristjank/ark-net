@@ -32,12 +32,9 @@ namespace ArkNet.Controller
 {
     using System;
 
-    using JetBrains.Annotations;
-
     /// <summary>
     /// The wallet controller (Not implemented yet)
     /// </summary>
-    [UsedImplicitly]
     public class WalletController
     {
         /// <summary>

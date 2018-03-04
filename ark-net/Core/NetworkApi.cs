@@ -43,23 +43,16 @@ namespace ArkNet.Core
         /// <summary>
         /// Load the Network API on-need.
         /// </summary>
-        // ReSharper disable once StyleCop.SA1311
-        // ReSharper disable once InconsistentNaming
         private static readonly Lazy<NetworkApi> lazy = new Lazy<NetworkApi>(() => new NetworkApi());
 
         /// <summary>
         /// Random function initialization.
         /// </summary>
-        // ReSharper disable once StyleCop.SA1309
-        // ReSharper disable once InconsistentNaming
         private readonly Random _random = new Random();
 
         /// <summary>
         /// <see cref="List{PeerApi}"/> of peers.
         /// </summary>
-        // ReSharper disable once StyleCop.SA1309
-        // ReSharper disable once InconsistentNaming
-        // ReSharper disable once MemberInitializerValueIgnored
         private List<PeerApi> _peers = new List<PeerApi>();
 
         /// <summary>
