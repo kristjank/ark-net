@@ -120,7 +120,7 @@ namespace ArkNet
         /// Start the Network
         /// </summary>
         /// <param name="type">
-        /// <inheritdoc cref="NetworkType"/>Can be :
+        /// <inheritdoc cref="NetworkType"/> Can be :
         /// -- DevNet (test), ask Dark (testnet coins) on the slack.
         /// -- MainNet (live, beware real money, financial loss possible there).
         /// </param>
