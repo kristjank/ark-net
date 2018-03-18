@@ -38,7 +38,6 @@ It's best to let the code do the speaking. For more examples look at the [ARK.NE
 ```c#
   ArkNetApi.Instance.Start(NetworkType.MainNet); //Other types are TestNet and DevNet
 ```
-For **additional settings** please see [settings file](https://github.com/kristjank/ark-net/blob/master/ark-net/default.conf#L9). To **modify** settings, just add settings.conf file to root folder. File can only include changed settings (not all).
 
 ### Account/Wallet layer
 ```c#
