@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response" kind="class" prot="public">
+    <compoundname>ArkNet::Model::Delegate::ArkDelegateResponse</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base" prot="public" virt="non-virtual">ArkNet.Model.BaseModels.ArkResponseBase</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response_1aaca14f0ea981f23cbb4cc9567b4e835b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate" kindref="compound">ArkDelegate</ref></type>
+        <definition>ArkDelegate ArkNet.Model.Delegate.ArkDelegateResponse.Delegate</definition>
+        <argsstring></argsstring>
+        <name>Delegate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Delegate/ArkDelegateResponse.cs" line="7" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Delegate/ArkDelegateResponse.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="85">
+        <label>ArkResponseBase</label>
+        <link refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base"/>
+      </node>
+      <node id="84">
+        <label>ArkNet.Model.Delegate.ArkDelegateResponse</label>
+        <link refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response"/>
+        <childnode refid="85" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="87">
+        <label>ArkResponseBase</label>
+        <link refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base"/>
+      </node>
+      <node id="86">
+        <label>ArkNet.Model.Delegate.ArkDelegateResponse</label>
+        <link refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Delegate/ArkDelegateResponse.cs" line="6" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Delegate/ArkDelegateResponse.cs" bodystart="5" bodyend="8"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response_1aaca14f0ea981f23cbb4cc9567b4e835b" prot="public" virt="non-virtual"><scope>ArkNet::Model::Delegate::ArkDelegateResponse</scope><name>Delegate</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a0896cd002de13aec6fdaa8df57fe1242" prot="public" virt="non-virtual"><scope>ArkNet::Model::Delegate::ArkDelegateResponse</scope><name>Error</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a45c8e8b131e7d1d9b401ea6972fa3256" prot="public" virt="non-virtual"><scope>ArkNet::Model::Delegate::ArkDelegateResponse</scope><name>Message</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a218fcfef6e7a12abd3e8a29d90899fb5" prot="public" virt="non-virtual"><scope>ArkNet::Model::Delegate::ArkDelegateResponse</scope><name>Success</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

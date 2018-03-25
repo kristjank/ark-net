@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_utils_1_1_invalid_mark_exception" kind="class" prot="package">
+    <compoundname>ArkNet::Utils::InvalidMarkException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_invalid_mark_exception_1a005565609f36230f6d223f886a985fab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Utils.InvalidMarkException.InvalidMarkException</definition>
+        <argsstring>()</argsstring>
+        <name>InvalidMarkException</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BufferExceptions.cs" line="109" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BufferExceptions.cs" bodystart="109" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="308">
+        <label>ArkNet.Utils.InvalidMarkException</label>
+        <link refid="class_ark_net_1_1_utils_1_1_invalid_mark_exception"/>
+        <childnode refid="309" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="309">
+        <label>Exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="310">
+        <label>ArkNet.Utils.InvalidMarkException</label>
+        <link refid="class_ark_net_1_1_utils_1_1_invalid_mark_exception"/>
+        <childnode refid="311" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="311">
+        <label>Exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BufferExceptions.cs" line="108" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BufferExceptions.cs" bodystart="107" bodyend="124"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_utils_1_1_invalid_mark_exception_1a005565609f36230f6d223f886a985fab" prot="public" virt="non-virtual"><scope>ArkNet::Utils::InvalidMarkException</scope><name>InvalidMarkException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

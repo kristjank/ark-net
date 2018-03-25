@@ -22,9 +22,6 @@
 //   // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //   // SOFTWARE.
 // </copyright>
-// <summary>
-//   Defines the Account Controller type.
-// </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Collections.Generic;

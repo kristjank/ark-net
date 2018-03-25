@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_core_1_1_verification" kind="class" prot="public">
+    <compoundname>ArkNet::Core::Verification</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_core_1_1_verification_1a3dca07211f9e594b065d58b2f442a803" prot="private" static="no" mutable="no">
+        <type>readonly List&lt; string &gt;</type>
+        <definition>readonly List&lt;string&gt; ArkNet.Core.Verification.errors</definition>
+        <argsstring></argsstring>
+        <name>errors</name>
+        <initializer>= new List&lt;string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Verification.cs" line="7" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Verification.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_verification_1a37b5a747e0eb8193fff6ad7fa2565830" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string ArkNet.Core.Verification.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Verification.cs" line="9" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Verification.cs" bodystart="9" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_verification_1a6454743eede69b5cc22a4d9c2bb027bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Core.Verification.AddError</definition>
+        <argsstring>(string errorDescription)</argsstring>
+        <name>AddError</name>
+        <param>
+          <type>string</type>
+          <declname>errorDescription</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Verification.cs" line="20" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Verification.cs" bodystart="20" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Verification.cs" line="6" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Verification.cs" bodystart="5" bodyend="24"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_core_1_1_verification_1a6454743eede69b5cc22a4d9c2bb027bb" prot="public" virt="non-virtual"><scope>ArkNet::Core::Verification</scope><name>AddError</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_verification_1a3dca07211f9e594b065d58b2f442a803" prot="private" virt="non-virtual"><scope>ArkNet::Core::Verification</scope><name>errors</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_verification_1a37b5a747e0eb8193fff6ad7fa2565830" prot="public" virt="non-virtual"><scope>ArkNet::Core::Verification</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

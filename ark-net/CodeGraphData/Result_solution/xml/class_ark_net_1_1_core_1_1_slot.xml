@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_core_1_1_slot" kind="class" prot="public">
+    <compoundname>ArkNet::Core::Slot</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_core_1_1_slot_1a521421199f7d5f6694473896d414185e" prot="private" static="yes" mutable="no">
+        <type>readonly DateTime</type>
+        <definition>readonly DateTime ArkNet.Core.Slot.beginEpoch</definition>
+        <argsstring></argsstring>
+        <name>beginEpoch</name>
+        <initializer>= new DateTime(2017, 3, 21, 13, 00, 0, DateTimeKind.Utc)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Slot.cs" line="7" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Slot.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_slot_1a45580f1e98c85c60fbdf9c3f06cce91c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Core.Slot.GetTime</definition>
+        <argsstring>()</argsstring>
+        <name>GetTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Slot.cs" line="9" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Slot.cs" bodystart="9" bodyend="14"/>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a312c55d03903d9ac0af2cf82c3cc9f1e" compoundref="_transaction_api_8cs" startline="218" endline="229">ArkNet.Core.TransactionApi.createSecondSignature</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Slot.cs" line="6" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Slot.cs" bodystart="5" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_core_1_1_slot_1a521421199f7d5f6694473896d414185e" prot="private" virt="non-virtual"><scope>ArkNet::Core::Slot</scope><name>beginEpoch</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_slot_1a45580f1e98c85c60fbdf9c3f06cce91c" prot="public" virt="non-virtual"><scope>ArkNet::Core::Slot</scope><name>GetTime</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

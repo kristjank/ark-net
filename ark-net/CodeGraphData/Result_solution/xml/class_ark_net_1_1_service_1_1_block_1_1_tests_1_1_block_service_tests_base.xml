@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base" kind="class" prot="public">
+    <compoundname>ArkNet::Service::Block::Tests::BlockServiceTestsBase</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_tests_1_1_tests_base" prot="public" virt="non-virtual">ArkNet.Tests.TestsBase</basecompoundref>
+    <derivedcompoundref refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests" prot="public" virt="non-virtual">ArkNet.Service.Block.Tests.BlockServiceAsyncTests</derivedcompoundref>
+    <derivedcompoundref refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests" prot="public" virt="non-virtual">ArkNet.Service.Block.Tests.BlockServiceTests</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a286bc4482fdf4ba2a803d1520bdec4b5" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ArkNet.Service.Block.Tests.BlockServiceTestsBase._height</definition>
+        <argsstring></argsstring>
+        <name>_height</name>
+        <initializer>= 2339637</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="19" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a5151eb0de88f86f826acec146610342c" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ArkNet.Service.Block.Tests.BlockServiceTestsBase._generatorPublicKey</definition>
+        <argsstring></argsstring>
+        <name>_generatorPublicKey</name>
+        <initializer>= &quot;027a9b5dc98c75902f871e889fb3076dd27b11e158a49e3915e0307ecd9781f51e&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="20" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1acb561ae4a9b4dfe83960e1c3194e3773" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Block.Tests.BlockServiceTestsBase.InitializeBlockServiceTest</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeBlockServiceTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="22" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="22" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a2c62f2c67ea9ff82fbfe53cc073f4cb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Block.Tests.BlockServiceTestsBase.InitializeBlockServiceAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeBlockServiceAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="29" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="29" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1ac62abd4258bb2261683a6e58d6ea60cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Block.Tests.BlockServiceTestsBase.GetAllResultTest</definition>
+        <argsstring>(ArkBlockList blocks)</argsstring>
+        <name>GetAllResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_list" kindref="compound">ArkBlockList</ref></type>
+          <declname>blocks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="45" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="45" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a05d33daaa3b98d6cc34c9539b4aa7be6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Block.Tests.BlockServiceTestsBase.GetBlocksResultTest</definition>
+        <argsstring>(ArkBlockList blocks)</argsstring>
+        <name>GetBlocksResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_list" kindref="compound">ArkBlockList</ref></type>
+          <declname>blocks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="54" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="54" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a6fe50e1b85114a7e4aec14b21cdbdcae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Block.Tests.BlockServiceTestsBase.GetByIdResultTest</definition>
+        <argsstring>(ArkBlockResponse block)</argsstring>
+        <name>GetByIdResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_response" kindref="compound">ArkBlockResponse</ref></type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="65" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="65" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a378ec88f2094f5b62976f348fd39b9ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Block.Tests.BlockServiceTestsBase.GetByIdErrorResultTest</definition>
+        <argsstring>(ArkBlockResponse block)</argsstring>
+        <name>GetByIdErrorResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_response" kindref="compound">ArkBlockResponse</ref></type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="73" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="73" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a554a97ddcae43ad3870b870c4dea1028" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Block.Tests.BlockServiceTestsBase.GetEpochResultTest</definition>
+        <argsstring>(DateTime epoch)</argsstring>
+        <name>GetEpochResultTest</name>
+        <param>
+          <type>DateTime</type>
+          <declname>epoch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="80" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="80" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a043d15607ba4b2772c61a6a1b03b1d14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Block.Tests.BlockServiceTestsBase.GetHeightResultTest</definition>
+        <argsstring>(long height)</argsstring>
+        <name>GetHeightResultTest</name>
+        <param>
+          <type>long</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="86" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a1b5e0956284c250d3ef6897794a3f7fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Block.Tests.BlockServiceTestsBase.GetNetHashResultTest</definition>
+        <argsstring>(string netHash)</argsstring>
+        <name>GetNetHashResultTest</name>
+        <param>
+          <type>string</type>
+          <declname>netHash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="91" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a829833dec01d4e18602cf3c988118313" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Block.Tests.BlockServiceTestsBase.GetFeesResultTest</definition>
+        <argsstring>(Fees fees)</argsstring>
+        <name>GetFeesResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_utils_1_1_fees" kindref="compound">Fees</ref></type>
+          <declname>fees</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="96" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a02f68cba8be23482af8a6a608c6f5777" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Block.Tests.BlockServiceTestsBase.GetMilestoneResultTest</definition>
+        <argsstring>(int milestone)</argsstring>
+        <name>GetMilestoneResultTest</name>
+        <param>
+          <type>int</type>
+          <declname>milestone</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="101" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a172b8aa762c63d9d00cb98675e75c664" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Block.Tests.BlockServiceTestsBase.GetRewardResultTest</definition>
+        <argsstring>(int reward)</argsstring>
+        <name>GetRewardResultTest</name>
+        <param>
+          <type>int</type>
+          <declname>reward</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="106" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a793e778bea73e09f741ac6e62aa79b50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Block.Tests.BlockServiceTestsBase.GetStatusResultTest</definition>
+        <argsstring>(ArkBlockChainStatus status)</argsstring>
+        <name>GetStatusResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status" kindref="compound">ArkBlockChainStatus</ref></type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="111" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="111" bodyend="116"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a20ffedecbf787df02042fd8494f050f3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Block.Tests.BlockServiceTestsBase.Setup</definition>
+        <argsstring>()</argsstring>
+        <name>Setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="36" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="36" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="207">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="208">
+        <label>ArkNet.Service.Block.Tests.BlockServiceAsyncTests</label>
+        <link refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests"/>
+        <childnode refid="206" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="206">
+        <label>ArkNet.Service.Block.Tests.BlockServiceTestsBase</label>
+        <link refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base"/>
+        <childnode refid="207" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="209">
+        <label>ArkNet.Service.Block.Tests.BlockServiceTests</label>
+        <link refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests"/>
+        <childnode refid="206" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="211">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="210">
+        <label>ArkNet.Service.Block.Tests.BlockServiceTestsBase</label>
+        <link refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base"/>
+        <childnode refid="211" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" line="18" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceTestsBase.cs" bodystart="17" bodyend="117"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a5151eb0de88f86f826acec146610342c" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>_generatorPublicKey</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a286bc4482fdf4ba2a803d1520bdec4b5" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>_height</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1ac62abd4258bb2261683a6e58d6ea60cf" prot="public" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>GetAllResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a05d33daaa3b98d6cc34c9539b4aa7be6" prot="public" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>GetBlocksResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a378ec88f2094f5b62976f348fd39b9ff" prot="public" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>GetByIdErrorResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a6fe50e1b85114a7e4aec14b21cdbdcae" prot="public" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>GetByIdResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a554a97ddcae43ad3870b870c4dea1028" prot="public" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>GetEpochResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a829833dec01d4e18602cf3c988118313" prot="public" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>GetFeesResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a043d15607ba4b2772c61a6a1b03b1d14" prot="public" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>GetHeightResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a02f68cba8be23482af8a6a608c6f5777" prot="public" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>GetMilestoneResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a1b5e0956284c250d3ef6897794a3f7fa" prot="public" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>GetNetHashResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a172b8aa762c63d9d00cb98675e75c664" prot="public" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>GetRewardResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a793e778bea73e09f741ac6e62aa79b50" prot="public" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>GetStatusResultTest</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a21cca2e1a214cb2a375e5c8786ed0062" prot="public" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>Initialize</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a0533a9e15637e7b44ba2ecb6f18a28c8" prot="public" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>InitializeAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a2c62f2c67ea9ff82fbfe53cc073f4cb0" prot="public" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>InitializeBlockServiceAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1acb561ae4a9b4dfe83960e1c3194e3773" prot="public" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>InitializeBlockServiceTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a20ffedecbf787df02042fd8494f050f3" prot="private" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>Setup</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a5c7b7233192533ab308a82da929a903c" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Block::Tests::BlockServiceTestsBase</scope><name>USE_DEV_NET</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

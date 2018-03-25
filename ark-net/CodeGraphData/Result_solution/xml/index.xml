@@ -1,0 +1,1500 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_account" kind="class"><name>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Account</name>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_account_1a1f5f7938669332ea7223bf8361778cdd" kind="variable"><name>GET_ACCOUNT</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_account_1a9aa2b13cbd83bc638d0c932bf3f6cbbe" kind="variable"><name>GET_BALANCE</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_account_1a90ddd7a45c4e7c8ea7c24f2305f31426" kind="variable"><name>GET_DELEGATES</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_account_1a6a3a2cd590884e67013894e90ab30162" kind="variable"><name>GET_TOP_ACCOUNTS</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_controller_1_1_account_controller" kind="class"><name>ArkNet::Controller::AccountController</name>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a7db22f7041f479b6a122c22834ae23d5" kind="variable"><name>_account</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a266ffed08c93630674678d426ea9f55e" kind="variable"><name>_passPhrase</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1aff45af02c8f00e2abbf9be02f53a2f7b" kind="variable"><name>_secondPassPhrase</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1acdf7f66fed9a0a449ae74b8ab977d32d" kind="function"><name>AccountController</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a65d0aa52f6fb97f992c859ee06a803e2" kind="function"><name>GetArkAccount</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a481138660aad7e63f0e2a5993b28c91d" kind="function"><name>GetArkAccountAsync</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a9ba91c49fec8fbaca6d7dc387675bda3" kind="function"><name>SendArk</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a0ef187ab8968ddf2f518c1269add4285" kind="function"><name>SendArkAsync</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1af7f2a4810d1c4f3116f62f9166427b0a" kind="function"><name>SendArkUsingMultiBroadCast</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1aabda08def421c68a38c0785cc40dfce3" kind="function"><name>SendArkUsingMultiBroadCastAsync</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a77033a9b21170bc2435fea63d91cfbc5" kind="function"><name>VoteForDelegate</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a5f1241c7a574ff5ceee09277bcc559eb" kind="function"><name>VoteForDelegateAsync</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a4683555c2faf123bf87350cf4b2e69be" kind="function"><name>RegisterAsDelegate</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1aa2ef2683bfa328b3ad1bc4dd447c2fe4" kind="function"><name>RegisterAsDelegateAsync</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a63690cd2790b39fc1807797a41eff25d" kind="function"><name>UpdateBalance</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1ab051b33d895ff79a071bd2b35d95e9c0" kind="function"><name>UpdateBalanceAsync</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a9d480623ecf8a128b99c1f0c5f1ac549" kind="function"><name>GetTransactions</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1ab66c24f5827e5c2bebcc376a45085df2" kind="function"><name>GetTransactionsAsync</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1ad36a09dbe05ff83167daf839434fce25" kind="function"><name>GetUnconfirmedTransactions</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_account_controller_1ae0bd3b0c9ac9f45c222ede2673cf0f04" kind="function"><name>GetUnconfirmedTransactionsAsync</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests" kind="class"><name>ArkNet::Controller::Tests::AccountControllerTests</name>
+    <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1aeba90e71881fa22c50d8fa3aae2e5605" kind="variable"><name>_address</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1a318fdb0c891a144c63707d00dd263911" kind="variable"><name>_pubKey</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1a6cc00a7799dfe32fca5e0d34df42453a" kind="variable"><name>_passPhrase</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1ad63c5a76a38ae6f3b4d3bc7c6c5b4194" kind="variable"><name>_delegateName</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1abec92bd3312390553e104abf8a9e08be" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1ace250a0d254e233fe2b3208ead5184d5" kind="function"><name>CreateAccountTest</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1ad557395c14222a08331942ed5e426d16" kind="function"><name>SendArkTest</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1a84ea6d1d9fd63d241658ca62e9b669b1" kind="function"><name>SendArkUsingMultiBroadCastTest</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1aa14615f0ea18e3687e53d6dba8781f35" kind="function"><name>SendArkUsingMultiBroadCastAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1a0c11442922dc920176156cc6ebb10c54" kind="function"><name>VoteForDelegateTest</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1ae2ba64106f24729709434ee335fca95c" kind="function"><name>GetTransactionsTest</name></member>
+    <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1aaa385f6e2cfdf7b26d2f67aad2fb6c75" kind="function"><name>GetUnconfirmedTransactionsTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_account_service" kind="class"><name>ArkNet::Service::AccountService</name>
+    <member refid="class_ark_net_1_1_service_1_1_account_service_1a63abaf82a103672924381626c89fe0b4" kind="function"><name>GetByAddress</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_service_1ab3466625c994796559e64d12cff81236" kind="function"><name>GetByAddressAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_service_1a052ed77fb6250180c6f769e756203a72" kind="function"><name>GetBalance</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_service_1ad697f0a799e36501988089751e798b21" kind="function"><name>GetBalanceAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_service_1a9526b22b9b9c3bc4b25f03b8a654f379" kind="function"><name>GetDelegates</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_service_1ada264a00e05b2c3d8c91fb4cf74b61bb" kind="function"><name>GetDelegatesAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_service_1ad84fae71073ab8a1993d742054b744c1" kind="function"><name>GetTop</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_service_1a7d872f842fbf5d78669900cbd470020b" kind="function"><name>GetTopAsync</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests" kind="class"><name>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</name>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1ae0cc94363457083cc2b3dfc0863a5fef" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a2549d59e38c1fde292ae171e08535329" kind="function"><name>GetByAddressAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1addbb5a3309f7dcd43752bb55322d8de0" kind="function"><name>GetByAddressErrorAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a88a05b7349eee475d6b6b30fd8b30a59" kind="function"><name>GetBalanceAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1acc7e1042b37cadfe8cd97820b56e63cd" kind="function"><name>GetBalanceErrorAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1ac22c84a4e9cdc99a1e5a068cfb4e257a" kind="function"><name>GetDelegatesAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1acbca1238778e432230840edf70a9a238" kind="function"><name>GetDelegatesErrorAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a18310387c6130592d70aa3d2a72f06e5" kind="function"><name>GetTopAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a3a0d7a3d1bb7878e483b604b653147ce" kind="function"><name>GetTopLimitAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a193e41d23359432413dc6dcc057206ed" kind="function"><name>GetTopRecordsToSkipAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a9e415cc15d8cf791b552f23235614356" kind="function"><name>GetTopLimitAndRecordsToSkipAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1ac6e0208acf6968946f094b107a7746b8" kind="function"><name>GetTopLimitErrorAsyncTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests" kind="class"><name>ArkNet::Service::Account::Tests::AccountServiceTests</name>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_1ad7d1363b46a6fceabafc32509110a973" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_1a27258645e053b531dfed1219ff9dc5cf" kind="function"><name>GetByAddressTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_1aef9c39f909b5ef0a30a8e7123eade6b1" kind="function"><name>GetByAddressErrorTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_1a2a99a3b062bf56ee76905c0acedc9b06" kind="function"><name>GetBalanceTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_1a0b227b2936454845b46d45cc377b1483" kind="function"><name>GetBalanceErrorTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_1a9ecb2a48b64429d55f5d94155c30742f" kind="function"><name>GetDelegatesTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_1a13fb28ab7f62fd0fd35853c724e47a0f" kind="function"><name>GetDelegatesErrorTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_1a6de9ce8436e413e5a85265c7020a114a" kind="function"><name>GetTopTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_1abbce7daed329c1a04aea4f76c8f8f4c7" kind="function"><name>GetTopLimitTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_1af09fc7eee25278107a1317aa783d5a38" kind="function"><name>GetTopRecordsToSkipTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_1a9b4cf1280c3ed16e9d0b680d07540f09" kind="function"><name>GetTopLimitAndRecordsToSkipTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_1ad33b813d86dcabd2656c7bed5d2479e8" kind="function"><name>GetTopLimitErrorTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base" kind="class"><name>ArkNet::Service::Account::Tests::AccountServiceTestsBase</name>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1ae63eda31f1d313568453b14606b2f85b" kind="variable"><name>_address</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1a72958ab28ad94b70813f2fc53ab0d311" kind="function"><name>InitializeAccountServiceTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1af7055937ced4cdf6fe76c8de08e6f723" kind="function"><name>InitializeAccountServiceAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1af040a9811dd3764982cdd20e13ebab6f" kind="function"><name>GetByAddressResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1a869e780d0c108974f8c8301b8baa4d99" kind="function"><name>GetByAddressErrorResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1acbe0dd62b9b0413d79f88cbf03ecd181" kind="function"><name>GetBalanceResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1aefbd03f0a13b83d415b895867ab5226e" kind="function"><name>GetBalanceErrorResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1a4d65b573ce9c648764716978605ca2cf" kind="function"><name>GetDelegatesResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1a0b1caa313c0d0c154e8529e3f755d2ee" kind="function"><name>GetDelegatesErrorResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1af7253e848e654ac243d7c6f1a3d1cb71" kind="function"><name>GetTopResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1ad084132aed0d8454e4e61f679e45f557" kind="function"><name>GetTopLimitResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1a2835ed864e0c17fee6e4f2cda61c6134" kind="function"><name>GetTopRecordsToSkipResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1a851f2cb6a274304bffe3bf3c5e1bf845" kind="function"><name>GetTopLimitAndRecordsToSkipResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1a6bd1e64afc0552203aed836ebda8886d" kind="function"><name>GetTopLimitErrorResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1a276c172d5b8e371cffe5d3b26dfb06dd" kind="function"><name>Setup</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account" kind="class"><name>ArkNet::Model::Account::ArkAccount</name>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_1a83ef21bca27abd819957ab40d1eb3552" kind="property"><name>Address</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_1a86b0870544f37a3c1453bc52ae78bfc6" kind="property"><name>UnconfirmedBalance</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_1adaff755f9184cb98ed7d9f52845fb96f" kind="property"><name>Balance</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_1ab739a5cbae0bf6ebd4463f41f8c5f200" kind="property"><name>PublicKey</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_1a9fb7847ac4ae943e83949d3fa23588e7" kind="property"><name>UnconfirmedSignature</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_1adaeb5f998f69491cf52f8b9ff2782bc1" kind="property"><name>SecondSignature</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_1a6ef0329f0a4e9b94b353d6ab36ef7471" kind="property"><name>SecondPublicKey</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_1a73a4bf79adbfca2b3eb33d586fd5c97f" kind="property"><name>Multisignatures</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_1ae3e2d7b548f96b205ff82052a270894d" kind="property"><name>U_Multisignatures</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_balance" kind="class"><name>ArkNet::Model::Account::ArkAccountBalance</name>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_balance_1a91aa584e9bc05dcc6d4bc4d26a61c1c9" kind="property"><name>Balance</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_balance_1a153a6d00550a2042b43a48d7b60900f9" kind="property"><name>UnconfirmedBalance</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_response" kind="class"><name>ArkNet::Model::Account::ArkAccountResponse</name>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_response_1a79262e24132079ae9975c2a750ed2974" kind="property"><name>Account</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_top" kind="class"><name>ArkNet::Model::Account::ArkAccountTop</name>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_top_1a17d60fc40059e1fd94bef851314f99e3" kind="property"><name>Address</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_top_1add5129fe8d96c5d17ba9d971b1e97869" kind="property"><name>Balance</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_top_1a6567ff811f86abb7f2b13ed4fa8136d4" kind="property"><name>PublicKey</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_top_list" kind="class"><name>ArkNet::Model::Account::ArkAccountTopList</name>
+    <member refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_top_list_1ad844259268f59db54f4cec5a75cd525b" kind="property"><name>Accounts</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths" kind="class"><name>ArkNet::Utils::ArkStaticStrings::ArkApiPaths</name>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_shared_1_1_ark_asset" kind="class"><name>ArkNet::Model::Shared::ArkAsset</name>
+    <member refid="class_ark_net_1_1_model_1_1_shared_1_1_ark_asset_1af50170de7a9c79ab2f123498a15e94ff" kind="property"><name>Votes</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request" kind="class"><name>ArkNet::Messages::BaseMessages::ArkBaseRequest</name>
+    <member refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a8735ab2882c0c0107785d2269f5a48f3" kind="variable"><name>QueryParams</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1adbdba54b9bbadd0613883dd35e511291" kind="property"><name>Limit</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a2ef9e95c55080df468d5932a2ec2c580" kind="property"><name>Offset</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a3d5b71d2a3c84aa12f332fc9697f1459" kind="property"><name>OrderBy</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a2072da5620095e60cd0f3bc953d2563f" kind="function"><name>ToQuery</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block" kind="class"><name>ArkNet::Model::Block::ArkBlock</name>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1a3536a63bd30c56c90c544bba64b1c3c5" kind="property"><name>Id</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1a0ee8ba03c39cfaad6d3fcc422fcf3648" kind="property"><name>Version</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1af80f93ca49bcd9bb230e0acfdc53447c" kind="property"><name>Timestamp</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1ade0692363cea956254d45db403a5396a" kind="property"><name>Height</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1a8a26498bc4cb7ae86cddd40320b70053" kind="property"><name>PreviousBlock</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1ac3d892678767f7c3eb3ac0639e2119b2" kind="property"><name>NumberOfTransactions</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1ad9ee8d73a92fb4ec65688d688ae5a0ac" kind="property"><name>TotalAmount</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1ad25753830810c2265d8359d6cf1270ff" kind="property"><name>TotalFee</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1aa2ca7213aa0a6103651c0647bd4f152f" kind="property"><name>Reward</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1aefaf9fa42d1f51c6700f60e571f6283b" kind="property"><name>PayloadLength</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1a478cbf1c35ca479955cee82d025f0168" kind="property"><name>PayloadHash</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1a3a73bbeab208431676079717f3aa1a99" kind="property"><name>GeneratorPublicKey</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1aa4ee797f965c55021834b5c745e4540e" kind="property"><name>GeneratorId</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1aa329f771c0e310433ba6b716d5d12651" kind="property"><name>BlockSignature</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1ae241c18afda877ef2bdf0ba1afb3466b" kind="property"><name>Confirmations</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_1abd4e369b7dfa4af115d4db078671a3ac" kind="property"><name>TotalForged</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status" kind="class"><name>ArkNet::Model::Block::ArkBlockChainStatus</name>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1a1cd4cbcd21119cf432911b926167ca46" kind="property"><name>Epoch</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1a7f6c153632db21d6d354a8389774e2a0" kind="property"><name>Height</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1af793823808e7b90323fdee2847b808b8" kind="property"><name>Fee</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1acb26e7742a2bda5c1751915fd52b2da1" kind="property"><name>Milestone</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1a2d96c4b1014c549c2aebf7841fbcd84e" kind="property"><name>NetHash</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1aed87d5b983170e93a092086a0aac9202" kind="property"><name>Reward</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1a2f01b9f27a5e825bff238b857b0535e2" kind="property"><name>Supply</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_list" kind="class"><name>ArkNet::Model::Block::ArkBlockList</name>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_list_1a917a6ad93879fe48d23d8b9895eef700" kind="property"><name>Blocks</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request" kind="class"><name>ArkNet::Messages::Block::ArkBlockRequest</name>
+    <member refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1a95c7e14556fabf82aee52f250e34d1de" kind="property"><name>GeneratorPublickey</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1ac73b664ac38bf5ca7e256c128e9ab54b" kind="property"><name>TotalAmount</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1af206d6751eb725c8fb2b74a7d72c670c" kind="property"><name>TotalFee</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1a6e1fed9964ffee1b36ee393a6243930d" kind="property"><name>Reward</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1af003e36b71ddf5c3ab787d0f533150c9" kind="property"><name>PreviousBlock</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1a0c329309a49fe713d817b001f22b2ee5" kind="property"><name>Height</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_response" kind="class"><name>ArkNet::Model::Block::ArkBlockResponse</name>
+    <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_response_1a9af9de758bdbe2f448b244f6e67ce0f8" kind="property"><name>Block</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate" kind="class"><name>ArkNet::Model::Delegate::ArkDelegate</name>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_1ac6ce019db1df69568317be1ba6ba80b2" kind="property"><name>Username</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_1a9173f69541a1967fed8c33d0ab95e699" kind="property"><name>Address</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_1afa18df309a3e3f2bdc96053e04071e02" kind="property"><name>PublicKey</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_1a617cffb23959b7565ba0259d372bb12b" kind="property"><name>Vote</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_1a80faaa461000a11cf9ad2a2febae15fa" kind="property"><name>Producedblocks</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_1a701c1e16ef6836e17cad08a4194172b7" kind="property"><name>Missedblocks</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_1a68106522717c6e5dbaed56f9992d4255" kind="property"><name>Rate</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_1a41f6acd2117bcd2fdc20aab9bd56fb5e" kind="property"><name>Approval</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_1a289adecd864de838a75620459c0f1a5e" kind="property"><name>Productivity</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_forged_balance" kind="class"><name>ArkNet::Model::Delegate::ArkDelegateForgedBalance</name>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_forged_balance_1a9e8d1f807d522811dae39e0d68586a96" kind="property"><name>Fees</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_forged_balance_1aed676b105307c05c1acd7f7bddd259d9" kind="property"><name>Rewards</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_forged_balance_1af3297cf84b06d58c791b2a8491db0bba" kind="property"><name>Forged</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_list" kind="class"><name>ArkNet::Model::Delegate::ArkDelegateList</name>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_list_1a0ec5b17faaf5287969cd809141197c1c" kind="property"><name>Delegates</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_next_forgers" kind="class"><name>ArkNet::Model::Delegate::ArkDelegateNextForgers</name>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_next_forgers_1ae2bc0e3d77f940747a7ad9760fb75c17" kind="property"><name>CurrentBlock</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_next_forgers_1aec64fd0f0cee8d5c3db21ad37335f971" kind="property"><name>CurrentSlot</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_next_forgers_1a9767fdacb952ac8ff933df4ef6f55cba" kind="property"><name>Delegates</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response" kind="class"><name>ArkNet::Model::Delegate::ArkDelegateResponse</name>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response_1aaca14f0ea981f23cbb4cc9567b4e835b" kind="property"><name>Delegate</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter" kind="class"><name>ArkNet::Model::Delegate::ArkDelegateVoter</name>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_1a6f0fac84241c949a2acff88153b0e572" kind="property"><name>Username</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_1a0f0404d90c01b8c971abf742e2d7f703" kind="property"><name>Address</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_1a6585d67dfd17c4980e12ed903e07d3d8" kind="property"><name>PublicKey</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_1a830bf09b5e04d4b8fdd99db7f4e1dd97" kind="property"><name>Balance</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_list" kind="class"><name>ArkNet::Model::Delegate::ArkDelegateVoterList</name>
+    <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_list_1a64e90bdda566a8d8d1491780a4563598" kind="property"><name>Accounts</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_http_methods" kind="class"><name>ArkNet::Utils::ArkStaticStrings::ArkHttpMethods</name>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_http_methods_1aeb908fbe9f7a1ce153469c51816e17f2" kind="variable"><name>GET</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_http_methods_1a1f854e2be731eb682ecae2a3fd790852" kind="variable"><name>HEAD</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_http_methods_1a0f1b4f663f254555b7b8d94492ca0adf" kind="variable"><name>POST</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_network" kind="class"><name>ArkNet::Model::Loader::ArkLoaderNetwork</name>
+    <member refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_network_1ad069a3e83ed484abecb950f815fe2bc8" kind="property"><name>NetHash</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_network_1a2e007882fbd153ea7394e3571b742cdd" kind="property"><name>Token</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_network_1a4aefc875cfedd184dad372bf6f7fa68a" kind="property"><name>Symbol</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_network_1a0cbfb296ff04723263aabd24506ebfdc" kind="property"><name>Explorer</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_network_1a9dad6b5e7a8439407aee317c4ad7d3c7" kind="property"><name>Version</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_network_response" kind="class"><name>ArkNet::Model::Loader::ArkLoaderNetworkResponse</name>
+    <member refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_network_response_1a28b3635462121d5b1ebb68b1370a1be3" kind="property"><name>Network</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_status" kind="class"><name>ArkNet::Model::Loader::ArkLoaderStatus</name>
+    <member refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_status_1afca848ad515efd4bd4730b95fc03b75c" kind="property"><name>Loaded</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_status_1a1646ccdc0e3ed5194f99ba50e3d152bc" kind="property"><name>Now</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_status_1a8d7800509f3f1bb44f81b035efcdcb20" kind="property"><name>BlocksCount</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_status_sync" kind="class"><name>ArkNet::Model::Loader::ArkLoaderStatusSync</name>
+    <member refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_status_sync_1a636ce50f20af4c995ae34b083c1bc1ec" kind="property"><name>Id</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_status_sync_1a31468f504e4f45e6549c2faed10acac7" kind="property"><name>Syncing</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_status_sync_1a7a593935d32a880a327c3d78713b78c0" kind="property"><name>Blocks</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_status_sync_1a254771e25705efc1cf8aa5398faf0df0" kind="property"><name>Height</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_ark_net_api" kind="class"><name>ArkNet::ArkNetApi</name>
+    <member refid="class_ark_net_1_1_ark_net_api_1a021a17784ffcaa7a79cd5c23cc4bf242" kind="variable"><name>_peerSeedListMainNet</name></member>
+    <member refid="class_ark_net_1_1_ark_net_api_1ab9b3a8fe28f4a5616807e84d3bf0a37d" kind="variable"><name>_peerSeedListDevNet</name></member>
+    <member refid="class_ark_net_1_1_ark_net_api_1a80f2fd2dc855810a64042ed63b77b37b" kind="variable"><name>_lazy</name></member>
+    <member refid="class_ark_net_1_1_ark_net_api_1a3907e8daca5d8dadbff95b00f66a38bb" kind="variable"><name>Instance</name></member>
+    <member refid="class_ark_net_1_1_ark_net_api_1af38dad201d9d7d72e8f0750eb7ef492f" kind="variable"><name>NetworkSettings</name></member>
+    <member refid="class_ark_net_1_1_ark_net_api_1abbbba57013bdaaf84e8d4326fd861a53" kind="function"><name>ArkNetApi</name></member>
+    <member refid="class_ark_net_1_1_ark_net_api_1a7b32e4e7efaefd8dfbeb5dfc5c9b3401" kind="function"><name>SetNetworkSettings</name></member>
+    <member refid="class_ark_net_1_1_ark_net_api_1abc5718185c4f55185d931a52eee0bb83" kind="function"><name>GetInitialPeer</name></member>
+    <member refid="class_ark_net_1_1_ark_net_api_1a733a9e8c92730374e1e2893fc7d69ce6" kind="function"><name>GetInitialPeer</name></member>
+    <member refid="class_ark_net_1_1_ark_net_api_1a9b254c693fcbdc5fa0bf5865fc16e4af" kind="function"><name>Start</name></member>
+    <member refid="class_ark_net_1_1_ark_net_api_1a680dc2b9aff684b5fb9f0ef8947a0590" kind="function"><name>Start</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_tests_1_1_ark_net_api_tests" kind="class"><name>ArkNet::Tests::ArkNetApiTests</name>
+    <member refid="class_ark_net_1_1_tests_1_1_ark_net_api_tests_1ac0efc96292a8c2d745d22a6611c399b8" kind="function"><name>StartTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_ark_network_settings" kind="class"><name>ArkNet::Utils::ArkNetworkSettings</name>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1a00b2d3a106a421e71d1cc47199d83680" kind="property"><name>Port</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1a8708737789d627a0203984f2f9d907d9" kind="property"><name>BytePrefix</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1a4352750df83b11e8a1b3cab359789134" kind="property"><name>Version</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1a0e2f709a2737824276785919da13f5cd" kind="property"><name>NetHash</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1aa1ca338fc8389c14ca75c35141ff2a1e" kind="property"><name>MaxNumOfBroadcasts</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1aa5754057d1ffd29a5777fb20745aa125" kind="property"><name>PeerCleaningIntervalInMinutes</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1a08641a19b5115f8ad1570ef8219b0748" kind="property"><name>PeerCleaningHeightThreshold</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1ac4de1d49fcc42bd3c8e3511f6eb9a007" kind="property"><name>MaxRequestRetryCount</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1ad40d2c90cb9ab37ee83147da7c0d6e57" kind="property"><name>Fee</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1a261083fa567c878674f5540b1a1190f6" kind="function"><name>ArkNetworkSettings</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer" kind="class"><name>ArkNet::Model::Peer::ArkPeer</name>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_1aa2ebf95eddcca67954fb417d6a2eda1e" kind="property"><name>Ip</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_1a1ab9876775bd971e5f5bb3894170fdf5" kind="property"><name>Port</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_1a453c4d5313f0d27cad95e3e447c48283" kind="property"><name>Version</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_1adc22ae1b1eacff98b8bfa4bc6523f575" kind="property"><name>Os</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_1af9cbf9a215ec0f012e7a6bb4da194d57" kind="property"><name>Height</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_1af3f896dbc01eee3e3b00beabee97113b" kind="property"><name>Status</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_1a78d519bbcdc6834b762845c2a7781ba5" kind="property"><name>Delay</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_1af1d44452c4aa1b3be2950b3b302cf6d8" kind="property"><name>Errors</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header" kind="class"><name>ArkNet::Model::Peer::ArkPeerHeader</name>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a287a4b2660be57756dd91aad02ec1b74" kind="property"><name>Id</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a5a559953315bccc978037fbc25c87312" kind="property"><name>Height</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a48dbad480421461d80ade1f93d71d422" kind="property"><name>Version</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a4d0ab42f454e2f0f0de6ca757276ccc3" kind="property"><name>TotalAmount</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1af534b9a55529bd790cb6afe64dbbdcc4" kind="property"><name>TotalFee</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a40ad2fd2c632a16dabf66d1bbe9351aa" kind="property"><name>Reward</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1afb0fb9128f6a5826e728569678ea6fa6" kind="property"><name>PayloadHash</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a040a355c7e331fc5e907965e3a0610da" kind="property"><name>PayloadLength</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a88846e21be120e8e1b743fe16f4dfa73" kind="property"><name>Timestamp</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a5d5943ef231fadc7c07698881a998284" kind="property"><name>NumberOfTransactions</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1ad8e6b49157954adc36207c260f1e9fa4" kind="property"><name>PreviousBlock</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a968d0753cfdea6e32c42b25ec05be41c" kind="property"><name>GeneratorPublicKey</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a2500cb11e0de04ea50f37c761fdb2cfa" kind="property"><name>BlockSignature</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_list" kind="class"><name>ArkNet::Model::Peer::ArkPeerList</name>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_list_1a5f0731f344fd0238de235d6817349a15" kind="property"><name>Peers</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_response" kind="class"><name>ArkNet::Model::Peer::ArkPeerResponse</name>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_response_1abdad809cdedb12045516ac2cc406df95" kind="property"><name>Peer</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status" kind="class"><name>ArkNet::Model::Peer::ArkPeerStatus</name>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status_1a63fe88fc6abf18a4e462d2c8260934fb" kind="property"><name>Height</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status_1abe2473254c8b1422ba108b4422a35a92" kind="property"><name>ForgingAllowed</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status_1a480edea2ceb412610043a91b2f876e64" kind="property"><name>CurrentSlot</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status_1a2615f1f028067d0902e2bcc763ab9ac1" kind="property"><name>Header</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_attributes_1_1_ark_query_param_attribute" kind="class"><name>ArkNet::Attributes::ArkQueryParamAttribute</name>
+    <member refid="class_ark_net_1_1_attributes_1_1_ark_query_param_attribute_1ab3d8de8e2830bbf2b14a95d62b995657" kind="property"><name>Name</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base" kind="class"><name>ArkNet::Model::BaseModels::ArkResponseBase</name>
+    <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a218fcfef6e7a12abd3e8a29d90899fb5" kind="property"><name>Success</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a45c8e8b131e7d1d9b401ea6972fa3256" kind="property"><name>Message</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a0896cd002de13aec6fdaa8df57fe1242" kind="property"><name>Error</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_ark_static_strings" kind="class"><name>ArkNet::Utils::ArkStaticStrings</name>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction" kind="class"><name>ArkNet::Model::Transactions::ArkTransaction</name>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_1af1ebedcf8a19c2a23b1a363aa72ba1de" kind="property"><name>Id</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_1ab0382c56f1e438c432d5bea85748baa5" kind="property"><name>BlockId</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_1ad2ccb91c6522b98dc999c01335aed78b" kind="property"><name>Height</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_1a505c5af34c956e8514ff8ac5e1694c89" kind="property"><name>Type</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_1aa92db280c45d0544983524f9d9bf3b7c" kind="property"><name>Timestamp</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_1add05651b7616b66a13aba10cd177aeec" kind="property"><name>Amount</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_1aeae6f7327732cf0062fa996e8ce1a1c3" kind="property"><name>Fee</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_1a732785efcc175a4084fb9d6d85c965fa" kind="property"><name>VendorField</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_1a3a07ffa6cc57d380532743d214e8194f" kind="property"><name>SenderId</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_1a44dfb89bd4d02b5c9c2b5494c9f81b27" kind="property"><name>RecipientId</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_1a84ad4f3fd2b00d647cd9cac319066efa" kind="property"><name>SenderPublicKey</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_1a5ae4589d8b553ab8150d44800fb06f09" kind="property"><name>Signature</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_1a4eb80a342fbd0cde37d80e1fded11bce" kind="property"><name>SignSignature</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_1a6bb7739014d90fbc515846177fe31cd5" kind="property"><name>Asset</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_1aab4a96cf71189abf926d8a4643b733dc" kind="property"><name>Confirmations</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kind="class"><name>ArkNet::Model::Transactions::ArkTransactionList</name>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list_1a37fc1efc442992507f21e4b4bc60c636" kind="property"><name>Count</name></member>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list_1a3d48ae576ac270d64580963d08bd88ed" kind="property"><name>Transactions</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_post_response" kind="class"><name>ArkNet::Model::Transactions::ArkTransactionPostResponse</name>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_post_response_1a3a09356dc63ec884dab82b45720c78ff" kind="property"><name>TransactionIds</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_transaction_request" kind="class"><name>ArkNet::Messages::Transaction::ArkTransactionRequest</name>
+    <member refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_transaction_request_1a1fa70586461f80218d860bd5f1f932c8" kind="property"><name>SenderPublickey</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_transaction_request_1a30a79ffba8430ed5c5a668210777247c" kind="property"><name>OwnerPublicKey</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_transaction_request_1a928214358c2561f4583c5e47799c8804" kind="property"><name>OwnerAddress</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_transaction_request_1a4e566a350b7dcf310d86cb956999c7da" kind="property"><name>SenderId</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_transaction_request_1ad8f5e73c24208ba9f728d22be2190dcd" kind="property"><name>RecipientId</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_transaction_request_1a617793d33e6c94bafee1a0bb6304059b" kind="property"><name>Amount</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_transaction_request_1a7aa0fbd8a20b26c38bb496f7d44330cf" kind="property"><name>Fee</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_transaction_request_1a5b3247567398e849932d773a96097a07" kind="property"><name>Type</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_transaction_request_1afc884ea5111d9b0c7ad6100986bf6528" kind="property"><name>BlockId</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_response" kind="class"><name>ArkNet::Model::Transactions::ArkTransactionResponse</name>
+    <member refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_response_1a92d3d8ea325316f9b5244e2e648986cb" kind="property"><name>Transaction</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_unconfirmed_transaction_request" kind="class"><name>ArkNet::Messages::Transaction::ArkUnconfirmedTransactionRequest</name>
+    <member refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_unconfirmed_transaction_request_1a76efaad6f63c2c4341dbad4eabbfeaa3" kind="property"><name>SenderPublickey</name></member>
+    <member refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_unconfirmed_transaction_request_1adfaaedeb4ce5d657807a8cfac3185b4f" kind="property"><name>Address</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_ark_utils" kind="class"><name>ArkNet::Utils::ArkUtils</name>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_utils_1a51af876d28156993103f927110003f5c" kind="function"><name>SerializeObject2Xml&lt; T &gt;</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_utils_1aab16ad73d303333bbd16d709232d3f35" kind="function"><name>SerializeObject2JSon&lt; T &gt;</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_base58" kind="class"><name>ArkNet::Utils::Base58</name>
+    <member refid="class_ark_net_1_1_utils_1_1_base58_1a28968d0c7adea9d7e5206553998db784" kind="variable"><name>Alphabet</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_base58_1adb0b7b2f6a797345c9d2760b305c4bb8" kind="variable"><name>Base58Length</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_base58_1a6d8bb6f08bc16cdcf286add6cf7e5cf1" kind="variable"><name>INDEXES</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_base58_1afa316a5aa57b9d6b2baed44899edd93d" kind="variable"><name>Base256Length</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_base58_1ab00c5cb97859b676ab588105a8db4cea" kind="function"><name>Base58</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_base58_1a42a42ca9782254bac4b1ea3109ef3a63" kind="function"><name>LeadingZerosCount</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_base58_1a099d3c1196b1146de8ba4c6676ddd731" kind="function"><name>divmod58</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_base58_1a28e8a74005ac1b7626e7063067e916a6" kind="function"><name>divmod256</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_base58_1ac78b981bf8da0787662cb402814da26e" kind="function"><name>copyOfRange</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_base58_1aadc84b13d9b62011d9dd78a155e9ac85" kind="function"><name>Encode</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_base58_1ae415db97d131f11eaad5dcc18bad1e69" kind="function"><name>Decode</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_base58_1a277b6e4685bffaae14b2066da7213072" kind="function"><name>DecodeChecked</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes" kind="class"><name>ArkNet::Utils::BCAVersionedChecksummedBytes</name>
+    <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a71e3d6717de2a2e937cd83736031a8c8" kind="variable"><name>version</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a86a24f3981ec3842e4b28765d1f96319" kind="variable"><name>bytes</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1aaaf296f6f868bbebfd1bb1a6ed1365b2" kind="property"><name>Version</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a962e699d27545d05bd41c20621b1d096" kind="property"><name>Bytes</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1af58703356a9128583a1e3898778dcda5" kind="function"><name>BCAVersionedChecksummedBytes</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a353cddb3dc630b6bb60d86d123c944a0" kind="function"><name>BCAVersionedChecksummedBytes</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a960f0917e584bfea661b348e59c4713f" kind="function"><name>GetHashCode</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a62dd1855c080e7654b69c9b29bc84451" kind="function"><name>Equals</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a214554bec0a5dc2cfdf505e78aad84ef" kind="function"><name>ToString</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_core_1_1_block" kind="class"><name>ArkNet::Core::Block</name>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_block" kind="class"><name>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Block</name>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_block_1a57b56bbfe76ccae39b8f0dac85951b66" kind="variable"><name>GET_BLOCK</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_block_1ae51128c76f80534449c9373076d2a9ce" kind="variable"><name>GET_ALL</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_block_1a624cb8bef9f758e352620132f2d0ad84" kind="variable"><name>GET_EPOCH</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_block_1adf6b38ae7afb7f4993edca9975897e9d" kind="variable"><name>GET_HEIGHT</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_block_1a027c8bc7ea8a85687e913e11bf2a9a1d" kind="variable"><name>GET_NETHASH</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_block_1a5d536335efef7141842660426a1ebda2" kind="variable"><name>GET_FEES</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_block_1a5b3b0ce11d73f8228c3c6ad231d9ee00" kind="variable"><name>GET_MILESTONE</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_block_1ab2dbfb4f0d278926a27c5b9163b4df25" kind="variable"><name>GET_REWARD</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_block_1a3d53677f0b5b966ae99962f5eca5fcf3" kind="variable"><name>GET_SUPPLY</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_block_1ac2cb19bc498c01e00f974d372803fd68" kind="variable"><name>GET_STATUS</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_block_service" kind="class"><name>ArkNet::Service::BlockService</name>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1a502c8d188c8402df45482169220c5e78" kind="function"><name>GetById</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1a0a7304118482c3772eb95e7cd587bc30" kind="function"><name>GetByIdAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1ab9bd402b520b19df697497d5c2717876" kind="function"><name>GetAll</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1a0fb2d64e635b8b983f57915eae90a637" kind="function"><name>GetAllAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1a9e1bb94e36b3e7b361f99185aa20b6f7" kind="function"><name>GetBlocks</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1af7fe47e90deb0da4b2ec03cf1a1b7a3b" kind="function"><name>GetBlocksAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1a7e89d5372208dfa7412506fe583ebcfd" kind="function"><name>GetEpoch</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1a9555d3225d682a06868785f577366b04" kind="function"><name>GetEpochAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1a61085e1334dec8bd3908754393a56276" kind="function"><name>GetHeight</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1ac9c7db526790c6074bf8852d6c3fb402" kind="function"><name>GetHeightAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1a666b6e798de1cd63a927d57a41276567" kind="function"><name>GetNetHash</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1a6f865de7f9adbd24d172cc6a72ca815e" kind="function"><name>GetNetHashAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1a766160296a04c888e3513947a12ac078" kind="function"><name>GetFees</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1aee2de444e570d3606184bff6c495787d" kind="function"><name>GetFeesAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1a3bdd8d9a4bf7673eaf2381f60a3db945" kind="function"><name>GetMilestone</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1ac0d99ee6005a78480d35291a6694e66a" kind="function"><name>GetMilestoneAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1a6ad7536721c15c165f3dea18bbc351d3" kind="function"><name>GetReward</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1adcb0b540e9a237a1ba10081d497498f7" kind="function"><name>GetRewardAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1ab12b8475546a23323b767b663f8c054d" kind="function"><name>GetSupply</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1ab3de2c6b92271fbd0eb35752560590b9" kind="function"><name>GetSupplyAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1a70bb0459b42a110980d67243ad6e9749" kind="function"><name>GetStatus</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_service_1a1d2423631b6d2d2c7e0a1ed78b9251c4" kind="function"><name>GetStatusAsync</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests" kind="class"><name>ArkNet::Service::Block::Tests::BlockServiceAsyncTests</name>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests_1afa4b0510fdfc3ecedc352d05465d1042" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests_1ac562e95d6ed8fb12322af9b352a17772" kind="function"><name>GetAllAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests_1af3ca9bf2723ca110dd9afb142bf4cac2" kind="function"><name>GetAllBlocksAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests_1a157dbd5969081e1ba65c49af5a8a1c30" kind="function"><name>GetByIdAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests_1aefe5720eb83635d55a93a979e5f11136" kind="function"><name>GetByIdErrorAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests_1ac6bb38b8c515ea94a56ebcf0367d37c7" kind="function"><name>GetEpochAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests_1adc08ebc85612e37d595652bb2ad4b6ad" kind="function"><name>GetHeightAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests_1a614064079a810d4ec6abbd4379da2e4c" kind="function"><name>GetNetHashAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests_1a07468e09ad41761c04eec046c75befab" kind="function"><name>GetFeesAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests_1a305937d67be3dda3db673ca7739d8beb" kind="function"><name>GetMilestone</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests_1a8ef5e14a8d0bdec7957f3bd8996dbaa2" kind="function"><name>GetReward</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests_1a7c899200871d786363793e7e167281d8" kind="function"><name>GetStatus</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests" kind="class"><name>ArkNet::Service::Block::Tests::BlockServiceTests</name>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_1a9d8bc5c07427982b884cbcb39a242d6f" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_1a42fc3cd54cb635e5201c5e5ed37e2fec" kind="function"><name>GetAllTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_1a54542ae320642e1b441a79c22493914a" kind="function"><name>GetAllBlocksTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_1a57b99d6b6ad44d9c4112d61249bbe6fb" kind="function"><name>GetByIdTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_1a42b3a2bc4217cafec7da737d1e771374" kind="function"><name>GetByIdErrorTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_1a68a2ecc58937725819cdb199c0436a6e" kind="function"><name>GetEpochTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_1a50be59ba773b1bad8dd324ad23c02ff1" kind="function"><name>GetHeightTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_1acc839b80fba9d154e9e24d227d21c532" kind="function"><name>GetNetHashTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_1a7de4e20599f7a46986aea4e305595adb" kind="function"><name>GetFeesTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_1a634bdc0380f3cf9e326cea23dfdfa741" kind="function"><name>GetMilestoneTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_1a896645bee9b5edaa2a0c426aa08997a7" kind="function"><name>GetRewardTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_1a3800b5ec2cd944fda414dd6ecba10572" kind="function"><name>GetStatusTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base" kind="class"><name>ArkNet::Service::Block::Tests::BlockServiceTestsBase</name>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a286bc4482fdf4ba2a803d1520bdec4b5" kind="variable"><name>_height</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a5151eb0de88f86f826acec146610342c" kind="variable"><name>_generatorPublicKey</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1acb561ae4a9b4dfe83960e1c3194e3773" kind="function"><name>InitializeBlockServiceTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a2c62f2c67ea9ff82fbfe53cc073f4cb0" kind="function"><name>InitializeBlockServiceAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1ac62abd4258bb2261683a6e58d6ea60cf" kind="function"><name>GetAllResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a05d33daaa3b98d6cc34c9539b4aa7be6" kind="function"><name>GetBlocksResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a6fe50e1b85114a7e4aec14b21cdbdcae" kind="function"><name>GetByIdResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a378ec88f2094f5b62976f348fd39b9ff" kind="function"><name>GetByIdErrorResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a554a97ddcae43ad3870b870c4dea1028" kind="function"><name>GetEpochResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a043d15607ba4b2772c61a6a1b03b1d14" kind="function"><name>GetHeightResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a1b5e0956284c250d3ef6897794a3f7fa" kind="function"><name>GetNetHashResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a829833dec01d4e18602cf3c988118313" kind="function"><name>GetFeesResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a02f68cba8be23482af8a6a608c6f5777" kind="function"><name>GetMilestoneResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a172b8aa762c63d9d00cb98675e75c664" kind="function"><name>GetRewardResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a793e778bea73e09f741ac6e62aa79b50" kind="function"><name>GetStatusResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base_1a20ffedecbf787df02042fd8494f050f3" kind="function"><name>Setup</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_buffer" kind="class"><name>ArkNet::Utils::Buffer</name>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a583dca4de4846fec0e3ec29ff6d0ed8d" kind="variable"><name>mark</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1ae577fe56b39563a7b28367bd26c3cab0" kind="variable"><name>position</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1af2c0d208e27cf8e75425cc37f106ded1" kind="variable"><name>capacity</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a6929486fc960a2ea00be8d43d719d8be" kind="variable"><name>limit</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a394f7099f296c364f7892bad75759534" kind="variable"><name>address</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1ae9d06258697fb58464880ac6d8787e1a" kind="property"><name>Capacity</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a03a21806f9c0a830b50cd59695cb6fe5" kind="property"><name>Position</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a3d42dd2c8b82c44b665a9ea00f0b706f" kind="property"><name>Limit</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a5d297c0fdabec4cb6075a9f7738d2ed4" kind="property"><name>Remaining</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1aafbf13f4ebad487267cc526f2737cb37" kind="property"><name>HasRemaining</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a89031e2267686d24dda0ae878d6a5413" kind="property"><name>IsReadOnly</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a4c4683dbf720cadee717b61da2f1db59" kind="property"><name>HasArray</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a5dcbaea62fa89275bf8a8ac975c15451" kind="property"><name>Array</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1aafc41a65e59e3b9f92c6c029eec837ef" kind="property"><name>ArrayOffset</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a1a4faaddfd8e7c783046afdc4ff4cb72" kind="property"><name>IsDirect</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a3c74e9ca4fe5e69228e9d31d32a61540" kind="property"><name>MarkValue</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a550e01295a8cd74f7f75e9f803bc3a4e" kind="function"><name>Buffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1ab36e2a5488eeebfc9b333c88a58f6c2a" kind="function"><name>NextGetIndex</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a60c9cf9b3ad29ca1700e1816c932b5f0" kind="function"><name>NextGetIndex</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1afc1fab6ad275be830ace01c6c75a8fd6" kind="function"><name>NextPutIndex</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a94bf8c7deb0fceec1d854d2169b75308" kind="function"><name>NextPutIndex</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1ab493f971a3e54077aea1a56b72fb59bc" kind="function"><name>CheckIndex</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1ac247aa2011b60f5d907a56b56042dcab" kind="function"><name>CheckIndex</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a5b9370282402858e0fbe512deb36ddd5" kind="function"><name>Truncate</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1ae5692ae15f3e7fef621fc524b334c007" kind="function"><name>DiscardMark</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1ab922d6c7ab868bb665dbc26e5910b230" kind="function"><name>SetPosition</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a0b468e981e7d5f6b155897b6446fe763" kind="function"><name>SetLimit</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1afad062dd1e5b85f340af9989d75a97e7" kind="function"><name>Mark</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a61a82b00db3da7957da21e438e707503" kind="function"><name>Reset</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1ace312eff12b1a9fd2a223abea15c733c" kind="function"><name>Clear</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a92a76fdb7b0fb5bab486f73f5375838e" kind="function"><name>Flip</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a41fd1016c914352bcc0965dbd135480d" kind="function"><name>Rewind</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_1a47aa18b17c4c36f1aebc97cf0f21437a" kind="function"><name>CheckBounds</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_buffer_overflow_exception" kind="class"><name>ArkNet::Utils::BufferOverflowException</name>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_overflow_exception_1aa4fd68fbe6d92d11504062292992b687" kind="function"><name>BufferOverflowException</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_buffer_underflow_exception" kind="class"><name>ArkNet::Utils::BufferUnderflowException</name>
+    <member refid="class_ark_net_1_1_utils_1_1_buffer_underflow_exception_1aa5005f05f26784e093ef74eb07ecc2ec" kind="function"><name>BufferUnderflowException</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_byte_buffer" kind="class"><name>ArkNet::Utils::ByteBuffer</name>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aef6416958f9a22e15df401ca10742802" kind="variable"><name>hb</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ae343b7c9f613f513c572607f4836f7ac" kind="variable"><name>bigEndian</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ada0ec026df5b4a74f27cd5eae93b20c2" kind="variable"><name>offset</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aecc06b554de547406bf1a9b276d012bf" kind="variable"><name>isReadOnly</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1adfa14e67c0e116603016eb8238d9809b" kind="property"><name>HasArray</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a9cd742b89cea5c01c7944b9d825f98fd" kind="property"><name>Array</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ac4fd0c1c9c7dc1342d0e11757b137a59" kind="property"><name>ArrayOffset</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a5e1f13012be9a42a4dbf1890e58da6b5" kind="property"><name>IsDirect</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a6de079bb53170b1a6a571975e8397998" kind="property"><name>Order</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aff76b274646b28a5bb94be532503054a" kind="function"><name>ByteBuffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a551e034af1296ae4e46f20d391f74cea" kind="function"><name>ByteBuffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aebe487db9cffefe6a3cccd7d252f5455" kind="function"><name>_get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a2a0d5cf33afccdea1ed29e3a93225726" kind="function"><name>_put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ac0e7833c1b6f29203de5d3da386846cd" kind="function"><name>AllocateDirect</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a1ea522fe88227a59dcad563aa21afa83" kind="function"><name>Allocate</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ab49c6cf2bfaa3ae7d9d212531e88c58b" kind="function"><name>Wrap</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a6d0a565a691d70f718fdb667c68c2231" kind="function"><name>Wrap</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aaadf21ecd4bc0520849f45f0316d653a" kind="function"><name>Slice</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ace818b1e7f356b241f32576423165d19" kind="function"><name>Duplicate</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a4ff0cd98e0f46fc71bb82d56d2a9b044" kind="function"><name>AsReadOnlyBuffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a2338094e82f8db88483dd61dac04de5e" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a206fb14aaa7af6100eb9dde95614361c" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ab058206ca282b60dd6aab612235bbdac" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a30e6207ec97ad14383444026521e01dd" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a68779e89b8e68e0ff4224c49188aad2e" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a2b319dd5920f163206608e2218417318" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a6aea99a23a5ef10777622087e3ef9888" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1afef575df309ca2de76e8d57f6ff0befc" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a6019ec42aa1c791882c6c0f59872640d" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a08941fcb791d69aa85e650a6e935f1fb" kind="function"><name>Compact</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ab352ca946ba242b5394647eb741aed29" kind="function"><name>ToString</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aa3e2206c7ed2642bd1b1be1b4b52b96a" kind="function"><name>GetHashCode</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aea25f8a20b377025abc87dbd70ee0198" kind="function"><name>Equals</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a6e29d2ba40905e92358a3b3c3357f795" kind="function"><name>CompareTo</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aadfc547692a173d848df0a647048685a" kind="function"><name>GetChar</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1adda159d358e0e56d3b7bf165f77f2842" kind="function"><name>PutChar</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a1b2d206e2c2e3913e3e25a47c23c07a1" kind="function"><name>GetChar</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ac8d67cbc2c69358314e1f62203a5c78a" kind="function"><name>PutChar</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aebe8ca9d2f629ad39fed0e8238851dd5" kind="function"><name>GetInt16</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a53fa055dbb83ab64d30c6a710eb5175c" kind="function"><name>PutInt16</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a056a79770e80feb07c64e1bf64d308a5" kind="function"><name>GetInt16</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a38eb7b0e43680312d1411fa38b212f02" kind="function"><name>PutInt16</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a2d817281bc866aa448f77b606e827bf7" kind="function"><name>GetInt32</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ab3192f8fe3b004393912104cba67ebf4" kind="function"><name>PutInt32</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aaff2b23ae32802fc3a8332926c776c44" kind="function"><name>GetInt32</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a20b8dd2cbb0fefa3f60282f61cc73341" kind="function"><name>PutInt32</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1afd563374c0b4e8dcc7dfcf4da6a7a46d" kind="function"><name>GetInt64</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a1c73c152b52cce4a2799c2e6aebdd1fc" kind="function"><name>PutInt64</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a006b7694ae9c3ba8385fcd93e1d3a22e" kind="function"><name>GetInt64</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a40ed0d31b573c68b175acbf0f6f822be" kind="function"><name>PutInt64</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a5974692080e631f790aa320b9e18e270" kind="function"><name>AsInt64Buffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a851f75591d3256b1bc6574d6dbfe71e8" kind="function"><name>GetSingle</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aaef139c1f982792ee144613d9fdddd6b" kind="function"><name>PutSingle</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a5c0ba462dbca27378398838414bc5ea1" kind="function"><name>GetSingle</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a452f667e7e1ab84b8519098a5da1b0d3" kind="function"><name>PutSingle</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1af762d11c270e6c302d4ab3532a0b90ad" kind="function"><name>GetDouble</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ab2b33a1a8d8ffeee99bb206df3af25fc" kind="function"><name>PutDouble</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a672441cedc6285eb129f49969a2f8c59" kind="function"><name>GetDouble</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ab3fb9bccc57b6ba0eb12a157b14c10ce" kind="function"><name>PutDouble</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a355fabc003443cf9f6072f023bb91c77" kind="function"><name>Equals</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a7d944dcb6970138e01d6845df15c47ab" kind="function"><name>Compare</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer" kind="class"><name>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</name>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1aa03e658bda374da96ac46350162c2789" kind="variable"><name>bb</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a1dc9dd7d54d24bf3dbef2d7b97f61e5c" kind="variable"><name>offset</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a6f44b525fa0bfd115b47150393f44557" kind="variable"><name>bigEndian</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a3db55e57184977c8c20a421f616d9b75" kind="property"><name>IsDirect</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1aa01ce41e81d7adc0bebd9c1e20d7433a" kind="property"><name>IsReadOnly</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1ab81f88d26b1fbb10349e65a65a4601da" kind="property"><name>Order</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a306bee03903522fe5d2486591bb9bbb9" kind="function"><name>ByteBufferAsInt64Buffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a51d07cf3c132710188d58c954abf33f2" kind="function"><name>ByteBufferAsInt64Buffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1aa25f84f939af9358914fa870bbe52bfa" kind="function"><name>Slice</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a804a4669d65f2b0c6731faa52e162c9f" kind="function"><name>Duplicate</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a651ec0f258d41fe12cf201a4276b54dc" kind="function"><name>AsReadOnlyBuffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a171bcac6c1e45cc3e7dc88d8c0ce15c6" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1ab087a4a2317ea7e91b7bdd491574b5a1" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a493fc588f31a21b6aa2d230cdc9d7a4c" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a45124eb43ea137ff798ffe6cec8971c3" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1ac2f3b4adf439d47f88725dd3dc8fc4f6" kind="function"><name>Compact</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1afc71f33e39a0e40b5f335936f56db70e" kind="function"><name>Ix</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a31c5ffe223500140d7d53658e48949ba" kind="function"><name>PutImpl</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_core_1_1_crypto" kind="class"><name>ArkNet::Core::Crypto</name>
+    <member refid="class_ark_net_1_1_core_1_1_crypto_1a3efd2ff31722848541943c57680cff93" kind="variable"><name>Sha256</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_crypto_1aa470c2aaf3dac2cfad97dd206782a6ba" kind="variable"><name>Ripemd160</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_crypto_1a8f267a2c483b574d8685551bf40bd671" kind="function"><name>Sign</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_crypto_1aa107538e71ddf6e252539b29d101ed17" kind="function"><name>SecondSign</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_crypto_1ad1702cf673cd1c1cacbda162cbf8a6a5" kind="function"><name>SignBytes</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_crypto_1a50387c4e576bdad59781c714567441ca" kind="function"><name>Verify</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_crypto_1a026e46686fc02436b223428a516eb404" kind="function"><name>SecondVerify</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_crypto_1a65c550c79cc1c2d7d054f87ff5cd5c10" kind="function"><name>GetBytes</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_crypto_1a710a1814bc2f4f7b95396986a56b8485" kind="function"><name>GetId</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_crypto_1a3ea6544586e2ab9ea6f928be3314ee79" kind="function"><name>GetKeys</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_crypto_1a7ec7944f4b4ada030751d4640f4ccd14" kind="function"><name>GetAddress</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_crypto_1abf2ce4e2febb27227d0d4e385f5c8053" kind="function"><name>GetAddress</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_delegate" kind="class"><name>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Delegate</name>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_delegate_1aee883d92097d931b8f3daef2b94c39d7" kind="variable"><name>GET_ALL</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_delegate_1a835167e6916a222e397bd5768ae6d600" kind="variable"><name>GET_BY_USERNAME</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_delegate_1a913749994c33a06c90468ce61a48180d" kind="variable"><name>GET_BY_PUBLIC_KEY</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_delegate_1a8ccb78cdb790f672c2ec4f227ab3dc67" kind="variable"><name>GET_VOTERS</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_delegate_1a66a398329901fb6593afdb946a150bc9" kind="variable"><name>GET_FEE</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_delegate_1a4a845cc5b6fda521d01f1bda0acf2fb8" kind="variable"><name>GET_FORGED</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_delegate_1a1f178d9cd3242b87e533115a5233a426" kind="variable"><name>GET_NEXT_FORGERS</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_delegate_service" kind="class"><name>ArkNet::Service::DelegateService</name>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a7298aeefb8d5ef208e82568acddec3ae" kind="function"><name>GetAll</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a45947d49035e8d3744ed9ff4f2b93831" kind="function"><name>GetAllAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1af418f911957f155fd2011b2fae082ee5" kind="function"><name>GetDelegates</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a6a594f72d421fee490f6500e608e40f6" kind="function"><name>GetDelegatesAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a858ec1ca9d39fd9c4a69419f25e092fe" kind="function"><name>GetByUsername</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1ae365565c9c7af7fbc4563e8e966e6471" kind="function"><name>GetByUsernameAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1aa6e39798ae78a9ea14df607017437235" kind="function"><name>GetByPubKey</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1ace380f537c6c9347a7d97bd8632d9328" kind="function"><name>GetByPubKeyAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a5e186bb8c3cafa33a79833e553eedfad" kind="function"><name>GetVoters</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a1ad57224da43a52de6324e446876d1da" kind="function"><name>GetVotersAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1ab1b61dd2d79e1f71971cf6fa27387b36" kind="function"><name>GetFee</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a55b76b35f0e67252123f2265080ca8bb" kind="function"><name>GetFeeAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a0aa87d6b73cae056aa63e40cdeec3483" kind="function"><name>GetForgedByAccount</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a0e1936820d6ec4774538e1a2b1ad57ea" kind="function"><name>GetForgedByAccountAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1ab1272e6b022d445fa4fddffc2d4be06e" kind="function"><name>GetNextForgers</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a76bcbe06c5f4e1f727d60ac635e4825b" kind="function"><name>GetNextForgersAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1aa5b682691dddf887d3bd20546cc11ad9" kind="function"><name>GetTotalVoteArk</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a4696de00967d7160fd3aa48c49a9c7e4" kind="function"><name>GetTotalVoteArkAsync</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests" kind="class"><name>ArkNet::Service::Delegate::Tests::DelegateServiceAsyncTests</name>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests_1ae91b494ba0bc9141e53b8aa5ec2f5677" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests_1a0c8e5ea217393ea9aaa74f460dc2c744" kind="function"><name>GetAllAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests_1ae539114a15abd9fc7e0669a058307c22" kind="function"><name>GetDelegatesAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests_1a9f1a56b570b722a2be250f22ca2c96f9" kind="function"><name>GetByUsernameAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests_1a1f4119a76241bd84aacfdfa513b0d432" kind="function"><name>GetByUsernameErrorAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests_1a15e04d2de44e65ef588c76a18d19ba8f" kind="function"><name>GetByPubKeyAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests_1aab3f207bc19ee64cbcaf41c6d8f95c95" kind="function"><name>GetByPubKeyErrorAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests_1acdb1548a2ea86b9eedd7532f3ad0ff76" kind="function"><name>GetVotersAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests_1a817777d467a2b136e73b0cd77a7e1356" kind="function"><name>GetVotersErrorAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests_1a5bc786aa5fd5a9e36175a8e4bdf47f53" kind="function"><name>GetFeeAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests_1ae347f5c539f151d6ff6ccd94adff1c4b" kind="function"><name>GetForgedByAccountAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests_1a0be515debd57d74fa68efb218c4ff0ba" kind="function"><name>GetForgedByAccountErrorAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests_1ae9e97c963c50264515ff83b5553bb649" kind="function"><name>GetNextForgersAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests_1adef54f0ef3e89fd661394946db5943f0" kind="function"><name>GetTotalVoteArkAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests_1a415cc16d52f3f194d025f9a07a7a78bb" kind="function"><name>GetTotalVoteArkErrorAsyncTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests" kind="class"><name>ArkNet::Service::Delegate::Tests::DelegateServiceTests</name>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_1ac239f9aabe5d483ef556089bbca30161" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_1aedf7117c0198ff6064e1c56a94e2c426" kind="function"><name>GetAllTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_1a8daa206f2707548ee7db693bf596d30c" kind="function"><name>GetDelegatesTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_1a16437d220779813ca77566578db40fde" kind="function"><name>GetByUsernameTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_1a295dd5beef7ff92b73ac4fbe2b62f924" kind="function"><name>GetByUsernameErrorTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_1aae6d357f71fc4bc6737300db6330e049" kind="function"><name>GetByPubKeyTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_1a5c9ff54aa38e82ce5c1461a63d499c2a" kind="function"><name>GetByPubKeyErrorTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_1af86761ef57cd4e677b1d71368b315022" kind="function"><name>GetVotersTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_1a58cb29071661f1f02bf13b0fa96e9840" kind="function"><name>GetVotersErrorTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_1ace90d7ad5740b83bc731058a9aae8f05" kind="function"><name>GetFeeTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_1ab23245b4584db24f9b3dd288a43420bd" kind="function"><name>GetForgedByAccountTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_1a8008cdec414bbc19576aeacc0ecad2c0" kind="function"><name>GetForgedByAccountErrorTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_1a4b89ac682bdfc0fb77f060c60c7d3d51" kind="function"><name>GetNextForgersTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_1a86b1bb5fb1cf325a98bceb3b9c9b4377" kind="function"><name>GetTotalVoteArkTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_1a35d26a2b6e5408ee5e7d5954e292af50" kind="function"><name>GetTotalVoteArkErrorTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base" kind="class"><name>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</name>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a2918cc8fc70d97c8b8f2ec6f68436ed3" kind="variable"><name>_userName</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a0e76ea8527318029b3a2df83a1f3101c" kind="variable"><name>_resultUserNameFromPubKey</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a12bc0969842a6ddf3f6a76d01b5060ee" kind="variable"><name>_pubKey</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a4cf9a749343d95663b03953311fc6dcb" kind="variable"><name>_address</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a627b24254814434b640b7ff5f597cfaa" kind="function"><name>InitializeDelegateServiceTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a49b9a84bfe11d7b914a51baece7ccbba" kind="function"><name>InitializeDelegateServiceAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1ad91f3f8fee4e399d9d01c9d74a36a8e5" kind="function"><name>GetAllResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a367ab4b9c178872886ab230118a9b709" kind="function"><name>GetByUsernameResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a95e409be62a0436479fcedabc6134420" kind="function"><name>GetByUsernameErrorResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a7e0bc921e9be305a387ecd663838605e" kind="function"><name>GetByPubKeyResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a0ce5e88e0a9fd81e9078df79238df676" kind="function"><name>GetByPubKeyErrorResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a770b09b997423033dcadef19e0b609ae" kind="function"><name>GetVotersResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a91c0745a2179651e11d158d38092a52d" kind="function"><name>GetVotersErrorResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a7f9eeaf5cc9482c32fe03494a10da3a8" kind="function"><name>GetFeeResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a16a3c8396937f253d1362eba542aa818" kind="function"><name>GetForgedByAccountResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1abd9ee10cb0946e7d7669f869e99e98e9" kind="function"><name>GetForgedByAccountErrorResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a0e9443ce13ca928a4fe9f37d4d0e76ca" kind="function"><name>GetNextForgersResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1aaad944ecccbaba55d0a4727b52a0c799" kind="function"><name>GetTotalVoteArkResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a86cab329e017c4a1a5fd44731636e0aa" kind="function"><name>GetTotalVoteArkErrorResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a4d7215fcf04737a24c2fedebaa1900b6" kind="function"><name>Setup</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_fees" kind="class"><name>ArkNet::Utils::Fees</name>
+    <member refid="class_ark_net_1_1_utils_1_1_fees_1a6f4bdba9d878ff61b7ced1525350580a" kind="property"><name>Send</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_fees_1ab68f4c4a3da02595ddc932637e6b564d" kind="property"><name>Vote</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_fees_1a70f1b8fbc78cad0d6f1496e1b932ced4" kind="property"><name>Delegate</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_fees_1a86ba4ece0e2d296571c3d771322019c3" kind="property"><name>SecondSignature</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_fees_1a49c8b518155e68faacb1d28c45ad2585" kind="property"><name>MultiSignature</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer" kind="class"><name>ArkNet::Utils::ByteBuffer::HeapByteBuffer</name>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ac507029bf8eb6cdd3578a070f9b8715a" kind="property"><name>IsDirect</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a77ae8f81b888aaca329f2026cd1ffca2" kind="property"><name>IsReadOnly</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a68d4b6a58b70d78be8f877db9296ca35" kind="function"><name>HeapByteBuffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1adb849dd238bdc5195fb1bba3355dadb8" kind="function"><name>HeapByteBuffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ab22a1e3cf5542ab5e1bfa0615de8fca1" kind="function"><name>HeapByteBuffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a209b58fe286e4c73b6e381005967ea66" kind="function"><name>_get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1aebd37ee15874a620f53854aa112a6b46" kind="function"><name>_put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a6ccea545da5236f7737d648c496b282f" kind="function"><name>HeapByteBuffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1afddfb79f935e6a34ef80a14238e8fa34" kind="function"><name>Ix</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a202bc2534679c62e392709b6591209e6" kind="function"><name>Slice</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1abc80d7e98d5d97c0905d6c57f805fa42" kind="function"><name>Duplicate</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a761740bd0f73f9b3ae2d116854a4dcd5" kind="function"><name>AsReadOnlyBuffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a9c2f34defd381b2046277fa8213f05a3" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a7de50820551aea2ec5910e73e98a1693" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1af914d9112e47b296817603a43a470da6" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a1e6148db36823368dc8b928c0160cb32" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a7772b67dc9ebddfdf40aee09ec3d2915" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a9c5a8e7dee92f926a3d3eccbc19eb6cc" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ad6b086aa1b8bcf6e8278264107878e3d" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ac31ef874efca77df1af4f424ea4aaf24" kind="function"><name>Compact</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ae9132084f34385cd487db8c536300256" kind="function"><name>GetChar</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a1b9362a96b89717a5c250d579ad71739" kind="function"><name>GetChar</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a0b0ff3f7f81b551a1102793aa12a1a77" kind="function"><name>PutChar</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a5e87132f0de5c004565bfb2f92172294" kind="function"><name>PutChar</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1aabf984bef15f346c52cd3f3e4db5d2fd" kind="function"><name>GetInt16</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a369b3eaae18b9fe899046047faf31588" kind="function"><name>GetInt16</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a111c0bf41017621eb60909fe6a156073" kind="function"><name>PutInt16</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a168f7844b6bf5b9b0cbbc84a9830b2a2" kind="function"><name>PutInt16</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ae1c04eba80d49f785f5335ee239d1ae8" kind="function"><name>GetInt32</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a006c9c5341b13c2c020cc3fb2c080277" kind="function"><name>GetInt32</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a39fe5c1d2c7240009e8feab4906925f2" kind="function"><name>PutInt32</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a11cf68d32500056ff800c2425ac0aa11" kind="function"><name>PutInt32</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a962304b48e2d5f9956f34dce1ee47b5f" kind="function"><name>GetInt64</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1acd2f37b2441d6bb715feb631070196c6" kind="function"><name>GetInt64</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ae98e6912bbbf91cd6d877db75b90e152" kind="function"><name>PutInt64</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a03d34dc79c52af00b51719858e5d5a6c" kind="function"><name>PutInt64</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a9ecc598566950ae81673b068b43d5e84" kind="function"><name>AsInt64Buffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1aa2cb8fdf10005235f736e8523b44764d" kind="function"><name>GetSingle</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1aac847556d89fb130683cdc90fcb09ce8" kind="function"><name>GetSingle</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a3994428499aba6d84be906385a9e1039" kind="function"><name>PutSingle</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a87bce82333a0d6f8c9f575f35062f74e" kind="function"><name>PutSingle</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a7a7dde061a17f8a12cc4c4633e0d116f" kind="function"><name>GetDouble</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a8f67821a79a3c48c2caefaff2301d96f" kind="function"><name>GetDouble</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1aef523fb6e2b91091ed831667286872ae" kind="function"><name>PutDouble</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ab7584e41c7c932945d0a39676eeae6b9" kind="function"><name>PutDouble</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r" kind="class"><name>ArkNet::Utils::ByteBuffer::HeapByteBufferR</name>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a3dfe441262fdb5cf96c8c035b46a5477" kind="property"><name>IsReadOnly</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a46785900fb367c0ab3010ae703c967d2" kind="function"><name>HeapByteBufferR</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1aa45120660a62c35655562d011d0c5610" kind="function"><name>HeapByteBufferR</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a1b8f8de8e7d1d67dad6e5e04bdd4ce4a" kind="function"><name>HeapByteBufferR</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a5dceaab909676fa7c8cc39cef2a7a491" kind="function"><name>_get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a4d3fbb73d382961bfff13e35cca62b13" kind="function"><name>_put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a1d3d86d26b0fb86d16d369cf2609d0da" kind="function"><name>Slice</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1ad22148473778be8f656d1c13534a00eb" kind="function"><name>Duplicate</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a2b7fac9b227d3561a4b09f526637f3de" kind="function"><name>AsReadOnlyBuffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1addeafc118f1c1fa58b7391820e18f7a1" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a81e8a66ec13329297c0cd55cc31c8c40" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a65ea9a5b363ce6a2f0c86588aab81ae2" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a4cf0f026b87d2e3ec25585b8f254d700" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1aa19c5b05a46586d1c41899de9f2556cb" kind="function"><name>Compact</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1afeac5a1e73c4ba94585844b64b64625b" kind="function"><name>PutChar</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a6ac8c377b3c93d2b74f4b242dc3dbad5" kind="function"><name>PutChar</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a0faddbbc6a1539b99e535f18555640a7" kind="function"><name>PutInt16</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a5616923aebb484b2aab830112d0f7a02" kind="function"><name>PutInt16</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a07140acfdb534fb3e15cf62d6930ef8b" kind="function"><name>PutInt32</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a3dd05483896b644ef01d85f60074d8a8" kind="function"><name>PutInt32</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1abf250131ca25e996f4b434c03b7ac7e8" kind="function"><name>PutInt64</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a40f5e00f6cd4e7f811decc97d4d8c1e2" kind="function"><name>PutInt64</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a8b3803bf03deb1a5f90837ca5ba5eb06" kind="function"><name>AsInt64Buffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a7fdf7c1aaadb6117f66bc1e85736bb3c" kind="function"><name>PutSingle</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1af89d624ac60ac3387d63904db26c1c19" kind="function"><name>PutSingle</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1af8ff1469c2c413f84010f59e3315cb9d" kind="function"><name>PutDouble</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1aa77974229d4ef375034f95ae8e3b4ad7" kind="function"><name>PutDouble</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer" kind="class"><name>ArkNet::Utils::Int64Buffer::HeapInt64Buffer</name>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1a20d746fec2e6d3f958edfa31b9caee76" kind="property"><name>IsDirect</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1a5855dbd22e20107527e9ede83f56d690" kind="property"><name>IsReadOnly</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1aad00b87cd40c1f00716c01afd4750c71" kind="property"><name>Order</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1aed136962d503066c3d2de8ba9a3d1a5a" kind="function"><name>HeapInt64Buffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1a160a46395c4ac2ef68b55cf73fda5b64" kind="function"><name>HeapInt64Buffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1a86e0e10bf4a9421bbf825db70c1faf20" kind="function"><name>HeapInt64Buffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1aa822d420ffed17f1a88ffa31e0eddcde" kind="function"><name>Ix</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1aee4c1ff467bf6ccfecd656ec3c2d2113" kind="function"><name>Slice</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1aea332352f6b47e58045d2261edd4c7d1" kind="function"><name>Duplicate</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1a5349c7e4355dbd32b98a678a7782cbb1" kind="function"><name>AsReadOnlyBuffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1a6657a5927d3d34d03e28ab37fe01a122" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1a967171fc17d0e577c1dca9c3e3b1bea9" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1a40e3d2d86e6cf42db82c3d5c965833ad" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1acfc5a6dff853eb9ee08d513d55d53179" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1a173cdf9e7ccfcba3d32b12f84608b6b7" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1ab1010cd6f6e4c39d345ea8d275760e60" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1a1d8882ecf95a2862bca0cf2e40438864" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1afc4d901c47c068d2b5ac40402be48a70" kind="function"><name>Compact</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_int64_buffer" kind="class"><name>ArkNet::Utils::Int64Buffer</name>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a33d718b1efb97517505c9fbe6b9e4935" kind="variable"><name>hb</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a91351d62e2b0d4c870d2b2e6fa6b0e7b" kind="variable"><name>offset</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1af7248822493b469afdedce72342154ab" kind="variable"><name>isReadOnly</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1aaa16f11943c40b4660ef4c7247f96b68" kind="property"><name>HasArray</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1aa87796651c4d7a816e923c29bf6c7e7f" kind="property"><name>Array</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a93c9afe0c0f2af61bd39a5ad9b397d2e" kind="property"><name>ArrayOffset</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a34a62b938e89837db48cdb078e36aca4" kind="property"><name>Order</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a45b2217e620c5459214615f07c4821aa" kind="function"><name>Int64Buffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1affcf2f854067b58972ca83d49b9f2adc" kind="function"><name>Int64Buffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a1cd456e42b06a3480086c2c4de9700ee" kind="function"><name>Slice</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a87ca864a53e035a48e8f473ae295eab8" kind="function"><name>Duplicate</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a6fa59d61455ca21aa96133a7fac85b52" kind="function"><name>AsReadOnlyBuffer</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a5220433b917477117e787380ad964aaf" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a229ac6742c75fd55b9bf47af3c49f0f6" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a521e8c9e1e2976af6d42386416878e8c" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a450de4dddfc10fc5a8a99c1a2a5874fa" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a428e92f2d647cb62cdbb0a13341ecc50" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1ab76d31c0da11d35718ec92010e7989db" kind="function"><name>Get</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a365c62c6852d45873528edfa94700985" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a3f922f47aa1a8e7419dd4635d9ec9367" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a820effc597c6cd1ae4b8ab2cbf6fe6e3" kind="function"><name>Put</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1abc21adaa6d14a0945864ec03be6dcad5" kind="function"><name>Compact</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a96cde343dff3146aea47bdeee304f7aa" kind="function"><name>ToString</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a6a89022d9e44b8ffe67d7d0b80e9b06e" kind="function"><name>GetHashCode</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a5c6ca22b420443c47211d0f86b112cb0" kind="function"><name>Equals</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1af4eceaa9a6e2fbd182f4a49b15d93bc6" kind="function"><name>CompareTo</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1af579164c67cd4296a5fda226dcde142d" kind="function"><name>Allocate</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a5a141039508eacf9d820f003b89f549c" kind="function"><name>Wrap</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a92de68dfb791cd6c9c087ce944102077" kind="function"><name>Wrap</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a65a36c3ac0c262a946bca2543480828c" kind="function"><name>Equals</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1ab4c8755b31a45006648f414b07e7ca4c" kind="function"><name>Compare</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_invalid_mark_exception" kind="class"><name>ArkNet::Utils::InvalidMarkException</name>
+    <member refid="class_ark_net_1_1_utils_1_1_invalid_mark_exception_1a005565609f36230f6d223f886a985fab" kind="function"><name>InvalidMarkException</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_loader" kind="class"><name>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Loader</name>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_loader_1a5d755a7defa885ec1f65f48ae4d12859" kind="variable"><name>GET_STATUS</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_loader_1a8e0304d7ab7ee5c7c52c0395fffe7c37" kind="variable"><name>GET_SYNC_STATUS</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_loader_1ab2ca474d1820d2a9a507e9a23067b257" kind="variable"><name>GET_AUTO_CONFIGURE</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_loader_service" kind="class"><name>ArkNet::Service::LoaderService</name>
+    <member refid="class_ark_net_1_1_service_1_1_loader_service_1a790f633388559b0f5a91e3f5d581280e" kind="function"><name>GetStatus</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_loader_service_1aa78475ac5e2f1d1bac3dbfc1426c60d5" kind="function"><name>GetStatusAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_loader_service_1adab3c103726638a800738d9da1c313ac" kind="function"><name>GetSyncStatus</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_loader_service_1af3b79249f729d88b777ccc733200e306" kind="function"><name>GetSyncStatusAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_loader_service_1a7289052deb4779a3fef585b4431bfc61" kind="function"><name>GetAutoConfigureParameters</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_loader_service_1ab6acbc741ba4902f38a9d54172c7409b" kind="function"><name>GetAutoConfigureParametersAsync</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_async_tests" kind="class"><name>ArkNet::Service::Loader::Tests::LoaderServiceAsyncTests</name>
+    <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_async_tests_1af36f0dd430beeb7c33e3e4dc8eb5a201" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_async_tests_1a94f8bd05e50f141b77918c89506820cf" kind="function"><name>GetStatusAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_async_tests_1a05f3e5a0c69bf1c243223db36a701f58" kind="function"><name>GetSyncStatusAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_async_tests_1abe2c6b4c184ff81d43685dcaa264004a" kind="function"><name>GetAutoConfigureParametersAsyncTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests" kind="class"><name>ArkNet::Service::Loader::Tests::LoaderServiceTests</name>
+    <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_1ae27d9d3d44f23ab697ab1c5c06635db6" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_1a1b12171643b3e07f874228ee7ca9e658" kind="function"><name>GetStatusTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_1ae1c6c0ede6d4e6cc057a95c9235bcd54" kind="function"><name>GetSyncStatusTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_1a452edd4dc16195979a291b49bc2b62e2" kind="function"><name>GetAutoConfigureParametersTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base" kind="class"><name>ArkNet::Service::Loader::Tests::LoaderServiceTestsBase</name>
+    <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base_1aab6ce53d796f079da88b34c529a921a4" kind="function"><name>GetStatusResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base_1af2fb3621db2da6da2bad60ee0d1ba636" kind="function"><name>GetSyncStatusResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base_1a7b543a87560848fe2b8b0ef2b878183c" kind="function"><name>GetAutoConfigureParametersResultTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_core_1_1_network_api" kind="class"><name>ArkNet::Core::NetworkApi</name>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1abdb6f6af91ebcec2ee58e88bd3fd88db" kind="variable"><name>lazy</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1aad690f7fa288df0ce0e3747702c797db" kind="variable"><name>_random</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1a06c977a89f1a73cf47aba8ec08a411ab" kind="variable"><name>_peers</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1a7be8a1a0bb21668cb726dd81fa4f8696" kind="variable"><name>Instance</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1ab29f9b298a1adc29c4c140cecd87d814" kind="property"><name>Nethash</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1ae973a3db35846a5922620982f4707efc" kind="property"><name>Port</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1a569d72a983e1c69e8ab66aa2790557cb" kind="property"><name>Prefix</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1ab648ae6b2aaf4dd5d59c59e9391b79e8" kind="property"><name>Version</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1aaf9f42e13abbd03860bdb38f0d3595f6" kind="property"><name>BroadcastMax</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1ab966ad5c9f88a6d9b84d80fb6ba3d039" kind="property"><name>ActivePeer</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1a136e2ea9388e37823ba84fd73adc2692" kind="function"><name>NetworkApi</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1aa9da2ae1cbe4b92b87e28b2b71bcd0e3" kind="function"><name>SetPeerList</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1acd62fb7f7eda812839d5635a050b2886" kind="function"><name>StartPeerCleaningTask</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1ad6973bcf0a898808e9bc63a90fe196a3" kind="function"><name>WarmUp</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1ac4aa22683af29cf89deb02ef8af74517" kind="function"><name>GetRandomPeer</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_network_api_1ab9522659cb58217d8bc47f7930af63e9" kind="function"><name>SwitchPeer</name></member>
+  </compound>
+  <compound refid="class_ark_net_test_1_1_tests_1_1_network_tests" kind="class"><name>ArkNetTest::Tests::NetworkTests</name>
+    <member refid="class_ark_net_test_1_1_tests_1_1_network_tests_1a563bbc12c60c7cc9d1982741a4a4263d" kind="variable"><name>_address</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_network_tests_1a0889d091bf1edcf7043063465f95b83e" kind="variable"><name>_passPhrase</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_network_tests_1aa5f31de4ca9223c98b684697f8560b4d" kind="variable"><name>_noBalanceAddress</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_network_tests_1a05b405f07146da6f749d867ca72d7ccc" kind="variable"><name>_noBalanceAddressPassPhrase</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_network_tests_1ae03b7a45155b97242b5dfd2e1f59465f" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_network_tests_1ab39b0093262513366f166ab6a2f1f2d7" kind="function"><name>PostTransactionNoBalanceTest</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_network_tests_1a6ef6317561de858e3a7faa0337406578" kind="function"><name>TransactionSerializeTest</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_network_tests_1a451d560ad49925e8c85c9ff50b92a581" kind="function"><name>PostTransactionTransferTest</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_network_tests_1aba508af66ebcd256ca7c68a9aac54cd3" kind="function"><name>MultiplePostTransactionSuccessTest</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_network_tests_1a56fdc4c09152c29791bf7ddeb0c2d50f" kind="function"><name>MultiplePostTransactionAsyncSuccessTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_number" kind="class"><name>ArkNet::Utils::Number</name>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a786ba44068fb83342c42b9d732ffabe9" kind="variable"><name>MIN_RADIX</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a283f84ae13268d917e75573ed836f80a" kind="variable"><name>MAX_RADIX</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1adffc7b5a32efaa2e66365e80f17e0de8" kind="variable"><name>digits</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1ad592a215fbef7c7fd11395eae0be2b9d" kind="function"><name>ToString</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1af2c8b19278faa295a1790c1dd8b2fbd7" kind="function"><name>ToString</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a7bf6e1a8438403c600b26841417ebd2d" kind="function"><name>ToString</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a3e6f47086cdb9a44e375d7fca14323a4" kind="function"><name>Parse</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a00c54fa70bf5859c47cb056da73c9264" kind="function"><name>URShift</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a76ac03a80181835b33c74d64f0960b50" kind="function"><name>URShift</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1aa4bcc41dde4bb0238ef37213ce7018a3" kind="function"><name>ToInt64</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a52705a8240ae10d464f04c41c5ea37c3" kind="function"><name>NumberOfLeadingZeros</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a6adc5791f7ac0e405ab7bcdf41cb096d" kind="function"><name>NumberOfLeadingZeros</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1ab199f615b8831c1a8bd6b45e901b0bca" kind="function"><name>NumberOfTrailingZeros</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a7f50538d598812585b4c91e3e4eec267" kind="function"><name>NumberOfTrailingZeros</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a6bf4a56ba1f2a06c7fc8a5eca7a577b2" kind="function"><name>BitCount</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a9a893b0593fac07fed1e0f1012c8d28b" kind="function"><name>Signum</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a0d6bb82ff961985936a2a3c9fac88837" kind="function"><name>BitCount</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1ae5c6c9e57a1a9e51e6febc450aa68881" kind="function"><name>RotateLeft</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a2bf6da0ad675561ab8a57e0c6499b892" kind="function"><name>RotateRight</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1abb0139c77073ff3603677d35de8e00c6" kind="function"><name>ToBinaryString</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a54dff1601787249fa0d01b31440895ba" kind="function"><name>Int32BitsToSingle</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a76d0f77364fd38468c2fe45328a4a676" kind="function"><name>SingleToRawInt32Bits</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1ad15e58a4ec24ce02699e6201e30159ac" kind="function"><name>SingleToInt32Bits</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1af4ee4904218f8e18dc93ce24afbd6eb6" kind="function"><name>SingleToInt64Bits</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a555a50c55c7163fe58809b6816198673" kind="function"><name>DoubleToRawInt64Bits</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a3bdfdee9eee68aa33a7a4061b05be5e9" kind="function"><name>DoubleToInt64Bits</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1aa7ecbd1fc88f4a608b8efe745b842b26" kind="function"><name>FlipEndian</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a8979c907e16cccc38c9e8cb6675317ac" kind="function"><name>FlipEndian</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1aaef7742002f0678add15edf6f2db703e" kind="function"><name>FlipEndian</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1ac6ed3b11128926fc0561742da597a03d" kind="function"><name>FlipEndian</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a814ffdbe367d8a343b2ec962e68bae9d" kind="function"><name>FlipEndian</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1a63e7443c1d145c23ff8d0c18bd754389" kind="function"><name>FlipEndian</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_1ae7ced386afdd351169c1e495662f5086" kind="function"><name>IsNumber</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_number_format" kind="class"><name>ArkNet::Utils::NumberFormat</name>
+    <member refid="class_ark_net_1_1_utils_1_1_number_format_1a52e00e53084dbc0fdcd2fdf182a59ef6" kind="variable"><name>locale</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_format_1a14aa2f19d566b9b148f65f754f572b93" kind="function"><name>NumberFormat</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_format_1a78b94b0828f170784b0c393eb0515ec0" kind="function"><name>Format</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_format_1a620ca369ad3dbd031424663c96e7190e" kind="function"><name>Format</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_format_1a2c20374eca69437b359b3c7d6a4a70bb" kind="function"><name>Format</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_format_1aedbbc5e9d168cd8e54ac16230d4d4d9a" kind="function"><name>Parse</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_format_1af40308dd6ff9a3225f7e32cd6eee912d" kind="function"><name>ToString</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_number_format_1a27eb7b9fd1960c61c0daf8d28f647279" kind="function"><name>GetNumberFormat</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_peer" kind="class"><name>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Peer</name>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_peer_1a8247175a5ddeb990c667d506ba44a2da" kind="variable"><name>GET</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_peer_1aa605b8774fbddd3546dacf52e5e0c22e" kind="variable"><name>GET_ALL</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_peer_1a4ac96adbb838486a9b9ca7c5ebc7e426" kind="variable"><name>GET_STATUS</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_core_1_1_peer_api" kind="class"><name>ArkNet::Core::PeerApi</name>
+    <member refid="class_ark_net_1_1_core_1_1_peer_api_1a229eeaa63e218dcb0351e4f582986d57" kind="variable"><name>_httpClient</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_peer_api_1a6625083aa8cf65bef846b27b23c1591f" kind="variable"><name>_ip</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_peer_api_1a85117e057ac4855a2059cc6d28827f4b" kind="variable"><name>_port</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_peer_api_1a1fb1aa992f4fdf09f58794ba1face16d" kind="property"><name>HttpClient</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_peer_api_1afbdae5a6db888b3e5229611dbd036453" kind="property"><name>Ip</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_peer_api_1ae2a3267cdac5cec6cfb606df38a34c55" kind="property"><name>Port</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_peer_api_1a35600a981b989ea136cd5e6a36f978cd" kind="function"><name>PeerApi</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_peer_api_1a266b8190cf6b369bb8f5e2c5b2d229ed" kind="function"><name>MakeRequest</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_peer_api_1af23deac842c2b38e069fa2c309784d96" kind="function"><name>IsOnline</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_peer_api_1a9b449110adc626fb89556e9e3de6cded" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_peer_api_1abc5946ef6f8e1ad948f1b93601786343" kind="function"><name>MakeRequestInternal</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_peer_service" kind="class"><name>ArkNet::Service::PeerService</name>
+    <member refid="class_ark_net_1_1_service_1_1_peer_service_1a579f168a1586bd66e065ca1c3826cfdd" kind="function"><name>GetAll</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_service_1a95559e43ca45fc6786ebdbe7357e5684" kind="function"><name>GetAllAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_service_1a267e71987d77c125610d8afd79c91bde" kind="function"><name>GetPeer</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_service_1a95a30f8b0e5f43d6d39560ec8eeef087" kind="function"><name>GetPeerAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_service_1a4aafa6a0d687c80452091dd6e5640585" kind="function"><name>GetPeerStatus</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_service_1a96ccd12b1e54bc9aa25b953358a5dd73" kind="function"><name>GetPeerStatusAsync</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_async_tests" kind="class"><name>ArkNet::Service::Peer::Tests::PeerServiceAsyncTests</name>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_async_tests_1a672f6f605490ba41775c3893b4c77e71" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_async_tests_1a3142787d1f3717b79fd5d642d0aadb01" kind="function"><name>GetAllAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_async_tests_1a3d40d9adcb108b76afdc1c7a46bf6178" kind="function"><name>GetPeerAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_async_tests_1a51a049303155ca31d7ee9410f55f3fb2" kind="function"><name>GetPeerStatusAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_async_tests_1aa5b75ee55ae6520096f257f21d804f1d" kind="function"><name>SwitchPeerAsyncTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests" kind="class"><name>ArkNet::Service::Peer::Tests::PeerServiceTests</name>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_1a348324bc44446bcd6f2d4215d853d834" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_1a3a427125ac6f39d83517bc3e1ae86a0d" kind="function"><name>GetAllTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_1a2b26b722d11d060df3d7fe97a7c65321" kind="function"><name>GetPeerTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_1aa56cd9e01fade0cc19a4d1d9688b46ab" kind="function"><name>GetPeerStatusTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_1a50202016d66316f4c6b5505aee7e213b" kind="function"><name>SwitchPeerTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base" kind="class"><name>ArkNet::Service::Peer::Tests::PeerServiceTestsBase</name>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base_1a4197527194d8037f199e202baed0e64e" kind="variable"><name>_ip</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base_1ac1acc9e0b477597d4581d4efd065a5ff" kind="variable"><name>_port</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base_1a8d5488d8d8ff58bcd7cf348515e5eba3" kind="function"><name>InitializePeerServiceTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base_1a948ae326b05734212b14999a0369cedf" kind="function"><name>InitializePeerServiceAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base_1a1a009b3a33d7765434d023f32da7fefb" kind="function"><name>GetPeerResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base_1af35fa935377fec97a011a21021a12b97" kind="function"><name>GetAllResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base_1a49beff2b1a986ab9461dd7788eb9b3d9" kind="function"><name>GetPeerStatusResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base_1adb36dab220a1436ddf58bc17baedaaae" kind="function"><name>Setup</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_read_only_buffer_exception" kind="class"><name>ArkNet::Utils::ReadOnlyBufferException</name>
+    <member refid="class_ark_net_1_1_utils_1_1_read_only_buffer_exception_1ac49e393fed3b6cbdc96a6190a0c6868c" kind="function"><name>ReadOnlyBufferException</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_core_1_1_slot" kind="class"><name>ArkNet::Core::Slot</name>
+    <member refid="class_ark_net_1_1_core_1_1_slot_1a521421199f7d5f6694473896d414185e" kind="variable"><name>beginEpoch</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_slot_1a45580f1e98c85c60fbdf9c3f06cce91c" kind="function"><name>GetTime</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_tests_1_1_tests_base" kind="class"><name>ArkNet::Tests::TestsBase</name>
+    <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a5c7b7233192533ab308a82da929a903c" kind="variable"><name>USE_DEV_NET</name></member>
+    <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a21cca2e1a214cb2a375e5c8786ed0062" kind="function"><name>Initialize</name></member>
+    <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a0533a9e15637e7b44ba2ecb6f18a28c8" kind="function"><name>InitializeAsync</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction" kind="class"><name>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Transaction</name>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction_1ad80ed7113e1af0d3fd2e17f454823c18" kind="variable"><name>GET_ALL</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction_1a6f72831825138449db7eb569de35daa4" kind="variable"><name>GET_ALL_UNCONFIRMED</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction_1aae0bb12a9243aca5870542a1d0299200" kind="variable"><name>GET_BY_ID</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction_1ac8d2b5cbd9b816545de033c95e28f317" kind="variable"><name>GET_BY_ID_UNCONFIRMED</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction_1a8299621adf5c4d8193c54c163f865ca4" kind="variable"><name>POST</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_core_1_1_transaction_api" kind="class"><name>ArkNet::Core::TransactionApi</name>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a5423e7bfc545a1cf61b5ed7efea1a847" kind="variable"><name>asset</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1aed08b89eb32993cc6d2cf2467cca49ab" kind="property"><name>Timestamp</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a6114849d46e8664f0a255169872d2fbd" kind="property"><name>RecipientId</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1ae0200bbe96cbfb468dd297b176a8564b" kind="property"><name>Amount</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1aaf1b45ad2d22f0c3ee186b431335507a" kind="property"><name>Fee</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a99b6925014ccaabe004450da57396997" kind="property"><name>Type</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a4b08bcceccc9d352e308e05808d636ef" kind="property"><name>VendorField</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a6a013ccf6ffda967f8837c0d4cb98ddf" kind="property"><name>Signature</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a7f399888948391315907a9a2a0fe3dda" kind="property"><name>SignSignature</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1acc1b744736904d5c6f7c4c70569c2647" kind="property"><name>SenderPublicKey</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a1470dc85dfa8acc2c95fdd75de868aae" kind="property"><name>RequesterPublicKey</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a5c5b963cdfc7eada2c15755a2012963e" kind="property"><name>Id</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1ac48857ac8f9a985d5325faa1dbd9f10d" kind="property"><name>Username</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1aecfef8213ed8f73ac159531568576fb8" kind="property"><name>StrBytes</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1ad919f855f5f27f21ae7f05a7ab840ce0" kind="function"><name>TransactionApi</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a09f7c4967e397762673b1b8b8b2a3a42" kind="function"><name>TransactionApi</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1aae6640dcc6a7d2812dbb64856f234e66" kind="function"><name>TransactionApi</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1aceaf2ce7106e283244897a47441699af" kind="function"><name>ToBytes</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a7edd2443b11f16012113949d05c7298a" kind="function"><name>ToObject</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1ad2f13421e3fc83e539fb7d4955517ee4" kind="function"><name>Sign</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1afb8e23af39816a230df30aab269b0135" kind="function"><name>SecondSign</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a3872fbc70b26d64c4daa8db3ad5d4c7c" kind="function"><name>ToJson</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1aa3127a8135ed23f57a364ad94a64bb01" kind="function"><name>FromJson</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a5de122acd4e3c9b0a89d3a8f27ee6ada" kind="function"><name>CreateTransaction</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a827283aab48f09988568c838a85f8a92" kind="function"><name>CreateVote</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a4a1fe8975f7116e625b8fcf2a49635c0" kind="function"><name>CreateDelegate</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a312c55d03903d9ac0af2cf82c3cc9f1e" kind="function"><name>createSecondSignature</name></member>
+  </compound>
+  <compound refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests" kind="class"><name>ArkNetTest::Tests::TransactionCryptoTests</name>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1ae9375670df5b3c7e10ed61f069988659" kind="variable"><name>_passPhrase</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1aa626252860c7dd7cf81768f81c2dff8c" kind="variable"><name>_address</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1ad3dfd6b3c81021cd4553947ea8be9fa2" kind="variable"><name>_addressFromCrypto</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1ad85cd3965a6c4554b947920ba35b1d50" kind="variable"><name>_pubKey</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a201689fa89c14b017add3371202541a0" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1ac1cead610d2d8ed1ad136e83424c0acf" kind="function"><name>GetKeysTest</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1aef36500c42b8d0ac39709241db270764" kind="function"><name>GetAddressTest</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a40fe8f55475177d2b6f4e5ecd5761255" kind="function"><name>CreateTransactionPassPhraseVerifyTest</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a165380cfa680d13f0d122b2a90302d4d" kind="function"><name>JSONSerDeSerTest</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a65b52293777c7ad0680fcd016b8cc5a2" kind="function"><name>JSONSerDeSerNegTest</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a22a74aec9b0fc86d39049cb7c8186510" kind="function"><name>CreateTransaction2ndPassPhraseandVerifyTest</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a0c4e57caf340fefe8d10a4e785795a42" kind="function"><name>CreateTransactionAmountChangeTest</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a8eda943d28b11c3de7a2dde0cd9c065d" kind="function"><name>CreateTransactionFeeChangeTest</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a416aed04961f1811b437590c2c6fa02f" kind="function"><name>CreateTransactionRecepientChangeTest</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1ad8f346c9bbde451fc1bb215ba7ebbb2a" kind="function"><name>CreateDelegateTest</name></member>
+    <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a561fed01be93a1d364de583b8ad844cf" kind="function"><name>CreateVoteSignTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_transaction_service" kind="class"><name>ArkNet::Service::TransactionService</name>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a796c8c641457b5bebdb0d45618b868aa" kind="function"><name>GetAll</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a40fbfbc2d737b8452c597758f243b06c" kind="function"><name>GetAllAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1aa3308a34d3af058a8afacefa3e8ac987" kind="function"><name>GetTransactions</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1ac041ae9246bb79f569fd4d993c190858" kind="function"><name>GetTransactionsAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1acc059aef5771ad450a3cd54d9e7b4dbc" kind="function"><name>GetUnconfirmedAll</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a6c90218bdc1182d141cc1f6f89b72fb8" kind="function"><name>GetUnconfirmedAllAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a8252cbd23e3f2f161ad095f8b9bfbb6c" kind="function"><name>GetUnconfirmedTransactions</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a0b3d8a6e7ff77332965e3d68ecbdc881" kind="function"><name>GetUnconfirmedTransactionsAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1aca7c8a8d2ebef3141c030d00271407c3" kind="function"><name>GetById</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1acef2a21de4e3cebac10fa4419f2b83dd" kind="function"><name>GetByIdAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a239a45f291035dd2fb3093a80f9c520d" kind="function"><name>GetUnConfirmedById</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a6ff507350df9cff6aeb74c196910e2c4" kind="function"><name>GetUnConfirmedByIdAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a8d0856f19b70de2772c6ccecb8b63cd5" kind="function"><name>GetTransactions</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a44eb7ff4889aec6ee2529486b87194af" kind="function"><name>GetTransactionsAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a7aaea0ace2dc1d9522b279c432f6eeaa" kind="function"><name>GetUnconfirmedTransactions</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1ac86b82a00d3952deee6cedc219826e70" kind="function"><name>GetUnconfirmedTransactionsAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a275a582fb938f3a8bae4595b15a5483f" kind="function"><name>PostTransaction</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a8ce79f373c4d13c504d333862ee52ebd" kind="function"><name>PostTransactionAsync</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a1640e3515958b4f5731b5b4b0b66fe2c" kind="function"><name>MultipleBroadCast</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a0ca5fdcaac1114d6d1570d5421faff4f" kind="function"><name>MultipleBroadCastAsync</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests" kind="class"><name>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</name>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1ae44d9bf66258ae09bf20eefe315e1c6c" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1a838d3dc25db039186d8b09ccd58cbc4a" kind="function"><name>GetAllAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1a43fe07fe33c58a029230c40b5bae8ab8" kind="function"><name>GetGetTransactionsAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1a64ae53c742ac6643ba0dcf6912f433a4" kind="function"><name>GetByIdAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1a5697c60aaa942f22df26a1ec4c8de6e2" kind="function"><name>GetByIdErrorAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1afeb2dd2e585f634470ad39207444cc9c" kind="function"><name>GetUnConfirmedByIdAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1abf90c12a5a67381fa1419c8d2cbe0ecd" kind="function"><name>GetUnConfirmedByIdErrorAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1abeca1b620ba996cfe6a65ae41136d302" kind="function"><name>GetUnconfirmedAllAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1a07573d734e34987c5147307b38636aee" kind="function"><name>GetUnconfirmedTransactionsAsyncTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests" kind="class"><name>ArkNet::Service::Transaction::Tests::TransactionServiceTests</name>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_1ab4c06d04b8c1e2f7a9c85f01d8e63d89" kind="function"><name>Init</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_1ace235dff2e8e37e83e15573dca9d8f51" kind="function"><name>GetAllTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_1a1682740fc577118ba1e082abb63d2b5a" kind="function"><name>GetGetTransactionsTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_1a224234f78d5ad739bbf2bd56c9ed5cff" kind="function"><name>GetByIdTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_1a470ac6d340a28cdd706b7b38af8d276e" kind="function"><name>GetByIdErrorTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_1aa1f43757b0c9cd0195f793bccddb61f6" kind="function"><name>GetUnConfirmedByIdTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_1a5269a195db0b15f0de7af63806e3a3bb" kind="function"><name>GetUnConfirmedByIdErrorTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_1ab7419c73a0461a55edf31764f359e871" kind="function"><name>GetUnconfirmedAllTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_1a68451e25adc03390174fde2b8fa45388" kind="function"><name>GetUnconfirmedTransactionsTest</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base" kind="class"><name>ArkNet::Service::Transaction::Tests::TransactionServiceTestsBase</name>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1aac82cb121e4468ab03bb82572a6e4cc7" kind="variable"><name>_blockId</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1ad8eb83f5192fcd3502afe1e068f47dd1" kind="function"><name>InitializeTransactionServiceTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1adfa0067e1a24201434c8f11ef7b4703d" kind="function"><name>InitializeTransactionServiceAsyncTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1a119c7493b75417ebad91857e939711e0" kind="function"><name>GetAllResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1acc702b50098201060f5a43ea3f0b50e8" kind="function"><name>GetTransactionsResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1a4a952699c8710181f8b8a3db2101299b" kind="function"><name>GetByIdResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1abbc22cd4152ec2cf4b77db8b80e75c8d" kind="function"><name>GetByIdErrorResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1a65416065b203d6c105533565cb2d66e7" kind="function"><name>GetUnConfirmedByIdResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1abf6feb87f51be9fea9eee3387e4a62e9" kind="function"><name>GetUnConfirmedByIdErrorResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1a73d772b7392d5c12ddc8fe696f386749" kind="function"><name>GetUnconfirmedAllResultTest</name></member>
+    <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1a0da144d7308a2ceb29855db01f2faff2" kind="function"><name>Setup</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_utils_1_1_utils" kind="class"><name>ArkNet::Utils::Utils</name>
+    <member refid="class_ark_net_1_1_utils_1_1_utils_1a262df2347d43e36296f6fbd857c64375" kind="function"><name>DoubleDigest</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_utils_1abdf53028acee2d0938d5644954bd0de4" kind="function"><name>DoubleDigest</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_utils_1adbe413569896c5391cfa1cb1dd4dc12d" kind="function"><name>ArraysEqual</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_utils_1aabb3f972a5adc7761990778ffb1b2b7e" kind="function"><name>GetArrayHashCode</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_utils_1a09f038516ddd9712a85aee33c6ece26a" kind="function"><name>CopyTo</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_utils_1a3ad1cab771ef694a28d7b35752e38d4f" kind="function"><name>MutableCopy</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_utils_1a26e642f7809bc724d014b788bf51ab5f" kind="function"><name>decodeCompactBits</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_utils_1a21e3fcdff973a36afa45564c4de45ffc" kind="function"><name>isLessThanUnsigned</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_utils_1a2e1c146113dfa8492a3c5b9ae7006c3b" kind="function"><name>readUint32</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_utils_1ac0d1493b0bd892b369c7d94610cf5911" kind="function"><name>ToString&lt; T &gt;</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_utils_1ac342941a443262d960e77c8a4ff0847c" kind="function"><name>ReverseOrder</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_utils_1ad7aa09c52b77fa9251769a812b22f3ee" kind="function"><name>uint32ToByteArrayLE</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_utils_1a55d6472c85d9f8117d5ec3ce1b2dd8de" kind="function"><name>decodeMPI</name></member>
+    <member refid="class_ark_net_1_1_utils_1_1_utils_1a10d5d354433308308a828b2ad65f8747" kind="function"><name>readUint32BE</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_core_1_1_verification" kind="class"><name>ArkNet::Core::Verification</name>
+    <member refid="class_ark_net_1_1_core_1_1_verification_1a3dca07211f9e594b065d58b2f442a803" kind="variable"><name>errors</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_verification_1a37b5a747e0eb8193fff6ad7fa2565830" kind="function"><name>ToString</name></member>
+    <member refid="class_ark_net_1_1_core_1_1_verification_1a6454743eede69b5cc22a4d9c2bb027bb" kind="function"><name>AddError</name></member>
+  </compound>
+  <compound refid="class_ark_net_1_1_controller_1_1_wallet_controller" kind="class"><name>ArkNet::Controller::WalletController</name>
+    <member refid="class_ark_net_1_1_controller_1_1_wallet_controller_1af6930fe93a514d9aa39c2d01ddbb2083" kind="function"><name>WalletController</name></member>
+  </compound>
+  <compound refid="namespace_ark_net" kind="namespace"><name>ArkNet</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_attributes" kind="namespace"><name>ArkNet::Attributes</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_controller" kind="namespace"><name>ArkNet::Controller</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_controller_1_1_tests" kind="namespace"><name>ArkNet::Controller::Tests</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_core" kind="namespace"><name>ArkNet::Core</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_messages" kind="namespace"><name>ArkNet::Messages</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_messages_1_1_base_messages" kind="namespace"><name>ArkNet::Messages::BaseMessages</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_messages_1_1_block" kind="namespace"><name>ArkNet::Messages::Block</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_messages_1_1_transaction" kind="namespace"><name>ArkNet::Messages::Transaction</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_model" kind="namespace"><name>ArkNet::Model</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_model_1_1_account" kind="namespace"><name>ArkNet::Model::Account</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_model_1_1_base_models" kind="namespace"><name>ArkNet::Model::BaseModels</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_model_1_1_block" kind="namespace"><name>ArkNet::Model::Block</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_model_1_1_delegate" kind="namespace"><name>ArkNet::Model::Delegate</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_model_1_1_loader" kind="namespace"><name>ArkNet::Model::Loader</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_model_1_1_peer" kind="namespace"><name>ArkNet::Model::Peer</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_model_1_1_shared" kind="namespace"><name>ArkNet::Model::Shared</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_model_1_1_transactions" kind="namespace"><name>ArkNet::Model::Transactions</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_service" kind="namespace"><name>ArkNet::Service</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_service_1_1_account" kind="namespace"><name>ArkNet::Service::Account</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_service_1_1_account_1_1_tests" kind="namespace"><name>ArkNet::Service::Account::Tests</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_service_1_1_block" kind="namespace"><name>ArkNet::Service::Block</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_service_1_1_block_1_1_tests" kind="namespace"><name>ArkNet::Service::Block::Tests</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_service_1_1_delegate" kind="namespace"><name>ArkNet::Service::Delegate</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_service_1_1_delegate_1_1_tests" kind="namespace"><name>ArkNet::Service::Delegate::Tests</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_service_1_1_loader" kind="namespace"><name>ArkNet::Service::Loader</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_service_1_1_loader_1_1_tests" kind="namespace"><name>ArkNet::Service::Loader::Tests</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_service_1_1_peer" kind="namespace"><name>ArkNet::Service::Peer</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_service_1_1_peer_1_1_tests" kind="namespace"><name>ArkNet::Service::Peer::Tests</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_service_1_1_transaction" kind="namespace"><name>ArkNet::Service::Transaction</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_service_1_1_transaction_1_1_tests" kind="namespace"><name>ArkNet::Service::Transaction::Tests</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_tests" kind="namespace"><name>ArkNet::Tests</name>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_utils" kind="namespace"><name>ArkNet::Utils</name>
+    <member refid="namespace_ark_net_1_1_utils_1a7431c801d882165a29404618de37070a" kind="enum"><name>ByteOrder</name></member>
+    <member refid="namespace_ark_net_1_1_utils_1a7431c801d882165a29404618de37070aa3e3837ede152d846a1d1c6e4b5de4432" kind="enumvalue"><name>BIG_ENDIAN</name></member>
+    <member refid="namespace_ark_net_1_1_utils_1a7431c801d882165a29404618de37070aad2a887ba52940d91adca3b45876dcf7c" kind="enumvalue"><name>LITTLE_ENDIAN</name></member>
+  </compound>
+  <compound refid="namespace_ark_net_1_1_utils_1_1_enum" kind="namespace"><name>ArkNet::Utils::Enum</name>
+    <member refid="namespace_ark_net_1_1_utils_1_1_enum_1a237fba911a6ea2792767338e59e1daff" kind="enum"><name>NetworkType</name></member>
+    <member refid="namespace_ark_net_1_1_utils_1_1_enum_1a237fba911a6ea2792767338e59e1daffa0493fa8239a53fb8f5044fea401d3007" kind="enumvalue"><name>MainNet</name></member>
+    <member refid="namespace_ark_net_1_1_utils_1_1_enum_1a237fba911a6ea2792767338e59e1daffa0966bae42eadf524bc6e4766eb8e159d" kind="enumvalue"><name>DevNet</name></member>
+    <member refid="namespace_ark_net_1_1_utils_1_1_enum_1af73d9d333243cc2949a28b1d63aa77a3" kind="enum"><name>TransactionType</name></member>
+    <member refid="namespace_ark_net_1_1_utils_1_1_enum_1af73d9d333243cc2949a28b1d63aa77a3ad16ef1e597871dcb6529d432f643ac0a" kind="enumvalue"><name>SendArk</name></member>
+    <member refid="namespace_ark_net_1_1_utils_1_1_enum_1af73d9d333243cc2949a28b1d63aa77a3a2a1873050809eceba8a4812fd0383657" kind="enumvalue"><name>CreateDelegate</name></member>
+    <member refid="namespace_ark_net_1_1_utils_1_1_enum_1af73d9d333243cc2949a28b1d63aa77a3ae34852e8b2f0b798d5adebbf24cd06f1" kind="enumvalue"><name>VoteDelegate</name></member>
+    <member refid="namespace_ark_net_1_1_utils_1_1_enum_1af73d9d333243cc2949a28b1d63aa77a3a27c917e7cd8d47f58cc2b57204cfcf95" kind="enumvalue"><name>MultiSignature</name></member>
+  </compound>
+  <compound refid="namespace_ark_net_test" kind="namespace"><name>ArkNetTest</name>
+  </compound>
+  <compound refid="namespace_ark_net_test_1_1_tests" kind="namespace"><name>ArkNetTest::Tests</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_visual_studio_1_1_test_tools_1_1_unit_testing" kind="namespace"><name>Microsoft::VisualStudio::TestTools::UnitTesting</name>
+  </compound>
+  <compound refid="namespace_n_bitcoin" kind="namespace"><name>NBitcoin</name>
+  </compound>
+  <compound refid="namespace_n_bitcoin_1_1_crypto" kind="namespace"><name>NBitcoin::Crypto</name>
+  </compound>
+  <compound refid="namespace_n_bitcoin_1_1_data_encoders" kind="namespace"><name>NBitcoin::DataEncoders</name>
+  </compound>
+  <compound refid="namespace_newtonsoft_1_1_json" kind="namespace"><name>Newtonsoft::Json</name>
+  </compound>
+  <compound refid="namespace_newtonsoft_1_1_json_1_1_linq" kind="namespace"><name>Newtonsoft::Json::Linq</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections" kind="namespace"><name>System::Collections</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_diagnostics" kind="namespace"><name>System::Diagnostics</name>
+  </compound>
+  <compound refid="namespace_system_1_1_diagnostics_1_1_code_analysis" kind="namespace"><name>System::Diagnostics::CodeAnalysis</name>
+  </compound>
+  <compound refid="namespace_system_1_1_globalization" kind="namespace"><name>System::Globalization</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_net_1_1_http" kind="namespace"><name>System::Net::Http</name>
+  </compound>
+  <compound refid="namespace_system_1_1_numerics" kind="namespace"><name>System::Numerics</name>
+  </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_system_1_1_security_1_1_cryptography" kind="namespace"><name>System::Security::Cryptography</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
+  </compound>
+  <compound refid="namespace_system_1_1_xml_1_1_serialization" kind="namespace"><name>System::Xml::Serialization</name>
+  </compound>
+  <compound refid="namespace_validation" kind="namespace"><name>Validation</name>
+  </compound>
+  <compound refid="_ark_net_api_8cs" kind="file"><name>ArkNetApi.cs</name>
+  </compound>
+  <compound refid="_ark_query_param_attribute_8cs" kind="file"><name>ArkQueryParamAttribute.cs</name>
+  </compound>
+  <compound refid="_account_controller_8cs" kind="file"><name>AccountController.cs</name>
+  </compound>
+  <compound refid="_wallet_controller_8cs" kind="file"><name>WalletController.cs</name>
+  </compound>
+  <compound refid="_block_8cs" kind="file"><name>Block.cs</name>
+  </compound>
+  <compound refid="_crypto_8cs" kind="file"><name>Crypto.cs</name>
+  </compound>
+  <compound refid="_network_api_8cs" kind="file"><name>NetworkApi.cs</name>
+  </compound>
+  <compound refid="_peer_api_8cs" kind="file"><name>PeerApi.cs</name>
+  </compound>
+  <compound refid="_slot_8cs" kind="file"><name>Slot.cs</name>
+  </compound>
+  <compound refid="_transaction_api_8cs" kind="file"><name>TransactionApi.cs</name>
+  </compound>
+  <compound refid="_verification_8cs" kind="file"><name>Verification.cs</name>
+  </compound>
+  <compound refid="_ark_base_request_8cs" kind="file"><name>ArkBaseRequest.cs</name>
+  </compound>
+  <compound refid="_ark_block_request_8cs" kind="file"><name>ArkBlockRequest.cs</name>
+  </compound>
+  <compound refid="_ark_transaction_request_8cs" kind="file"><name>ArkTransactionRequest.cs</name>
+  </compound>
+  <compound refid="_ark_unconfirmed_transaction_request_8cs" kind="file"><name>ArkUnconfirmedTransactionRequest.cs</name>
+  </compound>
+  <compound refid="_ark_account_8cs" kind="file"><name>ArkAccount.cs</name>
+  </compound>
+  <compound refid="_ark_account_balance_8cs" kind="file"><name>ArkAccountBalance.cs</name>
+  </compound>
+  <compound refid="_ark_account_response_8cs" kind="file"><name>ArkAccountResponse.cs</name>
+  </compound>
+  <compound refid="_ark_account_top_8cs" kind="file"><name>ArkAccountTop.cs</name>
+  </compound>
+  <compound refid="_ark_account_top_list_8cs" kind="file"><name>ArkAccountTopList.cs</name>
+  </compound>
+  <compound refid="_ark_response_base_8cs" kind="file"><name>ArkResponseBase.cs</name>
+  </compound>
+  <compound refid="_ark_block_8cs" kind="file"><name>ArkBlock.cs</name>
+  </compound>
+  <compound refid="_ark_block_chain_status_8cs" kind="file"><name>ArkBlockChainStatus.cs</name>
+  </compound>
+  <compound refid="_ark_block_list_8cs" kind="file"><name>ArkBlockList.cs</name>
+  </compound>
+  <compound refid="_ark_block_response_8cs" kind="file"><name>ArkBlockResponse.cs</name>
+  </compound>
+  <compound refid="_ark_delegate_8cs" kind="file"><name>ArkDelegate.cs</name>
+  </compound>
+  <compound refid="_ark_delegate_forged_balance_8cs" kind="file"><name>ArkDelegateForgedBalance.cs</name>
+  </compound>
+  <compound refid="_ark_delegate_list_8cs" kind="file"><name>ArkDelegateList.cs</name>
+  </compound>
+  <compound refid="_ark_delegate_next_forgers_8cs" kind="file"><name>ArkDelegateNextForgers.cs</name>
+  </compound>
+  <compound refid="_ark_delegate_response_8cs" kind="file"><name>ArkDelegateResponse.cs</name>
+  </compound>
+  <compound refid="_ark_delegate_voter_8cs" kind="file"><name>ArkDelegateVoter.cs</name>
+  </compound>
+  <compound refid="_ark_delegate_voter_list_8cs" kind="file"><name>ArkDelegateVoterList.cs</name>
+  </compound>
+  <compound refid="_ark_loader_network_8cs" kind="file"><name>ArkLoaderNetwork.cs</name>
+  </compound>
+  <compound refid="_ark_loader_network_response_8cs" kind="file"><name>ArkLoaderNetworkResponse.cs</name>
+  </compound>
+  <compound refid="_ark_loader_status_8cs" kind="file"><name>ArkLoaderStatus.cs</name>
+  </compound>
+  <compound refid="_ark_loader_status_sync_8cs" kind="file"><name>ArkLoaderStatusSync.cs</name>
+  </compound>
+  <compound refid="_ark_peer_8cs" kind="file"><name>ArkPeer.cs</name>
+  </compound>
+  <compound refid="_ark_peer_header_8cs" kind="file"><name>ArkPeerHeader.cs</name>
+  </compound>
+  <compound refid="_ark_peer_list_8cs" kind="file"><name>ArkPeerList.cs</name>
+  </compound>
+  <compound refid="_ark_peer_response_8cs" kind="file"><name>ArkPeerResponse.cs</name>
+  </compound>
+  <compound refid="_ark_peer_status_8cs" kind="file"><name>ArkPeerStatus.cs</name>
+  </compound>
+  <compound refid="_ark_asset_8cs" kind="file"><name>ArkAsset.cs</name>
+  </compound>
+  <compound refid="_ark_transaction_8cs" kind="file"><name>ArkTransaction.cs</name>
+  </compound>
+  <compound refid="_ark_transaction_list_8cs" kind="file"><name>ArkTransactionList.cs</name>
+  </compound>
+  <compound refid="_ark_transaction_post_response_8cs" kind="file"><name>ArkTransactionPostResponse.cs</name>
+  </compound>
+  <compound refid="_ark_transaction_response_8cs" kind="file"><name>ArkTransactionResponse.cs</name>
+  </compound>
+  <compound refid="_account_service_8cs" kind="file"><name>AccountService.cs</name>
+  </compound>
+  <compound refid="_block_service_8cs" kind="file"><name>BlockService.cs</name>
+  </compound>
+  <compound refid="_delegate_service_8cs" kind="file"><name>DelegateService.cs</name>
+  </compound>
+  <compound refid="_loader_service_8cs" kind="file"><name>LoaderService.cs</name>
+  </compound>
+  <compound refid="_peer_service_8cs" kind="file"><name>PeerService.cs</name>
+  </compound>
+  <compound refid="_transaction_service_8cs" kind="file"><name>TransactionService.cs</name>
+  </compound>
+  <compound refid="_ark_settings_8cs" kind="file"><name>ArkSettings.cs</name>
+  </compound>
+  <compound refid="_ark_static_strings_8cs" kind="file"><name>ArkStaticStrings.cs</name>
+  </compound>
+  <compound refid="_ark_utils_8cs" kind="file"><name>ArkUtils.cs</name>
+  </compound>
+  <compound refid="_base58_8cs" kind="file"><name>Base58.cs</name>
+  </compound>
+  <compound refid="_b_c_a_versioned_checksummed_bytes_8cs" kind="file"><name>BCAVersionedChecksummedBytes.cs</name>
+  </compound>
+  <compound refid="_b_c_utils_8cs" kind="file"><name>BCUtils.cs</name>
+  </compound>
+  <compound refid="_buffer_8cs" kind="file"><name>Buffer.cs</name>
+  </compound>
+  <compound refid="_buffer_exceptions_8cs" kind="file"><name>BufferExceptions.cs</name>
+  </compound>
+  <compound refid="_byte_buffer_8cs" kind="file"><name>ByteBuffer.cs</name>
+  </compound>
+  <compound refid="_byte_order_8cs" kind="file"><name>ByteOrder.cs</name>
+  </compound>
+  <compound refid="_network_type_8cs" kind="file"><name>NetworkType.cs</name>
+  </compound>
+  <compound refid="_transaction_type_8cs" kind="file"><name>TransactionType.cs</name>
+  </compound>
+  <compound refid="_long_buffer_8cs" kind="file"><name>LongBuffer.cs</name>
+  </compound>
+  <compound refid="_number_8cs" kind="file"><name>Number.cs</name>
+  </compound>
+  <compound refid="_number_format_8cs" kind="file"><name>NumberFormat.cs</name>
+  </compound>
+  <compound refid="_ark_net_api_tests_8cs" kind="file"><name>ArkNetApiTests.cs</name>
+  </compound>
+  <compound refid="_account_controller_tests_8cs" kind="file"><name>AccountControllerTests.cs</name>
+  </compound>
+  <compound refid="_account_service_async_tests_8cs" kind="file"><name>AccountServiceAsyncTests.cs</name>
+  </compound>
+  <compound refid="_account_service_tests_8cs" kind="file"><name>AccountServiceTests.cs</name>
+  </compound>
+  <compound refid="_account_service_tests_base_8cs" kind="file"><name>AccountServiceTestsBase.cs</name>
+  </compound>
+  <compound refid="_block_service_async_tests_8cs" kind="file"><name>BlockServiceAsyncTests.cs</name>
+  </compound>
+  <compound refid="_block_service_tests_8cs" kind="file"><name>BlockServiceTests.cs</name>
+  </compound>
+  <compound refid="_block_service_tests_base_8cs" kind="file"><name>BlockServiceTestsBase.cs</name>
+  </compound>
+  <compound refid="_delegate_service_async_tests_8cs" kind="file"><name>DelegateServiceAsyncTests.cs</name>
+  </compound>
+  <compound refid="_delegate_service_tests_8cs" kind="file"><name>DelegateServiceTests.cs</name>
+  </compound>
+  <compound refid="_delegate_service_tests_base_8cs" kind="file"><name>DelegateServiceTestsBase.cs</name>
+  </compound>
+  <compound refid="_loader_service_async_tests_8cs" kind="file"><name>LoaderServiceAsyncTests.cs</name>
+  </compound>
+  <compound refid="_loader_service_tests_8cs" kind="file"><name>LoaderServiceTests.cs</name>
+  </compound>
+  <compound refid="_loader_service_tests_base_8cs" kind="file"><name>LoaderServiceTestsBase.cs</name>
+  </compound>
+  <compound refid="_peer_service_async_tests_8cs" kind="file"><name>PeerServiceAsyncTests.cs</name>
+  </compound>
+  <compound refid="_peer_service_tests_8cs" kind="file"><name>PeerServiceTests.cs</name>
+  </compound>
+  <compound refid="_peer_service_tests_base_8cs" kind="file"><name>PeerServiceTestsBase.cs</name>
+  </compound>
+  <compound refid="_transaction_service_async_tests_8cs" kind="file"><name>TransactionServiceAsyncTests.cs</name>
+  </compound>
+  <compound refid="_transaction_service_tests_8cs" kind="file"><name>TransactionServiceTests.cs</name>
+  </compound>
+  <compound refid="_transaction_service_tests_base_8cs" kind="file"><name>TransactionServiceTestsBase.cs</name>
+  </compound>
+  <compound refid="_network_tests_8cs" kind="file"><name>NetworkTests.cs</name>
+  </compound>
+  <compound refid="_tests_base_8cs" kind="file"><name>TestsBase.cs</name>
+  </compound>
+  <compound refid="_transaction_crypto_tests_8cs" kind="file"><name>TransactionCryptoTests.cs</name>
+  </compound>
+  <compound refid="dir_7c34bec821ffa1b5e029d470d4073b1e" kind="dir"><name>C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account</name>
+  </compound>
+  <compound refid="dir_90d5bc0eda169def236ea6be0bedb57c" kind="dir"><name>Model/Account</name>
+  </compound>
+  <compound refid="dir_36b519e82ab624086ef16dcbfe9afa36" kind="dir"><name>C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests</name>
+  </compound>
+  <compound refid="dir_1af1494ce542b4966c3bb177b372fe23" kind="dir"><name>Attributes</name>
+  </compound>
+  <compound refid="dir_3313819d6ef2400e90f168cfd280721e" kind="dir"><name>Messages/BaseMessages</name>
+  </compound>
+  <compound refid="dir_dc61db7afa84988ae246516e53d2cc94" kind="dir"><name>Model/BaseModels</name>
+  </compound>
+  <compound refid="dir_40e48d0c6bf59146c5dc69514f8f9913" kind="dir"><name>C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block</name>
+  </compound>
+  <compound refid="dir_faea6c348d3daeaf182ab6bd5804c620" kind="dir"><name>Model/Block</name>
+  </compound>
+  <compound refid="dir_b9e0f920777344dae752ab630363fd3b" kind="dir"><name>Messages/Block</name>
+  </compound>
+  <compound refid="dir_022835b2525f9858d5214ffafc71b9ee" kind="dir"><name>C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller</name>
+  </compound>
+  <compound refid="dir_f030e7986bd504167ba68a7cd1202537" kind="dir"><name>Controller</name>
+  </compound>
+  <compound refid="dir_d1ee7e382e1a2134a71d27f4f0e1f25f" kind="dir"><name>Core</name>
+  </compound>
+  <compound refid="dir_8a375255c90f8d34737d90464ede7f11" kind="dir"><name>C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate</name>
+  </compound>
+  <compound refid="dir_fc38845c61d6a0071dbe0bc0302f4a8e" kind="dir"><name>Model/Delegate</name>
+  </compound>
+  <compound refid="dir_96bbbade6f3bf12badb91b98c4a76c96" kind="dir"><name>Utils/Enum</name>
+  </compound>
+  <compound refid="dir_6e16e30bff3285e35c20d79b8ab5cb80" kind="dir"><name>C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader</name>
+  </compound>
+  <compound refid="dir_60fa406629d961f1c4c10b5c3fc1f953" kind="dir"><name>Model/Loader</name>
+  </compound>
+  <compound refid="dir_f23342b4ad58f9b149e2437b5583fe00" kind="dir"><name>Messages</name>
+  </compound>
+  <compound refid="dir_891460385d756e08849d7e04fc536503" kind="dir"><name>Model</name>
+  </compound>
+  <compound refid="dir_f3387add2c557f60dc191cceadfaf640" kind="dir"><name>C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Peer</name>
+  </compound>
+  <compound refid="dir_879ae604652c1396b8909d9da3643e56" kind="dir"><name>Model/Peer</name>
+  </compound>
+  <compound refid="dir_b12d713ddc410c138e8f609e1f848e21" kind="dir"><name>C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service</name>
+  </compound>
+  <compound refid="dir_80fddcc7b6ae78d7401d4e12665d9681" kind="dir"><name>Service</name>
+  </compound>
+  <compound refid="dir_c8114a2c068c7fb28e92d18860f24918" kind="dir"><name>Model/Shared</name>
+  </compound>
+  <compound refid="dir_851da3db51f5e0bc631b8b0a201d5524" kind="dir"><name>C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests</name>
+  </compound>
+  <compound refid="dir_e55d25df02e4114d9c6a85dc911b6a37" kind="dir"><name>C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction</name>
+  </compound>
+  <compound refid="dir_94417c1f9fccdc3c16f3bde0d7c0750d" kind="dir"><name>Messages/Transaction</name>
+  </compound>
+  <compound refid="dir_4e6b9821c8322aa23eab87d31de5bbec" kind="dir"><name>Model/Transactions</name>
+  </compound>
+  <compound refid="dir_7a35580e059a752d76399eae55d9fcc9" kind="dir"><name>Utils</name>
+  </compound>
+</doxygenindex>

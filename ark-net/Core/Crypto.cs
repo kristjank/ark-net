@@ -27,12 +27,12 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Security.Cryptography;
 using System.Text;
 using ArkNet.Utils;
 using NBitcoin;
 using NBitcoin.Crypto;
 using NBitcoin.DataEncoders;
+using SshNet.Security.Cryptography;
 
 namespace ArkNet.Core
 {
@@ -42,14 +42,14 @@ namespace ArkNet.Core
     public class Crypto
 	{
 	    /// <summary>
-	    /// Initialize the Sha 256.
+	    /// Initialize the <see cref="SHA256"/>
 	    /// </summary>
-	    private static readonly SHA256 Sha256 = SHA256.Create();
+	    private static readonly System.Security.Cryptography.SHA256 Sha256 = System.Security.Cryptography.SHA256.Create();
 
 	    /// <summary>
 	    /// Initialize The ripemd 160.
 	    /// </summary>
-	    private static readonly SshNet.Security.Cryptography.RIPEMD160 Ripemd160 = new SshNet.Security.Cryptography.RIPEMD160();
+	    private static readonly RIPEMD160 Ripemd160 = new RIPEMD160();
 
 	    /// <summary>
 	    /// Sign Transactions.

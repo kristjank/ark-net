@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_4e6b9821c8322aa23eab87d31de5bbec" kind="dir">
+    <compoundname>Model/Transactions</compoundname>
+    <innerfile refid="_ark_transaction_8cs">ArkTransaction.cs</innerfile>
+    <innerfile refid="_ark_transaction_list_8cs">ArkTransactionList.cs</innerfile>
+    <innerfile refid="_ark_transaction_post_response_8cs">ArkTransactionPostResponse.cs</innerfile>
+    <innerfile refid="_ark_transaction_response_8cs">ArkTransactionResponse.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Transactions/"/>
+  </compounddef>
+</doxygen>

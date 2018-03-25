@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests" kind="class" prot="public">
+    <compoundname>ArkNet::Service::Loader::Tests::LoaderServiceTests</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base" prot="public" virt="non-virtual">ArkNet.Service.Loader.Tests.LoaderServiceTestsBase</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_1ae27d9d3d44f23ab697ab1c5c06635db6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Loader.Tests.LoaderServiceTests.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTests.cs" line="16" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTests.cs" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_1a1b12171643b3e07f874228ee7ca9e658" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Loader.Tests.LoaderServiceTests.GetStatusTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetStatusTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTests.cs" line="22" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTests.cs" bodystart="22" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_1ae1c6c0ede6d4e6cc057a95c9235bcd54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Loader.Tests.LoaderServiceTests.GetSyncStatusTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetSyncStatusTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTests.cs" line="30" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTests.cs" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_1a452edd4dc16195979a291b49bc2b62e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Loader.Tests.LoaderServiceTests.GetAutoConfigureParametersTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetAutoConfigureParametersTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTests.cs" line="38" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTests.cs" bodystart="38" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="324">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="322">
+        <label>ArkNet.Service.Loader.Tests.LoaderServiceTests</label>
+        <link refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests"/>
+        <childnode refid="323" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="323">
+        <label>LoaderServiceTestsBase</label>
+        <link refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base"/>
+        <childnode refid="324" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="327">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="325">
+        <label>ArkNet.Service.Loader.Tests.LoaderServiceTests</label>
+        <link refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests"/>
+        <childnode refid="326" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="326">
+        <label>LoaderServiceTestsBase</label>
+        <link refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base"/>
+        <childnode refid="327" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTests.cs" line="14" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTests.cs" bodystart="13" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base_1a7b543a87560848fe2b8b0ef2b878183c" prot="public" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTests</scope><name>GetAutoConfigureParametersResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_1a452edd4dc16195979a291b49bc2b62e2" prot="public" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTests</scope><name>GetAutoConfigureParametersTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base_1aab6ce53d796f079da88b34c529a921a4" prot="public" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTests</scope><name>GetStatusResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_1a1b12171643b3e07f874228ee7ca9e658" prot="public" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTests</scope><name>GetStatusTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base_1af2fb3621db2da6da2bad60ee0d1ba636" prot="public" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTests</scope><name>GetSyncStatusResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_1ae1c6c0ede6d4e6cc057a95c9235bcd54" prot="public" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTests</scope><name>GetSyncStatusTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_1ae27d9d3d44f23ab697ab1c5c06635db6" prot="public" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTests</scope><name>Init</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a21cca2e1a214cb2a375e5c8786ed0062" prot="public" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTests</scope><name>Initialize</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a0533a9e15637e7b44ba2ecb6f18a28c8" prot="public" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTests</scope><name>InitializeAsync</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a5c7b7233192533ab308a82da929a903c" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTests</scope><name>USE_DEV_NET</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

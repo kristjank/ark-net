@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_ark_net_1_1_model_1_1_account" kind="namespace">
+    <compoundname>ArkNet::Model::Account</compoundname>
+    <innerclass refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account" prot="public">ArkNet::Model::Account::ArkAccount</innerclass>
+    <innerclass refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_balance" prot="public">ArkNet::Model::Account::ArkAccountBalance</innerclass>
+    <innerclass refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_response" prot="public">ArkNet::Model::Account::ArkAccountResponse</innerclass>
+    <innerclass refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_top" prot="public">ArkNet::Model::Account::ArkAccountTop</innerclass>
+    <innerclass refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account_top_list" prot="public">ArkNet::Model::Account::ArkAccountTopList</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Account/ArkAccount.cs" line="2" column="1"/>
+  </compounddef>
+</doxygen>

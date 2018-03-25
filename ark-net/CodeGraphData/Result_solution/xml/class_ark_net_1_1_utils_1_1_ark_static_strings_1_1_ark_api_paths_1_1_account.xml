@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_account" kind="class" prot="public">
+    <compoundname>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Account</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_account_1a1f5f7938669332ea7223bf8361778cdd" prot="public" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string ArkNet.Utils.ArkStaticStrings.ArkApiPaths.Account.GET_ACCOUNT</definition>
+        <argsstring></argsstring>
+        <name>GET_ACCOUNT</name>
+        <initializer>= &quot;/api/accounts?address={0}&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" line="9" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_account_1a9aa2b13cbd83bc638d0c932bf3f6cbbe" prot="public" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string ArkNet.Utils.ArkStaticStrings.ArkApiPaths.Account.GET_BALANCE</definition>
+        <argsstring></argsstring>
+        <name>GET_BALANCE</name>
+        <initializer>= &quot;/api/accounts/getBalance?address={0}&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" line="10" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_account_1a90ddd7a45c4e7c8ea7c24f2305f31426" prot="public" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string ArkNet.Utils.ArkStaticStrings.ArkApiPaths.Account.GET_DELEGATES</definition>
+        <argsstring></argsstring>
+        <name>GET_DELEGATES</name>
+        <initializer>= &quot;/api/accounts/delegates?address={0}&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" line="11" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_account_1a6a3a2cd590884e67013894e90ab30162" prot="public" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string ArkNet.Utils.ArkStaticStrings.ArkApiPaths.Account.GET_TOP_ACCOUNTS</definition>
+        <argsstring></argsstring>
+        <name>GET_TOP_ACCOUNTS</name>
+        <initializer>= &quot;/api/accounts/top?limit={0}&amp;offset={1}&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" line="12" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" line="8" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" bodystart="7" bodyend="13"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_account_1a1f5f7938669332ea7223bf8361778cdd" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Account</scope><name>GET_ACCOUNT</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_account_1a9aa2b13cbd83bc638d0c932bf3f6cbbe" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Account</scope><name>GET_BALANCE</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_account_1a90ddd7a45c4e7c8ea7c24f2305f31426" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Account</scope><name>GET_DELEGATES</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_account_1a6a3a2cd590884e67013894e90ab30162" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Account</scope><name>GET_TOP_ACCOUNTS</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

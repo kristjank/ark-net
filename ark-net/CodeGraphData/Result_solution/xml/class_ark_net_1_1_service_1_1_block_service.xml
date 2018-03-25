@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_service_1_1_block_service" kind="class" prot="public">
+    <compoundname>ArkNet::Service::BlockService</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1a502c8d188c8402df45482169220c5e78" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_response" kindref="compound">ArkBlockResponse</ref></type>
+        <definition>static ArkBlockResponse ArkNet.Service.BlockService.GetById</definition>
+        <argsstring>(string id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="14" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1a0a7304118482c3772eb95e7cd587bc30" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_response" kindref="compound">ArkBlockResponse</ref> &gt;</type>
+        <definition>static async Task&lt;ArkBlockResponse&gt; ArkNet.Service.BlockService.GetByIdAsync</definition>
+        <argsstring>(string id)</argsstring>
+        <name>GetByIdAsync</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="18" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="18" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1ab9bd402b520b19df697497d5c2717876" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_list" kindref="compound">ArkBlockList</ref></type>
+        <definition>static ArkBlockList ArkNet.Service.BlockService.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="25" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1a0fb2d64e635b8b983f57915eae90a637" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_list" kindref="compound">ArkBlockList</ref> &gt;</type>
+        <definition>static async Task&lt;ArkBlockList&gt; ArkNet.Service.BlockService.GetAllAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllAsync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="30" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1a9e1bb94e36b3e7b361f99185aa20b6f7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_list" kindref="compound">ArkBlockList</ref></type>
+        <definition>static ArkBlockList ArkNet.Service.BlockService.GetBlocks</definition>
+        <argsstring>(ArkBlockRequest req)</argsstring>
+        <name>GetBlocks</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request" kindref="compound">ArkBlockRequest</ref></type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="37" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1af7fe47e90deb0da4b2ec03cf1a1b7a3b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_list" kindref="compound">ArkBlockList</ref> &gt;</type>
+        <definition>static async Task&lt;ArkBlockList&gt; ArkNet.Service.BlockService.GetBlocksAsync</definition>
+        <argsstring>(ArkBlockRequest req)</argsstring>
+        <name>GetBlocksAsync</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request" kindref="compound">ArkBlockRequest</ref></type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="42" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="42" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1a7e89d5372208dfa7412506fe583ebcfd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DateTime</type>
+        <definition>static DateTime ArkNet.Service.BlockService.GetEpoch</definition>
+        <argsstring>()</argsstring>
+        <name>GetEpoch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="49" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1a9555d3225d682a06868785f577366b04" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; DateTime &gt;</type>
+        <definition>static async Task&lt;DateTime&gt; ArkNet.Service.BlockService.GetEpochAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetEpochAsync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="54" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="54" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1a61085e1334dec8bd3908754393a56276" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long ArkNet.Service.BlockService.GetHeight</definition>
+        <argsstring>()</argsstring>
+        <name>GetHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="62" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1ac9c7db526790c6074bf8852d6c3fb402" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; long &gt;</type>
+        <definition>static async Task&lt;long&gt; ArkNet.Service.BlockService.GetHeightAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetHeightAsync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="67" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="67" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1a666b6e798de1cd63a927d57a41276567" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string ArkNet.Service.BlockService.GetNetHash</definition>
+        <argsstring>()</argsstring>
+        <name>GetNetHash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="75" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1a6f865de7f9adbd24d172cc6a72ca815e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; string &gt;</type>
+        <definition>static async Task&lt;string&gt; ArkNet.Service.BlockService.GetNetHashAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetNetHashAsync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="80" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="80" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1a766160296a04c888e3513947a12ac078" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_utils_1_1_fees" kindref="compound">Fees</ref></type>
+        <definition>static Fees ArkNet.Service.BlockService.GetFees</definition>
+        <argsstring>()</argsstring>
+        <name>GetFees</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="88" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1aee2de444e570d3606184bff6c495787d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_utils_1_1_fees" kindref="compound">Fees</ref> &gt;</type>
+        <definition>static async Task&lt;Fees&gt; ArkNet.Service.BlockService.GetFeesAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetFeesAsync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="93" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="93" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1a3bdd8d9a4bf7673eaf2381f60a3db945" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Service.BlockService.GetMilestone</definition>
+        <argsstring>()</argsstring>
+        <name>GetMilestone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="101" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1ac0d99ee6005a78480d35291a6694e66a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; int &gt;</type>
+        <definition>static async Task&lt;int&gt; ArkNet.Service.BlockService.GetMilestoneAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetMilestoneAsync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="106" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="106" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1a6ad7536721c15c165f3dea18bbc351d3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Service.BlockService.GetReward</definition>
+        <argsstring>()</argsstring>
+        <name>GetReward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="114" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1adcb0b540e9a237a1ba10081d497498f7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; int &gt;</type>
+        <definition>static async Task&lt;int&gt; ArkNet.Service.BlockService.GetRewardAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetRewardAsync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="119" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="119" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1ab12b8475546a23323b767b663f8c054d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long ArkNet.Service.BlockService.GetSupply</definition>
+        <argsstring>()</argsstring>
+        <name>GetSupply</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="127" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1ab3de2c6b92271fbd0eb35752560590b9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; long &gt;</type>
+        <definition>static async Task&lt;long&gt; ArkNet.Service.BlockService.GetSupplyAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetSupplyAsync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="132" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="132" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1a70bb0459b42a110980d67243ad6e9749" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status" kindref="compound">ArkBlockChainStatus</ref></type>
+        <definition>static ArkBlockChainStatus ArkNet.Service.BlockService.GetStatus</definition>
+        <argsstring>()</argsstring>
+        <name>GetStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="140" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="140" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_block_service_1a1d2423631b6d2d2c7e0a1ed78b9251c4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status" kindref="compound">ArkBlockChainStatus</ref> &gt;</type>
+        <definition>static async Task&lt;ArkBlockChainStatus&gt; ArkNet.Service.BlockService.GetStatusAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetStatusAsync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="145" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="145" bodyend="150"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" line="13" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/BlockService.cs" bodystart="12" bodyend="151"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1ab9bd402b520b19df697497d5c2717876" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetAll</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1a0fb2d64e635b8b983f57915eae90a637" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetAllAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1a9e1bb94e36b3e7b361f99185aa20b6f7" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetBlocks</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1af7fe47e90deb0da4b2ec03cf1a1b7a3b" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetBlocksAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1a502c8d188c8402df45482169220c5e78" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetById</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1a0a7304118482c3772eb95e7cd587bc30" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetByIdAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1a7e89d5372208dfa7412506fe583ebcfd" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetEpoch</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1a9555d3225d682a06868785f577366b04" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetEpochAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1a766160296a04c888e3513947a12ac078" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetFees</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1aee2de444e570d3606184bff6c495787d" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetFeesAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1a61085e1334dec8bd3908754393a56276" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetHeight</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1ac9c7db526790c6074bf8852d6c3fb402" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetHeightAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1a3bdd8d9a4bf7673eaf2381f60a3db945" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetMilestone</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1ac0d99ee6005a78480d35291a6694e66a" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetMilestoneAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1a666b6e798de1cd63a927d57a41276567" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetNetHash</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1a6f865de7f9adbd24d172cc6a72ca815e" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetNetHashAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1a6ad7536721c15c165f3dea18bbc351d3" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetReward</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1adcb0b540e9a237a1ba10081d497498f7" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetRewardAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1a70bb0459b42a110980d67243ad6e9749" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetStatus</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1a1d2423631b6d2d2c7e0a1ed78b9251c4" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetStatusAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1ab12b8475546a23323b767b663f8c054d" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetSupply</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_block_service_1ab3de2c6b92271fbd0eb35752560590b9" prot="public" virt="non-virtual"><scope>ArkNet::Service::BlockService</scope><name>GetSupplyAsync</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

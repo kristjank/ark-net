@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_service_1_1_delegate_service" kind="class" prot="public">
+    <compoundname>ArkNet::Service::DelegateService</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1a7298aeefb8d5ef208e82568acddec3ae" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_list" kindref="compound">ArkDelegateList</ref></type>
+        <definition>static ArkDelegateList ArkNet.Service.DelegateService.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="14" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1a45947d49035e8d3744ed9ff4f2b93831" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_list" kindref="compound">ArkDelegateList</ref> &gt;</type>
+        <definition>static async Task&lt;ArkDelegateList&gt; ArkNet.Service.DelegateService.GetAllAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllAsync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="19" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="19" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1af418f911957f155fd2011b2fae082ee5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_list" kindref="compound">ArkDelegateList</ref></type>
+        <definition>static ArkDelegateList ArkNet.Service.DelegateService.GetDelegates</definition>
+        <argsstring>(ArkBaseRequest req)</argsstring>
+        <name>GetDelegates</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request" kindref="compound">ArkBaseRequest</ref></type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="26" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1a6a594f72d421fee490f6500e608e40f6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_list" kindref="compound">ArkDelegateList</ref> &gt;</type>
+        <definition>static async Task&lt;ArkDelegateList&gt; ArkNet.Service.DelegateService.GetDelegatesAsync</definition>
+        <argsstring>(ArkBaseRequest req)</argsstring>
+        <name>GetDelegatesAsync</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request" kindref="compound">ArkBaseRequest</ref></type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="31" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="31" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1a858ec1ca9d39fd9c4a69419f25e092fe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response" kindref="compound">ArkDelegateResponse</ref></type>
+        <definition>static ArkDelegateResponse ArkNet.Service.DelegateService.GetByUsername</definition>
+        <argsstring>(string username)</argsstring>
+        <name>GetByUsername</name>
+        <param>
+          <type>string</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="38" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1ae365565c9c7af7fbc4563e8e966e6471" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response" kindref="compound">ArkDelegateResponse</ref> &gt;</type>
+        <definition>static async Task&lt;ArkDelegateResponse&gt; ArkNet.Service.DelegateService.GetByUsernameAsync</definition>
+        <argsstring>(string username)</argsstring>
+        <name>GetByUsernameAsync</name>
+        <param>
+          <type>string</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="43" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="43" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1aa6e39798ae78a9ea14df607017437235" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response" kindref="compound">ArkDelegateResponse</ref></type>
+        <definition>static ArkDelegateResponse ArkNet.Service.DelegateService.GetByPubKey</definition>
+        <argsstring>(string pubKey)</argsstring>
+        <name>GetByPubKey</name>
+        <param>
+          <type>string</type>
+          <declname>pubKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="50" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1ace380f537c6c9347a7d97bd8632d9328" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response" kindref="compound">ArkDelegateResponse</ref> &gt;</type>
+        <definition>static async Task&lt;ArkDelegateResponse&gt; ArkNet.Service.DelegateService.GetByPubKeyAsync</definition>
+        <argsstring>(string pubKey)</argsstring>
+        <name>GetByPubKeyAsync</name>
+        <param>
+          <type>string</type>
+          <declname>pubKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="55" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="55" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1a5e186bb8c3cafa33a79833e553eedfad" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_list" kindref="compound">ArkDelegateVoterList</ref></type>
+        <definition>static ArkDelegateVoterList ArkNet.Service.DelegateService.GetVoters</definition>
+        <argsstring>(string pubKey)</argsstring>
+        <name>GetVoters</name>
+        <param>
+          <type>string</type>
+          <declname>pubKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="62" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1a1ad57224da43a52de6324e446876d1da" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_list" kindref="compound">ArkDelegateVoterList</ref> &gt;</type>
+        <definition>static async Task&lt;ArkDelegateVoterList&gt; ArkNet.Service.DelegateService.GetVotersAsync</definition>
+        <argsstring>(string pubKey)</argsstring>
+        <name>GetVotersAsync</name>
+        <param>
+          <type>string</type>
+          <declname>pubKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="67" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="67" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1ab1b61dd2d79e1f71971cf6fa27387b36" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long ArkNet.Service.DelegateService.GetFee</definition>
+        <argsstring>()</argsstring>
+        <name>GetFee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="74" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1a55b76b35f0e67252123f2265080ca8bb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; long &gt;</type>
+        <definition>static async Task&lt;long&gt; ArkNet.Service.DelegateService.GetFeeAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetFeeAsync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="79" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="79" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1a0aa87d6b73cae056aa63e40cdeec3483" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_forged_balance" kindref="compound">ArkDelegateForgedBalance</ref></type>
+        <definition>static ArkDelegateForgedBalance ArkNet.Service.DelegateService.GetForgedByAccount</definition>
+        <argsstring>(string pubKey)</argsstring>
+        <name>GetForgedByAccount</name>
+        <param>
+          <type>string</type>
+          <declname>pubKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="87" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1a0e1936820d6ec4774538e1a2b1ad57ea" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_forged_balance" kindref="compound">ArkDelegateForgedBalance</ref> &gt;</type>
+        <definition>static async Task&lt;ArkDelegateForgedBalance&gt; ArkNet.Service.DelegateService.GetForgedByAccountAsync</definition>
+        <argsstring>(string pubKey)</argsstring>
+        <name>GetForgedByAccountAsync</name>
+        <param>
+          <type>string</type>
+          <declname>pubKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="92" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="92" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1ab1272e6b022d445fa4fddffc2d4be06e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_next_forgers" kindref="compound">ArkDelegateNextForgers</ref></type>
+        <definition>static ArkDelegateNextForgers ArkNet.Service.DelegateService.GetNextForgers</definition>
+        <argsstring>()</argsstring>
+        <name>GetNextForgers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="99" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1a76bcbe06c5f4e1f727d60ac635e4825b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_next_forgers" kindref="compound">ArkDelegateNextForgers</ref> &gt;</type>
+        <definition>static async Task&lt;ArkDelegateNextForgers&gt; ArkNet.Service.DelegateService.GetNextForgersAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetNextForgersAsync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="104" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="104" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1aa5b682691dddf887d3bd20546cc11ad9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long ArkNet.Service.DelegateService.GetTotalVoteArk</definition>
+        <argsstring>(string pubKey)</argsstring>
+        <name>GetTotalVoteArk</name>
+        <param>
+          <type>string</type>
+          <declname>pubKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="111" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="111" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_service_1a4696de00967d7160fd3aa48c49a9c7e4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; long &gt;</type>
+        <definition>static async Task&lt;long&gt; ArkNet.Service.DelegateService.GetTotalVoteArkAsync</definition>
+        <argsstring>(string pubKey)</argsstring>
+        <name>GetTotalVoteArkAsync</name>
+        <param>
+          <type>string</type>
+          <declname>pubKey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="123" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="123" bodyend="133"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" line="13" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/DelegateService.cs" bodystart="12" bodyend="134"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a7298aeefb8d5ef208e82568acddec3ae" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetAll</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a45947d49035e8d3744ed9ff4f2b93831" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetAllAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1aa6e39798ae78a9ea14df607017437235" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetByPubKey</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1ace380f537c6c9347a7d97bd8632d9328" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetByPubKeyAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a858ec1ca9d39fd9c4a69419f25e092fe" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetByUsername</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1ae365565c9c7af7fbc4563e8e966e6471" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetByUsernameAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1af418f911957f155fd2011b2fae082ee5" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetDelegates</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a6a594f72d421fee490f6500e608e40f6" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetDelegatesAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1ab1b61dd2d79e1f71971cf6fa27387b36" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetFee</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a55b76b35f0e67252123f2265080ca8bb" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetFeeAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a0aa87d6b73cae056aa63e40cdeec3483" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetForgedByAccount</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a0e1936820d6ec4774538e1a2b1ad57ea" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetForgedByAccountAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1ab1272e6b022d445fa4fddffc2d4be06e" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetNextForgers</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a76bcbe06c5f4e1f727d60ac635e4825b" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetNextForgersAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1aa5b682691dddf887d3bd20546cc11ad9" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetTotalVoteArk</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a4696de00967d7160fd3aa48c49a9c7e4" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetTotalVoteArkAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a5e186bb8c3cafa33a79833e553eedfad" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetVoters</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_service_1a1ad57224da43a52de6324e446876d1da" prot="public" virt="non-virtual"><scope>ArkNet::Service::DelegateService</scope><name>GetVotersAsync</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base" kind="class" prot="public">
+    <compoundname>ArkNet::Service::Loader::Tests::LoaderServiceTestsBase</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_tests_1_1_tests_base" prot="public" virt="non-virtual">ArkNet.Tests.TestsBase</basecompoundref>
+    <derivedcompoundref refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_async_tests" prot="public" virt="non-virtual">ArkNet.Service.Loader.Tests.LoaderServiceAsyncTests</derivedcompoundref>
+    <derivedcompoundref refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests" prot="public" virt="non-virtual">ArkNet.Service.Loader.Tests.LoaderServiceTests</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base_1aab6ce53d796f079da88b34c529a921a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Loader.Tests.LoaderServiceTestsBase.GetStatusResultTest</definition>
+        <argsstring>(ArkLoaderStatus status)</argsstring>
+        <name>GetStatusResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_status" kindref="compound">ArkLoaderStatus</ref></type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTestsBase.cs" line="20" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTestsBase.cs" bodystart="20" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base_1af2fb3621db2da6da2bad60ee0d1ba636" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Loader.Tests.LoaderServiceTestsBase.GetSyncStatusResultTest</definition>
+        <argsstring>(ArkLoaderStatusSync syncStatus)</argsstring>
+        <name>GetSyncStatusResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_status_sync" kindref="compound">ArkLoaderStatusSync</ref></type>
+          <declname>syncStatus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTestsBase.cs" line="27" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTestsBase.cs" bodystart="27" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base_1a7b543a87560848fe2b8b0ef2b878183c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Loader.Tests.LoaderServiceTestsBase.GetAutoConfigureParametersResultTest</definition>
+        <argsstring>(ArkLoaderNetworkResponse parameters)</argsstring>
+        <name>GetAutoConfigureParametersResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_loader_1_1_ark_loader_network_response" kindref="compound">ArkLoaderNetworkResponse</ref></type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTestsBase.cs" line="34" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTestsBase.cs" bodystart="34" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="328">
+        <label>ArkNet.Service.Loader.Tests.LoaderServiceTestsBase</label>
+        <link refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base"/>
+        <childnode refid="329" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="329">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="331">
+        <label>ArkNet.Service.Loader.Tests.LoaderServiceTests</label>
+        <link refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests"/>
+        <childnode refid="328" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="330">
+        <label>ArkNet.Service.Loader.Tests.LoaderServiceAsyncTests</label>
+        <link refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_async_tests"/>
+        <childnode refid="328" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="332">
+        <label>ArkNet.Service.Loader.Tests.LoaderServiceTestsBase</label>
+        <link refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base"/>
+        <childnode refid="333" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="333">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTestsBase.cs" line="19" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceTestsBase.cs" bodystart="18" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base_1a7b543a87560848fe2b8b0ef2b878183c" prot="public" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTestsBase</scope><name>GetAutoConfigureParametersResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base_1aab6ce53d796f079da88b34c529a921a4" prot="public" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTestsBase</scope><name>GetStatusResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base_1af2fb3621db2da6da2bad60ee0d1ba636" prot="public" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTestsBase</scope><name>GetSyncStatusResultTest</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a21cca2e1a214cb2a375e5c8786ed0062" prot="public" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTestsBase</scope><name>Initialize</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a0533a9e15637e7b44ba2ecb6f18a28c8" prot="public" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTestsBase</scope><name>InitializeAsync</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a5c7b7233192533ab308a82da929a903c" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Loader::Tests::LoaderServiceTestsBase</scope><name>USE_DEV_NET</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

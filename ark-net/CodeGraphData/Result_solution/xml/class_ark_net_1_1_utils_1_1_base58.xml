@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_utils_1_1_base58" kind="class" prot="public">
+    <compoundname>ArkNet::Utils::Base58</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_base58_1a28968d0c7adea9d7e5206553998db784" prot="private" static="yes" mutable="no">
+        <type>readonly char[]</type>
+        <definition>readonly char [] ArkNet.Utils.Base58.Alphabet</definition>
+        <argsstring></argsstring>
+        <name>Alphabet</name>
+        <initializer>= &quot;123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz&quot;.ToCharArray()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" line="23" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_base58_1adb0b7b2f6a797345c9d2760b305c4bb8" prot="private" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int ArkNet.Utils.Base58.Base58Length</definition>
+        <argsstring></argsstring>
+        <name>Base58Length</name>
+        <initializer>= Alphabet.Length</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" line="24" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_base58_1a6d8bb6f08bc16cdcf286add6cf7e5cf1" prot="private" static="yes" mutable="no">
+        <type>readonly int[]</type>
+        <definition>readonly int [] ArkNet.Utils.Base58.INDEXES</definition>
+        <argsstring></argsstring>
+        <name>INDEXES</name>
+        <initializer>= new int[128]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" line="25" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_base58_1afa316a5aa57b9d6b2baed44899edd93d" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int ArkNet.Utils.Base58.Base256Length</definition>
+        <argsstring></argsstring>
+        <name>Base256Length</name>
+        <initializer>= 256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" line="26" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_base58_1ab00c5cb97859b676ab588105a8db4cea" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>static</type>
+        <definition>static ArkNet.Utils.Base58.Base58</definition>
+        <argsstring>()</argsstring>
+        <name>Base58</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" line="28" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" bodystart="28" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_base58_1a42a42ca9782254bac4b1ea3109ef3a63" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Utils.Base58.LeadingZerosCount</definition>
+        <argsstring>(IReadOnlyList&lt; byte &gt; buffer)</argsstring>
+        <name>LeadingZerosCount</name>
+        <param>
+          <type>IReadOnlyList&lt; byte &gt;</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" line="174" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" bodystart="174" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_base58_1a099d3c1196b1146de8ba4c6676ddd731" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte</type>
+        <definition>static byte ArkNet.Utils.Base58.divmod58</definition>
+        <argsstring>(byte[] number, int startAt)</argsstring>
+        <name>divmod58</name>
+        <param>
+          <type>byte[]</type>
+          <declname>number</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>startAt</declname>
+        </param>
+        <briefdescription>
+<para>number -&gt; number / 58, returns number % 58 </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" line="186" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" bodystart="186" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_base58_1a28e8a74005ac1b7626e7063067e916a6" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte</type>
+        <definition>static byte ArkNet.Utils.Base58.divmod256</definition>
+        <argsstring>(byte[] number58, int startAt)</argsstring>
+        <name>divmod256</name>
+        <param>
+          <type>byte[]</type>
+          <declname>number58</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>startAt</declname>
+        </param>
+        <briefdescription>
+<para>number -&gt; number / 256, returns number % 256 </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" line="207" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" bodystart="207" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_base58_1ac78b981bf8da0787662cb402814da26e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte[]</type>
+        <definition>static byte [] ArkNet.Utils.Base58.copyOfRange</definition>
+        <argsstring>(byte[] buffer, int start, int end)</argsstring>
+        <name>copyOfRange</name>
+        <param>
+          <type>byte[]</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" line="225" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" bodystart="225" bodyend="230"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_base58_1aadc84b13d9b62011d9dd78a155e9ac85" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string ArkNet.Utils.Base58.Encode</definition>
+        <argsstring>(IReadOnlyList&lt; byte &gt; input)</argsstring>
+        <name>Encode</name>
+        <param>
+          <type>IReadOnlyList&lt; byte &gt;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Encodes an arbitrary buffer into a base58 encoded string. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" line="44" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" bodystart="44" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_base58_1ae415db97d131f11eaad5dcc18bad1e69" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte[]</type>
+        <definition>static byte [] ArkNet.Utils.Base58.Decode</definition>
+        <argsstring>(string input)</argsstring>
+        <name>Decode</name>
+        <param>
+          <type>string</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Decodes a base58 encoded string into its original buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" line="84" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" bodystart="84" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_base58_1a277b6e4685bffaae14b2066da7213072" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte[]</type>
+        <definition>static byte [] ArkNet.Utils.Base58.DecodeChecked</definition>
+        <argsstring>(string input)</argsstring>
+        <name>DecodeChecked</name>
+        <param>
+          <type>string</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Uses the checksum in the last 4 bytes of the decoded data to verify the rest are correct. The checksum is removed from the returned data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>AddressFormatException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the input is not base 58 or the checksum does not validate.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" line="153" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" bodystart="153" bodyend="172"/>
+        <references refid="class_ark_net_1_1_utils_1_1_utils_1adbe413569896c5391cfa1cb1dd4dc12d" compoundref="_b_c_utils_8cs" startline="38" endline="57">ArkNet.Utils.Utils.ArraysEqual</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A custom form of base58 is used to encode BitCoin addresses. Note that this is not the same base58 as used by Flickr, which you may see reference to around the internet. </para>    </briefdescription>
+    <detaileddescription>
+<para>Satoshi says: why base-58 instead of standard base-64 encoding?</para><para><itemizedlist>
+<listitem>
+<para>Don&apos;t want 0OIl characters that look the same in some fonts and could be used to create visually identical looking account numbers. </para></listitem>
+<listitem>
+<para>A string with non-alphanumeric characters is not as easily accepted as an account number. </para></listitem>
+<listitem>
+<para>E-mail usually won&apos;t line-break if there&apos;s no punctuation to break at. </para></listitem>
+<listitem>
+<para>Doubleclicking selects the whole number as one word if it&apos;s all alphanumeric. </para></listitem>
+</itemizedlist>
+</para>    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" line="22" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Base58.cs" bodystart="21" bodyend="231"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_utils_1_1_base58_1a28968d0c7adea9d7e5206553998db784" prot="private" virt="non-virtual"><scope>ArkNet::Utils::Base58</scope><name>Alphabet</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_base58_1afa316a5aa57b9d6b2baed44899edd93d" prot="private" virt="non-virtual"><scope>ArkNet::Utils::Base58</scope><name>Base256Length</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_base58_1ab00c5cb97859b676ab588105a8db4cea" prot="private" virt="non-virtual"><scope>ArkNet::Utils::Base58</scope><name>Base58</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_base58_1adb0b7b2f6a797345c9d2760b305c4bb8" prot="private" virt="non-virtual"><scope>ArkNet::Utils::Base58</scope><name>Base58Length</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_base58_1ac78b981bf8da0787662cb402814da26e" prot="private" virt="non-virtual"><scope>ArkNet::Utils::Base58</scope><name>copyOfRange</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_base58_1ae415db97d131f11eaad5dcc18bad1e69" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Base58</scope><name>Decode</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_base58_1a277b6e4685bffaae14b2066da7213072" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Base58</scope><name>DecodeChecked</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_base58_1a28e8a74005ac1b7626e7063067e916a6" prot="private" virt="non-virtual"><scope>ArkNet::Utils::Base58</scope><name>divmod256</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_base58_1a099d3c1196b1146de8ba4c6676ddd731" prot="private" virt="non-virtual"><scope>ArkNet::Utils::Base58</scope><name>divmod58</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_base58_1aadc84b13d9b62011d9dd78a155e9ac85" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Base58</scope><name>Encode</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_base58_1a6d8bb6f08bc16cdcf286add6cf7e5cf1" prot="private" virt="non-virtual"><scope>ArkNet::Utils::Base58</scope><name>INDEXES</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_base58_1a42a42ca9782254bac4b1ea3109ef3a63" prot="private" virt="non-virtual"><scope>ArkNet::Utils::Base58</scope><name>LeadingZerosCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

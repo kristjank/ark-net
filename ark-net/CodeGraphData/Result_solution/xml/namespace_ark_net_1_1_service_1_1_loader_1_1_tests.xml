@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_ark_net_1_1_service_1_1_loader_1_1_tests" kind="namespace">
+    <compoundname>ArkNet::Service::Loader::Tests</compoundname>
+    <innerclass refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_async_tests" prot="public">ArkNet::Service::Loader::Tests::LoaderServiceAsyncTests</innerclass>
+    <innerclass refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests" prot="public">ArkNet::Service::Loader::Tests::LoaderServiceTests</innerclass>
+    <innerclass refid="class_ark_net_1_1_service_1_1_loader_1_1_tests_1_1_loader_service_tests_base" prot="public">ArkNet::Service::Loader::Tests::LoaderServiceTestsBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Loader/LoaderServiceAsyncTests.cs" line="11" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_ark_net_test_1_1_tests" kind="namespace">
+    <compoundname>ArkNetTest::Tests</compoundname>
+    <innerclass refid="class_ark_net_test_1_1_tests_1_1_network_tests" prot="public">ArkNetTest::Tests::NetworkTests</innerclass>
+    <innerclass refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests" prot="public">ArkNetTest::Tests::TransactionCryptoTests</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/NetworkTests.cs" line="13" column="1"/>
+  </compounddef>
+</doxygen>

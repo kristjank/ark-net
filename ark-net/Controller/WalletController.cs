@@ -39,7 +39,7 @@ namespace ArkNet.Controller
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WalletController"/> class. 
-        /// Throws a notimplemented error.
+        /// Throws a <see cref="NotImplementedException"/> error.
         /// </summary>
         public WalletController()
         {

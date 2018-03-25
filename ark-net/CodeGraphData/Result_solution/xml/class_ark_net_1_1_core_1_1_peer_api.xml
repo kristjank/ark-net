@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_core_1_1_peer_api" kind="class" prot="public">
+    <compoundname>ArkNet::Core::PeerApi</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_core_1_1_peer_api_1a229eeaa63e218dcb0351e4f582986d57" prot="private" static="no" mutable="no">
+        <type><ref refid="class_ark_net_1_1_core_1_1_peer_api_1a1fb1aa992f4fdf09f58794ba1face16d" kindref="member">HttpClient</ref></type>
+        <definition>HttpClient ArkNet.Core.PeerApi._httpClient</definition>
+        <argsstring></argsstring>
+        <name>_httpClient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" line="12" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_core_1_1_peer_api_1a6625083aa8cf65bef846b27b23c1591f" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ArkNet.Core.PeerApi._ip</definition>
+        <argsstring></argsstring>
+        <name>_ip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" line="13" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_core_1_1_peer_api_1a85117e057ac4855a2059cc6d28827f4b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ArkNet.Core.PeerApi._port</definition>
+        <argsstring></argsstring>
+        <name>_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" line="14" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_peer_api_1a1fb1aa992f4fdf09f58794ba1face16d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>HttpClient</type>
+        <definition>HttpClient ArkNet.Core.PeerApi.HttpClient</definition>
+        <argsstring></argsstring>
+        <name>HttpClient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" line="16" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_peer_api_1afbdae5a6db888b3e5229611dbd036453" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string ArkNet.Core.PeerApi.Ip</definition>
+        <argsstring></argsstring>
+        <name>Ip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" line="17" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_ark_net_api_1a7b32e4e7efaefd8dfbeb5dfc5c9b3401" compoundref="_ark_net_api_8cs" startline="150" endline="173">ArkNet.ArkNetApi.SetNetworkSettings</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_network_api_1aa9da2ae1cbe4b92b87e28b2b71bcd0e3" compoundref="_network_api_8cs" startline="97" endline="121">ArkNet.Core.NetworkApi.SetPeerList</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_peer_api_1ae2a3267cdac5cec6cfb606df38a34c55" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int ArkNet.Core.PeerApi.Port</definition>
+        <argsstring></argsstring>
+        <name>Port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" line="18" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_ark_net_api_1a7b32e4e7efaefd8dfbeb5dfc5c9b3401" compoundref="_ark_net_api_8cs" startline="150" endline="173">ArkNet.ArkNetApi.SetNetworkSettings</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_peer_api_1a35600a981b989ea136cd5e6a36f978cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Core.PeerApi.PeerApi</definition>
+        <argsstring>(string ip, int port)</argsstring>
+        <name>PeerApi</name>
+        <param>
+          <type>string</type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" line="20" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" bodystart="20" bodyend="38"/>
+        <references refid="class_ark_net_1_1_ark_net_api_1a3907e8daca5d8dadbff95b00f66a38bb" compoundref="_ark_net_api_8cs" startline="99">ArkNet.ArkNetApi.Instance</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1af38dad201d9d7d72e8f0750eb7ef492f" compoundref="_ark_net_api_8cs" startline="107">ArkNet.ArkNetApi.NetworkSettings</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_peer_api_1a266b8190cf6b369bb8f5e2c5b2d229ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; string &gt;</type>
+        <definition>async Task&lt;string&gt; ArkNet.Core.PeerApi.MakeRequest</definition>
+        <argsstring>(string method, string path, string body=&quot;&quot;)</argsstring>
+        <name>MakeRequest</name>
+        <param>
+          <type>string</type>
+          <declname>method</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>body</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" line="46" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_peer_api_1af23deac842c2b38e069fa2c309784d96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; bool &gt;</type>
+        <definition>async Task&lt;bool&gt; ArkNet.Core.PeerApi.IsOnline</definition>
+        <argsstring>()</argsstring>
+        <name>IsOnline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" line="91" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" bodystart="91" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_peer_api_1a9b449110adc626fb89556e9e3de6cded" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Core.PeerApi.Init</definition>
+        <argsstring>(string ip, int port)</argsstring>
+        <name>Init</name>
+        <param>
+          <type>string</type>
+          <declname>ip</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" line="40" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_peer_api_1abc5946ef6f8e1ad948f1b93601786343" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; string &gt;</type>
+        <definition>async Task&lt;string&gt; ArkNet.Core.PeerApi.MakeRequestInternal</definition>
+        <argsstring>(string method, string path, string body=&quot;&quot;, int retryCount=0)</argsstring>
+        <name>MakeRequestInternal</name>
+        <param>
+          <type>string</type>
+          <declname>method</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>body</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>retryCount</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" line="51" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" bodystart="51" bodyend="89"/>
+        <references refid="class_ark_net_1_1_core_1_1_network_api_1ab966ad5c9f88a6d9b84d80fb6ba3d039" compoundref="_network_api_8cs" startline="77">ArkNet.Core.NetworkApi.ActivePeer</references>
+        <references refid="class_ark_net_1_1_core_1_1_network_api_1a7be8a1a0bb21668cb726dd81fa4f8696" compoundref="_network_api_8cs" startline="70">ArkNet.Core.NetworkApi.Instance</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1a3907e8daca5d8dadbff95b00f66a38bb" compoundref="_ark_net_api_8cs" startline="99">ArkNet.ArkNetApi.Instance</references>
+        <references refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1ac4de1d49fcc42bd3c8e3511f6eb9a007" compoundref="_ark_settings_8cs" startline="12">ArkNet.Utils.ArkNetworkSettings.MaxRequestRetryCount</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1af38dad201d9d7d72e8f0750eb7ef492f" compoundref="_ark_net_api_8cs" startline="107">ArkNet.ArkNetApi.NetworkSettings</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" line="11" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/PeerApi.cs" bodystart="10" bodyend="103"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_core_1_1_peer_api_1a229eeaa63e218dcb0351e4f582986d57" prot="private" virt="non-virtual"><scope>ArkNet::Core::PeerApi</scope><name>_httpClient</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_peer_api_1a6625083aa8cf65bef846b27b23c1591f" prot="private" virt="non-virtual"><scope>ArkNet::Core::PeerApi</scope><name>_ip</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_peer_api_1a85117e057ac4855a2059cc6d28827f4b" prot="private" virt="non-virtual"><scope>ArkNet::Core::PeerApi</scope><name>_port</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_peer_api_1a1fb1aa992f4fdf09f58794ba1face16d" prot="public" virt="non-virtual"><scope>ArkNet::Core::PeerApi</scope><name>HttpClient</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_peer_api_1a9b449110adc626fb89556e9e3de6cded" prot="private" virt="non-virtual"><scope>ArkNet::Core::PeerApi</scope><name>Init</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_peer_api_1afbdae5a6db888b3e5229611dbd036453" prot="public" virt="non-virtual"><scope>ArkNet::Core::PeerApi</scope><name>Ip</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_peer_api_1af23deac842c2b38e069fa2c309784d96" prot="public" virt="non-virtual"><scope>ArkNet::Core::PeerApi</scope><name>IsOnline</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_peer_api_1a266b8190cf6b369bb8f5e2c5b2d229ed" prot="public" virt="non-virtual"><scope>ArkNet::Core::PeerApi</scope><name>MakeRequest</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_peer_api_1abc5946ef6f8e1ad948f1b93601786343" prot="private" virt="non-virtual"><scope>ArkNet::Core::PeerApi</scope><name>MakeRequestInternal</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_peer_api_1a35600a981b989ea136cd5e6a36f978cd" prot="public" virt="non-virtual"><scope>ArkNet::Core::PeerApi</scope><name>PeerApi</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_peer_api_1ae2a3267cdac5cec6cfb606df38a34c55" prot="public" virt="non-virtual"><scope>ArkNet::Core::PeerApi</scope><name>Port</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

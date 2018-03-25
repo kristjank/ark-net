@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request" kind="class" prot="public">
+    <compoundname>ArkNet::Messages::BaseMessages::ArkBaseRequest</compoundname>
+    <derivedcompoundref refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request" prot="public" virt="non-virtual">ArkNet.Messages.Block.ArkBlockRequest</derivedcompoundref>
+    <derivedcompoundref refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_transaction_request" prot="public" virt="non-virtual">ArkNet.Messages.Transaction.ArkTransactionRequest</derivedcompoundref>
+    <derivedcompoundref refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_unconfirmed_transaction_request" prot="public" virt="non-virtual">ArkNet.Messages.Transaction.ArkUnconfirmedTransactionRequest</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a8735ab2882c0c0107785d2269f5a48f3" prot="protected" static="no" mutable="no">
+        <type>readonly List&lt; string &gt;</type>
+        <definition>readonly List&lt;string&gt; ArkNet.Messages.BaseMessages.ArkBaseRequest.QueryParams</definition>
+        <argsstring></argsstring>
+        <name>QueryParams</name>
+        <initializer>= new List&lt;string&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/BaseMessages/ArkBaseRequest.cs" line="9" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/BaseMessages/ArkBaseRequest.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1adbdba54b9bbadd0613883dd35e511291" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Messages.BaseMessages.ArkBaseRequest.Limit</definition>
+        <argsstring></argsstring>
+        <name>Limit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/BaseMessages/ArkBaseRequest.cs" line="12" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/BaseMessages/ArkBaseRequest.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a2ef9e95c55080df468d5932a2ec2c580" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Messages.BaseMessages.ArkBaseRequest.Offset</definition>
+        <argsstring></argsstring>
+        <name>Offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/BaseMessages/ArkBaseRequest.cs" line="15" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/BaseMessages/ArkBaseRequest.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a3d5b71d2a3c84aa12f332fc9697f1459" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Messages.BaseMessages.ArkBaseRequest.OrderBy</definition>
+        <argsstring></argsstring>
+        <name>OrderBy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/BaseMessages/ArkBaseRequest.cs" line="18" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/BaseMessages/ArkBaseRequest.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a2072da5620095e60cd0f3bc953d2563f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>string</type>
+        <definition>virtual string ArkNet.Messages.BaseMessages.ArkBaseRequest.ToQuery</definition>
+        <argsstring>()</argsstring>
+        <name>ToQuery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/BaseMessages/ArkBaseRequest.cs" line="20" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/BaseMessages/ArkBaseRequest.cs" bodystart="20" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="52">
+        <label>ArkNet.Messages.Transaction.ArkUnconfirmedTransactionRequest</label>
+        <link refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_unconfirmed_transaction_request"/>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>ArkNet.Messages.BaseMessages.ArkBaseRequest</label>
+        <link refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request"/>
+      </node>
+      <node id="50">
+        <label>ArkNet.Messages.Block.ArkBlockRequest</label>
+        <link refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request"/>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>ArkNet.Messages.Transaction.ArkTransactionRequest</label>
+        <link refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_transaction_request"/>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/BaseMessages/ArkBaseRequest.cs" line="8" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/BaseMessages/ArkBaseRequest.cs" bodystart="7" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1adbdba54b9bbadd0613883dd35e511291" prot="public" virt="non-virtual"><scope>ArkNet::Messages::BaseMessages::ArkBaseRequest</scope><name>Limit</name></member>
+      <member refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a2ef9e95c55080df468d5932a2ec2c580" prot="public" virt="non-virtual"><scope>ArkNet::Messages::BaseMessages::ArkBaseRequest</scope><name>Offset</name></member>
+      <member refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a3d5b71d2a3c84aa12f332fc9697f1459" prot="public" virt="non-virtual"><scope>ArkNet::Messages::BaseMessages::ArkBaseRequest</scope><name>OrderBy</name></member>
+      <member refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a8735ab2882c0c0107785d2269f5a48f3" prot="protected" virt="non-virtual"><scope>ArkNet::Messages::BaseMessages::ArkBaseRequest</scope><name>QueryParams</name></member>
+      <member refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a2072da5620095e60cd0f3bc953d2563f" prot="public" virt="virtual"><scope>ArkNet::Messages::BaseMessages::ArkBaseRequest</scope><name>ToQuery</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

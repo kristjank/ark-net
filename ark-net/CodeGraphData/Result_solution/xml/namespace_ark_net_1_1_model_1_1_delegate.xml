@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_ark_net_1_1_model_1_1_delegate" kind="namespace">
+    <compoundname>ArkNet::Model::Delegate</compoundname>
+    <innerclass refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate" prot="public">ArkNet::Model::Delegate::ArkDelegate</innerclass>
+    <innerclass refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_forged_balance" prot="public">ArkNet::Model::Delegate::ArkDelegateForgedBalance</innerclass>
+    <innerclass refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_list" prot="public">ArkNet::Model::Delegate::ArkDelegateList</innerclass>
+    <innerclass refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_next_forgers" prot="public">ArkNet::Model::Delegate::ArkDelegateNextForgers</innerclass>
+    <innerclass refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response" prot="public">ArkNet::Model::Delegate::ArkDelegateResponse</innerclass>
+    <innerclass refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter" prot="public">ArkNet::Model::Delegate::ArkDelegateVoter</innerclass>
+    <innerclass refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_list" prot="public">ArkNet::Model::Delegate::ArkDelegateVoterList</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Delegate/ArkDelegate.cs" line="2" column="1"/>
+  </compounddef>
+</doxygen>

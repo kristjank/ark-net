@@ -1,0 +1,535 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_core_1_1_transaction_api" kind="class" prot="public">
+    <compoundname>ArkNet::Core::TransactionApi</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_core_1_1_transaction_api_1a5423e7bfc545a1cf61b5ed7efea1a847" prot="private" static="no" mutable="no">
+        <type>readonly Dictionary&lt; string, dynamic &gt;</type>
+        <definition>readonly Dictionary&lt;string, dynamic&gt; ArkNet.Core.TransactionApi.asset</definition>
+        <argsstring></argsstring>
+        <name>asset</name>
+        <initializer>= new Dictionary&lt;string, dynamic&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="11" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_transaction_api_1aed08b89eb32993cc6d2cf2467cca49ab" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Core.TransactionApi.Timestamp</definition>
+        <argsstring></argsstring>
+        <name>Timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="33" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_transaction_api_1a6114849d46e8664f0a255169872d2fbd" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Core.TransactionApi.RecipientId</definition>
+        <argsstring></argsstring>
+        <name>RecipientId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="35" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_transaction_api_1ae0200bbe96cbfb468dd297b176a8564b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>long</type>
+        <definition>long ArkNet.Core.TransactionApi.Amount</definition>
+        <argsstring></argsstring>
+        <name>Amount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="37" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_transaction_api_1aaf1b45ad2d22f0c3ee186b431335507a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>long</type>
+        <definition>long ArkNet.Core.TransactionApi.Fee</definition>
+        <argsstring></argsstring>
+        <name>Fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="39" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_transaction_api_1a99b6925014ccaabe004450da57396997" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>byte</type>
+        <definition>byte ArkNet.Core.TransactionApi.Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="41" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_transaction_api_1a4b08bcceccc9d352e308e05808d636ef" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Core.TransactionApi.VendorField</definition>
+        <argsstring></argsstring>
+        <name>VendorField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="43" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_transaction_api_1a6a013ccf6ffda967f8837c0d4cb98ddf" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Core.TransactionApi.Signature</definition>
+        <argsstring></argsstring>
+        <name>Signature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="45" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_transaction_api_1a7f399888948391315907a9a2a0fe3dda" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Core.TransactionApi.SignSignature</definition>
+        <argsstring></argsstring>
+        <name>SignSignature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="47" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_transaction_api_1acc1b744736904d5c6f7c4c70569c2647" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Core.TransactionApi.SenderPublicKey</definition>
+        <argsstring></argsstring>
+        <name>SenderPublicKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="49" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_core_1_1_crypto_1a50387c4e576bdad59781c714567441ca" compoundref="_crypto_8cs" startline="119" endline="126">ArkNet.Core.Crypto.Verify</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_transaction_api_1a1470dc85dfa8acc2c95fdd75de868aae" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Core.TransactionApi.RequesterPublicKey</definition>
+        <argsstring></argsstring>
+        <name>RequesterPublicKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="51" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_transaction_api_1a5c5b963cdfc7eada2c15755a2012963e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Core.TransactionApi.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="53" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_transaction_api_1ac48857ac8f9a985d5325faa1dbd9f10d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Core.TransactionApi.Username</definition>
+        <argsstring></argsstring>
+        <name>Username</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="55" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_transaction_api_1aecfef8213ed8f73ac159531568576fb8" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Core.TransactionApi.StrBytes</definition>
+        <argsstring></argsstring>
+        <name>StrBytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="58" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_transaction_api_1ad919f855f5f27f21ae7f05a7ab840ce0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Core.TransactionApi.TransactionApi</definition>
+        <argsstring>()</argsstring>
+        <name>TransactionApi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="13" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="13" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_transaction_api_1a09f7c4967e397762673b1b8b8b2a3a42" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Core.TransactionApi.TransactionApi</definition>
+        <argsstring>(byte type, string recipientId, long amount, long fee, string vendorField)</argsstring>
+        <name>TransactionApi</name>
+        <param>
+          <type>byte</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>recipientId</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>amount</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>fee</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>vendorField</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="17" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="17" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_transaction_api_1aae6640dcc6a7d2812dbb64856f234e66" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Core.TransactionApi.TransactionApi</definition>
+        <argsstring>(byte type, long amount, long fee)</argsstring>
+        <name>TransactionApi</name>
+        <param>
+          <type>byte</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>amount</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>fee</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="26" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="26" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_transaction_api_1aceaf2ce7106e283244897a47441699af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte[]</type>
+        <definition>byte [] ArkNet.Core.TransactionApi.ToBytes</definition>
+        <argsstring>(bool skipSignature=true, bool skipSecondSignature=true)</argsstring>
+        <name>ToBytes</name>
+        <param>
+          <type>bool</type>
+          <declname>skipSignature</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>skipSecondSignature</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="60" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="60" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_transaction_api_1a7edd2443b11f16012113949d05c7298a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>dynamic</type>
+        <definition>dynamic ArkNet.Core.TransactionApi.ToObject</definition>
+        <argsstring>(bool retJson=false)</argsstring>
+        <name>ToObject</name>
+        <param>
+          <type>bool</type>
+          <declname>retJson</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="120" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="120" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_transaction_api_1ad2f13421e3fc83e539fb7d4955517ee4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string ArkNet.Core.TransactionApi.Sign</definition>
+        <argsstring>(string passphrase)</argsstring>
+        <name>Sign</name>
+        <param>
+          <type>string</type>
+          <declname>passphrase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="147" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="147" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_transaction_api_1afb8e23af39816a230df30aab269b0135" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string ArkNet.Core.TransactionApi.SecondSign</definition>
+        <argsstring>(string passphrase)</argsstring>
+        <name>SecondSign</name>
+        <param>
+          <type>string</type>
+          <declname>passphrase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="155" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="155" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_transaction_api_1a3872fbc70b26d64c4daa8db3ad5d4c7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string ArkNet.Core.TransactionApi.ToJson</definition>
+        <argsstring>()</argsstring>
+        <name>ToJson</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="162" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="162" bodyend="165"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_transaction_api_1aa3127a8135ed23f57a364ad94a64bb01" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref></type>
+        <definition>static TransactionApi ArkNet.Core.TransactionApi.FromJson</definition>
+        <argsstring>(string json)</argsstring>
+        <name>FromJson</name>
+        <param>
+          <type>string</type>
+          <declname>json</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="168" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="168" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_transaction_api_1a5de122acd4e3c9b0a89d3a8f27ee6ada" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref></type>
+        <definition>static TransactionApi ArkNet.Core.TransactionApi.CreateTransaction</definition>
+        <argsstring>(string recipientId, long satoshiAmount, string vendorField, string passphrase, string secondPassphrase=null)</argsstring>
+        <name>CreateTransaction</name>
+        <param>
+          <type>string</type>
+          <declname>recipientId</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>satoshiAmount</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>vendorField</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>passphrase</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>secondPassphrase</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="175" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="175" bodyend="187"/>
+        <references refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1ad40d2c90cb9ab37ee83147da7c0d6e57" compoundref="_ark_settings_8cs" startline="13">ArkNet.Utils.ArkNetworkSettings.Fee</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1a3907e8daca5d8dadbff95b00f66a38bb" compoundref="_ark_net_api_8cs" startline="99">ArkNet.ArkNetApi.Instance</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1af38dad201d9d7d72e8f0750eb7ef492f" compoundref="_ark_net_api_8cs" startline="107">ArkNet.ArkNetApi.NetworkSettings</references>
+        <references refid="class_ark_net_1_1_utils_1_1_fees_1a6f4bdba9d878ff61b7ced1525350580a" compoundref="_ark_settings_8cs" startline="27">ArkNet.Utils.Fees.Send</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_transaction_api_1a827283aab48f09988568c838a85f8a92" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref></type>
+        <definition>static TransactionApi ArkNet.Core.TransactionApi.CreateVote</definition>
+        <argsstring>(List&lt; string &gt; votes, string passphrase, string secondPassphrase=null)</argsstring>
+        <name>CreateVote</name>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>votes</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>passphrase</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>secondPassphrase</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="189" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="189" bodyend="203"/>
+        <references refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1a8708737789d627a0203984f2f9d907d9" compoundref="_ark_settings_8cs" startline="6">ArkNet.Utils.ArkNetworkSettings.BytePrefix</references>
+        <references refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1ad40d2c90cb9ab37ee83147da7c0d6e57" compoundref="_ark_settings_8cs" startline="13">ArkNet.Utils.ArkNetworkSettings.Fee</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1a3907e8daca5d8dadbff95b00f66a38bb" compoundref="_ark_net_api_8cs" startline="99">ArkNet.ArkNetApi.Instance</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1af38dad201d9d7d72e8f0750eb7ef492f" compoundref="_ark_net_api_8cs" startline="107">ArkNet.ArkNetApi.NetworkSettings</references>
+        <references refid="class_ark_net_1_1_utils_1_1_fees_1ab68f4c4a3da02595ddc932637e6b564d" compoundref="_ark_settings_8cs" startline="28">ArkNet.Utils.Fees.Vote</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_transaction_api_1a4a1fe8975f7116e625b8fcf2a49635c0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref></type>
+        <definition>static TransactionApi ArkNet.Core.TransactionApi.CreateDelegate</definition>
+        <argsstring>(string username, string passphrase, string secondPassphrase=null)</argsstring>
+        <name>CreateDelegate</name>
+        <param>
+          <type>string</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>passphrase</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>secondPassphrase</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="205" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="205" bodyend="216"/>
+        <references refid="class_ark_net_1_1_utils_1_1_fees_1a70f1b8fbc78cad0d6f1496e1b932ced4" compoundref="_ark_settings_8cs" startline="29">ArkNet.Utils.Fees.Delegate</references>
+        <references refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1ad40d2c90cb9ab37ee83147da7c0d6e57" compoundref="_ark_settings_8cs" startline="13">ArkNet.Utils.ArkNetworkSettings.Fee</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1a3907e8daca5d8dadbff95b00f66a38bb" compoundref="_ark_net_api_8cs" startline="99">ArkNet.ArkNetApi.Instance</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1af38dad201d9d7d72e8f0750eb7ef492f" compoundref="_ark_net_api_8cs" startline="107">ArkNet.ArkNetApi.NetworkSettings</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_transaction_api_1a312c55d03903d9ac0af2cf82c3cc9f1e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref></type>
+        <definition>static TransactionApi ArkNet.Core.TransactionApi.createSecondSignature</definition>
+        <argsstring>(string secondPassphrase, string passphrase)</argsstring>
+        <name>createSecondSignature</name>
+        <param>
+          <type>string</type>
+          <declname>secondPassphrase</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>passphrase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="218" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="218" bodyend="229"/>
+        <references refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1ad40d2c90cb9ab37ee83147da7c0d6e57" compoundref="_ark_settings_8cs" startline="13">ArkNet.Utils.ArkNetworkSettings.Fee</references>
+        <references refid="class_ark_net_1_1_core_1_1_slot_1a45580f1e98c85c60fbdf9c3f06cce91c" compoundref="_slot_8cs" startline="9" endline="14">ArkNet.Core.Slot.GetTime</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1a3907e8daca5d8dadbff95b00f66a38bb" compoundref="_ark_net_api_8cs" startline="99">ArkNet.ArkNetApi.Instance</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1af38dad201d9d7d72e8f0750eb7ef492f" compoundref="_ark_net_api_8cs" startline="107">ArkNet.ArkNetApi.NetworkSettings</references>
+        <references refid="class_ark_net_1_1_utils_1_1_fees_1a86ba4ece0e2d296571c3d771322019c3" compoundref="_ark_settings_8cs" startline="30">ArkNet.Utils.Fees.SecondSignature</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" line="10" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/TransactionApi.cs" bodystart="9" bodyend="230"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1ae0200bbe96cbfb468dd297b176a8564b" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>Amount</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a5423e7bfc545a1cf61b5ed7efea1a847" prot="private" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>asset</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a4a1fe8975f7116e625b8fcf2a49635c0" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>CreateDelegate</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a312c55d03903d9ac0af2cf82c3cc9f1e" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>createSecondSignature</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a5de122acd4e3c9b0a89d3a8f27ee6ada" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>CreateTransaction</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a827283aab48f09988568c838a85f8a92" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>CreateVote</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1aaf1b45ad2d22f0c3ee186b431335507a" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>Fee</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1aa3127a8135ed23f57a364ad94a64bb01" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>FromJson</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a5c5b963cdfc7eada2c15755a2012963e" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>Id</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a6114849d46e8664f0a255169872d2fbd" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>RecipientId</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a1470dc85dfa8acc2c95fdd75de868aae" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>RequesterPublicKey</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1afb8e23af39816a230df30aab269b0135" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>SecondSign</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1acc1b744736904d5c6f7c4c70569c2647" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>SenderPublicKey</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1ad2f13421e3fc83e539fb7d4955517ee4" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>Sign</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a6a013ccf6ffda967f8837c0d4cb98ddf" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>Signature</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a7f399888948391315907a9a2a0fe3dda" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>SignSignature</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1aecfef8213ed8f73ac159531568576fb8" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>StrBytes</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1aed08b89eb32993cc6d2cf2467cca49ab" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>Timestamp</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1aceaf2ce7106e283244897a47441699af" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>ToBytes</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a3872fbc70b26d64c4daa8db3ad5d4c7c" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>ToJson</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a7edd2443b11f16012113949d05c7298a" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>ToObject</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1ad919f855f5f27f21ae7f05a7ab840ce0" prot="private" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>TransactionApi</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a09f7c4967e397762673b1b8b8b2a3a42" prot="private" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>TransactionApi</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1aae6640dcc6a7d2812dbb64856f234e66" prot="private" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>TransactionApi</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a99b6925014ccaabe004450da57396997" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>Type</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1ac48857ac8f9a985d5325faa1dbd9f10d" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>Username</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_transaction_api_1a4b08bcceccc9d352e308e05808d636ef" prot="public" virt="non-virtual"><scope>ArkNet::Core::TransactionApi</scope><name>VendorField</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

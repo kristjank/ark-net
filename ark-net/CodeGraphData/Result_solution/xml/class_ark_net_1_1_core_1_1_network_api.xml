@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_core_1_1_network_api" kind="class" prot="public">
+    <compoundname>ArkNet::Core::NetworkApi</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_core_1_1_network_api_1abdb6f6af91ebcec2ee58e88bd3fd88db" prot="private" static="yes" mutable="no">
+        <type>readonly Lazy&lt; <ref refid="class_ark_net_1_1_core_1_1_network_api" kindref="compound">NetworkApi</ref> &gt;</type>
+        <definition>readonly Lazy&lt;NetworkApi&gt; ArkNet.Core.NetworkApi.lazy</definition>
+        <argsstring></argsstring>
+        <name>lazy</name>
+        <initializer>= new Lazy&lt;<ref refid="class_ark_net_1_1_core_1_1_network_api" kindref="compound">NetworkApi</ref>&gt;(() =&gt; new <ref refid="class_ark_net_1_1_core_1_1_network_api" kindref="compound">NetworkApi</ref>())</initializer>
+        <briefdescription>
+<para>Load the Network API on-need. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="46" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_core_1_1_network_api_1aad690f7fa288df0ce0e3747702c797db" prot="private" static="no" mutable="no">
+        <type>readonly Random</type>
+        <definition>readonly Random ArkNet.Core.NetworkApi._random</definition>
+        <argsstring></argsstring>
+        <name>_random</name>
+        <initializer>= new Random()</initializer>
+        <briefdescription>
+<para>Random function initialization. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="51" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_core_1_1_network_api_1a06c977a89f1a73cf47aba8ec08a411ab" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_ark_net_1_1_core_1_1_peer_api" kindref="compound">PeerApi</ref> &gt;</type>
+        <definition>List&lt;PeerApi&gt; ArkNet.Core.NetworkApi._peers</definition>
+        <argsstring></argsstring>
+        <name>_peers</name>
+        <initializer>= new List&lt;<ref refid="class_ark_net_1_1_core_1_1_peer_api" kindref="compound">PeerApi</ref>&gt;()</initializer>
+        <briefdescription>
+<para>List{PeerApi} of peers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="56" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_core_1_1_network_api_1a7be8a1a0bb21668cb726dd81fa4f8696" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_ark_net_1_1_core_1_1_network_api" kindref="compound">NetworkApi</ref></type>
+        <definition>NetworkApi ArkNet.Core.NetworkApi.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <initializer>=&gt; lazy.Value</initializer>
+        <briefdescription>
+<para>Initialize an instance of the <ref refid="class_ark_net_1_1_core_1_1_network_api" kindref="compound">NetworkApi</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="70" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="70" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_core_1_1_peer_api_1abc5946ef6f8e1ad948f1b93601786343" compoundref="_peer_api_8cs" startline="51" endline="89">ArkNet.Core.PeerApi.MakeRequestInternal</referencedby>
+        <referencedby refid="class_ark_net_1_1_service_1_1_transaction_service_1a1640e3515958b4f5731b5b4b0b66fe2c" compoundref="_transaction_service_8cs" startline="124" endline="134">ArkNet.Service.TransactionService.MultipleBroadCast</referencedby>
+        <referencedby refid="class_ark_net_1_1_service_1_1_transaction_service_1a0ca5fdcaac1114d6d1570d5421faff4f" compoundref="_transaction_service_8cs" startline="136" endline="146">ArkNet.Service.TransactionService.MultipleBroadCastAsync</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_network_api_1aa9da2ae1cbe4b92b87e28b2b71bcd0e3" compoundref="_network_api_8cs" startline="97" endline="121">ArkNet.Core.NetworkApi.SetPeerList</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_network_api_1ab29f9b298a1adc29c4c140cecd87d814" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Core.NetworkApi.Nethash</definition>
+        <argsstring></argsstring>
+        <name>Nethash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="72" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_network_api_1ae973a3db35846a5922620982f4707efc" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Core.NetworkApi.Port</definition>
+        <argsstring></argsstring>
+        <name>Port</name>
+        <initializer>= ArkNetApi.Instance.NetworkSettings.NetHash</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="73" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_network_api_1a569d72a983e1c69e8ab66aa2790557cb" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>byte</type>
+        <definition>byte ArkNet.Core.NetworkApi.Prefix</definition>
+        <argsstring></argsstring>
+        <name>Prefix</name>
+        <initializer>= ArkNetApi.Instance.NetworkSettings.Port</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="74" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_network_api_1ab648ae6b2aaf4dd5d59c59e9391b79e8" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Core.NetworkApi.Version</definition>
+        <argsstring></argsstring>
+        <name>Version</name>
+        <initializer>= ArkNetApi.Instance.NetworkSettings.BytePrefix</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="75" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_network_api_1aaf9f42e13abbd03860bdb38f0d3595f6" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Core.NetworkApi.BroadcastMax</definition>
+        <argsstring></argsstring>
+        <name>BroadcastMax</name>
+        <initializer>= ArkNetApi.Instance.NetworkSettings.Version</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="76" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_core_1_1_network_api_1ab966ad5c9f88a6d9b84d80fb6ba3d039" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_ark_net_1_1_core_1_1_peer_api" kindref="compound">PeerApi</ref></type>
+        <definition>PeerApi ArkNet.Core.NetworkApi.ActivePeer</definition>
+        <argsstring></argsstring>
+        <name>ActivePeer</name>
+        <initializer>= ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="77" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="77" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_core_1_1_peer_api_1abc5946ef6f8e1ad948f1b93601786343" compoundref="_peer_api_8cs" startline="51" endline="89">ArkNet.Core.PeerApi.MakeRequestInternal</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_network_api_1aa9da2ae1cbe4b92b87e28b2b71bcd0e3" compoundref="_network_api_8cs" startline="97" endline="121">ArkNet.Core.NetworkApi.SetPeerList</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_network_api_1a136e2ea9388e37823ba84fd73adc2692" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Core.NetworkApi.NetworkApi</definition>
+        <argsstring>()</argsstring>
+        <name>NetworkApi</name>
+        <briefdescription>
+<para>Prevents a default instance of the <ref refid="class_ark_net_1_1_core_1_1_network_api" kindref="compound">NetworkApi</ref> class from being created. Initialize the <ref refid="class_ark_net_1_1_core_1_1_network_api" kindref="compound">NetworkApi</ref> and fill its peer list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="62" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_network_api_1aa9da2ae1cbe4b92b87e28b2b71bcd0e3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Core.NetworkApi.SetPeerList</definition>
+        <argsstring>()</argsstring>
+        <name>SetPeerList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="97" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="97" bodyend="121"/>
+        <references refid="class_ark_net_1_1_core_1_1_network_api_1ab966ad5c9f88a6d9b84d80fb6ba3d039" compoundref="_network_api_8cs" startline="77">ArkNet.Core.NetworkApi.ActivePeer</references>
+        <references refid="class_ark_net_1_1_core_1_1_network_api_1a7be8a1a0bb21668cb726dd81fa4f8696" compoundref="_network_api_8cs" startline="70">ArkNet.Core.NetworkApi.Instance</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1a3907e8daca5d8dadbff95b00f66a38bb" compoundref="_ark_net_api_8cs" startline="99">ArkNet.ArkNetApi.Instance</references>
+        <references refid="class_ark_net_1_1_core_1_1_peer_api_1afbdae5a6db888b3e5229611dbd036453" compoundref="_peer_api_8cs" startline="17">ArkNet.Core.PeerApi.Ip</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1af38dad201d9d7d72e8f0750eb7ef492f" compoundref="_ark_net_api_8cs" startline="107">ArkNet.ArkNetApi.NetworkSettings</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_network_api_1acd62fb7f7eda812839d5635a050b2886" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Core.NetworkApi.StartPeerCleaningTask</definition>
+        <argsstring>()</argsstring>
+        <name>StartPeerCleaningTask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="123" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="123" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_network_api_1ad6973bcf0a898808e9bc63a90fe196a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Core.NetworkApi.WarmUp</definition>
+        <argsstring>(PeerApi initialPeer)</argsstring>
+        <name>WarmUp</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_core_1_1_peer_api" kindref="compound">PeerApi</ref></type>
+          <declname>initialPeer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="79" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="79" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_network_api_1ac4aa22683af29cf89deb02ef8af74517" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_core_1_1_peer_api" kindref="compound">PeerApi</ref></type>
+        <definition>PeerApi ArkNet.Core.NetworkApi.GetRandomPeer</definition>
+        <argsstring>()</argsstring>
+        <name>GetRandomPeer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="87" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="87" bodyend="90"/>
+        <referencedby refid="class_ark_net_1_1_service_1_1_transaction_service_1a1640e3515958b4f5731b5b4b0b66fe2c" compoundref="_transaction_service_8cs" startline="124" endline="134">ArkNet.Service.TransactionService.MultipleBroadCast</referencedby>
+        <referencedby refid="class_ark_net_1_1_service_1_1_transaction_service_1a0ca5fdcaac1114d6d1570d5421faff4f" compoundref="_transaction_service_8cs" startline="136" endline="146">ArkNet.Service.TransactionService.MultipleBroadCastAsync</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_network_api_1ab9522659cb58217d8bc47f7930af63e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Core.NetworkApi.SwitchPeer</definition>
+        <argsstring>()</argsstring>
+        <name>SwitchPeer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="92" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="92" bodyend="95"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The network api. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="335">
+        <label>ArkNet.Core.NetworkApi</label>
+        <link refid="class_ark_net_1_1_core_1_1_network_api"/>
+        <childnode refid="335" relation="usage">
+          <edgelabel>Instance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" line="42" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/NetworkApi.cs" bodystart="41" bodyend="138"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1a06c977a89f1a73cf47aba8ec08a411ab" prot="private" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>_peers</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1aad690f7fa288df0ce0e3747702c797db" prot="private" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>_random</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1ab966ad5c9f88a6d9b84d80fb6ba3d039" prot="public" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>ActivePeer</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1aaf9f42e13abbd03860bdb38f0d3595f6" prot="public" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>BroadcastMax</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1ac4aa22683af29cf89deb02ef8af74517" prot="public" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>GetRandomPeer</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1a7be8a1a0bb21668cb726dd81fa4f8696" prot="public" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>Instance</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1abdb6f6af91ebcec2ee58e88bd3fd88db" prot="private" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>lazy</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1ab29f9b298a1adc29c4c140cecd87d814" prot="public" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>Nethash</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1a136e2ea9388e37823ba84fd73adc2692" prot="private" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>NetworkApi</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1ae973a3db35846a5922620982f4707efc" prot="public" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>Port</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1a569d72a983e1c69e8ab66aa2790557cb" prot="public" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>Prefix</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1aa9da2ae1cbe4b92b87e28b2b71bcd0e3" prot="private" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>SetPeerList</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1acd62fb7f7eda812839d5635a050b2886" prot="private" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>StartPeerCleaningTask</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1ab9522659cb58217d8bc47f7930af63e9" prot="public" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>SwitchPeer</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1ab648ae6b2aaf4dd5d59c59e9391b79e8" prot="public" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>Version</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_network_api_1ad6973bcf0a898808e9bc63a90fe196a3" prot="public" virt="non-virtual"><scope>ArkNet::Core::NetworkApi</scope><name>WarmUp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

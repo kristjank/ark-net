@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status" kind="class" prot="public">
+    <compoundname>ArkNet::Model::Peer::ArkPeerStatus</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base" prot="public" virt="non-virtual">ArkNet.Model.BaseModels.ArkResponseBase</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status_1a63fe88fc6abf18a4e462d2c8260934fb" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Model.Peer.ArkPeerStatus.Height</definition>
+        <argsstring></argsstring>
+        <name>Height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerStatus.cs" line="7" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerStatus.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status_1abe2473254c8b1422ba108b4422a35a92" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool ArkNet.Model.Peer.ArkPeerStatus.ForgingAllowed</definition>
+        <argsstring></argsstring>
+        <name>ForgingAllowed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerStatus.cs" line="8" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerStatus.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status_1a480edea2ceb412610043a91b2f876e64" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Model.Peer.ArkPeerStatus.CurrentSlot</definition>
+        <argsstring></argsstring>
+        <name>CurrentSlot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerStatus.cs" line="9" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerStatus.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status_1a2615f1f028067d0902e2bcc763ab9ac1" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header" kindref="compound">ArkPeerHeader</ref></type>
+        <definition>ArkPeerHeader ArkNet.Model.Peer.ArkPeerStatus.Header</definition>
+        <argsstring></argsstring>
+        <name>Header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerStatus.cs" line="10" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerStatus.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="130">
+        <label>ArkResponseBase</label>
+        <link refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base"/>
+      </node>
+      <node id="129">
+        <label>ArkNet.Model.Peer.ArkPeerStatus</label>
+        <link refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status"/>
+        <childnode refid="130" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="132">
+        <label>ArkResponseBase</label>
+        <link refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base"/>
+      </node>
+      <node id="131">
+        <label>ArkNet.Model.Peer.ArkPeerStatus</label>
+        <link refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status"/>
+        <childnode refid="132" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerStatus.cs" line="6" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerStatus.cs" bodystart="5" bodyend="11"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status_1a480edea2ceb412610043a91b2f876e64" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerStatus</scope><name>CurrentSlot</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a0896cd002de13aec6fdaa8df57fe1242" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerStatus</scope><name>Error</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status_1abe2473254c8b1422ba108b4422a35a92" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerStatus</scope><name>ForgingAllowed</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status_1a2615f1f028067d0902e2bcc763ab9ac1" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerStatus</scope><name>Header</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status_1a63fe88fc6abf18a4e462d2c8260934fb" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerStatus</scope><name>Height</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a45c8e8b131e7d1d9b401ea6972fa3256" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerStatus</scope><name>Message</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a218fcfef6e7a12abd3e8a29d90899fb5" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerStatus</scope><name>Success</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -36,10 +36,12 @@ using ArkNet.Service;
 namespace ArkNet.Core
 {
     /// <summary>
-    /// The network api.
+    /// The network api for managing peers.
     /// </summary>
     public sealed class NetworkApi
     {
+        #region Fields
+
         /// <summary>
         /// Load the Network API on-need.
         /// </summary>
@@ -76,6 +78,16 @@ namespace ArkNet.Core
         public int BroadcastMax { get; set; } = ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts;
         public PeerApi ActivePeer { get; set; }
 
+        #endregion
+
+        /// <summary>
+        /// Initializes the class.
+        /// </summary>
+        /// 
+        /// <param name="initialPeer">The intial peer.</param>
+        /// 
+        /// <returns>Retuns a <see cref="Task"/> type.</returns>
+        /// 
         public async Task WarmUp(PeerApi initialPeer)
         {
             ActivePeer = initialPeer;
@@ -84,16 +96,32 @@ namespace ArkNet.Core
             StartPeerCleaningTask();
         }
 
+        /// <summary>
+        /// Gets a random peer.
+        /// </summary>
+        /// 
+        /// <returns>Returns a <see cref="PeerApi"/> type.</returns>
+        /// 
         public PeerApi GetRandomPeer()
         {
             return _peers[_random.Next(_peers.Count())];
         }
 
+        /// <summary>
+        /// Switches to a random peer.
+        /// </summary>
+        /// 
         public void SwitchPeer()
         {
             ActivePeer = GetRandomPeer();
         }
 
+        /// <summary>
+        /// Gets all peers.
+        /// </summary>
+        /// 
+        /// <returns>Returns a <see cref="Task"/> type.</returns>
+        /// 
         private async Task SetPeerList()
         {
             var peers = await PeerService.GetAllAsync();
@@ -120,6 +148,9 @@ namespace ArkNet.Core
             _peers = tmpPeerList;
         }
 
+        /// <summary>
+        /// Searches for and drops disconnected peers.
+        /// </summary>
         private void StartPeerCleaningTask()
         {
             Task.Run(async () =>

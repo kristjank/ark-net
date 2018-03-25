@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_list" kind="class" prot="public">
+    <compoundname>ArkNet::Model::Delegate::ArkDelegateVoterList</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base" prot="public" virt="non-virtual">ArkNet.Model.BaseModels.ArkResponseBase</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_list_1a64e90bdda566a8d8d1491780a4563598" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; <ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter" kindref="compound">ArkDelegateVoter</ref> &gt;</type>
+        <definition>List&lt;ArkDelegateVoter&gt; ArkNet.Model.Delegate.ArkDelegateVoterList.Accounts</definition>
+        <argsstring></argsstring>
+        <name>Accounts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Delegate/ArkDelegateVoterList.cs" line="8" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Delegate/ArkDelegateVoterList.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="91">
+        <label>ArkResponseBase</label>
+        <link refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base"/>
+      </node>
+      <node id="90">
+        <label>ArkNet.Model.Delegate.ArkDelegateVoterList</label>
+        <link refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_list"/>
+        <childnode refid="91" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="93">
+        <label>ArkResponseBase</label>
+        <link refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base"/>
+      </node>
+      <node id="92">
+        <label>ArkNet.Model.Delegate.ArkDelegateVoterList</label>
+        <link refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_list"/>
+        <childnode refid="93" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Delegate/ArkDelegateVoterList.cs" line="7" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Delegate/ArkDelegateVoterList.cs" bodystart="6" bodyend="9"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_list_1a64e90bdda566a8d8d1491780a4563598" prot="public" virt="non-virtual"><scope>ArkNet::Model::Delegate::ArkDelegateVoterList</scope><name>Accounts</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a0896cd002de13aec6fdaa8df57fe1242" prot="public" virt="non-virtual"><scope>ArkNet::Model::Delegate::ArkDelegateVoterList</scope><name>Error</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a45c8e8b131e7d1d9b401ea6972fa3256" prot="public" virt="non-virtual"><scope>ArkNet::Model::Delegate::ArkDelegateVoterList</scope><name>Message</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a218fcfef6e7a12abd3e8a29d90899fb5" prot="public" virt="non-virtual"><scope>ArkNet::Model::Delegate::ArkDelegateVoterList</scope><name>Success</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_service_1_1_transaction_service" kind="class" prot="public">
+    <compoundname>ArkNet::Service::TransactionService</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1a796c8c641457b5bebdb0d45618b868aa" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref></type>
+        <definition>static ArkTransactionList ArkNet.Service.TransactionService.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="13" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1a40fbfbc2d737b8452c597758f243b06c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref> &gt;</type>
+        <definition>static async Task&lt;ArkTransactionList&gt; ArkNet.Service.TransactionService.GetAllAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllAsync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="18" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="18" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1aa3308a34d3af058a8afacefa3e8ac987" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref></type>
+        <definition>static ArkTransactionList ArkNet.Service.TransactionService.GetTransactions</definition>
+        <argsstring>(ArkTransactionRequest req)</argsstring>
+        <name>GetTransactions</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_transaction_request" kindref="compound">ArkTransactionRequest</ref></type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="25" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1ac041ae9246bb79f569fd4d993c190858" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref> &gt;</type>
+        <definition>static async Task&lt;ArkTransactionList&gt; ArkNet.Service.TransactionService.GetTransactionsAsync</definition>
+        <argsstring>(ArkTransactionRequest req)</argsstring>
+        <name>GetTransactionsAsync</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_transaction_request" kindref="compound">ArkTransactionRequest</ref></type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="30" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1acc059aef5771ad450a3cd54d9e7b4dbc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref></type>
+        <definition>static ArkTransactionList ArkNet.Service.TransactionService.GetUnconfirmedAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetUnconfirmedAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="37" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1a6c90218bdc1182d141cc1f6f89b72fb8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref> &gt;</type>
+        <definition>static async Task&lt;ArkTransactionList&gt; ArkNet.Service.TransactionService.GetUnconfirmedAllAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetUnconfirmedAllAsync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="42" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="42" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1a8252cbd23e3f2f161ad095f8b9bfbb6c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref></type>
+        <definition>static ArkTransactionList ArkNet.Service.TransactionService.GetUnconfirmedTransactions</definition>
+        <argsstring>(ArkUnconfirmedTransactionRequest req)</argsstring>
+        <name>GetUnconfirmedTransactions</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_unconfirmed_transaction_request" kindref="compound">ArkUnconfirmedTransactionRequest</ref></type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="49" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1a0b3d8a6e7ff77332965e3d68ecbdc881" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref> &gt;</type>
+        <definition>static async Task&lt;ArkTransactionList&gt; ArkNet.Service.TransactionService.GetUnconfirmedTransactionsAsync</definition>
+        <argsstring>(ArkUnconfirmedTransactionRequest req)</argsstring>
+        <name>GetUnconfirmedTransactionsAsync</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_messages_1_1_transaction_1_1_ark_unconfirmed_transaction_request" kindref="compound">ArkUnconfirmedTransactionRequest</ref></type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="54" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="54" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1aca7c8a8d2ebef3141c030d00271407c3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_response" kindref="compound">ArkTransactionResponse</ref></type>
+        <definition>static ArkTransactionResponse ArkNet.Service.TransactionService.GetById</definition>
+        <argsstring>(string id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="61" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1acef2a21de4e3cebac10fa4419f2b83dd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_response" kindref="compound">ArkTransactionResponse</ref> &gt;</type>
+        <definition>static async Task&lt;ArkTransactionResponse&gt; ArkNet.Service.TransactionService.GetByIdAsync</definition>
+        <argsstring>(string id)</argsstring>
+        <name>GetByIdAsync</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="66" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="66" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1a239a45f291035dd2fb3093a80f9c520d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_response" kindref="compound">ArkTransactionResponse</ref></type>
+        <definition>static ArkTransactionResponse ArkNet.Service.TransactionService.GetUnConfirmedById</definition>
+        <argsstring>(string id)</argsstring>
+        <name>GetUnConfirmedById</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="73" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1a6ff507350df9cff6aeb74c196910e2c4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_response" kindref="compound">ArkTransactionResponse</ref> &gt;</type>
+        <definition>static async Task&lt;ArkTransactionResponse&gt; ArkNet.Service.TransactionService.GetUnConfirmedByIdAsync</definition>
+        <argsstring>(string id)</argsstring>
+        <name>GetUnConfirmedByIdAsync</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="78" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="78" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1a8d0856f19b70de2772c6ccecb8b63cd5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref></type>
+        <definition>static ArkTransactionList ArkNet.Service.TransactionService.GetTransactions</definition>
+        <argsstring>(string address, int offset=0, int limit=50)</argsstring>
+        <name>GetTransactions</name>
+        <param>
+          <type>string</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>limit</declname>
+          <defval>50</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="85" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1a44eb7ff4889aec6ee2529486b87194af" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref> &gt;</type>
+        <definition>static async Task&lt;ArkTransactionList&gt; ArkNet.Service.TransactionService.GetTransactionsAsync</definition>
+        <argsstring>(string address, int offset=0, int limit=50)</argsstring>
+        <name>GetTransactionsAsync</name>
+        <param>
+          <type>string</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>limit</declname>
+          <defval>50</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="90" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1a7aaea0ace2dc1d9522b279c432f6eeaa" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref></type>
+        <definition>static ArkTransactionList ArkNet.Service.TransactionService.GetUnconfirmedTransactions</definition>
+        <argsstring>(string address)</argsstring>
+        <name>GetUnconfirmedTransactions</name>
+        <param>
+          <type>string</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="95" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1ac86b82a00d3952deee6cedc219826e70" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref> &gt;</type>
+        <definition>static async Task&lt;ArkTransactionList&gt; ArkNet.Service.TransactionService.GetUnconfirmedTransactionsAsync</definition>
+        <argsstring>(string address)</argsstring>
+        <name>GetUnconfirmedTransactionsAsync</name>
+        <param>
+          <type>string</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="100" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1a275a582fb938f3a8bae4595b15a5483f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_post_response" kindref="compound">ArkTransactionPostResponse</ref></type>
+        <definition>static ArkTransactionPostResponse ArkNet.Service.TransactionService.PostTransaction</definition>
+        <argsstring>(TransactionApi transaction, PeerApi peer=null)</argsstring>
+        <name>PostTransaction</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref></type>
+          <declname>transaction</declname>
+        </param>
+        <param>
+          <type><ref refid="class_ark_net_1_1_core_1_1_peer_api" kindref="compound">PeerApi</ref></type>
+          <declname>peer</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="105" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1a8ce79f373c4d13c504d333862ee52ebd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_post_response" kindref="compound">ArkTransactionPostResponse</ref> &gt;</type>
+        <definition>static async Task&lt;ArkTransactionPostResponse&gt; ArkNet.Service.TransactionService.PostTransactionAsync</definition>
+        <argsstring>(TransactionApi transaction, PeerApi peer=null)</argsstring>
+        <name>PostTransactionAsync</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref></type>
+          <declname>transaction</declname>
+        </param>
+        <param>
+          <type><ref refid="class_ark_net_1_1_core_1_1_peer_api" kindref="compound">PeerApi</ref></type>
+          <declname>peer</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="110" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="110" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1a1640e3515958b4f5731b5b4b0b66fe2c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_post_response" kindref="compound">ArkTransactionPostResponse</ref> &gt;</type>
+        <definition>static List&lt;ArkTransactionPostResponse&gt; ArkNet.Service.TransactionService.MultipleBroadCast</definition>
+        <argsstring>(TransactionApi transaction)</argsstring>
+        <name>MultipleBroadCast</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref></type>
+          <declname>transaction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="124" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="124" bodyend="134"/>
+        <references refid="class_ark_net_1_1_core_1_1_network_api_1ac4aa22683af29cf89deb02ef8af74517" compoundref="_network_api_8cs" startline="87" endline="90">ArkNet.Core.NetworkApi.GetRandomPeer</references>
+        <references refid="class_ark_net_1_1_core_1_1_network_api_1a7be8a1a0bb21668cb726dd81fa4f8696" compoundref="_network_api_8cs" startline="70">ArkNet.Core.NetworkApi.Instance</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_service_1a0ca5fdcaac1114d6d1570d5421faff4f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; List&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_post_response" kindref="compound">ArkTransactionPostResponse</ref> &gt; &gt;</type>
+        <definition>static async Task&lt;List&lt;ArkTransactionPostResponse&gt; &gt; ArkNet.Service.TransactionService.MultipleBroadCastAsync</definition>
+        <argsstring>(TransactionApi transaction)</argsstring>
+        <name>MultipleBroadCastAsync</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref></type>
+          <declname>transaction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="136" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="136" bodyend="146"/>
+        <references refid="class_ark_net_1_1_core_1_1_network_api_1ac4aa22683af29cf89deb02ef8af74517" compoundref="_network_api_8cs" startline="87" endline="90">ArkNet.Core.NetworkApi.GetRandomPeer</references>
+        <references refid="class_ark_net_1_1_core_1_1_network_api_1a7be8a1a0bb21668cb726dd81fa4f8696" compoundref="_network_api_8cs" startline="70">ArkNet.Core.NetworkApi.Instance</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" line="12" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Service/TransactionService.cs" bodystart="11" bodyend="147"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a796c8c641457b5bebdb0d45618b868aa" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetAll</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a40fbfbc2d737b8452c597758f243b06c" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetAllAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1aca7c8a8d2ebef3141c030d00271407c3" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetById</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1acef2a21de4e3cebac10fa4419f2b83dd" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetByIdAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1aa3308a34d3af058a8afacefa3e8ac987" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetTransactions</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a8d0856f19b70de2772c6ccecb8b63cd5" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetTransactions</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1ac041ae9246bb79f569fd4d993c190858" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetTransactionsAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a44eb7ff4889aec6ee2529486b87194af" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetTransactionsAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1acc059aef5771ad450a3cd54d9e7b4dbc" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetUnconfirmedAll</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a6c90218bdc1182d141cc1f6f89b72fb8" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetUnconfirmedAllAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a239a45f291035dd2fb3093a80f9c520d" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetUnConfirmedById</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a6ff507350df9cff6aeb74c196910e2c4" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetUnConfirmedByIdAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a8252cbd23e3f2f161ad095f8b9bfbb6c" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetUnconfirmedTransactions</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a7aaea0ace2dc1d9522b279c432f6eeaa" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetUnconfirmedTransactions</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a0b3d8a6e7ff77332965e3d68ecbdc881" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetUnconfirmedTransactionsAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1ac86b82a00d3952deee6cedc219826e70" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>GetUnconfirmedTransactionsAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a1640e3515958b4f5731b5b4b0b66fe2c" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>MultipleBroadCast</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a0ca5fdcaac1114d6d1570d5421faff4f" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>MultipleBroadCastAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a275a582fb938f3a8bae4595b15a5483f" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>PostTransaction</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_service_1a8ce79f373c4d13c504d333862ee52ebd" prot="public" virt="non-virtual"><scope>ArkNet::Service::TransactionService</scope><name>PostTransactionAsync</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

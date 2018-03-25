@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_tests_1_1_ark_net_api_tests" kind="class" prot="public">
+    <compoundname>ArkNet::Tests::ArkNetApiTests</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_tests_1_1_ark_net_api_tests_1ac0efc96292a8c2d745d22a6611c399b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Tests.ArkNetApiTests.StartTest</definition>
+        <argsstring>()</argsstring>
+        <name>StartTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/ArkNetApiTests.cs" line="11" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/ArkNetApiTests.cs" bodystart="11" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/ArkNetApiTests.cs" line="9" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/ArkNetApiTests.cs" bodystart="8" bodyend="17"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_tests_1_1_ark_net_api_tests_1ac0efc96292a8c2d745d22a6611c399b8" prot="public" virt="non-virtual"><scope>ArkNet::Tests::ArkNetApiTests</scope><name>StartTest</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

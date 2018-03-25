@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_ark_net_1_1_controller" kind="namespace">
+    <compoundname>ArkNet::Controller</compoundname>
+    <innerclass refid="class_ark_net_1_1_controller_1_1_account_controller" prot="public">ArkNet::Controller::AccountController</innerclass>
+    <innerclass refid="class_ark_net_1_1_controller_1_1_wallet_controller" prot="public">ArkNet::Controller::WalletController</innerclass>
+    <innernamespace refid="namespace_ark_net_1_1_controller_1_1_tests">ArkNet::Controller::Tests</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="38" column="1"/>
+  </compounddef>
+</doxygen>

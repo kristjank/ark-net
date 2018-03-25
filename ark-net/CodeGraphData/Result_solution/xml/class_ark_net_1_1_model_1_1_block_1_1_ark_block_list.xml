@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_model_1_1_block_1_1_ark_block_list" kind="class" prot="public">
+    <compoundname>ArkNet::Model::Block::ArkBlockList</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base" prot="public" virt="non-virtual">ArkNet.Model.BaseModels.ArkResponseBase</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_block_1_1_ark_block_list_1a917a6ad93879fe48d23d8b9895eef700" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; <ref refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block" kindref="compound">ArkBlock</ref> &gt;</type>
+        <definition>List&lt;ArkBlock&gt; ArkNet.Model.Block.ArkBlockList.Blocks</definition>
+        <argsstring></argsstring>
+        <name>Blocks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockList.cs" line="8" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockList.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="61">
+        <label>ArkResponseBase</label>
+        <link refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base"/>
+      </node>
+      <node id="60">
+        <label>ArkNet.Model.Block.ArkBlockList</label>
+        <link refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_list"/>
+        <childnode refid="61" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="63">
+        <label>ArkResponseBase</label>
+        <link refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base"/>
+      </node>
+      <node id="62">
+        <label>ArkNet.Model.Block.ArkBlockList</label>
+        <link refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_list"/>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockList.cs" line="7" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockList.cs" bodystart="6" bodyend="9"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_list_1a917a6ad93879fe48d23d8b9895eef700" prot="public" virt="non-virtual"><scope>ArkNet::Model::Block::ArkBlockList</scope><name>Blocks</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a0896cd002de13aec6fdaa8df57fe1242" prot="public" virt="non-virtual"><scope>ArkNet::Model::Block::ArkBlockList</scope><name>Error</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a45c8e8b131e7d1d9b401ea6972fa3256" prot="public" virt="non-virtual"><scope>ArkNet::Model::Block::ArkBlockList</scope><name>Message</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a218fcfef6e7a12abd3e8a29d90899fb5" prot="public" virt="non-virtual"><scope>ArkNet::Model::Block::ArkBlockList</scope><name>Success</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

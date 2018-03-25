@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ArkNetApi.cs" company="Ark Labs">
+// <copyright file="ArkNetApi.cs" company="Ark">
 //   MIT License
 // 
 // Copyright (c) 2017 Kristjan Košič
@@ -43,7 +43,7 @@ namespace ArkNet
     using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
-    /// ARK API.
+    /// ARK API's entry.
     /// </summary>
     public sealed class ArkNetApi
     {

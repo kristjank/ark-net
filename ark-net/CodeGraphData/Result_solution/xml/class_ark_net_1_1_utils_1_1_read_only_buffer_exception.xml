@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_utils_1_1_read_only_buffer_exception" kind="class" prot="package">
+    <compoundname>ArkNet::Utils::ReadOnlyBufferException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_read_only_buffer_exception_1ac49e393fed3b6cbdc96a6190a0c6868c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Utils.ReadOnlyBufferException.ReadOnlyBufferException</definition>
+        <argsstring>()</argsstring>
+        <name>ReadOnlyBufferException</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BufferExceptions.cs" line="86" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BufferExceptions.cs" bodystart="86" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="369">
+        <label>Exception</label>
+      </node>
+      <node id="368">
+        <label>ArkNet.Utils.ReadOnlyBufferException</label>
+        <link refid="class_ark_net_1_1_utils_1_1_read_only_buffer_exception"/>
+        <childnode refid="369" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="371">
+        <label>Exception</label>
+      </node>
+      <node id="370">
+        <label>ArkNet.Utils.ReadOnlyBufferException</label>
+        <link refid="class_ark_net_1_1_utils_1_1_read_only_buffer_exception"/>
+        <childnode refid="371" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BufferExceptions.cs" line="85" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BufferExceptions.cs" bodystart="84" bodyend="101"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_utils_1_1_read_only_buffer_exception_1ac49e393fed3b6cbdc96a6190a0c6868c" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ReadOnlyBufferException</scope><name>ReadOnlyBufferException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

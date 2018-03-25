@@ -1,0 +1,688 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_utils_1_1_buffer" kind="class" prot="public">
+    <compoundname>ArkNet::Utils::Buffer</compoundname>
+    <derivedcompoundref refid="class_ark_net_1_1_utils_1_1_byte_buffer" prot="public" virt="non-virtual">ArkNet.Utils.ByteBuffer</derivedcompoundref>
+    <derivedcompoundref refid="class_ark_net_1_1_utils_1_1_int64_buffer" prot="public" virt="non-virtual">ArkNet.Utils.Int64Buffer</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_buffer_1a583dca4de4846fec0e3ec29ff6d0ed8d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Buffer.mark</definition>
+        <argsstring></argsstring>
+        <name>mark</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="38" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_buffer_1ae577fe56b39563a7b28367bd26c3cab0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Buffer.position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="39" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_buffer_1af2c0d208e27cf8e75425cc37f106ded1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Buffer.capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="40" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_buffer_1a6929486fc960a2ea00be8d43d719d8be" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Buffer.limit</definition>
+        <argsstring></argsstring>
+        <name>limit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="41" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_buffer_1a394f7099f296c364f7892bad75759534" prot="package" static="no" mutable="no">
+        <type>long</type>
+        <definition>long ArkNet.Utils.Buffer.address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="46" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_buffer_1ae9d06258697fb58464880ac6d8787e1a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Buffer.Capacity</definition>
+        <argsstring></argsstring>
+        <name>Capacity</name>
+        <briefdescription>
+<para>Returns this buffer&apos;s capacity. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="71" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_buffer_1a03a21806f9c0a830b50cd59695cb6fe5" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Buffer.Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <briefdescription>
+<para>Returns this buffer&apos;s position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="79" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="80" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_utils_1_1_int64_buffer_1af4eceaa9a6e2fbd182f4a49b15d93bc6" compoundref="_long_buffer_8cs" startline="242" endline="252">ArkNet.Utils.Int64Buffer.CompareTo</referencedby>
+        <referencedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a6e29d2ba40905e92358a3b3c3357f795" compoundref="_byte_buffer_8cs" startline="504" endline="514">ArkNet.Utils.ByteBuffer.CompareTo</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_buffer_1a3d42dd2c8b82c44b665a9ea00f0b706f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Buffer.Limit</definition>
+        <argsstring></argsstring>
+        <name>Limit</name>
+        <briefdescription>
+<para>Returns this buffer&apos;s limit. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="105" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="106" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a5c6ca22b420443c47211d0f86b112cb0" compoundref="_long_buffer_8cs" startline="221" endline="235">ArkNet.Utils.Int64Buffer.Equals</referencedby>
+        <referencedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aea25f8a20b377025abc87dbd70ee0198" compoundref="_byte_buffer_8cs" startline="483" endline="497">ArkNet.Utils.ByteBuffer.Equals</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_buffer_1a5d297c0fdabec4cb6075a9f7738d2ed4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Buffer.Remaining</definition>
+        <argsstring></argsstring>
+        <name>Remaining</name>
+        <briefdescription>
+<para>Returns the number of elements between the current position and the limit. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="245" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="246" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a5c6ca22b420443c47211d0f86b112cb0" compoundref="_long_buffer_8cs" startline="221" endline="235">ArkNet.Utils.Int64Buffer.Equals</referencedby>
+        <referencedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aea25f8a20b377025abc87dbd70ee0198" compoundref="_byte_buffer_8cs" startline="483" endline="497">ArkNet.Utils.ByteBuffer.Equals</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_buffer_1aafbf13f4ebad487267cc526f2737cb37" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>bool</type>
+        <definition>bool ArkNet.Utils.Buffer.HasRemaining</definition>
+        <argsstring></argsstring>
+        <name>HasRemaining</name>
+        <briefdescription>
+<para>Tells whether there are any elements between the current position and the limit. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="254" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_buffer_1a89031e2267686d24dda0ae878d6a5413" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>abstract bool</type>
+        <definition>abstract bool ArkNet.Utils.Buffer.IsReadOnly</definition>
+        <argsstring></argsstring>
+        <name>IsReadOnly</name>
+        <briefdescription>
+<para>Tells whether or not this buffer is read-only. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if, and only if, this buffer is read-only </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="265" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_buffer_1a4c4683dbf720cadee717b61da2f1db59" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>abstract bool</type>
+        <definition>abstract bool ArkNet.Utils.Buffer.HasArray</definition>
+        <argsstring></argsstring>
+        <name>HasArray</name>
+        <briefdescription>
+<para>Tells whether or not this buffer is backed by an accessible array. </para>        </briefdescription>
+        <detaileddescription>
+<para>If this method returns <computeroutput>true</computeroutput> then the <ref refid="class_ark_net_1_1_utils_1_1_buffer_1a5dcbaea62fa89275bf8a8ac975c15451" kindref="member">Array</ref> and <ref refid="class_ark_net_1_1_utils_1_1_buffer_1aafc41a65e59e3b9f92c6c029eec837ef" kindref="member">ArrayOffset</ref> properties may be safely invoked. </para><para><simplesect kind="return"><para><computeroutput>true</computeroutput> if, and only if, this buffer is backed by an array and is not read-only </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="279" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_buffer_1a5dcbaea62fa89275bf8a8ac975c15451" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>abstract object</type>
+        <definition>abstract object ArkNet.Utils.Buffer.Array</definition>
+        <argsstring></argsstring>
+        <name>Array</name>
+        <briefdescription>
+<para>Returns the array that backs this buffer<nonbreakablespace/><nonbreakablespace/><emphasis>(optional operation)</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>This property is intended to allow array-backed buffers to be passed to native code more efficiently. Concrete subclasses provide more strongly-typed return values for this property. </para><para>Modifications to this buffer&apos;s content will cause the returned array&apos;s content to be modified, and vice versa. </para><para>Check the <ref refid="class_ark_net_1_1_utils_1_1_buffer_1a4c4683dbf720cadee717b61da2f1db59" kindref="member">HasArray</ref> property before using this property in order to ensure that this buffer has an accessible backing array. </para><para><simplesect kind="return"><para>The array that backs this buffer </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_ark_net_1_1_utils_1_1_read_only_buffer_exception" kindref="compound">ReadOnlyBufferException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If this buffer is backed by an array but is read-only</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If this buffer is not backed by an accessible array</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="305" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_buffer_1aafc41a65e59e3b9f92c6c029eec837ef" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>abstract int</type>
+        <definition>abstract int ArkNet.Utils.Buffer.ArrayOffset</definition>
+        <argsstring></argsstring>
+        <name>ArrayOffset</name>
+        <briefdescription>
+<para>Returns the offset within this buffer&apos;s backing array of the first element of the buffer<nonbreakablespace/><nonbreakablespace/><emphasis>(optional operation)</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+<para>If this buffer is backed by an array then buffer position <computeroutput>p</computeroutput> corresponds to array index <computeroutput>p</computeroutput><nonbreakablespace/>+<nonbreakablespace/><ref refid="class_ark_net_1_1_utils_1_1_buffer_1aafc41a65e59e3b9f92c6c029eec837ef" kindref="member">ArrayOffset</ref><computeroutput>. </computeroutput></para><para><computeroutput> </computeroutput></para><para><computeroutput> Check the <ref refid="class_ark_net_1_1_utils_1_1_buffer_1a4c4683dbf720cadee717b61da2f1db59" kindref="member">HasArray</ref> property before using this property in order to ensure that this buffer has an accessible backing array. </computeroutput></para><para><computeroutput> </computeroutput></para><para><computeroutput> <simplesect kind="return"><para>The offset within this buffer&apos;s array of the first element of the buffer </para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_ark_net_1_1_utils_1_1_read_only_buffer_exception" kindref="compound">ReadOnlyBufferException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If this buffer is backed by an array but is read-only</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvalidOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If this buffer is not backed by an accessible array</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</computeroutput></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="328" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_buffer_1a1a4faaddfd8e7c783046afdc4ff4cb72" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>abstract bool</type>
+        <definition>abstract bool ArkNet.Utils.Buffer.IsDirect</definition>
+        <argsstring></argsstring>
+        <name>IsDirect</name>
+        <briefdescription>
+<para>Tells whether or not this buffer is <computeroutput>direct</computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>true</computeroutput> if, and only if, this buffer is direct</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="334" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="334" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer_1a1d8882ecf95a2862bca0cf2e40438864" compoundref="_long_buffer_8cs" startline="411" endline="438">ArkNet.Utils.Int64Buffer.HeapInt64Buffer.Put</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_buffer_1a3c74e9ca4fe5e69228e9d31d32a61540" prot="package" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Buffer.MarkValue</definition>
+        <argsstring></argsstring>
+        <name>MarkValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="402" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1a550e01295a8cd74f7f75e9f803bc3a4e" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Utils.Buffer.Buffer</definition>
+        <argsstring>(int mark, int pos, int lim, int cap)</argsstring>
+        <name>Buffer</name>
+        <param>
+          <type>int</type>
+          <declname>mark</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lim</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cap</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new buffer with the given mark, position, limit, and capacity, after checking invariants. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="52" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="52" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1ab36e2a5488eeebfc9b333c88a58f6c2a" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Buffer.NextGetIndex</definition>
+        <argsstring>()</argsstring>
+        <name>NextGetIndex</name>
+        <briefdescription>
+<para>Checks the current position against the limit, throwing a <ref refid="class_ark_net_1_1_utils_1_1_buffer_underflow_exception" kindref="compound">BufferUnderflowException</ref> if it is not smaller than the limit, and then increments the position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The current position value, before it is incremented</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="344" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="344" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1a60c9cf9b3ad29ca1700e1816c932b5f0" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Buffer.NextGetIndex</definition>
+        <argsstring>(int nb)</argsstring>
+        <name>NextGetIndex</name>
+        <param>
+          <type>int</type>
+          <declname>nb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="351" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="351" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1afc1fab6ad275be830ace01c6c75a8fd6" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Buffer.NextPutIndex</definition>
+        <argsstring>()</argsstring>
+        <name>NextPutIndex</name>
+        <briefdescription>
+<para>Checks the current position against the limit, throwing a <ref refid="class_ark_net_1_1_utils_1_1_buffer_overflow_exception" kindref="compound">BufferOverflowException</ref> if it is not smaller than the limit, and then increments the position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The current position value, before it is incremented</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="366" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="366" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1a94bf8c7deb0fceec1d854d2169b75308" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Buffer.NextPutIndex</definition>
+        <argsstring>(int nb)</argsstring>
+        <name>NextPutIndex</name>
+        <param>
+          <type>int</type>
+          <declname>nb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="373" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="373" bodyend="380"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1ab493f971a3e54077aea1a56b72fb59bc" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Buffer.CheckIndex</definition>
+        <argsstring>(int i)</argsstring>
+        <name>CheckIndex</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Checks the given index against the limit, throwing an IndexOutOfRangeException if it is not smaller than the limit or is smaller than zero. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="388" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="388" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1ac247aa2011b60f5d907a56b56042dcab" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Buffer.CheckIndex</definition>
+        <argsstring>(int i, int nb)</argsstring>
+        <name>CheckIndex</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="395" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="395" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1a5b9370282402858e0fbe512deb36ddd5" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Utils.Buffer.Truncate</definition>
+        <argsstring>()</argsstring>
+        <name>Truncate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="407" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="407" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1ae5692ae15f3e7fef621fc524b334c007" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Utils.Buffer.DiscardMark</definition>
+        <argsstring>()</argsstring>
+        <name>DiscardMark</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="415" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="415" bodyend="418"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1ab922d6c7ab868bb665dbc26e5910b230" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_utils_1_1_buffer" kindref="compound">Buffer</ref></type>
+        <definition>Buffer ArkNet.Utils.Buffer.SetPosition</definition>
+        <argsstring>(int newPosition)</argsstring>
+        <name>SetPosition</name>
+        <param>
+          <type>int</type>
+          <declname>newPosition</declname>
+        </param>
+        <briefdescription>
+<para>Sets this buffer&apos;s position. If the mark is defined and larger than the new position then it is discarded. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newPosition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new position value; must be non-negative and no larger than the current limit</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This buffer</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the preconditions on <emphasis>newPosition</emphasis>  do not hold</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="92" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="92" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1a0b468e981e7d5f6b155897b6446fe763" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_utils_1_1_buffer" kindref="compound">Buffer</ref></type>
+        <definition>Buffer ArkNet.Utils.Buffer.SetLimit</definition>
+        <argsstring>(int newLimit)</argsstring>
+        <name>SetLimit</name>
+        <param>
+          <type>int</type>
+          <declname>newLimit</declname>
+        </param>
+        <briefdescription>
+<para>Sets this buffer&apos;s limit. If the position is larger than the new limit then it is set to the new limit. If the mark is defined and larger than the new limit then it is discarded. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newLimit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new limit value; must be non-negative and no larger than this buffer&apos;s capacity</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>This buffer</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the preconditions on <emphasis>newLimit</emphasis>  do not hold</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="119" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="119" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1afad062dd1e5b85f340af9989d75a97e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_utils_1_1_buffer" kindref="compound">Buffer</ref></type>
+        <definition>Buffer ArkNet.Utils.Buffer.Mark</definition>
+        <argsstring>()</argsstring>
+        <name>Mark</name>
+        <briefdescription>
+<para>Sets this buffer&apos;s mark at its position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>This buffer</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="133" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="133" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1a61a82b00db3da7957da21e438e707503" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_utils_1_1_buffer" kindref="compound">Buffer</ref></type>
+        <definition>Buffer ArkNet.Utils.Buffer.Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+<para>Resets this buffer&apos;s position to the previously-marked position. </para>        </briefdescription>
+        <detaileddescription>
+<para>Invoking this method neither changes nor discards the mark&apos;s value. </para><para><simplesect kind="return"><para>This buffer</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_ark_net_1_1_utils_1_1_invalid_mark_exception" kindref="compound">InvalidMarkException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the mark has not been set</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="149" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="149" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1ace312eff12b1a9fd2a223abea15c733c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_utils_1_1_buffer" kindref="compound">Buffer</ref></type>
+        <definition>Buffer ArkNet.Utils.Buffer.Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+<para>Clears this buffer. The position is set to zero, the limit is set to the capacity, and the mark is discarded. </para>        </briefdescription>
+        <detaileddescription>
+<para>Invoke this method before using a sequence of channel-read or <computeroutput>Put</computeroutput> operations to fill this buffer. For example:</para><para><computeroutput> buf.Clear(); // Prepare buffer for reading in.Read(buf); // Read data </computeroutput> </para><para>This method does not actually erase the data in the buffer, but it is named as if it did because it will most often be used in situations in which that might as well be the case. </para><para><simplesect kind="return"><para>This buffer</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="178" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="178" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1a92a76fdb7b0fb5bab486f73f5375838e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_utils_1_1_buffer" kindref="compound">Buffer</ref></type>
+        <definition>Buffer ArkNet.Utils.Buffer.Flip</definition>
+        <argsstring>()</argsstring>
+        <name>Flip</name>
+        <briefdescription>
+<para>Flips this buffer. The limit is set to the current position and then the position is set to zero. If the mark is defined then it is discarded. </para>        </briefdescription>
+        <detaileddescription>
+<para>After a sequence of channel-read or <computeroutput>Put</computeroutput> operations, invoke this method to prepare for a sequence of channel-write or relative <computeroutput>Get</computeroutput> operations. For example:</para><para><computeroutput> buf.Put(magic); // Prepend header in.Read(buf); // Read data into rest of buffer buf.Flip(); // Flip buffer out.Write(buf); // Write header + data to channel </computeroutput> </para><para>This method is often used in conjunction with the <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a08941fcb791d69aa85e650a6e935f1fb" kindref="member">ByteBuffer.Compact()</ref> method when transferring data from one place to another. </para><para><simplesect kind="return"><para>This buffer</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="209" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="209" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1a41fd1016c914352bcc0965dbd135480d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_utils_1_1_buffer" kindref="compound">Buffer</ref></type>
+        <definition>Buffer ArkNet.Utils.Buffer.Rewind</definition>
+        <argsstring>()</argsstring>
+        <name>Rewind</name>
+        <briefdescription>
+<para>Rewinds this buffer. The position is set to zero and the mark is discarded. </para>        </briefdescription>
+        <detaileddescription>
+<para>Invoke this method before a sequence of channel-write or <computeroutput>Get</computeroutput> operations, assuming that the limit has already been set appropriately. For example:</para><para><computeroutput> out.Write(buf); // Write remaining data buf.Rewind(); // Rewind buffer buf.Get(array); // Copy data into array </computeroutput> </para><para><simplesect kind="return"><para>This buffer</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="234" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="234" bodyend="239"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-static-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_buffer_1a47aa18b17c4c36f1aebc97cf0f21437a" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ArkNet.Utils.Buffer.CheckBounds</definition>
+        <argsstring>(int off, int len, int size)</argsstring>
+        <name>CheckBounds</name>
+        <param>
+          <type>int</type>
+          <declname>off</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="420" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="420" bodyend="424"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class for <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref> and <ref refid="class_ark_net_1_1_utils_1_1_int64_buffer" kindref="compound">Int64Buffer</ref> (ported from Java) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="213">
+        <label>ArkNet.Utils.ByteBuffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_byte_buffer"/>
+        <childnode refid="212" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="215">
+        <label>ArkNet.Utils.ByteBuffer.HeapByteBufferR</label>
+        <link refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r"/>
+        <childnode refid="214" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="214">
+        <label>ArkNet.Utils.ByteBuffer.HeapByteBuffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer"/>
+        <childnode refid="213" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="216">
+        <label>ArkNet.Utils.Int64Buffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_int64_buffer"/>
+        <childnode refid="212" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="212">
+        <label>ArkNet.Utils.Buffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_buffer"/>
+      </node>
+      <node id="218">
+        <label>ArkNet.Utils.Int64Buffer.HeapInt64Buffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_int64_buffer_1_1_heap_int64_buffer"/>
+        <childnode refid="216" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="217">
+        <label>ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer"/>
+        <childnode refid="216" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" line="37" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Buffer.cs" bodystart="36" bodyend="425"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a394f7099f296c364f7892bad75759534" prot="package" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>address</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a5dcbaea62fa89275bf8a8ac975c15451" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>Array</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1aafc41a65e59e3b9f92c6c029eec837ef" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>ArrayOffset</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a550e01295a8cd74f7f75e9f803bc3a4e" prot="package" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>Buffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1af2c0d208e27cf8e75425cc37f106ded1" prot="private" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>capacity</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ae9d06258697fb58464880ac6d8787e1a" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>Capacity</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a47aa18b17c4c36f1aebc97cf0f21437a" prot="package" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>CheckBounds</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ab493f971a3e54077aea1a56b72fb59bc" prot="package" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>CheckIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ac247aa2011b60f5d907a56b56042dcab" prot="package" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>CheckIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ace312eff12b1a9fd2a223abea15c733c" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>Clear</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ae5692ae15f3e7fef621fc524b334c007" prot="package" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>DiscardMark</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a92a76fdb7b0fb5bab486f73f5375838e" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>Flip</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a4c4683dbf720cadee717b61da2f1db59" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>HasArray</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1aafbf13f4ebad487267cc526f2737cb37" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>HasRemaining</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a1a4faaddfd8e7c783046afdc4ff4cb72" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>IsDirect</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a89031e2267686d24dda0ae878d6a5413" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>IsReadOnly</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a3d42dd2c8b82c44b665a9ea00f0b706f" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>Limit</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a6929486fc960a2ea00be8d43d719d8be" prot="private" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>limit</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a583dca4de4846fec0e3ec29ff6d0ed8d" prot="private" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>mark</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1afad062dd1e5b85f340af9989d75a97e7" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>Mark</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a3c74e9ca4fe5e69228e9d31d32a61540" prot="package" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>MarkValue</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ab36e2a5488eeebfc9b333c88a58f6c2a" prot="package" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>NextGetIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a60c9cf9b3ad29ca1700e1816c932b5f0" prot="package" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>NextGetIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1afc1fab6ad275be830ace01c6c75a8fd6" prot="package" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>NextPutIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a94bf8c7deb0fceec1d854d2169b75308" prot="package" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>NextPutIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ae577fe56b39563a7b28367bd26c3cab0" prot="private" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>position</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a03a21806f9c0a830b50cd59695cb6fe5" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>Position</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a5d297c0fdabec4cb6075a9f7738d2ed4" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>Remaining</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a61a82b00db3da7957da21e438e707503" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>Reset</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a41fd1016c914352bcc0965dbd135480d" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>Rewind</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a0b468e981e7d5f6b155897b6446fe763" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>SetLimit</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ab922d6c7ab868bb665dbc26e5910b230" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>SetPosition</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a5b9370282402858e0fbe512deb36ddd5" prot="package" virt="non-virtual"><scope>ArkNet::Utils::Buffer</scope><name>Truncate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

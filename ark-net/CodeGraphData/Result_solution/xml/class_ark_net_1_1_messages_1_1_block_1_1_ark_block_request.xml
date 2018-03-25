@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request" kind="class" prot="public">
+    <compoundname>ArkNet::Messages::Block::ArkBlockRequest</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request" prot="public" virt="non-virtual">ArkNet.Messages.BaseMessages.ArkBaseRequest</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1a95c7e14556fabf82aee52f250e34d1de" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Messages.Block.ArkBlockRequest.GeneratorPublickey</definition>
+        <argsstring></argsstring>
+        <name>GeneratorPublickey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Block/ArkBlockRequest.cs" line="9" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Block/ArkBlockRequest.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1ac73b664ac38bf5ca7e256c128e9ab54b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>long</type>
+        <definition>long ArkNet.Messages.Block.ArkBlockRequest.TotalAmount</definition>
+        <argsstring></argsstring>
+        <name>TotalAmount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Block/ArkBlockRequest.cs" line="12" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Block/ArkBlockRequest.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1af206d6751eb725c8fb2b74a7d72c670c" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Messages.Block.ArkBlockRequest.TotalFee</definition>
+        <argsstring></argsstring>
+        <name>TotalFee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Block/ArkBlockRequest.cs" line="15" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Block/ArkBlockRequest.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1a6e1fed9964ffee1b36ee393a6243930d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Messages.Block.ArkBlockRequest.Reward</definition>
+        <argsstring></argsstring>
+        <name>Reward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Block/ArkBlockRequest.cs" line="18" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Block/ArkBlockRequest.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1af003e36b71ddf5c3ab787d0f533150c9" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Messages.Block.ArkBlockRequest.PreviousBlock</definition>
+        <argsstring></argsstring>
+        <name>PreviousBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Block/ArkBlockRequest.cs" line="21" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Block/ArkBlockRequest.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1a0c329309a49fe713d817b001f22b2ee5" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Messages.Block.ArkBlockRequest.Height</definition>
+        <argsstring></argsstring>
+        <name>Height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Block/ArkBlockRequest.cs" line="24" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Block/ArkBlockRequest.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="65">
+        <label>ArkBaseRequest</label>
+        <link refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request"/>
+      </node>
+      <node id="64">
+        <label>ArkNet.Messages.Block.ArkBlockRequest</label>
+        <link refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request"/>
+        <childnode refid="65" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="67">
+        <label>ArkBaseRequest</label>
+        <link refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request"/>
+      </node>
+      <node id="66">
+        <label>ArkNet.Messages.Block.ArkBlockRequest</label>
+        <link refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request"/>
+        <childnode refid="67" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Block/ArkBlockRequest.cs" line="7" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Block/ArkBlockRequest.cs" bodystart="6" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1a95c7e14556fabf82aee52f250e34d1de" prot="public" virt="non-virtual"><scope>ArkNet::Messages::Block::ArkBlockRequest</scope><name>GeneratorPublickey</name></member>
+      <member refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1a0c329309a49fe713d817b001f22b2ee5" prot="public" virt="non-virtual"><scope>ArkNet::Messages::Block::ArkBlockRequest</scope><name>Height</name></member>
+      <member refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1adbdba54b9bbadd0613883dd35e511291" prot="public" virt="non-virtual"><scope>ArkNet::Messages::Block::ArkBlockRequest</scope><name>Limit</name></member>
+      <member refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a2ef9e95c55080df468d5932a2ec2c580" prot="public" virt="non-virtual"><scope>ArkNet::Messages::Block::ArkBlockRequest</scope><name>Offset</name></member>
+      <member refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a3d5b71d2a3c84aa12f332fc9697f1459" prot="public" virt="non-virtual"><scope>ArkNet::Messages::Block::ArkBlockRequest</scope><name>OrderBy</name></member>
+      <member refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1af003e36b71ddf5c3ab787d0f533150c9" prot="public" virt="non-virtual"><scope>ArkNet::Messages::Block::ArkBlockRequest</scope><name>PreviousBlock</name></member>
+      <member refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a8735ab2882c0c0107785d2269f5a48f3" prot="protected" virt="non-virtual"><scope>ArkNet::Messages::Block::ArkBlockRequest</scope><name>QueryParams</name></member>
+      <member refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1a6e1fed9964ffee1b36ee393a6243930d" prot="public" virt="non-virtual"><scope>ArkNet::Messages::Block::ArkBlockRequest</scope><name>Reward</name></member>
+      <member refid="class_ark_net_1_1_messages_1_1_base_messages_1_1_ark_base_request_1a2072da5620095e60cd0f3bc953d2563f" prot="public" virt="virtual"><scope>ArkNet::Messages::Block::ArkBlockRequest</scope><name>ToQuery</name></member>
+      <member refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1ac73b664ac38bf5ca7e256c128e9ab54b" prot="public" virt="non-virtual"><scope>ArkNet::Messages::Block::ArkBlockRequest</scope><name>TotalAmount</name></member>
+      <member refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request_1af206d6751eb725c8fb2b74a7d72c670c" prot="public" virt="non-virtual"><scope>ArkNet::Messages::Block::ArkBlockRequest</scope><name>TotalFee</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_core_1_1_block" kind="class" prot="public">
+    <compoundname>ArkNet::Core::Block</compoundname>
+    <briefdescription>
+<para>A block in the blockchain. (Implementation is for V2) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Block.cs" line="37" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Block.cs" bodystart="36" bodyend="114"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

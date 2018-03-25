@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_94417c1f9fccdc3c16f3bde0d7c0750d" kind="dir">
+    <compoundname>Messages/Transaction</compoundname>
+    <innerfile refid="_ark_transaction_request_8cs">ArkTransactionRequest.cs</innerfile>
+    <innerfile refid="_ark_unconfirmed_transaction_request_8cs">ArkUnconfirmedTransactionRequest.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Transaction/"/>
+  </compounddef>
+</doxygen>
