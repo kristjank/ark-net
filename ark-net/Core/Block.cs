@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Block.cs" company="Ark Labs">
+// <copyright file="Block.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
