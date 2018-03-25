@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="NetworkApi.cs" company="Ark Labs">
+// <copyright file="NetworkApi.cs" company="Ark">
 // MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
