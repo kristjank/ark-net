@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="WalletController.cs" company="Ark Labs">
+// <copyright file="WalletController.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
