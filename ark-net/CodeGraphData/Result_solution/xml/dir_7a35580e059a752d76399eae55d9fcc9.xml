@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_7a35580e059a752d76399eae55d9fcc9" kind="dir">
+    <compoundname>Utils</compoundname>
+    <innerdir refid="dir_96bbbade6f3bf12badb91b98c4a76c96">Utils/Enum</innerdir>
+    <innerfile refid="_ark_settings_8cs">ArkSettings.cs</innerfile>
+    <innerfile refid="_ark_static_strings_8cs">ArkStaticStrings.cs</innerfile>
+    <innerfile refid="_ark_utils_8cs">ArkUtils.cs</innerfile>
+    <innerfile refid="_base58_8cs">Base58.cs</innerfile>
+    <innerfile refid="_b_c_a_versioned_checksummed_bytes_8cs">BCAVersionedChecksummedBytes.cs</innerfile>
+    <innerfile refid="_b_c_utils_8cs">BCUtils.cs</innerfile>
+    <innerfile refid="_buffer_8cs">Buffer.cs</innerfile>
+    <innerfile refid="_buffer_exceptions_8cs">BufferExceptions.cs</innerfile>
+    <innerfile refid="_byte_buffer_8cs">ByteBuffer.cs</innerfile>
+    <innerfile refid="_byte_order_8cs">ByteOrder.cs</innerfile>
+    <innerfile refid="_long_buffer_8cs">LongBuffer.cs</innerfile>
+    <innerfile refid="_number_8cs">Number.cs</innerfile>
+    <innerfile refid="_number_format_8cs">NumberFormat.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/"/>
+  </compounddef>
+</doxygen>

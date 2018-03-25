@@ -1,0 +1,588 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_controller_1_1_account_controller" kind="class" prot="public">
+    <compoundname>ArkNet::Controller::AccountController</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_controller_1_1_account_controller_1a7db22f7041f479b6a122c22834ae23d5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account" kindref="compound">ArkAccount</ref></type>
+        <definition>ArkAccount ArkNet.Controller.AccountController._account</definition>
+        <argsstring></argsstring>
+        <name>_account</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="47" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_controller_1_1_account_controller_1a266ffed08c93630674678d426ea9f55e" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ArkNet.Controller.AccountController._passPhrase</definition>
+        <argsstring></argsstring>
+        <name>_passPhrase</name>
+        <briefdescription>
+<para>User&apos;s Pass Phrase as a  Mandatory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="53" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_controller_1_1_account_controller_1aff45af02c8f00e2abbf9be02f53a2f7b" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string ArkNet.Controller.AccountController._secondPassPhrase</definition>
+        <argsstring></argsstring>
+        <name>_secondPassPhrase</name>
+        <briefdescription>
+<para>User&apos;s Second Pass Phrase as a  Optional. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="59" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1acdf7f66fed9a0a449ae74b8ab977d32d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Controller.AccountController.AccountController</definition>
+        <argsstring>(string passphrase, string secondPassPhrase=null)</argsstring>
+        <name>AccountController</name>
+        <param>
+          <type>string</type>
+          <declname>passphrase</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>secondPassPhrase</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Initializes a new instance of the <ref refid="class_ark_net_1_1_controller_1_1_account_controller" kindref="compound">AccountController</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>passphrase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User&apos;s Pass Phrase as a  Mandatory. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>secondPassPhrase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User&apos;s Second Pass Phrase as a  Optional. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="72" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="72" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1a65d0aa52f6fb97f992c859ee06a803e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account" kindref="compound">ArkAccount</ref></type>
+        <definition>ArkAccount ArkNet.Controller.AccountController.GetArkAccount</definition>
+        <argsstring>()</argsstring>
+        <name>GetArkAccount</name>
+        <briefdescription>
+<para>Get ark account&apos;s information. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The ArkAccount. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="84" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="84" bodyend="89"/>
+        <references refid="class_ark_net_1_1_ark_net_api_1a3907e8daca5d8dadbff95b00f66a38bb" compoundref="_ark_net_api_8cs" startline="99">ArkNet.ArkNetApi.Instance</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1af38dad201d9d7d72e8f0750eb7ef492f" compoundref="_ark_net_api_8cs" startline="107">ArkNet.ArkNetApi.NetworkSettings</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1a481138660aad7e63f0e2a5993b28c91d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account" kindref="compound">ArkAccount</ref> &gt;</type>
+        <definition>async Task&lt;ArkAccount&gt; ArkNet.Controller.AccountController.GetArkAccountAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetArkAccountAsync</name>
+        <briefdescription>
+<para>Get the informations about the account asynchroneously. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Return an  </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="97" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="97" bodyend="105"/>
+        <references refid="class_ark_net_1_1_ark_net_api_1a3907e8daca5d8dadbff95b00f66a38bb" compoundref="_ark_net_api_8cs" startline="99">ArkNet.ArkNetApi.Instance</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1af38dad201d9d7d72e8f0750eb7ef492f" compoundref="_ark_net_api_8cs" startline="107">ArkNet.ArkNetApi.NetworkSettings</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1a9ba91c49fec8fbaca6d7dc387675bda3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_post_response" kindref="compound">ArkTransactionPostResponse</ref></type>
+        <definition>ArkTransactionPostResponse ArkNet.Controller.AccountController.SendArk</definition>
+        <argsstring>(long satoshiAmount, string recipientAddress, string vendorField)</argsstring>
+        <name>SendArk</name>
+        <param>
+          <type>long</type>
+          <declname>satoshiAmount</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>recipientAddress</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>vendorField</declname>
+        </param>
+        <briefdescription>
+<para>Send Ark from the account to a given recipiend. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>satoshiAmount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount in satoshi (1E-8 Ark) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipientAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the recipied of the Arks. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vendorField</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>64 chars with Ark V1, it will be increased to 256 in V2. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The ArkTransactionPostResponse. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="135" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="135" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1a0ef187ab8968ddf2f518c1269add4285" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_post_response" kindref="compound">ArkTransactionPostResponse</ref> &gt;</type>
+        <definition>async Task&lt;ArkTransactionPostResponse&gt; ArkNet.Controller.AccountController.SendArkAsync</definition>
+        <argsstring>(long satoshiAmount, string recipientAddress, string vendorField)</argsstring>
+        <name>SendArkAsync</name>
+        <param>
+          <type>long</type>
+          <declname>satoshiAmount</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>recipientAddress</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>vendorField</declname>
+        </param>
+        <briefdescription>
+<para>Send Ark from the account to a given recipiend asynchroneously. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>satoshiAmount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount in satoshi (1E-8 Ark) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipientAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the recipied of the Arks. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vendorField</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>64 chars with Ark V1, it will be increased to 256 in V2. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The ArkTransactionPostResponse from the transaction. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="163" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="163" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1af7f2a4810d1c4f3116f62f9166427b0a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_post_response" kindref="compound">ArkTransactionPostResponse</ref> &gt;</type>
+        <definition>List&lt;ArkTransactionPostResponse&gt; ArkNet.Controller.AccountController.SendArkUsingMultiBroadCast</definition>
+        <argsstring>(long satoshiAmount, string recipientAddress, string vendorField)</argsstring>
+        <name>SendArkUsingMultiBroadCast</name>
+        <param>
+          <type>long</type>
+          <declname>satoshiAmount</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>recipientAddress</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>vendorField</declname>
+        </param>
+        <briefdescription>
+<para>Send ark to multiple peers asynchroneously. TODO: Verify that it&apos;s what multi-broadcast means. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>satoshiAmount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount in satoshi (1E-8 Ark) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipientAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the recipient of the Arks. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vendorField</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>64 chars with Ark V1, it will be increased to 256 in V2. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of ArkTransactionPostResponse. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="192" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="192" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1aabda08def421c68a38c0785cc40dfce3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; List&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_post_response" kindref="compound">ArkTransactionPostResponse</ref> &gt; &gt;</type>
+        <definition>async Task&lt;List&lt;ArkTransactionPostResponse&gt; &gt; ArkNet.Controller.AccountController.SendArkUsingMultiBroadCastAsync</definition>
+        <argsstring>(long satoshiAmount, string recipientAddress, string vendorField)</argsstring>
+        <name>SendArkUsingMultiBroadCastAsync</name>
+        <param>
+          <type>long</type>
+          <declname>satoshiAmount</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>recipientAddress</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>vendorField</declname>
+        </param>
+        <briefdescription>
+<para>Send ark to multiple peers asynchroneously. TODO: Verify that it&apos;s what multi-broadcast means. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>satoshiAmount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount in satoshi (1E-8 Ark) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recipientAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the recipient of the Arks. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vendorField</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>64 chars  with Ark V1, It will be increased to 256 in V2. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The Task. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="221" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="221" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1a77033a9b21170bc2435fea63d91cfbc5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_post_response" kindref="compound">ArkTransactionPostResponse</ref></type>
+        <definition>ArkTransactionPostResponse ArkNet.Controller.AccountController.VoteForDelegate</definition>
+        <argsstring>(List&lt; string &gt; votes)</argsstring>
+        <name>VoteForDelegate</name>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>votes</declname>
+        </param>
+        <briefdescription>
+<para>Vote for a delegate. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>votes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TODO The votes. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The ArkTransactionPostResponse of the voting transaction. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="242" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="242" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1a5f1241c7a574ff5ceee09277bcc559eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_post_response" kindref="compound">ArkTransactionPostResponse</ref> &gt;</type>
+        <definition>async Task&lt;ArkTransactionPostResponse&gt; ArkNet.Controller.AccountController.VoteForDelegateAsync</definition>
+        <argsstring>(List&lt; string &gt; votes)</argsstring>
+        <name>VoteForDelegateAsync</name>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>votes</declname>
+        </param>
+        <briefdescription>
+<para>Vote for a delegate asynchroneously. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>votes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TODO The votes. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The ArkTransactionPostResponse of the voting transaction. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="258" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="258" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1a4683555c2faf123bf87350cf4b2e69be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_post_response" kindref="compound">ArkTransactionPostResponse</ref></type>
+        <definition>ArkTransactionPostResponse ArkNet.Controller.AccountController.RegisterAsDelegate</definition>
+        <argsstring>(string username)</argsstring>
+        <name>RegisterAsDelegate</name>
+        <param>
+          <type>string</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+<para>Register as a delegate. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Username registered as a Delegate Name. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The ArkTransactionPostResponse of the Vote. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="274" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="274" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1aa2ef2683bfa328b3ad1bc4dd447c2fe4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_post_response" kindref="compound">ArkTransactionPostResponse</ref> &gt;</type>
+        <definition>async Task&lt;ArkTransactionPostResponse&gt; ArkNet.Controller.AccountController.RegisterAsDelegateAsync</definition>
+        <argsstring>(string username)</argsstring>
+        <name>RegisterAsDelegateAsync</name>
+        <param>
+          <type>string</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+<para>Register as delegate asynchroneously. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Username registered as a Delegate Name. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The Task. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="290" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="290" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1a63690cd2790b39fc1807797a41eff25d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ArkNet.Controller.AccountController.UpdateBalance</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateBalance</name>
+        <briefdescription>
+<para>Fetch the balance from the Network. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The bool indicating if the balance of the account has been updated successfully or not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="303" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="303" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1ab051b33d895ff79a071bd2b35d95e9c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; bool &gt;</type>
+        <definition>async Task&lt;bool&gt; ArkNet.Controller.AccountController.UpdateBalanceAsync</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateBalanceAsync</name>
+        <briefdescription>
+<para>Fetch the balance from the Network asynchroneously. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The bool indicate if the balance has been successfully updated. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="320" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="320" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1a9d480623ecf8a128b99c1f0c5f1ac549" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref></type>
+        <definition>ArkTransactionList ArkNet.Controller.AccountController.GetTransactions</definition>
+        <argsstring>(int offset=0, int limit=50)</argsstring>
+        <name>GetTransactions</name>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>limit</declname>
+          <defval>50</defval>
+        </param>
+        <briefdescription>
+<para>Get transactions from the network. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An unsigned integer that specified the number of records to skip. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An unsigned integer that specifies the maximum number of records. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The ArkTransactionList returned by the network. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="343" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="343" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1ab66c24f5827e5c2bebcc376a45085df2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref> &gt;</type>
+        <definition>async Task&lt;ArkTransactionList&gt; ArkNet.Controller.AccountController.GetTransactionsAsync</definition>
+        <argsstring>(int offset=0, int limit=50)</argsstring>
+        <name>GetTransactionsAsync</name>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>limit</declname>
+          <defval>50</defval>
+        </param>
+        <briefdescription>
+<para>Get the transactions asynchroneously. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An unsigned integer that specified the number of records to skip. Default is &quot;O&quot;. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An unsigned integer that specifies the maximum number of records. Default is 50. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The ArkTransactionList of transactions within the given boundaries. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="362" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="362" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1ad36a09dbe05ff83167daf839434fce25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref></type>
+        <definition>ArkTransactionList ArkNet.Controller.AccountController.GetUnconfirmedTransactions</definition>
+        <argsstring>()</argsstring>
+        <name>GetUnconfirmedTransactions</name>
+        <briefdescription>
+<para>Get all unconfirmed transactions from your account. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The ArkTransactionList of all unconfirmed transactions of the account. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="373" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="373" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_account_controller_1ae0bd3b0c9ac9f45c222ede2673cf0f04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_model_1_1_transactions_1_1_ark_transaction_list" kindref="compound">ArkTransactionList</ref> &gt;</type>
+        <definition>async Task&lt;ArkTransactionList&gt; ArkNet.Controller.AccountController.GetUnconfirmedTransactionsAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetUnconfirmedTransactionsAsync</name>
+        <briefdescription>
+<para>Get all unconfirmed transactions from your account. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The ArkTransactionList of all unconfirmed transactions of the account. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="384" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="384" bodyend="387"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Account controller, used to interract with the account. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>ArkNet.Controller.AccountController</label>
+        <link refid="class_ark_net_1_1_controller_1_1_account_controller"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>_account</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ArkNet.Model.Account.ArkAccount</label>
+        <link refid="class_ark_net_1_1_model_1_1_account_1_1_ark_account"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" line="43" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Controller/AccountController.cs" bodystart="42" bodyend="406"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a7db22f7041f479b6a122c22834ae23d5" prot="private" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>_account</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a266ffed08c93630674678d426ea9f55e" prot="private" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>_passPhrase</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1aff45af02c8f00e2abbf9be02f53a2f7b" prot="private" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>_secondPassPhrase</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1acdf7f66fed9a0a449ae74b8ab977d32d" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>AccountController</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a65d0aa52f6fb97f992c859ee06a803e2" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>GetArkAccount</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a481138660aad7e63f0e2a5993b28c91d" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>GetArkAccountAsync</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a9d480623ecf8a128b99c1f0c5f1ac549" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>GetTransactions</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1ab66c24f5827e5c2bebcc376a45085df2" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>GetTransactionsAsync</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1ad36a09dbe05ff83167daf839434fce25" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>GetUnconfirmedTransactions</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1ae0bd3b0c9ac9f45c222ede2673cf0f04" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>GetUnconfirmedTransactionsAsync</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a4683555c2faf123bf87350cf4b2e69be" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>RegisterAsDelegate</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1aa2ef2683bfa328b3ad1bc4dd447c2fe4" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>RegisterAsDelegateAsync</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a9ba91c49fec8fbaca6d7dc387675bda3" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>SendArk</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a0ef187ab8968ddf2f518c1269add4285" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>SendArkAsync</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1af7f2a4810d1c4f3116f62f9166427b0a" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>SendArkUsingMultiBroadCast</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1aabda08def421c68a38c0785cc40dfce3" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>SendArkUsingMultiBroadCastAsync</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a63690cd2790b39fc1807797a41eff25d" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>UpdateBalance</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1ab051b33d895ff79a071bd2b35d95e9c0" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>UpdateBalanceAsync</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a77033a9b21170bc2435fea63d91cfbc5" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>VoteForDelegate</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_account_controller_1a5f1241c7a574ff5ceee09277bcc559eb" prot="public" virt="non-virtual"><scope>ArkNet::Controller::AccountController</scope><name>VoteForDelegateAsync</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

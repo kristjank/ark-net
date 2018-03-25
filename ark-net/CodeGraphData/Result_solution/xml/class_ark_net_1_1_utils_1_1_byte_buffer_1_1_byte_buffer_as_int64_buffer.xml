@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer" kind="class" prot="package">
+    <compoundname>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_utils_1_1_int64_buffer" prot="public" virt="non-virtual">ArkNet.Utils.Int64Buffer</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1aa03e658bda374da96ac46350162c2789" prot="protected" static="no" mutable="no">
+        <type>readonly <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>readonly ByteBuffer ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.bb</definition>
+        <argsstring></argsstring>
+        <name>bb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1633" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1633" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a1dc9dd7d54d24bf3dbef2d7b97f61e5c" prot="protected" static="no" mutable="no">
+        <type>new readonly int</type>
+        <definition>new readonly int ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1634" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1634" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a6f44b525fa0bfd115b47150393f44557" prot="protected" static="no" mutable="no">
+        <type>readonly bool</type>
+        <definition>readonly bool ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.bigEndian</definition>
+        <argsstring></argsstring>
+        <name>bigEndian</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1635" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1635" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a3db55e57184977c8c20a421f616d9b75" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>override bool</type>
+        <definition>override bool ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.IsDirect</definition>
+        <argsstring></argsstring>
+        <name>IsDirect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1772" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1773" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1aa01ce41e81d7adc0bebd9c1e20d7433a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>override bool</type>
+        <definition>override bool ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.IsReadOnly</definition>
+        <argsstring></argsstring>
+        <name>IsReadOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1780" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1781" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1ab81f88d26b1fbb10349e65a65a4601da" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>override <ref refid="namespace_ark_net_1_1_utils_1a7431c801d882165a29404618de37070a" kindref="member">ByteOrder</ref></type>
+        <definition>override ByteOrder ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.Order</definition>
+        <argsstring></argsstring>
+        <name>Order</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1788" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1789" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a306bee03903522fe5d2486591bb9bbb9" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.ByteBufferAsInt64Buffer</definition>
+        <argsstring>(bool bigEndian, ByteBuffer bb)</argsstring>
+        <name>ByteBufferAsInt64Buffer</name>
+        <param>
+          <type>bool</type>
+          <declname>bigEndian</declname>
+        </param>
+        <param>
+          <type><ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+          <declname>bb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1637" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1637" bodyend="1650"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a51d07cf3c132710188d58c954abf33f2" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.ByteBufferAsInt64Buffer</definition>
+        <argsstring>(bool bigEndian, ByteBuffer bb, int mark, int pos, int lim, int cap, int off)</argsstring>
+        <name>ByteBufferAsInt64Buffer</name>
+        <param>
+          <type>bool</type>
+          <declname>bigEndian</declname>
+        </param>
+        <param>
+          <type><ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+          <declname>bb</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mark</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lim</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cap</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>off</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1652" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1652" bodyend="1660"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1aa25f84f939af9358914fa870bbe52bfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_int64_buffer" kindref="compound">Int64Buffer</ref></type>
+        <definition>override Int64Buffer ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.Slice</definition>
+        <argsstring>()</argsstring>
+        <name>Slice</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a1cd456e42b06a3480086c2c4de9700ee">Slice</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1662" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1662" bodyend="1671"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a804a4669d65f2b0c6731faa52e162c9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_int64_buffer" kindref="compound">Int64Buffer</ref></type>
+        <definition>override Int64Buffer ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.Duplicate</definition>
+        <argsstring>()</argsstring>
+        <name>Duplicate</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a87ca864a53e035a48e8f473ae295eab8">Duplicate</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1673" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1673" bodyend="1682"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a651ec0f258d41fe12cf201a4276b54dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_int64_buffer" kindref="compound">Int64Buffer</ref></type>
+        <definition>override Int64Buffer ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.AsReadOnlyBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>AsReadOnlyBuffer</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a6fa59d61455ca21aa96133a7fac85b52">AsReadOnlyBuffer</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1684" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1684" bodyend="1693"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a171bcac6c1e45cc3e7dc88d8c0ce15c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override long</type>
+        <definition>override long ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.Get</definition>
+        <argsstring>()</argsstring>
+        <name>Get</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a5220433b917477117e787380ad964aaf">Get</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1700" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1700" bodyend="1711"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1ab087a4a2317ea7e91b7bdd491574b5a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override long</type>
+        <definition>override long ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.Get</definition>
+        <argsstring>(int index)</argsstring>
+        <name>Get</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a521e8c9e1e2976af6d42386416878e8c">Get</reimplements>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1713" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1713" bodyend="1724"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a493fc588f31a21b6aa2d230cdc9d7a4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_int64_buffer" kindref="compound">Int64Buffer</ref></type>
+        <definition>override Int64Buffer ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.Put</definition>
+        <argsstring>(long value)</argsstring>
+        <name>Put</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a229ac6742c75fd55b9bf47af3c49f0f6">Put</reimplements>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1726" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1726" bodyend="1730"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a45124eb43ea137ff798ffe6cec8971c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_int64_buffer" kindref="compound">Int64Buffer</ref></type>
+        <definition>override Int64Buffer ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.Put</definition>
+        <argsstring>(int index, long value)</argsstring>
+        <name>Put</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a450de4dddfc10fc5a8a99c1a2a5874fa">Put</reimplements>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1732" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1732" bodyend="1736"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1ac2f3b4adf439d47f88725dd3dc8fc4f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_int64_buffer" kindref="compound">Int64Buffer</ref></type>
+        <definition>override Int64Buffer ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.Compact</definition>
+        <argsstring>()</argsstring>
+        <name>Compact</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_int64_buffer_1abc21adaa6d14a0945864ec03be6dcad5">Compact</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1753" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1753" bodyend="1770"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1afc71f33e39a0e40b5f335936f56db70e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.Ix</definition>
+        <argsstring>(int i)</argsstring>
+        <name>Ix</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1695" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1695" bodyend="1698"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a31c5ffe223500140d7d53658e48949ba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer.PutImpl</definition>
+        <argsstring>(int index, long value)</argsstring>
+        <name>PutImpl</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1738" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1738" bodyend="1750"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>NOTE: This was ByteBufferAsLongBuffer in the JDK </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="237">
+        <label>Int64Buffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_int64_buffer"/>
+        <childnode refid="238" relation="public-inheritance">
+        </childnode>
+        <childnode refid="239" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="239">
+        <label>IComparable&lt; Int64Buffer &gt;</label>
+      </node>
+      <node id="238">
+        <label>Buffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_buffer"/>
+      </node>
+      <node id="236">
+        <label>ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer"/>
+        <childnode refid="237" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="241">
+        <label>Int64Buffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_int64_buffer"/>
+        <childnode refid="242" relation="public-inheritance">
+        </childnode>
+        <childnode refid="243" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="244">
+        <label>ArkNet.Utils.ByteBuffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_byte_buffer"/>
+        <childnode refid="242" relation="public-inheritance">
+        </childnode>
+        <childnode refid="245" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="245">
+        <label>IComparable&lt; ByteBuffer &gt;</label>
+      </node>
+      <node id="243">
+        <label>IComparable&lt; Int64Buffer &gt;</label>
+      </node>
+      <node id="242">
+        <label>Buffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_buffer"/>
+      </node>
+      <node id="240">
+        <label>ArkNet.Utils.ByteBuffer.ByteBufferAsInt64Buffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer"/>
+        <childnode refid="241" relation="public-inheritance">
+        </childnode>
+        <childnode refid="244" relation="usage">
+          <edgelabel>bb</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1632" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1631" bodyend="1792"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a394f7099f296c364f7892bad75759534" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>address</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1af579164c67cd4296a5fda226dcde142d" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Allocate</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1aa87796651c4d7a816e923c29bf6c7e7f" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Array</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a93c9afe0c0f2af61bd39a5ad9b397d2e" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>ArrayOffset</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a651ec0f258d41fe12cf201a4276b54dc" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>AsReadOnlyBuffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1aa03e658bda374da96ac46350162c2789" prot="protected" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>bb</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a6f44b525fa0bfd115b47150393f44557" prot="protected" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>bigEndian</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a550e01295a8cd74f7f75e9f803bc3a4e" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Buffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a306bee03903522fe5d2486591bb9bbb9" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>ByteBufferAsInt64Buffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a51d07cf3c132710188d58c954abf33f2" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>ByteBufferAsInt64Buffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ae9d06258697fb58464880ac6d8787e1a" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Capacity</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a47aa18b17c4c36f1aebc97cf0f21437a" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>CheckBounds</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ab493f971a3e54077aea1a56b72fb59bc" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>CheckIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ac247aa2011b60f5d907a56b56042dcab" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>CheckIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ace312eff12b1a9fd2a223abea15c733c" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Clear</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1ac2f3b4adf439d47f88725dd3dc8fc4f6" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Compact</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1af4eceaa9a6e2fbd182f4a49b15d93bc6" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>CompareTo</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ae5692ae15f3e7fef621fc524b334c007" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>DiscardMark</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a804a4669d65f2b0c6731faa52e162c9f" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Duplicate</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a5c6ca22b420443c47211d0f86b112cb0" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Equals</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a92a76fdb7b0fb5bab486f73f5375838e" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Flip</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a171bcac6c1e45cc3e7dc88d8c0ce15c6" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Get</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1ab087a4a2317ea7e91b7bdd491574b5a1" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Get</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a428e92f2d647cb62cdbb0a13341ecc50" prot="public" virt="virtual" ambiguityscope="ArkNet::Utils::Int64Buffer."><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Get</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1ab76d31c0da11d35718ec92010e7989db" prot="public" virt="virtual" ambiguityscope="ArkNet::Utils::Int64Buffer."><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Get</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a6a89022d9e44b8ffe67d7d0b80e9b06e" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>GetHashCode</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1aaa16f11943c40b4660ef4c7247f96b68" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>HasArray</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1aafbf13f4ebad487267cc526f2737cb37" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>HasRemaining</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a33d718b1efb97517505c9fbe6b9e4935" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>hb</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a45b2217e620c5459214615f07c4821aa" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Int64Buffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1affcf2f854067b58972ca83d49b9f2adc" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Int64Buffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a3db55e57184977c8c20a421f616d9b75" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>IsDirect</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1af7248822493b469afdedce72342154ab" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>isReadOnly</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1aa01ce41e81d7adc0bebd9c1e20d7433a" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>IsReadOnly</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1afc71f33e39a0e40b5f335936f56db70e" prot="protected" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Ix</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a3d42dd2c8b82c44b665a9ea00f0b706f" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Limit</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1afad062dd1e5b85f340af9989d75a97e7" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Mark</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a3c74e9ca4fe5e69228e9d31d32a61540" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>MarkValue</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ab36e2a5488eeebfc9b333c88a58f6c2a" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>NextGetIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a60c9cf9b3ad29ca1700e1816c932b5f0" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>NextGetIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1afc1fab6ad275be830ace01c6c75a8fd6" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>NextPutIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a94bf8c7deb0fceec1d854d2169b75308" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>NextPutIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a1dc9dd7d54d24bf3dbef2d7b97f61e5c" prot="protected" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>offset</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1ab81f88d26b1fbb10349e65a65a4601da" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Order</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a03a21806f9c0a830b50cd59695cb6fe5" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Position</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a493fc588f31a21b6aa2d230cdc9d7a4c" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Put</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a45124eb43ea137ff798ffe6cec8971c3" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Put</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a365c62c6852d45873528edfa94700985" prot="public" virt="virtual" ambiguityscope="ArkNet::Utils::Int64Buffer."><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Put</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a3f922f47aa1a8e7419dd4635d9ec9367" prot="public" virt="virtual" ambiguityscope="ArkNet::Utils::Int64Buffer."><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Put</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a820effc597c6cd1ae4b8ab2cbf6fe6e3" prot="public" virt="non-virtual" ambiguityscope="ArkNet::Utils::Int64Buffer."><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Put</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1a31c5ffe223500140d7d53658e48949ba" prot="private" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>PutImpl</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a5d297c0fdabec4cb6075a9f7738d2ed4" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Remaining</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a61a82b00db3da7957da21e438e707503" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Reset</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a41fd1016c914352bcc0965dbd135480d" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Rewind</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a0b468e981e7d5f6b155897b6446fe763" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>SetLimit</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ab922d6c7ab868bb665dbc26e5910b230" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>SetPosition</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_byte_buffer_as_int64_buffer_1aa25f84f939af9358914fa870bbe52bfa" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Slice</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a96cde343dff3146aea47bdeee304f7aa" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>ToString</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a5b9370282402858e0fbe512deb36ddd5" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Truncate</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a5a141039508eacf9d820f003b89f549c" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Wrap</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_int64_buffer_1a92de68dfb791cd6c9c087ce944102077" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::ByteBufferAsInt64Buffer</scope><name>Wrap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

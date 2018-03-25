@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_851da3db51f5e0bc631b8b0a201d5524" kind="dir">
+    <compoundname>C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests</compoundname>
+    <innerfile refid="_network_tests_8cs">NetworkTests.cs</innerfile>
+    <innerfile refid="_tests_base_8cs">TestsBase.cs</innerfile>
+    <innerfile refid="_transaction_crypto_tests_8cs">TransactionCryptoTests.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/"/>
+  </compounddef>
+</doxygen>

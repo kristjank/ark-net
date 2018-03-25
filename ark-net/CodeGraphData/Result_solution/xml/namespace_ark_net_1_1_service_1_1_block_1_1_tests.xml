@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_ark_net_1_1_service_1_1_block_1_1_tests" kind="namespace">
+    <compoundname>ArkNet::Service::Block::Tests</compoundname>
+    <innerclass refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_async_tests" prot="public">ArkNet::Service::Block::Tests::BlockServiceAsyncTests</innerclass>
+    <innerclass refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests" prot="public">ArkNet::Service::Block::Tests::BlockServiceTests</innerclass>
+    <innerclass refid="class_ark_net_1_1_service_1_1_block_1_1_tests_1_1_block_service_tests_base" prot="public">ArkNet::Service::Block::Tests::BlockServiceTestsBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Block/BlockServiceAsyncTests.cs" line="13" column="1"/>
+  </compounddef>
+</doxygen>

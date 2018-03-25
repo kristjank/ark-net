@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_ark_net" kind="namespace">
+    <compoundname>ArkNet</compoundname>
+    <innerclass refid="class_ark_net_1_1_ark_net_api" prot="public">ArkNet::ArkNetApi</innerclass>
+    <innernamespace refid="namespace_ark_net_1_1_attributes">ArkNet::Attributes</innernamespace>
+    <innernamespace refid="namespace_ark_net_1_1_controller">ArkNet::Controller</innernamespace>
+    <innernamespace refid="namespace_ark_net_1_1_core">ArkNet::Core</innernamespace>
+    <innernamespace refid="namespace_ark_net_1_1_messages">ArkNet::Messages</innernamespace>
+    <innernamespace refid="namespace_ark_net_1_1_model">ArkNet::Model</innernamespace>
+    <innernamespace refid="namespace_ark_net_1_1_service">ArkNet::Service</innernamespace>
+    <innernamespace refid="namespace_ark_net_1_1_tests">ArkNet::Tests</innernamespace>
+    <innernamespace refid="namespace_ark_net_1_1_utils">ArkNet::Utils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="[generated]" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_ark_net_1_1_messages_1_1_block" kind="namespace">
+    <compoundname>ArkNet::Messages::Block</compoundname>
+    <innerclass refid="class_ark_net_1_1_messages_1_1_block_1_1_ark_block_request" prot="public">ArkNet::Messages::Block::ArkBlockRequest</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Messages/Block/ArkBlockRequest.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

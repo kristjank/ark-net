@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_utils_1_1_ark_network_settings" kind="class" prot="public">
+    <compoundname>ArkNet::Utils::ArkNetworkSettings</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_ark_network_settings_1a00b2d3a106a421e71d1cc47199d83680" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Utils.ArkNetworkSettings.Port</definition>
+        <argsstring></argsstring>
+        <name>Port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="5" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_ark_network_settings_1a8708737789d627a0203984f2f9d907d9" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>byte</type>
+        <definition>byte ArkNet.Utils.ArkNetworkSettings.BytePrefix</definition>
+        <argsstring></argsstring>
+        <name>BytePrefix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="6" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="6" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a827283aab48f09988568c838a85f8a92" compoundref="_transaction_api_8cs" startline="189" endline="203">ArkNet.Core.TransactionApi.CreateVote</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_ark_network_settings_1a4352750df83b11e8a1b3cab359789134" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Utils.ArkNetworkSettings.Version</definition>
+        <argsstring></argsstring>
+        <name>Version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="7" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="7" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_ark_net_api_1a7b32e4e7efaefd8dfbeb5dfc5c9b3401" compoundref="_ark_net_api_8cs" startline="150" endline="173">ArkNet.ArkNetApi.SetNetworkSettings</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_ark_network_settings_1a0e2f709a2737824276785919da13f5cd" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Utils.ArkNetworkSettings.NetHash</definition>
+        <argsstring></argsstring>
+        <name>NetHash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="8" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_ark_network_settings_1aa1ca338fc8389c14ca75c35141ff2a1e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Utils.ArkNetworkSettings.MaxNumOfBroadcasts</definition>
+        <argsstring></argsstring>
+        <name>MaxNumOfBroadcasts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="9" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_ark_network_settings_1aa5754057d1ffd29a5777fb20745aa125" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Utils.ArkNetworkSettings.PeerCleaningIntervalInMinutes</definition>
+        <argsstring></argsstring>
+        <name>PeerCleaningIntervalInMinutes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="10" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_ark_network_settings_1a08641a19b5115f8ad1570ef8219b0748" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Utils.ArkNetworkSettings.PeerCleaningHeightThreshold</definition>
+        <argsstring></argsstring>
+        <name>PeerCleaningHeightThreshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="11" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_ark_network_settings_1ac4de1d49fcc42bd3c8e3511f6eb9a007" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Utils.ArkNetworkSettings.MaxRequestRetryCount</definition>
+        <argsstring></argsstring>
+        <name>MaxRequestRetryCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="12" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_core_1_1_peer_api_1abc5946ef6f8e1ad948f1b93601786343" compoundref="_peer_api_8cs" startline="51" endline="89">ArkNet.Core.PeerApi.MakeRequestInternal</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_ark_network_settings_1ad40d2c90cb9ab37ee83147da7c0d6e57" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_ark_net_1_1_utils_1_1_fees" kindref="compound">Fees</ref></type>
+        <definition>Fees ArkNet.Utils.ArkNetworkSettings.Fee</definition>
+        <argsstring></argsstring>
+        <name>Fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="13" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a4a1fe8975f7116e625b8fcf2a49635c0" compoundref="_transaction_api_8cs" startline="205" endline="216">ArkNet.Core.TransactionApi.CreateDelegate</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a312c55d03903d9ac0af2cf82c3cc9f1e" compoundref="_transaction_api_8cs" startline="218" endline="229">ArkNet.Core.TransactionApi.createSecondSignature</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a5de122acd4e3c9b0a89d3a8f27ee6ada" compoundref="_transaction_api_8cs" startline="175" endline="187">ArkNet.Core.TransactionApi.CreateTransaction</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a827283aab48f09988568c838a85f8a92" compoundref="_transaction_api_8cs" startline="189" endline="203">ArkNet.Core.TransactionApi.CreateVote</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_ark_network_settings_1a261083fa567c878674f5540b1a1190f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Utils.ArkNetworkSettings.ArkNetworkSettings</definition>
+        <argsstring>()</argsstring>
+        <name>ArkNetworkSettings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="15" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="4" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="3" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1a261083fa567c878674f5540b1a1190f6" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkNetworkSettings</scope><name>ArkNetworkSettings</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1a8708737789d627a0203984f2f9d907d9" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkNetworkSettings</scope><name>BytePrefix</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1ad40d2c90cb9ab37ee83147da7c0d6e57" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkNetworkSettings</scope><name>Fee</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1aa1ca338fc8389c14ca75c35141ff2a1e" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkNetworkSettings</scope><name>MaxNumOfBroadcasts</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1ac4de1d49fcc42bd3c8e3511f6eb9a007" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkNetworkSettings</scope><name>MaxRequestRetryCount</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1a0e2f709a2737824276785919da13f5cd" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkNetworkSettings</scope><name>NetHash</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1a08641a19b5115f8ad1570ef8219b0748" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkNetworkSettings</scope><name>PeerCleaningHeightThreshold</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1aa5754057d1ffd29a5777fb20745aa125" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkNetworkSettings</scope><name>PeerCleaningIntervalInMinutes</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1a00b2d3a106a421e71d1cc47199d83680" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkNetworkSettings</scope><name>Port</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1a4352750df83b11e8a1b3cab359789134" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkNetworkSettings</scope><name>Version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

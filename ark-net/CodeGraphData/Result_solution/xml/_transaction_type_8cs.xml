@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_transaction_type_8cs" kind="file">
+    <compoundname>TransactionType.cs</compoundname>
+    <innernamespace refid="namespace_ark_net_1_1_utils_1_1_enum">ArkNet::Utils::Enum</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ArkNet.Utils.Enum</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="namespace_ark_net_1_1_utils_1_1_enum_1af73d9d333243cc2949a28b1d63aa77a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespace_ark_net_1_1_utils_1_1_enum_1af73d9d333243cc2949a28b1d63aa77a3" kindref="member">TransactionType</ref><sp/>:<sp/>byte</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_ark_net_1_1_utils_1_1_enum_1af73d9d333243cc2949a28b1d63aa77a3ad16ef1e597871dcb6529d432f643ac0a" kindref="member">SendArk</ref>,</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_ark_net_1_1_utils_1_1_enum_1af73d9d333243cc2949a28b1d63aa77a3a2a1873050809eceba8a4812fd0383657" kindref="member">CreateDelegate</ref>,</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_ark_net_1_1_utils_1_1_enum_1af73d9d333243cc2949a28b1d63aa77a3ae34852e8b2f0b798d5adebbf24cd06f1" kindref="member">VoteDelegate</ref>,</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespace_ark_net_1_1_utils_1_1_enum_1af73d9d333243cc2949a28b1d63aa77a3a27c917e7cd8d47f58cc2b57204cfcf95" kindref="member">MultiSignature</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Enum/TransactionType.cs"/>
+  </compounddef>
+</doxygen>

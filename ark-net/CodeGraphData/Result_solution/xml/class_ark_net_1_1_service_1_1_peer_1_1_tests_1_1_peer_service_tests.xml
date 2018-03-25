@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests" kind="class" prot="public">
+    <compoundname>ArkNet::Service::Peer::Tests::PeerServiceTests</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base" prot="public" virt="non-virtual">ArkNet.Service.Peer.Tests.PeerServiceTestsBase</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_1a348324bc44446bcd6f2d4215d853d834" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Peer.Tests.PeerServiceTests.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Peer/PeerServiceTests.cs" line="17" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Peer/PeerServiceTests.cs" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_1a3a427125ac6f39d83517bc3e1ae86a0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Peer.Tests.PeerServiceTests.GetAllTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Peer/PeerServiceTests.cs" line="23" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Peer/PeerServiceTests.cs" bodystart="23" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_1a2b26b722d11d060df3d7fe97a7c65321" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Peer.Tests.PeerServiceTests.GetPeerTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetPeerTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Peer/PeerServiceTests.cs" line="32" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Peer/PeerServiceTests.cs" bodystart="32" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_1aa56cd9e01fade0cc19a4d1d9688b46ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Peer.Tests.PeerServiceTests.GetPeerStatusTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetPeerStatusTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Peer/PeerServiceTests.cs" line="40" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Peer/PeerServiceTests.cs" bodystart="40" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_1a50202016d66316f4c6b5505aee7e213b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Peer.Tests.PeerServiceTests.SwitchPeerTest</definition>
+        <argsstring>()</argsstring>
+        <name>SwitchPeerTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Peer/PeerServiceTests.cs" line="48" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Peer/PeerServiceTests.cs" bodystart="48" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="358">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="356">
+        <label>ArkNet.Service.Peer.Tests.PeerServiceTests</label>
+        <link refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests"/>
+        <childnode refid="357" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="357">
+        <label>PeerServiceTestsBase</label>
+        <link refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base"/>
+        <childnode refid="358" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="361">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="359">
+        <label>ArkNet.Service.Peer.Tests.PeerServiceTests</label>
+        <link refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests"/>
+        <childnode refid="360" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="360">
+        <label>PeerServiceTestsBase</label>
+        <link refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base"/>
+        <childnode refid="361" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Peer/PeerServiceTests.cs" line="15" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Peer/PeerServiceTests.cs" bodystart="14" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base_1a4197527194d8037f199e202baed0e64e" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Peer::Tests::PeerServiceTests</scope><name>_ip</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base_1ac1acc9e0b477597d4581d4efd065a5ff" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Peer::Tests::PeerServiceTests</scope><name>_port</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base_1af35fa935377fec97a011a21021a12b97" prot="public" virt="non-virtual"><scope>ArkNet::Service::Peer::Tests::PeerServiceTests</scope><name>GetAllResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_1a3a427125ac6f39d83517bc3e1ae86a0d" prot="public" virt="non-virtual"><scope>ArkNet::Service::Peer::Tests::PeerServiceTests</scope><name>GetAllTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base_1a1a009b3a33d7765434d023f32da7fefb" prot="public" virt="non-virtual"><scope>ArkNet::Service::Peer::Tests::PeerServiceTests</scope><name>GetPeerResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base_1a49beff2b1a986ab9461dd7788eb9b3d9" prot="public" virt="non-virtual"><scope>ArkNet::Service::Peer::Tests::PeerServiceTests</scope><name>GetPeerStatusResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_1aa56cd9e01fade0cc19a4d1d9688b46ab" prot="public" virt="non-virtual"><scope>ArkNet::Service::Peer::Tests::PeerServiceTests</scope><name>GetPeerStatusTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_1a2b26b722d11d060df3d7fe97a7c65321" prot="public" virt="non-virtual"><scope>ArkNet::Service::Peer::Tests::PeerServiceTests</scope><name>GetPeerTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_1a348324bc44446bcd6f2d4215d853d834" prot="public" virt="non-virtual"><scope>ArkNet::Service::Peer::Tests::PeerServiceTests</scope><name>Init</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a21cca2e1a214cb2a375e5c8786ed0062" prot="public" virt="non-virtual"><scope>ArkNet::Service::Peer::Tests::PeerServiceTests</scope><name>Initialize</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a0533a9e15637e7b44ba2ecb6f18a28c8" prot="public" virt="non-virtual"><scope>ArkNet::Service::Peer::Tests::PeerServiceTests</scope><name>InitializeAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base_1a948ae326b05734212b14999a0369cedf" prot="public" virt="non-virtual"><scope>ArkNet::Service::Peer::Tests::PeerServiceTests</scope><name>InitializePeerServiceAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_base_1a8d5488d8d8ff58bcd7cf348515e5eba3" prot="public" virt="non-virtual"><scope>ArkNet::Service::Peer::Tests::PeerServiceTests</scope><name>InitializePeerServiceTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_peer_1_1_tests_1_1_peer_service_tests_1a50202016d66316f4c6b5505aee7e213b" prot="public" virt="non-virtual"><scope>ArkNet::Service::Peer::Tests::PeerServiceTests</scope><name>SwitchPeerTest</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a5c7b7233192533ab308a82da929a903c" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Peer::Tests::PeerServiceTests</scope><name>USE_DEV_NET</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

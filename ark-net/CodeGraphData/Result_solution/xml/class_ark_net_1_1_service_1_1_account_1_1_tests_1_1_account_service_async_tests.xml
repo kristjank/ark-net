@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests" kind="class" prot="public">
+    <compoundname>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base" prot="public" virt="non-virtual">ArkNet.Service.Account.Tests.AccountServiceTestsBase</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1ae0cc94363457083cc2b3dfc0863a5fef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Account.Tests.AccountServiceAsyncTests.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" line="16" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a2549d59e38c1fde292ae171e08535329" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Account.Tests.AccountServiceAsyncTests.GetByAddressAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetByAddressAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" line="22" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" bodystart="22" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1addbb5a3309f7dcd43752bb55322d8de0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Account.Tests.AccountServiceAsyncTests.GetByAddressErrorAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetByAddressErrorAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" line="30" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a88a05b7349eee475d6b6b30fd8b30a59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Account.Tests.AccountServiceAsyncTests.GetBalanceAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetBalanceAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" line="38" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" bodystart="38" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1acc7e1042b37cadfe8cd97820b56e63cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Account.Tests.AccountServiceAsyncTests.GetBalanceErrorAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetBalanceErrorAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" line="46" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" bodystart="46" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1ac22c84a4e9cdc99a1e5a068cfb4e257a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Account.Tests.AccountServiceAsyncTests.GetDelegatesAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetDelegatesAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" line="54" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" bodystart="54" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1acbca1238778e432230840edf70a9a238" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Account.Tests.AccountServiceAsyncTests.GetDelegatesErrorAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetDelegatesErrorAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" line="62" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" bodystart="62" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a18310387c6130592d70aa3d2a72f06e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Account.Tests.AccountServiceAsyncTests.GetTopAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetTopAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" line="70" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" bodystart="70" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a3a0d7a3d1bb7878e483b604b653147ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Account.Tests.AccountServiceAsyncTests.GetTopLimitAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetTopLimitAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" line="78" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" bodystart="78" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a193e41d23359432413dc6dcc057206ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Account.Tests.AccountServiceAsyncTests.GetTopRecordsToSkipAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetTopRecordsToSkipAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" line="86" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" bodystart="86" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a9e415cc15d8cf791b552f23235614356" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Account.Tests.AccountServiceAsyncTests.GetTopLimitAndRecordsToSkipAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetTopLimitAndRecordsToSkipAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" line="94" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" bodystart="94" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1ac6e0208acf6968946f094b107a7746b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Account.Tests.AccountServiceAsyncTests.GetTopLimitErrorAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetTopLimitErrorAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" line="102" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" bodystart="102" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12">
+        <label>AccountServiceTestsBase</label>
+        <link refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="11">
+        <label>ArkNet.Service.Account.Tests.AccountServiceAsyncTests</label>
+        <link refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>AccountServiceTestsBase</label>
+        <link refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="14">
+        <label>ArkNet.Service.Account.Tests.AccountServiceAsyncTests</label>
+        <link refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" line="14" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Account/AccountServiceAsyncTests.cs" bodystart="13" bodyend="108"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1ae63eda31f1d313568453b14606b2f85b" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>_address</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a88a05b7349eee475d6b6b30fd8b30a59" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetBalanceAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1acc7e1042b37cadfe8cd97820b56e63cd" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetBalanceErrorAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1aefbd03f0a13b83d415b895867ab5226e" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetBalanceErrorResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1acbe0dd62b9b0413d79f88cbf03ecd181" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetBalanceResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a2549d59e38c1fde292ae171e08535329" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetByAddressAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1addbb5a3309f7dcd43752bb55322d8de0" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetByAddressErrorAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1a869e780d0c108974f8c8301b8baa4d99" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetByAddressErrorResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1af040a9811dd3764982cdd20e13ebab6f" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetByAddressResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1ac22c84a4e9cdc99a1e5a068cfb4e257a" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetDelegatesAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1acbca1238778e432230840edf70a9a238" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetDelegatesErrorAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1a0b1caa313c0d0c154e8529e3f755d2ee" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetDelegatesErrorResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1a4d65b573ce9c648764716978605ca2cf" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetDelegatesResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a18310387c6130592d70aa3d2a72f06e5" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetTopAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a9e415cc15d8cf791b552f23235614356" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetTopLimitAndRecordsToSkipAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1a851f2cb6a274304bffe3bf3c5e1bf845" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetTopLimitAndRecordsToSkipResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a3a0d7a3d1bb7878e483b604b653147ce" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetTopLimitAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1ac6e0208acf6968946f094b107a7746b8" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetTopLimitErrorAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1a6bd1e64afc0552203aed836ebda8886d" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetTopLimitErrorResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1ad084132aed0d8454e4e61f679e45f557" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetTopLimitResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1a193e41d23359432413dc6dcc057206ed" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetTopRecordsToSkipAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1a2835ed864e0c17fee6e4f2cda61c6134" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetTopRecordsToSkipResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1af7253e848e654ac243d7c6f1a3d1cb71" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>GetTopResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_async_tests_1ae0cc94363457083cc2b3dfc0863a5fef" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>Init</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a21cca2e1a214cb2a375e5c8786ed0062" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>Initialize</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1af7055937ced4cdf6fe76c8de08e6f723" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>InitializeAccountServiceAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_account_1_1_tests_1_1_account_service_tests_base_1a72958ab28ad94b70813f2fc53ab0d311" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>InitializeAccountServiceTest</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a0533a9e15637e7b44ba2ecb6f18a28c8" prot="public" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>InitializeAsync</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a5c7b7233192533ab308a82da929a903c" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Account::Tests::AccountServiceAsyncTests</scope><name>USE_DEV_NET</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

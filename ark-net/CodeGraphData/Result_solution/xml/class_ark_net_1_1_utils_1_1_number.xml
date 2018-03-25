@@ -1,0 +1,719 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_utils_1_1_number" kind="class" prot="public">
+    <compoundname>ArkNet::Utils::Number</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_number_1a786ba44068fb83342c42b9d732ffabe9" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int ArkNet.Utils.Number.MIN_RADIX</definition>
+        <argsstring></argsstring>
+        <name>MIN_RADIX</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+<para>Min radix value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="35" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_number_1a283f84ae13268d917e75573ed836f80a" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int ArkNet.Utils.Number.MAX_RADIX</definition>
+        <argsstring></argsstring>
+        <name>MAX_RADIX</name>
+        <initializer>= 36</initializer>
+        <briefdescription>
+<para>Max radix value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="40" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_number_1adffc7b5a32efaa2e66365e80f17e0de8" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string ArkNet.Utils.Number.digits</definition>
+        <argsstring></argsstring>
+        <name>digits</name>
+        <initializer>= &quot;0123456789abcdefghijklmnopqrstuvwxyz&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="45" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1ad592a215fbef7c7fd11395eae0be2b9d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string ArkNet.Utils.Number.ToString</definition>
+        <argsstring>(long number)</argsstring>
+        <name>ToString</name>
+        <param>
+          <type>long</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+<para>Converts a number to System.String. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="52" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="52" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1af2c8b19278faa295a1790c1dd8b2fbd7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>System.String</type>
+        <definition>static System.String ArkNet.Utils.Number.ToString</definition>
+        <argsstring>(float f)</argsstring>
+        <name>ToString</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Converts a number to System.String. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="84" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="84" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a7bf6e1a8438403c600b26841417ebd2d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String ArkNet.Utils.Number.ToString</definition>
+        <argsstring>(long i, int radix)</argsstring>
+        <name>ToString</name>
+        <param>
+          <type>long</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>radix</declname>
+        </param>
+        <briefdescription>
+<para>Converts a number to System.String in the specified radix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A number to be converted.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A radix.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A System.String representation of the number in the specified redix.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="111" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="111" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a3e6f47086cdb9a44e375d7fca14323a4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long ArkNet.Utils.Number.Parse</definition>
+        <argsstring>(System.String s, int radix)</argsstring>
+        <name>Parse</name>
+        <param>
+          <type>System.String</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>radix</declname>
+        </param>
+        <briefdescription>
+<para>Parses a number in the specified radix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An input System.String.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A radix.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The parsed number in the specified radix.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="146" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="146" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a00c54fa70bf5859c47cb056da73c9264" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Utils.Number.URShift</definition>
+        <argsstring>(int number, int bits)</argsstring>
+        <name>URShift</name>
+        <param>
+          <type>int</type>
+          <declname>number</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bits</declname>
+        </param>
+        <briefdescription>
+<para>Performs an unsigned bitwise right shift with the specified number </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_ark_net_1_1_utils_1_1_number" kindref="compound">Number</ref> to operate on</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ammount of bits to shift</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The resulting number from the shift operation</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="188" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="188" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a76ac03a80181835b33c74d64f0960b50" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long ArkNet.Utils.Number.URShift</definition>
+        <argsstring>(long number, int bits)</argsstring>
+        <name>URShift</name>
+        <param>
+          <type>long</type>
+          <declname>number</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bits</declname>
+        </param>
+        <briefdescription>
+<para>Performs an unsigned bitwise right shift with the specified number </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_ark_net_1_1_utils_1_1_number" kindref="compound">Number</ref> to operate on</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ammount of bits to shift</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The resulting number from the shift operation</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="199" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="199" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1aa4bcc41dde4bb0238ef37213ce7018a3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long ArkNet.Utils.Number.ToInt64</definition>
+        <argsstring>(System.String s)</argsstring>
+        <name>ToInt64</name>
+        <param>
+          <type>System.String</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Converts a System.String number to long. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="209" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="209" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a52705a8240ae10d464f04c41c5ea37c3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Utils.Number.NumberOfLeadingZeros</definition>
+        <argsstring>(int num)</argsstring>
+        <name>NumberOfLeadingZeros</name>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="241" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="241" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a6adc5791f7ac0e405ab7bcdf41cb096d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Utils.Number.NumberOfLeadingZeros</definition>
+        <argsstring>(long num)</argsstring>
+        <name>NumberOfLeadingZeros</name>
+        <param>
+          <type>long</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="262" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="262" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1ab199f615b8831c1a8bd6b45e901b0bca" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Utils.Number.NumberOfTrailingZeros</definition>
+        <argsstring>(int num)</argsstring>
+        <name>NumberOfTrailingZeros</name>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="283" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="283" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a7f50538d598812585b4c91e3e4eec267" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Utils.Number.NumberOfTrailingZeros</definition>
+        <argsstring>(long num)</argsstring>
+        <name>NumberOfTrailingZeros</name>
+        <param>
+          <type>long</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="304" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="304" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a6bf4a56ba1f2a06c7fc8a5eca7a577b2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Utils.Number.BitCount</definition>
+        <argsstring>(long num)</argsstring>
+        <name>BitCount</name>
+        <param>
+          <type>long</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="326" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="326" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a9a893b0593fac07fed1e0f1012c8d28b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Utils.Number.Signum</definition>
+        <argsstring>(long a)</argsstring>
+        <name>Signum</name>
+        <param>
+          <type>long</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="339" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="339" bodyend="342"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a0d6bb82ff961985936a2a3c9fac88837" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Utils.Number.BitCount</definition>
+        <argsstring>(int num)</argsstring>
+        <name>BitCount</name>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="345" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="345" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1ae5c6c9e57a1a9e51e6febc450aa68881" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Utils.Number.RotateLeft</definition>
+        <argsstring>(int i, int reps)</argsstring>
+        <name>RotateLeft</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>reps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="356" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="356" bodyend="360"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a2bf6da0ad675561ab8a57e0c6499b892" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Utils.Number.RotateRight</definition>
+        <argsstring>(int i, int reps)</argsstring>
+        <name>RotateRight</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>reps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="362" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="362" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1abb0139c77073ff3603677d35de8e00c6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string ArkNet.Utils.Number.ToBinaryString</definition>
+        <argsstring>(int value)</argsstring>
+        <name>ToBinaryString</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="368" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="368" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a54dff1601787249fa0d01b31440895ba" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float ArkNet.Utils.Number.Int32BitsToSingle</definition>
+        <argsstring>(int value)</argsstring>
+        <name>Int32BitsToSingle</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was intBitsToFloat() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="377" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="377" bodyend="380"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a76d0f77364fd38468c2fe45328a4a676" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Utils.Number.SingleToRawInt32Bits</definition>
+        <argsstring>(float value)</argsstring>
+        <name>SingleToRawInt32Bits</name>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was floatToRawIntBits() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="385" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="385" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1ad15e58a4ec24ce02699e6201e30159ac" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Utils.Number.SingleToInt32Bits</definition>
+        <argsstring>(float value)</argsstring>
+        <name>SingleToInt32Bits</name>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was floatToIntBits() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="394" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="394" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1af4ee4904218f8e18dc93ce24afbd6eb6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long ArkNet.Utils.Number.SingleToInt64Bits</definition>
+        <argsstring>(float value)</argsstring>
+        <name>SingleToInt64Bits</name>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was floatToLongBits() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="408" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="408" bodyend="411"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a555a50c55c7163fe58809b6816198673" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long ArkNet.Utils.Number.DoubleToRawInt64Bits</definition>
+        <argsstring>(double value)</argsstring>
+        <name>DoubleToRawInt64Bits</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was doubleToRawLongBits() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="416" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="416" bodyend="419"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a3bdfdee9eee68aa33a7a4061b05be5e9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long ArkNet.Utils.Number.DoubleToInt64Bits</definition>
+        <argsstring>(double value)</argsstring>
+        <name>DoubleToInt64Bits</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was doubleToLongBits() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="424" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="424" bodyend="432"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1aa7ecbd1fc88f4a608b8efe745b842b26" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>char</type>
+        <definition>static char ArkNet.Utils.Number.FlipEndian</definition>
+        <argsstring>(char x)</argsstring>
+        <name>FlipEndian</name>
+        <param>
+          <type>char</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="437" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="437" bodyend="440"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a8979c907e16cccc38c9e8cb6675317ac" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>short</type>
+        <definition>static short ArkNet.Utils.Number.FlipEndian</definition>
+        <argsstring>(short x)</argsstring>
+        <name>FlipEndian</name>
+        <param>
+          <type>short</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="443" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="443" bodyend="446"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1aaef7742002f0678add15edf6f2db703e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ArkNet.Utils.Number.FlipEndian</definition>
+        <argsstring>(int x)</argsstring>
+        <name>FlipEndian</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="449" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="449" bodyend="452"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1ac6ed3b11128926fc0561742da597a03d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long ArkNet.Utils.Number.FlipEndian</definition>
+        <argsstring>(long x)</argsstring>
+        <name>FlipEndian</name>
+        <param>
+          <type>long</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="455" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="455" bodyend="463"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a814ffdbe367d8a343b2ec962e68bae9d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float ArkNet.Utils.Number.FlipEndian</definition>
+        <argsstring>(float f)</argsstring>
+        <name>FlipEndian</name>
+        <param>
+          <type>float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="466" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="466" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1a63e7443c1d145c23ff8d0c18bd754389" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double ArkNet.Utils.Number.FlipEndian</definition>
+        <argsstring>(double d)</argsstring>
+        <name>FlipEndian</name>
+        <param>
+          <type>double</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="473" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="473" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_number_1ae7ced386afdd351169c1e495662f5086" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool ArkNet.Utils.Number.IsNumber</definition>
+        <argsstring>(this object value)</argsstring>
+        <name>IsNumber</name>
+        <param>
+          <type>this object</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="479" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="479" bodyend="492"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A simple class for number conversions. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" line="31" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/Number.cs" bodystart="30" bodyend="493"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a6bf4a56ba1f2a06c7fc8a5eca7a577b2" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>BitCount</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a0d6bb82ff961985936a2a3c9fac88837" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>BitCount</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1adffc7b5a32efaa2e66365e80f17e0de8" prot="private" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>digits</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a3bdfdee9eee68aa33a7a4061b05be5e9" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>DoubleToInt64Bits</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a555a50c55c7163fe58809b6816198673" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>DoubleToRawInt64Bits</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1aa7ecbd1fc88f4a608b8efe745b842b26" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>FlipEndian</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a8979c907e16cccc38c9e8cb6675317ac" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>FlipEndian</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1aaef7742002f0678add15edf6f2db703e" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>FlipEndian</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1ac6ed3b11128926fc0561742da597a03d" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>FlipEndian</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a814ffdbe367d8a343b2ec962e68bae9d" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>FlipEndian</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a63e7443c1d145c23ff8d0c18bd754389" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>FlipEndian</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a54dff1601787249fa0d01b31440895ba" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>Int32BitsToSingle</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1ae7ced386afdd351169c1e495662f5086" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>IsNumber</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a283f84ae13268d917e75573ed836f80a" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>MAX_RADIX</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a786ba44068fb83342c42b9d732ffabe9" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>MIN_RADIX</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a52705a8240ae10d464f04c41c5ea37c3" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>NumberOfLeadingZeros</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a6adc5791f7ac0e405ab7bcdf41cb096d" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>NumberOfLeadingZeros</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1ab199f615b8831c1a8bd6b45e901b0bca" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>NumberOfTrailingZeros</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a7f50538d598812585b4c91e3e4eec267" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>NumberOfTrailingZeros</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a3e6f47086cdb9a44e375d7fca14323a4" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>Parse</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1ae5c6c9e57a1a9e51e6febc450aa68881" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>RotateLeft</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a2bf6da0ad675561ab8a57e0c6499b892" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>RotateRight</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a9a893b0593fac07fed1e0f1012c8d28b" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>Signum</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1ad15e58a4ec24ce02699e6201e30159ac" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>SingleToInt32Bits</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1af4ee4904218f8e18dc93ce24afbd6eb6" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>SingleToInt64Bits</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a76d0f77364fd38468c2fe45328a4a676" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>SingleToRawInt32Bits</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1abb0139c77073ff3603677d35de8e00c6" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>ToBinaryString</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1aa4bcc41dde4bb0238ef37213ce7018a3" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>ToInt64</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1ad592a215fbef7c7fd11395eae0be2b9d" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>ToString</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1af2c8b19278faa295a1790c1dd8b2fbd7" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>ToString</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a7bf6e1a8438403c600b26841417ebd2d" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>ToString</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a00c54fa70bf5859c47cb056da73c9264" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>URShift</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_number_1a76ac03a80181835b33c74d64f0960b50" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Number</scope><name>URShift</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

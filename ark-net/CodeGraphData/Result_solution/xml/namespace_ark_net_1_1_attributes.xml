@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_ark_net_1_1_attributes" kind="namespace">
+    <compoundname>ArkNet::Attributes</compoundname>
+    <innerclass refid="class_ark_net_1_1_attributes_1_1_ark_query_param_attribute" prot="public">ArkNet::Attributes::ArkQueryParamAttribute</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Attributes/ArkQueryParamAttribute.cs" line="33" column="1"/>
+  </compounddef>
+</doxygen>

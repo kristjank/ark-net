@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction" kind="class" prot="public">
+    <compoundname>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Transaction</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction_1ad80ed7113e1af0d3fd2e17f454823c18" prot="public" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string ArkNet.Utils.ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL</definition>
+        <argsstring></argsstring>
+        <name>GET_ALL</name>
+        <initializer>= &quot;/api/transactions&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" line="56" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction_1a6f72831825138449db7eb569de35daa4" prot="public" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string ArkNet.Utils.ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED</definition>
+        <argsstring></argsstring>
+        <name>GET_ALL_UNCONFIRMED</name>
+        <initializer>= &quot;/api/transactions/unconfirmed&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" line="57" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction_1aae0bb12a9243aca5870542a1d0299200" prot="public" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string ArkNet.Utils.ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID</definition>
+        <argsstring></argsstring>
+        <name>GET_BY_ID</name>
+        <initializer>= &quot;/api/transactions/get?id={0}&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" line="58" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction_1ac8d2b5cbd9b816545de033c95e28f317" prot="public" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string ArkNet.Utils.ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID_UNCONFIRMED</definition>
+        <argsstring></argsstring>
+        <name>GET_BY_ID_UNCONFIRMED</name>
+        <initializer>= &quot;/api/transactions/unconfirmed/get?id={0}&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" line="59" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction_1a8299621adf5c4d8193c54c163f865ca4" prot="public" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string ArkNet.Utils.ArkStaticStrings.ArkApiPaths.Transaction.POST</definition>
+        <argsstring></argsstring>
+        <name>POST</name>
+        <initializer>= &quot;/peer/transactions&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" line="60" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" line="55" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkStaticStrings.cs" bodystart="54" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction_1ad80ed7113e1af0d3fd2e17f454823c18" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Transaction</scope><name>GET_ALL</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction_1a6f72831825138449db7eb569de35daa4" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Transaction</scope><name>GET_ALL_UNCONFIRMED</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction_1aae0bb12a9243aca5870542a1d0299200" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Transaction</scope><name>GET_BY_ID</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction_1ac8d2b5cbd9b816545de033c95e28f317" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Transaction</scope><name>GET_BY_ID_UNCONFIRMED</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_ark_static_strings_1_1_ark_api_paths_1_1_transaction_1a8299621adf5c4d8193c54c163f865ca4" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ArkStaticStrings::ArkApiPaths::Transaction</scope><name>POST</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

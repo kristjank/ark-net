@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_utils_1_1_fees" kind="class" prot="public">
+    <compoundname>ArkNet::Utils::Fees</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_fees_1a6f4bdba9d878ff61b7ced1525350580a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Fees.Send</definition>
+        <argsstring></argsstring>
+        <name>Send</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="27" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a5de122acd4e3c9b0a89d3a8f27ee6ada" compoundref="_transaction_api_8cs" startline="175" endline="187">ArkNet.Core.TransactionApi.CreateTransaction</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_fees_1ab68f4c4a3da02595ddc932637e6b564d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Fees.Vote</definition>
+        <argsstring></argsstring>
+        <name>Vote</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="28" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a827283aab48f09988568c838a85f8a92" compoundref="_transaction_api_8cs" startline="189" endline="203">ArkNet.Core.TransactionApi.CreateVote</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_fees_1a70f1b8fbc78cad0d6f1496e1b932ced4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>long</type>
+        <definition>long ArkNet.Utils.Fees.Delegate</definition>
+        <argsstring></argsstring>
+        <name>Delegate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="29" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a4a1fe8975f7116e625b8fcf2a49635c0" compoundref="_transaction_api_8cs" startline="205" endline="216">ArkNet.Core.TransactionApi.CreateDelegate</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_fees_1a86ba4ece0e2d296571c3d771322019c3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Fees.SecondSignature</definition>
+        <argsstring></argsstring>
+        <name>SecondSignature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="30" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="30" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a312c55d03903d9ac0af2cf82c3cc9f1e" compoundref="_transaction_api_8cs" startline="218" endline="229">ArkNet.Core.TransactionApi.createSecondSignature</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_fees_1a49c8b518155e68faacb1d28c45ad2585" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Utils.Fees.MultiSignature</definition>
+        <argsstring></argsstring>
+        <name>MultiSignature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="31" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" line="26" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ArkSettings.cs" bodystart="25" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_utils_1_1_fees_1a70f1b8fbc78cad0d6f1496e1b932ced4" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Fees</scope><name>Delegate</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_fees_1a49c8b518155e68faacb1d28c45ad2585" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Fees</scope><name>MultiSignature</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_fees_1a86ba4ece0e2d296571c3d771322019c3" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Fees</scope><name>SecondSignature</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_fees_1a6f4bdba9d878ff61b7ced1525350580a" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Fees</scope><name>Send</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_fees_1ab68f4c4a3da02595ddc932637e6b564d" prot="public" virt="non-virtual"><scope>ArkNet::Utils::Fees</scope><name>Vote</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

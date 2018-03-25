@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes" kind="class" prot="public">
+    <compoundname>ArkNet::Utils::BCAVersionedChecksummedBytes</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a71e3d6717de2a2e937cd83736031a8c8" prot="private" static="no" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int ArkNet.Utils.BCAVersionedChecksummedBytes.version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" line="10" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a86a24f3981ec3842e4b28765d1f96319" prot="private" static="no" mutable="no">
+        <type>readonly IReadOnlyList&lt; byte &gt;</type>
+        <definition>readonly IReadOnlyList&lt;byte&gt; ArkNet.Utils.BCAVersionedChecksummedBytes.bytes</definition>
+        <argsstring></argsstring>
+        <name>bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" line="11" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1aaaf296f6f868bbebfd1bb1a6ed1365b2" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int ArkNet.Utils.BCAVersionedChecksummedBytes.Version</definition>
+        <argsstring></argsstring>
+        <name>Version</name>
+        <briefdescription>
+<para>Returns the &quot;version&quot; or &quot;header&quot; byte: the first byte of the data. This is used to disambiguate what the contents apply to, for example, which network the key or address is valid on. </para>        </briefdescription>
+        <detaileddescription>
+<para>A positive number between 0 and 255.</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" line="34" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a962e699d27545d05bd41c20621b1d096" prot="protected" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>IReadOnlyList&lt; byte &gt;</type>
+        <definition>IReadOnlyList&lt;byte&gt; ArkNet.Utils.BCAVersionedChecksummedBytes.Bytes</definition>
+        <argsstring></argsstring>
+        <name>Bytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" line="39" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1af58703356a9128583a1e3898778dcda5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Utils.BCAVersionedChecksummedBytes.BCAVersionedChecksummedBytes</definition>
+        <argsstring>(string encoded)</argsstring>
+        <name>BCAVersionedChecksummedBytes</name>
+        <param>
+          <type>string</type>
+          <declname>encoded</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" line="13" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" bodystart="13" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a353cddb3dc630b6bb60d86d123c944a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Utils.BCAVersionedChecksummedBytes.BCAVersionedChecksummedBytes</definition>
+        <argsstring>(int version, byte[] bytes)</argsstring>
+        <name>BCAVersionedChecksummedBytes</name>
+        <param>
+          <type>int</type>
+          <declname>version</declname>
+        </param>
+        <param>
+          <type>byte[]</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" line="22" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" bodystart="22" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a960f0917e584bfea661b348e59c4713f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override int</type>
+        <definition>override int ArkNet.Utils.BCAVersionedChecksummedBytes.GetHashCode</definition>
+        <argsstring>()</argsstring>
+        <name>GetHashCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" line="44" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a62dd1855c080e7654b69c9b29bc84451" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override bool</type>
+        <definition>override bool ArkNet.Utils.BCAVersionedChecksummedBytes.Equals</definition>
+        <argsstring>(object o)</argsstring>
+        <name>Equals</name>
+        <param>
+          <type>object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" line="49" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" bodystart="49" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a214554bec0a5dc2cfdf505e78aad84ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string ArkNet.Utils.BCAVersionedChecksummedBytes.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" line="60" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" bodystart="60" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" line="9" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/BCAVersionedChecksummedBytes.cs" bodystart="8" bodyend="71"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1af58703356a9128583a1e3898778dcda5" prot="protected" virt="non-virtual"><scope>ArkNet::Utils::BCAVersionedChecksummedBytes</scope><name>BCAVersionedChecksummedBytes</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a353cddb3dc630b6bb60d86d123c944a0" prot="public" virt="non-virtual"><scope>ArkNet::Utils::BCAVersionedChecksummedBytes</scope><name>BCAVersionedChecksummedBytes</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a86a24f3981ec3842e4b28765d1f96319" prot="private" virt="non-virtual"><scope>ArkNet::Utils::BCAVersionedChecksummedBytes</scope><name>bytes</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a962e699d27545d05bd41c20621b1d096" prot="protected" virt="non-virtual"><scope>ArkNet::Utils::BCAVersionedChecksummedBytes</scope><name>Bytes</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a62dd1855c080e7654b69c9b29bc84451" prot="public" virt="non-virtual"><scope>ArkNet::Utils::BCAVersionedChecksummedBytes</scope><name>Equals</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a960f0917e584bfea661b348e59c4713f" prot="public" virt="non-virtual"><scope>ArkNet::Utils::BCAVersionedChecksummedBytes</scope><name>GetHashCode</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a214554bec0a5dc2cfdf505e78aad84ef" prot="public" virt="non-virtual"><scope>ArkNet::Utils::BCAVersionedChecksummedBytes</scope><name>ToString</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1aaaf296f6f868bbebfd1bb1a6ed1365b2" prot="public" virt="non-virtual"><scope>ArkNet::Utils::BCAVersionedChecksummedBytes</scope><name>Version</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_b_c_a_versioned_checksummed_bytes_1a71e3d6717de2a2e937cd83736031a8c8" prot="private" virt="non-virtual"><scope>ArkNet::Utils::BCAVersionedChecksummedBytes</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

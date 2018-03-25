@@ -1,0 +1,1027 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer" kind="class" prot="public">
+    <compoundname>ArkNet::Utils::ByteBuffer::HeapByteBuffer</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_utils_1_1_byte_buffer" prot="public" virt="non-virtual">ArkNet.Utils.ByteBuffer</basecompoundref>
+    <derivedcompoundref refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r" prot="public" virt="non-virtual">ArkNet.Utils.ByteBuffer.HeapByteBufferR</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ac507029bf8eb6cdd3578a070f9b8715a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>override bool</type>
+        <definition>override bool ArkNet.Utils.ByteBuffer.HeapByteBuffer.IsDirect</definition>
+        <argsstring></argsstring>
+        <name>IsDirect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="764" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="765" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a77ae8f81b888aaca329f2026cd1ffca2" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>override bool</type>
+        <definition>override bool ArkNet.Utils.ByteBuffer.HeapByteBuffer.IsReadOnly</definition>
+        <argsstring></argsstring>
+        <name>IsReadOnly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="769" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="770" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a68d4b6a58b70d78be8f877db9296ca35" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Utils.ByteBuffer.HeapByteBuffer.HeapByteBuffer</definition>
+        <argsstring>(int cap, int lim)</argsstring>
+        <name>HeapByteBuffer</name>
+        <param>
+          <type>int</type>
+          <declname>cap</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="671" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="671" bodyend="678"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1adb849dd238bdc5195fb1bba3355dadb8" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Utils.ByteBuffer.HeapByteBuffer.HeapByteBuffer</definition>
+        <argsstring>(int mark, int pos, int lim, int cap)</argsstring>
+        <name>HeapByteBuffer</name>
+        <param>
+          <type>int</type>
+          <declname>mark</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lim</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="680" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="680" bodyend="687"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ab22a1e3cf5542ab5e1bfa0615de8fca1" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Utils.ByteBuffer.HeapByteBuffer.HeapByteBuffer</definition>
+        <argsstring>(byte[] buf, int off, int len)</argsstring>
+        <name>HeapByteBuffer</name>
+        <param>
+          <type>byte[]</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>off</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="689" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="689" bodyend="696"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a209b58fe286e4c73b6e381005967ea66" prot="package" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override byte</type>
+        <definition>override byte ArkNet.Utils.ByteBuffer.HeapByteBuffer._get</definition>
+        <argsstring>(int i)</argsstring>
+        <name>_get</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aebe487db9cffefe6a3cccd7d252f5455">_get</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a5dceaab909676fa7c8cc39cef2a7a491">_get</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="835" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="835" bodyend="838"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1aebd37ee15874a620f53854aa112a6b46" prot="package" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void ArkNet.Utils.ByteBuffer.HeapByteBuffer._put</definition>
+        <argsstring>(int i, byte b)</argsstring>
+        <name>_put</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a2a0d5cf33afccdea1ed29e3a93225726">_put</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a4d3fbb73d382961bfff13e35cca62b13">_put</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="840" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="840" bodyend="843"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a6ccea545da5236f7737d648c496b282f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.Utils.ByteBuffer.HeapByteBuffer.HeapByteBuffer</definition>
+        <argsstring>(byte[] buf, int mark, int pos, int lim, int cap, int off)</argsstring>
+        <name>HeapByteBuffer</name>
+        <param>
+          <type>byte[]</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mark</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lim</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cap</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>off</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="698" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="698" bodyend="707"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1afddfb79f935e6a34ef80a14238e8fa34" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ArkNet.Utils.ByteBuffer.HeapByteBuffer.Ix</definition>
+        <argsstring>(int i)</argsstring>
+        <name>Ix</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="739" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="739" bodyend="742"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a202bc2534679c62e392709b6591209e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.Slice</definition>
+        <argsstring>()</argsstring>
+        <name>Slice</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aaadf21ecd4bc0520849f45f0316d653a">Slice</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a1d3d86d26b0fb86d16d369cf2609d0da">Slice</reimplementedby>
+        <briefdescription>
+<para>Creates a new byte buffer whose content is a shared subsequence of this buffer&apos;s content. </para>        </briefdescription>
+        <detaileddescription>
+<para>The content of the new buffer will start at this buffer&apos;s current position. Changes to this buffer&apos;s content will be visible in the new buffer, and vice versa; the two buffers&apos; position, limit, and mark values will be independent.</para><para>The new buffer&apos;s position will be zero, its capacity and its limit will be the number of bytes remaining in this buffer, and its mark will be undefined. The new buffer will be direct if, and only if, this buffer is direct, and it will be read-only if, and only if, this buffer is read-only. </para><para><simplesect kind="return"><para>The new byte buffer</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="709" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="709" bodyend="717"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1abc80d7e98d5d97c0905d6c57f805fa42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.Duplicate</definition>
+        <argsstring>()</argsstring>
+        <name>Duplicate</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ace818b1e7f356b241f32576423165d19">Duplicate</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1ad22148473778be8f656d1c13534a00eb">Duplicate</reimplementedby>
+        <briefdescription>
+<para>Creates a new byte buffer that shares this buffer&apos;s content. </para>        </briefdescription>
+        <detaileddescription>
+<para>The content of the new buffer will be that of this buffer. Changes to this buffer&apos;s content will be visible in the new buffer, and vice versa; the two buffers&apos; position, limit, and mark values will be independent. </para><para>The new buffer&apos;s capacity, limit, position, and mark values will be identical to those of this buffer. The new buffer will be direct if, and only if, this buffer is direct, and it will be read-only if, and only if, this buffer is read-only. </para><para><simplesect kind="return"><para>The new byte buffer</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="719" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="719" bodyend="727"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a761740bd0f73f9b3ae2d116854a4dcd5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.AsReadOnlyBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>AsReadOnlyBuffer</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a4ff0cd98e0f46fc71bb82d56d2a9b044">AsReadOnlyBuffer</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a2b7fac9b227d3561a4b09f526637f3de">AsReadOnlyBuffer</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="729" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="729" bodyend="737"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a9c2f34defd381b2046277fa8213f05a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override byte</type>
+        <definition>override byte ArkNet.Utils.ByteBuffer.HeapByteBuffer.Get</definition>
+        <argsstring>()</argsstring>
+        <name>Get</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a2338094e82f8db88483dd61dac04de5e">Get</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="744" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="744" bodyend="747"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a7de50820551aea2ec5910e73e98a1693" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override byte</type>
+        <definition>override byte ArkNet.Utils.ByteBuffer.HeapByteBuffer.Get</definition>
+        <argsstring>(int i)</argsstring>
+        <name>Get</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ab058206ca282b60dd6aab612235bbdac">Get</reimplements>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="749" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="749" bodyend="752"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1af914d9112e47b296817603a43a470da6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.Get</definition>
+        <argsstring>(byte[] dst, int offset, int length)</argsstring>
+        <name>Get</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a68779e89b8e68e0ff4224c49188aad2e">Get</reimplements>
+        <param>
+          <type>byte[]</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="754" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="754" bodyend="762"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a1e6148db36823368dc8b928c0160cb32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.Put</definition>
+        <argsstring>(byte x)</argsstring>
+        <name>Put</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a206fb14aaa7af6100eb9dde95614361c">Put</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1addeafc118f1c1fa58b7391820e18f7a1">Put</reimplementedby>
+        <param>
+          <type>byte</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="774" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="774" bodyend="778"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a7772b67dc9ebddfdf40aee09ec3d2915" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.Put</definition>
+        <argsstring>(int i, byte x)</argsstring>
+        <name>Put</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a30e6207ec97ad14383444026521e01dd">Put</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a81e8a66ec13329297c0cd55cc31c8c40">Put</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="780" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="780" bodyend="784"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a9c5a8e7dee92f926a3d3eccbc19eb6cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.Put</definition>
+        <argsstring>(byte[] src, int offset, int length)</argsstring>
+        <name>Put</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1afef575df309ca2de76e8d57f6ff0befc">Put</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a65ea9a5b363ce6a2f0c86588aab81ae2">Put</reimplementedby>
+        <param>
+          <type>byte[]</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="786" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="786" bodyend="794"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ad6b086aa1b8bcf6e8278264107878e3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.Put</definition>
+        <argsstring>(ByteBuffer src)</argsstring>
+        <name>Put</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a6aea99a23a5ef10777622087e3ef9888">Put</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a4cf0f026b87d2e3ec25585b8f254d700">Put</reimplementedby>
+        <param>
+          <type><ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="796" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="796" bodyend="824"/>
+        <references refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a5e1f13012be9a42a4dbf1890e58da6b5" compoundref="_byte_buffer_8cs" startline="458">ArkNet.Utils.ByteBuffer.IsDirect</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ac31ef874efca77df1af4f424ea4aaf24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.Compact</definition>
+        <argsstring>()</argsstring>
+        <name>Compact</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a08941fcb791d69aa85e650a6e935f1fb">Compact</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1aa19c5b05a46586d1c41899de9f2556cb">Compact</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="826" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="826" bodyend="833"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ae9132084f34385cd487db8c536300256" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override char</type>
+        <definition>override char ArkNet.Utils.ByteBuffer.HeapByteBuffer.GetChar</definition>
+        <argsstring>()</argsstring>
+        <name>GetChar</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aadfc547692a173d848df0a647048685a">GetChar</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="846" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="846" bodyend="854"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a1b9362a96b89717a5c250d579ad71739" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override char</type>
+        <definition>override char ArkNet.Utils.ByteBuffer.HeapByteBuffer.GetChar</definition>
+        <argsstring>(int i)</argsstring>
+        <name>GetChar</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a1b2d206e2c2e3913e3e25a47c23c07a1">GetChar</reimplements>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="856" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="856" bodyend="864"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a0b0ff3f7f81b551a1102793aa12a1a77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.PutChar</definition>
+        <argsstring>(char value)</argsstring>
+        <name>PutChar</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1adda159d358e0e56d3b7bf165f77f2842">PutChar</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1afeac5a1e73c4ba94585844b64b64625b">PutChar</reimplementedby>
+        <param>
+          <type>char</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="866" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="866" bodyend="874"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a5e87132f0de5c004565bfb2f92172294" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.PutChar</definition>
+        <argsstring>(int index, char value)</argsstring>
+        <name>PutChar</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ac8d67cbc2c69358314e1f62203a5c78a">PutChar</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a6ac8c377b3c93d2b74f4b242dc3dbad5">PutChar</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="876" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="876" bodyend="884"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1aabf984bef15f346c52cd3f3e4db5d2fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override short</type>
+        <definition>override short ArkNet.Utils.ByteBuffer.HeapByteBuffer.GetInt16</definition>
+        <argsstring>()</argsstring>
+        <name>GetInt16</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aebe8ca9d2f629ad39fed0e8238851dd5">GetInt16</reimplements>
+        <briefdescription>
+<para>NOTE: This was getShort() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="910" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="910" bodyend="918"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a369b3eaae18b9fe899046047faf31588" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override short</type>
+        <definition>override short ArkNet.Utils.ByteBuffer.HeapByteBuffer.GetInt16</definition>
+        <argsstring>(int index)</argsstring>
+        <name>GetInt16</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a056a79770e80feb07c64e1bf64d308a5">GetInt16</reimplements>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was getShort() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="923" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="923" bodyend="931"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a111c0bf41017621eb60909fe6a156073" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.PutInt16</definition>
+        <argsstring>(short value)</argsstring>
+        <name>PutInt16</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a53fa055dbb83ab64d30c6a710eb5175c">PutInt16</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a0faddbbc6a1539b99e535f18555640a7">PutInt16</reimplementedby>
+        <param>
+          <type>short</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was putShort() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="936" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="936" bodyend="944"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a168f7844b6bf5b9b0cbbc84a9830b2a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.PutInt16</definition>
+        <argsstring>(int index, short value)</argsstring>
+        <name>PutInt16</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a38eb7b0e43680312d1411fa38b212f02">PutInt16</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a5616923aebb484b2aab830112d0f7a02">PutInt16</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was putShort() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="950" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="950" bodyend="958"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ae1c04eba80d49f785f5335ee239d1ae8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override int</type>
+        <definition>override int ArkNet.Utils.ByteBuffer.HeapByteBuffer.GetInt32</definition>
+        <argsstring>()</argsstring>
+        <name>GetInt32</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a2d817281bc866aa448f77b606e827bf7">GetInt32</reimplements>
+        <briefdescription>
+<para>NOTE: This was getInt() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="984" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="984" bodyend="992"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a006c9c5341b13c2c020cc3fb2c080277" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override int</type>
+        <definition>override int ArkNet.Utils.ByteBuffer.HeapByteBuffer.GetInt32</definition>
+        <argsstring>(int index)</argsstring>
+        <name>GetInt32</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aaff2b23ae32802fc3a8332926c776c44">GetInt32</reimplements>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was getInt() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="997" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="997" bodyend="1005"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a39fe5c1d2c7240009e8feab4906925f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.PutInt32</definition>
+        <argsstring>(int value)</argsstring>
+        <name>PutInt32</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ab3192f8fe3b004393912104cba67ebf4">PutInt32</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a07140acfdb534fb3e15cf62d6930ef8b">PutInt32</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was putInt() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1010" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1010" bodyend="1020"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a11cf68d32500056ff800c2425ac0aa11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.PutInt32</definition>
+        <argsstring>(int index, int value)</argsstring>
+        <name>PutInt32</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a20b8dd2cbb0fefa3f60282f61cc73341">PutInt32</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a3dd05483896b644ef01d85f60074d8a8">PutInt32</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was putInt() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1025" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1025" bodyend="1035"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a962304b48e2d5f9956f34dce1ee47b5f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override long</type>
+        <definition>override long ArkNet.Utils.ByteBuffer.HeapByteBuffer.GetInt64</definition>
+        <argsstring>()</argsstring>
+        <name>GetInt64</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1afd563374c0b4e8dcc7dfcf4da6a7a46d">GetInt64</reimplements>
+        <briefdescription>
+<para>NOTE: This was getLong() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1061" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1061" bodyend="1069"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1acd2f37b2441d6bb715feb631070196c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override long</type>
+        <definition>override long ArkNet.Utils.ByteBuffer.HeapByteBuffer.GetInt64</definition>
+        <argsstring>(int index)</argsstring>
+        <name>GetInt64</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a006b7694ae9c3ba8385fcd93e1d3a22e">GetInt64</reimplements>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was getLong() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1074" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1074" bodyend="1082"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ae98e6912bbbf91cd6d877db75b90e152" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.PutInt64</definition>
+        <argsstring>(long value)</argsstring>
+        <name>PutInt64</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a1c73c152b52cce4a2799c2e6aebdd1fc">PutInt64</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1abf250131ca25e996f4b434c03b7ac7e8">PutInt64</reimplementedby>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was putLong() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1087" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1087" bodyend="1101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a03d34dc79c52af00b51719858e5d5a6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.PutInt64</definition>
+        <argsstring>(int index, long value)</argsstring>
+        <name>PutInt64</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a40ed0d31b573c68b175acbf0f6f822be">PutInt64</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a40f5e00f6cd4e7f811decc97d4d8c1e2">PutInt64</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was putLong() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1107" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1107" bodyend="1121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a9ecc598566950ae81673b068b43d5e84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_int64_buffer" kindref="compound">Int64Buffer</ref></type>
+        <definition>override Int64Buffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.AsInt64Buffer</definition>
+        <argsstring>()</argsstring>
+        <name>AsInt64Buffer</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a5974692080e631f790aa320b9e18e270">AsInt64Buffer</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a8b3803bf03deb1a5f90837ca5ba5eb06">AsInt64Buffer</reimplementedby>
+        <briefdescription>
+<para>NOTE: This was asLongBuffer() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1126" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1126" bodyend="1151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1aa2cb8fdf10005235f736e8523b44764d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override float</type>
+        <definition>override float ArkNet.Utils.ByteBuffer.HeapByteBuffer.GetSingle</definition>
+        <argsstring>()</argsstring>
+        <name>GetSingle</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a851f75591d3256b1bc6574d6dbfe71e8">GetSingle</reimplements>
+        <briefdescription>
+<para>NOTE: This was getFloat() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1156" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1156" bodyend="1165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1aac847556d89fb130683cdc90fcb09ce8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override float</type>
+        <definition>override float ArkNet.Utils.ByteBuffer.HeapByteBuffer.GetSingle</definition>
+        <argsstring>(int index)</argsstring>
+        <name>GetSingle</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a5c0ba462dbca27378398838414bc5ea1">GetSingle</reimplements>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was getFloat() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1170" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1170" bodyend="1178"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a3994428499aba6d84be906385a9e1039" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.PutSingle</definition>
+        <argsstring>(float value)</argsstring>
+        <name>PutSingle</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aaef139c1f982792ee144613d9fdddd6b">PutSingle</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1a7fdf7c1aaadb6117f66bc1e85736bb3c">PutSingle</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was putFloat() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1183" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1183" bodyend="1198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a87bce82333a0d6f8c9f575f35062f74e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.PutSingle</definition>
+        <argsstring>(int index, float value)</argsstring>
+        <name>PutSingle</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a452f667e7e1ab84b8519098a5da1b0d3">PutSingle</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1af89d624ac60ac3387d63904db26c1c19">PutSingle</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>NOTE: This was putFloat() in the JDK </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1204" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1204" bodyend="1219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a7a7dde061a17f8a12cc4c4633e0d116f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override double</type>
+        <definition>override double ArkNet.Utils.ByteBuffer.HeapByteBuffer.GetDouble</definition>
+        <argsstring>()</argsstring>
+        <name>GetDouble</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1af762d11c270e6c302d4ab3532a0b90ad">GetDouble</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1243" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1243" bodyend="1251"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a8f67821a79a3c48c2caefaff2301d96f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override double</type>
+        <definition>override double ArkNet.Utils.ByteBuffer.HeapByteBuffer.GetDouble</definition>
+        <argsstring>(int index)</argsstring>
+        <name>GetDouble</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a672441cedc6285eb129f49969a2f8c59">GetDouble</reimplements>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1253" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1253" bodyend="1261"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1aef523fb6e2b91091ed831667286872ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.PutDouble</definition>
+        <argsstring>(double value)</argsstring>
+        <name>PutDouble</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ab2b33a1a8d8ffeee99bb206df3af25fc">PutDouble</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1af8ff1469c2c413f84010f59e3315cb9d">PutDouble</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1263" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1263" bodyend="1277"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ab7584e41c7c932945d0a39676eeae6b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override <ref refid="class_ark_net_1_1_utils_1_1_byte_buffer" kindref="compound">ByteBuffer</ref></type>
+        <definition>override ByteBuffer ArkNet.Utils.ByteBuffer.HeapByteBuffer.PutDouble</definition>
+        <argsstring>(int index, double value)</argsstring>
+        <name>PutDouble</name>
+        <reimplements refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ab3fb9bccc57b6ba0eb12a157b14c10ce">PutDouble</reimplements>
+        <reimplementedby refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r_1aa77974229d4ef375034f95ae8e3b4ad7">PutDouble</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="1281" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="1281" bodyend="1295"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="277">
+        <label>ArkNet.Utils.ByteBuffer.HeapByteBufferR</label>
+        <link refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_r"/>
+        <childnode refid="273" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="276">
+        <label>IComparable&lt; ByteBuffer &gt;</label>
+      </node>
+      <node id="273">
+        <label>ArkNet.Utils.ByteBuffer.HeapByteBuffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer"/>
+        <childnode refid="274" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="275">
+        <label>Buffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_buffer"/>
+      </node>
+      <node id="274">
+        <label>ByteBuffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_byte_buffer"/>
+        <childnode refid="275" relation="public-inheritance">
+        </childnode>
+        <childnode refid="276" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="281">
+        <label>IComparable&lt; ByteBuffer &gt;</label>
+      </node>
+      <node id="278">
+        <label>ArkNet.Utils.ByteBuffer.HeapByteBuffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer"/>
+        <childnode refid="279" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="280">
+        <label>Buffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_buffer"/>
+      </node>
+      <node id="279">
+        <label>ByteBuffer</label>
+        <link refid="class_ark_net_1_1_utils_1_1_byte_buffer"/>
+        <childnode refid="280" relation="public-inheritance">
+        </childnode>
+        <childnode refid="281" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" line="665" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Utils/ByteBuffer.cs" bodystart="664" bodyend="1315"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a209b58fe286e4c73b6e381005967ea66" prot="package" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>_get</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1aebd37ee15874a620f53854aa112a6b46" prot="package" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>_put</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a394f7099f296c364f7892bad75759534" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>address</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a1ea522fe88227a59dcad563aa21afa83" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Allocate</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ac0e7833c1b6f29203de5d3da386846cd" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>AllocateDirect</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a9cd742b89cea5c01c7944b9d825f98fd" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Array</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ac4fd0c1c9c7dc1342d0e11757b137a59" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>ArrayOffset</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a9ecc598566950ae81673b068b43d5e84" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>AsInt64Buffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a761740bd0f73f9b3ae2d116854a4dcd5" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>AsReadOnlyBuffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ae343b7c9f613f513c572607f4836f7ac" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>bigEndian</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a550e01295a8cd74f7f75e9f803bc3a4e" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Buffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aff76b274646b28a5bb94be532503054a" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>ByteBuffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a551e034af1296ae4e46f20d391f74cea" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>ByteBuffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ae9d06258697fb58464880ac6d8787e1a" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Capacity</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a47aa18b17c4c36f1aebc97cf0f21437a" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>CheckBounds</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ab493f971a3e54077aea1a56b72fb59bc" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>CheckIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ac247aa2011b60f5d907a56b56042dcab" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>CheckIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ace312eff12b1a9fd2a223abea15c733c" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Clear</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ac31ef874efca77df1af4f424ea4aaf24" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Compact</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a6e29d2ba40905e92358a3b3c3357f795" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>CompareTo</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ae5692ae15f3e7fef621fc524b334c007" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>DiscardMark</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1abc80d7e98d5d97c0905d6c57f805fa42" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Duplicate</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aea25f8a20b377025abc87dbd70ee0198" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Equals</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a92a76fdb7b0fb5bab486f73f5375838e" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Flip</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a9c2f34defd381b2046277fa8213f05a3" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Get</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a7de50820551aea2ec5910e73e98a1693" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Get</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1af914d9112e47b296817603a43a470da6" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Get</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a2b319dd5920f163206608e2218417318" prot="public" virt="virtual" ambiguityscope="ArkNet::Utils::ByteBuffer."><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Get</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ae9132084f34385cd487db8c536300256" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>GetChar</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a1b9362a96b89717a5c250d579ad71739" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>GetChar</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a7a7dde061a17f8a12cc4c4633e0d116f" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>GetDouble</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a8f67821a79a3c48c2caefaff2301d96f" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>GetDouble</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aa3e2206c7ed2642bd1b1be1b4b52b96a" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>GetHashCode</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1aabf984bef15f346c52cd3f3e4db5d2fd" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>GetInt16</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a369b3eaae18b9fe899046047faf31588" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>GetInt16</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ae1c04eba80d49f785f5335ee239d1ae8" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>GetInt32</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a006c9c5341b13c2c020cc3fb2c080277" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>GetInt32</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a962304b48e2d5f9956f34dce1ee47b5f" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>GetInt64</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1acd2f37b2441d6bb715feb631070196c6" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>GetInt64</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1aa2cb8fdf10005235f736e8523b44764d" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>GetSingle</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1aac847556d89fb130683cdc90fcb09ce8" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>GetSingle</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1adfa14e67c0e116603016eb8238d9809b" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>HasArray</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1aafbf13f4ebad487267cc526f2737cb37" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>HasRemaining</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1aef6416958f9a22e15df401ca10742802" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>hb</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a68d4b6a58b70d78be8f877db9296ca35" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>HeapByteBuffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1adb849dd238bdc5195fb1bba3355dadb8" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>HeapByteBuffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ab22a1e3cf5542ab5e1bfa0615de8fca1" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>HeapByteBuffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a6ccea545da5236f7737d648c496b282f" prot="protected" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>HeapByteBuffer</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ac507029bf8eb6cdd3578a070f9b8715a" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>IsDirect</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a77ae8f81b888aaca329f2026cd1ffca2" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>IsReadOnly</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1afddfb79f935e6a34ef80a14238e8fa34" prot="protected" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Ix</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a3d42dd2c8b82c44b665a9ea00f0b706f" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Limit</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1afad062dd1e5b85f340af9989d75a97e7" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Mark</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a3c74e9ca4fe5e69228e9d31d32a61540" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>MarkValue</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ab36e2a5488eeebfc9b333c88a58f6c2a" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>NextGetIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a60c9cf9b3ad29ca1700e1816c932b5f0" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>NextGetIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1afc1fab6ad275be830ace01c6c75a8fd6" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>NextPutIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a94bf8c7deb0fceec1d854d2169b75308" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>NextPutIndex</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a6de079bb53170b1a6a571975e8397998" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Order</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a03a21806f9c0a830b50cd59695cb6fe5" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Position</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a1e6148db36823368dc8b928c0160cb32" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Put</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a7772b67dc9ebddfdf40aee09ec3d2915" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Put</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a9c5a8e7dee92f926a3d3eccbc19eb6cc" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Put</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ad6b086aa1b8bcf6e8278264107878e3d" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Put</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a6019ec42aa1c791882c6c0f59872640d" prot="public" virt="non-virtual" ambiguityscope="ArkNet::Utils::ByteBuffer."><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Put</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a0b0ff3f7f81b551a1102793aa12a1a77" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>PutChar</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a5e87132f0de5c004565bfb2f92172294" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>PutChar</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1aef523fb6e2b91091ed831667286872ae" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>PutDouble</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ab7584e41c7c932945d0a39676eeae6b9" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>PutDouble</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a111c0bf41017621eb60909fe6a156073" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>PutInt16</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a168f7844b6bf5b9b0cbbc84a9830b2a2" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>PutInt16</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a39fe5c1d2c7240009e8feab4906925f2" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>PutInt32</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a11cf68d32500056ff800c2425ac0aa11" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>PutInt32</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1ae98e6912bbbf91cd6d877db75b90e152" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>PutInt64</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a03d34dc79c52af00b51719858e5d5a6c" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>PutInt64</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a3994428499aba6d84be906385a9e1039" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>PutSingle</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a87bce82333a0d6f8c9f575f35062f74e" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>PutSingle</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a5d297c0fdabec4cb6075a9f7738d2ed4" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Remaining</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a61a82b00db3da7957da21e438e707503" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Reset</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a41fd1016c914352bcc0965dbd135480d" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Rewind</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a0b468e981e7d5f6b155897b6446fe763" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>SetLimit</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1ab922d6c7ab868bb665dbc26e5910b230" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>SetPosition</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1_1_heap_byte_buffer_1a202bc2534679c62e392709b6591209e6" prot="public" virt="virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Slice</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ab352ca946ba242b5394647eb741aed29" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>ToString</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_buffer_1a5b9370282402858e0fbe512deb36ddd5" prot="package" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Truncate</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1ab49c6cf2bfaa3ae7d9d212531e88c58b" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Wrap</name></member>
+      <member refid="class_ark_net_1_1_utils_1_1_byte_buffer_1a6d0a565a691d70f718fdb667c68c2231" prot="public" virt="non-virtual"><scope>ArkNet::Utils::ByteBuffer::HeapByteBuffer</scope><name>Wrap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

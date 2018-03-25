@@ -1,0 +1,420 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_core_1_1_crypto" kind="class" prot="public">
+    <compoundname>ArkNet::Core::Crypto</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_core_1_1_crypto_1a3efd2ff31722848541943c57680cff93" prot="private" static="yes" mutable="no">
+        <type>readonly SHA256</type>
+        <definition>readonly SHA256 ArkNet.Core.Crypto.Sha256</definition>
+        <argsstring></argsstring>
+        <name>Sha256</name>
+        <initializer>= SHA256.Create()</initializer>
+        <briefdescription>
+<para>Initialize the Sha 256. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" line="47" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_core_1_1_crypto_1aa470c2aaf3dac2cfad97dd206782a6ba" prot="private" static="yes" mutable="no">
+        <type>readonly SshNet.Security.Cryptography.RIPEMD160</type>
+        <definition>readonly SshNet.Security.Cryptography.RIPEMD160 ArkNet.Core.Crypto.Ripemd160</definition>
+        <argsstring></argsstring>
+        <name>Ripemd160</name>
+        <initializer>= new SshNet.Security.Cryptography.RIPEMD160()</initializer>
+        <briefdescription>
+<para>Initialize The ripemd 160. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" line="52" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_crypto_1a8f267a2c483b574d8685551bf40bd671" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ECDSASignature</type>
+        <definition>static ECDSASignature ArkNet.Core.Crypto.Sign</definition>
+        <argsstring>(TransactionApi t, string passphrase)</argsstring>
+        <name>Sign</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>passphrase</declname>
+        </param>
+        <briefdescription>
+<para>Sign Transactions. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref> passed on to be signed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>passphrase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User&apos;s Passphrase </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The ECDSASignature signed Transaction. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" line="66" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" bodystart="66" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_crypto_1aa107538e71ddf6e252539b29d101ed17" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ECDSASignature</type>
+        <definition>static ECDSASignature ArkNet.Core.Crypto.SecondSign</definition>
+        <argsstring>(TransactionApi t, string passphrase)</argsstring>
+        <name>SecondSign</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>passphrase</declname>
+        </param>
+        <briefdescription>
+<para>Sign Transaction with the second passphrasse. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref> to be signed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>passphrase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SECOND passphrase. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The ECDSASignature signed transaction. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" line="84" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" bodystart="84" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_crypto_1ad1702cf673cd1c1cacbda162cbf8a6a5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ECDSASignature</type>
+        <definition>static ECDSASignature ArkNet.Core.Crypto.SignBytes</definition>
+        <argsstring>(byte[] bytes, string passphrase)</argsstring>
+        <name>SignBytes</name>
+        <param>
+          <type>byte[]</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>passphrase</declname>
+        </param>
+        <briefdescription>
+<para>Sign a string of bytes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bytes to be signed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>passphrase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User&apos;s passphrase. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The ECDSASignature signed bytes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" line="102" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" bodystart="102" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_crypto_1a50387c4e576bdad59781c714567441ca" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool ArkNet.Core.Crypto.Verify</definition>
+        <argsstring>(TransactionApi t)</argsstring>
+        <name>Verify</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Verify a transaction. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Transaction to verify. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The bool sucess of the verification. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" line="119" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" bodystart="119" bodyend="126"/>
+        <references refid="class_ark_net_1_1_core_1_1_transaction_api_1acc1b744736904d5c6f7c4c70569c2647" compoundref="_transaction_api_8cs" startline="49">ArkNet.Core.TransactionApi.SenderPublicKey</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_crypto_1a026e46686fc02436b223428a516eb404" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool ArkNet.Core.Crypto.SecondVerify</definition>
+        <argsstring>(TransactionApi t, string secondPublicKeyHex)</argsstring>
+        <name>SecondVerify</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>secondPublicKeyHex</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_ark_net_1_1_core_1_1_verification" kindref="compound">Verification</ref> of a transaction with the second passphrase. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref> that is being verified. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>secondPublicKeyHex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User&apos;s second Passphrase. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The bool reporting the success of the transaction. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" line="140" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" bodystart="140" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_crypto_1a65c550c79cc1c2d7d054f87ff5cd5c10" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte[]</type>
+        <definition>static byte [] ArkNet.Core.Crypto.GetBytes</definition>
+        <argsstring>(TransactionApi t, bool skipSignature=true, bool skipSecondSignature=true)</argsstring>
+        <name>GetBytes</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>skipSignature</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>skipSecondSignature</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Get the bytes of a transaction. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref> whose bytes you want to get. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>skipSignature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bool Skip first signature. Default = true. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>skipSecondSignature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bool Skip second signature. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The byte[]. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" line="166" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" bodystart="166" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_crypto_1a710a1814bc2f4f7b95396986a56b8485" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string ArkNet.Core.Crypto.GetId</definition>
+        <argsstring>(TransactionApi t)</argsstring>
+        <name>GetId</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_core_1_1_transaction_api" kindref="compound">TransactionApi</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Get the Transaction&apos;s id. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Transaction whose ID is wanted. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The string ID of the transaction. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" line="180" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" bodystart="180" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_crypto_1a3ea6544586e2ab9ea6f928be3314ee79" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Key</type>
+        <definition>static Key ArkNet.Core.Crypto.GetKeys</definition>
+        <argsstring>(string passphrase)</argsstring>
+        <name>GetKeys</name>
+        <param>
+          <type>string</type>
+          <declname>passphrase</declname>
+        </param>
+        <briefdescription>
+<para>Get the Key from the Passphrase. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>passphrase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>User&apos;s Passphrase. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The Key of the user&apos;s account. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" line="194" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" bodystart="194" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_crypto_1a7ec7944f4b4ada030751d4640f4ccd14" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string ArkNet.Core.Crypto.GetAddress</definition>
+        <argsstring>(Key keys, byte version)</argsstring>
+        <name>GetAddress</name>
+        <param>
+          <type>Key</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+<para>Get the Private Address from the Key. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keys</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Account&apos;s Key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>version</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Version of the Blockchain. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The Address of the Account, as a string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" line="212" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" bodystart="212" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_core_1_1_crypto_1abf2ce4e2febb27227d0d4e385f5c8053" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string ArkNet.Core.Crypto.GetAddress</definition>
+        <argsstring>(byte[] publicKey, byte version)</argsstring>
+        <name>GetAddress</name>
+        <param>
+          <type>byte[]</type>
+          <declname>publicKey</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+<para>Get the Public Addres from the key. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>publicKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The public key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>version</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The version of the Blockchain. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The Public Address as a string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" line="230" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" bodystart="230" bodyend="236"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Cryptography part of the API. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="248">
+        <label>Cryptography</label>
+      </node>
+      <node id="247">
+        <label>ArkNet.Core.Crypto</label>
+        <link refid="class_ark_net_1_1_core_1_1_crypto"/>
+        <childnode refid="248" relation="usage">
+          <edgelabel>Ripemd160</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" line="43" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Crypto.cs" bodystart="42" bodyend="237"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_core_1_1_crypto_1a7ec7944f4b4ada030751d4640f4ccd14" prot="public" virt="non-virtual"><scope>ArkNet::Core::Crypto</scope><name>GetAddress</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_crypto_1abf2ce4e2febb27227d0d4e385f5c8053" prot="public" virt="non-virtual"><scope>ArkNet::Core::Crypto</scope><name>GetAddress</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_crypto_1a65c550c79cc1c2d7d054f87ff5cd5c10" prot="public" virt="non-virtual"><scope>ArkNet::Core::Crypto</scope><name>GetBytes</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_crypto_1a710a1814bc2f4f7b95396986a56b8485" prot="public" virt="non-virtual"><scope>ArkNet::Core::Crypto</scope><name>GetId</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_crypto_1a3ea6544586e2ab9ea6f928be3314ee79" prot="public" virt="non-virtual"><scope>ArkNet::Core::Crypto</scope><name>GetKeys</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_crypto_1aa470c2aaf3dac2cfad97dd206782a6ba" prot="private" virt="non-virtual"><scope>ArkNet::Core::Crypto</scope><name>Ripemd160</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_crypto_1aa107538e71ddf6e252539b29d101ed17" prot="public" virt="non-virtual"><scope>ArkNet::Core::Crypto</scope><name>SecondSign</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_crypto_1a026e46686fc02436b223428a516eb404" prot="public" virt="non-virtual"><scope>ArkNet::Core::Crypto</scope><name>SecondVerify</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_crypto_1a3efd2ff31722848541943c57680cff93" prot="private" virt="non-virtual"><scope>ArkNet::Core::Crypto</scope><name>Sha256</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_crypto_1a8f267a2c483b574d8685551bf40bd671" prot="public" virt="non-virtual"><scope>ArkNet::Core::Crypto</scope><name>Sign</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_crypto_1ad1702cf673cd1c1cacbda162cbf8a6a5" prot="public" virt="non-virtual"><scope>ArkNet::Core::Crypto</scope><name>SignBytes</name></member>
+      <member refid="class_ark_net_1_1_core_1_1_crypto_1a50387c4e576bdad59781c714567441ca" prot="public" virt="non-virtual"><scope>ArkNet::Core::Crypto</scope><name>Verify</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

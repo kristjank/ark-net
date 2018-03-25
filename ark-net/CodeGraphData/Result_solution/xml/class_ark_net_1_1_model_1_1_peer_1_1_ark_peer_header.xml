@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header" kind="class" prot="public">
+    <compoundname>ArkNet::Model::Peer::ArkPeerHeader</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a287a4b2660be57756dd91aad02ec1b74" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Model.Peer.ArkPeerHeader.Id</definition>
+        <argsstring></argsstring>
+        <name>Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" line="5" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a5a559953315bccc978037fbc25c87312" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Model.Peer.ArkPeerHeader.Height</definition>
+        <argsstring></argsstring>
+        <name>Height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" line="6" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a48dbad480421461d80ade1f93d71d422" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Model.Peer.ArkPeerHeader.Version</definition>
+        <argsstring></argsstring>
+        <name>Version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" line="7" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a4d0ab42f454e2f0f0de6ca757276ccc3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>long</type>
+        <definition>long ArkNet.Model.Peer.ArkPeerHeader.TotalAmount</definition>
+        <argsstring></argsstring>
+        <name>TotalAmount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" line="8" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1af534b9a55529bd790cb6afe64dbbdcc4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>long</type>
+        <definition>long ArkNet.Model.Peer.ArkPeerHeader.TotalFee</definition>
+        <argsstring></argsstring>
+        <name>TotalFee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" line="9" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a40ad2fd2c632a16dabf66d1bbe9351aa" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>long</type>
+        <definition>long ArkNet.Model.Peer.ArkPeerHeader.Reward</definition>
+        <argsstring></argsstring>
+        <name>Reward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" line="10" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1afb0fb9128f6a5826e728569678ea6fa6" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Model.Peer.ArkPeerHeader.PayloadHash</definition>
+        <argsstring></argsstring>
+        <name>PayloadHash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" line="11" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a040a355c7e331fc5e907965e3a0610da" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Model.Peer.ArkPeerHeader.PayloadLength</definition>
+        <argsstring></argsstring>
+        <name>PayloadLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" line="12" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a88846e21be120e8e1b743fe16f4dfa73" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Model.Peer.ArkPeerHeader.Timestamp</definition>
+        <argsstring></argsstring>
+        <name>Timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" line="13" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a5d5943ef231fadc7c07698881a998284" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Model.Peer.ArkPeerHeader.NumberOfTransactions</definition>
+        <argsstring></argsstring>
+        <name>NumberOfTransactions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" line="14" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1ad8e6b49157954adc36207c260f1e9fa4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Model.Peer.ArkPeerHeader.PreviousBlock</definition>
+        <argsstring></argsstring>
+        <name>PreviousBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" line="15" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a968d0753cfdea6e32c42b25ec05be41c" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Model.Peer.ArkPeerHeader.GeneratorPublicKey</definition>
+        <argsstring></argsstring>
+        <name>GeneratorPublicKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" line="16" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a2500cb11e0de04ea50f37c761fdb2cfa" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Model.Peer.ArkPeerHeader.BlockSignature</definition>
+        <argsstring></argsstring>
+        <name>BlockSignature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" line="17" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" line="4" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerHeader.cs" bodystart="3" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a2500cb11e0de04ea50f37c761fdb2cfa" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerHeader</scope><name>BlockSignature</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a968d0753cfdea6e32c42b25ec05be41c" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerHeader</scope><name>GeneratorPublicKey</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a5a559953315bccc978037fbc25c87312" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerHeader</scope><name>Height</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a287a4b2660be57756dd91aad02ec1b74" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerHeader</scope><name>Id</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a5d5943ef231fadc7c07698881a998284" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerHeader</scope><name>NumberOfTransactions</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1afb0fb9128f6a5826e728569678ea6fa6" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerHeader</scope><name>PayloadHash</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a040a355c7e331fc5e907965e3a0610da" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerHeader</scope><name>PayloadLength</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1ad8e6b49157954adc36207c260f1e9fa4" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerHeader</scope><name>PreviousBlock</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a40ad2fd2c632a16dabf66d1bbe9351aa" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerHeader</scope><name>Reward</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a88846e21be120e8e1b743fe16f4dfa73" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerHeader</scope><name>Timestamp</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a4d0ab42f454e2f0f0de6ca757276ccc3" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerHeader</scope><name>TotalAmount</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1af534b9a55529bd790cb6afe64dbbdcc4" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerHeader</scope><name>TotalFee</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header_1a48dbad480421461d80ade1f93d71d422" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerHeader</scope><name>Version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status" kind="class" prot="public">
+    <compoundname>ArkNet::Model::Block::ArkBlockChainStatus</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base" prot="public" virt="non-virtual">ArkNet.Model.BaseModels.ArkResponseBase</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1a1cd4cbcd21119cf432911b926167ca46" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>DateTime</type>
+        <definition>DateTime ArkNet.Model.Block.ArkBlockChainStatus.Epoch</definition>
+        <argsstring></argsstring>
+        <name>Epoch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" line="8" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1a7f6c153632db21d6d354a8389774e2a0" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>long</type>
+        <definition>long ArkNet.Model.Block.ArkBlockChainStatus.Height</definition>
+        <argsstring></argsstring>
+        <name>Height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" line="9" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1af793823808e7b90323fdee2847b808b8" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Model.Block.ArkBlockChainStatus.Fee</definition>
+        <argsstring></argsstring>
+        <name>Fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" line="10" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1acb26e7742a2bda5c1751915fd52b2da1" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Model.Block.ArkBlockChainStatus.Milestone</definition>
+        <argsstring></argsstring>
+        <name>Milestone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" line="11" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1a2d96c4b1014c549c2aebf7841fbcd84e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string ArkNet.Model.Block.ArkBlockChainStatus.NetHash</definition>
+        <argsstring></argsstring>
+        <name>NetHash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" line="12" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1aed87d5b983170e93a092086a0aac9202" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int ArkNet.Model.Block.ArkBlockChainStatus.Reward</definition>
+        <argsstring></argsstring>
+        <name>Reward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" line="13" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1a2f01b9f27a5e825bff238b857b0535e2" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>long</type>
+        <definition>long ArkNet.Model.Block.ArkBlockChainStatus.Supply</definition>
+        <argsstring></argsstring>
+        <name>Supply</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" line="14" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="57">
+        <label>ArkResponseBase</label>
+        <link refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base"/>
+      </node>
+      <node id="56">
+        <label>ArkNet.Model.Block.ArkBlockChainStatus</label>
+        <link refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status"/>
+        <childnode refid="57" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="59">
+        <label>ArkResponseBase</label>
+        <link refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base"/>
+      </node>
+      <node id="58">
+        <label>ArkNet.Model.Block.ArkBlockChainStatus</label>
+        <link refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" line="7" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Block/ArkBlockChainStatus.cs" bodystart="6" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1a1cd4cbcd21119cf432911b926167ca46" prot="public" virt="non-virtual"><scope>ArkNet::Model::Block::ArkBlockChainStatus</scope><name>Epoch</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a0896cd002de13aec6fdaa8df57fe1242" prot="public" virt="non-virtual"><scope>ArkNet::Model::Block::ArkBlockChainStatus</scope><name>Error</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1af793823808e7b90323fdee2847b808b8" prot="public" virt="non-virtual"><scope>ArkNet::Model::Block::ArkBlockChainStatus</scope><name>Fee</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1a7f6c153632db21d6d354a8389774e2a0" prot="public" virt="non-virtual"><scope>ArkNet::Model::Block::ArkBlockChainStatus</scope><name>Height</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a45c8e8b131e7d1d9b401ea6972fa3256" prot="public" virt="non-virtual"><scope>ArkNet::Model::Block::ArkBlockChainStatus</scope><name>Message</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1acb26e7742a2bda5c1751915fd52b2da1" prot="public" virt="non-virtual"><scope>ArkNet::Model::Block::ArkBlockChainStatus</scope><name>Milestone</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1a2d96c4b1014c549c2aebf7841fbcd84e" prot="public" virt="non-virtual"><scope>ArkNet::Model::Block::ArkBlockChainStatus</scope><name>NetHash</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1aed87d5b983170e93a092086a0aac9202" prot="public" virt="non-virtual"><scope>ArkNet::Model::Block::ArkBlockChainStatus</scope><name>Reward</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a218fcfef6e7a12abd3e8a29d90899fb5" prot="public" virt="non-virtual"><scope>ArkNet::Model::Block::ArkBlockChainStatus</scope><name>Success</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_block_1_1_ark_block_chain_status_1a2f01b9f27a5e825bff238b857b0535e2" prot="public" virt="non-virtual"><scope>ArkNet::Model::Block::ArkBlockChainStatus</scope><name>Supply</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

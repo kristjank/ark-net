@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_ark_net_1_1_model_1_1_peer" kind="namespace">
+    <compoundname>ArkNet::Model::Peer</compoundname>
+    <innerclass refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer" prot="public">ArkNet::Model::Peer::ArkPeer</innerclass>
+    <innerclass refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_header" prot="public">ArkNet::Model::Peer::ArkPeerHeader</innerclass>
+    <innerclass refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_list" prot="public">ArkNet::Model::Peer::ArkPeerList</innerclass>
+    <innerclass refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_response" prot="public">ArkNet::Model::Peer::ArkPeerResponse</innerclass>
+    <innerclass refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_status" prot="public">ArkNet::Model::Peer::ArkPeerStatus</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeer.cs" line="2" column="1"/>
+  </compounddef>
+</doxygen>

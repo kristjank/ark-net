@@ -1,0 +1,397 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base" kind="class" prot="public">
+    <compoundname>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_tests_1_1_tests_base" prot="public" virt="non-virtual">ArkNet.Tests.TestsBase</basecompoundref>
+    <derivedcompoundref refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests" prot="public" virt="non-virtual">ArkNet.Service.Delegate.Tests.DelegateServiceAsyncTests</derivedcompoundref>
+    <derivedcompoundref refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests" prot="public" virt="non-virtual">ArkNet.Service.Delegate.Tests.DelegateServiceTests</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a2918cc8fc70d97c8b8f2ec6f68436ed3" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase._userName</definition>
+        <argsstring></argsstring>
+        <name>_userName</name>
+        <initializer>= &quot;arkpool&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="19" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a0e76ea8527318029b3a2df83a1f3101c" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase._resultUserNameFromPubKey</definition>
+        <argsstring></argsstring>
+        <name>_resultUserNameFromPubKey</name>
+        <initializer>= &quot;cryptolanka123&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="20" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a12bc0969842a6ddf3f6a76d01b5060ee" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase._pubKey</definition>
+        <argsstring></argsstring>
+        <name>_pubKey</name>
+        <initializer>= &quot;022a777d6010beac8fd1092a19adacde592e9ff88b84a1106ad9bd6f32001a737a&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="21" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a4cf9a749343d95663b03953311fc6dcb" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase._address</definition>
+        <argsstring></argsstring>
+        <name>_address</name>
+        <initializer>= &quot;ARAq9nhjCxwpWnGKDgxveAJSijNG8Y6dFQ&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="22" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a627b24254814434b640b7ff5f597cfaa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.InitializeDelegateServiceTest</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeDelegateServiceTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="24" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="24" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a49b9a84bfe11d7b914a51baece7ccbba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.InitializeDelegateServiceAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeDelegateServiceAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="31" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="31" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1ad91f3f8fee4e399d9d01c9d74a36a8e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.GetAllResultTest</definition>
+        <argsstring>(ArkDelegateList delegates)</argsstring>
+        <name>GetAllResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_list" kindref="compound">ArkDelegateList</ref></type>
+          <declname>delegates</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="49" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="49" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a367ab4b9c178872886ab230118a9b709" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.GetByUsernameResultTest</definition>
+        <argsstring>(ArkDelegateResponse dele)</argsstring>
+        <name>GetByUsernameResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response" kindref="compound">ArkDelegateResponse</ref></type>
+          <declname>dele</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="58" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="58" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a95e409be62a0436479fcedabc6134420" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.GetByUsernameErrorResultTest</definition>
+        <argsstring>(ArkDelegateResponse dele)</argsstring>
+        <name>GetByUsernameErrorResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response" kindref="compound">ArkDelegateResponse</ref></type>
+          <declname>dele</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="67" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="67" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a7e0bc921e9be305a387ecd663838605e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.GetByPubKeyResultTest</definition>
+        <argsstring>(ArkDelegateResponse dele2)</argsstring>
+        <name>GetByPubKeyResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response" kindref="compound">ArkDelegateResponse</ref></type>
+          <declname>dele2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="75" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="75" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a0ce5e88e0a9fd81e9078df79238df676" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.GetByPubKeyErrorResultTest</definition>
+        <argsstring>(ArkDelegateResponse dele)</argsstring>
+        <name>GetByPubKeyErrorResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_response" kindref="compound">ArkDelegateResponse</ref></type>
+          <declname>dele</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="84" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="84" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a770b09b997423033dcadef19e0b609ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.GetVotersResultTest</definition>
+        <argsstring>(ArkDelegateVoterList dele)</argsstring>
+        <name>GetVotersResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_list" kindref="compound">ArkDelegateVoterList</ref></type>
+          <declname>dele</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="92" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="92" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a91c0745a2179651e11d158d38092a52d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.GetVotersErrorResultTest</definition>
+        <argsstring>(ArkDelegateVoterList dele)</argsstring>
+        <name>GetVotersErrorResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_voter_list" kindref="compound">ArkDelegateVoterList</ref></type>
+          <declname>dele</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="101" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="101" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a7f9eeaf5cc9482c32fe03494a10da3a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.GetFeeResultTest</definition>
+        <argsstring>(long fee)</argsstring>
+        <name>GetFeeResultTest</name>
+        <param>
+          <type>long</type>
+          <declname>fee</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="109" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a16a3c8396937f253d1362eba542aa818" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.GetForgedByAccountResultTest</definition>
+        <argsstring>(ArkDelegateForgedBalance forgedByAccount)</argsstring>
+        <name>GetForgedByAccountResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_forged_balance" kindref="compound">ArkDelegateForgedBalance</ref></type>
+          <declname>forgedByAccount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="114" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="114" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1abd9ee10cb0946e7d7669f869e99e98e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.GetForgedByAccountErrorResultTest</definition>
+        <argsstring>(ArkDelegateForgedBalance forgedByAccount)</argsstring>
+        <name>GetForgedByAccountErrorResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_forged_balance" kindref="compound">ArkDelegateForgedBalance</ref></type>
+          <declname>forgedByAccount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="121" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="121" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a0e9443ce13ca928a4fe9f37d4d0e76ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.GetNextForgersResultTest</definition>
+        <argsstring>(ArkDelegateNextForgers nextForgers)</argsstring>
+        <name>GetNextForgersResultTest</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_model_1_1_delegate_1_1_ark_delegate_next_forgers" kindref="compound">ArkDelegateNextForgers</ref></type>
+          <declname>nextForgers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="128" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="128" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1aaad944ecccbaba55d0a4727b52a0c799" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.GetTotalVoteArkResultTest</definition>
+        <argsstring>(long totalVoteArk)</argsstring>
+        <name>GetTotalVoteArkResultTest</name>
+        <param>
+          <type>long</type>
+          <declname>totalVoteArk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="134" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="134" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a86cab329e017c4a1a5fd44731636e0aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.GetTotalVoteArkErrorResultTest</definition>
+        <argsstring>(long totalVoteArk)</argsstring>
+        <name>GetTotalVoteArkErrorResultTest</name>
+        <param>
+          <type>long</type>
+          <declname>totalVoteArk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="139" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="139" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a4d7215fcf04737a24c2fedebaa1900b6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase.Setup</definition>
+        <argsstring>()</argsstring>
+        <name>Setup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="38" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="38" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="265">
+        <label>ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase</label>
+        <link refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base"/>
+        <childnode refid="266" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="266">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="267">
+        <label>ArkNet.Service.Delegate.Tests.DelegateServiceAsyncTests</label>
+        <link refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_async_tests"/>
+        <childnode refid="265" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="268">
+        <label>ArkNet.Service.Delegate.Tests.DelegateServiceTests</label>
+        <link refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests"/>
+        <childnode refid="265" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="269">
+        <label>ArkNet.Service.Delegate.Tests.DelegateServiceTestsBase</label>
+        <link refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base"/>
+        <childnode refid="270" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="270">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" line="18" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Delegate/DelegateServiceTestsBase.cs" bodystart="17" bodyend="143"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a4cf9a749343d95663b03953311fc6dcb" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>_address</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a12bc0969842a6ddf3f6a76d01b5060ee" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>_pubKey</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a0e76ea8527318029b3a2df83a1f3101c" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>_resultUserNameFromPubKey</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a2918cc8fc70d97c8b8f2ec6f68436ed3" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>_userName</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1ad91f3f8fee4e399d9d01c9d74a36a8e5" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>GetAllResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a0ce5e88e0a9fd81e9078df79238df676" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>GetByPubKeyErrorResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a7e0bc921e9be305a387ecd663838605e" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>GetByPubKeyResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a95e409be62a0436479fcedabc6134420" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>GetByUsernameErrorResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a367ab4b9c178872886ab230118a9b709" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>GetByUsernameResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a7f9eeaf5cc9482c32fe03494a10da3a8" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>GetFeeResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1abd9ee10cb0946e7d7669f869e99e98e9" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>GetForgedByAccountErrorResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a16a3c8396937f253d1362eba542aa818" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>GetForgedByAccountResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a0e9443ce13ca928a4fe9f37d4d0e76ca" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>GetNextForgersResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a86cab329e017c4a1a5fd44731636e0aa" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>GetTotalVoteArkErrorResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1aaad944ecccbaba55d0a4727b52a0c799" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>GetTotalVoteArkResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a91c0745a2179651e11d158d38092a52d" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>GetVotersErrorResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a770b09b997423033dcadef19e0b609ae" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>GetVotersResultTest</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a21cca2e1a214cb2a375e5c8786ed0062" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>Initialize</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a0533a9e15637e7b44ba2ecb6f18a28c8" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>InitializeAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a49b9a84bfe11d7b914a51baece7ccbba" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>InitializeDelegateServiceAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a627b24254814434b640b7ff5f597cfaa" prot="public" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>InitializeDelegateServiceTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_delegate_1_1_tests_1_1_delegate_service_tests_base_1a4d7215fcf04737a24c2fedebaa1900b6" prot="private" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>Setup</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a5c7b7233192533ab308a82da929a903c" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Delegate::Tests::DelegateServiceTestsBase</scope><name>USE_DEV_NET</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

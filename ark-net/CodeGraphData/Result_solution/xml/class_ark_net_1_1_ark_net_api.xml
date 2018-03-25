@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_ark_net_api" kind="class" prot="public">
+    <compoundname>ArkNet::ArkNetApi</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_ark_net_api_1a021a17784ffcaa7a79cd5c23cc4bf242" prot="private" static="no" mutable="no">
+        <type>List&lt; Tuple&lt; string, int &gt; &gt;</type>
+        <definition>List&lt;Tuple&lt;string, int&gt; &gt; ArkNet.ArkNetApi._peerSeedListMainNet</definition>
+        <argsstring></argsstring>
+        <name>_peerSeedListMainNet</name>
+        <initializer>= 
+            new List&lt;Tuple&lt;string, int&gt;&gt; {
+            Tuple.Create(&quot;5.39.9.240&quot;, 4001),
+            Tuple.Create(&quot;5.39.9.241&quot;, 4001),
+            Tuple.Create(&quot;5.39.9.242&quot;, 4001),
+            Tuple.Create(&quot;5.39.9.243&quot;, 4001),
+            Tuple.Create(&quot;5.39.9.244&quot;, 4001),
+            Tuple.Create(&quot;5.39.9.250&quot;, 4001),
+            Tuple.Create(&quot;5.39.9.251&quot;, 4001),
+            Tuple.Create(&quot;5.39.9.252&quot;, 4001),
+            Tuple.Create(&quot;5.39.9.253&quot;, 4001),
+            Tuple.Create(&quot;5.39.9.254&quot;, 4001),
+            Tuple.Create(&quot;5.39.9.255&quot;, 4001)
+            }</initializer>
+        <briefdescription>
+<para>Initial Seeds for the MainNet </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" line="53" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" bodystart="53" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_ark_net_api_1a733a9e8c92730374e1e2893fc7d69ce6" compoundref="_ark_net_api_8cs" startline="196" endline="219">ArkNet.ArkNetApi.GetInitialPeer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_ark_net_api_1ab9b3a8fe28f4a5616807e84d3bf0a37d" prot="private" static="no" mutable="no">
+        <type>List&lt; Tuple&lt; string, int &gt; &gt;</type>
+        <definition>List&lt;Tuple&lt;string, int&gt; &gt; ArkNet.ArkNetApi._peerSeedListDevNet</definition>
+        <argsstring></argsstring>
+        <name>_peerSeedListDevNet</name>
+        <initializer>=
+            new List&lt;Tuple&lt;string, int&gt;&gt; {
+            Tuple.Create(&quot;167.114.43.48&quot;, 4002),
+            Tuple.Create(&quot;167.114.29.49&quot;, 4002),
+            Tuple.Create(&quot;167.114.43.43&quot;, 4002),
+            Tuple.Create(&quot;167.114.29.54&quot;, 4002),
+            Tuple.Create(&quot;167.114.29.45&quot;, 4002),
+            Tuple.Create(&quot;167.114.29.40&quot;, 4002),
+            Tuple.Create(&quot;167.114.29.56&quot;, 4002),
+            Tuple.Create(&quot;167.114.43.35&quot;, 4002),
+            Tuple.Create(&quot;167.114.29.51&quot;, 4002),
+            Tuple.Create(&quot;167.114.29.59&quot;, 4002),
+            Tuple.Create(&quot;167.114.43.42&quot;, 4002),
+            Tuple.Create(&quot;167.114.29.34&quot;, 4002),
+            Tuple.Create(&quot;167.114.29.62&quot;, 4002),
+            Tuple.Create(&quot;167.114.43.49&quot;, 4002),
+            Tuple.Create(&quot;167.114.29.44&quot;, 4002)
+            }</initializer>
+        <briefdescription>
+<para>Initial Seeds for the DevNet </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" line="71" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_ark_net_api_1a80f2fd2dc855810a64042ed63b77b37b" prot="private" static="yes" mutable="no">
+        <type>readonly Lazy&lt; <ref refid="class_ark_net_1_1_ark_net_api" kindref="compound">ArkNetApi</ref> &gt;</type>
+        <definition>readonly Lazy&lt;ArkNetApi&gt; ArkNet.ArkNetApi._lazy</definition>
+        <argsstring></argsstring>
+        <name>_lazy</name>
+        <initializer>= new Lazy&lt;<ref refid="class_ark_net_1_1_ark_net_api" kindref="compound">ArkNetApi</ref>&gt;(() =&gt; new <ref refid="class_ark_net_1_1_ark_net_api" kindref="compound">ArkNetApi</ref>())</initializer>
+        <briefdescription>
+<para>Lazy Load of the API, calls to  </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" line="93" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_ark_net_api_1a3907e8daca5d8dadbff95b00f66a38bb" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_ark_net_1_1_ark_net_api" kindref="compound">ArkNetApi</ref></type>
+        <definition>ArkNetApi ArkNet.ArkNetApi.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <initializer>=&gt; _lazy.Value</initializer>
+        <briefdescription>
+<para>Instanciate the API Called through  to allow lazy load of the API. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" line="99" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" bodystart="99" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a4a1fe8975f7116e625b8fcf2a49635c0" compoundref="_transaction_api_8cs" startline="205" endline="216">ArkNet.Core.TransactionApi.CreateDelegate</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a312c55d03903d9ac0af2cf82c3cc9f1e" compoundref="_transaction_api_8cs" startline="218" endline="229">ArkNet.Core.TransactionApi.createSecondSignature</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a5de122acd4e3c9b0a89d3a8f27ee6ada" compoundref="_transaction_api_8cs" startline="175" endline="187">ArkNet.Core.TransactionApi.CreateTransaction</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a827283aab48f09988568c838a85f8a92" compoundref="_transaction_api_8cs" startline="189" endline="203">ArkNet.Core.TransactionApi.CreateVote</referencedby>
+        <referencedby refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1aef36500c42b8d0ac39709241db270764" compoundref="_transaction_crypto_tests_8cs" startline="45" endline="51">ArkNetTest.Tests.TransactionCryptoTests.GetAddressTest</referencedby>
+        <referencedby refid="class_ark_net_1_1_controller_1_1_account_controller_1a65d0aa52f6fb97f992c859ee06a803e2" compoundref="_account_controller_8cs" startline="84" endline="89">ArkNet.Controller.AccountController.GetArkAccount</referencedby>
+        <referencedby refid="class_ark_net_1_1_controller_1_1_account_controller_1a481138660aad7e63f0e2a5993b28c91d" compoundref="_account_controller_8cs" startline="97" endline="105">ArkNet.Controller.AccountController.GetArkAccountAsync</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_peer_api_1abc5946ef6f8e1ad948f1b93601786343" compoundref="_peer_api_8cs" startline="51" endline="89">ArkNet.Core.PeerApi.MakeRequestInternal</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_peer_api_1a35600a981b989ea136cd5e6a36f978cd" compoundref="_peer_api_8cs" startline="20" endline="38">ArkNet.Core.PeerApi.PeerApi</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_network_api_1aa9da2ae1cbe4b92b87e28b2b71bcd0e3" compoundref="_network_api_8cs" startline="97" endline="121">ArkNet.Core.NetworkApi.SetPeerList</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_ark_net_api_1af38dad201d9d7d72e8f0750eb7ef492f" prot="public" static="no" mutable="no">
+        <type><ref refid="class_ark_net_1_1_utils_1_1_ark_network_settings" kindref="compound">ArkNetworkSettings</ref></type>
+        <definition>ArkNetworkSettings ArkNet.ArkNetApi.NetworkSettings</definition>
+        <argsstring></argsstring>
+        <name>NetworkSettings</name>
+        <briefdescription>
+<para>Store the network settings. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" line="107" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" bodystart="107" bodyend="-1"/>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a4a1fe8975f7116e625b8fcf2a49635c0" compoundref="_transaction_api_8cs" startline="205" endline="216">ArkNet.Core.TransactionApi.CreateDelegate</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a312c55d03903d9ac0af2cf82c3cc9f1e" compoundref="_transaction_api_8cs" startline="218" endline="229">ArkNet.Core.TransactionApi.createSecondSignature</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a5de122acd4e3c9b0a89d3a8f27ee6ada" compoundref="_transaction_api_8cs" startline="175" endline="187">ArkNet.Core.TransactionApi.CreateTransaction</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_transaction_api_1a827283aab48f09988568c838a85f8a92" compoundref="_transaction_api_8cs" startline="189" endline="203">ArkNet.Core.TransactionApi.CreateVote</referencedby>
+        <referencedby refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1aef36500c42b8d0ac39709241db270764" compoundref="_transaction_crypto_tests_8cs" startline="45" endline="51">ArkNetTest.Tests.TransactionCryptoTests.GetAddressTest</referencedby>
+        <referencedby refid="class_ark_net_1_1_controller_1_1_account_controller_1a65d0aa52f6fb97f992c859ee06a803e2" compoundref="_account_controller_8cs" startline="84" endline="89">ArkNet.Controller.AccountController.GetArkAccount</referencedby>
+        <referencedby refid="class_ark_net_1_1_controller_1_1_account_controller_1a481138660aad7e63f0e2a5993b28c91d" compoundref="_account_controller_8cs" startline="97" endline="105">ArkNet.Controller.AccountController.GetArkAccountAsync</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_peer_api_1abc5946ef6f8e1ad948f1b93601786343" compoundref="_peer_api_8cs" startline="51" endline="89">ArkNet.Core.PeerApi.MakeRequestInternal</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_peer_api_1a35600a981b989ea136cd5e6a36f978cd" compoundref="_peer_api_8cs" startline="20" endline="38">ArkNet.Core.PeerApi.PeerApi</referencedby>
+        <referencedby refid="class_ark_net_1_1_core_1_1_network_api_1aa9da2ae1cbe4b92b87e28b2b71bcd0e3" compoundref="_network_api_8cs" startline="97" endline="121">ArkNet.Core.NetworkApi.SetPeerList</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_ark_net_1_1_ark_net_api_1abbbba57013bdaaf84e8d4326fd861a53" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ArkNet.ArkNetApi.ArkNetApi</definition>
+        <argsstring>()</argsstring>
+        <name>ArkNetApi</name>
+        <briefdescription>
+<para>Prevents a default instance of the <ref refid="class_ark_net_1_1_ark_net_api" kindref="compound">ArkNetApi</ref> class from being created. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" line="114" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_ark_net_api_1a7b32e4e7efaefd8dfbeb5dfc5c9b3401" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.ArkNetApi.SetNetworkSettings</definition>
+        <argsstring>(PeerApi initialPeer)</argsstring>
+        <name>SetNetworkSettings</name>
+        <param>
+          <type><ref refid="class_ark_net_1_1_core_1_1_peer_api" kindref="compound">PeerApi</ref></type>
+          <declname>initialPeer</declname>
+        </param>
+        <briefdescription>
+<para>Fetch the the NetworkSettings, and set the NetworkSettings variable, which is used for every subsequent request after the initial ones. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initialPeer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initial Peer  from which the settings are fetched.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Instiate a  based on the initial peer provided.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" line="150" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" bodystart="150" bodyend="173"/>
+        <references refid="class_ark_net_1_1_core_1_1_peer_api_1afbdae5a6db888b3e5229611dbd036453" compoundref="_peer_api_8cs" startline="17">ArkNet.Core.PeerApi.Ip</references>
+        <references refid="class_ark_net_1_1_core_1_1_peer_api_1ae2a3267cdac5cec6cfb606df38a34c55" compoundref="_peer_api_8cs" startline="18">ArkNet.Core.PeerApi.Port</references>
+        <references refid="class_ark_net_1_1_utils_1_1_ark_network_settings_1a4352750df83b11e8a1b3cab359789134" compoundref="_ark_settings_8cs" startline="7">ArkNet.Utils.ArkNetworkSettings.Version</references>
+        <referencedby refid="class_ark_net_1_1_ark_net_api_1a9b254c693fcbdc5fa0bf5865fc16e4af" compoundref="_ark_net_api_8cs" startline="128" endline="131">ArkNet.ArkNetApi.Start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_ark_net_api_1abc5718185c4f55185d931a52eee0bb83" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_ark_net_1_1_core_1_1_peer_api" kindref="compound">PeerApi</ref></type>
+        <definition>PeerApi ArkNet.ArkNetApi.GetInitialPeer</definition>
+        <argsstring>(string initialPeerIp, int initialPeerPort)</argsstring>
+        <name>GetInitialPeer</name>
+        <param>
+          <type>string</type>
+          <declname>initialPeerIp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>initialPeerPort</declname>
+        </param>
+        <briefdescription>
+<para>Get the initial peers to connect to the blockchain. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initialPeerIp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ip of the first peer.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialPeerPort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Port that the first peer listen on.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Return the first peer found at the IP/Port given.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" line="181" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" bodystart="181" bodyend="184"/>
+        <referencedby refid="class_ark_net_1_1_ark_net_api_1a733a9e8c92730374e1e2893fc7d69ce6" compoundref="_ark_net_api_8cs" startline="196" endline="219">ArkNet.ArkNetApi.GetInitialPeer</referencedby>
+        <referencedby refid="class_ark_net_1_1_ark_net_api_1a9b254c693fcbdc5fa0bf5865fc16e4af" compoundref="_ark_net_api_8cs" startline="128" endline="131">ArkNet.ArkNetApi.Start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_ark_net_api_1a733a9e8c92730374e1e2893fc7d69ce6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; <ref refid="class_ark_net_1_1_core_1_1_peer_api" kindref="compound">PeerApi</ref> &gt;</type>
+        <definition>async Task&lt;PeerApi&gt; ArkNet.ArkNetApi.GetInitialPeer</definition>
+        <argsstring>(NetworkType type, int retryCount=0)</argsstring>
+        <name>GetInitialPeer</name>
+        <param>
+          <type><ref refid="namespace_ark_net_1_1_utils_1_1_enum_1a237fba911a6ea2792767338e59e1daff" kindref="member">NetworkType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>retryCount</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Is needed to fetch the peer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Can be : <ndash/> DevNet (test), ask Dark (testnet coins) on the slack. <ndash/> MainNet (live, beware real money, financial loss possible there). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>retryCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of retry before a timeout</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the first  that is online</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" line="196" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" bodystart="196" bodyend="219"/>
+        <references refid="class_ark_net_1_1_ark_net_api_1a021a17784ffcaa7a79cd5c23cc4bf242" compoundref="_ark_net_api_8cs" startline="53">ArkNet.ArkNetApi._peerSeedListMainNet</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1abc5718185c4f55185d931a52eee0bb83" compoundref="_ark_net_api_8cs" startline="181" endline="184">ArkNet.ArkNetApi.GetInitialPeer</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_ark_net_api_1a9b254c693fcbdc5fa0bf5865fc16e4af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.ArkNetApi.Start</definition>
+        <argsstring>(NetworkType type)</argsstring>
+        <name>Start</name>
+        <param>
+          <type><ref refid="namespace_ark_net_1_1_utils_1_1_enum_1a237fba911a6ea2792767338e59e1daff" kindref="member">NetworkType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Start the Network </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Can be : <ndash/> DevNet (test), ask Dark (testnet coins) on the slack. <ndash/> MainNet (live, beware real money, financial loss possible there). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The  starts the node.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" line="128" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" bodystart="128" bodyend="131"/>
+        <references refid="class_ark_net_1_1_ark_net_api_1abc5718185c4f55185d931a52eee0bb83" compoundref="_ark_net_api_8cs" startline="181" endline="184">ArkNet.ArkNetApi.GetInitialPeer</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1a7b32e4e7efaefd8dfbeb5dfc5c9b3401" compoundref="_ark_net_api_8cs" startline="150" endline="173">ArkNet.ArkNetApi.SetNetworkSettings</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_ark_net_api_1a680dc2b9aff684b5fb9f0ef8947a0590" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.ArkNetApi.Start</definition>
+        <argsstring>(string initialPeerIp, int initialPeerPort)</argsstring>
+        <name>Start</name>
+        <param>
+          <type>string</type>
+          <declname>initialPeerIp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>initialPeerPort</declname>
+        </param>
+        <briefdescription>
+<para>Start the Network. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initialPeerIp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Initial peer&apos;s IP</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>initialPeerPort</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Initial Peer&apos;s Port</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The  starts the node.</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" line="139" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" bodystart="139" bodyend="142"/>
+        <references refid="class_ark_net_1_1_ark_net_api_1abc5718185c4f55185d931a52eee0bb83" compoundref="_ark_net_api_8cs" startline="181" endline="184">ArkNet.ArkNetApi.GetInitialPeer</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1a7b32e4e7efaefd8dfbeb5dfc5c9b3401" compoundref="_ark_net_api_8cs" startline="150" endline="173">ArkNet.ArkNetApi.SetNetworkSettings</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ARK API. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="111">
+        <label>ArkNet.ArkNetApi</label>
+        <link refid="class_ark_net_1_1_ark_net_api"/>
+        <childnode refid="111" relation="usage">
+          <edgelabel>Instance</edgelabel>
+        </childnode>
+        <childnode refid="112" relation="usage">
+          <edgelabel>NetworkSettings</edgelabel>
+        </childnode>
+      </node>
+      <node id="112">
+        <label>ArkNet.Utils.ArkNetworkSettings</label>
+        <link refid="class_ark_net_1_1_utils_1_1_ark_network_settings"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" line="49" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/ArkNetApi.cs" bodystart="48" bodyend="220"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_ark_net_api_1a80f2fd2dc855810a64042ed63b77b37b" prot="private" virt="non-virtual"><scope>ArkNet::ArkNetApi</scope><name>_lazy</name></member>
+      <member refid="class_ark_net_1_1_ark_net_api_1ab9b3a8fe28f4a5616807e84d3bf0a37d" prot="private" virt="non-virtual"><scope>ArkNet::ArkNetApi</scope><name>_peerSeedListDevNet</name></member>
+      <member refid="class_ark_net_1_1_ark_net_api_1a021a17784ffcaa7a79cd5c23cc4bf242" prot="private" virt="non-virtual"><scope>ArkNet::ArkNetApi</scope><name>_peerSeedListMainNet</name></member>
+      <member refid="class_ark_net_1_1_ark_net_api_1abbbba57013bdaaf84e8d4326fd861a53" prot="private" virt="non-virtual"><scope>ArkNet::ArkNetApi</scope><name>ArkNetApi</name></member>
+      <member refid="class_ark_net_1_1_ark_net_api_1abc5718185c4f55185d931a52eee0bb83" prot="private" virt="non-virtual"><scope>ArkNet::ArkNetApi</scope><name>GetInitialPeer</name></member>
+      <member refid="class_ark_net_1_1_ark_net_api_1a733a9e8c92730374e1e2893fc7d69ce6" prot="private" virt="non-virtual"><scope>ArkNet::ArkNetApi</scope><name>GetInitialPeer</name></member>
+      <member refid="class_ark_net_1_1_ark_net_api_1a3907e8daca5d8dadbff95b00f66a38bb" prot="public" virt="non-virtual"><scope>ArkNet::ArkNetApi</scope><name>Instance</name></member>
+      <member refid="class_ark_net_1_1_ark_net_api_1af38dad201d9d7d72e8f0750eb7ef492f" prot="public" virt="non-virtual"><scope>ArkNet::ArkNetApi</scope><name>NetworkSettings</name></member>
+      <member refid="class_ark_net_1_1_ark_net_api_1a7b32e4e7efaefd8dfbeb5dfc5c9b3401" prot="private" virt="non-virtual"><scope>ArkNet::ArkNetApi</scope><name>SetNetworkSettings</name></member>
+      <member refid="class_ark_net_1_1_ark_net_api_1a9b254c693fcbdc5fa0bf5865fc16e4af" prot="public" virt="non-virtual"><scope>ArkNet::ArkNetApi</scope><name>Start</name></member>
+      <member refid="class_ark_net_1_1_ark_net_api_1a680dc2b9aff684b5fb9f0ef8947a0590" prot="public" virt="non-virtual"><scope>ArkNet::ArkNetApi</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

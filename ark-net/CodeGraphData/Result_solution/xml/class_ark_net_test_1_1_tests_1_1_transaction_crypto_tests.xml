@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests" kind="class" prot="public">
+    <compoundname>ArkNetTest::Tests::TransactionCryptoTests</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_tests_1_1_tests_base" prot="public" virt="non-virtual">ArkNet.Tests.TestsBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1ae9375670df5b3c7e10ed61f069988659" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ArkNetTest.Tests.TransactionCryptoTests._passPhrase</definition>
+        <argsstring></argsstring>
+        <name>_passPhrase</name>
+        <initializer>= &quot;this is a top secret passphrase&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="16" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1aa626252860c7dd7cf81768f81c2dff8c" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ArkNetTest.Tests.TransactionCryptoTests._address</definition>
+        <argsstring></argsstring>
+        <name>_address</name>
+        <initializer>= &quot;AXoXnFi4z1Z6aFvjEYkDVCtBGW2PaRiM25&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="17" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1ad3dfd6b3c81021cd4553947ea8be9fa2" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ArkNetTest.Tests.TransactionCryptoTests._addressFromCrypto</definition>
+        <argsstring></argsstring>
+        <name>_addressFromCrypto</name>
+        <initializer>= &quot;AGeYmgbg2LgGxRW2vNNJvQ88PknEJsYizC&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="18" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1ad85cd3965a6c4554b947920ba35b1d50" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ArkNetTest.Tests.TransactionCryptoTests._pubKey</definition>
+        <argsstring></argsstring>
+        <name>_pubKey</name>
+        <initializer>= &quot;034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="19" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a201689fa89c14b017add3371202541a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNetTest.Tests.TransactionCryptoTests.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="22" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="22" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1ac1cead610d2d8ed1ad136e83424c0acf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNetTest.Tests.TransactionCryptoTests.GetKeysTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetKeysTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="36" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="36" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1aef36500c42b8d0ac39709241db270764" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNetTest.Tests.TransactionCryptoTests.GetAddressTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetAddressTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="45" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="45" bodyend="51"/>
+        <references refid="class_ark_net_1_1_ark_net_api_1a3907e8daca5d8dadbff95b00f66a38bb" compoundref="_ark_net_api_8cs" startline="99">ArkNet.ArkNetApi.Instance</references>
+        <references refid="class_ark_net_1_1_ark_net_api_1af38dad201d9d7d72e8f0750eb7ef492f" compoundref="_ark_net_api_8cs" startline="107">ArkNet.ArkNetApi.NetworkSettings</references>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a40fe8f55475177d2b6f4e5ecd5761255" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNetTest.Tests.TransactionCryptoTests.CreateTransactionPassPhraseVerifyTest</definition>
+        <argsstring>()</argsstring>
+        <name>CreateTransactionPassPhraseVerifyTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="54" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="54" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a165380cfa680d13f0d122b2a90302d4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNetTest.Tests.TransactionCryptoTests.JSONSerDeSerTest</definition>
+        <argsstring>()</argsstring>
+        <name>JSONSerDeSerTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="66" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="66" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a65b52293777c7ad0680fcd016b8cc5a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNetTest.Tests.TransactionCryptoTests.JSONSerDeSerNegTest</definition>
+        <argsstring>()</argsstring>
+        <name>JSONSerDeSerNegTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="81" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="81" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a22a74aec9b0fc86d39049cb7c8186510" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNetTest.Tests.TransactionCryptoTests.CreateTransaction2ndPassPhraseandVerifyTest</definition>
+        <argsstring>()</argsstring>
+        <name>CreateTransaction2ndPassPhraseandVerifyTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="97" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="97" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a0c4e57caf340fefe8d10a4e785795a42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNetTest.Tests.TransactionCryptoTests.CreateTransactionAmountChangeTest</definition>
+        <argsstring>()</argsstring>
+        <name>CreateTransactionAmountChangeTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="114" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="114" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a8eda943d28b11c3de7a2dde0cd9c065d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNetTest.Tests.TransactionCryptoTests.CreateTransactionFeeChangeTest</definition>
+        <argsstring>()</argsstring>
+        <name>CreateTransactionFeeChangeTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="130" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="130" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a416aed04961f1811b437590c2c6fa02f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNetTest.Tests.TransactionCryptoTests.CreateTransactionRecepientChangeTest</definition>
+        <argsstring>()</argsstring>
+        <name>CreateTransactionRecepientChangeTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="146" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="146" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1ad8f346c9bbde451fc1bb215ba7ebbb2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNetTest.Tests.TransactionCryptoTests.CreateDelegateTest</definition>
+        <argsstring>()</argsstring>
+        <name>CreateDelegateTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="161" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="161" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a561fed01be93a1d364de583b8ad844cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNetTest.Tests.TransactionCryptoTests.CreateVoteSignTest</definition>
+        <argsstring>()</argsstring>
+        <name>CreateVoteSignTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="171" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="171" bodyend="181"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="402">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="401">
+        <label>ArkNetTest.Tests.TransactionCryptoTests</label>
+        <link refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests"/>
+        <childnode refid="402" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="404">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="403">
+        <label>ArkNetTest.Tests.TransactionCryptoTests</label>
+        <link refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests"/>
+        <childnode refid="404" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" line="15" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Tests/TransactionCryptoTests.cs" bodystart="14" bodyend="182"/>
+    <listofallmembers>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1aa626252860c7dd7cf81768f81c2dff8c" prot="private" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>_address</name></member>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1ad3dfd6b3c81021cd4553947ea8be9fa2" prot="private" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>_addressFromCrypto</name></member>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1ae9375670df5b3c7e10ed61f069988659" prot="private" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>_passPhrase</name></member>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1ad85cd3965a6c4554b947920ba35b1d50" prot="private" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>_pubKey</name></member>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1ad8f346c9bbde451fc1bb215ba7ebbb2a" prot="public" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>CreateDelegateTest</name></member>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a22a74aec9b0fc86d39049cb7c8186510" prot="public" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>CreateTransaction2ndPassPhraseandVerifyTest</name></member>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a0c4e57caf340fefe8d10a4e785795a42" prot="public" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>CreateTransactionAmountChangeTest</name></member>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a8eda943d28b11c3de7a2dde0cd9c065d" prot="public" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>CreateTransactionFeeChangeTest</name></member>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a40fe8f55475177d2b6f4e5ecd5761255" prot="public" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>CreateTransactionPassPhraseVerifyTest</name></member>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a416aed04961f1811b437590c2c6fa02f" prot="public" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>CreateTransactionRecepientChangeTest</name></member>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a561fed01be93a1d364de583b8ad844cf" prot="public" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>CreateVoteSignTest</name></member>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1aef36500c42b8d0ac39709241db270764" prot="public" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>GetAddressTest</name></member>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1ac1cead610d2d8ed1ad136e83424c0acf" prot="public" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>GetKeysTest</name></member>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a201689fa89c14b017add3371202541a0" prot="public" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>Init</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a21cca2e1a214cb2a375e5c8786ed0062" prot="public" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>Initialize</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a0533a9e15637e7b44ba2ecb6f18a28c8" prot="public" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>InitializeAsync</name></member>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a65b52293777c7ad0680fcd016b8cc5a2" prot="public" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>JSONSerDeSerNegTest</name></member>
+      <member refid="class_ark_net_test_1_1_tests_1_1_transaction_crypto_tests_1a165380cfa680d13f0d122b2a90302d4d" prot="public" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>JSONSerDeSerTest</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a5c7b7233192533ab308a82da929a903c" prot="protected" virt="non-virtual"><scope>ArkNetTest::Tests::TransactionCryptoTests</scope><name>USE_DEV_NET</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

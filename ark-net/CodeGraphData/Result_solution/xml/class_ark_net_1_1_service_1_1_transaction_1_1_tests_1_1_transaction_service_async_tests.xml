@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests" kind="class" prot="public">
+    <compoundname>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base" prot="public" virt="non-virtual">ArkNet.Service.Transaction.Tests.TransactionServiceTestsBase</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1ae44d9bf66258ae09bf20eefe315e1c6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Transaction.Tests.TransactionServiceAsyncTests.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" line="17" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1a838d3dc25db039186d8b09ccd58cbc4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Transaction.Tests.TransactionServiceAsyncTests.GetAllAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" line="23" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" bodystart="23" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1a43fe07fe33c58a029230c40b5bae8ab8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Transaction.Tests.TransactionServiceAsyncTests.GetGetTransactionsAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetGetTransactionsAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" line="31" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" bodystart="31" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1a64ae53c742ac6643ba0dcf6912f433a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Transaction.Tests.TransactionServiceAsyncTests.GetByIdAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetByIdAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" line="39" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" bodystart="39" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1a5697c60aaa942f22df26a1ec4c8de6e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Transaction.Tests.TransactionServiceAsyncTests.GetByIdErrorAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetByIdErrorAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" line="51" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" bodystart="51" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1afeb2dd2e585f634470ad39207444cc9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Transaction.Tests.TransactionServiceAsyncTests.GetUnConfirmedByIdAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetUnConfirmedByIdAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" line="59" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" bodystart="59" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1abf90c12a5a67381fa1419c8d2cbe0ecd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Transaction.Tests.TransactionServiceAsyncTests.GetUnConfirmedByIdErrorAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetUnConfirmedByIdErrorAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" line="72" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" bodystart="72" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1abeca1b620ba996cfe6a65ae41136d302" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Transaction.Tests.TransactionServiceAsyncTests.GetUnconfirmedAllAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetUnconfirmedAllAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" line="80" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" bodystart="80" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1a07573d734e34987c5147307b38636aee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Service.Transaction.Tests.TransactionServiceAsyncTests.GetUnconfirmedTransactionsAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetUnconfirmedTransactionsAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" line="88" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" bodystart="88" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="409">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="408">
+        <label>TransactionServiceTestsBase</label>
+        <link refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base"/>
+        <childnode refid="409" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="407">
+        <label>ArkNet.Service.Transaction.Tests.TransactionServiceAsyncTests</label>
+        <link refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests"/>
+        <childnode refid="408" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="412">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="411">
+        <label>TransactionServiceTestsBase</label>
+        <link refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base"/>
+        <childnode refid="412" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="410">
+        <label>ArkNet.Service.Transaction.Tests.TransactionServiceAsyncTests</label>
+        <link refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests"/>
+        <childnode refid="411" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" line="15" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Service/Transaction/TransactionServiceAsyncTests.cs" bodystart="14" bodyend="94"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1aac82cb121e4468ab03bb82572a6e4cc7" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>_blockId</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1a838d3dc25db039186d8b09ccd58cbc4a" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>GetAllAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1a119c7493b75417ebad91857e939711e0" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>GetAllResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1a64ae53c742ac6643ba0dcf6912f433a4" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>GetByIdAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1a5697c60aaa942f22df26a1ec4c8de6e2" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>GetByIdErrorAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1abbc22cd4152ec2cf4b77db8b80e75c8d" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>GetByIdErrorResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1a4a952699c8710181f8b8a3db2101299b" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>GetByIdResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1a43fe07fe33c58a029230c40b5bae8ab8" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>GetGetTransactionsAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1acc702b50098201060f5a43ea3f0b50e8" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>GetTransactionsResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1abeca1b620ba996cfe6a65ae41136d302" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>GetUnconfirmedAllAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1a73d772b7392d5c12ddc8fe696f386749" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>GetUnconfirmedAllResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1afeb2dd2e585f634470ad39207444cc9c" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>GetUnConfirmedByIdAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1abf90c12a5a67381fa1419c8d2cbe0ecd" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>GetUnConfirmedByIdErrorAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1abf6feb87f51be9fea9eee3387e4a62e9" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>GetUnConfirmedByIdErrorResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1a65416065b203d6c105533565cb2d66e7" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>GetUnConfirmedByIdResultTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1a07573d734e34987c5147307b38636aee" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>GetUnconfirmedTransactionsAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_async_tests_1ae44d9bf66258ae09bf20eefe315e1c6c" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>Init</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a21cca2e1a214cb2a375e5c8786ed0062" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>Initialize</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a0533a9e15637e7b44ba2ecb6f18a28c8" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>InitializeAsync</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1adfa0067e1a24201434c8f11ef7b4703d" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>InitializeTransactionServiceAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_service_1_1_transaction_1_1_tests_1_1_transaction_service_tests_base_1ad8eb83f5192fcd3502afe1e068f47dd1" prot="public" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>InitializeTransactionServiceTest</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a5c7b7233192533ab308a82da929a903c" prot="protected" virt="non-virtual"><scope>ArkNet::Service::Transaction::Tests::TransactionServiceAsyncTests</scope><name>USE_DEV_NET</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_list" kind="class" prot="public">
+    <compoundname>ArkNet::Model::Peer::ArkPeerList</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base" prot="public" virt="non-virtual">ArkNet.Model.BaseModels.ArkResponseBase</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_list_1a5f0731f344fd0238de235d6817349a15" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; <ref refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer" kindref="compound">ArkPeer</ref> &gt;</type>
+        <definition>List&lt;ArkPeer&gt; ArkNet.Model.Peer.ArkPeerList.Peers</definition>
+        <argsstring></argsstring>
+        <name>Peers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerList.cs" line="8" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerList.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="122">
+        <label>ArkResponseBase</label>
+        <link refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base"/>
+      </node>
+      <node id="121">
+        <label>ArkNet.Model.Peer.ArkPeerList</label>
+        <link refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_list"/>
+        <childnode refid="122" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="124">
+        <label>ArkResponseBase</label>
+        <link refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base"/>
+      </node>
+      <node id="123">
+        <label>ArkNet.Model.Peer.ArkPeerList</label>
+        <link refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_list"/>
+        <childnode refid="124" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerList.cs" line="7" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Model/Peer/ArkPeerList.cs" bodystart="6" bodyend="9"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a0896cd002de13aec6fdaa8df57fe1242" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerList</scope><name>Error</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a45c8e8b131e7d1d9b401ea6972fa3256" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerList</scope><name>Message</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_peer_1_1_ark_peer_list_1a5f0731f344fd0238de235d6817349a15" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerList</scope><name>Peers</name></member>
+      <member refid="class_ark_net_1_1_model_1_1_base_models_1_1_ark_response_base_1a218fcfef6e7a12abd3e8a29d90899fb5" prot="public" virt="non-virtual"><scope>ArkNet::Model::Peer::ArkPeerList</scope><name>Success</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

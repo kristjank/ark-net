@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests" kind="class" prot="public">
+    <compoundname>ArkNet::Controller::Tests::AccountControllerTests</compoundname>
+    <basecompoundref refid="class_ark_net_1_1_tests_1_1_tests_base" prot="public" virt="non-virtual">ArkNet.Tests.TestsBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1aeba90e71881fa22c50d8fa3aae2e5605" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ArkNet.Controller.Tests.AccountControllerTests._address</definition>
+        <argsstring></argsstring>
+        <name>_address</name>
+        <initializer>= &quot;AQLUKKKyKq5wZX7rCh4HJ4YFQ8bpTpPJgK&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" line="20" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1a318fdb0c891a144c63707d00dd263911" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ArkNet.Controller.Tests.AccountControllerTests._pubKey</definition>
+        <argsstring></argsstring>
+        <name>_pubKey</name>
+        <initializer>= &quot;02a3438fa0da25ebfb2c3df4875e30ff6d687b94adb9f2326ed988c101bdeeb973&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" line="21" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1a6cc00a7799dfe32fca5e0d34df42453a" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ArkNet.Controller.Tests.AccountControllerTests._passPhrase</definition>
+        <argsstring></argsstring>
+        <name>_passPhrase</name>
+        <initializer>= &quot;ski rose knock live elder parade dose device fetch betray loan holiday&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" line="22" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1ad63c5a76a38ae6f3b4d3bc7c6c5b4194" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ArkNet.Controller.Tests.AccountControllerTests._delegateName</definition>
+        <argsstring></argsstring>
+        <name>_delegateName</name>
+        <initializer>= &quot;arkpool&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" line="23" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1abec92bd3312390553e104abf8a9e08be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Controller.Tests.AccountControllerTests.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" line="26" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" bodystart="26" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1ace250a0d254e233fe2b3208ead5184d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Controller.Tests.AccountControllerTests.CreateAccountTest</definition>
+        <argsstring>()</argsstring>
+        <name>CreateAccountTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" line="40" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" bodystart="40" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1ad557395c14222a08331942ed5e426d16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Controller.Tests.AccountControllerTests.SendArkTest</definition>
+        <argsstring>()</argsstring>
+        <name>SendArkTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" line="49" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" bodystart="49" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1a84ea6d1d9fd63d241658ca62e9b669b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Controller.Tests.AccountControllerTests.SendArkUsingMultiBroadCastTest</definition>
+        <argsstring>()</argsstring>
+        <name>SendArkUsingMultiBroadCastTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" line="60" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" bodystart="60" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1aa14615f0ea18e3687e53d6dba8781f35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task ArkNet.Controller.Tests.AccountControllerTests.SendArkUsingMultiBroadCastAsyncTest</definition>
+        <argsstring>()</argsstring>
+        <name>SendArkUsingMultiBroadCastAsyncTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" line="69" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" bodystart="69" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1a0c11442922dc920176156cc6ebb10c54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Controller.Tests.AccountControllerTests.VoteForDelegateTest</definition>
+        <argsstring>()</argsstring>
+        <name>VoteForDelegateTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" line="78" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" bodystart="78" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1ae2ba64106f24729709434ee335fca95c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Controller.Tests.AccountControllerTests.GetTransactionsTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetTransactionsTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" line="94" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" bodystart="94" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1aaa385f6e2cfdf7b26d2f67aad2fb6c75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ArkNet.Controller.Tests.AccountControllerTests.GetUnconfirmedTransactionsTest</definition>
+        <argsstring>()</argsstring>
+        <name>GetUnconfirmedTransactionsTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" line="103" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" bodystart="103" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="5">
+        <label>ArkNet.Controller.Tests.AccountControllerTests</label>
+        <link refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8">
+        <label>TestsBase</label>
+        <link refid="class_ark_net_1_1_tests_1_1_tests_base"/>
+      </node>
+      <node id="7">
+        <label>ArkNet.Controller.Tests.AccountControllerTests</label>
+        <link refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" line="19" column="1" bodyfile="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-netTests/Controller/AccountControllerTests.cs" bodystart="18" bodyend="110"/>
+    <listofallmembers>
+      <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1aeba90e71881fa22c50d8fa3aae2e5605" prot="private" virt="non-virtual"><scope>ArkNet::Controller::Tests::AccountControllerTests</scope><name>_address</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1ad63c5a76a38ae6f3b4d3bc7c6c5b4194" prot="private" virt="non-virtual"><scope>ArkNet::Controller::Tests::AccountControllerTests</scope><name>_delegateName</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1a6cc00a7799dfe32fca5e0d34df42453a" prot="private" virt="non-virtual"><scope>ArkNet::Controller::Tests::AccountControllerTests</scope><name>_passPhrase</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1a318fdb0c891a144c63707d00dd263911" prot="private" virt="non-virtual"><scope>ArkNet::Controller::Tests::AccountControllerTests</scope><name>_pubKey</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1ace250a0d254e233fe2b3208ead5184d5" prot="public" virt="non-virtual"><scope>ArkNet::Controller::Tests::AccountControllerTests</scope><name>CreateAccountTest</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1ae2ba64106f24729709434ee335fca95c" prot="public" virt="non-virtual"><scope>ArkNet::Controller::Tests::AccountControllerTests</scope><name>GetTransactionsTest</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1aaa385f6e2cfdf7b26d2f67aad2fb6c75" prot="public" virt="non-virtual"><scope>ArkNet::Controller::Tests::AccountControllerTests</scope><name>GetUnconfirmedTransactionsTest</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1abec92bd3312390553e104abf8a9e08be" prot="public" virt="non-virtual"><scope>ArkNet::Controller::Tests::AccountControllerTests</scope><name>Init</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a21cca2e1a214cb2a375e5c8786ed0062" prot="public" virt="non-virtual"><scope>ArkNet::Controller::Tests::AccountControllerTests</scope><name>Initialize</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a0533a9e15637e7b44ba2ecb6f18a28c8" prot="public" virt="non-virtual"><scope>ArkNet::Controller::Tests::AccountControllerTests</scope><name>InitializeAsync</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1ad557395c14222a08331942ed5e426d16" prot="public" virt="non-virtual"><scope>ArkNet::Controller::Tests::AccountControllerTests</scope><name>SendArkTest</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1aa14615f0ea18e3687e53d6dba8781f35" prot="public" virt="non-virtual"><scope>ArkNet::Controller::Tests::AccountControllerTests</scope><name>SendArkUsingMultiBroadCastAsyncTest</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1a84ea6d1d9fd63d241658ca62e9b669b1" prot="public" virt="non-virtual"><scope>ArkNet::Controller::Tests::AccountControllerTests</scope><name>SendArkUsingMultiBroadCastTest</name></member>
+      <member refid="class_ark_net_1_1_tests_1_1_tests_base_1a5c7b7233192533ab308a82da929a903c" prot="protected" virt="non-virtual"><scope>ArkNet::Controller::Tests::AccountControllerTests</scope><name>USE_DEV_NET</name></member>
+      <member refid="class_ark_net_1_1_controller_1_1_tests_1_1_account_controller_tests_1a0c11442922dc920176156cc6ebb10c54" prot="public" virt="non-virtual"><scope>ArkNet::Controller::Tests::AccountControllerTests</scope><name>VoteForDelegateTest</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

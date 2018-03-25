@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_ark_net_1_1_core" kind="namespace">
+    <compoundname>ArkNet::Core</compoundname>
+    <innerclass refid="class_ark_net_1_1_core_1_1_block" prot="public">ArkNet::Core::Block</innerclass>
+    <innerclass refid="class_ark_net_1_1_core_1_1_crypto" prot="public">ArkNet::Core::Crypto</innerclass>
+    <innerclass refid="class_ark_net_1_1_core_1_1_network_api" prot="public">ArkNet::Core::NetworkApi</innerclass>
+    <innerclass refid="class_ark_net_1_1_core_1_1_peer_api" prot="public">ArkNet::Core::PeerApi</innerclass>
+    <innerclass refid="class_ark_net_1_1_core_1_1_slot" prot="public">ArkNet::Core::Slot</innerclass>
+    <innerclass refid="class_ark_net_1_1_core_1_1_transaction_api" prot="public">ArkNet::Core::TransactionApi</innerclass>
+    <innerclass refid="class_ark_net_1_1_core_1_1_verification" prot="public">ArkNet::Core::Verification</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Tayab Jamil/Desktop/ark-net-master/ark-net/Core/Block.cs" line="31" column="1"/>
+  </compounddef>
+</doxygen>
