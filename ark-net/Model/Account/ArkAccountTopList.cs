@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ArkAccountTopList.cs" company="Ark Labs">
+// <copyright file="ArkAccountTopList.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
