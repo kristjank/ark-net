@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ArkTransactionPostResponse.cs" company="Ark Labs">
+// <copyright file="ArkTransactionPostResponse.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -41,7 +41,7 @@ namespace ArkNet.Model.Transactions
         /// The requested transaction ids list.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="List{System.String}"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="List{string}"/> type.</value>
         /// 
         public List<string> TransactionIds { get; set; }
 

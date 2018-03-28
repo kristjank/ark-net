@@ -40,8 +40,6 @@ using Newtonsoft.Json.Linq;
 
 namespace ArkNet
 {
-    using System.Diagnostics.CodeAnalysis;
-
     /// <summary>
     /// ARK API's entry.
     /// </summary>
@@ -98,8 +96,6 @@ namespace ArkNet
         /// </summary>
         public static ArkNetApi Instance => _lazy.Value;
 
-        // TODO: Fields should be declared as private, and exposed through properties (Verify Network Settings)
-        // TODO: All private fields must be placed before all Public Fields
 
         /// <summary>
         /// Store the network settings.

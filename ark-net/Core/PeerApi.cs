@@ -76,7 +76,7 @@ namespace ArkNet.Core
         /// <summary>
         /// The peer port.
         /// </summary>
-        /// <value>Gets/sets the value as an <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="int"/>.</value>
         public int Port { get { return _port; } }
 
         #endregion
@@ -185,7 +185,7 @@ namespace ArkNet.Core
         /// <summary>
         /// Asynchronously gets the online status of the peer.
         /// </summary>
-        /// <returns>Returns an instance of the <see cref="Task{bool}"/> type.</returns>
+        /// <returns>Returns an instance of the <see cref="Task{bool}"/> indicating if a peer is online.</returns>
         public async Task<bool> IsOnline()
         {
             try

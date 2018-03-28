@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ArkBlock.cs" company="Ark Labs">
+// <copyright file="ArkBlock.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -55,7 +55,7 @@ namespace ArkNet.Model.Block
         /// Timestamp of the block. 
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/>.</value>
         /// 
         public int Timestamp { get; set; }
 

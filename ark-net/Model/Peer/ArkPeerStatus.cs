@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ArkPeerStatus.cs" company="Ark Labs">
+// <copyright file="ArkPeerStatus.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -40,7 +40,7 @@ namespace ArkNet.Model.Peer
         /// The loader id.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/> type.</value>
         /// 
         public int Height { get; set; }
 
@@ -48,7 +48,7 @@ namespace ArkNet.Model.Peer
         /// The loader id.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Boolean"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="bool"/> type.</value>
         /// 
         public bool ForgingAllowed { get; set; }
 
@@ -56,7 +56,7 @@ namespace ArkNet.Model.Peer
         /// The loader id.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/> type.</value>
         /// 
         public int CurrentSlot { get; set; }
 

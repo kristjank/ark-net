@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ArkLoaderStatus.cs" company="Ark Labs">
+// <copyright file="ArkLoaderStatus.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -40,7 +40,7 @@ namespace ArkNet.Model.Loader
         /// Determines whether the loader has loaded.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Boolean"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="bool"/> type.</value>
         /// 
         public bool Loaded { get; set; }
 
@@ -48,7 +48,7 @@ namespace ArkNet.Model.Loader
         /// The last block loading during loading time.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int64"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="long"/> type.</value>
         /// 
         public long Now { get; set; }
 
@@ -56,7 +56,7 @@ namespace ArkNet.Model.Loader
         /// The total number of blocks loaded.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int64"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="long"/> type.</value>
         /// 
         public long BlocksCount { get; set; }
 

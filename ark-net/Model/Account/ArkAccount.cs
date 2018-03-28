@@ -35,10 +35,10 @@ namespace ArkNet.Model.Account
         /// <summary>
         /// Address of the account.
         /// 
-        /// <para>Gets/sets the value as a <see cref="System.String"/>.</para>
+        /// <para>Gets/sets the value as a <see cref="string"/>.</para>
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/>.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/>.</value>
         /// 
         public string Address { get; set; }
 
@@ -46,7 +46,7 @@ namespace ArkNet.Model.Account
         /// Unconfirmed balance of the account.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int64"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="long"/>.</value>
         /// 
         public long UnconfirmedBalance { get; set; }
 
@@ -54,7 +54,7 @@ namespace ArkNet.Model.Account
         /// Balance of the account.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int64"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="long"/>.</value>
         /// 
         public long Balance { get; set; }
 
@@ -62,7 +62,7 @@ namespace ArkNet.Model.Account
         /// Public key of account as a hexadecimal number.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/></value>
+        /// <value>Gets/sets the value as a <see cref="string"/></value>
         /// 
         public string PublicKey { get; set; }
 
@@ -70,7 +70,7 @@ namespace ArkNet.Model.Account
         /// The unconfirmed signature of account.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Boolean"/>.</value>
+        /// <value>Gets/sets the value as a <see cref="bool"/>.</value>
         /// 
         /// <remarks>
         /// The unconfirmed signature is second account signature for accounts which have enabled but 
@@ -83,7 +83,7 @@ namespace ArkNet.Model.Account
         /// If account enabled second signature.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="int"/>.</value>
         /// 
         // note: the desired property type might have been System.Boolean
         public int SecondSignature { get; set; }
@@ -92,7 +92,7 @@ namespace ArkNet.Model.Account
         /// Second  public key of the account as as a hexadecimal number.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/>.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/>.</value>
         /// 
         public object SecondPublicKey { get; set; }
 

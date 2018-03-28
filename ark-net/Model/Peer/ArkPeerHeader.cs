@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ArkPeerHeader.cs" company="Ark Labs">
+// <copyright file="ArkPeerHeader.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -38,7 +38,7 @@ namespace ArkNet.Model.Peer
         /// The peer id.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string Id { get; set; }
 
@@ -46,7 +46,7 @@ namespace ArkNet.Model.Peer
         /// The current block of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/> type.</value>
         /// 
         public int Height { get; set; }
 
@@ -54,7 +54,7 @@ namespace ArkNet.Model.Peer
         /// The version of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/> type.</value>
         /// 
         public int Version { get; set; }
 
@@ -62,7 +62,7 @@ namespace ArkNet.Model.Peer
         /// The total transaction amount of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int64"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="long"/> type.</value>
         /// 
         public long TotalAmount { get; set; }
 
@@ -70,7 +70,7 @@ namespace ArkNet.Model.Peer
         /// The total fee of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int64"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="long"/> type.</value>
         /// 
         public long TotalFee { get; set; }
 
@@ -78,7 +78,7 @@ namespace ArkNet.Model.Peer
         /// The reward of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int64"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="long"/> type.</value>
         /// 
         public long Reward { get; set; }
 
@@ -86,7 +86,7 @@ namespace ArkNet.Model.Peer
         /// The payload hash of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string PayloadHash { get; set; }
 
@@ -94,7 +94,7 @@ namespace ArkNet.Model.Peer
         /// The payload length of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/> type.</value>
         /// 
         public int PayloadLength { get; set; }
 
@@ -102,7 +102,7 @@ namespace ArkNet.Model.Peer
         /// The timestamp of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/> type.</value>
         /// 
         public int Timestamp { get; set; }
 
@@ -110,7 +110,7 @@ namespace ArkNet.Model.Peer
         /// Number of transactions of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/> type.</value>
         /// 
         public int NumberOfTransactions { get; set; }
 
@@ -118,7 +118,7 @@ namespace ArkNet.Model.Peer
         /// The previous block id of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string PreviousBlock { get; set; }
 
@@ -126,7 +126,7 @@ namespace ArkNet.Model.Peer
         /// The generator public key of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string GeneratorPublicKey { get; set; }
 
@@ -134,7 +134,7 @@ namespace ArkNet.Model.Peer
         /// The block signature of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string BlockSignature { get; set; }
 

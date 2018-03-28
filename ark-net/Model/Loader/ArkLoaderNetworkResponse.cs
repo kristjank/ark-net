@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ArkLoaderNetworkResponse.cs" company="Ark Labs">
+// <copyright file="ArkLoaderNetworkResponse.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič

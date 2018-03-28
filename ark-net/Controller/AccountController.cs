@@ -114,17 +114,18 @@ namespace ArkNet.Controller
         #endregion
 
         /// <summary>
-        /// Send Ark from the account to a given recipiend.
+        /// Send Ark from the account to a given recipient.
         /// </summary>
         /// <param name="satoshiAmount">
-        /// Amount in satoshi (1E-8 Ark)
+        /// Amount transacted in satoshi (1E-8 Ark)
         /// </param>
         /// <param name="recipientAddress">
-        /// Address of the recipied of the Arks.
+        /// Address of transaction's recipient.
         /// </param>
         /// <param name="vendorField">
-        /// 64 chars with Ark V1, 
-        /// it will be increased to 256 in V2.
+        /// => Also refered as Smartbridge
+        /// 64 chars <inheritdoc cref="string"/> with Ark V1, 
+        /// It will be increased to 256 in V2.
         /// </param>
         /// <returns>
         /// The <see cref="ArkTransactionPostResponse"/>.
@@ -142,17 +143,18 @@ namespace ArkNet.Controller
         }
 
         /// <summary>
-        /// Send Ark from the account to a given recipiend asynchroneously.
+        /// Send Ark from the account to a given recipient asynchroneously.
         /// </summary>
         /// <param name="satoshiAmount">
-        /// Amount in satoshi (1E-8 Ark)
+        /// Amount transacted in satoshi (1E-8 Ark)
         /// </param>
         /// <param name="recipientAddress">
-        /// Address of the recipied of the Arks.
+        /// Address of transaction's recipient.
         /// </param>
         /// <param name="vendorField">
-        /// 64 chars with Ark V1, 
-        /// it will be increased to 256 in V2.
+        /// => Also referred as the Smartbridge
+        /// 64 chars <inheritdoc cref="string"/> with Ark V1, 
+        /// It will be increased to 256 in V2.
         /// </param>
         /// <returns>
         /// The <see cref="ArkTransactionPostResponse"/> from the transaction.
@@ -171,17 +173,17 @@ namespace ArkNet.Controller
 
         /// <summary>
         /// Send ark to multiple peers asynchroneously.
-        /// TODO: Verify that it's what multi-broadcast means.
         /// </summary>
         /// <param name="satoshiAmount">
-        /// Amount in satoshi (1E-8 Ark)
+        /// Amount transacted in satoshi (1E-8 Ark)
         /// </param>
         /// <param name="recipientAddress">
-        /// Address of the recipient of the Arks.
+        /// Address of transaction's recipient.
         /// </param>
         /// <param name="vendorField">
-        /// 64 chars with Ark V1, 
-        /// it will be increased to 256 in V2.
+        /// => Also referred as Smartbridge
+        /// 64 chars <inheritdoc cref="string"/> with Ark V1, 
+        /// It will be increased to 256 in V2.
         /// </param>
         /// <returns>
         /// A list of <see cref="ArkTransactionPostResponse"/>.
@@ -200,17 +202,17 @@ namespace ArkNet.Controller
 
         /// <summary>
         /// Send ark to multiple peers asynchroneously.
-        /// TODO: Verify that it's what multi-broadcast means.
         /// </summary>
         /// <param name="satoshiAmount">
         /// Amount in satoshi (1E-8 Ark)
         /// </param>
         /// <param name="recipientAddress">
-        /// Address of the recipient of the Arks.
+        /// Address of transaction's recipient.
         /// </param>
         /// <param name="vendorField">
+        /// => Also Referred as Smartbridge
         /// 64 chars <inheritdoc cref="string"/> with Ark V1, 
-        /// It will be increased to 256 in V2.
+        /// will be increased to 256 in V2.
         /// </param>
         /// <returns>
         /// The <see cref="Task"/>.
@@ -231,7 +233,7 @@ namespace ArkNet.Controller
         /// Vote for a delegate.
         /// </summary>
         /// <param name="votes">
-        /// TODO The votes.
+        /// TODO: The votes.
         /// </param>
         /// <returns>
         /// The <see cref="ArkTransactionPostResponse"/> of the voting transaction.
@@ -247,7 +249,7 @@ namespace ArkNet.Controller
         /// Vote for a delegate asynchroneously.
         /// </summary>
         /// <param name="votes">
-        /// TODO The votes.
+        /// TODO: The votes.
         /// </param>
         /// <returns>
         /// The <see cref="ArkTransactionPostResponse"/> of the voting transaction.
@@ -266,7 +268,7 @@ namespace ArkNet.Controller
         /// Username registered as a Delegate Name.
         /// </param>
         /// <returns>
-        /// The <see cref="ArkTransactionPostResponse"/> of the Vote.
+        /// The <see cref="Task{ArkTransactionPostResponse}"/> of the Vote.
         /// </returns>
         public ArkTransactionPostResponse RegisterAsDelegate(string username)
         {
@@ -282,7 +284,7 @@ namespace ArkNet.Controller
         /// Username registered as a Delegate Name.
         /// </param>
         /// <returns>
-        /// The <see cref="Task"/>.
+        /// The <see cref="Task{ArkTransactionPostResponse}"/>.
         /// </returns>
         public async Task<ArkTransactionPostResponse> RegisterAsDelegateAsync(string username)
         {
@@ -312,7 +314,7 @@ namespace ArkNet.Controller
         /// Fetch the balance from the Network asynchroneously.
         /// </summary>
         /// <returns>
-        /// The <see cref="bool"/> indicate if the balance has been successfully updated.
+        /// The <see cref="bool"/> indicating if the balance has been successfully updated.
         /// </returns>
         public async Task<bool> UpdateBalanceAsync()
         {
@@ -330,9 +332,11 @@ namespace ArkNet.Controller
         /// </summary>
         /// <param name="offset">
         /// An unsigned integer that specified the number of records to skip.
+        /// Default is "0"
         /// </param>
         /// <param name="limit">
         /// An unsigned integer that specifies the maximum number of records.
+        /// Default is "50".
         /// </param>
         /// <returns>
         /// The <see cref="ArkTransactionList"/> returned by the network.
@@ -347,11 +351,11 @@ namespace ArkNet.Controller
         /// </summary>
         /// <param name="offset">
         /// An unsigned integer that specified the number of records to skip.
-        /// Default is "O".
+        /// Default is "0".
         /// </param>
         /// <param name="limit">
         /// An unsigned integer that specifies the maximum number of records.
-        /// Default is 50.
+        /// Default is "50".
         /// </param>
         /// <returns>
         /// The <see cref="ArkTransactionList"/> of transactions within the given boundaries.
@@ -362,7 +366,7 @@ namespace ArkNet.Controller
         }
 
         /// <summary>
-        /// Get all unconfirmed transactions from your account.
+        /// Get all unconfirmed transactions from the account.
         /// </summary>
         /// <returns>
         /// The <see cref="ArkTransactionList"/> of all unconfirmed transactions of the account.
@@ -373,7 +377,7 @@ namespace ArkNet.Controller
         }
 
         /// <summary>
-        /// Get all unconfirmed transactions from your account.
+        /// Get all unconfirmed transactions from the account.
         /// </summary>
         /// <returns>
         /// The <see cref="ArkTransactionList"/> of all unconfirmed transactions of the account.

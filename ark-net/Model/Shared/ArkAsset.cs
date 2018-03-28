@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ArkAsset.cs" company="Ark Labs">
+// <copyright file="ArkAsset.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -43,7 +43,7 @@ namespace ArkNet.Model.Shared
         /// The votes.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="List{System.String}"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="List{string}"/> type.</value>
         /// 
         public List<string> Votes { get; set; } = new List<string>();
 

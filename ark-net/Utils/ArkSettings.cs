@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ArkSettings.cs" company="Ark Labs">
+// <copyright file="ArkSettings.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -36,7 +36,7 @@ namespace ArkNet.Utils
         /// The network port.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="int"/>.</value>
         /// 
         public int Port { get; set; }
 
@@ -44,7 +44,7 @@ namespace ArkNet.Utils
         /// Same as the network version.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="int"/>.</value>
         /// 
         public byte BytePrefix { get; set; }
 
@@ -52,7 +52,7 @@ namespace ArkNet.Utils
         /// The network port.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="int"/>.</value>
         /// 
         public string Version { get; set; }
 
@@ -60,7 +60,7 @@ namespace ArkNet.Utils
         /// The network net hash.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="int"/>.</value>
         /// 
         public string NetHash { get; set; }
 
@@ -68,7 +68,7 @@ namespace ArkNet.Utils
         /// Maximum number of request braodcasts to peers.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="int"/>.</value>
         /// 
         public int MaxNumOfBroadcasts { get; set; }
 
@@ -76,7 +76,7 @@ namespace ArkNet.Utils
         /// Interval at which bad peers are dropped.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="int"/>.</value>
         /// 
         public int PeerCleaningIntervalInMinutes { get; set; }
 
@@ -84,7 +84,7 @@ namespace ArkNet.Utils
         /// The height threshold at which bad peers are dropped.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="int"/>.</value>
         /// 
         public int PeerCleaningHeightThreshold { get; set; }
 
@@ -92,7 +92,7 @@ namespace ArkNet.Utils
         /// The retry count when a peer request fails.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="int"/>.</value>
         /// 
         public int MaxRequestRetryCount { get; set; }
 
@@ -131,7 +131,7 @@ namespace ArkNet.Utils
         /// The transaction fee.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="int"/>.</value>
         /// 
         public int Send { get; set; }
 
@@ -139,7 +139,7 @@ namespace ArkNet.Utils
         /// The vote fee.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="int"/>.</value>
         /// 
         public int Vote { get; set; }
 
@@ -147,7 +147,7 @@ namespace ArkNet.Utils
         /// The delegate fee.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="int"/>.</value>
         /// 
         public long Delegate { get; set; }
 
@@ -155,7 +155,7 @@ namespace ArkNet.Utils
         /// The second signature fee.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="int"/>.</value>
         /// 
         public int SecondSignature { get; set; }
 
@@ -163,7 +163,7 @@ namespace ArkNet.Utils
         /// The multi signature fee.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as an <see cref="System.Int32"/>.</value>
+        /// <value>Gets/sets the value as an <see cref="int"/>.</value>
         /// 
         public int MultiSignature { get; set; }
     }

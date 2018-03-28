@@ -37,7 +37,7 @@ namespace ArkNet.Messages.Transaction
     /// </summary>
     public class ArkTransactionRequest : ArkBaseRequest
     {
-        #region
+        #region fields
 
         /// <summary>
         /// Query parameter. The sender's public key of the transaction as a hexadecimal string.

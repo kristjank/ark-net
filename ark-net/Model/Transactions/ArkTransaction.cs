@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ArkTransaction.cs" company="Ark Labs">
+// <copyright file="ArkTransaction.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -40,7 +40,7 @@ namespace ArkNet.Model.Transactions
         /// The transaction id.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string Id { get; set; }
 
@@ -48,7 +48,7 @@ namespace ArkNet.Model.Transactions
         /// The block id.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string BlockId { get; set; }
 
@@ -56,7 +56,7 @@ namespace ArkNet.Model.Transactions
         /// The block that processed the transaction.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int64"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="long"/> type.</value>
         /// 
         public long Height { get; set; }
 
@@ -64,7 +64,7 @@ namespace ArkNet.Model.Transactions
         /// The transaction type.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/> type.</value>
         /// 
         public int Type { get; set; }
 
@@ -72,7 +72,7 @@ namespace ArkNet.Model.Transactions
         /// The timestamp of the transaction.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/> type.</value>
         /// 
         public int Timestamp { get; set; }
 
@@ -80,7 +80,7 @@ namespace ArkNet.Model.Transactions
         /// The amount the transaction.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int64"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="long"/> type.</value>
         /// 
         public long Amount { get; set; }
 
@@ -88,7 +88,7 @@ namespace ArkNet.Model.Transactions
         /// The loader id.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int64"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="long"/> type.</value>
         /// 
         public long Fee { get; set; }
 
@@ -96,7 +96,7 @@ namespace ArkNet.Model.Transactions
         /// The vendor field of the transaction.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string VendorField { get; set; }
 
@@ -104,7 +104,7 @@ namespace ArkNet.Model.Transactions
         /// The sender if of the transaction.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string SenderId { get; set; }
 
@@ -112,7 +112,7 @@ namespace ArkNet.Model.Transactions
         /// The recepient id of the transaction.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string RecipientId { get; set; }
 
@@ -120,7 +120,7 @@ namespace ArkNet.Model.Transactions
         /// The sender public key of the transaction.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string SenderPublicKey { get; set; }
 
@@ -128,7 +128,7 @@ namespace ArkNet.Model.Transactions
         /// The signature that signed the transaction.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string Signature { get; set; }
 
@@ -136,7 +136,7 @@ namespace ArkNet.Model.Transactions
         /// The second signature that signed the transaction.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string SignSignature { get; set; }
 
@@ -152,7 +152,7 @@ namespace ArkNet.Model.Transactions
         /// The number of confirmations received by the transaction.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/> type.</value>
         /// 
         public int Confirmations { get; set; }
 

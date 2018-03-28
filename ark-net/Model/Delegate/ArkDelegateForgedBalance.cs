@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ArkDelegateForgedBalance.cs" company="Ark Labs">
+// <copyright file="ArkDelegateForgedBalance.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -41,7 +41,7 @@ namespace ArkNet.Model.Delegate
         /// Received transaction fee of processed block.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a an <see cref="System.String"/>.</value>
+        /// <value>Gets/sets the value as a an <see cref="string"/>.</value>
         /// 
         public long Fees { get; set; }
 
@@ -49,7 +49,7 @@ namespace ArkNet.Model.Delegate
         /// Amount rewarded to the delegate.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a an <see cref="System.Int64"/>.</value>
+        /// <value>Gets/sets the value as a an <see cref="long"/>.</value>
         /// 
         public long Rewards { get; set; }
 
@@ -57,7 +57,7 @@ namespace ArkNet.Model.Delegate
         /// Amount forged by the delegate.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a an <see cref="System.Int64"/>.</value>
+        /// <value>Gets/sets the value as a an <see cref="long"/>.</value>
         /// 
         public long Forged { get; set; }
 

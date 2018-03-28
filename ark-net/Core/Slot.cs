@@ -34,7 +34,7 @@ namespace ArkNet.Core
     /// <summary>
     /// Provides a timer for timestamping created transactions.
     /// </summary>
-    /// 
+    /// note: should be replaced by MS native "unixepochtime" 
 	public class Slot
 	{
         #region Fields
@@ -53,7 +53,7 @@ namespace ArkNet.Core
         /// Returns the elapsed time up to the current epoch.
         /// </summary>
         /// 
-        /// <returns>Returns the number of seconds elapsed an <see cref="System.Int32"/>.</returns>
+        /// <returns>Returns the number of seconds elapsed an <see cref="int"/>.</returns>
         /// 
         public static int GetTime()
 		{

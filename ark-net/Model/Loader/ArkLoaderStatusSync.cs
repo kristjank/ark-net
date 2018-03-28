@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ArkLoaderStatusSync.cs" company="Ark Labs">
+// <copyright file="ArkLoaderStatusSync.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -40,7 +40,7 @@ namespace ArkNet.Model.Loader
         /// The loader id.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string Id { get; set; }
 
@@ -48,7 +48,7 @@ namespace ArkNet.Model.Loader
         /// Determines whether the loader is syncing with peers.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Bool"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="bool"/> type.</value>
         /// 
         public bool Syncing { get; set; }
 
@@ -56,7 +56,7 @@ namespace ArkNet.Model.Loader
         /// The total number of blocks loaded.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int64"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="long"/> type.</value>
         /// 
         public long Blocks { get; set; }
 
@@ -64,7 +64,7 @@ namespace ArkNet.Model.Loader
         /// The last block loaded.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int64"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="long"/> type.</value>
         /// 
         public long Height { get; set; }
 

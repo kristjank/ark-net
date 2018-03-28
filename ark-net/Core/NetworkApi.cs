@@ -59,7 +59,7 @@ namespace ArkNet.Core
 
         /// <summary>
         /// Prevents a default instance of the <see cref="NetworkApi"/> class from being created. 
-        /// Initialize the <see cref="NetworkApi"/> and fill its peer list.
+        /// Initialize the <see cref="NetworkApi"/> and fill the <see cref="List{PeerApi}"/> with peers.
         /// </summary>
         private NetworkApi()
         {
@@ -100,7 +100,7 @@ namespace ArkNet.Core
         /// Gets a random peer.
         /// </summary>
         /// 
-        /// <returns>Returns a <see cref="PeerApi"/> type.</returns>
+        /// <returns>Returns the next peer randomly picked as a <see cref="PeerApi"/></returns>
         /// 
         public PeerApi GetRandomPeer()
         {
@@ -120,7 +120,7 @@ namespace ArkNet.Core
         /// Gets all peers.
         /// </summary>
         /// 
-        /// <returns>Returns a <see cref="Task"/> type.</returns>
+        /// <returns>Set the peer list</returns>
         /// 
         private async Task SetPeerList()
         {

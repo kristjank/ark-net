@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="DelegateService.cs" company="Ark Labs">
+// <copyright file="DelegateService.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -182,7 +182,7 @@ namespace ArkNet.Service
         /// Gets the current delgate fee.
         /// </summary>
         /// 
-        /// <returns>Return an <see cref="System.Int64"/>.</returns>
+        /// <returns>Return an <see cref="long"/>.</returns>
         /// 
         public static long GetFee()
         {
@@ -193,7 +193,7 @@ namespace ArkNet.Service
         /// Asynchronously gets the current delgate fee.
         /// </summary>
         /// 
-        /// <returns>Return an <see cref="Task{System.Int64}"/>.</returns>
+        /// <returns>Return an <see cref="Task{long}"/>.</returns>
         /// 
         public async static Task<long> GetFeeAsync()
         {
@@ -261,7 +261,7 @@ namespace ArkNet.Service
         /// 
         /// <param name="pubKey">The delegate public key.</param>
         /// 
-        /// <returns>Returns an <see cref="System.Int64"/> type.</returns>
+        /// <returns>Returns an <see cref="long"/> type.</returns>
         /// 
         public static long GetTotalVoteArk(string pubKey)
         {
@@ -281,7 +281,7 @@ namespace ArkNet.Service
         /// 
         /// <param name="pubKey">The delegate public key.</param>
         /// 
-        /// <returns>Returns an <see cref="Task{System.Int64}"/> type.</returns>
+        /// <returns>Returns an <see cref="Task{long}"/> type.</returns>
         /// 
         public async static Task<long> GetTotalVoteArkAsync(string pubKey)
         {

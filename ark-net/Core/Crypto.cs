@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Crypto.cs" company="Ark Labs">
+// <copyright file="Crypto.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -73,7 +73,7 @@ namespace ArkNet.Core
 	    /// Sign Transaction with the second passphrasse.
 	    /// </summary>
 	    /// <param name="t">
-	    /// <see cref="TransactionApi"/> to be signed.
+	    /// The transaction as a <see cref="TransactionApi"/> to be signed.
 	    /// </param>
 	    /// <param name="passphrase">
 	    /// The SECOND passphrase.

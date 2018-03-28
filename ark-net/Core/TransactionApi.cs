@@ -72,7 +72,7 @@ namespace ArkNet.Core
         /// <param name="fee">The fee of the transaction.</param>
         /// <param name="vendorField">
         /// The vendor field of the transaction.
-        /// This is a 64 char long for V1, should 152 for V2.
+        /// This is a 64 char long for V1, should 256 for V2.
         /// </param>
         /// 
 		private TransactionApi(byte type, string recipientId, long amount, long fee, string vendorField)
@@ -317,7 +317,7 @@ namespace ArkNet.Core
         /// 
         /// <param name="passphrase">The first passphrase.</param>
         /// 
-        /// <returns>Returns the the encoded first signature as a <see cref="System.String"/>.</returns>
+        /// <returns>Returns the the encoded first signature as a <see cref="string"/>.</returns>
         /// 
 		public string Sign(string passphrase)
 		{
@@ -333,7 +333,7 @@ namespace ArkNet.Core
         /// 
         /// <param name="passphrase">The second passphrase.</param>
         /// 
-        /// <returns>Returns the the encoded second signature as a <see cref="System.String"/>.</returns>
+        /// <returns>Returns the the encoded second signature as a <see cref="string"/>.</returns>
         /// 
 		public string SecondSign(string passphrase)
 		{
@@ -346,7 +346,7 @@ namespace ArkNet.Core
         /// Creates a Json representation of this <see cref="TransactionApi"/> instance.
         /// </summary>
         /// 
-        /// <returns>Returns a Json <see cref="System.String"/> type.</returns>
+        /// <returns>Returns a Json <see cref="string"/> type.</returns>
         /// 
 		public string ToJson()
 		{

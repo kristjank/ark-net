@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="AccountService.cs" company="Ark Labs">
+// <copyright file="AccountService.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -47,7 +47,7 @@ namespace ArkNet.Service
         /// Gets the account information of an address.
         /// </summary>
         /// 
-        /// <param name="address">A valid ARK as a <see cref="System.String"/>.</param>
+        /// <param name="address">A valid ARK as a <see cref="string"/>.</param>
         /// 
         /// <returns>Returns an instance of the <see cref="ArkAccountResponse"/> type.</returns>
         /// 
@@ -60,7 +60,7 @@ namespace ArkNet.Service
         /// Asynchronously gets the account information of an address.
         /// </summary>
         /// 
-        /// <param name="address">A valid ARK address as a <see cref="System.String"/>.</param>
+        /// <param name="address">A valid ARK address as a <see cref="string"/>.</param>
         /// 
         /// <returns>Returns an instance of the <see cref="ArkAccountResponse"/> type.</returns>
         /// 
@@ -75,7 +75,7 @@ namespace ArkNet.Service
         /// Gets the balance of an account.
         /// </summary>
         /// 
-        /// <param name="address">A valid ARK address as a <see cref="System.String"/>.</param>
+        /// <param name="address">A valid ARK address as a <see cref="string"/>.</param>
         /// 
         /// <returns>Returns an instance of the <see cref="ArkAccountBalance"/> type.</returns>
         /// 
@@ -88,7 +88,7 @@ namespace ArkNet.Service
         /// Asynchronously gets the balance of an account.
         /// </summary>
         /// 
-        /// <param name="address">A valid ARK address as a <see cref="System.String"/>.</param>
+        /// <param name="address">A valid ARK address as a <see cref="string"/>.</param>
         /// 
         /// <returns>Returns an instance of the <see cref="ArkAccountBalance"/> type.</returns>
         /// 
@@ -103,7 +103,7 @@ namespace ArkNet.Service
         /// Gets the delegates of an account.
         /// </summary>
         /// 
-        /// <param name="address">A valid ARK address as a <see cref="System.String"/>.</param>
+        /// <param name="address">A valid ARK address as a <see cref="string"/>.</param>
         /// 
         /// <returns>Returns an instance of the <see cref="ArkDelegateList"/> type.</returns>
         /// 
@@ -116,7 +116,7 @@ namespace ArkNet.Service
         /// Asynchronously gets the delegates of an account by the account address.
         /// </summary>
         /// 
-        /// <param name="address">A valid ARK address as a <see cref="System.String"/>.</param>
+        /// <param name="address">A valid ARK address as a <see cref="string"/>.</param>
         /// 
         /// <returns>Returns an instance of the <see cref="Task{ArkDelegateList}"/> type.</returns>
         /// 

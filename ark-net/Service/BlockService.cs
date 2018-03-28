@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="BlockService.cs" company="Ark Labs">
+// <copyright file="BlockService.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -152,7 +152,7 @@ namespace ArkNet.Service
         /// Gets the current block number.
         /// </summary>
         /// 
-        /// <returns>Returns an <see cref="System.Int64"/> type.</returns>
+        /// <returns>Returns an <see cref="long"/> type.</returns>
         /// 
         public static long GetHeight()
         {
@@ -163,7 +163,7 @@ namespace ArkNet.Service
         /// Asynchronously gets the current block number.
         /// </summary>
         /// 
-        /// <returns>Returns an <see cref="Task{System.Int64}"/> type.</returns>
+        /// <returns>Returns an <see cref="Task{int}"/> type.</returns>
         /// 
         public async static Task<long> GetHeightAsync()
         {
@@ -177,7 +177,7 @@ namespace ArkNet.Service
         /// Gets the current block net hash.
         /// </summary>
         /// 
-        /// <returns>Returns a <see cref="System.String"/> type.</returns>
+        /// <returns>Returns a <see cref="string"/> type.</returns>
         /// 
         public static string GetNetHash()
         {
@@ -188,7 +188,7 @@ namespace ArkNet.Service
         /// Asynchronously gets the current block net hash.
         /// </summary>
         /// 
-        /// <returns>Returns a <see cref="Task{System.String}"/> type.</returns>
+        /// <returns>Returns a <see cref="Task{string}"/> type.</returns>
         /// 
         public async static Task<string> GetNetHashAsync()
         {
@@ -227,7 +227,7 @@ namespace ArkNet.Service
         /// Gets the current block milestone.
         /// </summary>
         /// 
-        /// <returns>Returns an <see cref="System.Int32"/>.</returns>
+        /// <returns>Returns an <see cref="int"/>.</returns>
         /// 
         public static int GetMilestone()
         {
@@ -238,7 +238,7 @@ namespace ArkNet.Service
         /// Asynchronously gets the current block milestone.
         /// </summary>
         /// 
-        /// <returns>Returns an <see cref="Task{System.Int32}"/>.</returns>
+        /// <returns>Returns an <see cref="Task{int}"/>.</returns>
         /// 
         public async static Task<int> GetMilestoneAsync()
         {
@@ -252,7 +252,7 @@ namespace ArkNet.Service
         /// Gets the current block reward.
         /// </summary>
         /// 
-        /// <returns>Returns an <see cref="System.Int32"/>.</returns>
+        /// <returns>Returns an <see cref="int"/>.</returns>
         /// 
         public static int GetReward()
         {
@@ -263,7 +263,7 @@ namespace ArkNet.Service
         /// Asynchronously gets the current block reward.
         /// </summary>
         /// 
-        /// <returns>Returns an <see cref="Task{System.Int32}"/>.</returns>
+        /// <returns>Returns an <see cref="Task{int}"/>.</returns>
         /// 
         public async static Task<int> GetRewardAsync()
         {
@@ -277,7 +277,7 @@ namespace ArkNet.Service
         /// Gets the current block supply.
         /// </summary>
         /// 
-        /// <returns>Returns an <see cref="System.Int64"/>.</returns>
+        /// <returns>Returns an <see cref="long"/>.</returns>
         /// 
         public static long GetSupply()
         {
@@ -288,7 +288,7 @@ namespace ArkNet.Service
         /// Asynchronously gets the current block supply.
         /// </summary>
         /// 
-        /// <returns>Returns an <see cref="Task{System.Int64}"/>.</returns>
+        /// <returns>Returns an <see cref="Task{int}"/>.</returns>
         /// 
         public async static Task<long> GetSupplyAsync()
         {

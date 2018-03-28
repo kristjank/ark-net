@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ArkPeer.cs" company="Ark Labs">
+// <copyright file="ArkPeer.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -38,7 +38,7 @@ namespace ArkNet.Model.Peer
         /// Ip address of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string Ip { get; set; }
 
@@ -46,7 +46,7 @@ namespace ArkNet.Model.Peer
         /// The port of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/> type.</value>
         /// 
         public int Port { get; set; }
 
@@ -54,7 +54,7 @@ namespace ArkNet.Model.Peer
         /// The version of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string Version { get; set; }
 
@@ -62,7 +62,7 @@ namespace ArkNet.Model.Peer
         /// The operating system of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string Os { get; set; }
 
@@ -70,7 +70,7 @@ namespace ArkNet.Model.Peer
         /// The current block of the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/> type.</value>
         /// 
         public int Height { get; set; }
 
@@ -82,7 +82,7 @@ namespace ArkNet.Model.Peer
         /// 0 - banned
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string Status { get; set; }
 
@@ -90,7 +90,7 @@ namespace ArkNet.Model.Peer
         /// The round-trip time to the peer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/> type.</value>
         /// 
         public int Delay { get; set; }
 
@@ -98,7 +98,7 @@ namespace ArkNet.Model.Peer
         /// Number of errors.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/> type.</value>
         /// 
         public int Errors { get; set; }
 

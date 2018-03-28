@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ArkLoaderNetwork.cs" company="Ark Labs">
+// <copyright file="ArkLoaderNetwork.cs" company="Ark">
 //   MIT License
 //   // 
 //   // Copyright (c) 2017 Kristjan Košič
@@ -38,7 +38,7 @@ namespace ArkNet.Model.Loader
         /// The loader net hash.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string NetHash { get; set; }
 
@@ -46,7 +46,7 @@ namespace ArkNet.Model.Loader
         /// The loader token.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string Token { get; set; }
 
@@ -54,7 +54,7 @@ namespace ArkNet.Model.Loader
         /// The loader symbol.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string Symbol { get; set; }
 
@@ -62,7 +62,7 @@ namespace ArkNet.Model.Loader
         /// The loader explorer.
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.String"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="string"/> type.</value>
         /// 
         public string Explorer { get; set; }
 
@@ -70,7 +70,7 @@ namespace ArkNet.Model.Loader
         /// The loader version
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="System.Int32"/> type.</value>
+        /// <value>Gets/sets the value as a <see cref="int"/> type.</value>
         /// 
         public int Version { get; set; }
 
