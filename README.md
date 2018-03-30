@@ -29,7 +29,7 @@ cd ark-net
 
 All ark-node services have available reponses have their object representations in the form of ValueObjects. You can use service classes under [service folder](https://github.com/kristjank/ark-net/tree/master/ark-net/service). Responses are IEnumerable or IQueryable (depends if the class and functionality).
 
-It's best to let the code do the speaking. For more examples look at the [ARK.NET Tests](https://github.com/kristjank/ark-net/blob/master/ark-netTests/io/ark/core/ModelTests.cs#L22), where all tests are written and you can see the api usage. Some code snippets are below.
+It's best to let the code do the speaking. For more examples look at the [ARK.NET Tests](https://github.com/ArkEcosystem/ark-net/tree/master/ark-netTests), where all tests are written and you can see the api usage. Some code snippets are below.
 
 
 ### Ark.Net Client init
