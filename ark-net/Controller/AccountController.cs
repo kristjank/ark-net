@@ -35,6 +35,7 @@ namespace ArkNet.Controller
 {
     /// <summary>
     /// Account controller, used to interract with the account.
+    /// <inheritdoc cref="ArkNetApi"/> Start() should be called prior to using this class.
     /// </summary>
     public class AccountController
     {

@@ -23,6 +23,8 @@
 //   // SOFTWARE.
 // </copyright>
 
+using System.ComponentModel;
+
 namespace ArkNet.Utils.Enum
 {
     /// <summary>
@@ -33,11 +35,13 @@ namespace ArkNet.Utils.Enum
         /// <summary>
         /// Indicates the peers from the main network will be used.
         /// </summary>
+        [Description("MainNet")]
         MainNet,
 
         /// <summary>
         /// Indicates the peers from the developer network will be used.
         /// </summary>
+        [Description("DevNet")]
         DevNet
     }
 }

@@ -102,8 +102,6 @@ namespace ArkNet
         /// </summary>
         public ArkNetworkSettings NetworkSettings;
 
-        // TODO : All properties must be placed after all constructors.
-
         /// <summary>
         /// Prevents a default instance of the <see cref="ArkNetApi"/> class from being created.
         /// </summary>

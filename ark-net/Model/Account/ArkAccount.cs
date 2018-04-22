@@ -35,10 +35,10 @@ namespace ArkNet.Model.Account
         /// <summary>
         /// Address of the account.
         /// 
-        /// <para>Gets/sets the value as a <see cref="string"/>.</para>
+        /// <para>Gets/sets the public address as a <see cref="string"/>.</para>
         /// </summary>
         /// 
-        /// <value>Gets/sets the value as a <see cref="string"/>.</value>
+        /// <value>Gets/sets the address derived from the public key as a <see cref="string"/>.</value>
         /// 
         public string Address { get; set; }
 
