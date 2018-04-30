@@ -3,6 +3,7 @@ using ArkNet.Core;
 using ArkNet.Model.Account;
 using ArkNet.Model.Delegate;
 using ArkNet.Utils;
+using NBitcoin;
 using Newtonsoft.Json;
 
 namespace ArkNet.Service
@@ -56,6 +57,26 @@ namespace ArkNet.Service
                 await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_TOP_ACCOUNTS, limit.HasValue ? limit : 100, recordsToSkip.HasValue ? recordsToSkip : 0));
 
             return JsonConvert.DeserializeObject<ArkAccountTopList>(response);
+        }
+
+        public static string GeneratePassphrase()
+        {
+            return new Mnemonic(Wordlist.English, WordCount.Twelve).ToString();
+        }
+
+        public static ArkAccountNew CreateAccount()
+        {
+            return CreateAccount(GeneratePassphrase());
+        }
+
+        public static ArkAccountNew CreateAccount(string passPhrase)
+        {
+            var coldAccount = new ArkAccountNew()
+            {
+                Address = Crypto.GetAddress(Crypto.GetKeys(passPhrase), ArkNetApi.Instance.NetworkSettings.BytePrefix),
+                PassPhrase = passPhrase
+            };
+            return coldAccount;
         }
     }
 }
