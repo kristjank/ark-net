@@ -69,6 +69,18 @@ namespace ArkNet
             await SetNetworkSettings(GetInitialPeer(initialPeerIp, initialPeerPort));
         }
 
+        public async Task SwitchNetwork(NetworkType type)
+        {
+            NetworkSettings = null;
+            await SetNetworkSettings(await GetInitialPeer(type));
+        }
+
+        public async Task SwitchNetwork(string peerId, int peerPort)
+        {
+            NetworkSettings = null;
+            await SetNetworkSettings(GetInitialPeer(peerId, peerPort));
+        }
+
         private async Task SetNetworkSettings(PeerApi initialPeer)
         {
             var responseAutoConfigure = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_AUTO_CONFIGURE);
