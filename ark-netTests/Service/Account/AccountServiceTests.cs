@@ -105,17 +105,5 @@ namespace ArkNet.Service.Account.Tests
 
             GetTopLimitErrorResultTest(top);
         }
-
-        [TestMethod()]
-        public void CreateAccountTest()
-        {
-            AccountService.CreateAccount();
-        }
-
-        [TestMethod()]
-        public void CreateAccountWithPassPhraseTest()
-        {
-            AccountService.CreateAccount(AccountService.GeneratePassphrase());
-        }
     }
 }

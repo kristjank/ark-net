@@ -63,20 +63,5 @@ namespace ArkNet.Service
         {
             return new Mnemonic(Wordlist.English, WordCount.Twelve).ToString();
         }
-
-        public static ArkAccountNew CreateAccount()
-        {
-            return CreateAccount(GeneratePassphrase());
-        }
-
-        public static ArkAccountNew CreateAccount(string passPhrase)
-        {
-            var coldAccount = new ArkAccountNew()
-            {
-                Address = Crypto.GetAddress(Crypto.GetKeys(passPhrase), ArkNetApi.Instance.NetworkSettings.BytePrefix),
-                PassPhrase = passPhrase
-            };
-            return coldAccount;
-        }
     }
 }
