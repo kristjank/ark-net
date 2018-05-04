@@ -1,5 +1,6 @@
 ![alt text](https://github.com/kristjank/ark-net/blob/master/ark-net/res/arknet-new.png)
 
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/ArkEcosystem/ark-net.png?columns=all)](https://waffle.io/ArkEcosystem/ark-net?utm_source=badge)
 [![GitHub issues](https://img.shields.io/github/issues/kristjank/ark-net.svg)](https://github.com/kristjank/ark-net/issues)&nbsp;[![GitHub forks](https://img.shields.io/github/forks/kristjank/ark-net.svg)](https://github.com/kristjank/ark-net/network)&nbsp;[![GitHub stars](https://img.shields.io/github/stars/kristjank/ark-net.svg)](https://github.com/kristjank/ark-net/stargazers)&nbsp;[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/kristjank/ark-net/master/LICENSE)
 
 ### Why Ark.NET
@@ -38,7 +39,6 @@ It's best to let the code do the speaking. For more examples look at the [ARK.NE
 ```c#
   ArkNetApi.Instance.Start(NetworkType.MainNet); //Other types are TestNet and DevNet
 ```
-For **additional settings** please see [settings file](https://github.com/kristjank/ark-net/blob/master/ark-net/default.conf#L9). To **modify** settings, just add settings.conf file to root folder. File can only include changed settings (not all).
 
 ### Account/Wallet layer
 ```c#
