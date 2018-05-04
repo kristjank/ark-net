@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.0;net471</TargetFrameworks>
-
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -13,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
--    <ProjectReference Include="..\ark-net\ark-net.csproj" />
+    <ProjectReference Include="..\ark-net\ark-net.csproj" />
   </ItemGroup>
   
    <ItemGroup>
