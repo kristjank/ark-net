@@ -161,6 +161,10 @@ namespace ArkNet.Service
             return JsonConvert.DeserializeObject<ArkAccountTopList>(response);
         }
 
+        /// <summary>
+        /// Generates a passphrase
+        /// </summary>
+        /// <returns>String containinig the passphrase</returns>
         public static string GeneratePassphrase()
         {
             return new Mnemonic(Wordlist.English, WordCount.Twelve).ToString();
