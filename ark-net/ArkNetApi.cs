@@ -147,7 +147,7 @@ namespace ArkNet
         public async Task SwitchNetwork(NetworkType type)
         {
             NetworkSettings = null;
-            await SetNetworkSettings(await GetInitialPeer(type));
+            await SetNetworkSettings(await GetInitialPeer(type).ConfigureAwait(false)).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace ArkNet
         public async Task SwitchNetwork(string peerId, int peerPort)
         {
             NetworkSettings = null;
-            await SetNetworkSettings(GetInitialPeer(peerId, peerPort));
+            await SetNetworkSettings(GetInitialPeer(peerId, peerPort)).ConfigureAwait(false);
         }
 
         /// <summary>
