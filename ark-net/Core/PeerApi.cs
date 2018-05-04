@@ -153,19 +153,19 @@ namespace ArkNet.Core
                 {
                     case "GET":
                     case "HEAD":
-                        response = await _httpClient.GetAsync(path);
+                        response = await _httpClient.GetAsync(path).ConfigureAwait(false);
                         break;
                     case "POST":
-                        response = await _httpClient.PostAsync(path, new StringContent(JObject.Parse(body).ToString(), Encoding.UTF8, "application/json"));
+                        response = await _httpClient.PostAsync(path, new StringContent(JObject.Parse(body).ToString(), Encoding.UTF8, "application/json")).ConfigureAwait(false);
                         break;
                     case "PUT":
-                        response = await _httpClient.PutAsync(path, new StringContent(JObject.Parse(body).ToString(), Encoding.UTF8, "application/json"));
+                        response = await _httpClient.PutAsync(path, new StringContent(JObject.Parse(body).ToString(), Encoding.UTF8, "application/json")).ConfigureAwait(false);
                         break;
                     default:
                         throw new NotImplementedException();
                 }
                 response.EnsureSuccessStatusCode();
-                return await response.Content.ReadAsStringAsync();
+                return await response.Content.ReadAsStringAsync().ConfigureAwait(false);
             }
             catch(Exception)
             {
