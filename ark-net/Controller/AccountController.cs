@@ -132,15 +132,10 @@ namespace ArkNet.Controller
         /// The <see cref="ArkTransactionPostResponse"/>.
         /// </returns>
         public ArkTransactionPostResponse SendArk(long satoshiAmount, string recipientAddress,
-            string vendorField)
+                   string vendorField)
         {
-            var tx = TransactionApi.CreateTransaction(recipientAddress,
-                satoshiAmount,
-                vendorField,
-                _passPhrase,
-                _secondPassPhrase);
-
-            return TransactionService.PostTransaction(tx);
+            return TransactionService.PostTransaction(
+                CreateTransaction(satoshiAmount, recipientAddress, vendorField));
         }
 
         /// <summary>
@@ -163,13 +158,8 @@ namespace ArkNet.Controller
         public async Task<ArkTransactionPostResponse> SendArkAsync(long satoshiAmount, string recipientAddress,
             string vendorField)
         {
-            var tx = TransactionApi.CreateTransaction(recipientAddress,
-                satoshiAmount,
-                vendorField,
-                _passPhrase,
-                _secondPassPhrase);
-
-            return await TransactionService.PostTransactionAsync(tx);
+            return await TransactionService.PostTransactionAsync(
+                CreateTransaction(satoshiAmount, recipientAddress, vendorField));
         }
 
         /// <summary>
@@ -192,13 +182,8 @@ namespace ArkNet.Controller
         public List<ArkTransactionPostResponse> SendArkUsingMultiBroadCast(long satoshiAmount, string recipientAddress,
             string vendorField)
         {
-            var tx = TransactionApi.CreateTransaction(recipientAddress,
-                satoshiAmount,
-                vendorField,
-                _passPhrase,
-                _secondPassPhrase);
-
-            return TransactionService.MultipleBroadCast(tx);
+            return TransactionService.MultipleBroadCast(
+                CreateTransaction(satoshiAmount, recipientAddress, vendorField));
         }
 
         /// <summary>
@@ -221,13 +206,8 @@ namespace ArkNet.Controller
         public async Task<List<ArkTransactionPostResponse>> SendArkUsingMultiBroadCastAsync(long satoshiAmount, string recipientAddress,
             string vendorField)
         {
-            var tx = TransactionApi.CreateTransaction(recipientAddress,
-                satoshiAmount,
-                vendorField,
-                _passPhrase,
-                _secondPassPhrase);
-
-            return await TransactionService.MultipleBroadCastAsync(tx);
+            return await TransactionService.MultipleBroadCastAsync(
+                CreateTransaction(satoshiAmount, recipientAddress, vendorField));
         }
 
         /// <summary>
@@ -386,6 +366,62 @@ namespace ArkNet.Controller
         public async Task<ArkTransactionList> GetUnconfirmedTransactionsAsync()
         {
             return await TransactionService.GetUnconfirmedTransactionsAsync(GetArkAccount().Address);
+        }
+
+        public TransactionApi CreateTransaction(long satoshiAmount, string recipientAddress,
+           string vendorField)
+        {
+            return TransactionApi.CreateTransaction(recipientAddress,
+                satoshiAmount,
+                vendorField,
+                _passPhrase,
+                _secondPassPhrase);
+        }
+
+        public string CreateTransactionJSON(long satoshiAmount, string recipientAddress, 
+            string vendorField)
+        {
+            return CreateTransaction(satoshiAmount, recipientAddress, vendorField).ToJson();
+        }
+
+        public ArkTransactionPostResponse SendTransaction(TransactionApi transaction)
+        {
+            return TransactionService.PostTransaction(transaction);
+        }
+
+        public async Task<ArkTransactionPostResponse> SendTransactionAsync(TransactionApi transaction)
+        {
+            return await TransactionService.PostTransactionAsync(transaction);
+        }
+
+        public List<ArkTransactionPostResponse> SendTransactionUsingMultiBroadCast(TransactionApi transaction)
+        {
+            return TransactionService.MultipleBroadCast(transaction);
+        }
+
+        public async Task<List<ArkTransactionPostResponse>> SendTransactionUsingMultiBroadCastAsync(TransactionApi transaction)
+        {
+            return await TransactionService.MultipleBroadCastAsync(transaction);
+        }
+
+        public ArkTransactionPostResponse SendTransaction(string json)
+        {
+            return TransactionService.PostTransaction(TransactionApi.FromJson(json));
+        }
+
+        public async Task<ArkTransactionPostResponse> SendTransactionAsync(string json)
+        {
+            return await TransactionService.PostTransactionAsync(TransactionApi.FromJson(json));
+        }
+
+        public List<ArkTransactionPostResponse> SendTransactionUsingMultiBroadCast(string json)
+        {
+            return TransactionService.MultipleBroadCast(TransactionApi.FromJson(json));
+        }
+
+        public async Task<List<ArkTransactionPostResponse>> SendTransactionUsingMultiBroadCastAsync(string json)
+        {
+            return await TransactionService.MultipleBroadCastAsync(TransactionApi.FromJson(json));
         }
 
         #region V2 preparation
