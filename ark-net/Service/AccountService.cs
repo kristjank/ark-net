@@ -166,6 +166,6 @@ namespace ArkNet.Service
             return new Mnemonic(Wordlist.English, WordCount.Twelve).ToString();
         }
     }
-
     #endregion
 }
+#endregion
