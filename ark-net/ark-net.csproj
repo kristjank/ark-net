@@ -19,12 +19,6 @@
 	<RepositoryUrl>https://github.com/ArkEcosystem/ark-net</RepositoryUrl>
 	<RepositoryType>GitHub</RepositoryType>
   </PropertyGroup>
-  
-  <ItemGroup>
-    <Compile Remove="CodeGraphData\**" />
-    <EmbeddedResource Remove="CodeGraphData\**" />
-    <None Remove="CodeGraphData\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.4.1" />
