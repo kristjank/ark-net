@@ -391,7 +391,7 @@ namespace ArkNet.Controller
 
         public async Task<ArkTransactionPostResponse> SendTransactionAsync(TransactionApi transaction)
         {
-            return await TransactionService.PostTransactionAsync(transaction);
+            return await TransactionService.PostTransactionAsync(transaction).ConfigureAwait(false);
         }
 
         public List<ArkTransactionPostResponse> SendTransactionUsingMultiBroadCast(TransactionApi transaction)
@@ -401,7 +401,7 @@ namespace ArkNet.Controller
 
         public async Task<List<ArkTransactionPostResponse>> SendTransactionUsingMultiBroadCastAsync(TransactionApi transaction)
         {
-            return await TransactionService.MultipleBroadCastAsync(transaction);
+            return await TransactionService.MultipleBroadCastAsync(transaction).ConfigureAwait(false);
         }
 
         public ArkTransactionPostResponse SendTransaction(string json)
@@ -411,7 +411,7 @@ namespace ArkNet.Controller
 
         public async Task<ArkTransactionPostResponse> SendTransactionAsync(string json)
         {
-            return await TransactionService.PostTransactionAsync(TransactionApi.FromJson(json));
+            return await TransactionService.PostTransactionAsync(TransactionApi.FromJson(json)).ConfigureAwait(false);
         }
 
         public List<ArkTransactionPostResponse> SendTransactionUsingMultiBroadCast(string json)
@@ -421,7 +421,7 @@ namespace ArkNet.Controller
 
         public async Task<List<ArkTransactionPostResponse>> SendTransactionUsingMultiBroadCastAsync(string json)
         {
-            return await TransactionService.MultipleBroadCastAsync(TransactionApi.FromJson(json));
+            return await TransactionService.MultipleBroadCastAsync(TransactionApi.FromJson(json)).ConfigureAwait(false);
         }
 
         #region V2 preparation
