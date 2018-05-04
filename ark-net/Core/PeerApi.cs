@@ -132,7 +132,7 @@ namespace ArkNet.Core
         /// <returns>Returns an instance of the <see cref=Task{string}""/> type.</returns>
         public async Task<string> MakeRequest(string method, string path, string body = "")
         {
-            return await MakeRequestInternal(method, path, body, 0);
+            return await MakeRequestInternal(method, path, body, 0).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -175,7 +175,7 @@ namespace ArkNet.Core
                     {
                         NetworkApi.Instance.SwitchPeer();
                         _httpClient = NetworkApi.Instance.ActivePeer.HttpClient;
-                        return await MakeRequestInternal(method, path, body, retryCount + 1);
+                        return await MakeRequestInternal(method, path, body, retryCount + 1).ConfigureAwait(false);
                     }
                 }
                 throw;
@@ -190,7 +190,7 @@ namespace ArkNet.Core
         {
             try
             {
-                await MakeRequest(ArkStaticStrings.ArkHttpMethods.HEAD, ArkStaticStrings.ArkApiPaths.Loader.GET_STATUS);
+                await MakeRequest(ArkStaticStrings.ArkHttpMethods.HEAD, ArkStaticStrings.ArkApiPaths.Loader.GET_STATUS).ConfigureAwait(false);
                 return true;
             }
             catch

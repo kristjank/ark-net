@@ -59,7 +59,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkLoaderStatus> GetStatusAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_STATUS);
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_STATUS).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkLoaderStatus>(response);
         }
@@ -83,7 +83,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkLoaderStatusSync> GetSyncStatusAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_SYNC_STATUS);
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_SYNC_STATUS).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkLoaderStatusSync>(response);
         }
@@ -107,7 +107,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkLoaderNetworkResponse> GetAutoConfigureParametersAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_AUTO_CONFIGURE);
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_AUTO_CONFIGURE).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkLoaderNetworkResponse>(response);
         }

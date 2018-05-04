@@ -66,7 +66,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkAccountResponse> GetByAddressAsync(string address)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_ACCOUNT, address));
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_ACCOUNT, address)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkAccountResponse>(response);
         }
@@ -94,7 +94,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkAccountBalance> GetBalanceAsync(string address)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_BALANCE, address));
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_BALANCE, address)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkAccountBalance>(response);
         }
@@ -122,7 +122,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkDelegateList> GetDelegatesAsync(string address)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_DELEGATES, address));
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_DELEGATES, address)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkDelegateList>(response);
         }
@@ -155,7 +155,7 @@ namespace ArkNet.Service
         public async static Task<ArkAccountTopList> GetTopAsync(int? limit, int? recordsToSkip)
         {
             var response =
-                await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_TOP_ACCOUNTS, limit.HasValue ? limit : 100, recordsToSkip.HasValue ? recordsToSkip : 0));
+                await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_TOP_ACCOUNTS, limit.HasValue ? limit : 100, recordsToSkip.HasValue ? recordsToSkip : 0)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkAccountTopList>(response);
         }

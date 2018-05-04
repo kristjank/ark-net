@@ -59,7 +59,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkPeerList> GetAllAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_ALL);
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_ALL).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkPeerList>(response);
         }
@@ -91,7 +91,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkPeerResponse> GetPeerAsync(string ip, int port)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Peer.GET, ip, port));
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Peer.GET, ip, port)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkPeerResponse>(response);
         }
@@ -115,7 +115,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkPeerStatus> GetPeerStatusAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_STATUS);
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_STATUS).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkPeerStatus>(response);
         }
