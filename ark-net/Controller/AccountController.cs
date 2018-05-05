@@ -96,7 +96,7 @@ namespace ArkNet.Controller
         {
             if (_account == null)
             {
-                var accountResponse = await AccountService.GetByAddressAsync(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), ArkNetApi.Instance.NetworkSettings.BytePrefix));
+                var accountResponse = await AccountService.GetByAddressAsync(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), ArkNetApi.Instance.NetworkSettings.BytePrefix)).ConfigureAwait(false);
                 _account = accountResponse.Account;
             }
             return _account;
@@ -159,7 +159,7 @@ namespace ArkNet.Controller
             string vendorField)
         {
             return await TransactionService.PostTransactionAsync(
-                CreateTransaction(satoshiAmount, recipientAddress, vendorField));
+                CreateTransaction(satoshiAmount, recipientAddress, vendorField)).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -207,7 +207,7 @@ namespace ArkNet.Controller
             string vendorField)
         {
             return await TransactionService.MultipleBroadCastAsync(
-                CreateTransaction(satoshiAmount, recipientAddress, vendorField));
+                CreateTransaction(satoshiAmount, recipientAddress, vendorField)).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -239,7 +239,7 @@ namespace ArkNet.Controller
         {
             var tx = TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
 
-            return await TransactionService.PostTransactionAsync(tx);
+            return await TransactionService.PostTransactionAsync(tx).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -271,7 +271,7 @@ namespace ArkNet.Controller
         {
             var tx = TransactionApi.CreateDelegate(username, _passPhrase, _secondPassPhrase);
 
-            return await TransactionService.PostTransactionAsync(tx);
+            return await TransactionService.PostTransactionAsync(tx).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -299,8 +299,8 @@ namespace ArkNet.Controller
         /// </returns>
         public async Task<bool> UpdateBalanceAsync()
         {
-            var account = await GetArkAccountAsync();
-            var res = await AccountService.GetBalanceAsync(account.Address);
+            var account = await GetArkAccountAsync().ConfigureAwait(false);
+            var res = await AccountService.GetBalanceAsync(account.Address).ConfigureAwait(false);
 
             account.Balance = res.Balance;
             account.UnconfirmedBalance = res.UnconfirmedBalance;
@@ -343,7 +343,7 @@ namespace ArkNet.Controller
         /// </returns>
         public async Task<ArkTransactionList> GetTransactionsAsync(int offset = 0, int limit = 50)
         {
-            return await TransactionService.GetTransactionsAsync(GetArkAccount().Address, offset, limit);
+            return await TransactionService.GetTransactionsAsync(GetArkAccount().Address, offset, limit).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -365,9 +365,26 @@ namespace ArkNet.Controller
         /// </returns>
         public async Task<ArkTransactionList> GetUnconfirmedTransactionsAsync()
         {
-            return await TransactionService.GetUnconfirmedTransactionsAsync(GetArkAccount().Address);
+            return await TransactionService.GetUnconfirmedTransactionsAsync(GetArkAccount().Address).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// Creates transaction, doesnt post to chain.
+        /// </summary>
+        /// <param name="satoshiAmount">
+        /// Amount in satoshi (1E-8 Ark)
+        /// </param>
+        /// <param name="recipientAddress">
+        /// Address of transaction's recipient.
+        /// </param>
+        /// <param name="vendorField">
+        /// => Also Referred as Smartbridge
+        /// 64 chars <inheritdoc cref="string"/> with Ark V1, 
+        /// will be increased to 256 in V2.
+        /// </param>
+        /// <returns>
+        /// Transaction object.
+        /// </returns>
         public TransactionApi CreateTransaction(long satoshiAmount, string recipientAddress,
            string vendorField)
         {
@@ -378,47 +395,110 @@ namespace ArkNet.Controller
                 _secondPassPhrase);
         }
 
+        /// <summary>
+        /// Creates transaction in JSON format, doesnt post to chain.
+        /// </summary>
+        /// <param name="satoshiAmount">
+        /// Amount in satoshi (1E-8 Ark)
+        /// </param>
+        /// <param name="recipientAddress">
+        /// Address of transaction's recipient.
+        /// </param>
+        /// <param name="vendorField">
+        /// => Also Referred as Smartbridge
+        /// 64 chars <inheritdoc cref="string"/> with Ark V1, 
+        /// will be increased to 256 in V2.
+        /// </param>
+        /// <returns>
+        /// JSON string
+        /// </returns>
         public string CreateTransactionJSON(long satoshiAmount, string recipientAddress, 
             string vendorField)
         {
             return CreateTransaction(satoshiAmount, recipientAddress, vendorField).ToJson();
         }
 
+        /// <summary>
+        /// Posts transaction to chain
+        /// </summary>
+        /// <param name="transaction"></param>
+        /// <returns>
+        /// The ArkTransactionPostResponse object
+        /// </returns>
         public ArkTransactionPostResponse SendTransaction(TransactionApi transaction)
         {
             return TransactionService.PostTransaction(transaction);
         }
 
+        /// <summary>
+        /// Posts transaction to chain async
+        /// </summary>
+        /// <param name="transaction">Transaction to post to the chain</param>
+        /// <returns>
+        /// The <see cref="Task{ArkTransactionPostResponse}"/> of the transaction.
+        /// </returns>
         public async Task<ArkTransactionPostResponse> SendTransactionAsync(TransactionApi transaction)
         {
             return await TransactionService.PostTransactionAsync(transaction).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// Post transaction to multiple peers at once
+        /// </summary>
+        /// <param name="transaction">Transaction to post to the chain</param>
+        /// <returns>List of ArkTransactionPostResponse objects</returns>
         public List<ArkTransactionPostResponse> SendTransactionUsingMultiBroadCast(TransactionApi transaction)
         {
             return TransactionService.MultipleBroadCast(transaction);
         }
 
+        /// <summary>
+        /// Post transaction to multiple peers at once async
+        /// </summary>
+        /// <param name="transaction">Transaction to post to the chain</param>
+        /// <returns>
+        /// The <see cref="Task{ArkTransactionPostResponse}"/> of the transaction.
+        /// </returns>
         public async Task<List<ArkTransactionPostResponse>> SendTransactionUsingMultiBroadCastAsync(TransactionApi transaction)
         {
             return await TransactionService.MultipleBroadCastAsync(transaction).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// Post JSON transaction to chain
+        /// </summary>
+        /// <param name="json">JSON in form of TransactionApi</param>
+        /// <returns>ArkTransactionPostResponse object</returns>
         public ArkTransactionPostResponse SendTransaction(string json)
         {
             return TransactionService.PostTransaction(TransactionApi.FromJson(json));
         }
 
+        /// <summary>
+        /// Post JSON transaction to chain async
+        /// </summary>
+        /// <param name="json">JSON in form of TransactionApi</param>
+        /// <returns>ArkTransactionPostResponse</returns>
         public async Task<ArkTransactionPostResponse> SendTransactionAsync(string json)
         {
             return await TransactionService.PostTransactionAsync(TransactionApi.FromJson(json)).ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// Post JSON transaction to multiple peers
+        /// </summary>
+        /// <param name="json">JSON in form of TransactionApi</param>
+        /// <returns>List of ArkTransactionPostResponse</returns>
         public List<ArkTransactionPostResponse> SendTransactionUsingMultiBroadCast(string json)
         {
             return TransactionService.MultipleBroadCast(TransactionApi.FromJson(json));
         }
 
+        /// <summary>
+        /// Post JSON transaction to multiple peers async
+        /// </summary>
+        /// <param name="json">JSON in form of TransactionApi</param>
+        /// <returns>List of ArkTransactionPostResponse</returns>
         public async Task<List<ArkTransactionPostResponse>> SendTransactionUsingMultiBroadCastAsync(string json)
         {
             return await TransactionService.MultipleBroadCastAsync(TransactionApi.FromJson(json)).ConfigureAwait(false);
