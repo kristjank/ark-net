@@ -96,7 +96,7 @@ namespace ArkNet.Controller
         {
             if (_account == null)
             {
-                var accountResponse = await AccountService.GetByAddressAsync(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), ArkNetApi.Instance.NetworkSettings.BytePrefix)).ConfigureAwait(false);
+                var accountResponse = await AccountService.GetByAddressAsync(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), ArkNetApi.Instance.NetworkSettings.BytePrefix));
                 _account = accountResponse.Account;
             }
             return _account;
@@ -169,7 +169,7 @@ namespace ArkNet.Controller
                 _passPhrase,
                 _secondPassPhrase);
 
-            return await TransactionService.PostTransactionAsync(tx).ConfigureAwait(false);
+            return await TransactionService.PostTransactionAsync(tx);
         }
 
         /// <summary>
@@ -227,7 +227,7 @@ namespace ArkNet.Controller
                 _passPhrase,
                 _secondPassPhrase);
 
-            return await TransactionService.MultipleBroadCastAsync(tx).ConfigureAwait(false);
+            return await TransactionService.MultipleBroadCastAsync(tx);
         }
 
         /// <summary>
@@ -259,7 +259,7 @@ namespace ArkNet.Controller
         {
             var tx = TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
 
-            return await TransactionService.PostTransactionAsync(tx).ConfigureAwait(false);
+            return await TransactionService.PostTransactionAsync(tx);
         }
 
         /// <summary>
@@ -291,7 +291,7 @@ namespace ArkNet.Controller
         {
             var tx = TransactionApi.CreateDelegate(username, _passPhrase, _secondPassPhrase);
 
-            return await TransactionService.PostTransactionAsync(tx).ConfigureAwait(false);
+            return await TransactionService.PostTransactionAsync(tx);
         }
 
         /// <summary>
@@ -319,8 +319,8 @@ namespace ArkNet.Controller
         /// </returns>
         public async Task<bool> UpdateBalanceAsync()
         {
-            var account = await GetArkAccountAsync().ConfigureAwait(false);
-            var res = await AccountService.GetBalanceAsync(account.Address).ConfigureAwait(false);
+            var account = await GetArkAccountAsync();
+            var res = await AccountService.GetBalanceAsync(account.Address);
 
             account.Balance = res.Balance;
             account.UnconfirmedBalance = res.UnconfirmedBalance;
@@ -363,7 +363,7 @@ namespace ArkNet.Controller
         /// </returns>
         public async Task<ArkTransactionList> GetTransactionsAsync(int offset = 0, int limit = 50)
         {
-            return await TransactionService.GetTransactionsAsync(GetArkAccount().Address, offset, limit).ConfigureAwait(false);
+            return await TransactionService.GetTransactionsAsync(GetArkAccount().Address, offset, limit);
         }
 
         /// <summary>
@@ -385,7 +385,7 @@ namespace ArkNet.Controller
         /// </returns>
         public async Task<ArkTransactionList> GetUnconfirmedTransactionsAsync()
         {
-            return await TransactionService.GetUnconfirmedTransactionsAsync(GetArkAccount().Address).ConfigureAwait(false);
+            return await TransactionService.GetUnconfirmedTransactionsAsync(GetArkAccount().Address);
         }
 
         #region V2 preparation
