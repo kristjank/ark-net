@@ -136,6 +136,33 @@ namespace ArkNet
         }
 
         /// <summary>
+        /// Switches the Network
+        /// </summary>
+        /// <param name="type">
+        /// <inheritdoc cref="NetworkType"/> Can be :
+        /// -- DevNet (test), ask Dark (testnet coins) on the slack.
+        /// -- MainNet (live, beware real money, financial loss possible there).
+        /// </param>
+        /// <returns> The <inheritdoc cref="Task"/> switches the network.</returns>
+        public async Task SwitchNetwork(NetworkType type)
+        {
+            NetworkSettings = null;
+            await SetNetworkSettings(await GetInitialPeer(type).ConfigureAwait(false)).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Switches the Network
+        /// </summary>
+        /// <param name="peerId"> The Initial peer's IP</param>
+        /// <param name="peerPort"> The Initial Peer's Port</param>
+        /// <returns> The <inheritdoc cref="Task"/> switches the network.</returns>
+        public async Task SwitchNetwork(string peerId, int peerPort)
+        {
+            NetworkSettings = null;
+            await SetNetworkSettings(GetInitialPeer(peerId, peerPort)).ConfigureAwait(false);
+        }
+
+        /// <summary>
         /// Fetch the the NetworkSettings, and set the NetworkSettings variable,
         /// which is used for every subsequent request after the initial ones.
         /// </summary>

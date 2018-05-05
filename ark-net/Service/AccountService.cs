@@ -29,6 +29,7 @@ using ArkNet.Core;
 using ArkNet.Model.Account;
 using ArkNet.Model.Delegate;
 using ArkNet.Utils;
+using NBitcoin;
 using Newtonsoft.Json;
 
 namespace ArkNet.Service
@@ -160,8 +161,15 @@ namespace ArkNet.Service
             return JsonConvert.DeserializeObject<ArkAccountTopList>(response);
         }
 
-        #endregion
+        /// <summary>
+        /// Generates a passphrase
+        /// </summary>
+        /// <returns>String containinig the passphrase</returns>
+        public static string GeneratePassphrase()
+        {
+            return new Mnemonic(Wordlist.English, WordCount.Twelve).ToString();
+        }
     }
-
     #endregion
 }
+#endregion
