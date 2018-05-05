@@ -7,8 +7,8 @@
 Ark.NET is the ARK Ecosystem library for the .NET platform. It implements all most relevant ARK functionalities to help you  **develop efficient .NET applications built upon ARK platform**. It provides also low level access to ARK so you can easily build your application on top of it. 
 
 The package supports:
-* With full features, Windows Desktop applications, Mono Desktop applications, and platform supported at [.NET Standard Library](https://docs.microsoft.com/en-us/dotnet/articles/standard/library). Should work will all .NET solutions with framework > 4.5.2.
-* It's a work in progress so mobile platform testing are still to follow. 
+* With full features, Windows Desktop applications, Mono Desktop applications, and platform supported at [.NET Standard Library](https://docs.microsoft.com/en-us/dotnet/articles/standard/library). Works on all .NET solutions with framework > 4.7.1 & Net Standard 2.0.
+* Async/Await with coresponding synchronous methods
 
 [![Source Browser](https://img.shields.io/badge/Browse-Source-green.svg)](http://sourcebrowser.io/Browse/kristjank)
 
@@ -23,12 +23,12 @@ Go on the [nuget website](https://www.nuget.org/packages/ark.net/) for more info
 To compile it by yourself, you can git clone, open the project and hit the compile button on visual studio.
 In command prompt:
 ```
-git clone https://github.com/kristjank/ark-net
+git clone https://github.com/ArkEcosystem/ark-net
 cd ark-net
 ```
 # How to get started? 
 
-All ark-node services have available reponses have their object representations in the form of ValueObjects. You can use service classes under [service folder](https://github.com/kristjank/ark-net/tree/master/ark-net/service). Responses are IEnumerable or IQueryable (depends if the class and functionality).
+All ark-node services have available reponses have their object representations in the form of ValueObjects. You can use service classes under [service folder](https://github.com/ArkEcosystem/ark-net/tree/master/ark-net/Service). Responses are IEnumerable.  Every method has a cooresponding async method.
 
 It's best to let the code do the speaking. For more examples look at the [ARK.NET Tests](https://github.com/ArkEcosystem/ark-net/tree/master/ark-netTests), where all tests are written and you can see the api usage. Some code snippets are below.
 
@@ -37,21 +37,25 @@ It's best to let the code do the speaking. For more examples look at the [ARK.NE
 **First call should be network selection, so all settings can initialize before going into action.**
 
 ```c#
-  ArkNetApi.Instance.Start(NetworkType.MainNet); //Other types are TestNet and DevNet
+  await ArkNetApi.Instance.Start(NetworkType.MainNet); //Other type is DevNet
 ```
 
 ### Account/Wallet layer
 ```c#
 var accCtnrl = new AccountController("top secret pass");
 //Send ARK
-var result = accCtnrl.SendArk(100, "AUgTuukcKeE4XFdzaK6rEHMD5FLmVBSmHk", "Akr.Net test trans from Account",
-                "pass phrase");
+var result = accCtnrl.SendArk(100, "AUgTuukcKeE4XFdzaK6rEHMD5FLmVBSmHk", "Akr.Net test trans from Account");
 //Vote 4 Delegate                
 var result = accCtnrl.VoteForDelegate( votes, "top secret pass");
+//Create and send transaction.  Transaction can be saved offine (.ToJson()) and sent later.              
+var transaction = accCtnrl.CreateTransaction(100, "AUgTuukcKeE4XFdzaK6rEHMD5FLmVBSmHk", "Akr.Net test trans from Account");
+var result = accCtnrl.SendTransaction(transaction);
+//Generate passphrase
+var result = AccountService.GeneratePassphrase()
 ```
 
 ### Service layer 
-For a full list of available api calls please look at the  [ARK.NET Test project](https://github.com/kristjank/ark-net/blob/master/ark-netTests/)
+For a full list of available api calls please look at the  [ARK.NET Test project](https://github.com/ArkEcosystem/ark-net/blob/master/ark-netTests/)
 ```c#
 //PeerService
 var peers = PeerService.GetAll();
@@ -65,7 +69,7 @@ var trans = TransactionService.GetAll();
 Layer is used for core Ark blockchain communication (transaction, crypto...). It is wrapped by api libraries that are called from the service and Account layer.
 ```c#
 TransactionApi tx = TransactionApi.CreateTransaction(recepient, amount, description, passphrase);
-Peer peer = Network.Mainnet.GetRandomPeer();
+Peer peer = NetworkApi.Instance.GetRandomPeer();
 var result = peer.PostTransaction(tx);          
 ```
 
@@ -80,7 +84,7 @@ Please, use github issues for questions or feedback. For confidential requests o
 Visual Studio Community Edition : [https://www.visualstudio.com/products/visual-studio-community-vs](https://www.visualstudio.com/products/visual-studio-community-vs "https://www.visualstudio.com/products/visual-studio-community-vs")
 
 ## Authors
-Chris (kristjan.kosic@gmail.com), with a lot of help from FX Thoorens fx@ark.io and ARK Community
+Chris (kristjan.kosic@gmail.com) & Sharkdev-j, with a lot of help from FX Thoorens fx@ark.io and ARK Community
 
 ## Support this project
 ![alt text](https://github.com/Moustikitos/arky/raw/master/ark-logo.png)
@@ -90,7 +94,7 @@ Ark address:``AUgTuukcKeE4XFdzaK6rEHMD5FLmVBSmHk``
 # License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2017 ARK
+Copyright (c) 2018 ARK
 
 
 
