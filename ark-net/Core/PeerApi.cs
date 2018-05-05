@@ -44,7 +44,7 @@ namespace ArkNet.Core
     public class PeerApi
     {
         #region Fields
-
+        private NetworkApi _networkApi;
         /// <summary>
         /// A reference to an instance of the <see cref="HttpClient"/>.
         /// </summary>
@@ -88,8 +88,9 @@ namespace ArkNet.Core
         /// </summary>
         /// <param name="ip">The peer ip address.</param>
         /// <param name="port">The peer port.</param>
-        public PeerApi(string ip, int port)
+        public PeerApi(NetworkApi networkApi, string ip, int port)
         {
+            _networkApi = networkApi;
             var protocol = "http://";
             if (port % 1000 == 443) protocol = "https://";
 
@@ -100,11 +101,11 @@ namespace ArkNet.Core
                 BaseAddress = new UriBuilder(protocol, this._ip, this._port).Uri
             };
 
-            if (ArkNetApi.Instance.NetworkSettings != null)
+            if (_networkApi.NetworkSettings != null)
             {
-                _httpClient.DefaultRequestHeaders.Add("nethash", ArkNetApi.Instance.NetworkSettings.NetHash);
-                _httpClient.DefaultRequestHeaders.Add("version", ArkNetApi.Instance.NetworkSettings.Version);
-                _httpClient.DefaultRequestHeaders.Add("port", ArkNetApi.Instance.NetworkSettings.Port.ToString());
+                _httpClient.DefaultRequestHeaders.Add("nethash", _networkApi.NetworkSettings.NetHash);
+                _httpClient.DefaultRequestHeaders.Add("version", _networkApi.NetworkSettings.Version);
+                _httpClient.DefaultRequestHeaders.Add("port", _networkApi.NetworkSettings.Port.ToString());
             }
         }
 
@@ -169,12 +170,12 @@ namespace ArkNet.Core
             }
             catch(Exception)
             {
-                if (ArkNetApi.Instance.NetworkSettings != null && NetworkApi.Instance.ActivePeer != null)
+                if (_networkApi.NetworkSettings != null && _networkApi.ActivePeer != null)
                 {
-                    if (retryCount < ArkNetApi.Instance.NetworkSettings.MaxRequestRetryCount)
+                    if (retryCount < _networkApi.NetworkSettings.MaxRequestRetryCount)
                     {
-                        NetworkApi.Instance.SwitchPeer();
-                        _httpClient = NetworkApi.Instance.ActivePeer.HttpClient;
+                        _networkApi.SwitchPeer();
+                        _httpClient = _networkApi.ActivePeer.HttpClient;
                         return await MakeRequestInternal(method, path, body, retryCount + 1).ConfigureAwait(false);
                     }
                 }

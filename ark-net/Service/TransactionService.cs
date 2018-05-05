@@ -38,8 +38,14 @@ namespace ArkNet.Service
     /// Provides functionality for requesting transaction information and creating transactions.
     /// </summary>
     /// 
-    public static class TransactionService
+    public class TransactionService
     {
+        private NetworkApi _networkApi;
+        public TransactionService(NetworkApi networkApi)
+        {
+            _networkApi = networkApi;
+        }
+
         #region Methods
 
         /// <summary>
@@ -48,7 +54,7 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="ArkTransactionList"/> type.</returns>
         /// 
-        public static ArkTransactionList GetAll()
+        public ArkTransactionList GetAll()
         {
             return GetAllAsync().Result;
         }
@@ -59,9 +65,9 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="Task{ArkTransactionList}"/> type.</returns>
         /// 
-        public async static Task<ArkTransactionList> GetAllAsync()
+        public async Task<ArkTransactionList> GetAllAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL).ConfigureAwait(false);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }
@@ -74,7 +80,7 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="ArkTransactionList"/> type.</returns>
         /// 
-        public static ArkTransactionList GetTransactions(ArkTransactionRequest req)
+        public ArkTransactionList GetTransactions(ArkTransactionRequest req)
         {
             return GetTransactionsAsync(req).Result;
         }
@@ -87,9 +93,9 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="Task{ArkTransactionList}"/> type.</returns>
         /// 
-        public async static Task<ArkTransactionList> GetTransactionsAsync(ArkTransactionRequest req)
+        public async Task<ArkTransactionList> GetTransactionsAsync(ArkTransactionRequest req)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL + "{0}", req.ToQuery())).ConfigureAwait(false);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL + "{0}", req.ToQuery())).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }
@@ -100,7 +106,7 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="ArkTransactionList"/> type.</returns>
         /// 
-        public static ArkTransactionList GetUnconfirmedAll()
+        public ArkTransactionList GetUnconfirmedAll()
         {
             return GetUnconfirmedAllAsync().Result;
         }
@@ -111,9 +117,9 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="Task{ArkTransactionList}"/> type.</returns>
         /// 
-        public async static Task<ArkTransactionList> GetUnconfirmedAllAsync()
+        public async Task<ArkTransactionList> GetUnconfirmedAllAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED).ConfigureAwait(false);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }
@@ -126,7 +132,7 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="ArkTransactionList"/> type.</returns>
         /// 
-        public static ArkTransactionList GetUnconfirmedTransactions(ArkUnconfirmedTransactionRequest req)
+        public ArkTransactionList GetUnconfirmedTransactions(ArkUnconfirmedTransactionRequest req)
         {
             return GetUnconfirmedTransactionsAsync(req).Result;
         }
@@ -139,9 +145,9 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="Task{ArkTransactionList}"/> type.</returns>
         /// 
-        public async static Task<ArkTransactionList> GetUnconfirmedTransactionsAsync(ArkUnconfirmedTransactionRequest req)
+        public async Task<ArkTransactionList> GetUnconfirmedTransactionsAsync(ArkUnconfirmedTransactionRequest req)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED + "{0}", req.ToQuery())).ConfigureAwait(false);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED + "{0}", req.ToQuery())).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }
@@ -154,7 +160,7 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="ArkTransactionResponse"/> type.</returns>
         /// 
-        public static ArkTransactionResponse GetById(string id)
+        public ArkTransactionResponse GetById(string id)
         {
             return GetByIdAsync(id).Result;
         }
@@ -167,9 +173,9 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="Task{ArkTransactionResponse}"/> type.</returns>
         /// 
-        public async static Task<ArkTransactionResponse> GetByIdAsync(string id)
+        public async Task<ArkTransactionResponse> GetByIdAsync(string id)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID, id)).ConfigureAwait(false);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID, id)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }
@@ -182,7 +188,7 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="ArkTransactionResponse"/> type.</returns>
         /// 
-        public static ArkTransactionResponse GetUnConfirmedById(string id)
+        public ArkTransactionResponse GetUnConfirmedById(string id)
         {
             return GetUnConfirmedByIdAsync(id).Result;
         }
@@ -195,9 +201,9 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="Task{ArkTransactionResponse}"/> type.</returns>
         /// 
-        public async static Task<ArkTransactionResponse> GetUnConfirmedByIdAsync(string id)
+        public async Task<ArkTransactionResponse> GetUnConfirmedByIdAsync(string id)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID_UNCONFIRMED, id)).ConfigureAwait(false);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID_UNCONFIRMED, id)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }
@@ -214,7 +220,7 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="ArkTransactionList"/> type.</returns>
         /// 
-        public static ArkTransactionList GetTransactions(string address, int offset = 0, int limit = 50)
+        public ArkTransactionList GetTransactions(string address, int offset = 0, int limit = 50)
         {
             return GetTransactions(new ArkTransactionRequest { OrderBy = "timestamp:desc", RecipientId = address, SenderId = address, Offset = offset, Limit = limit });
         }
@@ -231,7 +237,7 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="Task{ArkTransactionList}"/> type.</returns>
         /// 
-        public async static Task<ArkTransactionList> GetTransactionsAsync(string address, int offset = 0, int limit = 50)
+        public async Task<ArkTransactionList> GetTransactionsAsync(string address, int offset = 0, int limit = 50)
         {
             return await GetTransactionsAsync(new ArkTransactionRequest { OrderBy = "timestamp:desc", RecipientId = address, SenderId = address, Offset = offset, Limit = limit }).ConfigureAwait(false);
         }
@@ -244,7 +250,7 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="ArkTransactionList"/> type.</returns>
         /// 
-        public static ArkTransactionList GetUnconfirmedTransactions(string address)
+        public ArkTransactionList GetUnconfirmedTransactions(string address)
         {
             return GetUnconfirmedTransactions(new ArkUnconfirmedTransactionRequest { Address = address });
         }
@@ -257,7 +263,7 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="Task{ArkTransactionList}"/> type.</returns>
         /// 
-        public async static Task<ArkTransactionList> GetUnconfirmedTransactionsAsync(string address)
+        public async Task<ArkTransactionList> GetUnconfirmedTransactionsAsync(string address)
         {
             return await GetUnconfirmedTransactionsAsync(new ArkUnconfirmedTransactionRequest { Address = address }).ConfigureAwait(false);
         }
@@ -272,7 +278,7 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="ArkTransactionPostResponse"/> type.</returns>
         /// 
-        public static ArkTransactionPostResponse PostTransaction(TransactionApi transaction, PeerApi peer = null)
+        public ArkTransactionPostResponse PostTransaction(TransactionApi transaction, PeerApi peer = null)
         {
             return PostTransactionAsync(transaction, peer).Result;
         }
@@ -287,14 +293,14 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an <see cref="Task{ArkTransactionPostResponse}"/> type.</returns>
         /// 
-        public async static Task<ArkTransactionPostResponse> PostTransactionAsync(TransactionApi transaction, PeerApi peer = null)
+        public async Task<ArkTransactionPostResponse> PostTransactionAsync(TransactionApi transaction, PeerApi peer = null)
         {
             string body = "{transactions: [" + transaction.ToObject(true) + "]} ";
 
             var response = string.Empty;
 
             if (peer == null)
-                response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.POST, ArkStaticStrings.ArkApiPaths.Transaction.POST, body).ConfigureAwait(false);
+                response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.POST, ArkStaticStrings.ArkApiPaths.Transaction.POST, body).ConfigureAwait(false);
             else
                 response = await peer.MakeRequest(ArkStaticStrings.ArkHttpMethods.POST, ArkStaticStrings.ArkApiPaths.Transaction.POST, body).ConfigureAwait(false);
 
@@ -309,13 +315,13 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns a <see cref="List{ArkTransactionResponse}"/> type.</returns>
         /// 
-        public static List<ArkTransactionPostResponse> MultipleBroadCast(TransactionApi transaction)
+        public List<ArkTransactionPostResponse> MultipleBroadCast(TransactionApi transaction)
         {
             var res = new List<ArkTransactionPostResponse>();
 
-            for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
+            for (var i = 0; i < _networkApi.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
-                res.Add(PostTransaction(transaction, NetworkApi.Instance.GetRandomPeer()));
+                res.Add(PostTransaction(transaction, _networkApi.GetRandomPeer()));
             }
 
             return res;
@@ -329,13 +335,13 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns a <see cref="Task{List{ArkTransactionResponse}}"/> type.</returns>
         /// 
-        public async static Task<List<ArkTransactionPostResponse>> MultipleBroadCastAsync(TransactionApi transaction)
+        public async Task<List<ArkTransactionPostResponse>> MultipleBroadCastAsync(TransactionApi transaction)
         {
             var res = new List<ArkTransactionPostResponse>();
 
-            for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
+            for (var i = 0; i < _networkApi.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
-                res.Add(await PostTransactionAsync(transaction, NetworkApi.Instance.GetRandomPeer()).ConfigureAwait(false));
+                res.Add(await PostTransactionAsync(transaction, _networkApi.GetRandomPeer()).ConfigureAwait(false));
             }
 
             return res;

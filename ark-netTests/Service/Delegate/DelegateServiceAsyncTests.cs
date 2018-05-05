@@ -22,7 +22,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetAllAsyncTest()
         {
-            var delegates = await DelegateService.GetAllAsync();
+            var delegates = await ArkNetApi.DelegateService.GetAllAsync();
 
             GetAllResultTest(delegates);
         }
@@ -30,7 +30,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetDelegatesAsyncTest()
         {
-            var delegates = await DelegateService.GetDelegatesAsync(new ArkBaseRequest { OrderBy = "vote" });
+            var delegates = await ArkNetApi.DelegateService.GetDelegatesAsync(new ArkBaseRequest { OrderBy = "vote" });
 
             GetAllResultTest(delegates);
         }
@@ -38,7 +38,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetByUsernameAsyncTest()
         {
-            var dele = await DelegateService.GetByUsernameAsync(_userName);
+            var dele = await ArkNetApi.DelegateService.GetByUsernameAsync(_userName);
 
             GetByUsernameResultTest(dele);
         }
@@ -46,7 +46,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetByUsernameErrorAsyncTest()
         {
-            var dele = await DelegateService.GetByUsernameAsync("NonExistingPool");
+            var dele = await ArkNetApi.DelegateService.GetByUsernameAsync("NonExistingPool");
 
             GetByUsernameErrorResultTest(dele);
         }
@@ -54,7 +54,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetByPubKeyAsyncTest()
         {
-            var dele2 = await DelegateService.GetByPubKeyAsync(_pubKey);
+            var dele2 = await ArkNetApi.DelegateService.GetByPubKeyAsync(_pubKey);
 
             GetByPubKeyResultTest(dele2);
         }
@@ -62,7 +62,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetByPubKeyErrorAsyncTest()
         {
-            var dele = await DelegateService.GetByPubKeyAsync("ErrorKey");
+            var dele = await ArkNetApi.DelegateService.GetByPubKeyAsync("ErrorKey");
 
             GetByPubKeyErrorResultTest(dele);
         }
@@ -70,7 +70,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetVotersAsyncTest()
         {
-            var dele = await DelegateService.GetVotersAsync(_pubKey);
+            var dele = await ArkNetApi.DelegateService.GetVotersAsync(_pubKey);
 
             GetVotersResultTest(dele);
         }
@@ -78,7 +78,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetVotersErrorAsyncTest()
         {
-            var dele = await DelegateService.GetVotersAsync("ErrorKey");
+            var dele = await ArkNetApi.DelegateService.GetVotersAsync("ErrorKey");
 
             GetVotersErrorResultTest(dele);
         }
@@ -86,7 +86,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetFeeAsyncTest()
         {
-            var fee = await DelegateService.GetFeeAsync();
+            var fee = await ArkNetApi.DelegateService.GetFeeAsync();
 
             GetFeeResultTest(fee);
         }
@@ -94,7 +94,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetForgedByAccountAsyncTest()
         {
-            var forgedByAccount = await DelegateService.GetForgedByAccountAsync(_pubKey);
+            var forgedByAccount = await ArkNetApi.DelegateService.GetForgedByAccountAsync(_pubKey);
 
             GetForgedByAccountResultTest(forgedByAccount);
         }
@@ -102,7 +102,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetForgedByAccountErrorAsyncTest()
         {
-            var forgedByAccount = await DelegateService.GetForgedByAccountAsync("ErrorKey");
+            var forgedByAccount = await ArkNetApi.DelegateService.GetForgedByAccountAsync("ErrorKey");
 
             GetForgedByAccountErrorResultTest(forgedByAccount);
         }
@@ -110,7 +110,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetNextForgersAsyncTest()
         {
-            var nextForgers = await DelegateService.GetNextForgersAsync();
+            var nextForgers = await ArkNetApi.DelegateService.GetNextForgersAsync();
 
             GetNextForgersResultTest(nextForgers);
         }
@@ -118,7 +118,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetTotalVoteArkAsyncTest()
         {
-            var totalVoteArk = await DelegateService.GetTotalVoteArkAsync(_pubKey);
+            var totalVoteArk = await ArkNetApi.DelegateService.GetTotalVoteArkAsync(_pubKey);
 
             GetTotalVoteArkResultTest(totalVoteArk);
         }
@@ -126,7 +126,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public async Task GetTotalVoteArkErrorAsyncTest()
         {
-            var totalVoteArk = await DelegateService.GetTotalVoteArkAsync("ErrorKey");
+            var totalVoteArk = await ArkNetApi.DelegateService.GetTotalVoteArkAsync("ErrorKey");
 
             GetTotalVoteArkErrorResultTest(totalVoteArk);
         }

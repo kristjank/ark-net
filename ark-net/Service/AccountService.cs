@@ -42,6 +42,12 @@ namespace ArkNet.Service
     /// 
     public class AccountService
     {
+        private NetworkApi _networkApi;
+        public AccountService(NetworkApi networkApi)
+        {
+            _networkApi = networkApi;
+        }
+
         #region Methods
 
         /// <summary>
@@ -52,7 +58,7 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an instance of the <see cref="ArkAccountResponse"/> type.</returns>
         /// 
-        public static ArkAccountResponse GetByAddress(string address)
+        public ArkAccountResponse GetByAddress(string address)
         {
             return GetByAddressAsync(address).Result;
         }
@@ -65,9 +71,9 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an instance of the <see cref="ArkAccountResponse"/> type.</returns>
         /// 
-        public async static Task<ArkAccountResponse> GetByAddressAsync(string address)
+        public async Task<ArkAccountResponse> GetByAddressAsync(string address)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_ACCOUNT, address)).ConfigureAwait(false);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_ACCOUNT, address)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkAccountResponse>(response);
         }
@@ -80,7 +86,7 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an instance of the <see cref="ArkAccountBalance"/> type.</returns>
         /// 
-        public static ArkAccountBalance GetBalance(string address)
+        public ArkAccountBalance GetBalance(string address)
         {
             return GetBalanceAsync(address).Result;
         }
@@ -93,9 +99,9 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an instance of the <see cref="ArkAccountBalance"/> type.</returns>
         /// 
-        public async static Task<ArkAccountBalance> GetBalanceAsync(string address)
+        public async Task<ArkAccountBalance> GetBalanceAsync(string address)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_BALANCE, address)).ConfigureAwait(false);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_BALANCE, address)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkAccountBalance>(response);
         }
@@ -108,7 +114,7 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an instance of the <see cref="ArkDelegateList"/> type.</returns>
         /// 
-        public static ArkDelegateList GetDelegates(string address)
+        public ArkDelegateList GetDelegates(string address)
         {
             return GetDelegatesAsync(address).Result;
         }
@@ -121,9 +127,9 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an instance of the <see cref="Task{ArkDelegateList}"/> type.</returns>
         /// 
-        public async static Task<ArkDelegateList> GetDelegatesAsync(string address)
+        public async Task<ArkDelegateList> GetDelegatesAsync(string address)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_DELEGATES, address)).ConfigureAwait(false);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_DELEGATES, address)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkDelegateList>(response);
         }
@@ -138,7 +144,7 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an instance of the <see cref="ArkAccountTopList"/> type.</returns>
         /// 
-        public static ArkAccountTopList GetTop(int? limit, int? recordsToSkip)
+        public ArkAccountTopList GetTop(int? limit, int? recordsToSkip)
         {
             return GetTopAsync(limit, recordsToSkip).Result;
         }
@@ -153,10 +159,10 @@ namespace ArkNet.Service
         /// 
         /// <returns>Returns an instance of the <see cref="Task{ArkAccountTopList}"/> type.</returns>
         /// 
-        public async static Task<ArkAccountTopList> GetTopAsync(int? limit, int? recordsToSkip)
+        public async Task<ArkAccountTopList> GetTopAsync(int? limit, int? recordsToSkip)
         {
             var response =
-                await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_TOP_ACCOUNTS, limit.HasValue ? limit : 100, recordsToSkip.HasValue ? recordsToSkip : 0)).ConfigureAwait(false);
+                await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_TOP_ACCOUNTS, limit.HasValue ? limit : 100, recordsToSkip.HasValue ? recordsToSkip : 0)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkAccountTopList>(response);
         }
@@ -165,7 +171,7 @@ namespace ArkNet.Service
         /// Generates a passphrase
         /// </summary>
         /// <returns>String containinig the passphrase</returns>
-        public static string GeneratePassphrase()
+        public string GeneratePassphrase()
         {
             return new Mnemonic(Wordlist.English, WordCount.Twelve).ToString();
         }

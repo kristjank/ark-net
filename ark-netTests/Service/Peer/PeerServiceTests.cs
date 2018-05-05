@@ -22,7 +22,7 @@ namespace ArkNet.Service.Peer.Tests
         [TestMethod()]
         public void GetAllTest()
         {
-            var peers = PeerService.GetAll().Peers.Where(x => x.Status.Equals("OK"));
+            var peers = ArkNetApi.PeerService.GetAll().Peers.Where(x => x.Status.Equals("OK"));
             var peer = peers.FirstOrDefault();
 
             GetAllResultTest(peer);
@@ -31,7 +31,7 @@ namespace ArkNet.Service.Peer.Tests
         [TestMethod()]
         public void GetPeerTest()
         {
-            var peer = PeerService.GetPeer(base._ip, base._port);
+            var peer = ArkNetApi.PeerService.GetPeer(base._ip, base._port);
 
             GetPeerResultTest(peer);
         }
@@ -39,7 +39,7 @@ namespace ArkNet.Service.Peer.Tests
         [TestMethod()]
         public void GetPeerStatusTest()
         {
-            var peer = PeerService.GetPeerStatus();
+            var peer = ArkNetApi.PeerService.GetPeerStatus();
 
             GetPeerStatusResultTest(peer);
         }
@@ -47,9 +47,9 @@ namespace ArkNet.Service.Peer.Tests
         [TestMethod]
         public void SwitchPeerTest()
         {
-            NetworkApi.Instance.ActivePeer = new PeerApi("1.1.1.1", 5000);
+            ArkNetApi.NetworkApi.ActivePeer = new PeerApi(ArkNetApi.NetworkApi, "1.1.1.1", 5000);
 
-            var peer = PeerService.GetPeer(base._ip, base._port);
+            var peer = ArkNetApi.PeerService.GetPeer(base._ip, base._port);
 
             GetPeerResultTest(peer);
         }

@@ -23,7 +23,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public async Task GetAllAsyncTest()
         {
-            var blocks = await BlockService.GetAllAsync();
+            var blocks = await ArkNetApi.BlockService.GetAllAsync();
 
             GetAllResultTest(blocks);
         }
@@ -31,7 +31,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public void GetAllBlocksAsyncTest()
         {
-            var blocks = BlockService.GetBlocks(new ArkBlockRequest { Height = base._height, GeneratorPublickey = base._generatorPublicKey });
+            var blocks = ArkNetApi.BlockService.GetBlocks(new ArkBlockRequest { Height = base._height, GeneratorPublickey = base._generatorPublicKey });
 
             GetBlocksResultTest(blocks);
         }
@@ -39,7 +39,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public async Task GetByIdAsyncTest()
         {
-            var blocks = await BlockService.GetAllAsync();
+            var blocks = await ArkNetApi.BlockService.GetAllAsync();
             Assert.IsNotNull(blocks);
             Assert.IsNotNull(blocks.Blocks);
             Assert.IsTrue(blocks.Success);
@@ -48,14 +48,14 @@ namespace ArkNet.Service.Block.Tests
             var block = blocks.Blocks.FirstOrDefault();
             Assert.IsNotNull(block);
 
-            var block1 = BlockService.GetById(block.Id);
+            var block1 = ArkNetApi.BlockService.GetById(block.Id);
             GetByIdResultTest(block1);
         }
 
         [TestMethod()]
         public async Task GetByIdErrorAsyncTest()
         {
-            var block = await BlockService.GetByIdAsync("ErrorId");
+            var block = await ArkNetApi.BlockService.GetByIdAsync("ErrorId");
 
             GetByIdErrorResultTest(block);
         }
@@ -63,7 +63,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public async Task GetEpochAsyncTest()
         {
-            var epoch = await BlockService.GetEpochAsync();
+            var epoch = await ArkNetApi.BlockService.GetEpochAsync();
 
             GetEpochResultTest(epoch);
         }
@@ -71,7 +71,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public async Task GetHeightAsyncTest()
         {
-            var height = await BlockService.GetHeightAsync();
+            var height = await ArkNetApi.BlockService.GetHeightAsync();
 
             GetHeightResultTest(height);
         }
@@ -79,7 +79,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public async Task GetNetHashAsyncTest()
         {
-            var netHash = await BlockService.GetNetHashAsync();
+            var netHash = await ArkNetApi.BlockService.GetNetHashAsync();
 
             GetNetHashResultTest(netHash);
         }
@@ -87,7 +87,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public async Task GetFeesAsyncTest()
         {
-            var fees = await BlockService.GetFeesAsync();
+            var fees = await ArkNetApi.BlockService.GetFeesAsync();
 
             GetFeesResultTest(fees);
         }
@@ -95,7 +95,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public async Task GetMilestone()
         {
-            var milestone = await BlockService.GetMilestoneAsync();
+            var milestone = await ArkNetApi.BlockService.GetMilestoneAsync();
 
             GetMilestoneResultTest(milestone);
         }
@@ -103,7 +103,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public async Task GetReward()
         {
-            var reward = await BlockService.GetRewardAsync();
+            var reward = await ArkNetApi.BlockService.GetRewardAsync();
 
             GetRewardResultTest(reward);
         }
@@ -111,7 +111,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public async Task GetStatus()
         {
-            var status = await BlockService.GetStatusAsync();
+            var status = await ArkNetApi.BlockService.GetStatusAsync();
 
             GetStatusResultTest(status);
         }

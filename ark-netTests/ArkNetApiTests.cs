@@ -8,20 +8,26 @@ namespace ArkNet.Tests
     [TestClass()]
     public class ArkNetApiTests
     {
+        private ArkNetApi _arkNetApi;
+        public ArkNetApi ArkNetApi
+        {
+            get { return _arkNetApi ?? (_arkNetApi = new ArkNetApi()); }
+        }
+
         [TestMethod()]
         public void StartTest()
         {
-            ArkNetApi.Instance.Start(NetworkType.MainNet).Wait();
+            ArkNetApi.Start(NetworkType.MainNet).Wait();
 
-            Assert.IsNotNull(ArkNetApi.Instance.NetworkSettings);
+            Assert.IsNotNull(ArkNetApi.NetworkApi.NetworkSettings);
         }
 
         [TestMethod()]
         public async Task SwitchNetwork()
         {
-            await ArkNetApi.Instance.Start(NetworkType.DevNet);
-            await ArkNetApi.Instance.SwitchNetwork(NetworkType.MainNet);
-            await ArkNetApi.Instance.SwitchNetwork(NetworkType.DevNet);
+            await ArkNetApi.Start(NetworkType.DevNet);
+            await ArkNetApi.SwitchNetwork(NetworkType.MainNet);
+            await ArkNetApi.SwitchNetwork(NetworkType.DevNet);
         }
     }
 }

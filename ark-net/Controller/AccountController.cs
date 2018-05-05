@@ -39,6 +39,7 @@ namespace ArkNet.Controller
     /// </summary>
     public class AccountController
     {
+        private ArkNetApi _arkNetApi;
         /// <summary>
         /// <inheritdoc cref="ArkAccount"/>
         /// </summary>
@@ -67,8 +68,9 @@ namespace ArkNet.Controller
         /// User's Second Pass Phrase as a <inheritdoc cref="string"/>
         /// Optional.
         /// </param>
-        public AccountController(string passphrase, string secondPassPhrase = null)
+        public AccountController(ArkNetApi arkNetApi, string passphrase, string secondPassPhrase = null)
         {
+            _arkNetApi = arkNetApi;
             _passPhrase = passphrase;
             _secondPassPhrase = secondPassPhrase;
         }
@@ -82,14 +84,14 @@ namespace ArkNet.Controller
         public ArkAccount GetArkAccount()
         {
             if (_account == null)
-                _account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), ArkNetApi.Instance.NetworkSettings.BytePrefix)).Account;
+                _account = _arkNetApi.AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), _arkNetApi.NetworkApi.NetworkSettings.BytePrefix)).Account;
 
             //Account not on chain yet because it's a new account.
             if (_account == null)
             {
                 _account = new ArkAccount()
                 {
-                    Address = Crypto.GetAddress(Crypto.GetKeys(_passPhrase), ArkNetApi.Instance.NetworkSettings.BytePrefix),
+                    Address = Crypto.GetAddress(Crypto.GetKeys(_passPhrase), _arkNetApi.NetworkApi.NetworkSettings.BytePrefix),
                     PublicKey = Crypto.GetKeys(_passPhrase).PubKey.ToString()
                 };
             }
@@ -107,7 +109,7 @@ namespace ArkNet.Controller
         {
             if (_account == null)
             {
-                var accountResponse = await AccountService.GetByAddressAsync(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), ArkNetApi.Instance.NetworkSettings.BytePrefix)).ConfigureAwait(false);
+                var accountResponse = await _arkNetApi.AccountService.GetByAddressAsync(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), _arkNetApi.NetworkApi.NetworkSettings.BytePrefix)).ConfigureAwait(false);
                 _account = accountResponse.Account;
             }
             return _account;
@@ -145,7 +147,7 @@ namespace ArkNet.Controller
         public ArkTransactionPostResponse SendArk(long satoshiAmount, string recipientAddress,
                    string vendorField)
         {
-            return TransactionService.PostTransaction(
+            return _arkNetApi.TransactionService.PostTransaction(
                 CreateTransaction(satoshiAmount, recipientAddress, vendorField));
         }
 
@@ -169,7 +171,7 @@ namespace ArkNet.Controller
         public async Task<ArkTransactionPostResponse> SendArkAsync(long satoshiAmount, string recipientAddress,
             string vendorField)
         {
-            return await TransactionService.PostTransactionAsync(
+            return await _arkNetApi.TransactionService.PostTransactionAsync(
                 CreateTransaction(satoshiAmount, recipientAddress, vendorField)).ConfigureAwait(false);
         }
 
@@ -193,7 +195,7 @@ namespace ArkNet.Controller
         public List<ArkTransactionPostResponse> SendArkUsingMultiBroadCast(long satoshiAmount, string recipientAddress,
             string vendorField)
         {
-            return TransactionService.MultipleBroadCast(
+            return _arkNetApi.TransactionService.MultipleBroadCast(
                 CreateTransaction(satoshiAmount, recipientAddress, vendorField));
         }
 
@@ -217,7 +219,7 @@ namespace ArkNet.Controller
         public async Task<List<ArkTransactionPostResponse>> SendArkUsingMultiBroadCastAsync(long satoshiAmount, string recipientAddress,
             string vendorField)
         {
-            return await TransactionService.MultipleBroadCastAsync(
+            return await _arkNetApi.TransactionService.MultipleBroadCastAsync(
                 CreateTransaction(satoshiAmount, recipientAddress, vendorField)).ConfigureAwait(false);
         }
 
@@ -232,9 +234,9 @@ namespace ArkNet.Controller
         /// </returns>
         public ArkTransactionPostResponse VoteForDelegate(List<string> votes)
         {
-            var tx = TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
+            var tx = _arkNetApi.TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
 
-            return TransactionService.PostTransaction(tx);
+            return _arkNetApi.TransactionService.PostTransaction(tx);
         }
 
         /// <summary>
@@ -248,9 +250,9 @@ namespace ArkNet.Controller
         /// </returns>
         public async Task<ArkTransactionPostResponse> VoteForDelegateAsync(List<string> votes)
         {
-            var tx = TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
+            var tx = _arkNetApi.TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
 
-            return await TransactionService.PostTransactionAsync(tx).ConfigureAwait(false);
+            return await _arkNetApi.TransactionService.PostTransactionAsync(tx).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -264,9 +266,9 @@ namespace ArkNet.Controller
         /// </returns>
         public ArkTransactionPostResponse RegisterAsDelegate(string username)
         {
-            var tx = TransactionApi.CreateDelegate(username, _passPhrase, _secondPassPhrase);
+            var tx = _arkNetApi.TransactionApi.CreateDelegate(username, _passPhrase, _secondPassPhrase);
 
-            return TransactionService.PostTransaction(tx);
+            return _arkNetApi.TransactionService.PostTransaction(tx);
         }
 
         /// <summary>
@@ -280,9 +282,9 @@ namespace ArkNet.Controller
         /// </returns>
         public async Task<ArkTransactionPostResponse> RegisterAsDelegateAsync(string username)
         {
-            var tx = TransactionApi.CreateDelegate(username, _passPhrase, _secondPassPhrase);
+            var tx = _arkNetApi.TransactionApi.CreateDelegate(username, _passPhrase, _secondPassPhrase);
 
-            return await TransactionService.PostTransactionAsync(tx).ConfigureAwait(false);
+            return await _arkNetApi.TransactionService.PostTransactionAsync(tx).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -294,7 +296,7 @@ namespace ArkNet.Controller
         public bool UpdateBalance()
         {
             var account = GetArkAccount();
-            var res = AccountService.GetBalance(account.Address);
+            var res = _arkNetApi.AccountService.GetBalance(account.Address);
 
             account.Balance = res.Balance;
             account.UnconfirmedBalance = res.UnconfirmedBalance;
@@ -311,7 +313,7 @@ namespace ArkNet.Controller
         public async Task<bool> UpdateBalanceAsync()
         {
             var account = await GetArkAccountAsync().ConfigureAwait(false);
-            var res = await AccountService.GetBalanceAsync(account.Address).ConfigureAwait(false);
+            var res = await _arkNetApi.AccountService.GetBalanceAsync(account.Address).ConfigureAwait(false);
 
             account.Balance = res.Balance;
             account.UnconfirmedBalance = res.UnconfirmedBalance;
@@ -335,7 +337,7 @@ namespace ArkNet.Controller
         /// </returns>
         public ArkTransactionList GetTransactions(int offset = 0, int limit = 50)
         {
-            return TransactionService.GetTransactions(GetArkAccount().Address, offset, limit);
+            return _arkNetApi.TransactionService.GetTransactions(GetArkAccount().Address, offset, limit);
         }
 
         /// <summary>
@@ -354,7 +356,7 @@ namespace ArkNet.Controller
         /// </returns>
         public async Task<ArkTransactionList> GetTransactionsAsync(int offset = 0, int limit = 50)
         {
-            return await TransactionService.GetTransactionsAsync(GetArkAccount().Address, offset, limit).ConfigureAwait(false);
+            return await _arkNetApi.TransactionService.GetTransactionsAsync(GetArkAccount().Address, offset, limit).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -365,7 +367,7 @@ namespace ArkNet.Controller
         /// </returns>
         public ArkTransactionList GetUnconfirmedTransactions()
         {
-            return TransactionService.GetUnconfirmedTransactions(GetArkAccount().Address);
+            return _arkNetApi.TransactionService.GetUnconfirmedTransactions(GetArkAccount().Address);
         }
 
         /// <summary>
@@ -376,7 +378,7 @@ namespace ArkNet.Controller
         /// </returns>
         public async Task<ArkTransactionList> GetUnconfirmedTransactionsAsync()
         {
-            return await TransactionService.GetUnconfirmedTransactionsAsync(GetArkAccount().Address).ConfigureAwait(false);
+            return await _arkNetApi.TransactionService.GetUnconfirmedTransactionsAsync(GetArkAccount().Address).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -399,7 +401,7 @@ namespace ArkNet.Controller
         public TransactionApi CreateTransaction(long satoshiAmount, string recipientAddress,
            string vendorField)
         {
-            return TransactionApi.CreateTransaction(recipientAddress,
+            return _arkNetApi.TransactionApi.CreateTransaction(recipientAddress,
                 satoshiAmount,
                 vendorField,
                 _passPhrase,
@@ -438,7 +440,7 @@ namespace ArkNet.Controller
         /// </returns>
         public ArkTransactionPostResponse SendTransaction(TransactionApi transaction)
         {
-            return TransactionService.PostTransaction(transaction);
+            return _arkNetApi.TransactionService.PostTransaction(transaction);
         }
 
         /// <summary>
@@ -450,7 +452,7 @@ namespace ArkNet.Controller
         /// </returns>
         public async Task<ArkTransactionPostResponse> SendTransactionAsync(TransactionApi transaction)
         {
-            return await TransactionService.PostTransactionAsync(transaction).ConfigureAwait(false);
+            return await _arkNetApi.TransactionService.PostTransactionAsync(transaction).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -460,7 +462,7 @@ namespace ArkNet.Controller
         /// <returns>List of ArkTransactionPostResponse objects</returns>
         public List<ArkTransactionPostResponse> SendTransactionUsingMultiBroadCast(TransactionApi transaction)
         {
-            return TransactionService.MultipleBroadCast(transaction);
+            return _arkNetApi.TransactionService.MultipleBroadCast(transaction);
         }
 
         /// <summary>
@@ -472,7 +474,7 @@ namespace ArkNet.Controller
         /// </returns>
         public async Task<List<ArkTransactionPostResponse>> SendTransactionUsingMultiBroadCastAsync(TransactionApi transaction)
         {
-            return await TransactionService.MultipleBroadCastAsync(transaction).ConfigureAwait(false);
+            return await _arkNetApi.TransactionService.MultipleBroadCastAsync(transaction).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -482,7 +484,7 @@ namespace ArkNet.Controller
         /// <returns>ArkTransactionPostResponse object</returns>
         public ArkTransactionPostResponse SendTransaction(string json)
         {
-            return TransactionService.PostTransaction(TransactionApi.FromJson(json));
+            return _arkNetApi.TransactionService.PostTransaction(_arkNetApi.TransactionApi.FromJson(_arkNetApi.NetworkApi, json));
         }
 
         /// <summary>
@@ -492,7 +494,7 @@ namespace ArkNet.Controller
         /// <returns>ArkTransactionPostResponse</returns>
         public async Task<ArkTransactionPostResponse> SendTransactionAsync(string json)
         {
-            return await TransactionService.PostTransactionAsync(TransactionApi.FromJson(json)).ConfigureAwait(false);
+            return await _arkNetApi.TransactionService.PostTransactionAsync(_arkNetApi.TransactionApi.FromJson(_arkNetApi.NetworkApi, json)).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -502,7 +504,7 @@ namespace ArkNet.Controller
         /// <returns>List of ArkTransactionPostResponse</returns>
         public List<ArkTransactionPostResponse> SendTransactionUsingMultiBroadCast(string json)
         {
-            return TransactionService.MultipleBroadCast(TransactionApi.FromJson(json));
+            return _arkNetApi.TransactionService.MultipleBroadCast(_arkNetApi.TransactionApi.FromJson(_arkNetApi.NetworkApi, json));
         }
 
         /// <summary>
@@ -512,7 +514,7 @@ namespace ArkNet.Controller
         /// <returns>List of ArkTransactionPostResponse</returns>
         public async Task<List<ArkTransactionPostResponse>> SendTransactionUsingMultiBroadCastAsync(string json)
         {
-            return await TransactionService.MultipleBroadCastAsync(TransactionApi.FromJson(json)).ConfigureAwait(false);
+            return await _arkNetApi.TransactionService.MultipleBroadCastAsync(_arkNetApi.TransactionApi.FromJson(_arkNetApi.NetworkApi, json)).ConfigureAwait(false);
         }
 
         #region V2 preparation
