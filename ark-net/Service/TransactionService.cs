@@ -61,7 +61,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkTransactionList> GetAllAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL);
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }
@@ -89,7 +89,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkTransactionList> GetTransactionsAsync(ArkTransactionRequest req)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL + "{0}", req.ToQuery()));
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL + "{0}", req.ToQuery())).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }
@@ -113,7 +113,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkTransactionList> GetUnconfirmedAllAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED);
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }
@@ -141,7 +141,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkTransactionList> GetUnconfirmedTransactionsAsync(ArkUnconfirmedTransactionRequest req)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED + "{0}", req.ToQuery()));
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED + "{0}", req.ToQuery())).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
         }
@@ -169,7 +169,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkTransactionResponse> GetByIdAsync(string id)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID, id));
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID, id)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }
@@ -197,7 +197,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkTransactionResponse> GetUnConfirmedByIdAsync(string id)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID_UNCONFIRMED, id));
+            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID_UNCONFIRMED, id)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
         }
@@ -233,7 +233,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkTransactionList> GetTransactionsAsync(string address, int offset = 0, int limit = 50)
         {
-            return await GetTransactionsAsync(new ArkTransactionRequest { OrderBy = "timestamp:desc", RecipientId = address, SenderId = address, Offset = offset, Limit = limit });
+            return await GetTransactionsAsync(new ArkTransactionRequest { OrderBy = "timestamp:desc", RecipientId = address, SenderId = address, Offset = offset, Limit = limit }).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -259,7 +259,7 @@ namespace ArkNet.Service
         /// 
         public async static Task<ArkTransactionList> GetUnconfirmedTransactionsAsync(string address)
         {
-            return await GetUnconfirmedTransactionsAsync(new ArkUnconfirmedTransactionRequest { Address = address });
+            return await GetUnconfirmedTransactionsAsync(new ArkUnconfirmedTransactionRequest { Address = address }).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -294,9 +294,9 @@ namespace ArkNet.Service
             var response = string.Empty;
 
             if (peer == null)
-                response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.POST, ArkStaticStrings.ArkApiPaths.Transaction.POST, body);
+                response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.POST, ArkStaticStrings.ArkApiPaths.Transaction.POST, body).ConfigureAwait(false);
             else
-                response = await peer.MakeRequest(ArkStaticStrings.ArkHttpMethods.POST, ArkStaticStrings.ArkApiPaths.Transaction.POST, body);
+                response = await peer.MakeRequest(ArkStaticStrings.ArkHttpMethods.POST, ArkStaticStrings.ArkApiPaths.Transaction.POST, body).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionPostResponse>(response);
         }
@@ -335,7 +335,7 @@ namespace ArkNet.Service
 
             for (var i = 0; i < ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts; i++)
             {
-                res.Add(await PostTransactionAsync(transaction, NetworkApi.Instance.GetRandomPeer()));
+                res.Add(await PostTransactionAsync(transaction, NetworkApi.Instance.GetRandomPeer()).ConfigureAwait(false));
             }
 
             return res;

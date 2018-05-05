@@ -91,7 +91,7 @@ namespace ArkNet.Core
         public async Task WarmUp(PeerApi initialPeer)
         {
             ActivePeer = initialPeer;
-            await SetPeerList();
+            await SetPeerList().ConfigureAwait(false);
             ActivePeer = GetRandomPeer();
             StartPeerCleaningTask();
         }
@@ -124,7 +124,7 @@ namespace ArkNet.Core
         /// 
         private async Task SetPeerList()
         {
-            var peers = await PeerService.GetAllAsync();
+            var peers = await PeerService.GetAllAsync().ConfigureAwait(false);
             var peersOrderByHeight = peers.Peers
                 .Where(x => x.Status.Equals("OK") && x.Version == ArkNetApi.Instance.NetworkSettings.Version)
                 .OrderByDescending(x => x.Height)

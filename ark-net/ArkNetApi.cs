@@ -121,7 +121,7 @@ namespace ArkNet
         /// <returns> The <inheritdoc cref="Task"/> starts the node.</returns>
         public async Task Start(NetworkType type)
         {
-            await SetNetworkSettings(await GetInitialPeer(type));
+            await SetNetworkSettings(await GetInitialPeer(type).ConfigureAwait(false)).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace ArkNet
         /// <returns> The <inheritdoc cref="Task"/> starts the node.</returns>
         public async Task Start(string initialPeerIp, int initialPeerPort)
         {
-            await SetNetworkSettings(GetInitialPeer(initialPeerIp, initialPeerPort));
+            await SetNetworkSettings(GetInitialPeer(initialPeerIp, initialPeerPort)).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -171,9 +171,9 @@ namespace ArkNet
         private async Task SetNetworkSettings(PeerApi initialPeer)
         {
             // Request the NetworkSettings, Fees, and more peer address from the peers it connects to. 
-            var responseAutoConfigure = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_AUTO_CONFIGURE);
-            var responseFees = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_FEES);
-            var responsePeer = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Peer.GET, initialPeer.Ip, initialPeer.Port));
+            var responseAutoConfigure = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_AUTO_CONFIGURE).ConfigureAwait(false);
+            var responseFees = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_FEES).ConfigureAwait(false);
+            var responsePeer = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Peer.GET, initialPeer.Ip, initialPeer.Port)).ConfigureAwait(false);
 
             // Auto-configures what has been fetched previously
             var autoConfig = JsonConvert.DeserializeObject<ArkLoaderNetworkResponse>(responseAutoConfigure);
@@ -190,7 +190,7 @@ namespace ArkNet
                 Fee = fees
             };
 
-            await NetworkApi.Instance.WarmUp(new PeerApi(initialPeer.Ip, initialPeer.Port));
+            await NetworkApi.Instance.WarmUp(new PeerApi(initialPeer.Ip, initialPeer.Port)).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -225,7 +225,7 @@ namespace ArkNet
 
             // create a peer out of peerurl, and returns if the peer is online. //
             var peer = new PeerApi(peerUrl.Item1, peerUrl.Item2);
-            if (await peer.IsOnline())
+            if (await peer.IsOnline().ConfigureAwait(false))
             {
                 return peer;
             }
@@ -236,7 +236,7 @@ namespace ArkNet
                 throw new Exception("Unable to connect to a seed peer");
 
             // redo the check and increment the retry count //
-            return await GetInitialPeer(type, retryCount + 1);
+            return await GetInitialPeer(type, retryCount + 1).ConfigureAwait(false);
         }
     }
 }
