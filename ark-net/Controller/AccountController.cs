@@ -83,6 +83,17 @@ namespace ArkNet.Controller
         {
             if (_account == null)
                 _account = AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), ArkNetApi.Instance.NetworkSettings.BytePrefix)).Account;
+
+            //Account not on chain yet because it's a new account.
+            if (_account == null)
+            {
+                _account = new ArkAccount()
+                {
+                    Address = Crypto.GetAddress(Crypto.GetKeys(_passPhrase), ArkNetApi.Instance.NetworkSettings.BytePrefix),
+                    PublicKey = Crypto.GetKeys(_passPhrase).PubKey.ToString()
+                };
+            }
+
             return _account;
         }
 
