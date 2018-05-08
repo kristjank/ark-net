@@ -73,9 +73,13 @@ var trans = ArkNetApi.TransactionService.GetAll();
 ### Core Layer 
 Layer is used for core Ark blockchain communication (transaction, crypto...). It is wrapped by api libraries that are called from the service and Account layer.
 ```c#
+//Create & send transaction
 TransactionApi tx = ArkNetApi.TransactionApi.CreateTransaction(recepient, amount, description, passphrase);
 Peer peer = ArkNetApi.NetworkApi.GetRandomPeer();
-var result = peer.PostTransaction(tx);          
+var result = peer.PostTransaction(tx);
+
+// Switch network (Can also create new ArkNetApi instance as alternative solution)
+await ArkNetApi.SwitchNetwork(NetworkType.DevNet)        
 ```
 
 ## More information about ARK Ecosystem and etc
