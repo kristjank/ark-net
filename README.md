@@ -7,8 +7,8 @@
 Ark.NET is the ARK Ecosystem library for the .NET platform. It implements all most relevant ARK functionalities to help you  **develop efficient .NET applications built upon ARK platform**. It provides also low level access to ARK so you can easily build your application on top of it. 
 
 The package supports:
-* With full features, Windows Desktop applications, Mono Desktop applications, and platform supported at [.NET Standard Library](https://docs.microsoft.com/en-us/dotnet/articles/standard/library). Works on all .NET solutions with framework > 4.7.1 & Net Standard 2.0.
-* Async/Await with coresponding synchronous methods
+* With full features, Windows Desktop applications, Mono Desktop applications, and platform supported at [.NET Standard Library](https://docs.microsoft.com/en-us/dotnet/articles/standard/library). Works on all .NET solutions with framework >= 4.7.1 & Net Standard 2.0.
+* Async/Await with coresponding synchronous methods.
 
 [![Source Browser](https://img.shields.io/badge/Browse-Source-green.svg)](http://sourcebrowser.io/Browse/kristjank)
 
@@ -28,21 +28,26 @@ cd ark-net
 ```
 # How to get started? 
 
-All ark-node services have available reponses have their object representations in the form of ValueObjects. You can use service classes under [service folder](https://github.com/ArkEcosystem/ark-net/tree/master/ark-net/Service). Responses are IEnumerable.  Every method has a cooresponding async method.
+All ark-node service reponses have object representations. You can use service classes under [service folder](https://github.com/ArkEcosystem/ark-net/tree/master/ark-net/Service). Responses are IEnumerable for a list or an object for a single item.  Every method has a cooresponding async method.
 
 It's best to let the code do the speaking. For more examples look at the [ARK.NET Tests](https://github.com/ArkEcosystem/ark-net/tree/master/ark-netTests), where all tests are written and you can see the api usage. Some code snippets are below.
 
 
 ### Ark.Net Client init
-**First call should be network selection, so all settings can initialize before going into action.**
+**First call needs to be start, so all settings within the library can initialize before going into action.   Multiple instances of ArkNetApi can be used at the same time (DevNet & MainNet in the same application)**
 
 ```c#
-  await ArkNetApi.Instance.Start(NetworkType.MainNet); //Other type is DevNet
+  private ArkNetApi _arkNetApi;
+  public ArkNetApi ArkNetApi
+  {
+    get { return _arkNetApi ?? (_arkNetApi = new ArkNetApi()); }
+  }
+  await ArkNetApi.Start(NetworkType.MainNet); //Other type is DevNet
 ```
 
 ### Account/Wallet layer
 ```c#
-var accCtnrl = new AccountController("top secret pass");
+var accCtnrl = new AccountController(ArkNetApi, "top secret pass");
 //Send ARK
 var result = accCtnrl.SendArk(100, "AUgTuukcKeE4XFdzaK6rEHMD5FLmVBSmHk", "Akr.Net test trans from Account");
 //Vote 4 Delegate                
@@ -51,25 +56,25 @@ var result = accCtnrl.VoteForDelegate( votes, "top secret pass");
 var transaction = accCtnrl.CreateTransaction(100, "AUgTuukcKeE4XFdzaK6rEHMD5FLmVBSmHk", "Akr.Net test trans from Account");
 var result = accCtnrl.SendTransaction(transaction);
 //Generate passphrase
-var result = AccountService.GeneratePassphrase()
+var result = ArkNetApi.AccountService.GeneratePassphrase()
 ```
 
 ### Service layer 
 For a full list of available api calls please look at the  [ARK.NET Test project](https://github.com/ArkEcosystem/ark-net/blob/master/ark-netTests/)
 ```c#
 //PeerService
-var peers = PeerService.GetAll();
+var peers = ArkNetApi.PeerService.GetAll();
 var peersOK = peers.Where(x => x.Status.Equals("OK"));
 
 //TransactionService
-var trans = TransactionService.GetAll();
+var trans = ArkNetApi.TransactionService.GetAll();
 ...
 ```
 ### Core Layer 
 Layer is used for core Ark blockchain communication (transaction, crypto...). It is wrapped by api libraries that are called from the service and Account layer.
 ```c#
-TransactionApi tx = TransactionApi.CreateTransaction(recepient, amount, description, passphrase);
-Peer peer = NetworkApi.Instance.GetRandomPeer();
+TransactionApi tx = ArkNetApi.TransactionApi.CreateTransaction(recepient, amount, description, passphrase);
+Peer peer = ArkNetApi.NetworkApi.GetRandomPeer();
 var result = peer.PostTransaction(tx);          
 ```
 
