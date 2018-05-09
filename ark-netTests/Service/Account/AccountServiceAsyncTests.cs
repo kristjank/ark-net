@@ -21,7 +21,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public async Task GetByAddressAsyncTest()
         {
-            var account = await AccountService.GetByAddressAsync(_address);
+            var account = await ArkNetApi.AccountService.GetByAddressAsync(_address);
 
             GetByAddressResultTest(account);
         }
@@ -29,7 +29,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public async Task GetByAddressErrorAsyncTest()
         {
-            var account = await AccountService.GetByAddressAsync("BadAddress");
+            var account = await ArkNetApi.AccountService.GetByAddressAsync("BadAddress");
 
             GetByAddressErrorResultTest(account);
         }
@@ -37,7 +37,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public async Task GetBalanceAsyncTest()
         {
-            var res = await AccountService.GetBalanceAsync(_address);
+            var res = await ArkNetApi.AccountService.GetBalanceAsync(_address);
 
             GetBalanceResultTest(res);
         }
@@ -45,7 +45,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public async Task GetBalanceErrorAsyncTest()
         {
-            var res = await AccountService.GetBalanceAsync("BadAddress");
+            var res = await ArkNetApi.AccountService.GetBalanceAsync("BadAddress");
 
             GetBalanceErrorResultTest(res);
         }
@@ -53,7 +53,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public async Task GetDelegatesAsyncTest()
         {
-            var delegates = await AccountService.GetDelegatesAsync(_address);
+            var delegates = await ArkNetApi.AccountService.GetDelegatesAsync(_address);
 
             GetDelegatesResultTest(delegates);
         }
@@ -61,7 +61,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public async Task GetDelegatesErrorAsyncTest()
         {
-            var delegates = await AccountService.GetDelegatesAsync("BadAddress");
+            var delegates = await ArkNetApi.AccountService.GetDelegatesAsync("BadAddress");
 
             GetDelegatesErrorResultTest(delegates);
         }
@@ -69,7 +69,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public async Task GetTopAsyncTest()
         {
-            var top = await AccountService.GetTopAsync(null, null);
+            var top = await ArkNetApi.AccountService.GetTopAsync(null, null);
 
             GetTopResultTest(top);
         }
@@ -77,7 +77,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public async Task GetTopLimitAsyncTest()
         {
-            var top = await AccountService.GetTopAsync(10, null);
+            var top = await ArkNetApi.AccountService.GetTopAsync(10, null);
 
             GetTopLimitResultTest(top);
         }
@@ -85,7 +85,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public async Task GetTopRecordsToSkipAsyncTest()
         {
-            var top = await AccountService.GetTopAsync(null, 50);
+            var top = await ArkNetApi.AccountService.GetTopAsync(null, 50);
 
             GetTopRecordsToSkipResultTest(top);
         }
@@ -93,7 +93,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public async Task GetTopLimitAndRecordsToSkipAsyncTest()
         {
-            var top = await AccountService.GetTopAsync(10, 50);
+            var top = await ArkNetApi.AccountService.GetTopAsync(10, 50);
 
             GetTopLimitAndRecordsToSkipResultTest(top);
         }
@@ -101,7 +101,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public async Task GetTopLimitErrorAsyncTest()
         {
-            var top = await AccountService.GetTopAsync(1000, null);
+            var top = await ArkNetApi.AccountService.GetTopAsync(1000, null);
 
             GetTopLimitErrorResultTest(top);
         }

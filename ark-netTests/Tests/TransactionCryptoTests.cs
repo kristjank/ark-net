@@ -44,7 +44,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void GetAddressTest()
 		{
-			var a1 = Crypto.GetAddress(Crypto.GetKeys(_passPhrase),ArkNetApi.Instance.NetworkSettings.BytePrefix);
+			var a1 = Crypto.GetAddress(Crypto.GetKeys(_passPhrase),ArkNetApi.NetworkApi.NetworkSettings.BytePrefix);
 			var a2 = _addressFromCrypto;
 
 			Assert.AreEqual(a2, a1);
@@ -53,7 +53,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateTransactionPassPhraseVerifyTest()
 		{
-			var tx = TransactionApi.CreateTransaction(_address,
+			var tx = ArkNetApi.TransactionApi.CreateTransaction(_address,
 				1,
 				"This is first transaction from ARK-NET",
                 _passPhrase);
@@ -65,14 +65,14 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void JSONSerDeSerTest()
 		{
-			var tx = TransactionApi.CreateTransaction(_address,
+			var tx = ArkNetApi.TransactionApi.CreateTransaction(_address,
 				1,
 				"This is first transaction from ARK-NET",
                 _passPhrase);
 			var json = tx.ToJson();
 			Console.WriteLine(json);
 
-			var tx2 = TransactionApi.FromJson(json);
+			var tx2 = ArkNetApi.TransactionApi.FromJson(ArkNetApi.NetworkApi, json);
 
 			Assert.AreEqual(json, tx2.ToJson());
 		}
@@ -80,14 +80,14 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void JSONSerDeSerNegTest()
 		{
-			var tx = TransactionApi.CreateTransaction(_address,
+			var tx = ArkNetApi.TransactionApi.CreateTransaction(_address,
 				1,
 				"This is first transaction from ARK-NET",
                 _passPhrase);
 			var json = tx.ToJson();
 			Console.WriteLine(json);
 
-			var tx2 = TransactionApi.FromJson(json);
+			var tx2 = ArkNetApi.TransactionApi.FromJson(ArkNetApi.NetworkApi, json);
 			tx2.SignSignature = "Change";
 
 			Assert.AreNotEqual(json, tx2.ToJson());
@@ -96,7 +96,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateTransaction2ndPassPhraseandVerifyTest()
 		{
-			var tx = TransactionApi.CreateTransaction(_address,
+			var tx = ArkNetApi.TransactionApi.CreateTransaction(_address,
 				1,
 				"This is first transaction from ARK-NET",
                 _passPhrase,
@@ -113,7 +113,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateTransactionAmountChangeTest()
 		{
-			var tx = TransactionApi.CreateTransaction(_address,
+			var tx = ArkNetApi.TransactionApi.CreateTransaction(_address,
 				1,
 				"This is first transaction from ARK-NET",
                 _passPhrase);
@@ -129,7 +129,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateTransactionFeeChangeTest()
 		{
-			var tx = TransactionApi.CreateTransaction(_address,
+			var tx = ArkNetApi.TransactionApi.CreateTransaction(_address,
 				1,
 				"This is first transaction from ARK-NET",
                 _passPhrase);
@@ -145,7 +145,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateTransactionRecepientChangeTest()
 		{
-			var tx = TransactionApi.CreateTransaction(_address,
+			var tx = ArkNetApi.TransactionApi.CreateTransaction(_address,
 				1,
 				"This is first transaction from ARK-NET",
                 _passPhrase);
@@ -160,7 +160,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void CreateDelegateTest()
 		{
-			var tx = TransactionApi.CreateDelegate("polpolo", _passPhrase);
+			var tx = ArkNetApi.TransactionApi.CreateDelegate("polpolo", _passPhrase);
 			var json = tx.ToJson();
 
 			Assert.IsTrue(Crypto.Verify(tx));
@@ -173,7 +173,7 @@ namespace ArkNetTest.Tests
 	        List<string> votes = new List<string> { "+034151a3ec46b5670a682b0a63394f863587d1bc97483b1b6c70eb58e7f0aed192" };
 
 
-	        var tx = TransactionApi.CreateVote(votes, _passPhrase);
+	        var tx = ArkNetApi.TransactionApi.CreateVote(votes, _passPhrase);
 
 	        var json = tx.ToObject(true);
             Assert.IsTrue(Crypto.Verify(tx));

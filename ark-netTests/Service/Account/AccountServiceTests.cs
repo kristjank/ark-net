@@ -21,7 +21,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public void GetByAddressTest()
         {
-            var account = AccountService.GetByAddress(_address);
+            var account = ArkNetApi.AccountService.GetByAddress(_address);
 
             GetByAddressResultTest(account);
         }
@@ -29,7 +29,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public void GetByAddressErrorTest()
         {
-            var account = AccountService.GetByAddress("BadAddress");
+            var account = ArkNetApi.AccountService.GetByAddress("BadAddress");
 
             GetByAddressErrorResultTest(account);
         }
@@ -37,7 +37,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public void GetBalanceTest()
         {
-            var res = AccountService.GetBalance(_address);
+            var res = ArkNetApi.AccountService.GetBalance(_address);
 
             GetBalanceResultTest(res);
         }
@@ -45,7 +45,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public void GetBalanceErrorTest()
         {
-            var res = AccountService.GetBalance("BadAddress");
+            var res = ArkNetApi.AccountService.GetBalance("BadAddress");
 
             GetBalanceErrorResultTest(res);
         }
@@ -53,7 +53,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public void GetDelegatesTest()
         {
-            var delegates = AccountService.GetDelegates(_address);
+            var delegates = ArkNetApi.AccountService.GetDelegates(_address);
 
             GetDelegatesResultTest(delegates);
         }
@@ -61,7 +61,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public void GetDelegatesErrorTest()
         {
-            var delegates = AccountService.GetDelegates("BadAddress");
+            var delegates = ArkNetApi.AccountService.GetDelegates("BadAddress");
 
             GetDelegatesErrorResultTest(delegates);
         }
@@ -69,7 +69,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public void GetTopTest()
         {
-            var top = AccountService.GetTop(null, null);
+            var top = ArkNetApi.AccountService.GetTop(null, null);
 
             GetTopResultTest(top);
         }
@@ -77,7 +77,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public void GetTopLimitTest()
         {
-            var top = AccountService.GetTop(10, null);
+            var top = ArkNetApi.AccountService.GetTop(10, null);
 
             GetTopLimitResultTest(top);
         }
@@ -85,7 +85,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public void GetTopRecordsToSkipTest()
         {
-            var top = AccountService.GetTop(null, 50);
+            var top = ArkNetApi.AccountService.GetTop(null, 50);
 
             GetTopRecordsToSkipResultTest(top);
         }
@@ -93,7 +93,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public void GetTopLimitAndRecordsToSkipTest()
         {
-            var top = AccountService.GetTop(10, 50);
+            var top = ArkNetApi.AccountService.GetTop(10, 50);
 
             GetTopLimitAndRecordsToSkipResultTest(top);
         }
@@ -101,7 +101,7 @@ namespace ArkNet.Service.Account.Tests
         [TestMethod()]
         public void GetTopLimitErrorTest()
         {
-            var top = AccountService.GetTop(1000, null);
+            var top = ArkNetApi.AccountService.GetTop(1000, null);
 
             GetTopLimitErrorResultTest(top);
         }

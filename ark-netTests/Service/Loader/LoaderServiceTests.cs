@@ -21,7 +21,7 @@ namespace ArkNet.Service.Loader.Tests
         [TestMethod()]
         public void GetStatusTest()
         {
-            var status = LoaderService.GetStatus();
+            var status = ArkNetApi.LoaderService.GetStatus();
 
             GetStatusResultTest(status);
         }
@@ -29,7 +29,7 @@ namespace ArkNet.Service.Loader.Tests
         [TestMethod()]
         public void GetSyncStatusTest()
         {
-            var syncStatus = LoaderService.GetSyncStatus();
+            var syncStatus = ArkNetApi.LoaderService.GetSyncStatus();
 
             GetSyncStatusResultTest(syncStatus);
         }
@@ -37,7 +37,7 @@ namespace ArkNet.Service.Loader.Tests
         [TestMethod()]
         public void GetAutoConfigureParametersTest()
         {
-            var parameters = LoaderService.GetAutoConfigureParameters();
+            var parameters = ArkNetApi.LoaderService.GetAutoConfigureParameters();
 
             GetAutoConfigureParametersResultTest(parameters);
         }

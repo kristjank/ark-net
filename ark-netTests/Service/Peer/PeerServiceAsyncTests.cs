@@ -22,7 +22,7 @@ namespace ArkNet.Service.Peer.Tests
         [TestMethod()]
         public async Task GetAllAsyncTest()
         {
-            var peers = await PeerService.GetAllAsync();
+            var peers = await ArkNetApi.PeerService.GetAllAsync();
             var peer = peers.Peers.Where(x => x.Status.Equals("OK")).FirstOrDefault();
 
             GetAllResultTest(peer);
@@ -31,7 +31,7 @@ namespace ArkNet.Service.Peer.Tests
         [TestMethod()]
         public async Task GetPeerAsyncTest()
         {
-            var peer = await PeerService.GetPeerAsync(base._ip, base._port);
+            var peer = await ArkNetApi.PeerService.GetPeerAsync(base._ip, base._port);
 
             GetPeerResultTest(peer);
         }
@@ -39,7 +39,7 @@ namespace ArkNet.Service.Peer.Tests
         [TestMethod()]
         public async Task GetPeerStatusAsyncTest()
         {
-            var peer = await PeerService.GetPeerStatusAsync();
+            var peer = await ArkNetApi.PeerService.GetPeerStatusAsync();
 
             GetPeerStatusResultTest(peer);
         }
@@ -47,9 +47,9 @@ namespace ArkNet.Service.Peer.Tests
         [TestMethod]
         public async Task SwitchPeerAsyncTest()
         {
-            NetworkApi.Instance.ActivePeer = new PeerApi("1.1.1.1", 5000);
+            ArkNetApi.NetworkApi.ActivePeer = new PeerApi(ArkNetApi.NetworkApi, "1.1.1.1", 5000);
 
-            var peer = await PeerService.GetPeerAsync(base._ip, base._port);
+            var peer = await ArkNetApi.PeerService.GetPeerAsync(base._ip, base._port);
 
             GetPeerResultTest(peer);
         }

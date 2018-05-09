@@ -15,20 +15,26 @@ namespace ArkNet.Tests
     {
         protected readonly bool USE_DEV_NET = true;
 
+        private ArkNetApi _arkNetApi;
+        public ArkNetApi ArkNetApi
+        {
+            get { return _arkNetApi ?? (_arkNetApi = new ArkNetApi()); }
+        }
+
         public void Initialize()
         {
             if (USE_DEV_NET)
-                ArkNetApi.Instance.Start(NetworkType.DevNet).Wait();
+                ArkNetApi.Start(NetworkType.DevNet).Wait();
             else
-                ArkNetApi.Instance.Start(NetworkType.MainNet).Wait();
+                ArkNetApi.Start(NetworkType.MainNet).Wait();
         }
 
         public async Task InitializeAsync()
         {
             if (USE_DEV_NET)
-                await ArkNetApi.Instance.Start(NetworkType.DevNet);
+                await ArkNetApi.Start(NetworkType.DevNet);
             else
-                await ArkNetApi.Instance.Start(NetworkType.MainNet);
+                await ArkNetApi.Start(NetworkType.MainNet);
         }
     }
 }

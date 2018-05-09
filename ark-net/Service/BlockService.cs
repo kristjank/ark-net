@@ -1,154 +1,333 @@
-﻿using ArkNet.Core;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="BlockService.cs" company="Ark">
+//   MIT License
+//   // 
+//   // Copyright (c) 2017 Kristjan Košič
+//   // 
+//   // Permission is hereby granted, free of charge, to any person obtaining a copy
+//   // of this software and associated documentation files (the "Software"), to deal
+//   // in the Software without restriction, including without limitation the rights
+//   // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//   // copies of the Software, and to permit persons to whom the Software is
+//   // furnished to do so, subject to the following conditions:
+//   // 
+//   // The above copyright notice and this permission notice shall be included in all
+//   // copies or substantial portions of the Software.
+//   // 
+//   // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//   // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//   // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//   // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//   // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//   // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//   // SOFTWARE.
+// </copyright>
+// --------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Threading.Tasks;
+using ArkNet.Core;
 using ArkNet.Messages.Block;
-using ArkNet.Model;
 using ArkNet.Model.Block;
 using ArkNet.Utils;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace ArkNet.Service
 {
+    /// <summary>
+    /// Provies functionality for requesting block information.
+    /// </summary>
+    /// 
     public class BlockService
     {
-        public static ArkBlockResponse GetById(string id)
+        private NetworkApi _networkApi;
+        public BlockService(NetworkApi networkApi)
+        {
+            _networkApi = networkApi;
+        }
+
+        #region Methods
+
+        /// <summary>
+        /// Gets a block by id.
+        /// </summary>
+        /// 
+        /// <param name="id">The id of the block.</param>
+        /// 
+        /// <returns>Returns an <see cref="ArkBlockResponse"/> type.</returns>
+        /// 
+        public ArkBlockResponse GetById(string id)
         {
             return GetByIdAsync(id).Result;
         }
-        public async static Task<ArkBlockResponse> GetByIdAsync(string id)
+
+        /// <summary>
+        /// Asynchronously gets a block by id.
+        /// </summary>
+        /// 
+        /// <param name="id">The id of the block.</param>
+        /// 
+        /// <returns>Returns an <see cref="Task{ArkBlockResponse}"/> type.</returns>
+        /// 
+        public async Task<ArkBlockResponse> GetByIdAsync(string id)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Block.GET_BLOCK, id));
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Block.GET_BLOCK, id)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkBlockResponse>(response);
         }
 
-        public static ArkBlockList GetAll()
+        /// <summary>
+        /// Gets all blocks.
+        /// </summary>
+        /// 
+        /// <returns>Returns an <see cref="ArkBlockList"/> type.</returns>
+        /// 
+        public ArkBlockList GetAll()
         {
             return GetAllAsync().Result;
         }
 
-        public async static Task<ArkBlockList> GetAllAsync()
+        /// <summary>
+        /// Asynchronously gets all blocks.
+        /// </summary>
+        /// 
+        /// <returns>Returns an <see cref="Task{ArkBlockList}"/> type.</returns>
+        /// 
+        public async Task<ArkBlockList> GetAllAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_ALL);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_ALL).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkBlockList>(response);
         }
 
-        public static ArkBlockList GetBlocks(ArkBlockRequest req)
+        /// <summary>
+        /// Gets a range of blocks by range.
+        /// </summary>
+        /// 
+        /// <param name="req">The range paramters.</param>
+        /// 
+        /// <returns>Returns an <see cref="ArkBlockList"/> type.</returns>
+        /// 
+        public ArkBlockList GetBlocks(ArkBlockRequest req)
         {
             return GetBlocksAsync(req).Result;
         }
 
-        public async static Task<ArkBlockList> GetBlocksAsync(ArkBlockRequest req)
+        /// <summary>
+        /// Asynchronously gets a range of blocks by range.
+        /// </summary>
+        /// 
+        /// <param name="req">The range paramters.</param>
+        /// 
+        /// <returns>Returns an <see cref="Task{ArkBlockList}"/> type.</returns>
+        /// 
+        public async Task<ArkBlockList> GetBlocksAsync(ArkBlockRequest req)
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Block.GET_ALL + "{0}", req.ToQuery()));
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Block.GET_ALL + "{0}", req.ToQuery())).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkBlockList>(response);
         }
 
-        public static DateTime GetEpoch()
+        /// <summary>
+        /// Gets the current epoch.
+        /// </summary>
+        /// 
+        /// <returns>Returns a <see cref="DateTime"/> type.</returns>
+        /// 
+        public DateTime GetEpoch()
         {
             return GetEpochAsync().Result;
         }
 
-        public async static Task<DateTime> GetEpochAsync()
+        /// <summary>
+        /// Asynchronously gets the current epoch.
+        /// </summary>
+        /// 
+        /// <returns>Returns a <see cref="Task{DateTime}"/> type.</returns>
+        /// 
+        public async Task<DateTime> GetEpochAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_EPOCH);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_EPOCH).ConfigureAwait(false);
             var parsed = JObject.Parse(response);
 
             return DateTime.Parse(parsed["epoch"].ToString());
         }
 
-        public static long GetHeight()
+        /// <summary>
+        /// Gets the current block number.
+        /// </summary>
+        /// 
+        /// <returns>Returns an <see cref="long"/> type.</returns>
+        /// 
+        public long GetHeight()
         {
             return GetHeightAsync().Result;
         }
 
-        public async static Task<long> GetHeightAsync()
+        /// <summary>
+        /// Asynchronously gets the current block number.
+        /// </summary>
+        /// 
+        /// <returns>Returns an <see cref="Task{int}"/> type.</returns>
+        /// 
+        public async Task<long> GetHeightAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_HEIGHT);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_HEIGHT).ConfigureAwait(false);
             var parsed = JObject.Parse(response);
 
             return Int64.Parse(parsed["height"].ToString());
         }
 
-        public static string GetNetHash()
+        /// <summary>
+        /// Gets the current block net hash.
+        /// </summary>
+        /// 
+        /// <returns>Returns a <see cref="string"/> type.</returns>
+        /// 
+        public string GetNetHash()
         {
             return GetNetHashAsync().Result;
         }
 
-        public async static Task<string> GetNetHashAsync()
+        /// <summary>
+        /// Asynchronously gets the current block net hash.
+        /// </summary>
+        /// 
+        /// <returns>Returns a <see cref="Task{string}"/> type.</returns>
+        /// 
+        public async Task<string> GetNetHashAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_NETHASH);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_NETHASH).ConfigureAwait(false);
             var parsed = JObject.Parse(response);
 
             return parsed["nethash"].ToString();
         }
 
-        public static Fees GetFees()
+        /// <summary>
+        /// Gets the current block fee.
+        /// </summary>
+        /// 
+        /// <returns>Returns a <see cref="Fees"/> type.</returns>
+        /// 
+        public Fees GetFees()
         {
             return GetFeesAsync().Result;
         }
 
-        public async static Task<Fees> GetFeesAsync()
+        /// <summary>
+        /// Asynchronously Gets the current block fee.
+        /// </summary>
+        /// 
+        /// <returns>Returns a <see cref="Task{Fees}"/> type.</returns>
+        /// 
+        public async Task<Fees> GetFeesAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_FEES);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_FEES).ConfigureAwait(false);
             var parsed = JObject.Parse(response);
 
             return JsonConvert.DeserializeObject<Fees>(parsed["fees"].ToString());
         }
 
-        public static int GetMilestone()
+        /// <summary>
+        /// Gets the current block milestone.
+        /// </summary>
+        /// 
+        /// <returns>Returns an <see cref="int"/>.</returns>
+        /// 
+        public int GetMilestone()
         {
             return GetMilestoneAsync().Result;
         }
 
-        public async static Task<int> GetMilestoneAsync()
+        /// <summary>
+        /// Asynchronously gets the current block milestone.
+        /// </summary>
+        /// 
+        /// <returns>Returns an <see cref="Task{int}"/>.</returns>
+        /// 
+        public async Task<int> GetMilestoneAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_MILESTONE);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_MILESTONE).ConfigureAwait(false);
             var parsed = JObject.Parse(response);
 
             return Int32.Parse(parsed["milestone"].ToString());
         }
 
-        public static int GetReward()
+        /// <summary>
+        /// Gets the current block reward.
+        /// </summary>
+        /// 
+        /// <returns>Returns an <see cref="int"/>.</returns>
+        /// 
+        public int GetReward()
         {
             return GetRewardAsync().Result;
         }
 
-        public async static Task<int> GetRewardAsync()
+        /// <summary>
+        /// Asynchronously gets the current block reward.
+        /// </summary>
+        /// 
+        /// <returns>Returns an <see cref="Task{int}"/>.</returns>
+        /// 
+        public async Task<int> GetRewardAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_REWARD);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_REWARD).ConfigureAwait(false);
             var parsed = JObject.Parse(response);
 
             return Int32.Parse(parsed["reward"].ToString());
         }
 
-        public static long GetSupply()
+        /// <summary>
+        /// Gets the current block supply.
+        /// </summary>
+        /// 
+        /// <returns>Returns an <see cref="long"/>.</returns>
+        /// 
+        public long GetSupply()
         {
             return GetSupplyAsync().Result;
         }
 
-        public async static Task<long> GetSupplyAsync()
+        /// <summary>
+        /// Asynchronously gets the current block supply.
+        /// </summary>
+        /// 
+        /// <returns>Returns an <see cref="Task{int}"/>.</returns>
+        /// 
+        public async Task<long> GetSupplyAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_SUPPLY);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_SUPPLY).ConfigureAwait(false);
             var parsed = JObject.Parse(response);
 
             return Int64.Parse(parsed["supply"].ToString());
         }
 
-        public static ArkBlockChainStatus GetStatus()
+        /// <summary>
+        /// Gets the current block status.
+        /// </summary>
+        /// 
+        /// <returns>Returns an <see cref="ArkBlockChainStatus"/> type.</returns>
+        /// 
+        public ArkBlockChainStatus GetStatus()
         {
             return GetStatusAsync().Result;
         }
 
-        public async static Task<ArkBlockChainStatus> GetStatusAsync()
+        /// <summary>
+        /// Asynchronously gets the current block status.
+        /// </summary>
+        /// 
+        /// <returns>Returns an <see cref="Task{ArkBlockChainStatus}"/> type.</returns>
+        /// 
+        public async Task<ArkBlockChainStatus> GetStatusAsync()
         {
-            var response = await NetworkApi.Instance.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_STATUS);
+            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_STATUS).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkBlockChainStatus>(response);
         }
+
+        #endregion
     }
 }

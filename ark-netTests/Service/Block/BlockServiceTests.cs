@@ -23,7 +23,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public void GetAllTest()
         {
-            var blocks = BlockService.GetAll();
+            var blocks = ArkNetApi.BlockService.GetAll();
 
             GetAllResultTest(blocks);
         }
@@ -31,7 +31,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public void GetAllBlocksTest()
         {
-            var blocks = BlockService.GetBlocks(new ArkBlockRequest { Height = base._height, GeneratorPublickey = base._generatorPublicKey });
+            var blocks = ArkNetApi.BlockService.GetBlocks(new ArkBlockRequest { Height = base._height, GeneratorPublickey = base._generatorPublicKey });
 
             GetBlocksResultTest(blocks);
         }
@@ -39,10 +39,10 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public void GetByIdTest()
         {
-            var block = BlockService.GetAll().Blocks.FirstOrDefault();
+            var block = ArkNetApi.BlockService.GetAll().Blocks.FirstOrDefault();
             Assert.IsNotNull(block);
 
-            var block1 = BlockService.GetById(block.Id);
+            var block1 = ArkNetApi.BlockService.GetById(block.Id);
 
             GetByIdResultTest(block1);
         }
@@ -50,7 +50,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public void GetByIdErrorTest()
         {
-            var block = BlockService.GetById("ErrorId");
+            var block = ArkNetApi.BlockService.GetById("ErrorId");
 
             GetByIdErrorResultTest(block);
         }
@@ -58,7 +58,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public void GetEpochTest()
         {
-            var epoch = BlockService.GetEpoch();
+            var epoch = ArkNetApi.BlockService.GetEpoch();
 
             GetEpochResultTest(epoch);
         }
@@ -66,7 +66,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public void GetHeightTest()
         {
-            var height = BlockService.GetHeight();
+            var height = ArkNetApi.BlockService.GetHeight();
 
             GetHeightResultTest(height);
         }
@@ -74,7 +74,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public void GetNetHashTest()
         {
-            var netHash = BlockService.GetNetHash();
+            var netHash = ArkNetApi.BlockService.GetNetHash();
 
             GetNetHashResultTest(netHash);
         }
@@ -82,7 +82,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public void GetFeesTest()
         {
-            var fees = BlockService.GetFees();
+            var fees = ArkNetApi.BlockService.GetFees();
 
             GetFeesResultTest(fees);
         }
@@ -90,7 +90,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public void GetMilestoneTest()
         {
-            var milestone = BlockService.GetMilestone();
+            var milestone = ArkNetApi.BlockService.GetMilestone();
 
             GetMilestoneResultTest(milestone);
         }
@@ -98,7 +98,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public void GetRewardTest()
         {
-            var reward = BlockService.GetReward();
+            var reward = ArkNetApi.BlockService.GetReward();
 
             GetRewardResultTest(reward);
         }
@@ -106,7 +106,7 @@ namespace ArkNet.Service.Block.Tests
         [TestMethod()]
         public void GetStatusTest()
         {
-            var status = BlockService.GetStatus();
+            var status = ArkNetApi.BlockService.GetStatus();
 
             GetStatusResultTest(status);
         }
