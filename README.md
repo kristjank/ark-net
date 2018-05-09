@@ -37,26 +37,36 @@ It's best to let the code do the speaking. For more examples look at the [ARK.NE
 **First call needs to be start, so all settings within the library can initialize before going into action.   Multiple instances of ArkNetApi can be used at the same time (DevNet & MainNet in the same application)**
 
 ```c#
-  private ArkNetApi _arkNetApi;
-  public ArkNetApi ArkNetApi
-  {
+private ArkNetApi _arkNetApi;
+public ArkNetApi ArkNetApi
+{
     get { return _arkNetApi ?? (_arkNetApi = new ArkNetApi()); }
-  }
-  await ArkNetApi.Start(NetworkType.MainNet); //Other type is DevNet
+}
+await ArkNetApi.Start(NetworkType.MainNet); //Other type is DevNet
+//or
+await ArkNetApi.Start(specificPeerIp, specificPeerPort);
 ```
 
 ### Account/Wallet layer
 ```c#
+//Existing account
 var accCtnrl = new AccountController(ArkNetApi, "top secret pass");
+
 //Send ARK
 var result = accCtnrl.SendArk(100, "AUgTuukcKeE4XFdzaK6rEHMD5FLmVBSmHk", "Akr.Net test trans from Account");
+
 //Vote 4 Delegate                
 var result = accCtnrl.VoteForDelegate( votes, "top secret pass");
+
 //Create and send transaction.  Transaction can be saved offine (.ToJson()) and sent later.              
 var transaction = accCtnrl.CreateTransaction(100, "AUgTuukcKeE4XFdzaK6rEHMD5FLmVBSmHk", "Akr.Net test trans from Account");
 var result = accCtnrl.SendTransaction(transaction);
-//Generate passphrase
-var result = ArkNetApi.AccountService.GeneratePassphrase()
+
+//Get Account
+var account = accCtnrl.GetArkAccount();
+
+//New acount
+new AccountController(ArkNetApi, ArkNetApi.AccountService.GeneratePassphrase());
 ```
 
 ### Service layer 
@@ -68,6 +78,18 @@ var peersOK = peers.Where(x => x.Status.Equals("OK"));
 
 //TransactionService
 var trans = ArkNetApi.TransactionService.GetAll();
+
+//BlockService
+var blocks = ArkNetApi.BlockService.GetAll();
+
+//AccountService - Generate passphrase
+var result = ArkNetApi.AccountService.GeneratePassphrase();
+
+//DelegateService
+var delegates = ArkNetApi.DelegateService.GetAll();
+
+//LoaderService
+var autoConfigParams = ArkNetApi.LoaderService.GetAutoConfigureParameters();
 ...
 ```
 ### Core Layer 
@@ -78,8 +100,15 @@ TransactionApi tx = ArkNetApi.TransactionApi.CreateTransaction(recepient, amount
 Peer peer = ArkNetApi.NetworkApi.GetRandomPeer();
 var result = peer.PostTransaction(tx);
 
+//Connect to specific peer
+var peerApi = new PeerApi(ipAddress, Port)
+
 // Switch network (Can also create new ArkNetApi instance as alternative solution)
-await ArkNetApi.SwitchNetwork(NetworkType.DevNet)        
+await ArkNetApi.SwitchNetwork(NetworkType.DevNet)
+
+//New network
+_arkNetApiDevNet = new ArkNetApi();
+await _arkNetApiDevNet.Start(NetworkType.DevNet);      
 ```
 
 ## More information about ARK Ecosystem and etc
