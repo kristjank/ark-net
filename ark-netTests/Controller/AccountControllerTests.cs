@@ -39,7 +39,7 @@ namespace ArkNet.Controller.Tests
         [TestMethod()]
         public void CreateAccountTest()
         {
-            var accCtnrl = new AccountController(_passPhrase);
+            var accCtnrl = new AccountController(ArkNetApi, _passPhrase);
 
             Assert.AreEqual(accCtnrl.GetArkAccount().Address, _address);
             Assert.AreEqual(accCtnrl.GetArkAccount().PublicKey, _pubKey);
@@ -48,7 +48,7 @@ namespace ArkNet.Controller.Tests
         [TestMethod()]
         public void SendArkTest()
         {
-            var accCtnrl = new AccountController(_passPhrase);
+            var accCtnrl = new AccountController(ArkNetApi, _passPhrase);
             var result = accCtnrl.SendArk(1, _address, "Akr.Net test trans from Account");
 
             Assert.IsTrue(result.Success);
@@ -59,7 +59,7 @@ namespace ArkNet.Controller.Tests
         [TestMethod()]
         public void SendArkUsingMultiBroadCastTest()
         {
-            var accCtnrl = new AccountController(_passPhrase);
+            var accCtnrl = new AccountController(ArkNetApi, _passPhrase);
             var result = accCtnrl.SendArkUsingMultiBroadCast(1, _address, "Akr.Net test multi-trans from Account");
 
             Assert.IsTrue(result.Where(x => x.Success).Count() > 0);
@@ -68,7 +68,7 @@ namespace ArkNet.Controller.Tests
         [TestMethod()]
         public async Task SendArkUsingMultiBroadCastAsyncTest()
         {
-            var accCtnrl = new AccountController(_passPhrase);
+            var accCtnrl = new AccountController(ArkNetApi, _passPhrase);
             var result = await accCtnrl.SendArkUsingMultiBroadCastAsync(1, _address, "Akr.Net test multi-trans from Account");
 
             Assert.IsTrue(result.Where(x => x.Success).Count() > 0);
@@ -77,14 +77,14 @@ namespace ArkNet.Controller.Tests
         [TestMethod()]
         public void VoteForDelegateTest()
         {
-            var dele = DelegateService.GetByUsername(_delegateName);
+            var dele = ArkNetApi.DelegateService.GetByUsername(_delegateName);
 
             List<string> votes = new List<string>();
             votes.Add("+" + dele.Delegate.PublicKey);
 
             var a2 = JsonConvert.SerializeObject(votes);
 
-            var accCtnrl = new AccountController(_passPhrase);
+            var accCtnrl = new AccountController(ArkNetApi, _passPhrase);
             var result = accCtnrl.VoteForDelegate(votes);
 
             Assert.IsTrue(result.Success || (result.Success == false && result.TransactionIds == null && result.Error == "Failed to add vote, account has already voted for this delegate"));
@@ -93,7 +93,7 @@ namespace ArkNet.Controller.Tests
         [TestMethod()]
         public void GetTransactionsTest()
         {
-            var accCtnrl = new AccountController(_passPhrase);
+            var accCtnrl = new AccountController(ArkNetApi, _passPhrase);
             var result = accCtnrl.GetTransactions();
 
             Assert.IsTrue(result.Count > 0);
@@ -102,7 +102,7 @@ namespace ArkNet.Controller.Tests
         [TestMethod()]
         public void GetUnconfirmedTransactionsTest()
         {
-            var accCtnrl = new AccountController(_passPhrase);
+            var accCtnrl = new AccountController(ArkNetApi, _passPhrase);
             var result = accCtnrl.GetUnconfirmedTransactions();
 
             Assert.IsTrue(result.Count == 0);

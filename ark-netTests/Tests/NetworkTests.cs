@@ -41,12 +41,12 @@ namespace ArkNetTest.Tests
         [TestMethod]
 		public void PostTransactionNoBalanceTest()
 		{
-			var tx = TransactionApi.CreateTransaction(_noBalanceAddress,
+			var tx = ArkNetApi.TransactionApi.CreateTransaction(_noBalanceAddress,
 				133380000000,
 				"This is first transaction from ARK-NET",
                 _noBalanceAddressPassPhrase);
 
-			var result = TransactionService.PostTransaction(tx);
+			var result = ArkNetApi.TransactionService.PostTransaction(tx);
 
 			Assert.AreEqual(result.Error, string.Format("Account does not have enough ARK: {0} balance: 0", _noBalanceAddress));
 		}
@@ -55,7 +55,7 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void TransactionSerializeTest()
 		{
-			var tx = TransactionApi.CreateTransaction(_address,
+			var tx = ArkNetApi.TransactionApi.CreateTransaction(_address,
 				1,
 				"This is first transaction from ARK-NET 22",
                 _passPhrase);
@@ -71,12 +71,12 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void PostTransactionTransferTest()
 		{
-			var tx = TransactionApi.CreateTransaction(_address,
+			var tx = ArkNetApi.TransactionApi.CreateTransaction(_address,
 				1,
 				"This is first transaction from ARK-NET 22",
 				_passPhrase);
 
-			var result = TransactionService.PostTransaction(tx);
+			var result = ArkNetApi.TransactionService.PostTransaction(tx);
 
 			Assert.IsTrue(result.Success);
             Assert.IsNotNull(result.TransactionIds);
@@ -86,12 +86,12 @@ namespace ArkNetTest.Tests
 		[TestMethod]
 		public void MultiplePostTransactionSuccessTest()
 		{
-			var tx = TransactionApi.CreateTransaction(_address,
+			var tx = ArkNetApi.TransactionApi.CreateTransaction(_address,
 				1,
 				"This is first Multi transaction from ARK-NET",
                 _passPhrase);
 
-			var res = TransactionService.MultipleBroadCast(tx);
+			var res = ArkNetApi.TransactionService.MultipleBroadCast(tx);
 
 			Assert.IsTrue(res.Where(x => x.Success).Count() > 0);
 		}
@@ -99,12 +99,12 @@ namespace ArkNetTest.Tests
         [TestMethod]
         public async Task MultiplePostTransactionAsyncSuccessTest()
         {
-            var tx = TransactionApi.CreateTransaction(_address,
+            var tx = ArkNetApi.TransactionApi.CreateTransaction(_address,
                 1,
                 "This is first Multi transaction from ARK-NET",
                 _passPhrase);
 
-            var res = await TransactionService.MultipleBroadCastAsync(tx);
+            var res = await ArkNetApi.TransactionService.MultipleBroadCastAsync(tx);
 
             Assert.IsTrue(res.Where(x => x.Success).Count() > 0);
         }

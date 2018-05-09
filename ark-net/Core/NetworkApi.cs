@@ -32,20 +32,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ArkNet.Service;
+using ArkNet.Utils;
 
 namespace ArkNet.Core
 {
     /// <summary>
     /// The network api for managing peers.
     /// </summary>
-    public sealed class NetworkApi
+    public class NetworkApi
     {
+        private ArkNetApi _arkNetApi;
+        public NetworkApi(ArkNetApi arkNetApi)
+        {
+            _arkNetApi = arkNetApi;
+        }
+
         #region Fields
 
         /// <summary>
-        /// Load the Network API on-need.
+        /// Store the network settings.
         /// </summary>
-        private static readonly Lazy<NetworkApi> lazy = new Lazy<NetworkApi>(() => new NetworkApi());
+        public ArkNetworkSettings NetworkSettings;
 
         /// <summary>
         /// Random function initialization.
@@ -66,16 +73,6 @@ namespace ArkNet.Core
             _peers = new List<PeerApi>();
         }
 
-        /// <summary>
-        /// Initialize an instance of the <see cref="NetworkApi" />
-        /// </summary>
-        public static NetworkApi Instance => lazy.Value;
-   
-        public string Nethash { get; set; } = ArkNetApi.Instance.NetworkSettings.NetHash; 
-        public int Port { get; set; } = ArkNetApi.Instance.NetworkSettings.Port;
-        public byte Prefix { get; set; } = ArkNetApi.Instance.NetworkSettings.BytePrefix;
-        public string Version { get; set; } = ArkNetApi.Instance.NetworkSettings.Version;
-        public int BroadcastMax { get; set; } = ArkNetApi.Instance.NetworkSettings.MaxNumOfBroadcasts;
         public PeerApi ActivePeer { get; set; }
 
         #endregion
@@ -124,13 +121,13 @@ namespace ArkNet.Core
         /// 
         private async Task SetPeerList()
         {
-            var peers = await PeerService.GetAllAsync().ConfigureAwait(false);
+            var peers = await _arkNetApi.PeerService.GetAllAsync().ConfigureAwait(false);
             var peersOrderByHeight = peers.Peers
-                .Where(x => x.Status.Equals("OK") && x.Version == ArkNetApi.Instance.NetworkSettings.Version)
+                .Where(x => x.Status.Equals("OK") && x.Version == NetworkSettings.Version)
                 .OrderByDescending(x => x.Height)
                 .ToList();
 
-            var heightToCompare = peersOrderByHeight.FirstOrDefault().Height - ArkNetApi.Instance.NetworkSettings.PeerCleaningHeightThreshold;
+            var heightToCompare = peersOrderByHeight.FirstOrDefault().Height - NetworkSettings.PeerCleaningHeightThreshold;
 
             var peerURLs = peersOrderByHeight.Where(x => x.Height >= heightToCompare)
                 .Select(x => new { Ip = x.Ip, Port = x.Port })
@@ -139,11 +136,11 @@ namespace ArkNet.Core
             var tmpPeerList = new List<PeerApi>();
             foreach (var peerURL in peerURLs)
             {
-                tmpPeerList.Add(new PeerApi(peerURL.Ip, peerURL.Port));
+                tmpPeerList.Add(new PeerApi(this, peerURL.Ip, peerURL.Port));
             }
 
-            if (!tmpPeerList.Any(x => x.Ip == NetworkApi.Instance.ActivePeer.Ip))
-                tmpPeerList.Add(NetworkApi.Instance.ActivePeer);
+            if (!tmpPeerList.Any(x => x.Ip == ActivePeer.Ip))
+                tmpPeerList.Add(ActivePeer);
 
             _peers = tmpPeerList;
         }
@@ -157,7 +154,7 @@ namespace ArkNet.Core
             {
                 while (true)
                 {
-                    await Task.Delay(TimeSpan.FromMinutes(ArkNetApi.Instance.NetworkSettings.PeerCleaningIntervalInMinutes));
+                    await Task.Delay(TimeSpan.FromMinutes(NetworkSettings.PeerCleaningIntervalInMinutes));
                     try
                     {
                         await SetPeerList();

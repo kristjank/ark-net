@@ -33,6 +33,7 @@ using System.Threading.Tasks;
 using ArkNet.Core;
 using ArkNet.Model.Loader;
 using ArkNet.Model.Peer;
+using ArkNet.Service;
 using ArkNet.Utils;
 using ArkNet.Utils.Enum;
 using Newtonsoft.Json;
@@ -85,29 +86,70 @@ namespace ArkNet
             Tuple.Create("167.114.29.44", 4002)
             };
 
-        /// <summary>
-        /// Lazy Load of the API, calls to <inheritdoc cref="Instance"/>
-        /// </summary>
-        private static readonly Lazy<ArkNetApi> _lazy = new Lazy<ArkNetApi>(() => new ArkNetApi());
-
-        /// <summary>
-        /// Instanciate the API
-        /// Called through <inheritdoc cref="_lazy"/> to allow lazy load of the API.
-        /// </summary>
-        public static ArkNetApi Instance => _lazy.Value;
-
-
-        /// <summary>
-        /// Store the network settings.
-        /// </summary>
-        public ArkNetworkSettings NetworkSettings;
-
-        /// <summary>
-        /// Prevents a default instance of the <see cref="ArkNetApi"/> class from being created.
-        /// </summary>
-        private ArkNetApi()
+        private NetworkApi _networkApi;
+        public NetworkApi NetworkApi
         {
-            
+            get { return _networkApi ?? (_networkApi = new NetworkApi(this)); }
+        }
+
+        private TransactionApi _transactionApi;
+        public TransactionApi TransactionApi
+        {
+            get { return _transactionApi ?? (_transactionApi = new TransactionApi(NetworkApi)); }
+        }
+
+        private AccountService _accountService;
+        public AccountService AccountService
+        {
+            get
+            {
+                return _accountService ?? (_accountService = new AccountService(NetworkApi));
+            }
+        }
+
+        private BlockService _blockService;
+        public BlockService BlockService
+        {
+            get
+            {
+                return _blockService ?? (_blockService = new BlockService(NetworkApi));
+            }
+        }
+
+        private DelegateService _delegateService;
+        public DelegateService DelegateService
+        {
+            get
+            {
+                return _delegateService ?? (_delegateService = new DelegateService(NetworkApi));
+            }
+        }
+
+        private LoaderService _loaderService;
+        public LoaderService LoaderService
+        {
+            get
+            {
+                return _loaderService ?? (_loaderService = new LoaderService(NetworkApi));
+            }
+        }
+
+        private PeerService _peerService;
+        public PeerService PeerService
+        {
+            get
+            {
+                return _peerService ?? (_peerService = new PeerService(NetworkApi));
+            }
+        }
+
+        private TransactionService _transactionService;
+        public TransactionService TransactionService
+        {
+            get
+            {
+                return _transactionService ?? (_transactionService = new TransactionService(NetworkApi));
+            }
         }
 
         /// <summary>
@@ -146,7 +188,7 @@ namespace ArkNet
         /// <returns> The <inheritdoc cref="Task"/> switches the network.</returns>
         public async Task SwitchNetwork(NetworkType type)
         {
-            NetworkSettings = null;
+            NetworkApi.NetworkSettings = null;
             await SetNetworkSettings(await GetInitialPeer(type).ConfigureAwait(false)).ConfigureAwait(false);
         }
 
@@ -158,7 +200,7 @@ namespace ArkNet
         /// <returns> The <inheritdoc cref="Task"/> switches the network.</returns>
         public async Task SwitchNetwork(string peerId, int peerPort)
         {
-            NetworkSettings = null;
+            NetworkApi.NetworkSettings = null;
             await SetNetworkSettings(GetInitialPeer(peerId, peerPort)).ConfigureAwait(false);
         }
 
@@ -181,7 +223,7 @@ namespace ArkNet
             var peer = JsonConvert.DeserializeObject<ArkPeerResponse>(responsePeer);
 
             // Fill the NetworkSettings with what has been fetched / auto-configured previously.
-            NetworkSettings = new ArkNetworkSettings()
+            NetworkApi.NetworkSettings = new ArkNetworkSettings()
             {
                 Port = initialPeer.Port,
                 BytePrefix = (byte)autoConfig.Network.Version,
@@ -190,7 +232,7 @@ namespace ArkNet
                 Fee = fees
             };
 
-            await NetworkApi.Instance.WarmUp(new PeerApi(initialPeer.Ip, initialPeer.Port)).ConfigureAwait(false);
+            await NetworkApi.WarmUp(new PeerApi(NetworkApi, initialPeer.Ip, initialPeer.Port)).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -201,7 +243,7 @@ namespace ArkNet
         /// <returns>Return the first peer found at the IP/Port given.</returns>
         private PeerApi GetInitialPeer(string initialPeerIp, int initialPeerPort)
         {
-            return new PeerApi(initialPeerIp, initialPeerPort);
+            return new PeerApi(NetworkApi, initialPeerIp, initialPeerPort);
         }
 
         /// <summary>
@@ -224,7 +266,7 @@ namespace ArkNet
                 peerUrl = _peerSeedListDevNet[new Random().Next(_peerSeedListDevNet.Count)];
 
             // create a peer out of peerurl, and returns if the peer is online. //
-            var peer = new PeerApi(peerUrl.Item1, peerUrl.Item2);
+            var peer = new PeerApi(NetworkApi, peerUrl.Item1, peerUrl.Item2);
             if (await peer.IsOnline().ConfigureAwait(false))
             {
                 return peer;

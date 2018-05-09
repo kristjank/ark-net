@@ -43,6 +43,7 @@ namespace ArkNet.Core
     /// </summary>
     public  class TransactionApi
 	{
+        private NetworkApi _networkApi;
         #region Read Only
 
         /// <summary>
@@ -59,9 +60,10 @@ namespace ArkNet.Core
         /// Instantiates a new instance of the <see cref="TransactionApi"/> type.
         /// </summary>
         /// 
-        private TransactionApi()
+        public TransactionApi(NetworkApi networkApi)
 		{
-		}
+            _networkApi = networkApi;
+        }
 
         /// <summary>
         /// Instantiates a new instance of the <see cref="TransactionApi"/> type.
@@ -361,9 +363,9 @@ namespace ArkNet.Core
         /// 
         /// <returns>Returns an instance of the <see cref="TransactionApi"/> type.</returns>
         /// 
-		public static TransactionApi FromJson(string json)
+		public TransactionApi FromJson(NetworkApi networkApi, string json)
 		{
-			var tx = new TransactionApi();
+			var tx = new TransactionApi(networkApi);
 			tx = JsonConvert.DeserializeObject<TransactionApi>(json);
 			return tx;
 		}
@@ -384,10 +386,10 @@ namespace ArkNet.Core
         /// 
         /// <returns>Returns an instance of the <see cref="TransactionApi"/> type.</returns>
         /// 
-		public static TransactionApi CreateTransaction(string recipientId, long satoshiAmount, string vendorField,
+		public TransactionApi CreateTransaction(string recipientId, long satoshiAmount, string vendorField,
 			string passphrase, string secondPassphrase = null)
 		{
-			var tx = new TransactionApi(0, recipientId, satoshiAmount, ArkNetApi.Instance.NetworkSettings.Fee.Send, vendorField);
+			var tx = new TransactionApi(0, recipientId, satoshiAmount, _networkApi.NetworkSettings.Fee.Send, vendorField);
 			tx.Timestamp = Slot.GetTime();
 			tx.Sign(passphrase);
 			tx.StrBytes = Encoders.Hex.EncodeData(tx.ToBytes());
@@ -410,12 +412,12 @@ namespace ArkNet.Core
         /// 
         /// <returns>Returns an instance of the <see cref="TransactionApi"/> type.</returns>
         /// 
-		public static TransactionApi CreateVote(List<string> votes, string passphrase, string secondPassphrase = null)
+		public TransactionApi CreateVote(List<string> votes, string passphrase, string secondPassphrase = null)
 		{
-            var tx = new TransactionApi(3, 0, ArkNetApi.Instance.NetworkSettings.Fee.Vote);
+            var tx = new TransactionApi(3, 0, _networkApi.NetworkSettings.Fee.Vote);
 			tx.asset.Add("votes", votes);
 			tx.Timestamp = Slot.GetTime();
-		    tx.RecipientId = Crypto.GetAddress(Crypto.GetKeys(passphrase), ArkNetApi.Instance.NetworkSettings.BytePrefix);
+		    tx.RecipientId = Crypto.GetAddress(Crypto.GetKeys(passphrase), _networkApi.NetworkSettings.BytePrefix);
 			tx.Sign(passphrase);
 		    tx.StrBytes = Encoders.Hex.EncodeData(tx.ToBytes());
             if (secondPassphrase != null)
@@ -438,9 +440,9 @@ namespace ArkNet.Core
         /// 
         /// <returns>Returns an instance of the <see cref="TransactionApi"/> type.</returns>
         /// 
-		public static TransactionApi CreateDelegate(string username, string passphrase, string secondPassphrase = null)
+		public TransactionApi CreateDelegate(string username, string passphrase, string secondPassphrase = null)
 		{
-			var tx = new TransactionApi(2, 0, ArkNetApi.Instance.NetworkSettings.Fee.Delegate);
+			var tx = new TransactionApi(2, 0, _networkApi.NetworkSettings.Fee.Delegate);
 			tx.asset.Add("username", username);
 			tx.Timestamp = Slot.GetTime();
 			tx.Sign(passphrase);
@@ -461,9 +463,9 @@ namespace ArkNet.Core
         /// 
         /// <returns>Returns a signed instance of a <see cref="TransactionApi"/> type.</returns>
         /// 
-		public static TransactionApi createSecondSignature(string secondPassphrase, string passphrase)
+		public TransactionApi createSecondSignature(string secondPassphrase, string passphrase)
 		{
-		    var tx = new TransactionApi(1, 0, ArkNetApi.Instance.NetworkSettings.Fee.SecondSignature)
+		    var tx = new TransactionApi(1, 0, _networkApi.NetworkSettings.Fee.SecondSignature)
 		    {
 		        Signature = Encoders.Hex.EncodeData(Crypto.GetKeys(secondPassphrase).PubKey.ToBytes()),
 		        Timestamp = Slot.GetTime()

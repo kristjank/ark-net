@@ -22,7 +22,7 @@ namespace ArkNet.Service.Transaction.Tests
         [TestMethod()]
         public async Task GetAllAsyncTest()
         {
-            var trans = await TransactionService.GetAllAsync();
+            var trans = await ArkNetApi.TransactionService.GetAllAsync();
 
             GetAllResultTest(trans);
         }
@@ -30,7 +30,7 @@ namespace ArkNet.Service.Transaction.Tests
         [TestMethod()]
         public async Task GetGetTransactionsAsyncTest()
         {
-            var trans = await TransactionService.GetTransactionsAsync(new ArkTransactionRequest { BlockId = base._blockId });
+            var trans = await ArkNetApi.TransactionService.GetTransactionsAsync(new ArkTransactionRequest { BlockId = base._blockId });
 
             GetTransactionsResultTest(trans);
         }
@@ -38,11 +38,11 @@ namespace ArkNet.Service.Transaction.Tests
         [TestMethod()]
         public async Task GetByIdAsyncTest()
         {
-            var transactions = await TransactionService.GetAllAsync();
+            var transactions = await ArkNetApi.TransactionService.GetAllAsync();
             var transaction = transactions.Transactions.FirstOrDefault();
             Assert.IsNotNull(transaction);
 
-            var trans1 = TransactionService.GetById(transaction.Id);
+            var trans1 = ArkNetApi.TransactionService.GetById(transaction.Id);
 
             GetByIdResultTest(trans1);
         }
@@ -50,7 +50,7 @@ namespace ArkNet.Service.Transaction.Tests
         [TestMethod()]
         public async Task GetByIdErrorAsyncTest()
         {
-            var trans = await TransactionService.GetByIdAsync("ErrorId");
+            var trans = await ArkNetApi.TransactionService.GetByIdAsync("ErrorId");
 
             GetByIdErrorResultTest(trans);
         }
@@ -58,12 +58,12 @@ namespace ArkNet.Service.Transaction.Tests
         [TestMethod()]
         public async Task GetUnConfirmedByIdAsyncTest()
         {
-            var trans = await TransactionService.GetUnconfirmedAllAsync();
+            var trans = await ArkNetApi.TransactionService.GetUnconfirmedAllAsync();
             Assert.IsNotNull(trans);
 
             if (trans.Transactions.Any())
             {
-                var trans1 = await TransactionService.GetUnConfirmedByIdAsync(trans.Transactions.FirstOrDefault().Id);
+                var trans1 = await ArkNetApi.TransactionService.GetUnConfirmedByIdAsync(trans.Transactions.FirstOrDefault().Id);
                 GetUnConfirmedByIdResultTest(trans1);
             }
         }
@@ -71,7 +71,7 @@ namespace ArkNet.Service.Transaction.Tests
         [TestMethod()]
         public async Task GetUnConfirmedByIdErrorAsyncTest()
         {
-            var trans = await TransactionService.GetUnConfirmedByIdAsync("ErrorId");
+            var trans = await ArkNetApi.TransactionService.GetUnConfirmedByIdAsync("ErrorId");
 
             GetUnConfirmedByIdErrorResultTest(trans);
         }
@@ -79,7 +79,7 @@ namespace ArkNet.Service.Transaction.Tests
         [TestMethod()]
         public async Task GetUnconfirmedAllAsyncTest()
         {
-            var trans = await TransactionService.GetUnconfirmedAllAsync();
+            var trans = await ArkNetApi.TransactionService.GetUnconfirmedAllAsync();
 
             GetUnconfirmedAllResultTest(trans);
         }
@@ -87,7 +87,7 @@ namespace ArkNet.Service.Transaction.Tests
         [TestMethod()]
         public async Task GetUnconfirmedTransactionsAsyncTest()
         {
-            var trans = await TransactionService.GetUnconfirmedTransactionsAsync(new ArkUnconfirmedTransactionRequest());
+            var trans = await ArkNetApi.TransactionService.GetUnconfirmedTransactionsAsync(new ArkUnconfirmedTransactionRequest());
 
             GetUnconfirmedAllResultTest(trans);
         }

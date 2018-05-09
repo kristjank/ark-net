@@ -22,7 +22,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetAllTest()
         {
-            var delegates = DelegateService.GetAll();
+            var delegates = ArkNetApi.DelegateService.GetAll();
 
             GetAllResultTest(delegates);
         }
@@ -30,7 +30,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetDelegatesTest()
         {
-            var delegates = DelegateService.GetDelegates(new ArkBaseRequest { OrderBy = "vote" });
+            var delegates = ArkNetApi.DelegateService.GetDelegates(new ArkBaseRequest { OrderBy = "vote" });
 
             GetAllResultTest(delegates);
         }
@@ -38,7 +38,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetByUsernameTest()
         {
-            var dele = DelegateService.GetByUsername(_userName);
+            var dele = ArkNetApi.DelegateService.GetByUsername(_userName);
 
             GetByUsernameResultTest(dele);
         }
@@ -46,7 +46,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetByUsernameErrorTest()
         {
-            var dele = DelegateService.GetByUsername("NonExistingPool");
+            var dele = ArkNetApi.DelegateService.GetByUsername("NonExistingPool");
 
             GetByUsernameErrorResultTest(dele);
         }
@@ -54,7 +54,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetByPubKeyTest()
         {
-            var dele2 = DelegateService.GetByPubKey(_pubKey);
+            var dele2 = ArkNetApi.DelegateService.GetByPubKey(_pubKey);
 
             GetByPubKeyResultTest(dele2);
         }
@@ -62,7 +62,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetByPubKeyErrorTest()
         {
-            var dele = DelegateService.GetByPubKey("ErrorKey");
+            var dele = ArkNetApi.DelegateService.GetByPubKey("ErrorKey");
 
             GetByPubKeyErrorResultTest(dele);
         }
@@ -70,7 +70,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetVotersTest()
         {
-            var dele = DelegateService.GetVoters(_pubKey);
+            var dele = ArkNetApi.DelegateService.GetVoters(_pubKey);
 
             GetVotersResultTest(dele);
         }
@@ -78,7 +78,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetVotersErrorTest()
         {
-            var dele = DelegateService.GetVoters("ErrorKey");
+            var dele = ArkNetApi.DelegateService.GetVoters("ErrorKey");
 
             GetVotersErrorResultTest(dele);
         }
@@ -86,7 +86,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetFeeTest()
         {
-            var fee = DelegateService.GetFee();
+            var fee = ArkNetApi.DelegateService.GetFee();
 
             GetFeeResultTest(fee);
         }
@@ -94,7 +94,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetForgedByAccountTest()
         {
-            var forgedByAccount = DelegateService.GetForgedByAccount(_pubKey);
+            var forgedByAccount = ArkNetApi.DelegateService.GetForgedByAccount(_pubKey);
 
             GetForgedByAccountResultTest(forgedByAccount);
         }
@@ -102,7 +102,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetForgedByAccountErrorTest()
         {
-            var forgedByAccount = DelegateService.GetForgedByAccount("ErrorKey");
+            var forgedByAccount = ArkNetApi.DelegateService.GetForgedByAccount("ErrorKey");
 
             GetForgedByAccountErrorResultTest(forgedByAccount);
         }
@@ -110,7 +110,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetNextForgersTest()
         {
-            var nextForgers = DelegateService.GetNextForgers();
+            var nextForgers = ArkNetApi.DelegateService.GetNextForgers();
 
             GetNextForgersResultTest(nextForgers);
         }
@@ -118,7 +118,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetTotalVoteArkTest()
         {
-            var totalVoteArk = DelegateService.GetTotalVoteArk(_pubKey);
+            var totalVoteArk = ArkNetApi.DelegateService.GetTotalVoteArk(_pubKey);
 
             GetTotalVoteArkResultTest(totalVoteArk);
         }
@@ -126,7 +126,7 @@ namespace ArkNet.Service.Delegate.Tests
         [TestMethod()]
         public void GetTotalVoteArkErrorTest()
         {
-            var totalVoteArk = DelegateService.GetTotalVoteArk("ErrorKey");
+            var totalVoteArk = ArkNetApi.DelegateService.GetTotalVoteArk("ErrorKey");
 
             GetTotalVoteArkErrorResultTest(totalVoteArk);
         }
