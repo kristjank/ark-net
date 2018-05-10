@@ -56,12 +56,33 @@ namespace ArkNet
             Tuple.Create("5.39.9.242", 4001),
             Tuple.Create("5.39.9.243", 4001),
             Tuple.Create("5.39.9.244", 4001),
+            Tuple.Create("5.39.9.245", 4001),
+            Tuple.Create("5.39.9.246", 4001),
+            Tuple.Create("5.39.9.247", 4001),
+            Tuple.Create("5.39.9.248", 4001),
+            Tuple.Create("5.39.9.249", 4001),
             Tuple.Create("5.39.9.250", 4001),
             Tuple.Create("5.39.9.251", 4001),
             Tuple.Create("5.39.9.252", 4001),
             Tuple.Create("5.39.9.253", 4001),
             Tuple.Create("5.39.9.254", 4001),
-            Tuple.Create("5.39.9.255", 4001)
+            Tuple.Create("5.39.9.255", 4001),
+            Tuple.Create("54.38.48.160", 4001),
+            Tuple.Create("54.38.48.161", 4001),
+            Tuple.Create("54.38.48.162", 4001),
+            Tuple.Create("54.38.48.163", 4001),
+            Tuple.Create("54.38.48.164", 4001),
+            Tuple.Create("54.38.48.165", 4001),
+            Tuple.Create("54.38.48.166", 4001),
+            Tuple.Create("54.38.48.167", 4001),
+            Tuple.Create("54.38.48.168", 4001),
+            Tuple.Create("54.38.48.169", 4001),
+            Tuple.Create("54.38.48.170", 4001),
+            Tuple.Create("54.38.48.171", 4001),
+            Tuple.Create("54.38.48.172", 4001),
+            Tuple.Create("54.38.48.173", 4001),
+            Tuple.Create("54.38.48.174", 4001),
+            Tuple.Create("54.38.48.175", 4001)
             };
 
         /// <summary>
@@ -69,21 +90,11 @@ namespace ArkNet
         /// </summary>
         private List<Tuple<string, int>> _peerSeedListDevNet =
             new List<Tuple<string, int>> {
-            Tuple.Create("167.114.43.48", 4002),
-            Tuple.Create("167.114.29.49", 4002),
-            Tuple.Create("167.114.43.43", 4002),
-            Tuple.Create("167.114.29.54", 4002),
-            Tuple.Create("167.114.29.45", 4002),
-            Tuple.Create("167.114.29.40", 4002),
-            Tuple.Create("167.114.29.56", 4002),
-            Tuple.Create("167.114.43.35", 4002),
-            Tuple.Create("167.114.29.51", 4002),
-            Tuple.Create("167.114.29.59", 4002),
-            Tuple.Create("167.114.43.42", 4002),
-            Tuple.Create("167.114.29.34", 4002),
-            Tuple.Create("167.114.29.62", 4002),
-            Tuple.Create("167.114.43.49", 4002),
-            Tuple.Create("167.114.29.44", 4002)
+            Tuple.Create("167.114.29.32", 4002),
+            Tuple.Create("167.114.29.33", 4002),
+            Tuple.Create("167.114.43.34", 4002),
+            Tuple.Create("167.114.29.35", 4002),
+            Tuple.Create("167.114.29.36", 4002)
             };
 
         private NetworkApi _networkApi;
