@@ -51,6 +51,10 @@ namespace ArkNetTest.Tests
         public void Log()
         {
             ArkNetApi.LoggingApi.Debug("Test Log");
+            ArkNetApi.LoggingApi.Info("Test Log");
+            ArkNetApi.LoggingApi.Warn("Test Log");
+            ArkNetApi.LoggingApi.Error("Test Log");
+            ArkNetApi.LoggingApi.Fatal("Test Log");
         }
     }
 }
