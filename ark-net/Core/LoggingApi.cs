@@ -13,22 +13,64 @@ namespace ArkNet.Core
             _logger = logger;
         }
 
-        public void Log(ArkLogLevel logLevel, string message)
+        public void Debug(string message)
         {
             if (_logger != null)
-                _logger.Log(new ArkLogEntry(logLevel, message));
+                _logger.Log(ArkLogLevel.Debug, message);
         }
 
-        public void Log(ArkLogLevel logLevel, Exception exception)
+        public void Debug(string message, Exception exception)
         {
             if (_logger != null)
-                _logger.Log(new ArkLogEntry(logLevel, exception.Message, exception));
+                _logger.Log(ArkLogLevel.Debug, message, exception);
         }
 
-        public void Log(ArkLogLevel logLevel, string message, Exception exception)
+        public void Error(string message)
         {
             if (_logger != null)
-                _logger.Log(new ArkLogEntry(logLevel, message, exception));
+                _logger.Log(ArkLogLevel.Error, message);
+        }
+
+        public void Error(string message, Exception exception)
+        {
+            if (_logger != null)
+                _logger.Log(ArkLogLevel.Error, message, exception);
+        }
+
+        public void Fatal(string message)
+        {
+            if (_logger != null)
+                _logger.Log(ArkLogLevel.Fatal, message);
+        }
+
+        public void Fatal(string message, Exception exception)
+        {
+            if (_logger != null)
+                _logger.Log(ArkLogLevel.Fatal, message, exception);
+        }
+
+        public void Info(string message)
+        {
+            if (_logger != null)
+                _logger.Log(ArkLogLevel.Info, message);
+        }
+
+        public void Info(string message, Exception exception)
+        {
+            if (_logger != null)
+                _logger.Log(ArkLogLevel.Info, message, exception);
+        }
+
+        public void Warn(string message)
+        {
+            if (_logger != null)
+                _logger.Log(ArkLogLevel.Warn, message);
+        }
+
+        public void Warn(string message, Exception exception)
+        {
+            if (_logger != null)
+                _logger.Log(ArkLogLevel.Warn, message, exception);
         }
     }
 }

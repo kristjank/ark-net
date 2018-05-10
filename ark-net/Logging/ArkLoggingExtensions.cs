@@ -6,19 +6,19 @@ namespace ArkNet.Logging
 {
     public static class ArkLoggingExtensions
     {
-        public static void Log(this IArkLogger logger, string message)
+        public static void Log(this IArkLogger logger, ArkLogLevel level, string message)
         {
-            logger.Log(new ArkLogEntry(ArkLogLevel.Info, message));
+            logger.Log(new ArkLogEntry(level, message));
         }
 
-        public static void Log(this IArkLogger logger, Exception exception)
+        public static void Log(this IArkLogger logger, ArkLogLevel level, Exception exception)
         {
-            logger.Log(new ArkLogEntry(ArkLogLevel.Error, exception.Message, exception));
+            logger.Log(new ArkLogEntry(level, exception.Message, exception));
         }
 
-        public static void Log(this IArkLogger logger, string message, Exception exception)
+        public static void Log(this IArkLogger logger, ArkLogLevel level, string message, Exception exception)
         {
-            logger.Log(new ArkLogEntry(ArkLogLevel.Error, message, exception));
+            logger.Log(new ArkLogEntry(level, message, exception));
         }
     }
 }

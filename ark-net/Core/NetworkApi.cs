@@ -162,7 +162,7 @@ namespace ArkNet.Core
                     }
                     catch (Exception ex)
                     {
-                        _arkNetApi.LoggingApi.Log(ArkLogLevel.Error, ex);
+                        _arkNetApi.LoggingApi.Error("Error setting peer seed list.", ex);
                     }
                 }
             });

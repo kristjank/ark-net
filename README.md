@@ -56,7 +56,7 @@ var accCtnrl = new AccountController(ArkNetApi, "top secret pass");
 var result = accCtnrl.SendArk(100, "AUgTuukcKeE4XFdzaK6rEHMD5FLmVBSmHk", "Akr.Net test trans from Account");
 
 //Vote 4 Delegate                
-var result = accCtnrl.VoteForDelegate( votes, "top secret pass");
+var result = accCtnrl.VoteForDelegate( votes);
 
 //Create and send transaction.  Transaction can be saved offine (.ToJson()) and sent later.              
 var transaction = accCtnrl.CreateTransaction(100, "AUgTuukcKeE4XFdzaK6rEHMD5FLmVBSmHk", "Akr.Net test trans from Account");
@@ -109,6 +109,36 @@ await ArkNetApi.SwitchNetwork(NetworkType.DevNet)
 //New network
 _arkNetApiDevNet = new ArkNetApi();
 await _arkNetApiDevNet.Start(NetworkType.DevNet);      
+```
+### Logging 
+Any logging framework can be used to capture the logs from within ArkNet.  It is up to the user of the libary to implement IArkLogger and pass it to ArkNetApi.Start().  Below is an example implementation using Log4Net.
+```c#
+public class Log4netAdapter : IArkLogger
+{
+    private readonly ILog _log4NetLog;
+
+    public Log4netAdapter(ILog log4NetLog)
+    {
+        _log4NetLog = log4NetLog;
+    }
+
+    public void Log(ArkLogEntry entry)
+    {
+        if (entry.LogLevel == ArkLogLevel.Debug)
+            _log4NetLog.Debug(entry.Message, entry.Exception);
+        else if (entry.LogLevel == ArkLogLevel.Info)
+            _log4NetLog.Info(entry.Message, entry.Exception);
+        else if (entry.LogLevel == ArkLogLevel.Warn)
+            _log4NetLog.Warn(entry.Message, entry.Exception);
+        else if (entry.LogLevel == ArkLogLevel.Error)
+            _log4NetLog.Error(entry.Message, entry.Exception);
+        else
+            _log4NetLog.Fatal(entry.Message, entry.Exception);
+    }
+}
+
+ILog log = LogManager.GetLogger(typeof(LoggingTests));
+await ArkNetApi.Start(NetworkType.MainNet, new Log4netAdapter(log);
 ```
 
 ## More information about ARK Ecosystem and etc
