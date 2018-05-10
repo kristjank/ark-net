@@ -8,7 +8,7 @@ Ark.NET is the ARK Ecosystem library for the .NET platform. It implements all mo
 
 The package supports:
 * With full features, Windows Desktop applications, Mono Desktop applications, and platform supported at [.NET Standard Library](https://docs.microsoft.com/en-us/dotnet/articles/standard/library). Works on all .NET solutions with framework >= 4.7.1 & Net Standard 2.0.
-* Async/Await with coresponding synchronous methods.
+* Async/Await with corresponding synchronous methods.
 
 [![Source Browser](https://img.shields.io/badge/Browse-Source-green.svg)](http://sourcebrowser.io/Browse/kristjank)
 
@@ -28,7 +28,7 @@ cd ark-net
 ```
 # How to get started? 
 
-All ark-node service reponses have object representations. You can use service classes under [service folder](https://github.com/ArkEcosystem/ark-net/tree/master/ark-net/Service). Responses are IEnumerable for a list or an object for a single item.  Every method has a cooresponding async method.
+All ark-node service responses have object representations. You can use service classes under [service folder](https://github.com/ArkEcosystem/ark-net/tree/master/ark-net/Service). Responses are IEnumerable for a list or an object for a single item.  Every method has a corresponding async method.
 
 It's best to let the code do the speaking. For more examples look at the [ARK.NET Tests](https://github.com/ArkEcosystem/ark-net/tree/master/ark-netTests), where all tests are written and you can see the api usage. Some code snippets are below.
 
@@ -65,7 +65,7 @@ var result = accCtnrl.SendTransaction(transaction);
 //Get Account
 var account = accCtnrl.GetArkAccount();
 
-//New acount
+//New Account
 new AccountController(ArkNetApi, ArkNetApi.AccountService.GeneratePassphrase());
 ```
 
@@ -111,7 +111,7 @@ _arkNetApiDevNet = new ArkNetApi();
 await _arkNetApiDevNet.Start(NetworkType.DevNet);      
 ```
 ### Logging 
-Any logging framework can be used to capture the logs from within ArkNet.  It is up to the user of the libary to implement IArkLogger and pass it to ArkNetApi.Start().  Below is an example implementation using Log4Net.
+Any logging framework can be used to capture the logs from within ArkNet.  It is up to the user of the library to implement IArkLogger and pass it to ArkNetApi.Start().  Below is an example implementation using Log4Net.
 ```c#
 public class Log4netAdapter : IArkLogger
 {
