@@ -40,12 +40,11 @@ namespace ArkNet.Service
     /// Provides functionality for requesting account information from a peer.
     /// </summary>
     /// 
-    public class AccountService
+    public class AccountService : BaseService
     {
-        private NetworkApi _networkApi;
-        public AccountService(NetworkApi networkApi)
+        public AccountService(NetworkApi networkApi, LoggingApi logger)
+            :base(networkApi, logger)
         {
-            _networkApi = networkApi;
         }
 
         #region Methods

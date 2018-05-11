@@ -31,6 +31,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ArkNet.Logging;
 using ArkNet.Service;
 using ArkNet.Utils;
 
@@ -159,7 +160,10 @@ namespace ArkNet.Core
                     {
                         await SetPeerList();
                     }
-                    catch { }
+                    catch (Exception ex)
+                    {
+                        _arkNetApi.LoggingApi.Error("Error setting peer seed list.", ex);
+                    }
                 }
             });
         }

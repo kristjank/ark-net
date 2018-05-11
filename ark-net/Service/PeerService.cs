@@ -36,12 +36,11 @@ namespace ArkNet.Service
     /// Provides functionality for requesting peer information.
     /// </summary>
     /// 
-    public class PeerService
+    public class PeerService : BaseService
     {
-        private NetworkApi _networkApi;
-        public PeerService(NetworkApi networkApi)
+        public PeerService(NetworkApi networkApi, LoggingApi logger)
+            : base(networkApi, logger)
         {
-            _networkApi = networkApi;
         }
 
         #region Methods

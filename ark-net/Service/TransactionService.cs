@@ -38,12 +38,11 @@ namespace ArkNet.Service
     /// Provides functionality for requesting transaction information and creating transactions.
     /// </summary>
     /// 
-    public class TransactionService
+    public class TransactionService : BaseService
     {
-        private NetworkApi _networkApi;
-        public TransactionService(NetworkApi networkApi)
+        public TransactionService(NetworkApi networkApi, LoggingApi logger)
+            : base(networkApi, logger)
         {
-            _networkApi = networkApi;
         }
 
         #region Methods

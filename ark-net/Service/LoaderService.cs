@@ -36,12 +36,11 @@ namespace ArkNet.Service
     /// Provides functionality for requesting loader information.
     /// </summary>
     /// 
-    public class LoaderService
+    public class LoaderService : BaseService
     {
-        private NetworkApi _networkApi;
-        public LoaderService(NetworkApi networkApi)
+        public LoaderService(NetworkApi networkApi, LoggingApi logger)
+            : base(networkApi, logger)
         {
-            _networkApi = networkApi;
         }
 
         #region Methods

@@ -31,6 +31,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ArkNet.Core;
+using ArkNet.Logging;
 using ArkNet.Model.Loader;
 using ArkNet.Model.Peer;
 using ArkNet.Service;
@@ -97,6 +98,14 @@ namespace ArkNet
             Tuple.Create("167.114.29.36", 4002)
             };
 
+        private IArkLogger _arkLogger { get; set; }
+
+        private LoggingApi _loggingApi;
+        public LoggingApi LoggingApi
+        {
+            get { return _loggingApi ?? (_loggingApi = new LoggingApi(_arkLogger)); }
+        }
+
         private NetworkApi _networkApi;
         public NetworkApi NetworkApi
         {
@@ -106,7 +115,7 @@ namespace ArkNet
         private TransactionApi _transactionApi;
         public TransactionApi TransactionApi
         {
-            get { return _transactionApi ?? (_transactionApi = new TransactionApi(NetworkApi)); }
+            get { return _transactionApi ?? (_transactionApi = new TransactionApi(NetworkApi, LoggingApi)); }
         }
 
         private AccountService _accountService;
@@ -114,7 +123,7 @@ namespace ArkNet
         {
             get
             {
-                return _accountService ?? (_accountService = new AccountService(NetworkApi));
+                return _accountService ?? (_accountService = new AccountService(NetworkApi, LoggingApi));
             }
         }
 
@@ -123,7 +132,7 @@ namespace ArkNet
         {
             get
             {
-                return _blockService ?? (_blockService = new BlockService(NetworkApi));
+                return _blockService ?? (_blockService = new BlockService(NetworkApi, LoggingApi));
             }
         }
 
@@ -132,7 +141,7 @@ namespace ArkNet
         {
             get
             {
-                return _delegateService ?? (_delegateService = new DelegateService(NetworkApi));
+                return _delegateService ?? (_delegateService = new DelegateService(NetworkApi, LoggingApi));
             }
         }
 
@@ -141,7 +150,7 @@ namespace ArkNet
         {
             get
             {
-                return _loaderService ?? (_loaderService = new LoaderService(NetworkApi));
+                return _loaderService ?? (_loaderService = new LoaderService(NetworkApi, LoggingApi));
             }
         }
 
@@ -150,7 +159,7 @@ namespace ArkNet
         {
             get
             {
-                return _peerService ?? (_peerService = new PeerService(NetworkApi));
+                return _peerService ?? (_peerService = new PeerService(NetworkApi, LoggingApi));
             }
         }
 
@@ -159,7 +168,7 @@ namespace ArkNet
         {
             get
             {
-                return _transactionService ?? (_transactionService = new TransactionService(NetworkApi));
+                return _transactionService ?? (_transactionService = new TransactionService(NetworkApi, LoggingApi));
             }
         }
 
@@ -172,8 +181,9 @@ namespace ArkNet
         /// -- MainNet (live, beware real money, financial loss possible there).
         /// </param>
         /// <returns> The <inheritdoc cref="Task"/> starts the node.</returns>
-        public async Task Start(NetworkType type)
+        public async Task Start(NetworkType type, IArkLogger logger = null)
         {
+            _arkLogger = logger;
             await SetNetworkSettings(await GetInitialPeer(type).ConfigureAwait(false)).ConfigureAwait(false);
         }
 
@@ -183,8 +193,9 @@ namespace ArkNet
         /// <param name="initialPeerIp"> The Initial peer's IP</param>
         /// <param name="initialPeerPort"> The Initial Peer's Port</param>
         /// <returns> The <inheritdoc cref="Task"/> starts the node.</returns>
-        public async Task Start(string initialPeerIp, int initialPeerPort)
+        public async Task Start(string initialPeerIp, int initialPeerPort, IArkLogger logger = null)
         {
+            _arkLogger = logger;
             await SetNetworkSettings(GetInitialPeer(initialPeerIp, initialPeerPort)).ConfigureAwait(false);
         }
 

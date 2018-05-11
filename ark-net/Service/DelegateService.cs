@@ -38,12 +38,11 @@ namespace ArkNet.Service
     /// <summary>
     /// Provides functionality for requesting delegate information.
     /// </summary>
-    public class DelegateService
+    public class DelegateService : BaseService
     {
-        private NetworkApi _networkApi;
-        public DelegateService(NetworkApi networkApi)
+        public DelegateService(NetworkApi networkApi, LoggingApi logger)
+            : base(networkApi, logger)
         {
-            _networkApi = networkApi;
         }
 
         #region Methods

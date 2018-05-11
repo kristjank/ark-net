@@ -44,6 +44,7 @@ namespace ArkNet.Core
     public  class TransactionApi
 	{
         private NetworkApi _networkApi;
+        private LoggingApi _logger;
         #region Read Only
 
         /// <summary>
@@ -60,7 +61,7 @@ namespace ArkNet.Core
         /// Instantiates a new instance of the <see cref="TransactionApi"/> type.
         /// </summary>
         /// 
-        public TransactionApi(NetworkApi networkApi)
+        public TransactionApi(NetworkApi networkApi, LoggingApi logger)
 		{
             _networkApi = networkApi;
         }
@@ -363,11 +364,12 @@ namespace ArkNet.Core
         /// 
         /// <returns>Returns an instance of the <see cref="TransactionApi"/> type.</returns>
         /// 
-		public TransactionApi FromJson(NetworkApi networkApi, string json)
+		public TransactionApi FromJson(string json)
 		{
-			var tx = new TransactionApi(networkApi);
-			tx = JsonConvert.DeserializeObject<TransactionApi>(json);
-			return tx;
+			var tx = JsonConvert.DeserializeObject<TransactionApi>(json);
+            tx._networkApi = _networkApi;
+            tx._logger = _logger;
+            return tx;
 		}
 
         /// <summary>

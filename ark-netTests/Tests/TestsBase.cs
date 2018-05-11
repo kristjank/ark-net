@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using ArkNet.Utils.Enum;
 using ArkNet.Model.Account;
 using ArkNet.Model.Delegate;
+using ArkNet.Logging;
 
 namespace ArkNet.Tests
 {
@@ -21,20 +22,20 @@ namespace ArkNet.Tests
             get { return _arkNetApi ?? (_arkNetApi = new ArkNetApi()); }
         }
 
-        public void Initialize()
+        public void Initialize(IArkLogger logger = null)
         {
             if (USE_DEV_NET)
-                ArkNetApi.Start(NetworkType.DevNet).Wait();
+                ArkNetApi.Start(NetworkType.DevNet, logger).Wait();
             else
-                ArkNetApi.Start(NetworkType.MainNet).Wait();
+                ArkNetApi.Start(NetworkType.MainNet, logger).Wait();
         }
 
-        public async Task InitializeAsync()
+        public async Task InitializeAsync(IArkLogger logger = null)
         {
             if (USE_DEV_NET)
-                await ArkNetApi.Start(NetworkType.DevNet);
+                await ArkNetApi.Start(NetworkType.DevNet, logger);
             else
-                await ArkNetApi.Start(NetworkType.MainNet);
+                await ArkNetApi.Start(NetworkType.MainNet, logger);
         }
     }
 }
