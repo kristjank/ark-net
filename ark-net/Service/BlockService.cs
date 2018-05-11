@@ -39,12 +39,11 @@ namespace ArkNet.Service
     /// Provies functionality for requesting block information.
     /// </summary>
     /// 
-    public class BlockService
+    public class BlockService : BaseService
     {
-        private NetworkApi _networkApi;
-        public BlockService(NetworkApi networkApi)
+        public BlockService(NetworkApi networkApi, LoggingApi logger)
+            : base(networkApi, logger)
         {
-            _networkApi = networkApi;
         }
 
         #region Methods

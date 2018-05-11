@@ -484,7 +484,7 @@ namespace ArkNet.Controller
         /// <returns>ArkTransactionPostResponse object</returns>
         public ArkTransactionPostResponse SendTransaction(string json)
         {
-            return _arkNetApi.TransactionService.PostTransaction(_arkNetApi.TransactionApi.FromJson(_arkNetApi.NetworkApi, json));
+            return _arkNetApi.TransactionService.PostTransaction(_arkNetApi.TransactionApi.FromJson(json));
         }
 
         /// <summary>
@@ -494,7 +494,7 @@ namespace ArkNet.Controller
         /// <returns>ArkTransactionPostResponse</returns>
         public async Task<ArkTransactionPostResponse> SendTransactionAsync(string json)
         {
-            return await _arkNetApi.TransactionService.PostTransactionAsync(_arkNetApi.TransactionApi.FromJson(_arkNetApi.NetworkApi, json)).ConfigureAwait(false);
+            return await _arkNetApi.TransactionService.PostTransactionAsync(_arkNetApi.TransactionApi.FromJson(json)).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -504,7 +504,7 @@ namespace ArkNet.Controller
         /// <returns>List of ArkTransactionPostResponse</returns>
         public List<ArkTransactionPostResponse> SendTransactionUsingMultiBroadCast(string json)
         {
-            return _arkNetApi.TransactionService.MultipleBroadCast(_arkNetApi.TransactionApi.FromJson(_arkNetApi.NetworkApi, json));
+            return _arkNetApi.TransactionService.MultipleBroadCast(_arkNetApi.TransactionApi.FromJson(json));
         }
 
         /// <summary>
@@ -514,7 +514,7 @@ namespace ArkNet.Controller
         /// <returns>List of ArkTransactionPostResponse</returns>
         public async Task<List<ArkTransactionPostResponse>> SendTransactionUsingMultiBroadCastAsync(string json)
         {
-            return await _arkNetApi.TransactionService.MultipleBroadCastAsync(_arkNetApi.TransactionApi.FromJson(_arkNetApi.NetworkApi, json)).ConfigureAwait(false);
+            return await _arkNetApi.TransactionService.MultipleBroadCastAsync(_arkNetApi.TransactionApi.FromJson(json)).ConfigureAwait(false);
         }
 
         #region V2 preparation
