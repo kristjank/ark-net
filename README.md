@@ -56,7 +56,10 @@ var accCtnrl = new AccountController(ArkNetApi, "top secret pass");
 var result = accCtnrl.SendArk(100, "AUgTuukcKeE4XFdzaK6rEHMD5FLmVBSmHk", "Akr.Net test trans from Account");
 
 //Vote 4 Delegate                
-var result = accCtnrl.VoteForDelegate( votes);
+var result = accCtnrl.VoteForDelegate(delegateName);
+
+//Un-Vote Delegate                
+var result = accCtnrl.UnVoteDelegate(delegateName);
 
 //Create and send transaction.  Transaction can be saved offine (.ToJson()) and sent later.              
 var transaction = accCtnrl.CreateTransaction(100, "AUgTuukcKeE4XFdzaK6rEHMD5FLmVBSmHk", "Akr.Net test trans from Account");
