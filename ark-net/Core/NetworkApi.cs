@@ -76,6 +76,24 @@ namespace ArkNet.Core
 
         public PeerApi ActivePeer { get; set; }
 
+        private PeerApi _forcedPeer;
+        /// <summary>
+        /// Will force all api calls to this peer
+        /// </summary>
+        public PeerApi ForcedPeer
+        {
+            get { return _forcedPeer; }
+            set
+            {
+                _forcedPeer = value;
+                //Will use forced peer until peer cleaning takes over.  Active peer should never be null
+                if (_forcedPeer != null)
+                {
+                    ActivePeer = _forcedPeer;
+                }
+            }
+        }
+
         #endregion
 
         /// <summary>
@@ -102,6 +120,8 @@ namespace ArkNet.Core
         /// 
         public PeerApi GetRandomPeer()
         {
+            if (ForcedPeer != null)
+                return ForcedPeer;
             return _peers[_random.Next(_peers.Count())];
         }
 
@@ -153,7 +173,7 @@ namespace ArkNet.Core
         {
             Task.Run(async () =>
             {
-                while (true)
+                while (ForcedPeer == null)
                 {
                     await Task.Delay(TimeSpan.FromMinutes(NetworkSettings.PeerCleaningIntervalInMinutes));
                     try
@@ -165,6 +185,7 @@ namespace ArkNet.Core
                         _arkNetApi.LoggingApi.Error("Error setting peer seed list.", ex);
                     }
                 }
+                await Task.Delay(TimeSpan.FromMinutes(NetworkSettings.PeerCleaningIntervalInMinutes));
             });
         }
     }
