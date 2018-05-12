@@ -77,17 +77,19 @@ namespace ArkNet.Controller.Tests
         [TestMethod()]
         public void VoteForDelegateTest()
         {
-            var dele = ArkNetApi.DelegateService.GetByUsername(_delegateName);
-
-            List<string> votes = new List<string>();
-            votes.Add("+" + dele.Delegate.PublicKey);
-
-            var a2 = JsonConvert.SerializeObject(votes);
-
             var accCtnrl = new AccountController(ArkNetApi, _passPhrase);
-            var result = accCtnrl.VoteForDelegate(votes);
+            var result = accCtnrl.VoteForDelegate(_delegateName);
 
             Assert.IsTrue(result.Success || (result.Success == false && result.TransactionIds == null && result.Error == "Failed to add vote, account has already voted for this delegate"));
+        }
+
+        [TestMethod()]
+        public void UnvoteDelegateTest()
+        {
+            var accCtnrl = new AccountController(ArkNetApi, _passPhrase);
+            var result = accCtnrl.UnvoteDelegate(_delegateName);
+
+            Assert.IsTrue(result.Success || (result.Success == false && result.TransactionIds == null && result.Error == "Failed to remove vote, account has not voted for this delegate"));
         }
 
         [TestMethod()]
