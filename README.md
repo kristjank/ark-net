@@ -105,8 +105,14 @@ TransactionApi tx = ArkNetApi.TransactionApi.CreateTransaction(recepient, amount
 Peer peer = ArkNetApi.NetworkApi.GetRandomPeer();
 var result = peer.PostTransaction(tx);
 
-//Connect to specific peer
-var peerApi = new PeerApi(ipAddress, Port)
+//Connect to a specific peer to perform requests
+var peerApi = new PeerApi(ArkNetApi.NetworkApi, ipAddress, Port)
+await peerApi.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_STATUS);
+
+//Force specific peer.  All API calls will flow through this peer.  Set back to null to resume decentralized use.  Monitoring a specific is a use case for this functionality.
+ArkNetApi.NetworkApi.ForcedPeer = ArkNetApi.PeerService.GetPeer(ip, port);
+//or
+ArkNetApi.NetworkApi.ForcedPeer = new PeerApi(ArkNetApi.NetworkApi, ipAddress, Port);
 
 // Switch network (Can also create new ArkNetApi instance as alternative solution)
 await ArkNetApi.SwitchNetwork(NetworkType.DevNet)
