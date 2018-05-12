@@ -29,6 +29,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Threading.Tasks;
 using ArkNet.Core;
 using ArkNet.Logging;
@@ -47,44 +48,61 @@ namespace ArkNet
     /// </summary>
     public sealed class ArkNetApi
     {
+        //Url to initial peers on MainNet
+        public string PeerSeedListUrlMainNet = "https://raw.githubusercontent.com/ArkEcosystem/ARK-Peers/master/mainnet.json";
+
+        //Url to initial peers on DevNet
+        public string PeerSeedListUrlDevNet = "https://raw.githubusercontent.com/ArkEcosystem/ARK-Peers/master/devnet.json";
+
         /// <summary>
         /// Initial Seeds for the MainNet
         /// </summary>
-        private List<Tuple<string, int>> _peerSeedListMainNet = 
-            new List<Tuple<string, int>> {
-            Tuple.Create("5.39.9.240", 4001),
-            Tuple.Create("5.39.9.241", 4001),
-            Tuple.Create("5.39.9.242", 4001),
-            Tuple.Create("5.39.9.243", 4001),
-            Tuple.Create("5.39.9.244", 4001),
-            Tuple.Create("5.39.9.250", 4001),
-            Tuple.Create("5.39.9.251", 4001),
-            Tuple.Create("5.39.9.252", 4001),
-            Tuple.Create("5.39.9.253", 4001),
-            Tuple.Create("5.39.9.254", 4001),
-            Tuple.Create("5.39.9.255", 4001)
+        private List<ArkPeerAddress> _peerSeedListMainNet = 
+            new List<ArkPeerAddress> {
+                new ArkPeerAddress { Ip = "5.39.9.240", Port = 4001},
+                new ArkPeerAddress { Ip = "5.39.9.241", Port = 4001},
+                new ArkPeerAddress { Ip = "5.39.9.242", Port = 4001},
+                new ArkPeerAddress { Ip = "5.39.9.243", Port = 4001},
+                new ArkPeerAddress { Ip = "5.39.9.244", Port = 4001},
+                new ArkPeerAddress { Ip = "5.39.9.245", Port = 4001},
+                new ArkPeerAddress { Ip = "5.39.9.246", Port = 4001},
+                new ArkPeerAddress { Ip = "5.39.9.247", Port = 4001},
+                new ArkPeerAddress { Ip = "5.39.9.248", Port = 4001},
+                new ArkPeerAddress { Ip = "5.39.9.249", Port = 4001},
+                new ArkPeerAddress { Ip = "5.39.9.250", Port = 4001},
+                new ArkPeerAddress { Ip = "5.39.9.251", Port = 4001},
+                new ArkPeerAddress { Ip = "5.39.9.252", Port = 4001},
+                new ArkPeerAddress { Ip = "5.39.9.253", Port = 4001},
+                new ArkPeerAddress { Ip = "5.39.9.254", Port = 4001},
+                new ArkPeerAddress { Ip = "5.39.9.255", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.160", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.161", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.162", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.163", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.164", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.165", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.166", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.167", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.168", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.169", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.170", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.171", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.172", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.173", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.174", Port = 4001},
+                new ArkPeerAddress { Ip = "54.38.48.175", Port = 4001}
             };
 
         /// <summary>
         /// Initial Seeds for the DevNet
         /// </summary>
-        private List<Tuple<string, int>> _peerSeedListDevNet =
-            new List<Tuple<string, int>> {
-            Tuple.Create("167.114.43.48", 4002),
-            Tuple.Create("167.114.29.49", 4002),
-            Tuple.Create("167.114.43.43", 4002),
-            Tuple.Create("167.114.29.54", 4002),
-            Tuple.Create("167.114.29.45", 4002),
-            Tuple.Create("167.114.29.40", 4002),
-            Tuple.Create("167.114.29.56", 4002),
-            Tuple.Create("167.114.43.35", 4002),
-            Tuple.Create("167.114.29.51", 4002),
-            Tuple.Create("167.114.29.59", 4002),
-            Tuple.Create("167.114.43.42", 4002),
-            Tuple.Create("167.114.29.34", 4002),
-            Tuple.Create("167.114.29.62", 4002),
-            Tuple.Create("167.114.43.49", 4002),
-            Tuple.Create("167.114.29.44", 4002)
+        private List<ArkPeerAddress> _peerSeedListDevNet =
+            new List<ArkPeerAddress> {
+                new ArkPeerAddress { Ip = "167.114.29.32", Port = 4002},
+                new ArkPeerAddress { Ip = "167.114.29.33", Port = 4002},
+                new ArkPeerAddress { Ip = "167.114.29.34", Port = 4002},
+                new ArkPeerAddress { Ip = "167.114.29.35", Port = 4002},
+                new ArkPeerAddress { Ip = "167.114.29.36", Port = 4002}
             };
 
         private IArkLogger _arkLogger { get; set; }
@@ -269,15 +287,12 @@ namespace ArkNet
         /// <returns>Returns the first <inheritdoc cref="PeerApi"/> that is online</returns>
         private async Task<PeerApi> GetInitialPeer(NetworkType type, int retryCount = 0)
         {
-            // Pick a peer randomly in _peerSeedListMainNet //
-            var peerUrl = _peerSeedListMainNet[new Random().Next(_peerSeedListMainNet.Count)];
-
-            // If the Network is set to DevNet, change the peer picked above by a peer from _peerSeedListDevNet //
-            if (type == NetworkType.DevNet)
-                peerUrl = _peerSeedListDevNet[new Random().Next(_peerSeedListDevNet.Count)];
+            // Pick a peer randomly in list
+            var peerSeedList = await GetInitialPeerList(type).ConfigureAwait(false);
+            var peerUrl = peerSeedList[new Random().Next(peerSeedList.Count)];
 
             // create a peer out of peerurl, and returns if the peer is online. //
-            var peer = new PeerApi(NetworkApi, peerUrl.Item1, peerUrl.Item2);
+            var peer = new PeerApi(NetworkApi, peerUrl.Ip, peerUrl.Port);
             if (await peer.IsOnline().ConfigureAwait(false))
             {
                 return peer;
@@ -290,6 +305,49 @@ namespace ArkNet
 
             // redo the check and increment the retry count //
             return await GetInitialPeer(type, retryCount + 1).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Get initial peer list from GitHub json file
+        /// </summary>
+        /// <param name="type">MainNet or DevNet</param>
+        /// <returns>List of peers (Ip & Port)</returns>
+        private async Task<List<ArkPeerAddress>> GetInitialPeerList(NetworkType type)
+        {
+            string json = null;
+            using (WebClient wc = new WebClient())
+            {
+                try
+                {
+                    json = await wc.DownloadStringTaskAsync(GetPeerSeedListUrl(type)).ConfigureAwait(false);
+                }
+                catch (Exception ex)
+                {
+                    LoggingApi.Error(string.Format("Error downloading initial peer list from <<{0}>>", GetPeerSeedListUrl(type)), ex);
+                }
+            }
+
+            if (!string.IsNullOrEmpty(json))
+            {
+                return JsonConvert.DeserializeObject<List<ArkPeerAddress>>(json);
+            }
+
+            //Fallback to hardcoded values
+            if (type == NetworkType.MainNet)
+                return _peerSeedListMainNet;
+            return _peerSeedListDevNet;
+        }
+
+        /// <summary>
+        /// Get url from GitHub based on MainNet or DevNet
+        /// </summary>
+        /// <param name="type">MainNet or DevNet</param>
+        /// <returns>Url to file</returns>
+        private string GetPeerSeedListUrl(NetworkType type)
+        {
+            if (type == NetworkType.MainNet)
+                return PeerSeedListUrlMainNet;
+            return PeerSeedListUrlDevNet;
         }
     }
 }
