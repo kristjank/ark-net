@@ -281,7 +281,7 @@ namespace ArkNet.Controller
 
         private async Task<ArkTransactionPostResponse> VoteAsync(string delegateName, string prefix)
         {
-            var delegateObject = _arkNetApi.DelegateService.GetByUsername(delegateName);
+            var delegateObject = await _arkNetApi.DelegateService.GetByUsernameAsync(delegateName).ConfigureAwait(false);
             if (delegateObject != null && delegateObject.Success && delegateObject.Delegate != null)
             {
                 List<string> votes = new List<string>
