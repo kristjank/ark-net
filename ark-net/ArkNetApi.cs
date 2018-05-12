@@ -207,6 +207,18 @@ namespace ArkNet
         }
 
         /// <summary>
+        /// Start the Network with custom list of peers.
+        /// </summary>
+        /// <param name="peers"> List of initial peers</param>
+        /// <param name="initialPeerPort"> The Initial Peer's Port</param>
+        /// <returns> The <inheritdoc cref="Task"/> starts the node.</returns>
+        public async Task Start(List<ArkPeerAddress> peers, IArkLogger logger = null)
+        {
+            _arkLogger = logger;
+            await SetNetworkSettings(await GetInitialPeer(peers).ConfigureAwait(false)).ConfigureAwait(false);
+        }
+
+        /// <summary>
         /// Switches the Network
         /// </summary>
         /// <param name="type">
@@ -278,18 +290,13 @@ namespace ArkNet
         /// <summary>
         /// Is needed to fetch the peer.
         /// </summary>
-        /// <param name="type">
-        /// <inheritdoc cref="NetworkType"/>Can be :
-        /// -- DevNet (test), ask Dark (testnet coins) on the slack.
-        /// -- MainNet (live, beware real money, financial loss possible there).
-        /// </param>
+        /// <param name="peers">List of peers to try</param>
         /// <param name="retryCount">Number of retry before a timeout</param>
-        /// <returns>Returns the first <inheritdoc cref="PeerApi"/> that is online</returns>
-        private async Task<PeerApi> GetInitialPeer(NetworkType type, int retryCount = 0)
+        /// <returns></returns>
+        private async Task<PeerApi> GetInitialPeer(List<ArkPeerAddress> peers, int retryCount = 0)
         {
-            // Pick a peer randomly in list
-            var peerSeedList = await GetInitialPeerList(type).ConfigureAwait(false);
-            var peerUrl = peerSeedList[new Random().Next(peerSeedList.Count)];
+            //Picks a peer randomly from the list
+            var peerUrl = peers[new Random().Next(peers.Count)];
 
             // create a peer out of peerurl, and returns if the peer is online. //
             var peer = new PeerApi(NetworkApi, peerUrl.Ip, peerUrl.Port);
@@ -299,12 +306,26 @@ namespace ArkNet
             }
 
             // Throw an exception if all of the initial peers have been tried. //
-            if ((type == NetworkType.DevNet && retryCount == _peerSeedListDevNet.Count) 
-             || (type == NetworkType.MainNet && retryCount == _peerSeedListMainNet.Count))
+            if (retryCount == peers.Count)
                 throw new Exception("Unable to connect to a seed peer");
 
             // redo the check and increment the retry count //
-            return await GetInitialPeer(type, retryCount + 1).ConfigureAwait(false);
+            return await GetInitialPeer(peers, retryCount + 1).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Is needed to fetch the peer.
+        /// </summary>
+        /// <param name="type">
+        /// <inheritdoc cref="NetworkType"/>Can be :
+        /// -- DevNet (test), ask Dark (testnet coins) on the slack.
+        /// -- MainNet (live, beware real money, financial loss possible there).
+        /// </param>
+        /// <returns>Returns the first <inheritdoc cref="PeerApi"/> that is online</returns>
+        private async Task<PeerApi> GetInitialPeer(NetworkType type)
+        {
+            var peers = await GetInitialPeerList(type).ConfigureAwait(false);
+            return await GetInitialPeer(peers, 0).ConfigureAwait(false);
         }
 
         /// <summary>

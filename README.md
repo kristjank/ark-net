@@ -45,6 +45,8 @@ public ArkNetApi ArkNetApi
 await ArkNetApi.Start(NetworkType.MainNet); //Other type is DevNet
 //or
 await ArkNetApi.Start(specificPeerIp, specificPeerPort);
+//or (Multiple addresses)
+await ArkNetApi.Start(listArkPeerAddresses);
 ```
 
 ### Account/Wallet layer
