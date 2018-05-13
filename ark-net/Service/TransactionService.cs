@@ -66,6 +66,8 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkTransactionList> GetAllAsync()
         {
+            _logger.Info("Getting all transactions");
+
             var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
@@ -94,6 +96,8 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkTransactionList> GetTransactionsAsync(ArkTransactionRequest req)
         {
+            _logger.Info(string.Format("Getting transactions with filter <<{0}>>", req.ToQuery()));
+
             var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL + "{0}", req.ToQuery())).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
@@ -118,6 +122,8 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkTransactionList> GetUnconfirmedAllAsync()
         {
+            _logger.Info("Getting all unconfirmed transactions");
+
             var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
@@ -146,6 +152,8 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkTransactionList> GetUnconfirmedTransactionsAsync(ArkUnconfirmedTransactionRequest req)
         {
+            _logger.Info(string.Format("Getting unconfirmed transactions with filter <<{0}>>", req.ToQuery()));
+
             var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED + "{0}", req.ToQuery())).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionList>(response);
@@ -174,6 +182,8 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkTransactionResponse> GetByIdAsync(string id)
         {
+            _logger.Info(string.Format("Getting transaction with id <<{0}>>", id));
+
             var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID, id)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
@@ -202,6 +212,8 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkTransactionResponse> GetUnConfirmedByIdAsync(string id)
         {
+            _logger.Info(string.Format("Getting unconfirmed transaction with id <<{0}>>", id));
+
             var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID_UNCONFIRMED, id)).ConfigureAwait(false);
 
             return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
@@ -296,6 +308,8 @@ namespace ArkNet.Service
         {
             string body = "{transactions: [" + transaction.ToObject(true) + "]} ";
 
+            _logger.Info(string.Format("Send transaction <<{0}>>", body));
+
             var response = string.Empty;
 
             if (peer == null)
@@ -316,6 +330,8 @@ namespace ArkNet.Service
         /// 
         public List<ArkTransactionPostResponse> MultipleBroadCast(TransactionApi transaction)
         {
+            _logger.Info(string.Format("Muli-broadcast transaction to <<{0}>> peers", _networkApi.NetworkSettings.MaxNumOfBroadcasts));
+
             var res = new List<ArkTransactionPostResponse>();
 
             for (var i = 0; i < _networkApi.NetworkSettings.MaxNumOfBroadcasts; i++)
@@ -336,6 +352,8 @@ namespace ArkNet.Service
         /// 
         public async Task<List<ArkTransactionPostResponse>> MultipleBroadCastAsync(TransactionApi transaction)
         {
+            _logger.Info(string.Format("Muli-broadcast transaction to <<{0}>> peers", _networkApi.NetworkSettings.MaxNumOfBroadcasts));
+
             var res = new List<ArkTransactionPostResponse>();
 
             for (var i = 0; i < _networkApi.NetworkSettings.MaxNumOfBroadcasts; i++)
