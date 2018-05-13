@@ -83,20 +83,7 @@ namespace ArkNet.Controller
         /// </returns>
         public ArkAccount GetArkAccount()
         {
-            if (_account == null)
-                _account = _arkNetApi.AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), _arkNetApi.NetworkApi.NetworkSettings.BytePrefix)).Account;
-
-            //Account not on chain yet because it's a new account.
-            if (_account == null)
-            {
-                _account = new ArkAccount()
-                {
-                    Address = Crypto.GetAddress(Crypto.GetKeys(_passPhrase), _arkNetApi.NetworkApi.NetworkSettings.BytePrefix),
-                    PublicKey = Crypto.GetKeys(_passPhrase).PubKey.ToString()
-                };
-            }
-
-            return _account;
+            return GetArkAccountAsync().Result;
         }
 
         /// <summary>
@@ -112,6 +99,18 @@ namespace ArkNet.Controller
                 var accountResponse = await _arkNetApi.AccountService.GetByAddressAsync(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), _arkNetApi.NetworkApi.NetworkSettings.BytePrefix)).ConfigureAwait(false);
                 _account = accountResponse.Account;
             }
+
+            //Account not on chain yet because it's a new account.
+            if (_account == null)
+            {
+                _arkNetApi.LoggingApi.Info(string.Format("Address <<{0}>> not found on chain", Crypto.GetAddress(Crypto.GetKeys(_passPhrase), _arkNetApi.NetworkApi.NetworkSettings.BytePrefix)));
+                _account = new ArkAccount()
+                {
+                    Address = Crypto.GetAddress(Crypto.GetKeys(_passPhrase), _arkNetApi.NetworkApi.NetworkSettings.BytePrefix),
+                    PublicKey = Crypto.GetKeys(_passPhrase).PubKey.ToString()
+                };
+            }
+
             return _account;
         }
 

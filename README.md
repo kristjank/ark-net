@@ -109,7 +109,7 @@ var result = peer.PostTransaction(tx);
 var peerApi = new PeerApi(ArkNetApi.NetworkApi, ipAddress, Port)
 await peerApi.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_STATUS);
 
-//Force specific peer.  All API calls will flow through this peer.  Set back to null to resume decentralized use.  Monitoring a specific is a use case for this functionality.
+//Force specific peer.  All API calls will flow through this peer.  Set back to null to resume decentralized use.  Monitoring a specific peer is a use case for this functionality.
 ArkNetApi.NetworkApi.ForcedPeer = ArkNetApi.PeerService.GetPeer(ip, port);
 //or
 ArkNetApi.NetworkApi.ForcedPeer = new PeerApi(ArkNetApi.NetworkApi, ipAddress, Port);
