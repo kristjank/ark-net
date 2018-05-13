@@ -270,7 +270,10 @@ namespace ArkNet
                 BytePrefix = (byte)autoConfig.Network.Version,
                 Version = peer.Peer.Version,
                 NetHash = autoConfig.Network.NetHash,
-                Fee = fees
+                Fee = fees,
+                Token = autoConfig.Network.Token,
+                Symbol = autoConfig.Network.Symbol,
+                Explorer = autoConfig.Network.Explorer
             };
 
             await NetworkApi.WarmUp(new PeerApi(NetworkApi, initialPeer.Ip, initialPeer.Port)).ConfigureAwait(false);
