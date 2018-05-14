@@ -45,16 +45,6 @@ namespace ArkNet.Messages.BaseMessages
     /// 
     public class ArkBaseRequest
     {
-        #region Read Only
-
-        /// <summary>
-        /// An ordered collection of query parameters.
-        /// </summary>
-        /// 
-        protected readonly List<string> QueryParams = new List<string>();
-
-        #endregion
-
         #region Fields
 
         /// <summary>
@@ -96,6 +86,8 @@ namespace ArkNet.Messages.BaseMessages
         /// 
         public virtual string ToQuery()
         {
+            List<string> queryParams = new List<string>();
+
             var propCollection = GetType().GetRuntimeProperties();
 
             foreach (PropertyInfo property in propCollection)
@@ -106,12 +98,12 @@ namespace ArkNet.Messages.BaseMessages
                     {
                         var val = property.GetValue(this);
                         if (val != null)
-                            QueryParams.Add($"{attr.Name}={val}");
+                            queryParams.Add($"{attr.Name}={val}");
                     }
                 }
             }
 
-            return "?" + string.Join("&", QueryParams.ToArray());
+            return "?" + string.Join("&", queryParams.ToArray());
         }
 
         #endregion

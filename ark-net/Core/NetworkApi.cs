@@ -157,7 +157,7 @@ namespace ArkNet.Core
             var tmpPeerList = new List<PeerApi>();
             foreach (var peerURL in peerURLs)
             {
-                tmpPeerList.Add(new PeerApi(this, peerURL.Ip, peerURL.Port));
+                tmpPeerList.Add(new PeerApi(_arkNetApi, peerURL.Ip, peerURL.Port));
             }
 
             if (!tmpPeerList.Any(x => x.Ip == ActivePeer.Ip))

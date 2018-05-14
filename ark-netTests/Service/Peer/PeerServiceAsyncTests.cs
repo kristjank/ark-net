@@ -47,7 +47,7 @@ namespace ArkNet.Service.Peer.Tests
         [TestMethod]
         public async Task SwitchPeerAsyncTest()
         {
-            ArkNetApi.NetworkApi.ActivePeer = new PeerApi(ArkNetApi.NetworkApi, "1.1.1.1", 5000);
+            ArkNetApi.NetworkApi.ActivePeer = new PeerApi(ArkNetApi, "1.1.1.1", 5000);
 
             var peer = await ArkNetApi.PeerService.GetPeerAsync(base._ip, base._port);
 

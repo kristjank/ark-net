@@ -64,6 +64,7 @@ namespace ArkNet.Core
         public TransactionApi(NetworkApi networkApi, LoggingApi logger)
 		{
             _networkApi = networkApi;
+            _logger = logger;
         }
 
         /// <summary>
@@ -98,7 +99,7 @@ namespace ArkNet.Core
 			Type = type;
 			Amount = amount;
 			Fee = fee;
-		}
+        }
 
         #endregion
 
@@ -399,7 +400,8 @@ namespace ArkNet.Core
 				tx.SecondSign(secondPassphrase);
 
 			tx.Id = Crypto.GetId(tx);
-			return tx;
+            _logger.Info(string.Format("Creating transaction <<{0}>>", JsonConvert.SerializeObject(tx)));
+            return tx;
 		}
 
         /// <summary>
@@ -426,8 +428,8 @@ namespace ArkNet.Core
 				tx.SecondSign(secondPassphrase);
 
 			tx.Id = Crypto.GetId(tx);
-
-			return tx;
+            _logger.Info(string.Format("Creating vote transaction <<{0}>>", JsonConvert.SerializeObject(tx)));
+            return tx;
 		}
 
         /// <summary>
@@ -452,7 +454,8 @@ namespace ArkNet.Core
 				tx.SecondSign(secondPassphrase);
 
 			tx.Id = Crypto.GetId(tx);
-			return tx;
+            _logger.Info(string.Format("Creating delegate transaction <<{0}>>", JsonConvert.SerializeObject(tx)));
+            return tx;
 		}
 
         /// <summary>
@@ -475,7 +478,8 @@ namespace ArkNet.Core
 
 		    tx.Sign(passphrase);
 			tx.Id = Crypto.GetId(tx);
-			return tx;
+            _logger.Info(string.Format("Creating second signature transaction <<{0}>>", JsonConvert.SerializeObject(tx)));
+            return tx;
 		}
 
         #endregion
