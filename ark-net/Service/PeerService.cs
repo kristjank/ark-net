@@ -24,6 +24,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Threading.Tasks;
 using ArkNet.Core;
 using ArkNet.Model.Peer;
@@ -64,9 +65,17 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkPeerList> GetAllAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_ALL).ConfigureAwait(false);
+            try
+            {
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_ALL).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkPeerList>(response);
+                return JsonConvert.DeserializeObject<ArkPeerList>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -96,9 +105,17 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkPeerResponse> GetPeerAsync(string ip, int port)
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Peer.GET, ip, port)).ConfigureAwait(false);
+            try
+            {
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Peer.GET, ip, port)).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkPeerResponse>(response);
+                return JsonConvert.DeserializeObject<ArkPeerResponse>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -120,9 +137,17 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkPeerStatus> GetPeerStatusAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_STATUS).ConfigureAwait(false);
+            try
+            {
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_STATUS).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkPeerStatus>(response);
+                return JsonConvert.DeserializeObject<ArkPeerStatus>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         #endregion

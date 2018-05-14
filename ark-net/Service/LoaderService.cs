@@ -64,9 +64,17 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkLoaderStatus> GetStatusAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_STATUS).ConfigureAwait(false);
+            try
+            {
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_STATUS).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkLoaderStatus>(response);
+                return JsonConvert.DeserializeObject<ArkLoaderStatus>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -88,9 +96,17 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkLoaderStatusSync> GetSyncStatusAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_SYNC_STATUS).ConfigureAwait(false);
+            try
+            {
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_SYNC_STATUS).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkLoaderStatusSync>(response);
+                return JsonConvert.DeserializeObject<ArkLoaderStatusSync>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -112,9 +128,17 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkLoaderNetworkResponse> GetAutoConfigureParametersAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_AUTO_CONFIGURE).ConfigureAwait(false);
+            try
+            {
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_AUTO_CONFIGURE).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkLoaderNetworkResponse>(response);
+                return JsonConvert.DeserializeObject<ArkLoaderNetworkResponse>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         #endregion

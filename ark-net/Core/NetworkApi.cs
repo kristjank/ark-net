@@ -142,28 +142,36 @@ namespace ArkNet.Core
         /// 
         private async Task SetPeerList()
         {
-            var peers = await _arkNetApi.PeerService.GetAllAsync().ConfigureAwait(false);
-            var peersOrderByHeight = peers.Peers
-                .Where(x => x.Status.Equals("OK") && x.Version == NetworkSettings.Version)
-                .OrderByDescending(x => x.Height)
-                .ToList();
-
-            var heightToCompare = peersOrderByHeight.FirstOrDefault().Height - NetworkSettings.PeerCleaningHeightThreshold;
-
-            var peerURLs = peersOrderByHeight.Where(x => x.Height >= heightToCompare)
-                .Select(x => new { Ip = x.Ip, Port = x.Port })
-                .ToList();
-
-            var tmpPeerList = new List<PeerApi>();
-            foreach (var peerURL in peerURLs)
+            try
             {
-                tmpPeerList.Add(new PeerApi(this, peerURL.Ip, peerURL.Port));
+                var peers = await _arkNetApi.PeerService.GetAllAsync().ConfigureAwait(false);
+                var peersOrderByHeight = peers.Peers
+                    .Where(x => x.Status.Equals("OK") && x.Version == NetworkSettings.Version)
+                    .OrderByDescending(x => x.Height)
+                    .ToList();
+
+                var heightToCompare = peersOrderByHeight.FirstOrDefault().Height - NetworkSettings.PeerCleaningHeightThreshold;
+
+                var peerURLs = peersOrderByHeight.Where(x => x.Height >= heightToCompare)
+                    .Select(x => new { Ip = x.Ip, Port = x.Port })
+                    .ToList();
+
+                var tmpPeerList = new List<PeerApi>();
+                foreach (var peerURL in peerURLs)
+                {
+                    tmpPeerList.Add(new PeerApi(this, peerURL.Ip, peerURL.Port));
+                }
+
+                if (!tmpPeerList.Any(x => x.Ip == ActivePeer.Ip))
+                    tmpPeerList.Add(ActivePeer);
+
+                _peers = tmpPeerList;
             }
-
-            if (!tmpPeerList.Any(x => x.Ip == ActivePeer.Ip))
-                tmpPeerList.Add(ActivePeer);
-
-            _peers = tmpPeerList;
+            catch (Exception e)
+            {
+                _arkNetApi.LoggingApi.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>

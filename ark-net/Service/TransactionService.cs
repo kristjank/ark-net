@@ -24,6 +24,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ArkNet.Core;
@@ -66,9 +67,17 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkTransactionList> GetAllAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL).ConfigureAwait(false);
+            try
+            {
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkTransactionList>(response);
+                return JsonConvert.DeserializeObject<ArkTransactionList>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -94,9 +103,17 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkTransactionList> GetTransactionsAsync(ArkTransactionRequest req)
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL + "{0}", req.ToQuery())).ConfigureAwait(false);
+            try
+            {
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL + "{0}", req.ToQuery())).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkTransactionList>(response);
+                return JsonConvert.DeserializeObject<ArkTransactionList>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -118,9 +135,17 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkTransactionList> GetUnconfirmedAllAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED).ConfigureAwait(false);
+            try
+            {
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkTransactionList>(response);
+                return JsonConvert.DeserializeObject<ArkTransactionList>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -146,9 +171,17 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkTransactionList> GetUnconfirmedTransactionsAsync(ArkUnconfirmedTransactionRequest req)
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED + "{0}", req.ToQuery())).ConfigureAwait(false);
+            try
+            {
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_ALL_UNCONFIRMED + "{0}", req.ToQuery())).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkTransactionList>(response);
+                return JsonConvert.DeserializeObject<ArkTransactionList>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -174,9 +207,17 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkTransactionResponse> GetByIdAsync(string id)
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID, id)).ConfigureAwait(false);
+            try
+            {
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID, id)).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
+                return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -202,9 +243,17 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkTransactionResponse> GetUnConfirmedByIdAsync(string id)
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID_UNCONFIRMED, id)).ConfigureAwait(false);
+            try
+            {
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Transaction.GET_BY_ID_UNCONFIRMED, id)).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
+                return JsonConvert.DeserializeObject<ArkTransactionResponse>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -294,16 +343,24 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkTransactionPostResponse> PostTransactionAsync(TransactionApi transaction, PeerApi peer = null)
         {
-            string body = "{transactions: [" + transaction.ToObject(true) + "]} ";
+            try
+            {
+                string body = "{transactions: [" + transaction.ToObject(true) + "]} ";
 
-            var response = string.Empty;
+                var response = string.Empty;
 
-            if (peer == null)
-                response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.POST, ArkStaticStrings.ArkApiPaths.Transaction.POST, body).ConfigureAwait(false);
-            else
-                response = await peer.MakeRequest(ArkStaticStrings.ArkHttpMethods.POST, ArkStaticStrings.ArkApiPaths.Transaction.POST, body).ConfigureAwait(false);
+                if (peer == null)
+                    response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.POST, ArkStaticStrings.ArkApiPaths.Transaction.POST, body).ConfigureAwait(false);
+                else
+                    response = await peer.MakeRequest(ArkStaticStrings.ArkHttpMethods.POST, ArkStaticStrings.ArkApiPaths.Transaction.POST, body).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkTransactionPostResponse>(response);
+                return JsonConvert.DeserializeObject<ArkTransactionPostResponse>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -316,14 +373,22 @@ namespace ArkNet.Service
         /// 
         public List<ArkTransactionPostResponse> MultipleBroadCast(TransactionApi transaction)
         {
-            var res = new List<ArkTransactionPostResponse>();
-
-            for (var i = 0; i < _networkApi.NetworkSettings.MaxNumOfBroadcasts; i++)
+            try
             {
-                res.Add(PostTransaction(transaction, _networkApi.GetRandomPeer()));
-            }
+                var res = new List<ArkTransactionPostResponse>();
 
-            return res;
+                for (var i = 0; i < _networkApi.NetworkSettings.MaxNumOfBroadcasts; i++)
+                {
+                    res.Add(PostTransaction(transaction, _networkApi.GetRandomPeer()));
+                }
+
+                return res;
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -336,14 +401,22 @@ namespace ArkNet.Service
         /// 
         public async Task<List<ArkTransactionPostResponse>> MultipleBroadCastAsync(TransactionApi transaction)
         {
-            var res = new List<ArkTransactionPostResponse>();
-
-            for (var i = 0; i < _networkApi.NetworkSettings.MaxNumOfBroadcasts; i++)
+            try
             {
-                res.Add(await PostTransactionAsync(transaction, _networkApi.GetRandomPeer()).ConfigureAwait(false));
-            }
+                var res = new List<ArkTransactionPostResponse>();
 
-            return res;
+                for (var i = 0; i < _networkApi.NetworkSettings.MaxNumOfBroadcasts; i++)
+                {
+                    res.Add(await PostTransactionAsync(transaction, _networkApi.GetRandomPeer()).ConfigureAwait(false));
+                }
+
+                return res;
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         #endregion
