@@ -68,6 +68,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info("Getting all delegates");
+
                 var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Delegate.GET_ALL).ConfigureAwait(false);
 
                 return JsonConvert.DeserializeObject<ArkDelegateList>(response);
@@ -104,6 +106,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info(string.Format("Getting delegates with filter <<{0}>>", req.ToQuery()));
+
                 var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_ALL + "{0}", req.ToQuery())).ConfigureAwait(false);
 
                 return JsonConvert.DeserializeObject<ArkDelegateList>(response);
@@ -140,6 +144,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info(string.Format("Getting delegate with name <<{0}>>", username));
+
                 var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_BY_USERNAME, username)).ConfigureAwait(false);
 
                 return JsonConvert.DeserializeObject<ArkDelegateResponse>(response);
@@ -176,6 +182,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info(string.Format("Getting delegate with public key <<{0}>>", pubKey));
+
                 var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_BY_PUBLIC_KEY, pubKey)).ConfigureAwait(false);
 
                 return JsonConvert.DeserializeObject<ArkDelegateResponse>(response);
@@ -212,6 +220,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info(string.Format("Getting voters with public key <<{0}>>", pubKey));
+
                 var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_VOTERS, pubKey)).ConfigureAwait(false);
 
                 return JsonConvert.DeserializeObject<ArkDelegateVoterList>(response);
@@ -244,6 +254,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info("Getting fees");
+
                 var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Delegate.GET_FEE).ConfigureAwait(false);
                 var parsed = JObject.Parse(response);
 
@@ -281,6 +293,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info(string.Format("Getting forged amount with public key <<{0}>>", pubKey));
+
                 var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Delegate.GET_FORGED, pubKey)).ConfigureAwait(false);
 
                 return JsonConvert.DeserializeObject<ArkDelegateForgedBalance>(response);
@@ -313,6 +327,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info("Getting next forgers");
+
                 var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Delegate.GET_NEXT_FORGERS).ConfigureAwait(false);
 
                 return JsonConvert.DeserializeObject<ArkDelegateNextForgers>(response);
@@ -336,6 +352,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info(string.Format("Getting total vote ark with public key <<{0}>>", pubKey));
+
                 var arkDelegate = GetByPubKey(pubKey);
 
                 if (arkDelegate.Success && arkDelegate.Delegate != null)
@@ -364,6 +382,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info(string.Format("Getting total vote ark with public key <<{0}>>", pubKey));
+
                 var arkDelegate = await GetByPubKeyAsync(pubKey).ConfigureAwait(false);
 
                 if (arkDelegate.Success && arkDelegate.Delegate != null)

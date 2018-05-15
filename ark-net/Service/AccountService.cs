@@ -75,6 +75,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info(string.Format("Getting account for address <<{0}>>", address));
+
                 var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_ACCOUNT, address)).ConfigureAwait(false);
 
                 return JsonConvert.DeserializeObject<ArkAccountResponse>(response);
@@ -111,6 +113,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info(string.Format("Getting balance for address <<{0}>>", address));
+
                 var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_BALANCE, address)).ConfigureAwait(false);
 
                 return JsonConvert.DeserializeObject<ArkAccountBalance>(response);
@@ -147,6 +151,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info(string.Format("Getting delegate for address <<{0}>>", address));
+
                 var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_DELEGATES, address)).ConfigureAwait(false);
 
                 return JsonConvert.DeserializeObject<ArkDelegateList>(response);
@@ -187,6 +193,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info(string.Format("Getting top accounts. Limit: <<{0}>>, RecordsToSkip: <<{1}>>", limit, recordsToSkip));
+
                 var response =
                     await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_TOP_ACCOUNTS, limit.HasValue ? limit : 100, recordsToSkip.HasValue ? recordsToSkip : 0)).ConfigureAwait(false);
 

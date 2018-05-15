@@ -67,6 +67,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info("Getting all peers");
+
                 var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_ALL).ConfigureAwait(false);
 
                 return JsonConvert.DeserializeObject<ArkPeerList>(response);
@@ -107,6 +109,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info(string.Format("Getting peer: ip: <<{0}>>, port: <<{1}>>", ip, port));
+
                 var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Peer.GET, ip, port)).ConfigureAwait(false);
 
                 return JsonConvert.DeserializeObject<ArkPeerResponse>(response);
@@ -139,6 +143,8 @@ namespace ArkNet.Service
         {
             try
             {
+                _logger.Info("Getting peer status");
+
                 var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_STATUS).ConfigureAwait(false);
 
                 return JsonConvert.DeserializeObject<ArkPeerStatus>(response);

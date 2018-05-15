@@ -8,6 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ArkNet.Tests;
 using System.Threading.Tasks;
 using System.Linq;
+using Newtonsoft.Json;
 
 namespace ArkNetTest.Tests
 {
@@ -61,8 +62,8 @@ namespace ArkNetTest.Tests
                 _passPhrase);
 
 			tx.Timestamp = 100;
-			File.WriteAllText(@"C:\temp\txNew.json", tx.SerializeObject2JSon());
-			File.WriteAllText(@"C:\temp\txNew.xml", tx.SerializeObject2Xml());
+			File.WriteAllText(@"C:\temp\txNew.json", JsonConvert.SerializeObject(tx));
+			File.WriteAllText(@"C:\temp\txNew.xml", JsonConvert.DeserializeXNode(JsonConvert.SerializeObject(tx), "Root").ToString());
 
 			Assert.IsTrue(1 == 1);
 		}

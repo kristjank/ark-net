@@ -104,6 +104,21 @@ namespace ArkNet.Utils
         /// 
         public Fees Fee { get; set; }
 
+        /// <summary>
+        /// Token name (Dark or Ark)
+        /// </summary>
+        public string Token { get; set; }
+
+        /// <summary>
+        /// Network symbol (DA or A)
+        /// </summary>
+        public string Symbol { get; set; }
+
+        /// <summary>
+        /// Url of explorer
+        /// </summary>
+        public string Explorer { get; set; }
+
         #endregion
 
         #region Constructors
