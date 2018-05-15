@@ -290,7 +290,7 @@ namespace ArkNet
 
                 LoggingApi.Info(string.Format("Set network settings to <<{0}>>", JsonConvert.SerializeObject(NetworkApi.NetworkSettings)));
 
-                await NetworkApi.WarmUp(new PeerApi(NetworkApi, initialPeer.Ip, initialPeer.Port)).ConfigureAwait(false);
+                await NetworkApi.WarmUp(new PeerApi(this, initialPeer.Ip, initialPeer.Port)).ConfigureAwait(false);
             }
             catch (Exception e)
             {
