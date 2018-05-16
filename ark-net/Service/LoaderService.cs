@@ -24,6 +24,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Threading.Tasks;
 using ArkNet.Core;
 using ArkNet.Model.Loader;
@@ -64,11 +65,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkLoaderStatus> GetStatusAsync()
         {
-            _logger.Info("Getting loader status");
+            try
+            {
+                _logger.Info("Getting loader status");
 
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_STATUS).ConfigureAwait(false);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_STATUS).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkLoaderStatus>(response);
+                return JsonConvert.DeserializeObject<ArkLoaderStatus>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -90,11 +99,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkLoaderStatusSync> GetSyncStatusAsync()
         {
-            _logger.Info("Getting sync status");
+            try
+            {
+                _logger.Info("Getting sync status");
 
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_SYNC_STATUS).ConfigureAwait(false);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_SYNC_STATUS).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkLoaderStatusSync>(response);
+                return JsonConvert.DeserializeObject<ArkLoaderStatusSync>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -116,11 +133,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkLoaderNetworkResponse> GetAutoConfigureParametersAsync()
         {
-            _logger.Info("Getting autoconfig parameters");
+            try
+            {
+                _logger.Info("Getting autoconfig parameters");
 
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_AUTO_CONFIGURE).ConfigureAwait(false);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_AUTO_CONFIGURE).ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<ArkLoaderNetworkResponse>(response);
+                return JsonConvert.DeserializeObject<ArkLoaderNetworkResponse>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         #endregion

@@ -263,15 +263,17 @@ namespace ArkNet
         /// <returns>Instiate a <inheritdoc cref="PeerApi"/> based on the initial peer provided.</returns>
         private async Task SetNetworkSettings(PeerApi initialPeer)
         {
-            // Request the NetworkSettings, Fees, and more peer address from the peers it connects to. 
-            var responseAutoConfigure = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_AUTO_CONFIGURE).ConfigureAwait(false);
-            var responseFees = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_FEES).ConfigureAwait(false);
-            var responsePeer = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Peer.GET, initialPeer.Ip, initialPeer.Port)).ConfigureAwait(false);
+            try
+            {
+                // Request the NetworkSettings, Fees, and more peer address from the peers it connects to. 
+                var responseAutoConfigure = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_AUTO_CONFIGURE).ConfigureAwait(false);
+                var responseFees = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_FEES).ConfigureAwait(false);
+                var responsePeer = await initialPeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Peer.GET, initialPeer.Ip, initialPeer.Port)).ConfigureAwait(false);
 
-            // Auto-configures what has been fetched previously
-            var autoConfig = JsonConvert.DeserializeObject<ArkLoaderNetworkResponse>(responseAutoConfigure);
-            var fees = JsonConvert.DeserializeObject<Fees>(JObject.Parse(responseFees)["fees"].ToString());
-            var peer = JsonConvert.DeserializeObject<ArkPeerResponse>(responsePeer);
+                // Auto-configures what has been fetched previously
+                var autoConfig = JsonConvert.DeserializeObject<ArkLoaderNetworkResponse>(responseAutoConfigure);
+                var fees = JsonConvert.DeserializeObject<Fees>(JObject.Parse(responseFees)["fees"].ToString());
+                var peer = JsonConvert.DeserializeObject<ArkPeerResponse>(responsePeer);
 
             // Fill the NetworkSettings with what has been fetched / auto-configured previously.
             NetworkApi.NetworkSettings = new ArkNetworkSettings()
@@ -286,9 +288,15 @@ namespace ArkNet
                 Explorer = autoConfig.Network.Explorer
             };
 
-            LoggingApi.Info(string.Format("Set network settings to <<{0}>>", JsonConvert.SerializeObject(NetworkApi.NetworkSettings)));
+                LoggingApi.Info(string.Format("Set network settings to <<{0}>>", JsonConvert.SerializeObject(NetworkApi.NetworkSettings)));
 
-            await NetworkApi.WarmUp(new PeerApi(this, initialPeer.Ip, initialPeer.Port)).ConfigureAwait(false);
+                await NetworkApi.WarmUp(new PeerApi(this, initialPeer.Ip, initialPeer.Port)).ConfigureAwait(false);
+            }
+            catch (Exception e)
+            {
+                LoggingApi.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -312,8 +320,10 @@ namespace ArkNet
         /// <returns></returns>
         private async Task<PeerApi> GetInitialPeer(List<ArkPeerAddress> peers, int retryCount = 0)
         {
-            //Picks a peer randomly from the list
-            var peerUrl = peers[new Random().Next(peers.Count)];
+            try
+            {
+                //Picks a peer randomly from the list
+                var peerUrl = peers[new Random().Next(peers.Count)];
 
             LoggingApi.Info(string.Format("Getting initial peer. ip: <<{0}>>, port: <<{1}>>, retrycount: <<{2}>>", peerUrl.Ip, peerUrl.Port, retryCount));
 
@@ -333,8 +343,14 @@ namespace ArkNet
                 throw new Exception("Unable to connect to a seed peer");
             }
 
-            // redo the check and increment the retry count //
-            return await GetInitialPeer(peers, retryCount + 1).ConfigureAwait(false);
+                // redo the check and increment the retry count //
+                return await GetInitialPeer(peers, retryCount + 1).ConfigureAwait(false);
+            }
+            catch (Exception e)
+            {
+                LoggingApi.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
