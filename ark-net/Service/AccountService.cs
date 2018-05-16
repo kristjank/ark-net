@@ -35,8 +35,6 @@ using Newtonsoft.Json;
 
 namespace ArkNet.Service
 {
-    #region Classes
-
     /// <summary>
     /// Provides functionality for requesting account information from a peer.
     /// </summary>
@@ -44,7 +42,7 @@ namespace ArkNet.Service
     public class AccountService : BaseService
     {
         public AccountService(NetworkApi networkApi, LoggingApi logger)
-            :base(networkApi, logger)
+            : base(networkApi, logger)
         {
         }
 
@@ -157,12 +155,12 @@ namespace ArkNet.Service
 
                 return JsonConvert.DeserializeObject<ArkDelegateList>(response);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 _logger.Error(e.ToString());
                 throw e;
             }
-}
+        }
 
         /// <summary>
         /// Gets a list of top accounts.
@@ -226,4 +224,3 @@ namespace ArkNet.Service
     }
     #endregion
 }
-#endregion
