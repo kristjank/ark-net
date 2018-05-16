@@ -42,8 +42,8 @@ namespace ArkNet.Core
     /// <summary>
     /// Provides functionality for creating Ark transaction representations.
     /// </summary>
-    public  class TransactionApi
-	{
+    public class TransactionApi
+    {
         private NetworkApi _networkApi;
         private LoggingApi _logger;
         #region Read Only
@@ -63,7 +63,7 @@ namespace ArkNet.Core
         /// </summary>
         /// 
         public TransactionApi(NetworkApi networkApi, LoggingApi logger)
-		{
+        {
             _networkApi = networkApi;
             _logger = logger;
         }
@@ -81,13 +81,13 @@ namespace ArkNet.Core
         /// </param>
         /// 
 		private TransactionApi(byte type, string recipientId, long amount, long fee, string vendorField)
-		{
-			Type = type;
-			RecipientId = recipientId;
-			Amount = amount;
-			Fee = fee;
-			VendorField = vendorField;
-		}
+        {
+            Type = type;
+            RecipientId = recipientId;
+            Amount = amount;
+            Fee = fee;
+            VendorField = vendorField;
+        }
 
         /// <summary>
         /// Instantiates a new instance of the <see cref="TransactionApi"/> type.
@@ -96,10 +96,10 @@ namespace ArkNet.Core
         /// <param name="amount">The amount transacted.</param>
         /// <param name="fee">The fee of the transaction.</param>
 		private TransactionApi(byte type, long amount, long fee)
-		{
-			Type = type;
-			Amount = amount;
-			Fee = fee;
+        {
+            Type = type;
+            Amount = amount;
+            Fee = fee;
         }
 
         #endregion
@@ -220,7 +220,7 @@ namespace ArkNet.Core
         /// <returns>Returns the byte buffer.</returns>
         /// 
         public byte[] ToBytes(bool skipSignature = true, bool skipSecondSignature = true)
-		{
+        {
             try
             {
                 var buffer = ByteBuffer.Allocate(1000);
@@ -285,7 +285,7 @@ namespace ArkNet.Core
                 _logger.Error(e.ToString());
                 throw e;
             }
-		}
+        }
 
         /// <summary>
         /// Creates an object from the transaction data.
@@ -299,7 +299,7 @@ namespace ArkNet.Core
         /// </returns>
         /// 
 		public dynamic ToObject(bool retJson = false)
-		{
+        {
             try
             {
                 var data = new Dictionary<string, dynamic>
@@ -325,12 +325,12 @@ namespace ArkNet.Core
                 //this.properties.subMap(['id', 'timestamp', 'recipientId', 'amount', 'fee', 'type', 'vendorField', 'signature', 'signSignature', 
                 //'senderPublicKey', 'requesterPublicKey', 'asset'])
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 _logger.Error(e.ToString());
                 throw e;
             }
-		}
+        }
 
         /// <summary>
         /// Signs this instance of the <see cref="TransactionApi"/> with the first passphrase.
@@ -341,12 +341,13 @@ namespace ArkNet.Core
         /// <returns>Returns the the encoded first signature as a <see cref="string"/>.</returns>
         /// 
 		public string Sign(string passphrase)
-		{
-            try {
-			    SenderPublicKey = Encoders.Hex.EncodeData(Crypto.GetKeys(passphrase).PubKey.ToBytes());
-			    Signature = Encoders.Hex.EncodeData(Crypto.Sign(this, passphrase).ToDER());
+        {
+            try
+            {
+                SenderPublicKey = Encoders.Hex.EncodeData(Crypto.GetKeys(passphrase).PubKey.ToBytes());
+                Signature = Encoders.Hex.EncodeData(Crypto.Sign(this, passphrase).ToDER());
 
-			    return Signature;
+                return Signature;
             }
             catch (Exception e)
             {
@@ -364,11 +365,12 @@ namespace ArkNet.Core
         /// <returns>Returns the the encoded second signature as a <see cref="string"/>.</returns>
         /// 
 		public string SecondSign(string passphrase)
-		{
-            try {
-			    SignSignature = Encoders.Hex.EncodeData(Crypto.SecondSign(this, passphrase).ToDER());
+        {
+            try
+            {
+                SignSignature = Encoders.Hex.EncodeData(Crypto.SecondSign(this, passphrase).ToDER());
 
-			    return SignSignature;
+                return SignSignature;
             }
             catch (Exception e)
             {
@@ -384,9 +386,10 @@ namespace ArkNet.Core
         /// <returns>Returns a Json <see cref="string"/> type.</returns>
         /// 
 		public string ToJson()
-		{
-            try {
-			    return JsonConvert.SerializeObject(this);
+        {
+            try
+            {
+                return JsonConvert.SerializeObject(this);
             }
             catch (Exception e)
             {
@@ -404,9 +407,10 @@ namespace ArkNet.Core
         /// <returns>Returns an instance of the <see cref="TransactionApi"/> type.</returns>
         /// 
 		public TransactionApi FromJson(string json)
-		{
-            try {
-			    var tx = JsonConvert.DeserializeObject<TransactionApi>(json);
+        {
+            try
+            {
+                var tx = JsonConvert.DeserializeObject<TransactionApi>(json);
                 tx._networkApi = _networkApi;
                 tx._logger = _logger;
                 return tx;
@@ -435,17 +439,18 @@ namespace ArkNet.Core
         /// <returns>Returns an instance of the <see cref="TransactionApi"/> type.</returns>
         /// 
 		public TransactionApi CreateTransaction(string recipientId, long satoshiAmount, string vendorField,
-			string passphrase, string secondPassphrase = null)
-		{
-            try {
-			    var tx = new TransactionApi(0, recipientId, satoshiAmount, _networkApi.NetworkSettings.Fee.Send, vendorField);
-			    tx.Timestamp = Slot.GetTime();
-			    tx.Sign(passphrase);
-			    tx.StrBytes = Encoders.Hex.EncodeData(tx.ToBytes());
-			    if (secondPassphrase != null)
-				    tx.SecondSign(secondPassphrase);
+            string passphrase, string secondPassphrase = null)
+        {
+            try
+            {
+                var tx = new TransactionApi(0, recipientId, satoshiAmount, _networkApi.NetworkSettings.Fee.Send, vendorField);
+                tx.Timestamp = Slot.GetTime();
+                tx.Sign(passphrase);
+                tx.StrBytes = Encoders.Hex.EncodeData(tx.ToBytes());
+                if (secondPassphrase != null)
+                    tx.SecondSign(secondPassphrase);
 
-			    tx.Id = Crypto.GetId(tx);
+                tx.Id = Crypto.GetId(tx);
                 _logger.Info(string.Format("Creating transaction <<{0}>>", JsonConvert.SerializeObject(tx)));
                 return tx;
             }
@@ -469,18 +474,19 @@ namespace ArkNet.Core
         /// <returns>Returns an instance of the <see cref="TransactionApi"/> type.</returns>
         /// 
 		public TransactionApi CreateVote(List<string> votes, string passphrase, string secondPassphrase = null)
-		{
-            try {
+        {
+            try
+            {
                 var tx = new TransactionApi(3, 0, _networkApi.NetworkSettings.Fee.Vote);
-			    tx.asset.Add("votes", votes);
-			    tx.Timestamp = Slot.GetTime();
-		        tx.RecipientId = Crypto.GetAddress(Crypto.GetKeys(passphrase), _networkApi.NetworkSettings.BytePrefix);
-			    tx.Sign(passphrase);
-		        tx.StrBytes = Encoders.Hex.EncodeData(tx.ToBytes());
+                tx.asset.Add("votes", votes);
+                tx.Timestamp = Slot.GetTime();
+                tx.RecipientId = Crypto.GetAddress(Crypto.GetKeys(passphrase), _networkApi.NetworkSettings.BytePrefix);
+                tx.Sign(passphrase);
+                tx.StrBytes = Encoders.Hex.EncodeData(tx.ToBytes());
                 if (secondPassphrase != null)
-				    tx.SecondSign(secondPassphrase);
+                    tx.SecondSign(secondPassphrase);
 
-			    tx.Id = Crypto.GetId(tx);
+                tx.Id = Crypto.GetId(tx);
                 _logger.Info(string.Format("Creating vote transaction <<{0}>>", JsonConvert.SerializeObject(tx)));
 
                 return tx;
@@ -505,7 +511,7 @@ namespace ArkNet.Core
         /// <returns>Returns an instance of the <see cref="TransactionApi"/> type.</returns>
         /// 
 		public TransactionApi CreateDelegate(string username, string passphrase, string secondPassphrase = null)
-		{
+        {
             try
             {
                 var tx = new TransactionApi(2, 0, _networkApi.NetworkSettings.Fee.Delegate);
@@ -537,7 +543,7 @@ namespace ArkNet.Core
         /// <returns>Returns a signed instance of a <see cref="TransactionApi"/> type.</returns>
         /// 
 		public TransactionApi createSecondSignature(string secondPassphrase, string passphrase)
-		{
+        {
             try
             {
                 var tx = new TransactionApi(1, 0, _networkApi.NetworkSettings.Fee.SecondSignature)

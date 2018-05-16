@@ -156,11 +156,11 @@ namespace ArkNet.Core
                     .Select(x => new { Ip = x.Ip, Port = x.Port })
                     .ToList();
 
-            var tmpPeerList = new List<PeerApi>();
-            foreach (var peerURL in peerURLs)
-            {
-                tmpPeerList.Add(new PeerApi(_arkNetApi, peerURL.Ip, peerURL.Port));
-            }
+                var tmpPeerList = new List<PeerApi>();
+                foreach (var peerURL in peerURLs)
+                {
+                    tmpPeerList.Add(new PeerApi(_arkNetApi, peerURL.Ip, peerURL.Port));
+                }
 
                 if (!tmpPeerList.Any(x => x.Ip == ActivePeer.Ip))
                     tmpPeerList.Add(ActivePeer);

@@ -57,7 +57,7 @@ namespace ArkNet
         /// <summary>
         /// Initial Seeds for the MainNet
         /// </summary>
-        private List<ArkPeerAddress> _peerSeedListMainNet = 
+        private List<ArkPeerAddress> _peerSeedListMainNet =
             new List<ArkPeerAddress> {
                 new ArkPeerAddress { Ip = "5.39.9.240", Port = 4001},
                 new ArkPeerAddress { Ip = "5.39.9.241", Port = 4001},
@@ -275,18 +275,18 @@ namespace ArkNet
                 var fees = JsonConvert.DeserializeObject<Fees>(JObject.Parse(responseFees)["fees"].ToString());
                 var peer = JsonConvert.DeserializeObject<ArkPeerResponse>(responsePeer);
 
-            // Fill the NetworkSettings with what has been fetched / auto-configured previously.
-            NetworkApi.NetworkSettings = new ArkNetworkSettings()
-            {
-                Port = initialPeer.Port,
-                BytePrefix = (byte)autoConfig.Network.Version,
-                Version = peer.Peer.Version,
-                NetHash = autoConfig.Network.NetHash,
-                Fee = fees,
-                Token = autoConfig.Network.Token,
-                Symbol = autoConfig.Network.Symbol,
-                Explorer = autoConfig.Network.Explorer
-            };
+                // Fill the NetworkSettings with what has been fetched / auto-configured previously.
+                NetworkApi.NetworkSettings = new ArkNetworkSettings()
+                {
+                    Port = initialPeer.Port,
+                    BytePrefix = (byte)autoConfig.Network.Version,
+                    Version = peer.Peer.Version,
+                    NetHash = autoConfig.Network.NetHash,
+                    Fee = fees,
+                    Token = autoConfig.Network.Token,
+                    Symbol = autoConfig.Network.Symbol,
+                    Explorer = autoConfig.Network.Explorer
+                };
 
                 LoggingApi.Info(string.Format("Set network settings to <<{0}>>", JsonConvert.SerializeObject(NetworkApi.NetworkSettings)));
 
@@ -325,23 +325,23 @@ namespace ArkNet
                 //Picks a peer randomly from the list
                 var peerUrl = peers[new Random().Next(peers.Count)];
 
-            LoggingApi.Info(string.Format("Getting initial peer. ip: <<{0}>>, port: <<{1}>>, retrycount: <<{2}>>", peerUrl.Ip, peerUrl.Port, retryCount));
+                LoggingApi.Info(string.Format("Getting initial peer. ip: <<{0}>>, port: <<{1}>>, retrycount: <<{2}>>", peerUrl.Ip, peerUrl.Port, retryCount));
 
-            // create a peer out of peerurl, and returns if the peer is online. //
-            var peer = new PeerApi(this, peerUrl.Ip, peerUrl.Port);
-            if (await peer.IsOnline().ConfigureAwait(false))
-            {
-                return peer;
-            }
+                // create a peer out of peerurl, and returns if the peer is online. //
+                var peer = new PeerApi(this, peerUrl.Ip, peerUrl.Port);
+                if (await peer.IsOnline().ConfigureAwait(false))
+                {
+                    return peer;
+                }
 
-            LoggingApi.Warn(string.Format("Peer is not online. ip: <<{0}>>, port: <<{1}>>", peerUrl.Ip, peerUrl.Port));
+                LoggingApi.Warn(string.Format("Peer is not online. ip: <<{0}>>, port: <<{1}>>", peerUrl.Ip, peerUrl.Port));
 
-            // Throw an exception if all of the initial peers have been tried. //
-            if (retryCount == peers.Count)
-            {
-                LoggingApi.Error(string.Format("Unable to connect to a seed peer.  Retried <<{0}>> times", retryCount));
-                throw new Exception("Unable to connect to a seed peer");
-            }
+                // Throw an exception if all of the initial peers have been tried. //
+                if (retryCount == peers.Count)
+                {
+                    LoggingApi.Error(string.Format("Unable to connect to a seed peer.  Retried <<{0}>> times", retryCount));
+                    throw new Exception("Unable to connect to a seed peer");
+                }
 
                 // redo the check and increment the retry count //
                 return await GetInitialPeer(peers, retryCount + 1).ConfigureAwait(false);
