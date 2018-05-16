@@ -151,30 +151,18 @@ public class Log4netAdapter : IArkLogger
 ILog log = LogManager.GetLogger(typeof(LoggingTests));
 await ArkNetApi.Start(NetworkType.MainNet, new Log4netAdapter(log);
 ```
-
-## More information about ARK Ecosystem and etc
-* [ARK Ecosystem Wiki](https://github.com/ArkEcosystem/wiki)
-* **Ebook** [Programming The Blockchain in C#](https://www.gitbook.com/book/programmingblockchain/programmingblockchain/details)
-
+## Get in touch
 Please, use github issues for questions or feedback. For confidential requests or specific demands, contact us on our public channels.
 
+## Security
+If you discover a security vulnerability within this package, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
 
-## Useful link for a free IDE :
-Visual Studio Community Edition : [https://www.visualstudio.com/products/visual-studio-community-vs](https://www.visualstudio.com/products/visual-studio-community-vs "https://www.visualstudio.com/products/visual-studio-community-vs")
+## Credits
+- [Kristjan Košič](https://github.com/kristjank)
+- [SharkDev-J](https://github.com/sharkdev-j)
+- [All Contributors](https://github.com/ArkEcosystem/ark-net/graphs/contributors)
 
-## Authors
-Chris (kristjan.kosic@gmail.com) & Sharkdev-j, with a lot of help from FX Thoorens fx@ark.io and ARK Community
-
-## Support this project
-![alt text](https://github.com/Moustikitos/arky/raw/master/ark-logo.png)
-Ark address:``AUgTuukcKeE4XFdzaK6rEHMD5FLmVBSmHk``
-
-
-# License
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-Copyright (c) 2018 ARK
-
-
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) © [ArkEcosystem](https://ark.io)
 
 
