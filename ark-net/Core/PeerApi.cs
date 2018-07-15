@@ -44,7 +44,7 @@ namespace ArkNet.Core
     public class PeerApi
     {
         #region Fields
-        private NetworkApi _networkApi;
+        private ArkNetApi _arkNetApi;
         /// <summary>
         /// A reference to an instance of the <see cref="HttpClient"/>.
         /// </summary>
@@ -88,9 +88,9 @@ namespace ArkNet.Core
         /// </summary>
         /// <param name="ip">The peer ip address.</param>
         /// <param name="port">The peer port.</param>
-        public PeerApi(NetworkApi networkApi, string ip, int port)
+        public PeerApi(ArkNetApi arkNetApi, string ip, int port)
         {
-            _networkApi = networkApi;
+            _arkNetApi = arkNetApi;
             var protocol = "http://";
             if (port % 1000 == 443) protocol = "https://";
 
@@ -101,11 +101,11 @@ namespace ArkNet.Core
                 BaseAddress = new UriBuilder(protocol, this._ip, this._port).Uri
             };
 
-            if (_networkApi.NetworkSettings != null)
+            if (_arkNetApi.NetworkApi.NetworkSettings != null)
             {
-                _httpClient.DefaultRequestHeaders.Add("nethash", _networkApi.NetworkSettings.NetHash);
-                _httpClient.DefaultRequestHeaders.Add("version", _networkApi.NetworkSettings.Version);
-                _httpClient.DefaultRequestHeaders.Add("port", _networkApi.NetworkSettings.Port.ToString());
+                _httpClient.DefaultRequestHeaders.Add("nethash", _arkNetApi.NetworkApi.NetworkSettings.NetHash);
+                _httpClient.DefaultRequestHeaders.Add("version", _arkNetApi.NetworkApi.NetworkSettings.Version);
+                _httpClient.DefaultRequestHeaders.Add("port", _arkNetApi.NetworkApi.NetworkSettings.Port.ToString());
             }
         }
 
@@ -145,6 +145,8 @@ namespace ArkNet.Core
         /// <returns>Returns an instance of the <see cref=Task{string}""/> type.</returns>
         private async Task<string> MakeRequestInternal(string method, string path, string body = "", int retryCount = 0)
         {
+            _arkNetApi.LoggingApi.Info(string.Format("Making request to <<{4}>>:<<{5}>>. Method: <<{0}>>, Path: <<{1}>>, Body: <<{2}>>, RetryCount: <<{3}>>", method, path, body, retryCount, _ip, _port));
+
             HttpResponseMessage response;
             var methodString = new HttpMethod(method).ToString().ToUpper();
 
@@ -168,17 +170,20 @@ namespace ArkNet.Core
                 response.EnsureSuccessStatusCode();
                 return await response.Content.ReadAsStringAsync().ConfigureAwait(false);
             }
-            catch(Exception)
+            catch (Exception ex)
             {
-                if (_networkApi.NetworkSettings != null && _networkApi.ActivePeer != null)
+                _arkNetApi.LoggingApi.Warn(string.Format("Error Making request to <<{4}>>:<<{5}>>. Method: <<{0}>>, Path: <<{1}>>, Body: <<{2}>>, RetryCount: <<{3}>>", method, path, body, retryCount, _ip, _port), ex);
+
+                if (_arkNetApi.NetworkApi.NetworkSettings != null && _arkNetApi.NetworkApi.ActivePeer != null)
                 {
-                    if (retryCount < _networkApi.NetworkSettings.MaxRequestRetryCount)
+                    if (retryCount < _arkNetApi.NetworkApi.NetworkSettings.MaxRequestRetryCount)
                     {
-                        _networkApi.SwitchPeer();
-                        _httpClient = _networkApi.ActivePeer.HttpClient;
+                        _arkNetApi.NetworkApi.SwitchPeer();
+                        _httpClient = _arkNetApi.NetworkApi.ActivePeer.HttpClient;
                         return await MakeRequestInternal(method, path, body, retryCount + 1).ConfigureAwait(false);
                     }
                 }
+                _arkNetApi.LoggingApi.Error(string.Format("Error Making request to <<{4}>>:<<{5}>>. Method: <<{0}>>, Path: <<{1}>>, Body: <<{2}>>, RetryCount: <<{3}>>", method, path, body, retryCount, _ip, _port), ex);
                 throw;
             }
         }

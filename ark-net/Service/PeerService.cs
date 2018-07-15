@@ -24,6 +24,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Threading.Tasks;
 using ArkNet.Core;
 using ArkNet.Model.Peer;
@@ -36,12 +37,11 @@ namespace ArkNet.Service
     /// Provides functionality for requesting peer information.
     /// </summary>
     /// 
-    public class PeerService
+    public class PeerService : BaseService
     {
-        private NetworkApi _networkApi;
-        public PeerService(NetworkApi networkApi)
+        public PeerService(NetworkApi networkApi, LoggingApi logger)
+            : base(networkApi, logger)
         {
-            _networkApi = networkApi;
         }
 
         #region Methods
@@ -65,9 +65,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkPeerList> GetAllAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_ALL).ConfigureAwait(false);
+            try
+            {
+                _logger.Info("Getting all peers");
 
-            return JsonConvert.DeserializeObject<ArkPeerList>(response);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_ALL).ConfigureAwait(false);
+
+                return JsonConvert.DeserializeObject<ArkPeerList>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -97,9 +107,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkPeerResponse> GetPeerAsync(string ip, int port)
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Peer.GET, ip, port)).ConfigureAwait(false);
+            try
+            {
+                _logger.Info(string.Format("Getting peer: ip: <<{0}>>, port: <<{1}>>", ip, port));
 
-            return JsonConvert.DeserializeObject<ArkPeerResponse>(response);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Peer.GET, ip, port)).ConfigureAwait(false);
+
+                return JsonConvert.DeserializeObject<ArkPeerResponse>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -121,9 +141,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkPeerStatus> GetPeerStatusAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_STATUS).ConfigureAwait(false);
+            try
+            {
+                _logger.Info("Getting peer status");
 
-            return JsonConvert.DeserializeObject<ArkPeerStatus>(response);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Peer.GET_STATUS).ConfigureAwait(false);
+
+                return JsonConvert.DeserializeObject<ArkPeerStatus>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         #endregion

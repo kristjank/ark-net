@@ -31,6 +31,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ArkNet.Logging;
 using ArkNet.Service;
 using ArkNet.Utils;
 
@@ -75,6 +76,24 @@ namespace ArkNet.Core
 
         public PeerApi ActivePeer { get; set; }
 
+        private PeerApi _forcedPeer;
+        /// <summary>
+        /// Will force all api calls to this peer
+        /// </summary>
+        public PeerApi ForcedPeer
+        {
+            get { return _forcedPeer; }
+            set
+            {
+                _forcedPeer = value;
+                //Will use forced peer until peer cleaning takes over.  Active peer should never be null
+                if (_forcedPeer != null)
+                {
+                    ActivePeer = _forcedPeer;
+                }
+            }
+        }
+
         #endregion
 
         /// <summary>
@@ -101,6 +120,8 @@ namespace ArkNet.Core
         /// 
         public PeerApi GetRandomPeer()
         {
+            if (ForcedPeer != null)
+                return ForcedPeer;
             return _peers[_random.Next(_peers.Count())];
         }
 
@@ -121,28 +142,36 @@ namespace ArkNet.Core
         /// 
         private async Task SetPeerList()
         {
-            var peers = await _arkNetApi.PeerService.GetAllAsync().ConfigureAwait(false);
-            var peersOrderByHeight = peers.Peers
-                .Where(x => x.Status.Equals("OK") && x.Version == NetworkSettings.Version)
-                .OrderByDescending(x => x.Height)
-                .ToList();
-
-            var heightToCompare = peersOrderByHeight.FirstOrDefault().Height - NetworkSettings.PeerCleaningHeightThreshold;
-
-            var peerURLs = peersOrderByHeight.Where(x => x.Height >= heightToCompare)
-                .Select(x => new { Ip = x.Ip, Port = x.Port })
-                .ToList();
-
-            var tmpPeerList = new List<PeerApi>();
-            foreach (var peerURL in peerURLs)
+            try
             {
-                tmpPeerList.Add(new PeerApi(this, peerURL.Ip, peerURL.Port));
+                var peers = await _arkNetApi.PeerService.GetAllAsync().ConfigureAwait(false);
+                var peersOrderByHeight = peers.Peers
+                    .Where(x => x.Status.Equals("OK") && x.Version == NetworkSettings.Version)
+                    .OrderByDescending(x => x.Height)
+                    .ToList();
+
+                var heightToCompare = peersOrderByHeight.FirstOrDefault().Height - NetworkSettings.PeerCleaningHeightThreshold;
+
+                var peerURLs = peersOrderByHeight.Where(x => x.Height >= heightToCompare)
+                    .Select(x => new { Ip = x.Ip, Port = x.Port })
+                    .ToList();
+
+                var tmpPeerList = new List<PeerApi>();
+                foreach (var peerURL in peerURLs)
+                {
+                    tmpPeerList.Add(new PeerApi(_arkNetApi, peerURL.Ip, peerURL.Port));
+                }
+
+                if (!tmpPeerList.Any(x => x.Ip == ActivePeer.Ip))
+                    tmpPeerList.Add(ActivePeer);
+
+                _peers = tmpPeerList;
             }
-
-            if (!tmpPeerList.Any(x => x.Ip == ActivePeer.Ip))
-                tmpPeerList.Add(ActivePeer);
-
-            _peers = tmpPeerList;
+            catch (Exception e)
+            {
+                _arkNetApi.LoggingApi.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -152,15 +181,19 @@ namespace ArkNet.Core
         {
             Task.Run(async () =>
             {
-                while (true)
+                while (ForcedPeer == null)
                 {
                     await Task.Delay(TimeSpan.FromMinutes(NetworkSettings.PeerCleaningIntervalInMinutes));
                     try
                     {
                         await SetPeerList();
                     }
-                    catch { }
+                    catch (Exception ex)
+                    {
+                        _arkNetApi.LoggingApi.Error("Error setting peer seed list.", ex);
+                    }
                 }
+                await Task.Delay(TimeSpan.FromMinutes(NetworkSettings.PeerCleaningIntervalInMinutes));
             });
         }
     }

@@ -22,6 +22,9 @@
 //   // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //   // SOFTWARE.
 // </copyright>
+
+using System.ComponentModel;
+
 namespace ArkNet.Utils.Enum
 {
     /// <summary>
@@ -32,21 +35,25 @@ namespace ArkNet.Utils.Enum
         /// <summary>
         /// Indicates that Ark was sent to a recepient on the Ark network.
         /// </summary>
+        [Description("Send Ark")]
         SendArk,
 
         /// <summary>
         /// Indicates that Ark was spent to register a delegeate on the Ark network.
         /// </summary>
+        [Description("Create a Delegate")]
         CreateDelegate,
 
         /// <summary>
         /// Indicates that Ark was spent to issue a vote for a candidate deligate.
         /// </summary>
+        [Description("Vote for a Delegate")]
         VoteDelegate,
 
         /// <summary>
         /// Indicates that Ark was spent to acquire multi-signature transaction signing.
         /// </summary>
+        [Description("Multisignature")]
         MultiSignature
     }
 }

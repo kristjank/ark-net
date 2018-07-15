@@ -39,12 +39,11 @@ namespace ArkNet.Service
     /// Provies functionality for requesting block information.
     /// </summary>
     /// 
-    public class BlockService
+    public class BlockService : BaseService
     {
-        private NetworkApi _networkApi;
-        public BlockService(NetworkApi networkApi)
+        public BlockService(NetworkApi networkApi, LoggingApi logger)
+            : base(networkApi, logger)
         {
-            _networkApi = networkApi;
         }
 
         #region Methods
@@ -72,9 +71,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkBlockResponse> GetByIdAsync(string id)
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Block.GET_BLOCK, id)).ConfigureAwait(false);
+            try
+            {
+                _logger.Info(string.Format("Getting block with id <<{0}>>", id));
 
-            return JsonConvert.DeserializeObject<ArkBlockResponse>(response);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Block.GET_BLOCK, id)).ConfigureAwait(false);
+
+                return JsonConvert.DeserializeObject<ArkBlockResponse>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -96,9 +105,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkBlockList> GetAllAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_ALL).ConfigureAwait(false);
+            try
+            {
+                _logger.Info("Get all blocks");
 
-            return JsonConvert.DeserializeObject<ArkBlockList>(response);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_ALL).ConfigureAwait(false);
+
+                return JsonConvert.DeserializeObject<ArkBlockList>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -124,9 +143,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkBlockList> GetBlocksAsync(ArkBlockRequest req)
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Block.GET_ALL + "{0}", req.ToQuery())).ConfigureAwait(false);
+            try
+            {
+                _logger.Info(string.Format("Getting blocks with filter <<{0}>>", req.ToQuery()));
 
-            return JsonConvert.DeserializeObject<ArkBlockList>(response);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Block.GET_ALL + "{0}", req.ToQuery())).ConfigureAwait(false);
+
+                return JsonConvert.DeserializeObject<ArkBlockList>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -148,10 +177,20 @@ namespace ArkNet.Service
         /// 
         public async Task<DateTime> GetEpochAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_EPOCH).ConfigureAwait(false);
-            var parsed = JObject.Parse(response);
+            try
+            {
+                _logger.Info("Getting epoch");
 
-            return DateTime.Parse(parsed["epoch"].ToString());
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_EPOCH).ConfigureAwait(false);
+                var parsed = JObject.Parse(response);
+
+                return DateTime.Parse(parsed["epoch"].ToString());
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -173,10 +212,20 @@ namespace ArkNet.Service
         /// 
         public async Task<long> GetHeightAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_HEIGHT).ConfigureAwait(false);
-            var parsed = JObject.Parse(response);
+            try
+            {
+                _logger.Info("Getting current block height");
 
-            return Int64.Parse(parsed["height"].ToString());
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_HEIGHT).ConfigureAwait(false);
+                var parsed = JObject.Parse(response);
+
+                return Int64.Parse(parsed["height"].ToString());
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -198,10 +247,20 @@ namespace ArkNet.Service
         /// 
         public async Task<string> GetNetHashAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_NETHASH).ConfigureAwait(false);
-            var parsed = JObject.Parse(response);
+            try
+            {
+                _logger.Info("Getting network hash");
 
-            return parsed["nethash"].ToString();
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_NETHASH).ConfigureAwait(false);
+                var parsed = JObject.Parse(response);
+
+                return parsed["nethash"].ToString();
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -223,10 +282,20 @@ namespace ArkNet.Service
         /// 
         public async Task<Fees> GetFeesAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_FEES).ConfigureAwait(false);
-            var parsed = JObject.Parse(response);
+            try
+            {
+                _logger.Info("Getting network fees");
 
-            return JsonConvert.DeserializeObject<Fees>(parsed["fees"].ToString());
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_FEES).ConfigureAwait(false);
+                var parsed = JObject.Parse(response);
+
+                return JsonConvert.DeserializeObject<Fees>(parsed["fees"].ToString());
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -248,10 +317,20 @@ namespace ArkNet.Service
         /// 
         public async Task<int> GetMilestoneAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_MILESTONE).ConfigureAwait(false);
-            var parsed = JObject.Parse(response);
+            try
+            {
+                _logger.Info("Getting milestone");
 
-            return Int32.Parse(parsed["milestone"].ToString());
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_MILESTONE).ConfigureAwait(false);
+                var parsed = JObject.Parse(response);
+
+                return Int32.Parse(parsed["milestone"].ToString());
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -273,10 +352,20 @@ namespace ArkNet.Service
         /// 
         public async Task<int> GetRewardAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_REWARD).ConfigureAwait(false);
-            var parsed = JObject.Parse(response);
+            try
+            {
+                _logger.Info("Getting reward");
 
-            return Int32.Parse(parsed["reward"].ToString());
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_REWARD).ConfigureAwait(false);
+                var parsed = JObject.Parse(response);
+
+                return Int32.Parse(parsed["reward"].ToString());
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -298,10 +387,20 @@ namespace ArkNet.Service
         /// 
         public async Task<long> GetSupplyAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_SUPPLY).ConfigureAwait(false);
-            var parsed = JObject.Parse(response);
+            try
+            {
+                _logger.Info("Getting supply");
 
-            return Int64.Parse(parsed["supply"].ToString());
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_SUPPLY).ConfigureAwait(false);
+                var parsed = JObject.Parse(response);
+
+                return Int64.Parse(parsed["supply"].ToString());
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -323,9 +422,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkBlockChainStatus> GetStatusAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_STATUS).ConfigureAwait(false);
+            try
+            {
+                _logger.Info("Getting status");
 
-            return JsonConvert.DeserializeObject<ArkBlockChainStatus>(response);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Block.GET_STATUS).ConfigureAwait(false);
+
+                return JsonConvert.DeserializeObject<ArkBlockChainStatus>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         #endregion

@@ -24,6 +24,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Threading.Tasks;
 using ArkNet.Core;
 using ArkNet.Model.Loader;
@@ -36,12 +37,11 @@ namespace ArkNet.Service
     /// Provides functionality for requesting loader information.
     /// </summary>
     /// 
-    public class LoaderService
+    public class LoaderService : BaseService
     {
-        private NetworkApi _networkApi;
-        public LoaderService(NetworkApi networkApi)
+        public LoaderService(NetworkApi networkApi, LoggingApi logger)
+            : base(networkApi, logger)
         {
-            _networkApi = networkApi;
         }
 
         #region Methods
@@ -65,9 +65,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkLoaderStatus> GetStatusAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_STATUS).ConfigureAwait(false);
+            try
+            {
+                _logger.Info("Getting loader status");
 
-            return JsonConvert.DeserializeObject<ArkLoaderStatus>(response);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_STATUS).ConfigureAwait(false);
+
+                return JsonConvert.DeserializeObject<ArkLoaderStatus>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -89,9 +99,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkLoaderStatusSync> GetSyncStatusAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_SYNC_STATUS).ConfigureAwait(false);
+            try
+            {
+                _logger.Info("Getting sync status");
 
-            return JsonConvert.DeserializeObject<ArkLoaderStatusSync>(response);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_SYNC_STATUS).ConfigureAwait(false);
+
+                return JsonConvert.DeserializeObject<ArkLoaderStatusSync>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -113,9 +133,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkLoaderNetworkResponse> GetAutoConfigureParametersAsync()
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_AUTO_CONFIGURE).ConfigureAwait(false);
+            try
+            {
+                _logger.Info("Getting autoconfig parameters");
 
-            return JsonConvert.DeserializeObject<ArkLoaderNetworkResponse>(response);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, ArkStaticStrings.ArkApiPaths.Loader.GET_AUTO_CONFIGURE).ConfigureAwait(false);
+
+                return JsonConvert.DeserializeObject<ArkLoaderNetworkResponse>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         #endregion

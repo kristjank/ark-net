@@ -83,20 +83,7 @@ namespace ArkNet.Controller
         /// </returns>
         public ArkAccount GetArkAccount()
         {
-            if (_account == null)
-                _account = _arkNetApi.AccountService.GetByAddress(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), _arkNetApi.NetworkApi.NetworkSettings.BytePrefix)).Account;
-
-            //Account not on chain yet because it's a new account.
-            if (_account == null)
-            {
-                _account = new ArkAccount()
-                {
-                    Address = Crypto.GetAddress(Crypto.GetKeys(_passPhrase), _arkNetApi.NetworkApi.NetworkSettings.BytePrefix),
-                    PublicKey = Crypto.GetKeys(_passPhrase).PubKey.ToString()
-                };
-            }
-
-            return _account;
+            return GetArkAccountAsync().Result;
         }
 
         /// <summary>
@@ -112,6 +99,18 @@ namespace ArkNet.Controller
                 var accountResponse = await _arkNetApi.AccountService.GetByAddressAsync(Crypto.GetAddress(Crypto.GetKeys(_passPhrase), _arkNetApi.NetworkApi.NetworkSettings.BytePrefix)).ConfigureAwait(false);
                 _account = accountResponse.Account;
             }
+
+            //Account not on chain yet because it's a new account.
+            if (_account == null)
+            {
+                _arkNetApi.LoggingApi.Info(string.Format("Address <<{0}>> not found on chain", Crypto.GetAddress(Crypto.GetKeys(_passPhrase), _arkNetApi.NetworkApi.NetworkSettings.BytePrefix)));
+                _account = new ArkAccount()
+                {
+                    Address = Crypto.GetAddress(Crypto.GetKeys(_passPhrase), _arkNetApi.NetworkApi.NetworkSettings.BytePrefix),
+                    PublicKey = Crypto.GetKeys(_passPhrase).PubKey.ToString()
+                };
+            }
+
             return _account;
         }
 
@@ -226,33 +225,74 @@ namespace ArkNet.Controller
         /// <summary>
         /// Vote for a delegate.
         /// </summary>
-        /// <param name="votes">
-        /// TODO: The votes.
+        /// <param name="delegateName">
+        /// The name of the delegate
         /// </param>
         /// <returns>
         /// The <see cref="ArkTransactionPostResponse"/> of the voting transaction.
         /// </returns>
-        public ArkTransactionPostResponse VoteForDelegate(List<string> votes)
+        public ArkTransactionPostResponse VoteForDelegate(string delegateName)
         {
-            var tx = _arkNetApi.TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
-
-            return _arkNetApi.TransactionService.PostTransaction(tx);
+            return VoteForDelegateAsync(delegateName).Result;
         }
 
         /// <summary>
         /// Vote for a delegate asynchroneously.
         /// </summary>
-        /// <param name="votes">
-        /// TODO: The votes.
+        /// <param name="delegateName">
+        /// The name of the delegate
         /// </param>
         /// <returns>
         /// The <see cref="ArkTransactionPostResponse"/> of the voting transaction.
         /// </returns>
-        public async Task<ArkTransactionPostResponse> VoteForDelegateAsync(List<string> votes)
+        public async Task<ArkTransactionPostResponse> VoteForDelegateAsync(string delegateName)
         {
-            var tx = _arkNetApi.TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase);
+            return await VoteAsync(delegateName, "+").ConfigureAwait(false);
+        }
 
-            return await _arkNetApi.TransactionService.PostTransactionAsync(tx).ConfigureAwait(false);
+        /// <summary>
+        /// Un-Vote for a delegate.
+        /// </summary>
+        /// <param name="delegateName">
+        /// The name of the delegate
+        /// </param>
+        /// <returns>
+        /// The <see cref="ArkTransactionPostResponse"/> of the voting transaction.
+        /// </returns>
+        public ArkTransactionPostResponse UnvoteDelegate(string delegateName)
+        {
+            return UnvoteDelegateAsync(delegateName).Result;
+        }
+
+        /// <summary>
+        /// Un-Vote for a delegate asynchroneously.
+        /// </summary>
+        /// <param name="delegateName">
+        /// The name of the delegate
+        /// </param>
+        /// <returns>
+        /// The <see cref="ArkTransactionPostResponse"/> of the voting transaction.
+        /// </returns>
+        public async Task<ArkTransactionPostResponse> UnvoteDelegateAsync(string delegateName)
+        {
+            return await VoteAsync(delegateName, "-").ConfigureAwait(false);
+        }
+
+        private async Task<ArkTransactionPostResponse> VoteAsync(string delegateName, string prefix)
+        {
+            var delegateObject = await _arkNetApi.DelegateService.GetByUsernameAsync(delegateName).ConfigureAwait(false);
+            if (delegateObject != null && delegateObject.Success && delegateObject.Delegate != null)
+            {
+                List<string> votes = new List<string>
+                {
+                    prefix + delegateObject.Delegate.PublicKey
+                };
+
+                return await _arkNetApi.TransactionService.PostTransactionAsync(
+                    _arkNetApi.TransactionApi.CreateVote(votes, _passPhrase, _secondPassPhrase)).ConfigureAwait(false);
+            }
+            _arkNetApi.LoggingApi.Info(string.Format("No delegate found for <<{0}>>", delegateName));
+            return null;
         }
 
         /// <summary>
@@ -484,7 +524,7 @@ namespace ArkNet.Controller
         /// <returns>ArkTransactionPostResponse object</returns>
         public ArkTransactionPostResponse SendTransaction(string json)
         {
-            return _arkNetApi.TransactionService.PostTransaction(_arkNetApi.TransactionApi.FromJson(_arkNetApi.NetworkApi, json));
+            return _arkNetApi.TransactionService.PostTransaction(_arkNetApi.TransactionApi.FromJson(json));
         }
 
         /// <summary>
@@ -494,7 +534,7 @@ namespace ArkNet.Controller
         /// <returns>ArkTransactionPostResponse</returns>
         public async Task<ArkTransactionPostResponse> SendTransactionAsync(string json)
         {
-            return await _arkNetApi.TransactionService.PostTransactionAsync(_arkNetApi.TransactionApi.FromJson(_arkNetApi.NetworkApi, json)).ConfigureAwait(false);
+            return await _arkNetApi.TransactionService.PostTransactionAsync(_arkNetApi.TransactionApi.FromJson(json)).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -504,7 +544,7 @@ namespace ArkNet.Controller
         /// <returns>List of ArkTransactionPostResponse</returns>
         public List<ArkTransactionPostResponse> SendTransactionUsingMultiBroadCast(string json)
         {
-            return _arkNetApi.TransactionService.MultipleBroadCast(_arkNetApi.TransactionApi.FromJson(_arkNetApi.NetworkApi, json));
+            return _arkNetApi.TransactionService.MultipleBroadCast(_arkNetApi.TransactionApi.FromJson(json));
         }
 
         /// <summary>
@@ -514,7 +554,7 @@ namespace ArkNet.Controller
         /// <returns>List of ArkTransactionPostResponse</returns>
         public async Task<List<ArkTransactionPostResponse>> SendTransactionUsingMultiBroadCastAsync(string json)
         {
-            return await _arkNetApi.TransactionService.MultipleBroadCastAsync(_arkNetApi.TransactionApi.FromJson(_arkNetApi.NetworkApi, json)).ConfigureAwait(false);
+            return await _arkNetApi.TransactionService.MultipleBroadCastAsync(_arkNetApi.TransactionApi.FromJson(json)).ConfigureAwait(false);
         }
 
         #region V2 preparation

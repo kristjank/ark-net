@@ -24,6 +24,7 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Threading.Tasks;
 using ArkNet.Core;
 using ArkNet.Model.Account;
@@ -34,18 +35,15 @@ using Newtonsoft.Json;
 
 namespace ArkNet.Service
 {
-    #region Classes
-
     /// <summary>
     /// Provides functionality for requesting account information from a peer.
     /// </summary>
     /// 
-    public class AccountService
+    public class AccountService : BaseService
     {
-        private NetworkApi _networkApi;
-        public AccountService(NetworkApi networkApi)
+        public AccountService(NetworkApi networkApi, LoggingApi logger)
+            : base(networkApi, logger)
         {
-            _networkApi = networkApi;
         }
 
         #region Methods
@@ -73,9 +71,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkAccountResponse> GetByAddressAsync(string address)
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_ACCOUNT, address)).ConfigureAwait(false);
+            try
+            {
+                _logger.Info(string.Format("Getting account for address <<{0}>>", address));
 
-            return JsonConvert.DeserializeObject<ArkAccountResponse>(response);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_ACCOUNT, address)).ConfigureAwait(false);
+
+                return JsonConvert.DeserializeObject<ArkAccountResponse>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -101,9 +109,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkAccountBalance> GetBalanceAsync(string address)
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_BALANCE, address)).ConfigureAwait(false);
+            try
+            {
+                _logger.Info(string.Format("Getting balance for address <<{0}>>", address));
 
-            return JsonConvert.DeserializeObject<ArkAccountBalance>(response);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_BALANCE, address)).ConfigureAwait(false);
+
+                return JsonConvert.DeserializeObject<ArkAccountBalance>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -129,9 +147,19 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkDelegateList> GetDelegatesAsync(string address)
         {
-            var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_DELEGATES, address)).ConfigureAwait(false);
+            try
+            {
+                _logger.Info(string.Format("Getting delegate for address <<{0}>>", address));
 
-            return JsonConvert.DeserializeObject<ArkDelegateList>(response);
+                var response = await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_DELEGATES, address)).ConfigureAwait(false);
+
+                return JsonConvert.DeserializeObject<ArkDelegateList>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -161,10 +189,20 @@ namespace ArkNet.Service
         /// 
         public async Task<ArkAccountTopList> GetTopAsync(int? limit, int? recordsToSkip)
         {
-            var response =
-                await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_TOP_ACCOUNTS, limit.HasValue ? limit : 100, recordsToSkip.HasValue ? recordsToSkip : 0)).ConfigureAwait(false);
+            try
+            {
+                _logger.Info(string.Format("Getting top accounts. Limit: <<{0}>>, RecordsToSkip: <<{1}>>", limit, recordsToSkip));
 
-            return JsonConvert.DeserializeObject<ArkAccountTopList>(response);
+                var response =
+                    await _networkApi.ActivePeer.MakeRequest(ArkStaticStrings.ArkHttpMethods.GET, string.Format(ArkStaticStrings.ArkApiPaths.Account.GET_TOP_ACCOUNTS, limit.HasValue ? limit : 100, recordsToSkip.HasValue ? recordsToSkip : 0)).ConfigureAwait(false);
+
+                return JsonConvert.DeserializeObject<ArkAccountTopList>(response);
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
 
         /// <summary>
@@ -173,9 +211,16 @@ namespace ArkNet.Service
         /// <returns>String containinig the passphrase</returns>
         public string GeneratePassphrase()
         {
-            return new Mnemonic(Wordlist.English, WordCount.Twelve).ToString();
+            try
+            {
+                return new Mnemonic(Wordlist.English, WordCount.Twelve).ToString();
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e.ToString());
+                throw e;
+            }
         }
     }
     #endregion
 }
-#endregion

@@ -72,7 +72,7 @@ namespace ArkNetTest.Tests
 			var json = tx.ToJson();
 			Console.WriteLine(json);
 
-			var tx2 = ArkNetApi.TransactionApi.FromJson(ArkNetApi.NetworkApi, json);
+			var tx2 = ArkNetApi.TransactionApi.FromJson(json);
 
 			Assert.AreEqual(json, tx2.ToJson());
 		}
@@ -87,7 +87,7 @@ namespace ArkNetTest.Tests
 			var json = tx.ToJson();
 			Console.WriteLine(json);
 
-			var tx2 = ArkNetApi.TransactionApi.FromJson(ArkNetApi.NetworkApi, json);
+			var tx2 = ArkNetApi.TransactionApi.FromJson(json);
 			tx2.SignSignature = "Change";
 
 			Assert.AreNotEqual(json, tx2.ToJson());
